@@ -1,1 +1,0 @@
-Pour voir le site, il suffit de lancer le fichier "index.xhtml" avec un navigateur.
