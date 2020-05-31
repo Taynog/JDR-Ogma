@@ -183,7 +183,7 @@
         <tr><td>Chono</td> <td>+2</td> <td>+2</td> <td>/</td> <td>+2</td> <td>-3</td> <td>/</td> <td class="sens">+2</td> <td>/</td> <td><span class="underline">Tradition guerrière :</span> Entraînement aux armures et armes de tout types<br/><span class="underline">Sens affutés :</span> +2 PER, +3 aux jet lié à l'odorat et l'ouïe<br/><span class="underline">Rage Primordiale :</span> Jet de sauvegarde (VOL) si touché par un effet magique</td></tr>
         <tr><td>Mushuk</td> <td>/</td> <td>/</td> <td>+1</td> <td>/</td> <td>/</td> <td>/</td> <td class="sens">+2</td> <td>+2</td> <td><span class="underline">Sens affutés :</span> +2 PER, vision nocturne, +2 aux jets liés à l'odorat et l'ouïe<br/><span class="underline">Marchand né :</span> Compétence Estimation et Marchandage</td></tr>
         <tr><td>Tori</td> <td>-2</td> <td>/</td> <td>/</td> <td>/</td> <td>+3</td> <td>+2</td> <td>/</td> <td class="sens">+4</td> <td><span class="underline">Poète :</span> +4 ELO, compétence Représentation déclamation (+ 2 au choix)<br/><span class="underline">Pacifique :</span> -2 à tout les dégâts létaux, ils deviennent non-létaux<br/><span class="underline">Ailes</span> Compétence Vol, peut voler à volonté</td></tr>
-        <tr><td>Sarpa</td> <td>/</td> <td>/</td> <td>/</td> <td>/</td> <td>+2</td> <td>+3</td> <td>/</td> <td>/</td> <td><span class="underline">Connaisances ancestrales :</span> Compétence d'artisanat en alchimie<br/><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, jet de volonté toute les heures en absence de chaleur</td></tr>
+        <tr><td>Sarpa</td> <td>/</td> <td>/</td> <td>/</td> <td>/</td> <td>+2</td> <td>+3</td> <td>/</td> <td>/</td> <td><span class="underline">Connaisances ancestrales :</span> Compétence d'artisanat en alchimie<br/><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, jet de volonté toute les heures en absence de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle</td></tr>
         <tr><td>Kanta</td> <td>+3</td> <td>-2</td> <td>-2</td> <td>+4</td> <td>/</td> <td>/</td> <td>/</td> <td>/</td> <td><span class="underline">Fourrure épaisse :</span> +50% de résitance au froid, +1 d'armure naturelle<br/><span class="underline">Sagesse :</span> +3 ELO pour calmer un conflit<br/><span class="underline">Imposante stature :</span> Compétence intimidation</td></tr>
         </tbody>
     </table>
@@ -204,6 +204,16 @@
             <td>Acrobatie</td>
             <td>Le personnage peut garder son équilibre lorsqu’il marche sur des surfaces étroites ou un sol traître sans faire de test. Il peut également se baisser, se retourner, sauter ou effectuer un roulé-boulé pour éviter les coups ou traverser certains obstacles.</td>
             <td>Pas de jet pour conserver son équilibre<br/> AGI + 2 pour les tests de mouvement</td>
+        </tr>
+        <tr>
+            <td>Ambidextrie</td>
+            <td>Le personnage sait utiliser deux armes légères à la fois</td>
+            <td>Pas de malus pour l'ambidextrie</td>
+        </tr>
+        <tr>
+            <td>Armes à deux mains</td>
+            <td>Le personnage sait utiliser sait manier une arme longue/lourde à deux mains</td>
+            <td>Pas de malus pour le maniement à deux mains</td>
         </tr>
         <tr>
             <td>Art de la magie</td>
@@ -261,9 +271,24 @@
             <td>DEX + 5 pour se libérer</td>
         </tr>
         <tr>
+            <td>Explosif</td>
+            <td>Le personnage sait fabriquer et utiliser des explosifs</td>
+            <td>/</td>
+        </tr>
+        <tr>
             <td>Filouterie</td>
             <td>Le personnage s’est entraîné à agir comme un pickpocket, à dissimuler des armes et à faire toute une série d’autres choses sans se faire remarquer.</td>
             <td>DEX + 3 pour les actions de filou<br/>Permet d'amuser la galerie(jongle, tour de pass-passe,...)</td>
+        </tr>
+        <tr>
+            <td>Fin gourmet</td>
+            <td>Le personnage peut manger presque n'importe quoi sans risquer un empoisonnement ou une maladie</td>
+            <td>/</td>
+        </tr>
+        <tr>
+            <td>Hors-la-loi</td>
+            <td>Le personnage a baigné dans les environnements criminels et connait les ficelles du métier de contrebandier</td>
+            <td>+ 2 aux jets liés aux actions illégales.</td>
         </tr>
         <tr>
             <td>Intimidation</td>
@@ -371,13 +396,13 @@
         <h1>Création de Personnage</h1>
         <p>Pour définir les caractéristiques de départ d'un personnage, on peut utiliser différentes méthodes :</p>
         <h4>Méthode Standard</h4>
-        <p>Lancez 4d6, éliminez le résultat du dé le plus faible et additionnez les trois résultats restants. Notez ce total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
+        <p>Lancez 4d5, éliminez le résultat du dé le plus faible et additionnez les trois résultats restants. Notez ce total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
         <h4>Méthode Classique</h4>
-        <p>Lancez 3d6 et additionnez les résultats des dés. Notez ce total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
+        <p>Lancez 3d5 et additionnez les résultats des dés. Notez ce total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
         <h4>Méthode Héroïque</h4>
-        <p>Lancez 2d6 et ajoutez 6 à la somme des dés. Notez le total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
+        <p>Lancez 2d5 et ajoutez 5 à la somme des dés. Notez le total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
         <h4>Réserve de dés</h4>
-        <p>Chaque personnage possède une réserve de 32d6 à répartir entre ses caractéristiques. Avant de les lancer, le joueur choisit le nombre de dés qu’il veut utiliser pour chacune de ses caractéristiques, avec un minimum de 3d6 dans chacune d’entre elles. Une fois que tous les dés ont été répartis, le joueur les lance par groupe et additionne les résultats des trois dés les plus élevés de chaque groupe.</p>
+        <p>Chaque personnage possède une réserve de 32d5 à répartir entre ses caractéristiques. Avant de les lancer, le joueur choisit le nombre de dés qu’il veut utiliser pour chacune de ses caractéristiques, avec un minimum de 3d5 dans chacune d’entre elles. Une fois que tous les dés ont été répartis, le joueur les lance par groupe et additionne les résultats des trois dés les plus élevés de chaque groupe.</p>
     </div>
 </div>
 </body>

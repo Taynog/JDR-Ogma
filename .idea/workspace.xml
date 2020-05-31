@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="" />
+    <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules.xhtml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +20,12 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
   <component name="ProjectId" id="1bIrkLg5ShYynbTbyBwC3s6qnBE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,8 +34,14 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Data/Content/Collection" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content\Collection" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -52,6 +67,8 @@
       <workItem from="1589882876192" duration="5992000" />
       <workItem from="1589890347960" duration="1461000" />
       <workItem from="1589896278041" duration="106000" />
+      <workItem from="1590856387958" duration="863000" />
+      <workItem from="1590921466033" duration="2182000" />
     </task>
     <servers />
   </component>
@@ -59,10 +76,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="345" y="43" key="CommitChangelistDialog2" timestamp="1590857258931">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="345" y="43" key="CommitChangelistDialog2/0.0.1440.900/-1280.0.1280.1024@0.0.1440.900" timestamp="1590857258931" />
     <state x="500" y="204" key="FileChooserDialogImpl" timestamp="1588351526815">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="500" y="204" key="FileChooserDialogImpl/0.0.1440.900/-1280.0.1280.984@0.0.1440.900" timestamp="1588351526815" />
+    <state x="529" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590857250653">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="529" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1280.0.1280.1024@0.0.1440.900" timestamp="1590857250653" />
     <state x="383" y="190" width="672" height="678" key="search.everywhere.popup" timestamp="1589460116308">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
