@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Alliance_Tori.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Alliance_Tori.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Carte_Ogma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Castes_Sarpa.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Castes_Sarpa.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Clans_Steinn.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Clans_Steinn.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Communautés_Kanta.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Communautés_Kanta.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Domaine_Sihir.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Domaine_Sihir.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Empire_Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Empire_Azuma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Histoire_Ogma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Hordes_Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Hordes_Chono.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Ligues_Mushuk.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Ligues_Mushuk.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Royaume_Sever.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Royaume_Sever.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Sultanat_Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Sultanat_Tuskizi.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Tribus_Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Tribus_Sakha.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +84,8 @@
       <workItem from="1589896278041" duration="106000" />
       <workItem from="1590856387958" duration="863000" />
       <workItem from="1590921466033" duration="2182000" />
+      <workItem from="1591006535693" duration="17036000" />
+      <workItem from="1591024432081" duration="657000" />
     </task>
     <servers />
   </component>
@@ -88,9 +105,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="529" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1280.0.1280.1024@0.0.1440.900" timestamp="1590857250653" />
-    <state x="383" y="190" width="672" height="678" key="search.everywhere.popup" timestamp="1589460116308">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="367" y="190" width="672" height="678" key="search.everywhere.popup" timestamp="1591020783635">
+      <screen x="0" y="0" width="1378" height="900" />
     </state>
+    <state x="367" y="190" width="672" height="678" key="search.everywhere.popup/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1591020783635" />
     <state x="383" y="190" width="672" height="678" key="search.everywhere.popup/0.0.1440.900/-1280.0.1280.984@0.0.1440.900" timestamp="1589460116308" />
   </component>
 </project>

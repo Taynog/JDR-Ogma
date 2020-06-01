@@ -1,5 +1,5 @@
 body{
-    background-color: lightgrey; /*Change la couleur du fond*/
+    background-color: lightgray; /*Change la couleur du fond*/
 }
 
 div[align=center] div p{
@@ -69,6 +69,16 @@ caption{/*Affecte la caption d'id 'synoptique'*/
 
 .underline{
     text-decoration: underline;
+}
+
+.big_underline{
+    text-decoration: underline;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.space_list>li {
+    margin : 0 0 3px 0
 }
 
 /* The sidebar menu */

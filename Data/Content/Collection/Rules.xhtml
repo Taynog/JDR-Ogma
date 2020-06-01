@@ -31,365 +31,939 @@
     <p class="partie">Jeu de Rôle</p>
     <a class="medium" href="Rules.xhtml#Caracteristiques">Caractéristiques</a>
     <a class="medium" href="Rules.xhtml#Combat">Combat</a>
+    <a class="medium" href="Rules.xhtml#equipement">Équipement</a>
+    <a class="little" href="Rules.xhtml#Armes">Armes</a>
+    <a class="little" href="Rules.xhtml#Armures">Armures</a>
     <a class="medium" href="Rules.xhtml#Magie">Magie</a>
     <a class="medium" href="Rules.xhtml#table_race">Tableau Races</a>
     <a class="medium" href="Rules.xhtml#Competences">Compétences</a>
     <a class="medium" href="Rules.xhtml#fiche_perso">Fiche personnage</a>
     <a class="medium" href="Rules.xhtml#creation_perso">Création personnage</a>
 </div>
+
 <div class="main">
-<div id="Caracteristiques">
-    <h1>Caractéristiques</h1>
-    <ol type="I">
-        <li>Physiques
-            <ul>
-                <li>Force (FOR)<ul><li>Détermine la puissance musculaire du personnage, requise pour utiliser des armes et armures lourdes.</li></ul>
-                </li>
-                <li>Dextérité (DEX)<ul><li>Détermine l'habilité du personnage avec ses mains, requise pour utiliser des armes sophistiqués, dérober une bourse,etc...</li></ul>
-                </li>
-                <li>Agilité (AGI)<ul><li>Mesure le contrôle qu'a le personnage sur son corps, requise pour les déplacements complexes tels que des sauts ou des esquives.</li></ul>
-                </li>
-                <li>Constitution (CON)<ul><li>Représente la robustesse et la résistance à la fatigue, requise pour utiliser des armures lourdes et des bouclier.</li></ul>
-                </li>
-            </ul>
-        </li>
-        <li>Mentales
-            <ul>
-                <li>Intelligence (INT)<ul><li>Détermine l'étendue du savoir et des capacités magiques du personnage.</li></ul>
-                </li>
-                <li>Volonté (VOL)<ul><li>Gouverne la résistance aux attaques magiques et la persistance des créations magiques.</li></ul>
-                </li>
-                <li>Perception (PER)<ul><li>Rassemble les capacaités des cinq sens et fait office d'initiative, permet de détecter les pièges et autres fourberies.</li></ul>
-                </li>
-                <li>Éloquence (ELO)<ul><li>Permet de persuader/convaincre quelqu'un, d'obtenir un meilleur prix chez un marchand, etc...</li></ul>
-                </li>
-            </ul>
-        </li>
-    </ol>
-</div>
+    <div id="Caracteristiques">
+        <h1>Caractéristiques</h1>
+        <ol type="I" >
+            <li>Physiques
+                <ul class="space_list">
+                    <li><span class="big_underline">Force (FOR) :</span>Détermine la puissance musculaire du personnage, requise pour utiliser des armes et armures lourdes.</li>
+                    <li><span class="big_underline">Dextérité (DEX) :</span>Détermine l'habilité du personnage avec ses mains, requise pour utiliser des armes sophistiqués, dérober une bourse,etc...</li>
+                    <li><span class="big_underline">Agilité (AGI) :</span>Mesure le contrôle qu'a le personnage sur son corps, requise pour les déplacements complexes tels que des sauts ou des esquives.</li>
+                    <li><span class="big_underline">Constitution (CON) :</span>Représente la robustesse et la résistance à la fatigue, requise pour utiliser des armures lourdes et des bouclier.</li>
+                </ul>
+            </li>
+            <li>Mentales
+                <ul class="space_list">
+                    <li><span class="big_underline">Intelligence (INT) :</span>Détermine l'étendue du savoir et des capacités magiques du personnage.</li>
+                    <li><span class="big_underline">Volonté (VOL) :</span>Gouverne la résistance aux attaques magiques et la persistance des créations magiques.</li>
+                    <li><span class="big_underline">Perception (PER) :</span>Rassemble les capacaités des cinq sens et fait office d'initiative, permet de détecter les pièges et autres fourberies.</li>
+                    <li><span class="big_underline">Éloquence (ELO) :</span>Permet de persuader/convaincre quelqu'un, d'obtenir un meilleur prix chez un marchand, etc...</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
     <p>Le total de Point de vie d'un personnage est déterminé par cette formule : CON*2+FOR*0.5+Niveau*2</p>
     <p>Le total de Point de psyché d'un personnage est déterminé par cette formule : VOL*2+INT*0.5+Niveau*2</p>
     <p>Si lors d'un lancer, on obtient un nombre décimal, l'arrondi se fait à l'entier inférieur. (ex : 15.25 devient 15)</p>
 
 
-<div id="Combat">
-    <h1>Combat</h1>
-    <p>Les combats se déroulent selon des round d'une durée de 6 secondes, chaque entité présente en combat dispose de points d'action (PA) qu'elle peut utiliser pour effectuer des actions lors de son tour. Le nombre de PA peut être modifié par certains sorts ou compétences. Les Pa d'une entité sont restaurés à la fin de son tour. Le nombre par défaut pour une entité normale de PA est 4.</p>
-
-    <h3>Premier round</h3>
-    <p>Lors du premier tour du combat, tout les personnes/monstres participant au combat lance un dé d'initiative (1d20 + PER), l'ordre de jeu est déterminé par ce jet du plus grand score au plus petit, si il ya  égalité entre deux ou plusieurs entités, elles doivent relancer un jet d'initiative pour déterminer leur ordre de jeu.</p>
-
-    <h3>Surprise</h3>
-    <p>Toute entité est prise par surprise tant qu'elle n'a pas joué son premier tour, à moins d'être consciente du danger via un test de perception réussi. Une cible prise par surprise ne peut pas esquiver ou parer un coup.</p>
-
-    <h3>Types d'actions</h3>
-    <p>Une entité peut utiliser ses PA pour :</p>
-    <ul><li>se déplacer, la distance parcourue par PA est égale à AGI/2 en mètres. Elle peut aussi se déplacer de façon particulière (ex : charge, saut, glissade).</li>
-        <li>effectuer une action simple par exemple dégainer une arme (1PA), ouvrir une porte(1PA), utiliser/ramasser un objet(coût différent selon l'objet), intéragir avec un mécanisme(1PA), aider un allié(2PA).</li>
-        <li>attaquer un adversaire, le coût dépend de l'arme utilisée, limité à une attaque par tour.</li>
-        <li>lancer un sort, le coût en PA dépend de la magnitude du sort. Les sorts se lancent en plusieurs tours et nécessitent un certain nombre de PA pendant la concentration.</li>
-        <li>effectuer une action complexe par exemple crocheter une serrure(3PA), persuader/intimider un adversaire(2PA), utilisez un parchemin(Coût équivalent à celui du sort), sortir un objet de son sac(coût selon le poids de l'objet).</li>
-    </ul>
-    <p>Les PA non utilisés à la fin du tour sont perdus.</p>
-
-    <h3>Zones de contrôle et attaques d'opportunités</h3>
-    <p>Chaque entité contrôle une zone autour d'elle équivalente à la portée de son arme de mêlée, les entités peuvent rentrer dans cette zone sans risquer d'attaque d'opportunité si elle sont en garde.</p>
-    <p>Quitter cet espace sans faire attention peut déclencher une attaque d'opportunité de la part de l'entité contrôlant cette zone. Sortir d'une zone de contrôle ennemie est une action de complexe coûtant 2 PA.</p>
-
-    <h3>Type de dégâts</h3>
-    <p>Il y a deux types de dégâts, les dégâts létaux causés par les armes tranchantes, perforantes et contondantes lourdes(marteaux de guerre, masses) et les dégaux non-létaux causés par les attaques contondantes légères(mains nues et bâtons), le climat et la fatigue</p>
-    <p>Les dégâts létaux réduisent les points de vie des entités tandis que les non-létaux s'accumulent et ne comptent pas comme de réels dégâts.</p>
-
-    <h3>Modificateurs d'armes</h3>
-    <p>Chaque type d'arme possède un modificateur différent selon la caractéristique sur laquelle elle se base:</p>
-    <ul>
-        <li>Dextérité : (DEX-10)/2</li>
-        <li>Force manié à une main : (FOR-10)/2</li>
-        <li>Force manié à deux mains : FOR-10</li>
-    </ul>
-
-    <h3>Parades et Esquives</h3>
-    <p>Pour pouvoir parer les attaques, il faut posséder un bouclier ou tout objet s'y apparentant(un couvercle de casserole ne protège pas aussi bien cependant) et savoir s'en servir sous peine de malus, les jet de parade se base sur la Constitution</p>
-    <p>Pour esquiver une attaque, le jet se base sur l'Agilité, certaines compétences et dons permettent d'avoir un bonus, porter une armure ou des vêtements gênants les mouvements(armure de plates, robe ample,...) impose un malus selon l'ampleur de la gêne occasionnée.</p>
-
-    <h3>Blessures et mort</h3>
-    <p>Les dégâts n’affectent pas le personnage tant qu’il ne tombe pas à 0 PV. Si cela arrive, il est hors de combat.</p>
-    <p>Si les PV d'une entité tombent à 1 ou que le total de dégâts non-létaux sont égaux à son nombre actuel de PV, l'entité devient chancelant et ne peut que se déplacer, toute autre action lui ferait perdre son dernier PV, ce qu'elle est en droit de faire.</p>
-    <p>Si les dégâts non létaux dépassent le nombre de points de vie restants du personnage, il s’effondre, inconscient. Il est alors sans défense.</p>
-    <p>De 0 PV jusqu’à une valeur négative égale à sa quantité maximale de PV, il est mourant.</p>
-    <p>Quand son total de PV négatifs est égal à sa quantité maximale de PV, il meurt.</p>
-
-    <h3>Attaquer un adversaire(Exemple)</h3>
-    <p>Prenons Edwin, un officier de l'Empire Azuma, qui souhaite ataquer un gobelin situé à 10 mètres. Edwin possède un score de 14 en AGI, 15 en FOR et 12 en DEX, son arme est une épée longue impériale se basant sur la plus haute caractéristiques entre FOR et DEX (donc pour Edwin sur la FOR).</p>
-    <p>Le tour d'Edwin vient avant celui du gobelin, il peut donc s'avancer pour parcourir la distance les séparants, il peut parcourir 7m/PA, il en utilise donc 2(il pourra se déplacer d'encore 4 mètres après son attaque), il lui en reste 2 autre qu'il peut utiliser pour attaquer, il lance son dé 20 de FOR et fait un 6 !</p>
-    <p>L'attaque est réussie, le gobelin ne peut pas faire de parade avec sa dague, il tente d'esquiver, un dé 20 d'AGI, il obtient 8, le jet est réussi(le gobelin a un score de 11 en AGI) mais insuffisant car Edwin a obtenu un 6, l'attaque touche !</p>
-    <p>Edwin lance son jet de dégats (1d6+modificateur de FOR à une main), il obtient 5, le gobelin est déjà mal en point, il ne possède plus que 3 PV,il tombe à -2 PV, il est mourant.</p>
-</div>
-
-<div id="Magie">
-    <h1>Magie</h1>
-    <h3>Origine de la Magie</h3>
-    <p>La magie est apparu en Ogma suite au Grand Cataclysme, l'impact météoritique a créé un lien entre deux plans de l'existence, reliant ainsi le monde d'Ogma et celui de Karnaï.</p>
-    <p>Le cratère d'impact, où se situe Jikaï la capitale Sihir, est la source de toute la magie d'Ogma.</p>
-
-    <h3>Usage de la Magie</h3>
-    <p>Toute entité suffisament intelligente pour penser peut avoir recours à la magie.</p>
-    <p>Utiliser la magie revient à se rendre mentalement dans le plan de Karnaï, d'y façonner sa création en la dessinant puis de la ramener dans le plan d'Ogma via sa force psychique.</p>
-    <p>Plus un dessin est imposant, plus il est difficile de le faire basculer dans la réalité. Les aptitudes mentales du créateur jouent beacoup pour la réussite d'une telle entreprise. Son intelligence permet de façonner des images plus grandes et sa volonté de les maintenir plus longtemps dans le plan réel.</p>
-    <p>L'usage de la magie requiert de la force mentale, représenté par des points des points de Psyché. Quiconque a recours à la magie sans suffisament de Psyché ou s'essaye à des créations trop imposantes pour son esprit s'expose à des risques pour son enveloppe physique.</p>
-
-    <h3>Magie en combat</h3>
-    <p>Pour utiliser la magie durant un combat, il faut avoir suffisament de temps pour se concentrer( un round pour imaginer le sort, un autre pour le faire basculer dans la réalité)</p>
-    <p>Les utilisations ne sont limités que par la créativité de joueur et le bon vouloir du MJ.</p>
-    <p>On peut imaginer une simple boule de feu au milieu des adversaires, un mur de pierre devant soi pour créer un abri temporaire, faire tomber des litres d'eau pour rendre le sol boueux,...</p>
-    <p>Il est même possible de créer des choses directement dans la tête de son ennemi(si on possèdes les connaissances bien entendu), on peut lui faire voir des monstres, altérer sa perception, le rendre sourd/aveugle, l'endormir,...</p>
-
-    <h3>Magie hors-combat</h3>
-    <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
-    <p>Les utilisateurs plus confirmés peuvent également transmettre des messages via la magie, ainsi la transmission de messages en Ogma est très rapide. Il est même possible de recevoir un message sans avoir aucune formation avec la magie, il suffit à l'expéditeur de connaître un tant soit peu le destinataire.</p>
-    <p>Les Sarpas par exemple utilisent constamment la magie pour produire de la chaleur si ils ne peuvent pas profiter de celle des astres.</p>
-    <p>On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
-
-    <h3>Règles et coût des sorts</h3>
-    <table>
-        <thead>
-            <tr><th rowspan="2">Cercle de Pouvoir</th> <th rowspan="2">Niveau de difficulté<br/>(malus appliqué à l'INT)</th> <th colspan="4">Facteurs</th> <th rowspan="2">Coût en Psyché</th> <th rowspan="2">Temps d'invocation</th></tr>
-            <tr><th>Nombre de cibles</th> <th>Portée</th> <th>Persistance</th> <th>Dégâts</th></tr>
-        </thead>
-        <tbody>
-            <tr><td>1</td> <td>Standard (/)</td> <td>1</td> <td>Toucher</td> <td>1 round</td> <td>1d10</td> <td>3</td> <td>1</td></tr>
-            <tr><td>2</td> <td>Compliqué (-2)</td> <td>2</td> <td>10 m</td> <td>3 round</td> <td>2d8</td> <td>5</td> <td>2</td></tr>
-            <tr><td>3</td> <td>Difficile(-5)</td> <td>3</td> <td>50 m</td> <td>1 minute</td> <td>3d8</td> <td>10</td> <td>3</td></tr>
-            <tr><td>4</td> <td>Très difficile(-8)</td> <td>4</td> <td>100 m</td> <td>1 heure</td> <td>4d8</td> <td>15</td> <td>4</td></tr>
-            <tr><td>5</td> <td>Exceptionnel(-12)</td> <td>5</td> <td>1 km</td> <td> 1 journée</td> <td>5d8</td> <td>20</td> <td>5</td></tr>
-            <tr><td>6</td> <td>Héroïque(-16)</td> <td>spécial</td> <td>spécial</td> <td>spécial</td> <td>spécial</td> <td>spécial</td> <td>spécial</td></tr>
-        </tbody>
-    </table>
-</div>
-
-<div id="table_race">
-    <h1>Tableau des races</h1>
-    <table class="race">
-        <thead>
-        <tr><th>Race</th> <th width="50">FOR</th> <th width="50">DEX</th> <th width="50">AGI</th> <th width="50">CON</th> <th width="50">INT</th> <th width="50">VOL</th> <th width="50">PER</th> <th width="50">ÉLO</th> <th width="500">Traits raciaux</th></tr>
-        </thead>
-        <tbody>
-        <tr><td>Sever</td> <td>+2</td> <td>/</td> <td>/</td> <td>+1</td> <td>/</td> <td>/</td> <td>/</td> <td>/</td> <td><span class="underline">Endurance Nordique :</span> + 10 % de PV <br/><span class="underline">Honneur du guerrier :</span> +2 au jets de dégâts quand PV&lt;50% pendant 2 tours<br/><span class="underline">Savoir-faire :</span>Compétences d'artisanat maroquinerie et ferronerie</td></tr>
-        <tr><td>Azuma</td> <td>/</td> <td>/</td> <td>/</td> <td>/</td> <td>+2</td> <td>+1</td> <td>/</td> <td>/</td> <td><span class="underline">Diplomé de l'Académie :</span>2 domaines de connaissances au choix, compétences d'artisanat en livres<br/><span class="underline">Aisance avec la magie :</span> Peut relancer un jet raté pour un sort une fois par jour</td></tr>
-        <tr><td>Tuskizi</td> <td>/</td> <td>+2</td> <td>+1</td> <td>/</td> <td>/</td> <td>/</td> <td>/</td> <td>/</td> <td><span class="underline">Fortitude du désert :</span> +50% de résistance au poison, insensible au climat<br/><span class="underline">Nomade :</span> Aucune pénalité pour la marche forcée, +1m de mouvement par PA</td></tr>
-        <tr><td>Sihir</td> <td>-1</td> <td>/</td> <td>/</td> <td>-2</td> <td>+3</td> <td>+3</td> <td>/</td> <td>/</td> <td><span class="underline">Fait de magie :</span> +30% de Psyché, connaissances en Mystères, compétence Arts de la Magie<br/><span class="underline">Sensibilité magique :</span> 30% de vulnérabilité à la magie, 25% de chances d'absorber la psyché d'un sort</td></tr>
-        <tr><td>Steinn</td> <td>+2</td> <td>/</td> <td>-3</td> <td>+2</td> <td>/</td> <td>/</td> <td>/</td> <td>+2</td> <td><span class="underline">Vie Souterraine :</span> Vision nocturne, connaissances en Exploration souterraine<br/><span class="underline">Peuple d'ingénieurs :</span> connaissances en Ingénierie, compétence d'artisanat ferronerie et joaillerie<br/><span class="underline">Robustesse des Clans :</span> +50 % de résistance au feu(Khazun)/Froid(Rakaj), entraînement au port d'armure</td></tr>
-        <tr><td>Sakha</td> <td>/</td> <td>+3</td> <td>+4</td> <td>-2</td> <td>/</td> <td>/</td> <td>/</td> <td>-2</td> <td><span class="underline">Peuple sylvestre :</span> En forêt : compétences survie, médecine et discrétion, +5 aux jet de sorts -2 en dehors<br/><span class="underline">Druide</span> Compétences d'artisanat en alchimie et arcs</td></tr>
-        <tr><td>Chono</td> <td>+2</td> <td>+2</td> <td>/</td> <td>+2</td> <td>-3</td> <td>/</td> <td class="sens">+2</td> <td>/</td> <td><span class="underline">Tradition guerrière :</span> Entraînement aux armures et armes de tout types<br/><span class="underline">Sens affutés :</span> +2 PER, +3 aux jet lié à l'odorat et l'ouïe<br/><span class="underline">Rage Primordiale :</span> Jet de sauvegarde (VOL) si touché par un effet magique</td></tr>
-        <tr><td>Mushuk</td> <td>/</td> <td>/</td> <td>+1</td> <td>/</td> <td>/</td> <td>/</td> <td class="sens">+2</td> <td>+2</td> <td><span class="underline">Sens affutés :</span> +2 PER, vision nocturne, +2 aux jets liés à l'odorat et l'ouïe<br/><span class="underline">Marchand né :</span> Compétence Estimation et Marchandage</td></tr>
-        <tr><td>Tori</td> <td>-2</td> <td>/</td> <td>/</td> <td>/</td> <td>+3</td> <td>+2</td> <td>/</td> <td class="sens">+4</td> <td><span class="underline">Poète :</span> +4 ELO, compétence Représentation déclamation (+ 2 au choix)<br/><span class="underline">Pacifique :</span> -2 à tout les dégâts létaux, ils deviennent non-létaux<br/><span class="underline">Ailes</span> Compétence Vol, peut voler à volonté</td></tr>
-        <tr><td>Sarpa</td> <td>/</td> <td>/</td> <td>/</td> <td>/</td> <td>+2</td> <td>+3</td> <td>/</td> <td>/</td> <td><span class="underline">Connaisances ancestrales :</span> Compétence d'artisanat en alchimie<br/><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, jet de volonté toute les heures en absence de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle</td></tr>
-        <tr><td>Kanta</td> <td>+3</td> <td>-2</td> <td>-2</td> <td>+4</td> <td>/</td> <td>/</td> <td>/</td> <td>/</td> <td><span class="underline">Fourrure épaisse :</span> +50% de résitance au froid, +1 d'armure naturelle<br/><span class="underline">Sagesse :</span> +3 ELO pour calmer un conflit<br/><span class="underline">Imposante stature :</span> Compétence intimidation</td></tr>
-        </tbody>
-    </table>
-</div>
-
-<div id="Competences">
-    <h1>Compétences</h1>
-    <table>
-        <thead>
-        <tr>
-            <th>Nom</th>
-            <th>Description</th>
-            <th>Effet(s)</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Acrobatie</td>
-            <td>Le personnage peut garder son équilibre lorsqu’il marche sur des surfaces étroites ou un sol traître sans faire de test. Il peut également se baisser, se retourner, sauter ou effectuer un roulé-boulé pour éviter les coups ou traverser certains obstacles.</td>
-            <td>Pas de jet pour conserver son équilibre<br/> AGI + 2 pour les tests de mouvement</td>
-        </tr>
-        <tr>
-            <td>Ambidextrie</td>
-            <td>Le personnage sait utiliser deux armes légères à la fois</td>
-            <td>Pas de malus pour l'ambidextrie</td>
-        </tr>
-        <tr>
-            <td>Armes à deux mains</td>
-            <td>Le personnage sait utiliser sait manier une arme longue/lourde à deux mains</td>
-            <td>Pas de malus pour le maniement à deux mains</td>
-        </tr>
-        <tr>
-            <td>Art de la magie</td>
-            <td>L’art de lancer des sorts n’a pas beaucoup de secrets pour le personnage. Il sait identifier les objets magiques et reconnaître les sorts que d’autres personnes lancent.</td>
-            <td>Permet d'identifier un sort/objet/enchantement et de déchiffrer un parchemin selon l'INT<br/>Comprend la compétence "Utilisation basique de la magie"</td>
-        </tr>
-        <tr>
-            <td>Artisanat</td>
-            <td>Le personnage est entraîné à créer un type spécifique d’objets.</td>
-            <td>Permet de créer des objets dans certains domaines</td>
-        </tr>
-        <tr>
-            <td>Bluff</td>
-            <td>Le personnage sait comment mentir.</td>
-            <td>ELO + 4 pour les mensonges<br/>Capacité de feinter en combat(empêche parade/esquive)</td>
-        </tr>
-        <tr>
-            <td>Connaissances</td>
-            <td>Le personnage possède des connaissances dans un domaine spécifique, qui lui permettent de répondre à des questions simples ou complexes.</td>
-            <td>Pas de jet de connaissances pour le domaine maitrisé</td>
-        </tr>
-        <tr>
-            <td>Déguisement</td>
-            <td>Le personnage sait comment changer d’apparence.</td>
-            <td>PER - 5 au jet des observateurs si le personnage est déguisé</td>
-        </tr>
-        <tr>
-            <td>Discrétion</td>
-            <td>Le personnage sait comment éviter de se faire repérer, ce qui lui permet de tromper la surveillance des gardes ou encore de se cacher et de se déplacer en silence pour pouvoir ensuite attaquer par surprise.</td>
-            <td>AGI + 3 pour se dissimuler<br/>Utilisation possible de la furtivité au combat</td>
-        </tr>
-        <tr>
-            <td>Dressage</td>
-            <td>Le personnage sait comment s’y prendre avec les animaux et peut leur enseigner des tours, les faire obéir à des ordres simples ou même les apprivoiser.</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>Équitation</td>
-            <td>Le personnage sait monter à cheval ou utiliser d’autres montures plus exotiques</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>Escalade</td>
-            <td>Le personnage s’est entraîné à escalader toutes sortes de parois verticales, des murs relativement lisses de la ville jusqu’aux falaises rocailleuses.</td>
-            <td>AGI + 4 pour les tentatives d'escalades</td>
-        </tr>
-        <tr>
-            <td>Estimation</td>
-            <td>Le personnage sait estimer la valeur monétaire des objets.</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>Évasion</td>
-            <td>Le personnage s’est entraîné pour pouvoir se libérer de liens et se soustraire aux étreintes lors d’une lutte.</td>
-            <td>DEX + 5 pour se libérer</td>
-        </tr>
-        <tr>
-            <td>Explosif</td>
-            <td>Le personnage sait fabriquer et utiliser des explosifs</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>Filouterie</td>
-            <td>Le personnage s’est entraîné à agir comme un pickpocket, à dissimuler des armes et à faire toute une série d’autres choses sans se faire remarquer.</td>
-            <td>DEX + 3 pour les actions de filou<br/>Permet d'amuser la galerie(jongle, tour de pass-passe,...)</td>
-        </tr>
-        <tr>
-            <td>Fin gourmet</td>
-            <td>Le personnage peut manger presque n'importe quoi sans risquer un empoisonnement ou une maladie</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>Hors-la-loi</td>
-            <td>Le personnage a baigné dans les environnements criminels et connait les ficelles du métier de contrebandier</td>
-            <td>+ 2 aux jets liés aux actions illégales.</td>
-        </tr>
-        <tr>
-            <td>Intimidation</td>
-            <td>Cette compétence permet au personnage d’effrayer ses adversaires ou de les contraindre à agir à son avantage grâce à des menaces verbales et à des démonstrations de force.</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>Natation</td>
-            <td>Le personnage a appris à nager et peut même le faire dans des eaux agitées.</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>Marchandage</td>
-            <td>Le personnage sait éviter les affaires douteuses et convaincre les marchands grippe-sous</td>
-            <td>+2 ELO pour marchander</td>
-        </tr>
-        <tr>
-            <td>Médecine</td>
-            <td>Le personnage sait comment soigner les blessures et les autres maux.</td>
-            <td>INT + 5 pour soigner un personnage</td>
-        </tr>
-        <tr>
-            <td>Profession</td>
-            <td>Le personnage connaît les ficelles d’une profession en particulier.</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>Psychologie</td>
-            <td>Le personnage sait comment repérer les mensonges et percevoir les intentions véritables des individus qu’il croise.</td>
-            <td>PER + 4 pour détecter un mensonge</td>
-        </tr>
-        <tr>
-            <td>Représentation</td>
-            <td>Le personnage connaît un ou plusieurs arts du spectacle.</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>Sabotage</td>
-            <td>Le personnage sait comment désamorcer les pièges et crocheter les serrures. Cette compétence lui permet également de saboter des objets mécaniques simples comme les catapultes, les roues d’un chariot et les portes.</td>
-            <td>DEX + 3 pour crocheter une serrure, désamorcer un piège<br/>DEX + 4 pour saboter quelquechose</td>
-        </tr>
-        <tr>
-            <td>Survie</td>
-            <td>Le personnage sait comment survivre et se diriger dans les régions sauvages. Il est également entraîné à suivre les pistes ou les traces laissées par d’autres créatures.</td>
-            <td>PER + 2 pour se repérer et suivre une piste</td>
-        </tr>
-        <tr>
-            <td>Utilisation basique de la magie</td>
-            <td>Le personnage sait comment activer des objets magiques et utiliser la magie pour des tâches simplissimes.</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>Vol</td>
-            <td>Lorsque le personnage vole (grâce à des ailes ou par magie), il sait le faire avec agilité. Il peut réaliser des manœuvres aériennes complexes ou dangereuses. Cette compétence ne lui donne cependant pas la capacité de voler.</td>
-            <td>/</td>
-        </tr>
-        </tbody>
-    </table>
-
-    <div>
-        <h4>Domaines de Connaissances</h4>
-        <ul>
-            <li>Mystères (créatures artificielles, créatures magiques, morts-vivants, mystères anciens, symboles ésotériques, traditions magiques)</li>
-            <li>Exploration souterraine (aberrations, cavernes, spéléologie, vases)</li>
-            <li>Ingénierie (aqueducs, bâtiments, fortifications, ponts)</li>
-            <li>Géographie (climat, pays, peuples, types de terrain)</li>
-            <li>Histoire (colonies, guerres, histoire des villes, migrations)</li>
-            <li>Folklore local (coutumes, habitants, humanoïdes, légendes, lois et traditions, personnalités)</li>
-            <li>Nature (animaux, climat, cycles et saisons, plantes, vermines)</li>
-            <li>Noblesse (lignées, héraldique, personnalités, familles royales)</li>
-            <li>Religion (dieux et déesses, mythologie, symboles sacrés)</li>
+    <div id="Combat">
+        <h1>Combat</h1>
+        <p>Les combats se déroulent selon des round d'une durée de 6 secondes, chaque entité présente en combat dispose de points d'action (PA) qu'elle peut utiliser pour effectuer des actions lors de son tour. Le nombre de PA peut être modifié par certains sorts ou compétences. Les Pa d'une entité sont restaurés à la fin de son tour. Le nombre par défaut pour une entité normale de PA est 4.</p>
+        <h3>Premier round</h3>
+        <p>Lors du premier tour du combat, tout les personnes/monstres participant au combat lance un dé d'initiative (1d20 + PER), l'ordre de jeu est déterminé par ce jet du plus grand score au plus petit, si il ya  égalité entre deux ou plusieurs entités, elles doivent relancer un jet d'initiative pour déterminer leur ordre de jeu.</p>
+        <h3>Surprise</h3>
+        <p>Toute entité est prise par surprise tant qu'elle n'a pas joué son premier tour, à moins d'être consciente du danger via un test de perception réussi. Une cible prise par surprise ne peut pas esquiver ou parer un coup.</p>
+        <h3>Types d'actions</h3>
+        <p>Une entité peut utiliser ses PA pour :</p>
+        <ul><li>se déplacer, la distance parcourue par PA est égale à AGI/2 en mètres. Elle peut aussi se déplacer de façon particulière (ex : charge, saut, glissade).</li>
+            <li>effectuer une action simple par exemple dégainer une arme (1PA), ouvrir une porte(1PA), utiliser/ramasser un objet(coût différent selon l'objet), intéragir avec un mécanisme(1PA), aider un allié(2PA).</li>
+            <li>attaquer un adversaire, le coût dépend de l'arme utilisée, limité à une attaque par tour.</li>
+            <li>lancer un sort, le coût en PA dépend de la magnitude du sort. Les sorts se lancent en plusieurs tours et nécessitent un certain nombre de PA pendant la concentration.</li>
+            <li>effectuer une action complexe par exemple crocheter une serrure(3PA), persuader/intimider un adversaire(2PA), utilisez un parchemin(Coût équivalent à celui du sort), sortir un objet de son sac(coût selon le poids de l'objet).</li>
         </ul>
+        <p>Les PA non utilisés à la fin du tour sont perdus.</p>
+        <h3>Zones de contrôle et attaques d'opportunités</h3>
+        <p>Chaque entité contrôle une zone autour d'elle équivalente à la portée de son arme de mêlée, les entités peuvent rentrer dans cette zone sans risquer d'attaque d'opportunité si elle sont en garde.</p>
+        <p>Quitter cet espace sans faire attention peut déclencher une attaque d'opportunité de la part de l'entité contrôlant cette zone. Sortir d'une zone de contrôle ennemie est une action de complexe coûtant 2 PA.</p>
+        <h3>Type de dégâts</h3>
+        <p>Il y a deux types de dégâts, les dégâts létaux causés par les armes tranchantes, perforantes et contondantes lourdes(marteaux de guerre, masses) et les dégaux non-létaux causés par les attaques contondantes légères(mains nues et bâtons), le climat et la fatigue</p>
+        <p>Les dégâts létaux réduisent les points de vie des entités tandis que les non-létaux s'accumulent et ne comptent pas comme de réels dégâts.</p>
 
-        <br/>
+        <h3>Parades et Esquives</h3>
+        <p>Pour pouvoir parer les attaques, il faut posséder un bouclier ou tout objet s'y apparentant(un couvercle de casserole ne protège pas aussi bien cependant) et savoir s'en servir sous peine de malus, les jet de parade se base sur la Constitution</p>
+        <p>Pour esquiver une attaque, le jet se base sur l'Agilité, certaines compétences et dons permettent d'avoir un bonus, porter une armure ou des vêtements gênants les mouvements(armure de plates, robe ample,...) impose un malus selon l'ampleur de la gêne occasionnée.</p>
+        <h3>Blessures et mort</h3>
+        <p>Les dégâts n’affectent pas le personnage tant qu’il ne tombe pas à 0 PV. Si cela arrive, il est hors de combat.</p>
+        <p>Si les PV d'une entité tombent à 1 ou que le total de dégâts non-létaux sont égaux à son nombre actuel de PV, l'entité devient chancelant et ne peut que se déplacer, toute autre action lui ferait perdre son dernier PV, ce qu'elle est en droit de faire.</p>
+        <p>Si les dégâts non létaux dépassent le nombre de points de vie restants du personnage, il s’effondre, inconscient. Il est alors sans défense.</p>
+        <p>De 0 PV jusqu’à une valeur négative égale à sa quantité maximale de PV, il est mourant.</p>
+        <p>Quand son total de PV négatifs est égal à sa quantité maximale de PV, il meurt.</p>
 
-        <h4>Professions les plus courantes</h4>
-        <p>architecte, avocat, berger, bibliothécaire, boucher, boulanger, brasseur, bûcheron, clerc, conducteur d’attelage, courtisan, cuisinier, fermier, gladiateur, herboriste, ingénieur, jardinier, joueur, maître d’écurie, marchand, marin, meunier, mineur, pêcheur, porteur, sage-femme, scribe, soldat, tanneur, tavernier et trappeur</p>
-        <br/>
-        <h4>Domaines d'Artisanat</h4>
-        <p>alchimie, arcs, calligraphie, menuiserie, maçonnerie, joaillerie, livres, mécanique, navires, peintures, pièges, poteries, serrures, maroquinerie, ferronerie, couture, travail du verre.</p>
-        <br/>
-
-        <h4>Arts du spectacles (Représentation)</h4>
-        <ul>
-            <li>Chant (ballades, chorale, mélodie)</li>
-            <li>Danse (ballet, gigue, valse)</li>
-            <li>Déclamation (odes, sagas épiques, talent de conteur)</li>
-            <li>Farce (bouffonnerie, boutades, humour)</li>
-            <li>Instruments à clavier (clavecin, orgue, piano)</li>
-            <li>Instruments à cordes (harpe, luth, mandoline, violon)</li>
-            <li>Instruments à vent (bombardon, flûte, flûte à bec, flûte de Pan, trompette)</li>
-            <li>Percussions (carillons, cloches, tambours, gong)</li>
-            <li>Scène (comédie, drame, mime)</li>
-        </ul>
+        <h3>Attaquer un adversaire(Exemple)</h3>
+        <p>Prenons Edwin, un officier de l'Empire Azuma, qui souhaite ataquer un gobelin situé à 10 mètres. Edwin possède un score de 14 en AGI, 15 en FOR et 12 en DEX, son arme est une épée longue impériale se basant sur la plus haute caractéristiques entre FOR et DEX (donc pour Edwin sur la FOR).</p>
+        <p>Le tour d'Edwin vient avant celui du gobelin, il peut donc s'avancer pour parcourir la distance les séparants, il peut parcourir 7m/PA, il en utilise donc 2(il pourra se déplacer d'encore 4 mètres après son attaque), il lui en reste 2 autre qu'il peut utiliser pour attaquer, il lance son dé 20 de FOR et fait un 6 !</p>
+        <p>L'attaque est réussie, le gobelin ne peut pas faire de parade avec sa dague, il tente d'esquiver, un dé 20 d'AGI, il obtient 8, le jet est réussi(le gobelin a un score de 11 en AGI) mais insuffisant car Edwin a obtenu un 6, l'attaque touche !</p>
+        <p>Edwin lance son jet de dégats (1d6+modificateur de FOR à une main), il obtient 5, le gobelin est déjà mal en point, il ne possède plus que 3 PV,il tombe à -2 PV, il est mourant.</p>
     </div>
-</div>
+
+    <div id="equipement">
+        <h1>Équipement</h1>
+        <p>L'équipement joue un grand rôle dans la puissance du personnage, surtout si il n'a que peu recours à la magie. Une arme de forgé par un grand maître infligera plus de dégâts et sera plus solide qu'une vieille lame décrépite.</p>
+        <p>Les armes et armures possèdent une statistique appelée Rupture qui correspond à la solidité de l'objet, plus cette statistique est petite, plus l'objet est solide. L'amulette anti-magie des Chonos par exemple possède une rupture de 1.</p>
+        <p>La Rupture entre en compte uniquement lors d'un coup critique étant donné que l'armure est ignorée. On lance alors un D6 et si le chiffre est supérieur à la rupture, l'objet ne se brise pas et protège son porteur des effets secondaires du critique s'il s'agit d'une armure </p>
+        <p>Exemple : Un personnage portant un casque en fer Steinn de rupture 1-2, il subit une attaque critique à la tête, il obtient 3 à son jet de rupture, le casque n'est pas brisé, le personnage ne subit pas de traumatisme cranien, mais il subit tout le même les dégâts du coup critique.</p>
+        <p>La rupture étant une statistique variant d'un équipement à un autre, on ne peut que l'estimer globalement selon le matériau de l'objet, le choix précis revient donc au MJ qui décidera au cas-par-cas.</p>
+        <table>
+            <thead>
+            <tr>
+                <th colspan="2">Matériau</th>
+                <th rowspan="2">Rupture</th>
+            </tr>
+            <tr>
+                <th>Armure</th>
+                <th>Arme</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Tissu/Bois</td>
+                <td>Bois/Pierre</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>Cuir/Peau</td>
+                <td>Métal fragile (bronze,cuivre,...)</td>
+                <td>1-4</td>
+            </tr>
+            <tr>
+                <td>Cuir Renforcé/Écailles/Métal fin/Mailles</td>
+                <td>Métal commun (fer,...)</td>
+                <td>1-3</td>
+            </tr>
+            <tr>
+                <td>Métal épais</td>
+                <td>Métal de qualité (acier,...</td>
+                <td>1-2</td>
+            </tr>
+            <tr>
+                <td colspan="2">Materiau rare (virgonium,...)</td>
+                <td>1</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div id="Armes">
+        <h1>Armes</h1>
+        <table>
+            <caption>Armes de corps-à-corps</caption>
+            <thead>
+            <tr>
+                <th>Catégorie</th>
+                <th>Type de Dégâts</th>
+                <th>Dégâts</th>
+                <th>Critique</th>
+                <th>Bonus de<br/>Force</th>
+                <th>Bonus de<br/>Dextérité</th>
+                <th>Spécial</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th colspan="7">Armes à une main</th>
+            </tr>
+            <tr>
+                <td>Dagues</td>
+                <td>Perforants, Tranchants</td>
+                <td>1d4</td>
+                <td>1-4 x3</td>
+                <td>Non</td>
+                <td>Oui</td>
+                <td>Attaque furtive, Légère, </td>
+            </tr>
+            <tr>
+                <td>Épées courtes</td>
+                <td>Tranchants, Perforants</td>
+                <td>1d6</td>
+                <td>1-2 x2</td>
+                <td>Non</td>
+                <td>Oui</td>
+                <td>Légère</td>
+            </tr>
+            <tr>
+                <td>Épées courbes</td>
+                <td>Tranchants</td>
+                <td>1d6</td>
+                <td>1-3 x2</td>
+                <td>Non</td>
+                <td>Oui</td>
+                <td>Légère</td>
+            </tr>
+            <tr>
+                <td>Rapières</td>
+                <td>Perforants</td>
+                <td>1d6</td>
+                <td>1-3 x3</td>
+                <td>Non</td>
+                <td>Oui</td>
+                <td>Légère</td>
+            </tr>
+            <tr>
+                <td>Épées longues</td>
+                <td>Tranchants, Perforants</td>
+                <td>1d6</td>
+                <td>x2</td>
+                <td>Oui</td>
+                <td>Oui</td>
+                <td>Polyvalente(1d8)</td>
+            </tr>
+            <tr>
+                <td>Haches</td>
+                <td>Tranchants</td>
+                <td>1d8</td>
+                <td>x2</td>
+                <td>Oui</td>
+                <td>Non</td>
+                <td>Polyvalente(1d10)</td>
+            </tr>
+            <tr>
+                <td>Masses</td>
+                <td>Contondants</td>
+                <td>1d6</td>
+                <td>x2</td>
+                <td>Oui</td>
+                <td>Non</td>
+                <td>Polyvalente(1d8)</td>
+            </tr>
+            <tr>
+                <th colspan="7">Armes à deux mains</th>
+            </tr>
+            <tr>
+                <td>Espadons</td>
+                <td>Tranchants, Perforants</td>
+                <td>1d10</td>
+                <td>x2</td>
+                <td>Oui</td>
+                <td>Non</td>
+                <td>À deux mains, Lourde</td>
+            </tr>
+            <tr>
+                <td>Haches de guerre</td>
+                <td>Tranchants</td>
+                <td>1d12</td>
+                <td>x2</td>
+                <td>Oui</td>
+                <td>Non</td>
+                <td>À deux mains, Lourde</td>
+            </tr>
+            <tr>
+                <td>Marteaux de guerre</td>
+                <td>Contondants</td>
+                <td>1d10</td>
+                <td>x2</td>
+                <td>Oui</td>
+                <td>Non</td>
+                <td>À deux mains, Lourde</td>
+            </tr>
+            <tr>
+                <td>Lances</td>
+                <td>Perforants</td>
+                <td>1d8</td>
+                <td>x3</td>
+                <td>Oui</td>
+                <td>Oui</td>
+                <td>Allonge, Polyvalente, Charge</td>
+            </tr>
+            <tr>
+                <td>Hallebarde</td>
+                <td>Tranchants, Perforants, Contondants</td>
+                <td>1d8</td>
+                <td>x2</td>
+                <td>Oui</td>
+                <td>Oui</td>
+                <td>Allonge, Lourde, À deux mains</td>
+            </tr>
+            <tr>
+                <td>Coutille</td>
+                <td>Tranchants</td>
+                <td>1d8</td>
+                <td>x2</td>
+                <td>Oui</td>
+                <td>Oui</td>
+                <td>Allonge</td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <br/>
+        <table>
+            <caption>Armes à Distance</caption>
+            <thead>
+            <tr>
+                <th>Catégorie</th>
+                <th>Type de Dégâts</th>
+                <th>Dégâts</th>
+                <th>Portée</th>
+                <th>Munitions</th>
+                <th>Critique</th>
+                <th>Bonus de<br/>Force</th>
+                <th>Bonus de<br/>Dextérité</th>
+                <th>Spécial</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th colspan="10">Armes de lancer</th>
+            </tr>
+            <tr>
+                <td>Couteaux</td>
+                <td>Tranchants, Perforants</td>
+                <td>1d4</td>
+                <td>6m/18m</td>
+                <td>/</td>
+                <td>x2</td>
+                <td>Non</td>
+                <td>Oui</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Hachette</td>
+                <td>Tranchants</td>
+                <td>1d6</td>
+                <td>6m/18m</td>
+                <td>/</td>
+                <td>x2</td>
+                <td>Oui</td>
+                <td>Non</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Javelots</td>
+                <td>Perforants</td>
+                <td>1d8</td>
+                 <td>12m/36m</td>
+                 <td>/</td>
+                <td>x2</td>
+                 <td>Oui</td>
+                 <td>Oui</td>
+                 <td>/</td>
+                 </tr>
+            <tr>
+                <td>Fléchettes</td>
+                <td>Perforants</td>
+                <td>1d4</td>
+                <td>6m/18m</td>
+                <td>/</td>
+                <td>x2</td>
+                <td>Oui</td>
+                <td>Oui</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <th colspan="10">Armes à distance</th>
+            </tr>
+            <tr>
+                <td>Fronde</td>
+                <td>Contondants</td>
+                <td>1d6</td>
+                <td>12m/36m</td>
+                <td>Pierres</td>
+                <td>x3</td>
+                <td>Non</td>
+                <td>Oui</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Arc Court</td>
+                <td>Perforants</td>
+                <td>1d6</td>
+                <td>24m/96m</td>
+                <td>Flèches</td>
+                <td>x3</td>
+                <td>Non</td>
+                <td>Oui</td>
+                <td>À deux mains</td>
+            </tr>
+            <tr>
+                <td>Arc Long</td>
+                <td>Perforants</td>
+                <td>1d8</td>
+                <td>45m/180m</td>
+                <td>Flèches</td>
+                <td>x3</td>
+                <td>Non</td>
+                <td>Oui</td>
+                <td>À deux mains, Lourde</td>
+            </tr>
+            <tr>
+                <td>Arbalète</td>
+                <td>Perforants</td>
+                <td>1d8</td>
+                <td>24m/96m</td>
+                <td>Carreaux</td>
+                <td>x3</td>
+                <td>Non</td>
+                <td>Non</td>
+                <td>À deux mains, Chargement</td>
+            </tr>
+            <tr>
+                <td>Arbalète lourde</td>
+                <td>Perforants</td>
+                <td>1d12</td>
+                <td>30m/120m</td>
+                <td>Carreaux</td>
+                <td>x3</td>
+                <td>Non</td>
+                <td>Non</td>
+                <td>À deux mains, Lourde, Chargement</td>
+            </tr>
+            <tr>
+                <td>Arbalète à main</td>
+                <td>Perforants</td>
+                <td>1d6</td>
+                <td>9m/36m</td>
+                <td>Carreaux</td>
+                <td>x3</td>
+                <td>Non</td>
+                <td>Non</td>
+                <td>Légère, Chargement</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3>Propriétés spéciales des armes</h3>
+        <p><span class="big_underline">Attaque furtive :</span>Une attaque furtive effectuée avec cette arme ne fait aucun bruit et empêche la victime de crier.</p>
+        <p><span class="big_underline">Légère</span>Une arme légère est petite et facile à manier, ce qui la rend idéale pour les combats à deux armes.</p>
+        <p><span class="big_underline">Lourde</span>Une arme lourde est difficilement utilisable par les petites créatures(&lt;1m20), de plus il faut posséder une caractéristique de Force d'au moins 12 pour les utiliser convenablement.</p>
+        <p><span class="big_underline">Polyvalente</span>Polyvalente. Cette arme peut être tenue à une ou deux mains. Le chiffre indiqué entre parenthèses correspond aux dégâts si l'arme est tenue à deux mains lors d'une attaque au corps à corps.</p>
+        <p><span class="big_underline">À deux mains</span>Cette arme nécessite les deux mains lorsque vous attaquez avec. </p>
+        <p><span class="big_underline">Allonge</span>Ce type d'arme ajoute 1,50 mètre à votre allonge lorsque vous attaquez avec, ou pour déterminer votre allonge lorsque vous effectuez une attaque d'opportunité avec. </p>
+        <p><span class="big_underline">Chargement</span>Cette arme doit être rechargée avant d'être utilisée, cette action coûte un PA </p>
+
+    </div>
+
+    <div id="Armures">
+        <h1>Armures</h1>
+        <p>Comme on peut le voir sur la deuxième page de la fiche de personnage, chaque partie du corps peut recevoir un vêtement, ou une pièce d'armure différente, la protection procurée par l'armure est globale (chaque pièce contribue au total malgré sa localisation).</p>
+        <p>Le matériau de l'armure est le facteur principale de l'efficaité d'une armure, un brassard en peau ne protège pas aussi bien qu'un gantelet intégral de plates en acier.</p>
+        <p>Les armures sont séparées selon 3 catégories, les armures légères qui n'imposent aucun malus, les armures intermédiaires imposent des malus légers en agilité et parfois en discrétion, les armures lourdes imposent de lourds malus en agilité et rendent la discrétion presque impossible</p>
+        <p>Les valeurs d'armures décimales ne comptent pas, l'arrondi se fait à l'entier inférieur, porter un gant d'écaille donne 1 point d'amure, en porter sur chaque main en donne 2.</p>
+        <table>
+            <thead>
+            <tr>
+                <th>Matériau/type d'armure</th>
+                <th>Valeur d'armure<br/>Membre/torse</th>
+                <th>Catégorie</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Cuir/peau/tissu matelassé</td>
+                <td>0.5/2</td>
+                <td>Légère</td>
+            </tr>
+            <tr>
+                <td>Cuir renforcé/clouté</td>
+                <td>1/3</td>
+                <td>Légère</td>
+            </tr>
+            <tr>
+                <td>Bois</td>
+                <td>1/3</td>
+                <td>Intermédiaire</td>
+            </tr>
+            <tr>
+                <td>Mailles</td>
+                <td>1/4</td>
+                <td>Intermédiaire</td>
+            </tr>
+
+            <tr>
+                <td>Écailles</td>
+                <td>1.5/4</td>
+                <td>Intermédiaire</td>
+            </tr>
+            <tr>
+                <td>Lamellaire</td>
+                <td>1.5/5</td>
+                <td>Lourde</td>
+            </tr>
+            <tr>
+                <td>Plates</td>
+                <td>2/6</td>
+                <td>Lourde</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div id="Magie">
+        <h1>Magie</h1>
+        <h3>Origine de la Magie</h3>
+        <p>La magie est apparu en Ogma suite au Grand Cataclysme, l'impact météoritique a créé un lien entre deux plans de l'existence, reliant ainsi le monde d'Ogma et celui de Karnaï.</p>
+        <p>Le cratère d'impact, où se situe Jikaï la capitale Sihir, est la source de toute la magie d'Ogma.</p>
+
+        <h3>Usage de la Magie</h3>
+        <p>Toute entité suffisament intelligente pour penser peut avoir recours à la magie.</p>
+        <p>Utiliser la magie revient à se rendre mentalement dans le plan de Karnaï, d'y façonner sa création en la dessinant puis de la ramener dans le plan d'Ogma via sa force psychique.</p>
+        <p>Plus un dessin est imposant, plus il est difficile de le faire basculer dans la réalité. Les aptitudes mentales du créateur jouent beacoup pour la réussite d'une telle entreprise. Son intelligence permet de façonner des images plus grandes et sa volonté de les maintenir plus longtemps dans le plan réel.</p>
+        <p>L'usage de la magie requiert de la force mentale, représenté par des points des points de Psyché. Quiconque a recours à la magie sans suffisament de Psyché ou s'essaye à des créations trop imposantes pour son esprit s'expose à des risques pour son enveloppe physique.</p>
+
+        <h3>Magie en combat</h3>
+        <p>Pour utiliser la magie durant un combat, il faut avoir suffisament de temps pour se concentrer( un round pour imaginer le sort, un autre pour le faire basculer dans la réalité)</p>
+        <p>Les utilisations ne sont limités que par la créativité de joueur et le bon vouloir du MJ.</p>
+        <p>On peut imaginer une simple boule de feu au milieu des adversaires, un mur de pierre devant soi pour créer un abri temporaire, faire tomber des litres d'eau pour rendre le sol boueux,...</p>
+        <p>Il est même possible de créer des choses directement dans la tête de son ennemi(si on possèdes les connaissances bien entendu), on peut lui faire voir des monstres, altérer sa perception, le rendre sourd/aveugle, l'endormir,...</p>
+
+        <h3>Magie hors-combat</h3>
+        <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
+        <p>Les utilisateurs plus confirmés peuvent également transmettre des messages via la magie, ainsi la transmission de messages en Ogma est très rapide. Il est même possible de recevoir un message sans avoir aucune formation avec la magie, il suffit à l'expéditeur de connaître un tant soit peu le destinataire.</p>
+        <p>Les Sarpas par exemple utilisent constamment la magie pour produire de la chaleur si ils ne peuvent pas profiter de celle des astres.</p>
+        <p>On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
+
+        <h3>Règles et coût des sorts</h3>
+        <table>
+            <thead>
+            <tr>
+                <th rowspan="2">Cercle de Pouvoir</th>
+                <th rowspan="2">Niveau de difficulté<br/>(malus appliqué à l'INT)</th>
+                <th colspan="4">Facteurs</th>
+                <th rowspan="2">Coût en Psyché</th>
+                <th rowspan="2">Temps d'invocation</th>
+            </tr>
+            <tr>
+                <th>Nombre de cibles</th>
+                <th>Portée</th>
+                <th>Persistance</th>
+                <th>Dégâts</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Standard (/)</td>
+                <td>1</td>
+                <td>Toucher</td>
+                <td>1 round</td>
+                <td>1d10</td>
+                <td>3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Compliqué (-2)</td>
+                <td>2</td>
+                <td>10 m</td>
+                <td>3 round</td>
+                <td>2d8</td>
+                <td>5</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Difficile(-5)</td>
+                <td>3</td>
+                <td>50 m</td>
+                <td>1 minute</td>
+                <td>3d8</td>
+                <td>10</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Très difficile(-8)</td>
+                <td>4</td>
+                <td>100 m</td>
+                <td>1 heure</td>
+                <td>4d8</td>
+                <td>15</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Exceptionnel(-12)</td>
+                <td>5</td>
+                <td>1 km</td>
+                <td> 1 journée</td>
+                <td>5d8</td>
+                <td>20</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Héroïque(-16)</td>
+                <td>spécial</td>
+                <td>spécial</td>
+                <td>spécial</td>
+                <td>spécial</td>
+                <td>spécial</td>
+                <td>spécial</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="table_race">
+        <h1>Tableau des races</h1>
+        <table class="race">
+            <thead>
+            <tr>
+                <th>Race</th>
+                <th width="50">FOR</th>
+                <th width="50">DEX</th>
+                <th width="50">AGI</th>
+                <th width="50">CON</th>
+                <th width="50">INT</th>
+                <th width="50">VOL</th>
+                <th width="50">PER</th>
+                <th width="50">ÉLO</th>
+                <th width="500">Traits raciaux</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Sever</td>
+                <td>+2</td>
+                <td>/</td>
+                <td>/</td>
+                <td>+1</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td><span class="underline">Endurance Nordique :</span> + 10 % de PV <br/><span class="underline">Honneur du guerrier :</span> +2 au jets de dégâts quand PV&lt;50% pendant 2 tours<br/><span class="underline">Savoir-faire :</span>Compétences d'artisanat maroquinerie et ferronerie</td>
+            </tr>
+            <tr>
+                <td>Azuma</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>+2</td>
+                <td>+1</td>
+                <td>/</td>
+                <td>/</td>
+                <td><span class="underline">Diplomé de l'Académie :</span>2 domaines de connaissances au choix, compétences d'artisanat en livres<br/><span class="underline">Aisance avec la magie :</span> Peut relancer un jet raté pour un sort une fois par jour</td>
+            </tr>
+            <tr>
+                <td>Tuskizi</td>
+                <td>/</td>
+                <td>+2</td>
+                <td>+1</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td><span class="underline">Fortitude du désert :</span> +50% de résistance au poison, insensible au climat<br/><span class="underline">Nomade :</span> Aucune pénalité pour la marche forcée, +1m de mouvement par PA</td>
+            </tr>
+            <tr>
+                <td>Sihir</td>
+                <td>-1</td>
+                <td>/</td>
+                <td>/</td>
+                <td>-2</td>
+                <td>+3</td>
+                <td>+3</td>
+                <td>/</td>
+                <td>/</td>
+                <td><span class="underline">Fait de magie :</span> +30% de Psyché, connaissances en Mystères, compétence Arts de la Magie<br/><span class="underline">Sensibilité magique :</span> 30% de vulnérabilité à la magie, 25% de chances d'absorber la psyché d'un sort</td>
+            </tr>
+            <tr>
+                <td>Steinn</td>
+                <td>+2</td>
+                <td>/</td>
+                <td>-3</td>
+                <td>+2</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>+2</td>
+                <td><span class="underline">Vie Souterraine :</span> Vision nocturne, connaissances en Exploration souterraine<br/><span class="underline">Peuple d'ingénieurs :</span> connaissances en Ingénierie, compétence d'artisanat ferronerie et joaillerie<br/><span class="underline">Robustesse des Clans :</span> +50 % de résistance au feu(Khazun)/Froid(Rakaj), entraînement au port d'armure</td>
+            </tr>
+            <tr>
+                <td>Sakha</td>
+                <td>/</td>
+                <td>+3</td>
+                <td>+4</td>
+                <td>-2</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>-2</td>
+                <td><span class="underline">Peuple sylvestre :</span> En forêt : compétences survie, médecine et discrétion, +5 aux jet de sorts -2 en dehors<br/><span class="underline">Druide</span> Compétences d'artisanat en alchimie et arcs</td>
+            </tr>
+            <tr>
+                <td>Chono</td>
+                <td>+2</td>
+                <td>+2</td>
+                <td>/</td>
+                <td>+2</td>
+                <td>-3</td>
+                <td>/</td>
+                <td class="sens">+2</td>
+                <td>/</td>
+                <td><span class="underline">Sens affutés :</span> +2 PER, +3 aux jet lié à l'odorat et l'ouïe<br/><span class="underline">Rage Primordiale :</span> Jet de sauvegarde (VOL) si touché par un effet magique</td>
+            </tr>
+            <tr>
+                <td>Mushuk</td>
+                <td>/</td>
+                <td>/</td>
+                <td>+1</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td class="sens">+2</td>
+                <td>+2</td>
+                <td><span class="underline">Sens affutés :</span> +2 PER, vision nocturne, +2 aux jets liés à l'odorat et l'ouïe<br/><span class="underline">Marchand né :</span> Compétence Estimation et Marchandage</td>
+            </tr>
+            <tr>
+                <td>Tori</td>
+                <td>-2</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>+3</td>
+                <td>+2</td>
+                <td>/</td>
+                <td class="sens">+4</td>
+                <td><span class="underline">Poète :</span> +4 ELO, compétence Représentation déclamation (+ 2 au choix)<br/><span class="underline">Pacifique :</span> -2 à tout les dégâts létaux, ils deviennent non-létaux<br/><span class="underline">Ailes</span> Compétence Vol, peut voler à volonté</td>
+            </tr>
+            <tr>
+                <td>Sarpa</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>+2</td>
+                <td>+3</td>
+                <td>/</td>
+                <td>/</td>
+                <td><span class="underline">Connaisances ancestrales :</span> Compétence d'artisanat en alchimie<br/><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, jet de volonté toute les heures en absence de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle</td>
+            </tr>
+            <tr>
+                <td>Kanta</td>
+                <td>+3</td>
+                <td>-2</td>
+                <td>-2</td>
+                <td>+4</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td><span class="underline">Fourrure épaisse :</span> +50% de résitance au froid, +1 d'armure naturelle<br/><span class="underline">Sagesse :</span> +3 ELO pour calmer un conflit<br/><span class="underline">Imposante stature :</span> Compétence intimidation</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Competences">
+        <h1>Compétences</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Effet(s)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Acrobatie</td>
+                <td>Le personnage peut garder son équilibre lorsqu’il marche sur des surfaces étroites ou un sol traître sans faire de test. Il peut également se baisser, se retourner, sauter ou effectuer un roulé-boulé pour éviter les coups ou traverser certains obstacles.</td>
+                <td>Pas de jet pour conserver son équilibre<br/> AGI + 2 pour les tests de mouvement</td>
+            </tr>
+            <tr>
+                <td>Ambidextrie</td>
+                <td>Le personnage sait utiliser deux armes légères à la fois</td>
+                <td>Pas de malus pour l'ambidextrie</td>
+            </tr>
+            <tr>
+                <td>Armes à deux mains</td>
+                <td>Le personnage sait utiliser sait manier une arme longue/lourde à deux mains</td>
+                <td>Pas de malus pour le maniement à deux mains</td>
+            </tr>
+            <tr>
+                <td>Art de la magie</td>
+                <td>L’art de lancer des sorts n’a pas beaucoup de secrets pour le personnage. Il sait identifier les objets magiques et reconnaître les sorts que d’autres personnes lancent.</td>
+                <td>Permet d'identifier un sort/objet/enchantement et de déchiffrer un parchemin selon l'INT<br/>Comprend la compétence "Utilisation basique de la magie"</td>
+            </tr>
+            <tr>
+                <td>Artisanat</td>
+                <td>Le personnage est entraîné à créer un type spécifique d’objets.</td>
+                <td>Permet de créer des objets dans certains domaines</td>
+            </tr>
+            <tr>
+                <td>Bluff</td>
+                <td>Le personnage sait comment mentir.</td>
+                <td>ELO + 4 pour les mensonges<br/>Capacité de feinter en combat(empêche parade/esquive)</td>
+            </tr>
+            <tr>
+                <td>Connaissances</td>
+                <td>Le personnage possède des connaissances dans un domaine spécifique, qui lui permettent de répondre à des questions simples ou complexes.</td>
+                <td>Pas de jet de connaissances pour le domaine maitrisé</td>
+            </tr>
+            <tr>
+                <td>Déguisement</td>
+                <td>Le personnage sait comment changer d’apparence.</td>
+                <td>PER - 5 au jet des observateurs si le personnage est déguisé</td>
+            </tr>
+            <tr>
+                <td>Discrétion</td>
+                <td>Le personnage sait comment éviter de se faire repérer, ce qui lui permet de tromper la surveillance des gardes ou encore de se cacher et de se déplacer en silence pour pouvoir ensuite attaquer par surprise.</td>
+                <td>AGI + 3 pour se dissimuler<br/>Utilisation possible de la furtivité au combat</td>
+            </tr>
+            <tr>
+                <td>Dressage</td>
+                <td>Le personnage sait comment s’y prendre avec les animaux et peut leur enseigner des tours, les faire obéir à des ordres simples ou même les apprivoiser.</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Équitation</td>
+                <td>Le personnage sait monter à cheval ou utiliser d’autres montures plus exotiques</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Escalade</td>
+                <td>Le personnage s’est entraîné à escalader toutes sortes de parois verticales, des murs relativement lisses de la ville jusqu’aux falaises rocailleuses.</td>
+                <td>AGI + 4 pour les tentatives d'escalades</td>
+            </tr>
+            <tr>
+                <td>Estimation</td>
+                <td>Le personnage sait estimer la valeur monétaire des objets.</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Évasion</td>
+                <td>Le personnage s’est entraîné pour pouvoir se libérer de liens et se soustraire aux étreintes lors d’une lutte.</td>
+                <td>DEX + 5 pour se libérer</td>
+            </tr>
+            <tr>
+                <td>Explosif</td>
+                <td>Le personnage sait fabriquer et utiliser des explosifs</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Filouterie</td>
+                <td>Le personnage s’est entraîné à agir comme un pickpocket, à dissimuler des armes et à faire toute une série d’autres choses sans se faire remarquer.</td>
+                <td>DEX + 3 pour les actions de filou<br/>Permet d'amuser la galerie(jongle, tour de pass-passe,...)</td>
+            </tr>
+            <tr>
+                <td>Fin gourmet</td>
+                <td>Le personnage peut manger presque n'importe quoi sans risquer un empoisonnement ou une maladie</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Hors-la-loi</td>
+                <td>Le personnage a baigné dans les environnements criminels et connait les ficelles du métier de contrebandier</td>
+                <td>+ 2 aux jets liés aux actions illégales.</td>
+            </tr>
+            <tr>
+                <td>Intimidation</td>
+                <td>Cette compétence permet au personnage d’effrayer ses adversaires ou de les contraindre à agir à son avantage grâce à des menaces verbales et à des démonstrations de force.</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Natation</td>
+                <td>Le personnage a appris à nager et peut même le faire dans des eaux agitées.</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Marchandage</td>
+                <td>Le personnage sait éviter les affaires douteuses et convaincre les marchands grippe-sous</td>
+                <td>+2 ELO pour marchander</td>
+            </tr>
+            <tr>
+                <td>Médecine</td>
+                <td>Le personnage sait comment soigner les blessures et les autres maux.</td>
+                <td>INT + 5 pour soigner un personnage</td>
+            </tr>
+            <tr>
+                <td>Profession</td>
+                <td>Le personnage connaît les ficelles d’une profession en particulier.</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Psychologie</td>
+                <td>Le personnage sait comment repérer les mensonges et percevoir les intentions véritables des individus qu’il croise.</td>
+                <td>PER + 4 pour détecter un mensonge</td>
+            </tr>
+            <tr>
+                <td>Représentation</td>
+                <td>Le personnage connaît un ou plusieurs arts du spectacle.</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Sabotage</td>
+                <td>Le personnage sait comment désamorcer les pièges et crocheter les serrures. Cette compétence lui permet également de saboter des objets mécaniques simples comme les catapultes, les roues d’un chariot et les portes.</td>
+                <td>DEX + 3 pour crocheter une serrure, désamorcer un piège<br/>DEX + 4 pour saboter quelquechose</td>
+            </tr>
+            <tr>
+                <td>Survie</td>
+                <td>Le personnage sait comment survivre et se diriger dans les régions sauvages. Il est également entraîné à suivre les pistes ou les traces laissées par d’autres créatures.</td>
+                <td>PER + 2 pour se repérer et suivre une piste</td>
+            </tr>
+            <tr>
+                <td>Utilisation basique de la magie</td>
+                <td>Le personnage sait comment activer des objets magiques et utiliser la magie pour des tâches simplissimes.</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>Vol</td>
+                <td>Lorsque le personnage vole (grâce à des ailes ou par magie), il sait le faire avec agilité. Il peut réaliser des manœuvres aériennes complexes ou dangereuses. Cette compétence ne lui donne cependant pas la capacité de voler.</td>
+                <td>/</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <h4>Domaines de Connaissances</h4>
+            <ul>
+                <li>Mystères (créatures artificielles, créatures magiques, morts-vivants, mystères anciens, symboles ésotériques, traditions magiques)</li>
+                <li>Exploration souterraine (aberrations, cavernes, spéléologie, vases)</li>
+                <li>Ingénierie (aqueducs, bâtiments, fortifications, ponts)</li>
+                <li>Géographie (climat, pays, peuples, types de terrain)</li>
+                <li>Histoire (colonies, guerres, histoire des villes, migrations)</li>
+                <li>Folklore local (coutumes, habitants, humanoïdes, légendes, lois et traditions, personnalités)</li>
+                <li>Nature (animaux, climat, cycles et saisons, plantes, vermines)</li>
+                <li>Noblesse (lignées, héraldique, personnalités, familles royales)</li>
+                <li>Religion (dieux et déesses, mythologie, symboles sacrés)</li>
+            </ul>
+
+            <br/>
+
+            <h4>Professions les plus courantes</h4>
+            <p>architecte, avocat, berger, bibliothécaire, boucher, boulanger, brasseur, bûcheron, clerc, conducteur d’attelage, courtisan, cuisinier, fermier, gladiateur, herboriste, ingénieur, jardinier, joueur, maître d’écurie, marchand, marin, meunier, mineur, pêcheur, porteur, sage-femme, scribe, soldat, tanneur, tavernier et trappeur</p>
+            <br/>
+            <h4>Domaines d'Artisanat</h4>
+            <p>alchimie, arcs, calligraphie, menuiserie, maçonnerie, joaillerie, livres, mécanique, navires, peintures, pièges, poteries, serrures, maroquinerie, ferronerie, couture, travail du verre.</p>
+            <br/>
+
+            <h4>Arts du spectacles (Représentation)</h4>
+            <ul>
+                <li>Chant (ballades, chorale, mélodie)</li>
+                <li>Danse (ballet, gigue, valse)</li>
+                <li>Déclamation (odes, sagas épiques, talent de conteur)</li>
+                <li>Farce (bouffonnerie, boutades, humour)</li>
+                <li>Instruments à clavier (clavecin, orgue, piano)</li>
+                <li>Instruments à cordes (harpe, luth, mandoline, violon)</li>
+                <li>Instruments à vent (bombardon, flûte, flûte à bec, flûte de Pan, trompette)</li>
+                <li>Percussions (carillons, cloches, tambours, gong)</li>
+                <li>Scène (comédie, drame, mime)</li>
+            </ul>
+        </div>
+    </div>
+
+
     <div id="fiche_perso">
         <h1>Fiche de Personnage</h1>
-        <img src="../../Images/fiche_perso1.png" alt="Fiche1"/>
-        <img src="../../Images/fiche_perso2.png" alt="Fiche2"/>
-        <img src="../../Images/fiche_perso3.png" alt="Fiche3"/>
+        <img src="../../Images/fiche_perso1.png" alt="Fiche1" height="1000"/>
+        <img src="../../Images/fiche_perso2.png" alt="Fiche2" height="1000"/>
+        <img src="../../Images/fiche_perso3.png" alt="Fiche3" height="1000"/>
     </div>
 
     <div id="creation_perso">
