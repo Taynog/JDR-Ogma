@@ -39,6 +39,7 @@
     <a class="medium" href="Rules.xhtml#Competences">Compétences</a>
     <a class="medium" href="Rules.xhtml#fiche_perso">Fiche personnage</a>
     <a class="medium" href="Rules.xhtml#creation_perso">Création personnage</a>
+    <a class="form_ajout" href="Rules.xhtml#form_ajout">Une proposition ?</a>
 </div>
 
 <div class="main">
@@ -1069,25 +1070,30 @@
                 <li>Scène (comédie, drame, mime)</li>
             </ul>
         </div>
-        <div>
-            <form action="https://formspree.io/mdowgeba" method="post">
-                <h2>Proposition d'ajouts</h2>
-                <p>Que souhaitez vous proposer ?</p>
-                <input type="checkbox" id="arme" name="arme"/>
-                <label for="arme">Arme(s)</label><br/>
-                <input type="checkbox" id="armure" name="armure"/>
-                <label for="armure">Armure(s)</label><br/>
-                <input type="checkbox" id="competence" name="competence"/>
-                <label for="competence">Compétence(s)</label><br/><br/>
-                <label for="proposition">Veuillez décrire le plus possible votre (vos) proposition(s) :</label><br/>
-                <textarea cols="85" rows="10" id="proposition" name="proposition(s)"/><br/><br/>
-                <label for="mail">Email (optionnel)</label>
-                <input type="text" name="mail" id="mail"/><br/>
-                <input type="submit" value="Envoyer"/>
-            </form>
-        </div>
+
     </div>
 
+    <div id="form_ajout">
+        <form action="https://formspree.io/mdowgeba" method="post">
+            <h2>Proposition d'ajouts</h2>
+            <p>Que souhaitez vous proposer ?</p>
+            <input type="checkbox" id="arme" name="arme"/>
+            <label for="arme">Arme(s)</label><br/>
+            <input type="checkbox" id="armure" name="armure"/>
+            <label for="armure">Armure(s)</label><br/>
+            <input type="checkbox" id="competence" name="competence"/>
+            <label for="competence">Compétence(s)</label><br/>
+            <input type="checkbox" id="autre" name="autre"/>
+            <label for="autre" style="padding-right: 3px">Autre</label>
+            <input name="precision" value="Précisez" onfocus="if(this.value===this.defaultValue)this.value=''" onblur="if(this.value==='')this.value=this.defaultValue"/>
+            <br/><br/>
+            <label for="proposition">Veuillez décrire le plus possible votre (vos) proposition(s) :</label><br/>
+            <textarea cols="100" rows="15" id="proposition" name="proposition(s)"/><br/><br/>
+            <label for="mail">Email (optionnel)</label>
+            <input name="mail" id="mail"/><br/><br/>
+            <input type="submit" value="Envoyer"/>
+        </form>
+    </div>
 
     <div id="fiche_perso">
         <h1>Fiche de Personnage</h1>

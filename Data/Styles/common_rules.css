@@ -120,6 +120,15 @@ a.big{
     display: block;
 }
 
+a.form_ajout{
+    margin: 3px;
+    text-decoration: none;
+    font-size: 18px;
+    color: darkred;
+    display: block;
+    position: absolute;
+}
+
 .sidenav a:hover {
     color: rebeccapurple;
 }
