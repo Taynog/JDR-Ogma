@@ -464,12 +464,14 @@
         <p>Comme on peut le voir sur la deuxième page de la fiche de personnage, chaque partie du corps peut recevoir un vêtement, ou une pièce d'armure différente, la protection procurée par l'armure est globale (chaque pièce contribue au total malgré sa localisation).</p>
         <p>Le matériau de l'armure est le facteur principale de l'efficaité d'une armure, un brassard en peau ne protège pas aussi bien qu'un gantelet intégral de plates en acier.</p>
         <p>Les armures sont séparées selon 3 catégories, les armures légères qui n'imposent aucun malus, les armures intermédiaires imposent des malus légers en agilité et parfois en discrétion, les armures lourdes imposent de lourds malus en agilité et rendent la discrétion presque impossible</p>
+        <p>Les armures peuvent couvrir différentes parties du corps, une cotte de maille par exemple protège le torse, les jambes et les épaules, si un coup critique porte sur une de ces parties du corps, c'est la rupture de la cotte qui sera mise à l'épreuve.</p>
         <table>
             <thead>
             <tr>
                 <th rowspan="2">Matériau/type d'armure</th>
                 <th colspan="6">Valeur d'armure</th>
                 <th rowspan="2">Catégorie</th>
+                <th rowspan="2">Malus</th>
             </tr>
             <tr>
                 <th>Tete</th>
@@ -483,22 +485,24 @@
             <tbody>
             <tr>
                 <td>Cuir/peau/tissu matelassé</td>
-                <td>/</td>
+                <td>0</td>
                 <td>1</td>
-                <td>/</td>
-                <td>/</td>
+                <td>0</td>
+                <td>0</td>
                 <td>1</td>
-                <td>/</td>
+                <td>0</td>
                 <td>Légère</td>
+                <td>/</td>
             </tr>
             <tr>
                 <td>Cuir renforcé/clouté</td>
-                <td>/</td>
+                <td>0</td>
                 <td colspan="2">2</td>
-                <td>/</td>
+                <td>0</td>
                 <td>1</td>
-                <td>/</td>
+                <td>1</td>
                 <td>Légère</td>
+                <td>/</td>
             </tr>
             <tr>
                 <td>Mailles</td>
@@ -507,15 +511,27 @@
                 <td>/</td>
                 <td>/</td>
                 <td>Intermédiaire</td>
+                <td>Bruyante (-3 en furtivité), Lourde (-1 AGI)</td>
             </tr>
-
+            <tr>
+                <td>Cuirasse</td>
+                <td>/</td>
+                <td>3</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>Intermédiaire</td>
+                <td>Lourde (-1 AGI)</td>
+            </tr>
             <tr>
                 <td>Écailles</td>
                 <td>1</td>
                 <td colspan="3">3</td>
                 <td>1</td>
-                <td>/</td>
+                <td>1</td>
                 <td>Intermédiaire</td>
+                <td>Bruyante (-2 en furtivité), Lourde (-1 AGI)</td>
             </tr>
             <tr>
                 <td>Lamellaire</td>
@@ -524,18 +540,28 @@
                 <td>1</td>
                 <td>1</td>
                 <td>Lourde</td>
+                <td>Bruyante (-4 en furtivité), Lourde (- 2 AGI)</td>
             </tr>
             <tr>
-                <td>Plates</td>
+                <td>Plaques articulées</td>
                 <td>2</td>
                 <td colspan="3">5</td>
                 <td>2</td>
                 <td>1</td>
                 <td>Lourde</td>
+                <td>Bruyante (-5 en furtivité), Lourde (- 3 AGI), Difficile à équiper (besoin d'aide)</td>
+            </tr>
+            <tr>
+                <td>Harnois</td>
+                <td>2</td>
+                <td colspan="3">6</td>
+                <td>2</td>
+                <td>1</td>
+                <td>Lourde</td>
+                <td>Bruyante (-5 en furtivité), Lourde (- 2 AGI), Difficile à équiper (besoin d'aide)</td>
             </tr>
             </tbody>
         </table>
-
     </div>
 
     <div id="Magie">
