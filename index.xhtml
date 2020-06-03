@@ -7,14 +7,16 @@
     <title>Page d'Accueil</title>
     <meta http-equiv="Content-Script-Type" content="application/javascript"/>
     <script type="application/javascript" src="Data/Javascript/fonctions_accueil_plan.js"> </script>
-    <link rel="stylesheet" type="text/css" title="style_index" href="Data/Styles/common_rules.css"/>
+    <link rel="stylesheet" type="text/css" title="style_plan" href="Data/Styles/common_rules.css"/>
 </head>
 <body>
-<div class="sidenav">
-    <p class="index">Index<a class="big" href="index.xhtml">Accueil</a></p>
+<div id="mySidenav" class="sidenav" style="width: 200px">
+    <button class="closebtn" onclick="closeNav()">Fermer</button>
+    <p class="index">Index<a class="big" href="index.html">Accueil</a></p>
     <p class="partie">Lore</p>
-    <a class="big" href="Data/Content/Collection/Histoire_Ogma.xhtml">Histoire du monde</a>
-    <a class="big" href="Data/Content/Collection/Carte_Ogma.xhtml">Carte du monde</a>
+    <a class="medium" href="Data/Content/Collection/Histoire_Ogma.xhtml">Histoire du monde</a>
+    <a class="medium" href="Data/Content/Collection/Carte_Ogma.xhtml">Carte du monde</a>
+    <a class="medium" href="Data/Content/Collection/Bestiaire.xhtml">Bestiaire</a>
     <p class="dossier">Races</p>
     <p class="sous-dossier">Humaines</p>
     <a class="little" href="Data/Content/Collection/Empire_Azuma.xhtml">Azuma</a>
@@ -41,9 +43,11 @@
     <a class="medium" href="Data/Content/Collection/Rules.xhtml#Competences">Compétences</a>
     <a class="medium" href="Data/Content/Collection/Rules.xhtml#fiche_perso">Fiche personnage</a>
     <a class="medium" href="Data/Content/Collection/Rules.xhtml#creation_perso">Création personnage</a>
+    <a class="medium" href="Data/Content/Collection/Tableaux.xhtml#table_critiques">Tableau des critiques</a>
     <a class="form_ajout" href="Data/Content/Collection/Rules.xhtml#form_ajout">Une proposition ?</a>
 </div>
-<div class="main">
+<div id="main" class="main" style="margin-left: 200px">
+    <button onclick="openNav()" class="openbtn">MENU</button>
 <h1 align="center">Encyclopédie des Races d'Ogma</h1>
 
 <div align="center">

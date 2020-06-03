@@ -5,29 +5,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <title>Page de Règles</title>
+    <meta http-equiv="Content-Script-Type" content="application/javascript"/>
+    <script type="application/javascript" src="../../Javascript/fonctions_accueil_plan.js"> </script>
     <link rel="stylesheet" type="text/css" title="style_plan" href="../../Styles/common_rules.css"/>
 </head>
 <body>
-<div class="sidenav">
+<div id="mySidenav" class="sidenav" style="width: 200px">
+    <button class="closebtn" onclick="closeNav()">Fermer</button>
     <p class="index">Index<a class="big" href="index.html">Accueil</a></p>
     <p class="partie">Lore</p>
-    <a class="big" href="../Collection/Histoire_Ogma.xhtml">Histoire du monde</a>
-    <a class="big" href="Carte_Ogma.xhtml">Carte du monde</a>
-        <p class="dossier">Races</p>
-            <p class="sous-dossier">Humaines</p>
-                <a class="little" href="Empire_Azuma.xhtml">Azuma</a>
-                <a class="little" href="Royaume_Sever.xhtml">Sever</a>
-                <a class="little" href="Sultanat_Tuskizi.xhtml">Tuskizi</a>
-            <p class="sous-dossier">Magiques</p>
-                <a class="little" href="Tribus_Sakha.xhtml">Sakha</a>
-                <a class="little" href="Domaine_Sihir.xhtml">Sihir</a>
-                <a class="little" href="Clans_Steinn.xhtml">Steinn</a>
-            <p class="sous-dossier">Bestiales</p>
-                <a class="little" href="Hordes_Chono.xhtml">Chono</a>
-                 <a class="little" href="Communautés_Kanta.xhtml">Kanta</a>
-                <a class="little" href="Ligues_Mushuk.xhtml">Mushuk</a>
-                <a class="little" href="Castes_Sarpa.xhtml">Sarpa</a>
-                <a class="little" href="Alliance_Tori.xhtml">Tori</a>
+    <a class="medium" href="../Collection/Histoire_Ogma.xhtml">Histoire du monde</a>
+    <a class="medium" href="Carte_Ogma.xhtml">Carte du monde</a>
+    <a class="medium" href="Bestiaire.xhtml">Bestiaire</a>
+    <p class="dossier">Races</p>
+    <p class="sous-dossier">Humaines</p>
+    <a class="little" href="Empire_Azuma.xhtml">Azuma</a>
+    <a class="little" href="Royaume_Sever.xhtml">Sever</a>
+    <a class="little" href="Sultanat_Tuskizi.xhtml">Tuskizi</a>
+    <p class="sous-dossier">Magiques</p>
+    <a class="little" href="Tribus_Sakha.xhtml">Sakha</a>
+    <a class="little" href="Domaine_Sihir.xhtml">Sihir</a>
+    <a class="little" href="Clans_Steinn.xhtml">Steinn</a>
+    <p class="sous-dossier">Bestiales</p>
+    <a class="little" href="Hordes_Chono.xhtml">Chono</a>
+    <a class="little" href="Communautés_Kanta.xhtml">Kanta</a>
+    <a class="little" href="Ligues_Mushuk.xhtml">Mushuk</a>
+    <a class="little" href="Castes_Sarpa.xhtml">Sarpa</a>
+    <a class="little" href="Alliance_Tori.xhtml">Tori</a>
     <p class="partie">Jeu de Rôle</p>
     <a class="medium" href="Rules.xhtml#Caracteristiques">Caractéristiques</a>
     <a class="medium" href="Rules.xhtml#Combat">Combat</a>
@@ -39,10 +43,11 @@
     <a class="medium" href="Rules.xhtml#Competences">Compétences</a>
     <a class="medium" href="Rules.xhtml#fiche_perso">Fiche personnage</a>
     <a class="medium" href="Rules.xhtml#creation_perso">Création personnage</a>
+    <a class="medium" href="Tableaux.xhtml#table_critiques">Tableau des critiques</a>
     <a class="form_ajout" href="Rules.xhtml#form_ajout">Une proposition ?</a>
 </div>
-
-<div class="main">
+<div id="main" class="main" style="margin-left: 200px">
+    <button onclick="openNav()" class="openbtn">MENU</button>
     <div id="Caracteristiques">
         <h1>Caractéristiques</h1>
         <ol type="I" >
@@ -93,7 +98,7 @@
         <p>Les dégâts létaux réduisent les points de vie des entités tandis que les non-létaux s'accumulent et ne comptent pas comme de réels dégâts.</p>
 
         <h3>Parades et Esquives</h3>
-        <p>Pour pouvoir parer les attaques, il faut posséder un bouclier ou tout objet s'y apparentant(un couvercle de casserole ne protège pas aussi bien cependant) et savoir s'en servir sous peine de malus, les jet de parade se base sur la Constitution</p>
+        <p>Pour pouvoir parer les attaques, il faut posséder un bouclier ou une amre permettant la parade (voir <a href="Rules.xhtml#Armes">le tableau des armes</a>) et savoir s'en servir sous peine de malus, les jet de parade se base sur la Constitution avec un bouclier et sur la Dextérité avec une arme.</p>
         <p>Pour esquiver une attaque, le jet se base sur l'Agilité, certaines compétences et dons permettent d'avoir un bonus, porter une armure ou des vêtements gênants les mouvements(armure de plates, robe ample,...) impose un malus selon l'ampleur de la gêne occasionnée.</p>
         <h3>Blessures et mort</h3>
         <p>Les dégâts n’affectent pas le personnage tant qu’il ne tombe pas à 0 PV. Si cela arrive, il est hors de combat.</p>
@@ -159,6 +164,7 @@
 
     <div id="Armes">
         <h1>Armes</h1>
+        <p>Lors d'un coup critique, il faut se référer au <a href="Tableaux.xhtml#table_critiques"> tableau des critiques</a> équivalent au type de dégâts infligés par le coup (les dégâts bonus du coup critiques sont ajoutés après le multiplicateur)</p>
         <table>
             <caption>Armes de corps-à-corps</caption>
             <thead>
@@ -589,10 +595,11 @@
         <p>L'usage de la magie requiert de la force mentale, représenté par des points des points de Psyché. Quiconque a recours à la magie sans suffisament de Psyché ou s'essaye à des créations trop imposantes pour son esprit s'expose à des risques pour son enveloppe physique.</p>
 
         <h3>Magie en combat</h3>
-        <p>Pour utiliser la magie durant un combat, il faut avoir suffisament de temps pour se concentrer( un round pour imaginer le sort, un autre pour le faire basculer dans la réalité)</p>
+        <p>Pour utiliser la magie durant un combat, il faut avoir suffisament de temps pour se concentrer. Le test se base sur l'intelligence et est lancé au dernier round de concentration, si le lanceur est pertubé lors de sa concentration, il doit réussir un jet de sauvegarde (volonté) basé sur la difficulté du sort pour le maintenir. La psyché est perdue après que le jet d'intelligence.</p>
         <p>Les utilisations ne sont limités que par la créativité de joueur et le bon vouloir du MJ.</p>
         <p>On peut imaginer une simple boule de feu au milieu des adversaires, un mur de pierre devant soi pour créer un abri temporaire, faire tomber des litres d'eau pour rendre le sol boueux,...</p>
         <p>Il est même possible de créer des choses directement dans la tête de son ennemi(si on possèdes les connaissances bien entendu), on peut lui faire voir des monstres, altérer sa perception, le rendre sourd/aveugle, l'endormir,...</p>
+        <p>Une réussite critique lors d'un lancer sort permet d'augmenter n'importe quel facteur d'un cran gratuitement</p>
 
         <h3>Magie hors-combat</h3>
         <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
@@ -1077,14 +1084,14 @@
         <form action="https://formspree.io/mdowgeba" method="post">
             <h2>Proposition d'ajouts</h2>
             <p>Que souhaitez vous proposer ?</p>
-            <input type="checkbox" id="arme" name="arme"/>
-            <label for="arme">Arme(s)</label><br/>
-            <input type="checkbox" id="armure" name="armure"/>
-            <label for="armure">Armure(s)</label><br/>
-            <input type="checkbox" id="competence" name="competence"/>
-            <label for="competence">Compétence(s)</label><br/>
-            <input type="checkbox" id="autre" name="autre"/>
-            <label for="autre" style="padding-right: 3px">Autre</label>
+            <input type="checkbox" id="ajout_arme" name="arme"/>
+            <label for="ajout_arme">Arme(s)</label><br/>
+            <input type="checkbox" id="ajout_armure" name="armure"/>
+            <label for="ajout_armure">Armure(s)</label><br/>
+            <input type="checkbox" id="ajout_competence" name="competence"/>
+            <label for="ajout_competence">Compétence(s)</label><br/>
+            <input type="checkbox" id="ajout_autre" name="autre"/>
+            <label for="ajout_autre" style="padding-right: 3px">Autre</label>
             <input name="precision" value="Précisez" onfocus="if(this.value===this.defaultValue)this.value=''" onblur="if(this.value==='')this.value=this.defaultValue"/>
             <br/><br/>
             <label for="proposition">Veuillez décrire le plus possible votre (vos) proposition(s) :</label><br/>

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Content/Collection/Bestiaire.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Content/Collection/Tableaux.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Alliance_Tori.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Alliance_Tori.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Carte_Ogma.xhtml" afterDir="false" />
@@ -18,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Sultanat_Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Sultanat_Tuskizi.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Tribus_Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Tribus_Sakha.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Javascript/fonctions_accueil_plan.js" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Javascript/fonctions_accueil_plan.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
@@ -97,6 +99,7 @@
       <workItem from="1591108448388" duration="2363000" />
       <workItem from="1591124812829" duration="3305000" />
       <workItem from="1591128238904" duration="1541000" />
+      <workItem from="1591175357728" duration="17029000" />
     </task>
     <servers />
   </component>

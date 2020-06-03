@@ -37,3 +37,15 @@ function setnormalmap(){
     let img = document.getElementById("map");
     img.setAttribute( "src", "../../Images/Carte_Ogma.jpg");
 }
+
+/* Set the width of the side navigation to 200px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+    document.getElementById("main").style.marginLeft = "200px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
