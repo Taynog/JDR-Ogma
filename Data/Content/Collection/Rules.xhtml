@@ -10,44 +10,67 @@
     <link rel="stylesheet" type="text/css" title="style_plan" href="../../Styles/common_rules.css"/>
 </head>
 <body>
-<div id="mySidenav" class="sidenav" style="width: 200px">
-    <button class="closebtn" onclick="closeNav()">Fermer</button>
-    <p class="index">Index<a class="big" href="index.html">Accueil</a></p>
-    <p class="partie">Lore</p>
-    <a class="medium" href="../Collection/Histoire_Ogma.xhtml">Histoire du monde</a>
-    <a class="medium" href="Carte_Ogma.xhtml">Carte du monde</a>
-    <a class="medium" href="Bestiaire.xhtml">Bestiaire</a>
-    <p class="dossier">Races</p>
-    <p class="sous-dossier">Humaines</p>
-    <a class="little" href="Empire_Azuma.xhtml">Azuma</a>
-    <a class="little" href="Royaume_Sever.xhtml">Sever</a>
-    <a class="little" href="Sultanat_Tuskizi.xhtml">Tuskizi</a>
-    <p class="sous-dossier">Magiques</p>
-    <a class="little" href="Tribus_Sakha.xhtml">Sakha</a>
-    <a class="little" href="Domaine_Sihir.xhtml">Sihir</a>
-    <a class="little" href="Clans_Steinn.xhtml">Steinn</a>
-    <p class="sous-dossier">Bestiales</p>
-    <a class="little" href="Hordes_Chono.xhtml">Chono</a>
-    <a class="little" href="Communautés_Kanta.xhtml">Kanta</a>
-    <a class="little" href="Ligues_Mushuk.xhtml">Mushuk</a>
-    <a class="little" href="Castes_Sarpa.xhtml">Sarpa</a>
-    <a class="little" href="Alliance_Tori.xhtml">Tori</a>
-    <p class="partie">Jeu de Rôle</p>
-    <a class="medium" href="Rules.xhtml#Caracteristiques">Caractéristiques</a>
-    <a class="medium" href="Rules.xhtml#Combat">Combat</a>
-    <a class="medium" href="Rules.xhtml#equipement">Équipement</a>
-    <a class="little" href="Rules.xhtml#Armes">Armes</a>
-    <a class="little" href="Rules.xhtml#Armures">Armures</a>
-    <a class="medium" href="Rules.xhtml#Magie">Magie</a>
-    <a class="medium" href="Rules.xhtml#table_race">Tableau Races</a>
-    <a class="medium" href="Rules.xhtml#Competences">Compétences</a>
-    <a class="medium" href="Rules.xhtml#fiche_perso">Fiche personnage</a>
-    <a class="medium" href="Rules.xhtml#creation_perso">Création personnage</a>
-    <a class="medium" href="Tableaux.xhtml#table_critiques">Tableau des critiques</a>
-    <a class="form_ajout" href="Rules.xhtml#form_ajout">Une proposition ?</a>
+<div id="mySidenav" class="sidenav" style="display: block">
+    <ul class="sidenav ">
+        <li><span class="index"><a href="index.html">Accueil</a></span></li>
+        <li><span class="partie">Lore</span>
+            <ul>
+                <li><span class="medium"><a href="../Collection/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium"><a href="Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium"><a href="Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier">Races</span>
+                    <ul>
+                        <li><span class="sous-dossier">Humaines</span>
+                            <ul>
+                                <li><span class="little"><a href="Empire_Azuma.xhtml">Azuma</a></span></li>
+                                <li><span class="little"><a href="Royaume_Sever.xhtml">Sever</a></span></li>
+                                <li><span class="little"><a href="Sultanat_Tuskizi.xhtml">Tuskizi</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier">Magiques</span>
+                            <ul>
+                                <li><span class="little"><a href="Tribus_Sakha.xhtml">Sakha</a></span></li>
+                                <li><span class="little"><a href="Domaine_Sihir.xhtml">Sihir</a></span></li>
+                                <li><span class="little"><a href="Clans_Steinn.xhtml">Steinn</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier">Bestiales</span>
+                            <ul>
+                                <li><span class="little"><a href="Hordes_Chono.xhtml">Chono</a></span></li>
+                                <li><span class="little"><a href="Communautés_Kanta.xhtml">Kanta</a></span></li>
+                                <li><span class="little"><a href="Ligues_Mushuk.xhtml">Mushuk</a></span></li>
+                                <li><span class="little"><a href="Castes_Sarpa.xhtml">Sarpa</a></span></li>
+                                <li><span class="little"><a href="Alliance_Tori.xhtml">Tori</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="partie">Jeu de Rôle</span>
+            <ul>
+                <li><span class="medium"><a href="Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#Combat">Combat</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#equipement">Équipement</a></span>
+                    <ul>
+                        <li><span class="little"><a href="Rules.xhtml#Armes">Armes</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Armures">Armures</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#materiel">Matériel</a></span></li>
+                    </ul></li>
+                <li><span class="medium"><a href="Rules.xhtml#Magie">Magie</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#table_race">Tableau Races</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#Competences">Compétences</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#fiche_perso">Fiche personnage</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#creation_perso">Création personnage</a></span></li>
+                <li><span class="medium"><a href="Tableaux.xhtml">Tableaux de règles</a></span></li>
+            </ul>
+        </li>
+        <li><span class="nav_ajout"><a href="Rules.xhtml#form_ajout">Une proposition ?</a></span></li>
+    </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
-    <button onclick="openNav()" class="openbtn">MENU</button>
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
+
     <div id="Caracteristiques">
         <h1>Caractéristiques</h1>
         <ol type="I" >
@@ -68,11 +91,10 @@
                 </ul>
             </li>
         </ol>
+        <p>Le total de Point de vie d'un personnage est déterminé par cette formule : CON*2+FOR*0.5+Niveau*2</p>
+        <p>Le total de Point de psyché d'un personnage est déterminé par cette formule : VOL*2+INT*0.5+Niveau*2</p>
+        <p>Si lors d'un lancer, on obtient un nombre décimal, l'arrondi se fait à l'entier inférieur. (ex : 15.25 devient 15)</p>
     </div>
-    <p>Le total de Point de vie d'un personnage est déterminé par cette formule : CON*2+FOR*0.5+Niveau*2</p>
-    <p>Le total de Point de psyché d'un personnage est déterminé par cette formule : VOL*2+INT*0.5+Niveau*2</p>
-    <p>Si lors d'un lancer, on obtient un nombre décimal, l'arrondi se fait à l'entier inférieur. (ex : 15.25 devient 15)</p>
-
 
     <div id="Combat">
         <h1>Combat</h1>
@@ -159,427 +181,1159 @@
             </tr>
             </tbody>
         </table>
+            <div id="Armes">
+                <h2>Armes</h2>
+                <p>Lors d'un coup critique, il faut se référer au <a href="Tableaux.xhtml#table_critiques"> tableau des critiques</a> équivalent au type de dégâts infligés par le coup (les dégâts bonus du coup critiques sont ajoutés après le multiplicateur)</p>
+                <button onclick="openCloseTable('table_armes')">Ouvrir/Fermer le tableau des armes</button>
+                <div id="table_armes" style="display:block">
+                    <table>
+                    <caption>Armes de corps-à-corps</caption>
+                    <thead>
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>Type de Dégâts</th>
+                        <th>Dégâts</th>
+                        <th>Critique</th>
+                        <th>Bonus de<br/>Force</th>
+                        <th>Bonus de<br/>Dextérité</th>
+                        <th>Parade possible</th>
+                        <th>Spécial</th>
+                        <th>Prix</th>
+                        <th>Poids</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th colspan="9">Armes à une main</th>
+                    </tr>
+                    <tr>
+                        <td>Dagues</td>
+                        <td>Perforants, Tranchants</td>
+                        <td>1d4</td>
+                        <td>1-4 x3</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Attaque furtive, Légère</td>
+                        <td>2 po</td>
+                        <td>500 g</td>
+                    </tr>
+                    <tr>
+                        <td>Épées courtes</td>
+                        <td>Tranchants, Perforants</td>
+                        <td>1d6</td>
+                        <td>1-2 x2</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>Légère</td>
+                        <td>10 po</td>
+                        <td>1 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Épées courbes</td>
+                        <td>Tranchants</td>
+                        <td>1d6</td>
+                        <td>1-3 x2</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>Légère</td>
+                        <td>25 po</td>
+                        <td>1,5 kg5</td>
+                    </tr>
+                    <tr>
+                        <td>Rapières</td>
+                        <td>Perforants</td>
+                        <td>1d6</td>
+                        <td>1-3 x3</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>Légère</td>
+                        <td>25 po</td>
+                        <td>1 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Épées longues</td>
+                        <td>Tranchants, Perforants</td>
+                        <td>1d6</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>Polyvalente(1d8)</td>
+                        <td>15</td>
+                        <td>1,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Haches</td>
+                        <td>Tranchants</td>
+                        <td>1d8</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Polyvalente(1d10)</td>
+                        <td>10 po</td>
+                        <td>2 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Masses</td>
+                        <td>Contondants</td>
+                        <td>1d6</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Non</td>
+                        <td>Polyvalente(1d8)</td>
+                        <td>10 po</td>
+                        <td>2 kg</td>
+                    </tr>
+                    <tr>
+                        <th colspan="9">Armes à deux mains</th>
+                    </tr>
+                    <tr>
+                        <td>Bâtons</td>
+                        <td>Contondants</td>
+                        <td>2d4 non létaux</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>À deux mains</td>
+                        <td>2 pa</td>
+                        <td>2 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Espadons</td>
+                        <td>Tranchants, Perforants</td>
+                        <td>1d10</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>À deux mains, Lourde</td>
+                        <td>50 po</td>
+                        <td>3 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Haches de guerre</td>
+                        <td>Tranchants</td>
+                        <td>1d12</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>À deux mains, Lourde</td>
+                        <td>30 po</td>
+                        <td>3.,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Marteaux de guerre</td>
+                        <td>Contondants</td>
+                        <td>1d10</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>À deux mains, Lourde, Imparable</td>
+                        <td>30 po</td>
+                        <td>5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Lances</td>
+                        <td>Perforants</td>
+                        <td>1d8</td>
+                        <td>x3</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Allonge, Polyvalente, Charge</td>
+                        <td>1 po</td>
+                        <td>1,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Hallebardes</td>
+                        <td>Tranchants, Perforants, Contondants</td>
+                        <td>1d8</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>Allonge, Lourde, À deux mains, Imparable</td>
+                        <td>20 po</td>
+                        <td>3 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Coutille</td>
+                        <td>Tranchants</td>
+                        <td>1d8</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>Allonge</td>
+                        <td>20 po</td>
+                        <td>3 kg</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <br/>
+                <table>
+                    <caption>Armes à Distance</caption>
+                    <thead>
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>Type de Dégâts</th>
+                        <th>Dégâts</th>
+                        <th>Portée</th>
+                        <th>Munitions</th>
+                        <th>Critique</th>
+                        <th>Bonus de<br/>Force</th>
+                        <th>Bonus de<br/>Dextérité</th>
+                        <th>Spécial</th>
+                        <th>Prix</th>
+                        <th>Poids</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th colspan="12">Armes de lancer</th>
+                    </tr>
+                    <tr>
+                        <td>Couteaux</td>
+                        <td>Tranchants, Perforants</td>
+                        <td>1d4</td>
+                        <td>6m/18m</td>
+                        <td>/</td>
+                        <td>x2</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>/</td>
+                        <td>5 pa</td>
+                        <td>500 g</td>
+                    </tr>
+                    <tr>
+                        <td>Hachette</td>
+                        <td>Tranchants</td>
+                        <td>1d6</td>
+                        <td>6m/18m</td>
+                        <td>/</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Non</td>
+                        <td>/</td>
+                        <td>1 po</td>
+                        <td>1 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Javelots</td>
+                        <td>Perforants</td>
+                        <td>1d8</td>
+                        <td>12m/36m</td>
+                        <td>/</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>/</td>
+                        <td>5 pa</td>
+                        <td>1 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Fléchettes</td>
+                        <td>Perforants</td>
+                        <td>1d4</td>
+                        <td>6m/18m</td>
+                        <td>/</td>
+                        <td>x2</td>
+                        <td>Oui</td>
+                        <td>Oui</td>
+                        <td>/</td>
+                        <td>5 pc</td>
+                        <td>100 g</td>
+                    </tr>
+                    <tr>
+                        <th colspan="12">Armes à distance</th>
+                    </tr>
+                    <tr>
+                        <td>Fronde</td>
+                        <td>Contondants</td>
+                        <td>1d6 non-létaux</td>
+                        <td>12m/36m</td>
+                        <td>Pierres</td>
+                        <td>x3</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>/</td>
+                        <td>1 pa</td>
+                        <td>250 g</td>
+                    </tr>
+                    <tr>
+                        <td>Arc Court</td>
+                        <td>Perforants</td>
+                        <td>1d6</td>
+                        <td>24m/96m</td>
+                        <td>Flèches</td>
+                        <td>x3</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>À deux mains</td>
+                        <td>25 po</td>
+                        <td>1 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Arc Long</td>
+                        <td>Perforants</td>
+                        <td>1d8</td>
+                        <td>45m/180m</td>
+                        <td>Flèches</td>
+                        <td>x3</td>
+                        <td>Non</td>
+                        <td>Oui</td>
+                        <td>À deux mains, Lourde</td>
+                        <td>50 po</td>
+                        <td>1,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Arbalète</td>
+                        <td>Perforants</td>
+                        <td>1d8</td>
+                        <td>24m/96m</td>
+                        <td>Carreaux</td>
+                        <td>x3</td>
+                        <td>Non</td>
+                        <td>Non</td>
+                        <td>À deux mains, Chargement</td>
+                        <td>25 po</td>
+                        <td>2,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Arbalète lourde</td>
+                        <td>Perforants</td>
+                        <td>1d12</td>
+                        <td>30m/120m</td>
+                        <td>Carreaux</td>
+                        <td>x3</td>
+                        <td>Non</td>
+                        <td>Non</td>
+                        <td>À deux mains, Lourde, Chargement</td>
+                        <td>50 po</td>
+                        <td>9 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Arbalète à main</td>
+                        <td>Perforants</td>
+                        <td>1d6</td>
+                        <td>9m/36m</td>
+                        <td>Carreaux</td>
+                        <td>x3</td>
+                        <td>Non</td>
+                        <td>Non</td>
+                        <td>Légère, Chargement</td>
+                        <td>70 po</td>
+                        <td>1,5 kg</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3>Propriétés spéciales des armes</h3>
+                <p><span class="big_underline">Attaque furtive :</span>Une attaque furtive effectuée avec cette arme ne fait aucun bruit et empêche la victime de crier.</p>
+                <p><span class="big_underline">Légère</span>Une arme légère est petite et facile à manier, ce qui la rend idéale pour les combats à deux armes.</p>
+                <p><span class="big_underline">Lourde</span>Une arme lourde est difficilement utilisable par les petites créatures(&lt;1m20), de plus il faut posséder une caractéristique de Force d'au moins 12 pour les utiliser convenablement.</p>
+                <p><span class="big_underline">Polyvalente</span>Polyvalente. Cette arme peut être tenue à une ou deux mains. Le chiffre indiqué entre parenthèses correspond aux dégâts si l'arme est tenue à deux mains lors d'une attaque au corps à corps.</p>
+                <p><span class="big_underline">À deux mains</span>Cette arme nécessite les deux mains lorsque vous attaquez avec. </p>
+                <p><span class="big_underline">Allonge</span>Ce type d'arme ajoute 1,50 mètre à votre allonge lorsque vous attaquez avec, ou pour déterminer votre allonge lorsque vous effectuez une attaque d'opportunité avec. </p>
+                <p><span class="big_underline">Chargement</span>Cette arme doit être rechargée avant d'être utilisée, cette action coûte un PA </p>
+                <p><span class="big_underline">Imparable</span>Cette arme est trop lourde pour être parée avec une arme, il faut un bouclier pour tenter une parade</p>
+                <p><span class="big_underline">Charge</span>Une charge effectuée avec cette arme inflige le double de dégâts, le triple si la charge est faite depuis une monture.</p>
+            </div>
+        </div>
+
+            <div id="Armures">
+                <h2>Armures</h2>
+                <p>Comme on peut le voir sur la deuxième page de la fiche de personnage, chaque partie du corps peut recevoir un vêtement, ou une pièce d'armure différente, la protection procurée par l'armure est globale (chaque pièce contribue au total malgré sa localisation).</p>
+                <p>Le matériau de l'armure est le facteur principale de l'efficaité d'une armure, un brassard en peau ne protège pas aussi bien qu'un gantelet intégral de plates en acier.</p>
+                <p>Les armures sont séparées selon 3 catégories, les armures légères qui n'imposent aucun malus, les armures intermédiaires imposent des malus légers en agilité et parfois en discrétion, les armures lourdes imposent de lourds malus en agilité et rendent la discrétion presque impossible</p>
+                <p>Les armures peuvent couvrir différentes parties du corps, une cotte de maille par exemple protège le torse, les jambes et les épaules, si un coup critique porte sur une de ces parties du corps, c'est la rupture de la cotte qui sera mise à l'épreuve.</p>
+                <button onclick="openCloseTable('table_armures')">Ouvrir/Fermer le tableau des armures</button>
+                <div id="table_armures" style="display:block">
+                    <table>
+                        <caption>Armures</caption>
+                    <thead>
+                    <tr>
+                        <th rowspan="2">Matériau/type d'armure</th>
+                        <th colspan="6">Valeur d'armure</th>
+                        <th rowspan="2">Catégorie</th>
+                        <th rowspan="2">Malus</th>
+                        <th rowspan="2">Prix</th>
+                        <th rowspan="2">Poids</th>
+                    </tr>
+                    <tr>
+                        <th>Tete</th>
+                        <th>Torse</th>
+                        <th>Épaules</th>
+                        <th>Jambes</th>
+                        <th>Mains</th>
+                        <th>Pieds</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Cuir/peau/tissu matelassé</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>Légère</td>
+                        <td>/</td>
+                        <td>10 po</td>
+                        <td>5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Cuir renforcé/clouté</td>
+                        <td>0</td>
+                        <td colspan="2">2</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Légère</td>
+                        <td>/</td>
+                        <td>50 po</td>
+                        <td>7,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Mailles</td>
+                        <td>1</td>
+                        <td colspan="3">3</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>Intermédiaire</td>
+                        <td>Bruyante (-3 en furtivité), Lourde (-1 AGI)</td>
+                        <td>150 po</td>
+                        <td>15 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Cuirasse</td>
+                        <td>/</td>
+                        <td>3</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>Intermédiaire</td>
+                        <td>Lourde (-1 AGI)</td>
+                        <td>250 po</td>
+                        <td>10 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Écailles</td>
+                        <td>1</td>
+                        <td colspan="3">3</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Intermédiaire</td>
+                        <td>Bruyante (-2 en furtivité), Lourde (-1 AGI)</td>
+                        <td>200 po</td>
+                        <td>15 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Lamellaire</td>
+                        <td>1</td>
+                        <td colspan="3">4</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Lourde</td>
+                        <td>Bruyante (-4 en furtivité), Lourde (- 2 AGI)</td>
+                        <td>350 po</td>
+                        <td>20 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Plaques articulées</td>
+                        <td>2</td>
+                        <td colspan="3">5</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>Lourde</td>
+                        <td>Bruyante (-5 en furtivité), Lourde (- 3 AGI), Difficile à équiper (besoin d'aide)</td>
+                        <td>750 po</td>
+                        <td>25 kg</td>
+
+                    </tr>
+                    <tr>
+                        <td>Harnois</td>
+                        <td>2</td>
+                        <td colspan="3">6</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>Lourde</td>
+                        <td>Bruyante (-5 en furtivité), Lourde (- 2 AGI), Difficile à équiper (besoin d'aide)</td>
+                        <td>1500 po</td>
+                        <td>22,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td colspan="11">Le malus de furtivité pour les armures bruyantes ne s'appliquent pas pour le casque, les gantelets et les bottes d'écailles</td>
+                    </tr>
+                    </tbody>
+                </table>
+                    <p>Il faut un certain temps pour s'équiper de son armure, ce temps est défini par la catégorie de l'armure. Il est possible de réduire ce temps en enfiler à la hâte son armure, mais la protection octroyée par celle ci est alors amoindrie</p>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td><strong>Catégorie</strong></td>
+                            <td><strong>Mettre</strong></td>
+                            <td><strong>Ôter</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Armure légère</td>
+                            <td>1 minute</td>
+                            <td>1 minute</td>
+                        </tr>
+                        <tr>
+                            <td>Armure intermédiaire</td>
+                            <td>5 minutes</td>
+                            <td>1 minute</td>
+                        </tr>
+                        <tr>
+                            <td>Armure lourde</td>
+                            <td>10 minutes</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Bouclier</td>
+                            <td>1 action</td>
+                            <td>1 action</td>
+                        </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+
     </div>
 
+    <div id="materiel">
+        <h1>Matériel</h1>
+        <p>Pour partir à l'aventure et y trouver un profit, il faut un investissement de départ pour acheter le matériel nécessaire à savoir un sac ou au moins une sacoche, un sac de couchage ainsi que de quoi manger et boire.</p>
+        <p>La quantité de matériel qu'un personnage peut porter dépend de sa constitution et de sa force (moyenne entre les deux* 7.5 en kilogrammes) et aussi de la capacité de ses sacs/sacoches.</p>
+        <button onclick="openCloseTable('table_sac')">Ouvrir/Fermer le tableau des contenants</button>
+        <div id="table_sac" style="display:block">
+            <table>
+                <caption>Contenants et sacoches</caption>
+                <thead>
+                <tr>
+                    <th>Contenant</th>
+                    <th>Capacité</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Bouteille</td>
+                    <td>1 L</td>
+                </tr>
+                <tr>
+                    <td>Coffre</td>
+                    <td>330 L / 150 kg de matériel</td>
+                </tr>
+                <tr>
+                    <td>Cruche ou pichet</td>
+                    <td>4 L</td>
+                </tr>
+                <tr>
+                    <td>Fiole</td>
+                    <td>100 mL / 100 g</td>
+                </tr>
+                <tr>
+                    <td>Flasque ou chope</td>
+                    <td>50 cL</td>
+                </tr>
+                <tr>
+                    <td>Gourde</td>
+                    <td>2 L</td>
+                </tr>
+                <tr>
+                    <td>Panier</td>
+                    <td>50 L / 20 kg de matériel</td>
+                </tr>
+                <tr>
+                    <td>Pot en fer</td>
+                    <td>4 L</td>
+                </tr>
+                <tr>
+                    <td>Sac</td>
+                    <td>30 L / 15 kg de matériel</td>
+                </tr>
+                <tr>
+                    <td>Sac à dos *</td>
+                    <td>40 L / 20 kg de matériel</td>
+                </tr>
+                <tr>
+                    <td>Sacoche</td>
+                    <td>5 L / 3 kg de matériel</td>
+                </tr>
+                <tr>
+                    <td>Seau</td>
+                    <td>11 L</td>
+                </tr>
+                <tr>
+                    <td>Tonneau</td>
+                    <td>150 L</td>
+                </tr>
+                <tr>
+                    <td colspan="2">* Vous pouvez également attacher des objets, comme un sac de couchage, une corde ou une sacoche, à l'extérieur du sac à dos.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 
-    <div id="Armes">
-        <h1>Armes</h1>
-        <p>Lors d'un coup critique, il faut se référer au <a href="Tableaux.xhtml#table_critiques"> tableau des critiques</a> équivalent au type de dégâts infligés par le coup (les dégâts bonus du coup critiques sont ajoutés après le multiplicateur)</p>
-        <table>
-            <caption>Armes de corps-à-corps</caption>
-            <thead>
-            <tr>
-                <th>Catégorie</th>
-                <th>Type de Dégâts</th>
-                <th>Dégâts</th>
-                <th>Critique</th>
-                <th>Bonus de<br/>Force</th>
-                <th>Bonus de<br/>Dextérité</th>
-                <th>Parade possible</th>
-                <th>Spécial</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th colspan="7">Armes à une main</th>
-            </tr>
-            <tr>
-                <td>Dagues</td>
-                <td>Perforants, Tranchants</td>
-                <td>1d4</td>
-                <td>1-4 x3</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>Non</td>
-                <td>Attaque furtive, Légère</td>
-            </tr>
-            <tr>
-                <td>Épées courtes</td>
-                <td>Tranchants, Perforants</td>
-                <td>1d6</td>
-                <td>1-2 x2</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>Légère</td>
-            </tr>
-            <tr>
-                <td>Épées courbes</td>
-                <td>Tranchants</td>
-                <td>1d6</td>
-                <td>1-3 x2</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>Légère</td>
-            </tr>
-            <tr>
-                <td>Rapières</td>
-                <td>Perforants</td>
-                <td>1d6</td>
-                <td>1-3 x3</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>Légère</td>
-            </tr>
-            <tr>
-                <td>Épées longues</td>
-                <td>Tranchants, Perforants</td>
-                <td>1d6</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>Polyvalente(1d8)</td>
-            </tr>
-            <tr>
-                <td>Haches</td>
-                <td>Tranchants</td>
-                <td>1d8</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>Polyvalente(1d10)</td>
-            </tr>
-            <tr>
-                <td>Masses</td>
-                <td>Contondants</td>
-                <td>1d6</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Non</td>
-                <td>Non</td>
-                <td>Polyvalente(1d8)</td>
-            </tr>
-            <tr>
-                <th colspan="7">Armes à deux mains</th>
-            </tr>
-            <tr>
-                <td>Bâtons</td>
-                <td>Contondants</td>
-                <td>2d4 non létaux</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>À deux mains</td>
-            </tr>
-            <tr>
-                <td>Espadons</td>
-                <td>Tranchants, Perforants</td>
-                <td>1d10</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>À deux mains, Lourde</td>
-            </tr>
-            <tr>
-                <td>Haches de guerre</td>
-                <td>Tranchants</td>
-                <td>1d12</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>À deux mains, Lourde</td>
-            </tr>
-            <tr>
-                <td>Marteaux de guerre</td>
-                <td>Contondants</td>
-                <td>1d10</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>À deux mains, Lourde, Imparable</td>
-            </tr>
-            <tr>
-                <td>Lances</td>
-                <td>Perforants</td>
-                <td>1d8</td>
-                <td>x3</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>Non</td>
-                <td>Allonge, Polyvalente, Charge</td>
-            </tr>
-            <tr>
-                <td>Hallebardes</td>
-                <td>Tranchants, Perforants, Contondants</td>
-                <td>1d8</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>Allonge, Lourde, À deux mains, Imparable</td>
-            </tr>
-            <tr>
-                <td>Coutille</td>
-                <td>Tranchants</td>
-                <td>1d8</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>Allonge</td>
-            </tr>
-            </tbody>
-        </table>
-        <br/>
-        <br/>
-        <table>
-            <caption>Armes à Distance</caption>
-            <thead>
-            <tr>
-                <th>Catégorie</th>
-                <th>Type de Dégâts</th>
-                <th>Dégâts</th>
-                <th>Portée</th>
-                <th>Munitions</th>
-                <th>Critique</th>
-                <th>Bonus de<br/>Force</th>
-                <th>Bonus de<br/>Dextérité</th>
-                <th>Spécial</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th colspan="10">Armes de lancer</th>
-            </tr>
-            <tr>
-                <td>Couteaux</td>
-                <td>Tranchants, Perforants</td>
-                <td>1d4</td>
-                <td>6m/18m</td>
-                <td>/</td>
-                <td>x2</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>/</td>
-            </tr>
-            <tr>
-                <td>Hachette</td>
-                <td>Tranchants</td>
-                <td>1d6</td>
-                <td>6m/18m</td>
-                <td>/</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Non</td>
-                <td>/</td>
-            </tr>
-            <tr>
-                <td>Javelots</td>
-                <td>Perforants</td>
-                <td>1d8</td>
-                 <td>12m/36m</td>
-                 <td>/</td>
-                <td>x2</td>
-                 <td>Oui</td>
-                 <td>Oui</td>
-                 <td>/</td>
-                 </tr>
-            <tr>
-                <td>Fléchettes</td>
-                <td>Perforants</td>
-                <td>1d4</td>
-                <td>6m/18m</td>
-                <td>/</td>
-                <td>x2</td>
-                <td>Oui</td>
-                <td>Oui</td>
-                <td>/</td>
-            </tr>
-            <tr>
-                <th colspan="10">Armes à distance</th>
-            </tr>
-            <tr>
-                <td>Fronde</td>
-                <td>Contondants</td>
-                <td>1d6 non-létaux</td>
-                <td>12m/36m</td>
-                <td>Pierres</td>
-                <td>x3</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>/</td>
-            </tr>
-            <tr>
-                <td>Arc Court</td>
-                <td>Perforants</td>
-                <td>1d6</td>
-                <td>24m/96m</td>
-                <td>Flèches</td>
-                <td>x3</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>À deux mains</td>
-            </tr>
-            <tr>
-                <td>Arc Long</td>
-                <td>Perforants</td>
-                <td>1d8</td>
-                <td>45m/180m</td>
-                <td>Flèches</td>
-                <td>x3</td>
-                <td>Non</td>
-                <td>Oui</td>
-                <td>À deux mains, Lourde</td>
-            </tr>
-            <tr>
-                <td>Arbalète</td>
-                <td>Perforants</td>
-                <td>1d8</td>
-                <td>24m/96m</td>
-                <td>Carreaux</td>
-                <td>x3</td>
-                <td>Non</td>
-                <td>Non</td>
-                <td>À deux mains, Chargement</td>
-            </tr>
-            <tr>
-                <td>Arbalète lourde</td>
-                <td>Perforants</td>
-                <td>1d12</td>
-                <td>30m/120m</td>
-                <td>Carreaux</td>
-                <td>x3</td>
-                <td>Non</td>
-                <td>Non</td>
-                <td>À deux mains, Lourde, Chargement</td>
-            </tr>
-            <tr>
-                <td>Arbalète à main</td>
-                <td>Perforants</td>
-                <td>1d6</td>
-                <td>9m/36m</td>
-                <td>Carreaux</td>
-                <td>x3</td>
-                <td>Non</td>
-                <td>Non</td>
-                <td>Légère, Chargement</td>
-            </tr>
-            </tbody>
-        </table>
+        <h2>Équipement d'aventurier</h2>
+        <p>Cette section décrit les objets qui ont des règles spéciales ou nécessitent de plus amples explications.</p>
+        <button onclick="openCloseTable('table_matos')">Ouvrir/Fermer le tableau de l'équipement</button>
+        <div id="table_matos" style="display:block">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Objet</th>
+                            <th>Prix</th>
+                            <th>Poids</th>
+                            <th>Objet</th>
+                            <th>Prix</th>
+                            <th>Poids</th>
+                            <th>Objet</th>
+                            <th>Prix</th>
+                            <th>Poids</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Acide (fiole)</td>
+                            <td>25 po</td>
+                            <td>500 g</td>
+                            <td>Antidote (fiole)</td>
+                            <td>50 po</td>
+                            <td>-</td>
+                            <td>Balance de marchand</td>
+                            <td>5 po</td>
+                            <td>1,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Bélier portatif</td>
+                            <td>4 po</td>
+                            <td>17,5 kg</td>
+                            <td>Billes (sac de 1000)</td>
+                            <td>1 po</td>
+                            <td>1 kg</td>
+                            <td>Boite d'allume-feu</td>
+                            <td>5 pa</td>
+                            <td>500 g</td>
+                        </tr>
+                        <tr>
+                            <td>Bougie</td>
+                            <td>1 pc</td>
+                            <td>-</td>
+                            <td>Boulier</td>
+                            <td>2 po</td>
+                            <td>1 kg</td>
+                            <td>Bouteille en verre</td>
+                            <td>2 po</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Cadenas</td>
+                            <td>10 po</td>
+                            <td>500 g</td>
+                            <td>Carquois</td>
+                            <td>1 po</td>
+                            <td>500 g</td>
+                            <td>Chaîne (3 m)</td>
+                            <td>5 po</td>
+                            <td>5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Chevalière</td>
+                            <td>5 po</td>
+                            <td>-</td>
+                            <td>Chausse-trappes (sac de 20)</td>
+                            <td>1 po</td>
+                            <td>1 kg</td>
+                            <td>Cire à cacheter</td>
+                            <td>5 pa</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Cloche</td>
+                            <td>1 po</td>
+                            <td>-</td>
+                            <td>Coffre</td>
+                            <td>5 po</td>
+                            <td>12,5 kg</td>
+                            <td>Corde en chanvre (15 m)</td>
+                            <td>1 po</td>
+                            <td>5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Corde en soie (15 m)</td>
+                            <td>10 po</td>
+                            <td>2,5 kg</td>
+                            <td>Couverture</td>
+                            <td>5 pa</td>
+                            <td>1,5 kg</td>
+                            <td>Craie (un morceau)</td>
+                            <td>1 pc</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Cruche ou pichet</td>
+                            <td>2 pc</td>
+                            <td>2 kg</td>
+                            <td>Eau bénite (flasque)</td>
+                            <td>25 po</td>
+                            <td>500 g</td>
+                            <td>Échelle (3 m)</td>
+                            <td>1 pa</td>
+                            <td>12,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Encre (bouteille de 30 ml)</td>
+                            <td>10 po</td>
+                            <td>-</td>
+                            <td>Équipement d’escalade</td>
+                            <td>25 po</td>
+                            <td>6 kg</td>
+                            <td>Étui à carreaux</td>
+                            <td>1 po</td>
+                            <td>500 g</td>
+                        </tr>
+                        <tr>
+                            <td>Étui à cartes ou parchemins</td>
+                            <td>1 po</td>
+                            <td>500 g</td>
+                            <td>Feu grégeois (flasque)</td>
+                            <td>50 po</td>
+                            <td>500 g</td>
+                            <td>Fiole (10 cl)</td>
+                            <td>1 po</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Flasque ou chope (50 cl)</td>
+                            <td>2 pc</td>
+                            <td>500 g</td>
+                            <td>Gamelle</td>
+                            <td>2 pa</td>
+                            <td>500 g</td>
+                            <td>Gourde (pleine)</td>
+                            <td>2 pa</td>
+                            <td>2,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Grappin</td>
+                            <td>2 po</td>
+                            <td>2 kg</td>
+                            <td>Grimoire</td>
+                            <td>50 po</td>
+                            <td>1,5 kg</td>
+                            <td>Huile (flasque)</td>
+                            <td>1 pa</td>
+                            <td>500 g</td>
+                        </tr>
+                        <tr>
+                            <td>Lampe</td>
+                            <td>5 pa</td>
+                            <td>500 g</td>
+                            <td>Lanterne à capote</td>
+                            <td>5 po</td>
+                            <td>1 kg</td>
+                            <td>Lanterne sourde</td>
+                            <td>10 po</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Livre</td>
+                            <td>25 po</td>
+                            <td>2,5 kg</td>
+                            <td>Longue-vue</td>
+                            <td>1000 po</td>
+                            <td>500 g</td>
+                            <td>Loupe</td>
+                            <td>100 po</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Marteau</td>
+                            <td>1 po</td>
+                            <td>1,5 kg</td>
+                            <td>Marteau de forgeron</td>
+                            <td>2 po</td>
+                            <td>5 kg</td>
+                            <td>Matériel de pêche</td>
+                            <td>1 po</td>
+                            <td>2 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Menottes</td>
+                            <td>2 po</td>
+                            <td>3 kg</td>
+                            <td>Miroir en acier</td>
+                            <td>5 po</td>
+                            <td>250 g</td>
+                            <td>Aiguilles de sarbacane (50)</td>
+                            <td>1 po</td>
+                            <td>500 g</td>
+                        </tr>
+                        <tr>
+                            <td>Billes de fronde (20)</td>
+                            <td>4 pc</td>
+                            <td>750 g</td>
+                            <td>Carreaux d'arbalète (20)</td>
+                            <td>1 po</td>
+                            <td>750 g</td>
+                            <td>Flèches (20)</td>
+                            <td>1 po</td>
+                            <td>500 g</td>
+                        </tr>
+                        <tr>
+                            <td>Palan</td>
+                            <td>1 po</td>
+                            <td>2,5 kg</td>
+                            <td>Panier</td>
+                            <td>4 pa</td>
+                            <td>1 kg</td>
+                            <td>Papier (une feuille)</td>
+                            <td>2 pa</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Parchemin (une feuille)</td>
+                            <td>1 pa</td>
+                            <td>-</td>
+                            <td>Parfum (fiole)</td>
+                            <td>5 po</td>
+                            <td>-</td>
+                            <td>Pelle</td>
+                            <td>2 po</td>
+                            <td>2,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Perche (3 m)</td>
+                            <td>5 pc</td>
+                            <td>3 kg</td>
+                            <td>Pied-de-biche</td>
+                            <td>2 po</td>
+                            <td>2 kg</td>
+                            <td>Piège à mâchoires</td>
+                            <td>5 po</td>
+                            <td>12,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Pierre à aiguiser</td>
+                            <td>1 pc</td>
+                            <td>500 g</td>
+                            <td>Pioche de mineur</td>
+                            <td>2 po</td>
+                            <td>5 kg</td>
+                            <td>Piton</td>
+                            <td>5 pc</td>
+                            <td>100 g</td>
+                        </tr>
+                        <tr>
+                            <td>Plume d’écriture</td>
+                            <td>2 pc</td>
+                            <td>-</td>
+                            <td>Pointes en fer (10)</td>
+                            <td>1 po</td>
+                            <td>2,5 kg</td>
+                            <td>Poison (fiole)</td>
+                            <td>100 po</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Pot en fer</td>
+                            <td>2 po</td>
+                            <td>5 kg</td>
+                            <td>Potion de soins</td>
+                            <td>50 po</td>
+                            <td>250 g</td>
+                            <td>Rations (1 jour)</td>
+                            <td>5 pa</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Robes</td>
+                            <td>1 po</td>
+                            <td>2 kg</td>
+                            <td>Sablier</td>
+                            <td>25 po</td>
+                            <td>500 g</td>
+                            <td>Sac</td>
+                            <td>1 pc</td>
+                            <td>250 g</td>
+                        </tr>
+                        <tr>
+                            <td>Sac à dos</td>
+                            <td>2 po</td>
+                            <td>2,5 kg</td>
+                            <td>Sac de couchage</td>
+                            <td>1 po</td>
+                            <td>2 kg</td>
+                            <td>Sacoche</td>
+                            <td>5 pa</td>
+                            <td>500 g</td>
+                        </tr>
+                        <tr>
+                            <td>Sacoche à composantes</td>
+                            <td>25 po</td>
+                            <td>1 kg</td>
+                            <td>Savon</td>
+                            <td>2 pc</td>
+                            <td>-</td>
+                            <td>Seau</td>
+                            <td>5 pc</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
 
-        <h3>Propriétés spéciales des armes</h3>
-        <p><span class="big_underline">Attaque furtive :</span>Une attaque furtive effectuée avec cette arme ne fait aucun bruit et empêche la victime de crier.</p>
-        <p><span class="big_underline">Légère</span>Une arme légère est petite et facile à manier, ce qui la rend idéale pour les combats à deux armes.</p>
-        <p><span class="big_underline">Lourde</span>Une arme lourde est difficilement utilisable par les petites créatures(&lt;1m20), de plus il faut posséder une caractéristique de Force d'au moins 12 pour les utiliser convenablement.</p>
-        <p><span class="big_underline">Polyvalente</span>Polyvalente. Cette arme peut être tenue à une ou deux mains. Le chiffre indiqué entre parenthèses correspond aux dégâts si l'arme est tenue à deux mains lors d'une attaque au corps à corps.</p>
-        <p><span class="big_underline">À deux mains</span>Cette arme nécessite les deux mains lorsque vous attaquez avec. </p>
-        <p><span class="big_underline">Allonge</span>Ce type d'arme ajoute 1,50 mètre à votre allonge lorsque vous attaquez avec, ou pour déterminer votre allonge lorsque vous effectuez une attaque d'opportunité avec. </p>
-        <p><span class="big_underline">Chargement</span>Cette arme doit être rechargée avant d'être utilisée, cette action coûte un PA </p>
-        <p><span class="big_underline">Imparable</span>Cette arme est trop lourde pour être parée avec une arme, il faut un bouclier pour tenter une parade</p>
-        <p><span class="big_underline">Charge</span>Une charge effectuée avec cette arme inflige le double de dégâts, le triple si la charge est faite depuis une monture.</p>
-    </div>
+                            <td>Sifflet</td>
+                            <td>5 pc</td>
+                            <td>-</td>
+                            <td>Tente</td>
+                            <td>2 po</td>
+                            <td>10 kg</td>
+                            <td>Tonneau</td>
+                            <td>2 po</td>
+                            <td>35 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Torche</td>
+                            <td>1 pc</td>
+                            <td>500 g</td>
+                            <td>Trousse de soins</td>
+                            <td>5 po</td>
+                            <td>1,5 kg</td>
+                            <td>Vêtements, communs</td>
+                            <td>5 pa</td>
+                            <td>1,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Vêtements, costume</td>
+                            <td>5 po</td>
+                            <td>2 kg</td>
+                            <td>Vêtements, fins</td>
+                            <td>15 po</td>
+                            <td>3 kg</td>
+                            <td>Vêtements, voyage</td>
+                            <td>2 po</td>
+                            <td>2 kg</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Acide</strong>. Au prix d'une action, vous pouvez lancer le contenu de ce flacon sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, le brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet, en considérant l'acide comme une arme improvisée. En cas de succès, la cible reçoit 2d6 dégâts d'acide.</p>
+                    <p><strong>Antidote</strong>. Une créature qui boit cette fiole gagne un avantage aux jets de sauvegarde contre le poison pendant 1 heure. Il ne confère aucun avantage aux morts-vivants et aux créatures artificielles.</p>
+                    <p><strong>Balance de marchand</strong>. Cela comprend une petite balance, des plateaux et un assortiment de poids approprié jusqu'à 1 kg. Avec, vous pouvez mesurer le poids exact de petits objets, tels que des métaux précieux ou des biens commerciaux, pour aider à déterminer leur valeur.</p>
+                    <p><strong>Bélier portatif</strong>. Vous pouvez utiliser un bélier portatif pour enfoncer des portes. Ce faisant, vous gagnez un bonus de +4 au jet de Force. Un autre personnage peut vous aider à utiliser le bélier, ce qui vous donne un avantage à ce jet.</p>
+                    <p><strong>Billes</strong>. Au prix d'une action, vous pouvez sortir ces petites billes métalliques de leur poche pour recouvrir une zone de 3 m x 3 m. Une créature se déplaçant à travers la zone recouverte doit réussir un jet de sauvegarde de Dextérité DD 10 ou tomber à terre. Une créature se déplaçant à travers la zone à la moitié de sa vitesse n'a pas besoin de faire le jet de sauvegarde.</p>
+                    <p><strong>Boite d'allume-feu</strong>. Cette petite boite contient un silex, des amorces et de l'amadou (généralement des bouts de tissu sec trempés dans de l'huile), soit tout le nécessaire pour allumer un feu. L'utiliser pour allumer une torche, ou autre chose qui contient suffisamment d'huile, prend une action. Allumer tout autre type de feu prend 1 minute.</p>
+                    <p><strong>Bougie</strong>. Une bougie génère une lumière vive dans un rayon de 1,50 mètre et une lumière faible sur 1,50 mètre supplémentaire durant 1 heure.</p>
+                    <p><strong>Cadenas</strong>. Une clé est fournie avec le cadenas. Sans la clé, une créature qui maîtrise les outils de voleur peut ouvrir le cadenas en réussissant un jet de Dextérité DD 15. Votre MD peut décider que des cadenas de meilleure qualité sont disponibles à des prix plus élevés.</p>
+                    <p><strong>Carquois</strong>. Un carquois peut contenir jusqu'à 20 flèches.</p>
+                    <p><strong>Chaîne</strong>. Une chaîne dispose de 10 pv. Elle peut être brisée en réussissant un jet de Force de DD 20.</p>
+                    <p><strong>Chausse-trappes</strong>. Au prix d'une action, vous pouvez étaler le contenu d'un sac de chausse-trappes pour couvrir une zone de 1,50 m x 1,50 m. Toute créature qui entre dans la zone doit réussir un jet de sauvegarde de Dextérité DD 15 ou mettre fin à son mouvement et prendre 1 point de dégâts perforants. Jusqu'à ce que la créature retrouve au moins 1 point de vie, sa vitesse de marche est réduite de 3 mètres. Une créature se déplaçant à travers la zone à la moitié de sa vitesse n'a pas besoin de faire le jet de sauvegarde.</p>
+                    <p><strong>Corde</strong>. Une corde, qu'elle soit faite de chanvre ou de soie, possède 2 pv et peut être cassée avec un jet de Force DD 17.</p>
+                    <p><strong>Eau bénite</strong>. Au prix d'une action, vous pouvez lancer le contenu de cette flasque sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, la brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature, en considérant l'eau bénite comme une arme improvisée. Si la cible est un fiélon ou mort-vivant, elle reçoit 2d6 dégâts radiant. Un clerc ou un paladin peut créer de l'eau bénite lors d'un rituel spécial. Le rituel dure 1 heure, consomme pour 25 po de poudre d'argent, et nécessite que le lanceur dépense un emplacement de sort de niveau 1.</p>
+                    <p><strong>Équipement d'escalade</strong>. Ce kit comprend des pitons spéciaux, des pointes pour les chaussures, des gants et un harnais. Vous pouvez utiliser le matériel d'escalade pour vous accrocher au prix d'une action ; une fois fait, vous ne pouvez pas tomber de plus de 7,50 mètres de l'endroit où vous êtes ancré, et ne pouvez pas monter de plus de 7,50 mètres de ce point sans devoir défaire l'ancrage.</p>
+                    <p><strong>Étui à carreaux</strong>. Cet étui en bois peut contenir jusqu'à vingt carreaux d'arbalète.</p>
+                    <p><strong>Étui à cartes ou parchemins</strong>. Cet étui en cuir cylindrique peut contenir jusqu'à dix feuilles de papier enroulées ou cinq feuilles de parchemin enroulées.</p>
+                    <p><strong>Feu grégeois</strong>. Ce liquide adhésif et collant s'enflamme lorsqu'il est exposé à l'air. Au prix d'une action, vous pouvez jeter cette flasque jusqu'à 6 mètres, la brisant à l'impact. Faire une attaque à distance contre une créature ou un objet, en considérant le feu grégeois comme une arme improvisée. En cas de succès, la cible reçoit 1d4 dégâts de feu au début de chacun de ses tours. Une créature peut mettre fin à ces dégâts en utilisant son action pour faire un jet de Dextérité DD 10 pour éteindre les flammes.</p>
+                    <p><strong>Focaliseur arcanique</strong>. Un focaliseur arcanique est un objet spécial (orbe, boule de cristal, baguette, bâton, sceptre) conçu pour canaliser la puissance de sorts de la magie des arcanes. Un ensorceleur, un sorcier ou un magicien peut utiliser ce type d'objet comme focaliseur pour ses sorts.</p>
+                    <p><strong>Focaliseur druidique</strong>. Un focaliseur druidique peut être un brin de gui ou de houx, une baguette ou un sceptre en bois d'if ou autre bois spécial, un bâton pris d'un arbre vivant, ou bien encore un objet totem qui intègre des plumes, de la fourrure, des os ou des dents d'animaux sacrés. Un druide peut utiliser ce type d'objet comme focaliseur pour ses sorts.</p>
+                    <p><strong>Gamelle</strong>. Cette boîte en étain contient une tasse et des couverts. Faite de deux parties qui s'assemblent, un côté de la boîte peut être utilisé pour cuire des aliments et l'autre comme une assiette ou une petite cuvette.</p>
+                    <p><strong>Grimoire</strong>. Essentiel pour les magiciens, un grimoire est un livre relié en cuir qui contient 100 pages de vélin blanc, et sur lesquelles on peut recopier des sorts.</p>
+                    <p><strong>Huile</strong>. L'huile vient habituellement dans une flasque d'argile de 50 cl. Au prix d'une action, vous pouvez lancer le contenu de cette flasque sur une créature à 1,50 mètre ou moins de vous, ou jeter la flasque jusqu'à 6 mètres, la brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet, en considérant l'huile comme une arme improvisée. En cas de succès, la cible est couverte d'huile. Si la cible reçoit des dégâts de feu avant que l'huile ne sèche (après 1 minute), la cible prend 5 points de dégâts de feu supplémentaire dus à l'huile brûlante. Vous pouvez aussi verser une flasque d'huile sur le sol pour couvrir une zone de 1,50 m x 1,50 m, à condition que la surface soit plane. Une fois allumée, l'huile brûle pendant 2 rounds et inflige 5 points de dégâts de feu à toute créature qui pénètre dans la zone ou qui y termine son tour. Une créature ne peut prendre ces dégâts qu'une fois par tour.</p>
+                    <p><strong>Lampe</strong>. Une lampe projette une lumière vive dans un rayon de 4,50 mètres et une lumière faible sur 9 mètres supplémentaires. Une fois allumée, elle brûle pendant 6 heures tout en consommant une flasque d'huile (50 cl).</p>
+                    <p><strong>Lanterne à capote</strong>. Une lanterne à capote projette une lumière vive dans un rayon de 9 mètres et une lumière faible sur 9 mètres supplémentaires. Une fois allumée, elle brûle pendant 6 heures tout en consommant une flasque d'huile (50 cl). Au prix d'une action, vous pouvez ajuster la capote, ce qui réduit la lumière à une lumière faible dans un rayon de 1,50 mètre.</p>
+                    <p><strong>Lanterne sourde</strong>. Une lanterne sourde projette une lumière vive dans un cône de 18 mètres et une lumière faible sur 18 mètres supplémentaires. Une fois allumée, elle brûle pendant 6 heures tout en consommant une flasque d'huile (50 cl).</p>
+                    <p><strong>Livre</strong>. Un livre peut contenir de la poésie, des récits historiques, des informations relatives à un domaine particulier de connaissance, des diagrammes et des notes sur une invention gnome, ou n'importe quoi d'autre qui peut être représenté en utilisant du texte ou des images. Un livre de sorts est un grimoire (voir la description plus loin ci-dessus).</p>
+                    <p><strong>Longue-vue</strong>. Les objets vus à travers une longue-vue sont amplifiés de deux fois leur taille.</p>
+                    <p><strong>Loupe</strong>. Ce verre permet un examen plus minutieux des petits objets. Il est également utile comme substitut au silex pour allumer un feu. Allumer un feu avec une loupe nécessite une lumière aussi vive que celle du soleil pour faire prendre l'amadou, et environ 5 minutes pour que le feu prenne. Une loupe donne un avantage aux jets de caractéristique pour évaluer ou inspecter un objet de petite taille ou très détaillé.</p>
+                    <p><strong>Matériel de pêche</strong>. Ce kit comprend une tige en bois, une ligne de soie, des flotteurs en liège, des hameçons en acier, des plombs, des leurres en velours et un petit filet.</p>
+                    <p><strong>Menottes</strong>. Ces menottes métalliques servent pour une créature de taille Petite ou Moyenne. Se libérer des menottes nécessite un jet de Dextérité DD 20 réussi. Briser les menottes nécessite un jet de Force DD 20 réussi. Chaque paire de menottes est livrée avec une clé. Sans la clé, une créature qui maîtrise les outils de voleur peut ouvrir les menottes en réussissant un jet de Dextérité DD 15. Les menottes ont 15 points de vie.</p>
+                    <p><strong>Palan</strong>. Ensemble de poulies avec un câble et un crochet pour attacher des objets, un palan permet de hisser jusqu'à quatre fois le poids que vous pouvez normalement soulever.</p>
+                    <p><strong>Pied-de-biche</strong>. Un pied de biche octroie un avantage aux jets de Force lorsque le levier du pied de biche peut être utilisé.</p>
+                    <p><strong>Piège à mâchoires</strong>. Lorsque vous utilisez votre action pour l'installer, ce piège forme un anneau d'acier en dents de scie qui se referme lorsqu'une créature marche sur la plaque de pression située au centre. Le piège est fixé par une lourde chaîne à un objet immobile, comme un arbre ou un pic enfoncé dans le sol. Une créature qui marche sur la plaque doit réussir un jet de sauvegarde de Dextérité DD 13 ou prendre 1d4 points de dégâts perforants et devoir s'arrêter de bouger. Par la suite, tant que la créature ne s'échappe pas du piège, son mouvement est limité par la longueur de la chaîne (généralement un mètre de long). Une créature peut utiliser son action pour faire un jet de Force DD 13 pour se libérer ou libérer une autre créature à sa portée en cas de succès. Chaque échec inflige 1 point de dégâts perforants à la créature piégée.</p>
+                    <p><strong>Poison</strong>. Vous pouvez utiliser le poison de cette fiole pour couvrir une arme tranchante ou perforante, ou jusqu'à trois munitions. Appliquer le poison prend une action. Une créature touchée par une arme ou une munition empoisonnée doit réussir un jet de sauvegarde de Constitution DD 10 ou prendre 1d4 points de dégâts de poison. Une fois appliqué, le poison conserve son activité 1 minute avant de sécher.</p>
+                    <p><strong>Potion de soins</strong>. Un personnage qui boit le liquide magique rouge de ce flacon reprend 2d4 + 2 points de vie. Boire ou administrer une potion prend une action.</p>
+                    <p><strong>Rations</strong>. Aliments compacts et secs appropriés pour un voyage prolongé, les rations incluent du bœuf séché, des fruits secs, des biscuits et des noix.</p>
+                    <p><strong>Sacoche</strong>. Une sacoche en tissu ou en cuir peut contenir jusqu'à 20 billes de fronde ou 50 aiguilles de sarbacane, entre autres choses. Une sacoche compartimentée pour abriter des composantes de sorts est appelée une sacoche à composantes (voir la description ci-dessous).</p>
+                    <p><strong>Sacoche à composantes</strong>. Une sacoche à composantes est une petite sacoche étanche en cuir qui possède des compartiments pour contenir toutes les composantes matérielles et autres éléments spéciaux dont vous avez besoin pour lancer vos sorts, à exception des composantes qui ont un coût spécifique (comme indiqué dans la description des sorts).</p>
+                    <p><strong>Symbole sacré</strong>. Un symbole sacré est une représentation d'un dieu ou d'un panthéon. Cela peut être une amulette avec un symbole représentant une divinité, ce même symbole gravé ou incrusté tel un emblème sur un bouclier, ou une toute petite boîte renfermant le fragment d'une relique sacrée. Un clerc ou paladin peut utiliser un symbole sacré comme focaliseur magique. Pour utiliser le symbole de cette manière, le lanceur doit le porter visiblement, en main ou sur un bouclier.</p>
+                    <p><strong>Tente</strong>. Abri de toile simple et portable, une tente peut accueillir deux personnes.</p>
+                    <p><strong>Torche</strong>. Une torche brûle pendant 1 heure, projetant une lumière vive dans un rayon de 6 mètres et une lumière faible sur 6 mètres supplémentaires. Si vous effectuez une attaque au corps à corps avec une torche enflammée et touchez, vous infligez 1 point de dégât de feu.</p>
+                    <p><strong>Trousse de soins</strong>. Ce kit est un étui en cuir qui contient des bandages, des pommades et des attelles. Le kit permet dix utilisations. Au prix d'une action, vous pouvez dépenser une utilisation du kit pour stabiliser une créature qui a 0 pv sans avoir à réaliser un jet de Sagesse (Médecine).</p>
+                    <p><strong>SACS D'ÉQUIPEMENTS</strong><br/><br/>L'équipement de départ que propose la description de chaque classe comprend différents matériels utiles à l'aventure, assemblés sous forme de kit. Le contenu de ces kits est répertorié ici. Si vous achetez votre équipement de départ, vous pouvez acheter un kit pour le prix indiqué, ce qui peut revenir moins cher que d'acheter les objets séparément.<br/><br/><strong>Sac d'artiste (40 po)</strong>. Comprend un sac à dos, un sac de couchage, 2 costumes, 5 bougies, 5 jours de rations, une gourde d'eau et un kit de déguisement.<br/><br/><strong>Sac de cambrioleur (16 po)</strong>. Comprend un sac à dos, un sac de 1000 billes, 3 mètres de chaîne, une cloche, 5 bougies, un pied-de-biche, un marteau, 10 pitons, une lanterne à capuchon, 2 flasques d'huile, 5 jours de rations, une boite d'allume-feu et une gourde d'eau. Le sac comprend aussi 15 mètres de corde de chanvre attachée sur son côté.<br/><br/><strong>Sac de diplomate (39 po)</strong>. Comprend un coffre, 2 étuis à cartes ou parchemins, des vêtements fins, une bouteille d'encre, une plume d'écriture, une lampe, deux flasques d'huile, 5 feuilles de papier, un flacon de parfum, de la cire à cacheter et du savon.<br/><br/><strong>Sac d'ecclésiastique (19 po)</strong>. Comprend un sac à dos, une couverture, 10 bougies, une boite d'allume-feu, une boîte pour l'aumône, 2 bâtonnets d'encens, un encensoir, des habits de cérémonie, 2 jours de rations et une gourde d'eau.<br/><br/><strong>Sac d'érudit (40 po)</strong>. Comprend un sac à dos, un livre de connaissance, une bouteille d'encre, une plume d'écriture, 10 feuilles de parchemin, un petit sac de sable et un petit couteau.<br/><br/><strong>Sac d'explorateur (10 po)</strong>. Comprend un sac à dos, un sac de couchage, une gamelle, une boite d'allume-feu, 10 torches, 10 jours de rations et une gourde d'eau. Le sac comprend aussi 15 mètres de corde de chanvre attachée sur son côté.<br/><br/><strong>Sac d'exploration souterraine (12 po)</strong>. Comprend un sac à dos, un pied de biche, un marteau, 10 pitons, 10 torches, une boite d'allume-feu, 10 jours de rations et une gourde d'eau. Le sac comprend aussi 15 mètres de corde de chanvre attachée sur son côté.</p>
+                </div>
 
-    <div id="Armures">
-        <h1>Armures</h1>
-        <p>Comme on peut le voir sur la deuxième page de la fiche de personnage, chaque partie du corps peut recevoir un vêtement, ou une pièce d'armure différente, la protection procurée par l'armure est globale (chaque pièce contribue au total malgré sa localisation).</p>
-        <p>Le matériau de l'armure est le facteur principale de l'efficaité d'une armure, un brassard en peau ne protège pas aussi bien qu'un gantelet intégral de plates en acier.</p>
-        <p>Les armures sont séparées selon 3 catégories, les armures légères qui n'imposent aucun malus, les armures intermédiaires imposent des malus légers en agilité et parfois en discrétion, les armures lourdes imposent de lourds malus en agilité et rendent la discrétion presque impossible</p>
-        <p>Les armures peuvent couvrir différentes parties du corps, une cotte de maille par exemple protège le torse, les jambes et les épaules, si un coup critique porte sur une de ces parties du corps, c'est la rupture de la cotte qui sera mise à l'épreuve.</p>
-        <table>
-            <thead>
-            <tr>
-                <th rowspan="2">Matériau/type d'armure</th>
-                <th colspan="6">Valeur d'armure</th>
-                <th rowspan="2">Catégorie</th>
-                <th rowspan="2">Malus</th>
-            </tr>
-            <tr>
-                <th>Tete</th>
-                <th>Torse</th>
-                <th>Épaules</th>
-                <th>Jambes</th>
-                <th>Mains</th>
-                <th>Pieds</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Cuir/peau/tissu matelassé</td>
-                <td>0</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>1</td>
-                <td>0</td>
-                <td>Légère</td>
-                <td>/</td>
-            </tr>
-            <tr>
-                <td>Cuir renforcé/clouté</td>
-                <td>0</td>
-                <td colspan="2">2</td>
-                <td>0</td>
-                <td>1</td>
-                <td>1</td>
-                <td>Légère</td>
-                <td>/</td>
-            </tr>
-            <tr>
-                <td>Mailles</td>
-                <td>1</td>
-                <td colspan="3">3</td>
-                <td>/</td>
-                <td>/</td>
-                <td>Intermédiaire</td>
-                <td>Bruyante (-3 en furtivité), Lourde (-1 AGI)</td>
-            </tr>
-            <tr>
-                <td>Cuirasse</td>
-                <td>/</td>
-                <td>3</td>
-                <td>/</td>
-                <td>/</td>
-                <td>/</td>
-                <td>/</td>
-                <td>Intermédiaire</td>
-                <td>Lourde (-1 AGI)</td>
-            </tr>
-            <tr>
-                <td>Écailles</td>
-                <td>1</td>
-                <td colspan="3">3</td>
-                <td>1</td>
-                <td>1</td>
-                <td>Intermédiaire</td>
-                <td>Bruyante (-2 en furtivité), Lourde (-1 AGI)</td>
-            </tr>
-            <tr>
-                <td>Lamellaire</td>
-                <td>1</td>
-                <td colspan="3">4</td>
-                <td>1</td>
-                <td>1</td>
-                <td>Lourde</td>
-                <td>Bruyante (-4 en furtivité), Lourde (- 2 AGI)</td>
-            </tr>
-            <tr>
-                <td>Plaques articulées</td>
-                <td>2</td>
-                <td colspan="3">5</td>
-                <td>2</td>
-                <td>1</td>
-                <td>Lourde</td>
-                <td>Bruyante (-5 en furtivité), Lourde (- 3 AGI), Difficile à équiper (besoin d'aide)</td>
-            </tr>
-            <tr>
-                <td>Harnois</td>
-                <td>2</td>
-                <td colspan="3">6</td>
-                <td>2</td>
-                <td>1</td>
-                <td>Lourde</td>
-                <td>Bruyante (-5 en furtivité), Lourde (- 2 AGI), Difficile à équiper (besoin d'aide)</td>
-            </tr>
-            </tbody>
-        </table>
+        <h2>Outils</h2>
+        <p>Les outils vous aident à faire quelque chose que vous ne pourriez pas faire autrement, comme de l'artisanat, réparer un objet, falsifier un document ou crocheter une serrure. Votre race, votre classe, votre historique ou bien encore vos dons vous donnent la maîtrise de certains outils. La maîtrise d'un outil vous permet d'ajouter votre bonus de maîtrise à tous les jets de caractéristique que vous réalisez avec cet outil. L'utilisation de l'outil n'est pas liée à une seule caractéristique, car la maîtrise d'un outil représente une connaissance qui va au-delà de sa simple utilisation. Par exemple, le MD peut vous demander de faire un jet de Dextérité pour sculpter un détail sur du bois avec des outils de menuisier, puis un jet de Force pour faire quelque chose sur un bois particulièrement dur.</p>
+        <button onclick="openCloseTable('table_outils')">Ouvrir/Fermer le tableau des outils</button>
+        <div id="table_outils" style="display:block">
+            <table>
+                <thead>
+                <tr>
+                    <th>Objet</th>
+                    <th>Prix</th>
+                    <th>Poids</th>
+                    <th>Objet</th>
+                    <th>Prix</th>
+                    <th>Poids</th>
+                    <th>Objet</th>
+                    <th>Prix</th>
+                    <th>Poids</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Chalemie</td>
+                    <td style="text-align: right;">2 po</td>
+                    <td style="text-align: right;">500 g</td>
+                    <td>Cor</td>
+                    <td style="text-align: right;">3 po</td>
+                    <td style="text-align: right;">1 kg</td>
+                    <td>Cornemuse</td>
+                    <td style="text-align: right;">30 po</td>
+                    <td style="text-align: right;">3 kg</td>
+                </tr>
+                <tr>
+                    <td>Flûte</td>
+                    <td style="text-align: right;">2 po</td>
+                    <td style="text-align: right;">500 g</td>
+                    <td>Flûte de pan</td>
+                    <td style="text-align: right;">12 po</td>
+                    <td style="text-align: right;">1 kg</td>
+                    <td>Luth</td>
+                    <td style="text-align: right;">35 po</td>
+                    <td style="text-align: right;">1 kg</td>
+                </tr>
+                <tr>
+                    <td>Lyre</td>
+                    <td style="text-align: right;">30 po</td>
+                    <td style="text-align: right;">1 kg</td>
+                    <td>Tambour</td>
+                    <td style="text-align: right;">6 po</td>
+                    <td style="text-align: right;">1,5 kg</td>
+                    <td>Tympanon</td>
+                    <td style="text-align: right;">25 po</td>
+                    <td style="text-align: right;">5 kg</td>
+                </tr>
+                <tr>
+                    <td>Viole</td>
+                    <td style="text-align: right;">30 po</td>
+                    <td style="text-align: right;">500 g</td>
+                    <td>Dés</td>
+                    <td style="text-align: right;">1 pa</td>
+                    <td style="text-align: center;">-</td>
+                    <td>Jeu de cartes</td>
+                    <td style="text-align: right;">5 pa</td>
+                    <td style="text-align: center;">-</td>
+                </tr>
+                <tr>
+                    <td>Kit d'empoisonneur</td>
+                    <td style="text-align: right;">50 po</td>
+                    <td style="text-align: right;">1 kg</td>
+                    <td>Kit d'herboriste</td>
+                    <td style="text-align: right;">5 po</td>
+                    <td style="text-align: right;">1,5 kg</td>
+                    <td>Kit de contrefaçon</td>
+                    <td style="text-align: right;">15 po</td>
+                    <td style="text-align: right;">2,5 kg</td>
+                </tr>
+                <tr>
+                    <td>Kit de déguisement</td>
+                    <td style="text-align: right;">25 po</td>
+                    <td style="text-align: right;">1,5 kg</td>
+                    <td>Matériel d'alchimiste</td>
+                    <td style="text-align: right;">50 po</td>
+                    <td style="text-align: right;">4 kg</td>
+                    <td>Matériel de brasseur</td>
+                    <td style="text-align: right;">20 po</td>
+                    <td style="text-align: right;">4,5 kg</td>
+                </tr>
+                <tr>
+                    <td>Matériel de calligraphe</td>
+                    <td style="text-align: right;">10 po</td>
+                    <td style="text-align: right;">2,5 kg</td>
+                    <td>Matériel de peintre</td>
+                    <td style="text-align: right;">10 po</td>
+                    <td style="text-align: right;">2,5 kg</td>
+                    <td>Outils de bijoutier</td>
+                    <td style="text-align: right;">25 po</td>
+                    <td style="text-align: right;">1 kg</td>
+
+                </tr>
+                <tr>
+                    <td>Outils de bricoleur</td>
+                    <td style="text-align: right;">50 po</td>
+                    <td style="text-align: right;">5 kg</td>
+                    <td>Outils de cartographe</td>
+                    <td style="text-align: right;">15 po</td>
+                    <td style="text-align: right;">3 kg</td>
+                    <td>Outils de charpentier</td>
+                    <td style="text-align: right;">8 po</td>
+                    <td style="text-align: right;">3 kg</td>
+                </tr>
+                <tr>
+                    <td>Outils de cordonnier</td>
+                    <td style="text-align: right;">5 po</td>
+                    <td style="text-align: right;">2,5 kg</td>
+                    <td>Outils de forgeron</td>
+                    <td style="text-align: right;">20 po</td>
+                    <td style="text-align: right;">4 kg</td>
+                    <td>Outils de maçon</td>
+                    <td style="text-align: right;">10 po</td>
+                    <td style="text-align: right;">4 kg</td>
+                </tr>
+                <tr>
+                    <td>Outils de menuisier</td>
+                    <td style="text-align: right;">1 po</td>
+                    <td style="text-align: right;">2,5 kg</td>
+                    <td>Outils de potier</td>
+                    <td style="text-align: right;">10 po</td>
+                    <td style="text-align: right;">1 kg</td>
+                    <td>Outils de souffleur de verre</td>
+                    <td style="text-align: right;">30 po</td>
+                    <td style="text-align: right;">2,5 kg</td>
+                </tr>
+                <tr>
+                    <td>Outils de tanneur</td>
+                    <td style="text-align: right;">5 po</td>
+                    <td style="text-align: right;">2,5 kg</td>
+                    <td>Outils de tisserand</td>
+                    <td style="text-align: right;">1 po</td>
+                    <td style="text-align: right;">2,5 kg</td>
+                    <td>Ustensiles de cuisinier</td>
+                    <td style="text-align: right;">1 po</td>
+                    <td style="text-align: right;">4 kg</td>
+                </tr>
+                <tr>
+                    <td>Outils de navigateur</td>
+                    <td style="text-align: right;">25 po</td>
+                    <td style="text-align: right;">1 kg</td>
+                    <td>Outils de voleur</td>
+                    <td style="text-align: right;">25 po</td>
+                    <td style="text-align: right;">500 g</td>
+                </tr>
+                </tbody>
+            </table>
+            <p><strong>Instruments de musique</strong>. Les instruments de musique les plus communs sont représentés dans la table à titre d'exemple. Si vous maîtrisez un instrument de musique particulier, vous ajoutez votre bonus de maîtrise à tous les jets de caractéristique pour jouer de la musique avec cet instrument. Un barde peut utiliser un instrument de musique comme focaliseur magique.&nbsp;Chaque instrument de musique nécessite une maîtrise distincte.</p>
+            <p><strong>Jeux</strong>. Cette entrée couvre un large éventail de jeux, comme les dés et les jeux de cartes (pour des jeux tels que le jeu des Dragons) entre autres. Quelques exemples sont présentés dans la table, mais il existe d'autres types de jeux. Si vous maîtrisez un type de jeu, vous ajoutez votre bonus de maîtrise à tous les jets de caractéristique lorsque vous jouez à ce jeu. Chaque type de jeu nécessite une maîtrise distincte.</p>
+            <p><strong>Kit d'empoisonneur</strong>. Ce kit comprend les flacons, produits chimiques et autres appareils nécessaires à la création de poisons. Si vous maîtrisez le kit d'empoisonneur, vous ajoutez votre bonus de maîtrise à tous les jets de caractéristique pour créer et manipuler des poisons.</p>
+            <p><strong>Kit d'herboriste</strong>. Ce kit contient une variété d'instruments, tels des pinces, un pilon, des sachets et des flacons que les herboristes utilisent pour créer des remèdes et des potions. Si vous maîtrisez le kit d'herboriste, vous ajoutez votre bonus de maîtrise à tous les jets de caractéristique pour identifier des herbes ou concocter des mélanges et des infusions. Maîtriser le kit d'herboriste est indispensable pour créer des potions de soins et des antidotes.</p>
+            <p><strong>Kit de contrefaçon</strong>. Cette petite boîte contient une variété de papiers et parchemins, plumes et encres, sceaux et cire à cacheter, feuilles d'argent et d'or, et autres fournitures nécessaires à la création de faux documents physiques convaincants. La maîtrise de ce kit vous permet d'ajouter votre bonus de maîtrise à tous les jets de caractéristique pour créer un faux d'un document physique.</p>
+            <p><strong>Kit de déguisement</strong>. Ce kit comprend des produits cosmétiques, de la teinture pour les cheveux et de petits accessoires pour vous permettre de créer des déguisements qui changent votre apparence physique. Si vous maîtrisez le kit de déguisement, vous ajoutez votre bonus de maîtrise à tous les jets de caractéristiques pour créer un déguisement visuel.</p>
+            <p><strong>Outils d'artisan</strong>. Ces outils spéciaux comprennent les éléments nécessaires à l'exercice d'un métier ou d'un commerce. La table montre des exemples des types d'outils les plus communs, chacun offrant des objets liés à un seul métier. La maîtrise d'un type d'outil d'artisan vous permet d'ajouter votre bonus de maîtrise à tous les jets de caractéristique que vous faites en utilisant les outils de votre travail. Chaque type d'outil d'artisan nécessite une maîtrise distincte.</p>
+            <p><strong>Outils de navigateur</strong>. Ces outils sont utilisés pour la navigation en mer. La maîtrise des outils de navigateur vous permet de tracer le parcours d'un navire et de suivre des cartes de navigation. En outre, ces outils vous permettent d'ajouter votre bonus de maîtrise à tous les jets de caractéristique pour éviter de se perdre en mer.</p>
+            <p><strong>Outils de voleur</strong>. Ces outils comprennent une petite lime, divers outils de crochetage, un petit miroir monté sur une poignée en métal, une paire de ciseaux à lames fines et une paire de pinces. Si vous maîtrisez les outils de voleur, vous pouvez ajouter votre bonus de maîtrise à tous les jets de caractéristique pour désactiver un piège ou crocheter une serrure.</p>
+        </div>
     </div>
 
     <div id="Magie">
@@ -608,89 +1362,94 @@
         <p>On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
 
         <h3>Règles et coût des sorts</h3>
-        <table>
-            <thead>
-            <tr>
-                <th rowspan="2">Cercle de Pouvoir</th>
-                <th rowspan="2">Niveau de difficulté<br/>(malus appliqué à l'INT)</th>
-                <th colspan="4">Facteurs</th>
-                <th rowspan="2">Coût en Psyché</th>
-                <th rowspan="2">Temps d'invocation</th>
-            </tr>
-            <tr>
-                <th>Nombre de cibles</th>
-                <th>Portée</th>
-                <th>Persistance</th>
-                <th>Dégâts</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>1</td>
-                <td>Standard (/)</td>
-                <td>1</td>
-                <td>Toucher</td>
-                <td>1 round</td>
-                <td>1d10</td>
-                <td>3</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Compliqué (-2)</td>
-                <td>2</td>
-                <td>10 m</td>
-                <td>3 round</td>
-                <td>2d8</td>
-                <td>5</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Difficile(-5)</td>
-                <td>3</td>
-                <td>50 m</td>
-                <td>1 minute</td>
-                <td>3d8</td>
-                <td>10</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Très difficile(-8)</td>
-                <td>4</td>
-                <td>100 m</td>
-                <td>1 heure</td>
-                <td>4d8</td>
-                <td>15</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Exceptionnel(-12)</td>
-                <td>5</td>
-                <td>1 km</td>
-                <td> 1 journée</td>
-                <td>5d8</td>
-                <td>20</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Héroïque(-16)</td>
-                <td>spécial</td>
-                <td>spécial</td>
-                <td>spécial</td>
-                <td>spécial</td>
-                <td>spécial</td>
-                <td>spécial</td>
-            </tr>
-            </tbody>
-        </table>
+        <button onclick="openCloseTable('table_magie')">Ouvrir/Fermer le tableau de la magie</button>
+        <div id="table_magie" style="display:block">
+            <table>
+                <thead>
+                <tr>
+                    <th rowspan="2">Cercle de Pouvoir</th>
+                    <th rowspan="2">Niveau de difficulté<br/>(malus appliqué à l'INT)</th>
+                    <th colspan="4">Facteurs</th>
+                    <th rowspan="2">Coût en Psyché</th>
+                    <th rowspan="2">Temps d'invocation</th>
+                </tr>
+                <tr>
+                    <th>Nombre de cibles</th>
+                    <th>Portée</th>
+                    <th>Persistance</th>
+                    <th>Dégâts</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Standard (/)</td>
+                    <td>1</td>
+                    <td>Toucher</td>
+                    <td>1 round</td>
+                    <td>1d10</td>
+                    <td>3</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Compliqué (-2)</td>
+                    <td>2</td>
+                    <td>10 m</td>
+                    <td>3 round</td>
+                    <td>2d8</td>
+                    <td>5</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Difficile(-5)</td>
+                    <td>3</td>
+                    <td>50 m</td>
+                    <td>1 minute</td>
+                    <td>3d8</td>
+                    <td>10</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Très difficile(-8)</td>
+                    <td>4</td>
+                    <td>100 m</td>
+                    <td>1 heure</td>
+                    <td>4d8</td>
+                    <td>15</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Exceptionnel(-12)</td>
+                    <td>5</td>
+                    <td>1 km</td>
+                    <td> 1 journée</td>
+                    <td>5d8</td>
+                    <td>20</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Héroïque(-16)</td>
+                    <td>spécial</td>
+                    <td>spécial</td>
+                    <td>spécial</td>
+                    <td>spécial</td>
+                    <td>spécial</td>
+                    <td>spécial</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div id="table_race">
         <h1>Tableau des races</h1>
+        <button onclick="openCloseTable('table_race_close')">Ouvrir/Fermer le tableau des races</button>
+        <div id="table_race_close" style="display:block">
         <table class="race">
             <thead>
             <tr>
@@ -880,10 +1639,13 @@
             </tr>
             </tbody>
         </table>
+        </div>
     </div>
 
     <div id="Competences">
         <h1>Compétences</h1>
+        <button onclick="openCloseTable('table_competence')">Ouvrir/Fermer le tableau des compétences</button>
+        <div id="table_competence" style="display:block">
         <table>
             <thead>
             <tr>
@@ -1077,7 +1839,7 @@
                 <li>Scène (comédie, drame, mime)</li>
             </ul>
         </div>
-
+        </div>
     </div>
 
     <div id="form_ajout">
@@ -1104,22 +1866,62 @@
 
     <div id="fiche_perso">
         <h1>Fiche de Personnage</h1>
+        <button onclick="openCloseTable('fiche_perso_close')">Ouvrir/Fermer la fiche de personnage</button>
+        <div id="fiche_perso_close" style="display:block">
         <img src="../../Images/fiche_perso1.png" alt="Fiche1" height="1000"/>
         <img src="../../Images/fiche_perso2.png" alt="Fiche2" height="1000"/>
         <img src="../../Images/fiche_perso3.png" alt="Fiche3" height="1000"/>
+        </div>
     </div>
 
     <div id="creation_perso">
         <h1>Création de Personnage</h1>
-        <p>Pour définir les caractéristiques de départ d'un personnage, on peut utiliser différentes méthodes :</p>
-        <h4>Méthode Standard</h4>
-        <p>Lancez 4d5, éliminez le résultat du dé le plus faible et additionnez les trois résultats restants. Notez ce total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
-        <h4>Méthode Classique</h4>
-        <p>Lancez 3d5 et additionnez les résultats des dés. Notez ce total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
-        <h4>Méthode Héroïque</h4>
-        <p>Lancez 2d5 et ajoutez 5 à la somme des dés. Notez le total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
-        <h4>Réserve de dés</h4>
-        <p>Chaque personnage possède une réserve de 32d5 à répartir entre ses caractéristiques. Avant de les lancer, le joueur choisit le nombre de dés qu’il veut utiliser pour chacune de ses caractéristiques, avec un minimum de 3d5 dans chacune d’entre elles. Une fois que tous les dés ont été répartis, le joueur les lance par groupe et additionne les résultats des trois dés les plus élevés de chaque groupe.</p>
+        <div>
+            <h2>Caractéristiques</h2>
+            <p>Pour définir les caractéristiques de départ d'un personnage, on peut utiliser différentes méthodes :</p>
+            <h4>Méthode Standard</h4>
+            <p>Lancez 4d5, éliminez le résultat du dé le plus faible et additionnez les trois résultats restants. Notez ce total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
+            <h4>Méthode Classique</h4>
+            <p>Lancez 3d5 et additionnez les résultats des dés. Notez ce total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
+            <h4>Méthode Héroïque</h4>
+            <p>Lancez 2d5 et ajoutez 5 à la somme des dés. Notez le total et recommencez jusqu’à ce que vous ayez obtenu six valeurs. Répartissez ces valeurs entre les caractéristiques comme vous le désirez.</p>
+            <h4>Réserve de dés</h4>
+            <p>Chaque personnage possède une réserve de 32d5 à répartir entre ses caractéristiques. Avant de les lancer, le joueur choisit le nombre de dés qu’il veut utiliser pour chacune de ses caractéristiques, avec un minimum de 3d5 dans chacune d’entre elles. Une fois que tous les dés ont été répartis, le joueur les lance par groupe et additionne les résultats des trois dés les plus élevés de chaque groupe.</p>
+        </div>
+        <div>
+            <h2>Richesse de départ</h2>
+            <p>Le nombre de pièces d'or d'un personnage au début de l'aventure est également tiré au dés selon l'origine du personnage.</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Origine sociale</th>
+                    <th>Nombre de dés de Po</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Noble/Riche</td>
+                    <td>5d4 x10</td>
+                </tr>
+                <tr>
+                    <td>Bourgeois/Artisan</td>
+                    <td>4d4 x10</td>
+                </tr>
+                <tr>
+                    <td>Marchand</td>
+                    <td>3d4 x10</td>
+                </tr>
+                <tr>
+                    <td>Roturier</td>
+                    <td>2d4 x10</td>
+                </tr>
+                <tr>
+                    <td>Pauvre</td>
+                    <td>1d4 x10</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 </body>

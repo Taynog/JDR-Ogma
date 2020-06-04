@@ -10,44 +10,66 @@
     <link rel="stylesheet" type="text/css" title="style_plan" href="../../Styles/common_rules.css"/>
 </head>
 <body>
-<div id="mySidenav" class="sidenav" style="width: 200px">
-    <button class="closebtn" onclick="closeNav()">Fermer</button>
-    <p class="index">Index<a class="big" href="index.html">Accueil</a></p>
-    <p class="partie">Lore</p>
-    <a class="medium" href="../Collection/Histoire_Ogma.xhtml">Histoire du monde</a>
-    <a class="medium" href="Carte_Ogma.xhtml">Carte du monde</a>
-    <a class="medium" href="Bestiaire.xhtml">Bestiaire</a>
-    <p class="dossier">Races</p>
-    <p class="sous-dossier">Humaines</p>
-    <a class="little" href="Empire_Azuma.xhtml">Azuma</a>
-    <a class="little" href="Royaume_Sever.xhtml">Sever</a>
-    <a class="little" href="Sultanat_Tuskizi.xhtml">Tuskizi</a>
-    <p class="sous-dossier">Magiques</p>
-    <a class="little" href="Tribus_Sakha.xhtml">Sakha</a>
-    <a class="little" href="Domaine_Sihir.xhtml">Sihir</a>
-    <a class="little" href="Clans_Steinn.xhtml">Steinn</a>
-    <p class="sous-dossier">Bestiales</p>
-    <a class="little" href="Hordes_Chono.xhtml">Chono</a>
-    <a class="little" href="Communautés_Kanta.xhtml">Kanta</a>
-    <a class="little" href="Ligues_Mushuk.xhtml">Mushuk</a>
-    <a class="little" href="Castes_Sarpa.xhtml">Sarpa</a>
-    <a class="little" href="Alliance_Tori.xhtml">Tori</a>
-    <p class="partie">Jeu de Rôle</p>
-    <a class="medium" href="Rules.xhtml#Caracteristiques">Caractéristiques</a>
-    <a class="medium" href="Rules.xhtml#Combat">Combat</a>
-    <a class="medium" href="Rules.xhtml#equipement">Équipement</a>
-    <a class="little" href="Rules.xhtml#Armes">Armes</a>
-    <a class="little" href="Rules.xhtml#Armures">Armures</a>
-    <a class="medium" href="Rules.xhtml#Magie">Magie</a>
-    <a class="medium" href="Rules.xhtml#table_race">Tableau Races</a>
-    <a class="medium" href="Rules.xhtml#Competences">Compétences</a>
-    <a class="medium" href="Rules.xhtml#fiche_perso">Fiche personnage</a>
-    <a class="medium" href="Rules.xhtml#creation_perso">Création personnage</a>
-    <a class="medium" href="Tableaux.xhtml#table_critiques">Tableau des critiques</a>
-    <a class="form_ajout" href="Rules.xhtml#form_ajout">Une proposition ?</a>
+<div id="mySidenav" class="sidenav" style="display: block">
+    <ul class="sidenav ">
+        <li><span class="index"><a href="index.html">Accueil</a></span></li>
+        <li><span class="partie">Lore</span>
+            <ul>
+                <li><span class="medium"><a href="../Collection/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium"><a href="Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium"><a href="Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier">Races</span>
+                    <ul>
+                        <li><span class="sous-dossier">Humaines</span>
+                            <ul>
+                                <li><span class="little"><a href="Empire_Azuma.xhtml">Azuma</a></span></li>
+                                <li><span class="little"><a href="Royaume_Sever.xhtml">Sever</a></span></li>
+                                <li><span class="little"><a href="Sultanat_Tuskizi.xhtml">Tuskizi</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier">Magiques</span>
+                            <ul>
+                                <li><span class="little"><a href="Tribus_Sakha.xhtml">Sakha</a></span></li>
+                                <li><span class="little"><a href="Domaine_Sihir.xhtml">Sihir</a></span></li>
+                                <li><span class="little"><a href="Clans_Steinn.xhtml">Steinn</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier">Bestiales</span>
+                            <ul>
+                                <li><span class="little"><a href="Hordes_Chono.xhtml">Chono</a></span></li>
+                                <li><span class="little"><a href="Communautés_Kanta.xhtml">Kanta</a></span></li>
+                                <li><span class="little"><a href="Ligues_Mushuk.xhtml">Mushuk</a></span></li>
+                                <li><span class="little"><a href="Castes_Sarpa.xhtml">Sarpa</a></span></li>
+                                <li><span class="little"><a href="Alliance_Tori.xhtml">Tori</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="partie">Jeu de Rôle</span>
+            <ul>
+                <li><span class="medium"><a href="Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#Combat">Combat</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#equipement">Équipement</a></span>
+                    <ul>
+                        <li><span class="little"><a href="Rules.xhtml#Armes">Armes</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Armures">Armures</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#materiel">Matériel</a></span></li>
+                    </ul></li>
+                <li><span class="medium"><a href="Rules.xhtml#Magie">Magie</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#table_race">Tableau Races</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#Competences">Compétences</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#fiche_perso">Fiche personnage</a></span></li>
+                <li><span class="medium"><a href="Rules.xhtml#creation_perso">Création personnage</a></span></li>
+                <li><span class="medium"><a href="Tableaux.xhtml">Tableaux de règles</a></span></li>
+            </ul>
+        </li>
+        <li><span class="nav_ajout"><a href="Rules.xhtml#form_ajout">Une proposition ?</a></span></li>
+    </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
-    <button onclick="openNav()" class="openbtn">MENU</button>
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
     <div>
         <h1>Origines du Monde</h1>
         <p>Nashira et Antoraï n'étaient à l'origine qu'un seul et même continent, tellement grand qu'on pouvait y voir toute sorte de climats, des jungles luxuriantes, des déserts de sable et de pierres, des grandes plaines fertiles, des monts et volcans hauts à toucher le ciel.</p>
@@ -64,25 +86,32 @@
     <div>
         <h1>Les Inkarnaïs</h1>
         <p>Le panthéon d'Ogma est constitué d'êtres de psyché pure vivant dans le plan de Karnaï appellés Inkarnaïs, ils n'ont pas de représentation physique dans le plan réel.</p>
-        <p>Ces entités peuvent êtres prises pour des dieux ou bien des monstres selon l'interprétation, ils se nourrissent de la psyché que les vivants utilisent pour lancer des sorts, chaque entité possède un domaine bien particulier du plan Karnaï, et il faut céder sa psyché pour pouvoir en ramener une partie dans la réalité.</p>
-    <ul type="circle" class="space_list">
-        <li><span class="big_underline">Aïgida</span>Déesse des vents et des tempêtes, c'est de son territoire que viennent les bourrasques des aéromanciens.</li>
-        <li><span class="big_underline">Agapi</span>Déesse de l'amour et de la compassion, les sorts provenant de son domaines guérissent blessures et maladies. </li>
-        <li><span class="big_underline">Agones</span> Dieu de la guerre et du combat, le plus puissant de tous. Il est capable d'utiliser la psyché des Chonos pour acroître son pouvoir car bien qu'ils ne puissent avoir recours à la magie, les Chonos créent un lien entre Karnaï et Ogma lorsqu'ils se battent, tout comme le ferait un mage pour lancer un sort.</li>
-        <li><span class="big_underline">Anathos</span>Dieu de la mort, sa puissance vient du fait qu'il absobre la psyché restante des Ogmarim mourants, ses sorts serait capable de ramener quelqu'un à la vie.</li>
-        <li><span class="big_underline">Dikaï</span>Divin de la justice et de la pitié, il accorde un partie de son pouvoir sous la forme de protections et d'entraves magiques.</li>
-        <li><span class="big_underline">Eftis</span>Dieu des voleurs, il est toujours dissimulé dans les ombres de son domaine.</li>
-        <li><span class="big_underline">Emporos</span>Le dieu du commerce, chaque pièce transmise lors d'un échange équitable étend son domaine, ses sortilèges de persuasion se basent sur la richesse du lanceur.</li>
-        <li><span class="big_underline">Kormo</span>Déesse des forêts, Mère des Sakhas, elle gouverne la vie et la mort de la flore.</li>
-        <li><span class="big_underline">Kynigi</span>Déesse de la chasse, son domaine est celui de la sauvagerie, il permet de contrôler les bêtes ou même d'en devenir une</li>
-        <li><span class="big_underline">Nero</span>Déesse de la mer et des océans, son domaine est une beauté gelée. </li>
-        <li><span class="big_underline">Orizo</span>Dieu du savoir, la lumière de la connaissance permet d'affronter les ténèbres de l'ignorance.</li>
-        <li><span class="big_underline">Ourgal</span>Dieu de la forge, les flammes sont son outil ainsi que son domaine. </li>
-        <li><span class="big_underline">Psema</span>Déesse des mensonges, les sorts de son domaine berçent d'illusions leurs victimes. </li>
-        <li><span class="big_underline">Tychi</span>Déesse de la chance, elle apporte bonne fortune ou grand malheur.</li>
+        <p>Ces entités peuvent êtres prises pour des dieux ou bien des monstres selon l'interprétation, ils se nourrissent de la psyché que les Ogmarim utilisent pour lancer des sorts, chaque entité possède un domaine bien particulier du plan Karnaï, et il faut céder sa psyché pour pouvoir en ramener une partie dans la réalité.</p>
+        <p>Ici ne sont cités que les plus notables d'entre eux, mais il existe un Inkarnaï pour chaque type de sort fréquemment utilisé par au moins une personne.</p>
+        <ul type="circle" class="space_list">
+            <li><span class="big_underline">Aïgida</span>Inkarnaï des vents et des tempêtes, c'est de son territoire que viennent les bourrasques des aéromanciens.</li>
+            <li><span class="big_underline">Agapi</span>Inkarnaï de la vie, les sorts provenant de son domaines guérissent blessures et maladies. </li>
+            <li><span class="big_underline">Agones</span> Inkarnaï de la guerre et du combat, le plus puissant de tous. Il est capable d'utiliser la psyché des Chonos pour acroître son pouvoir car bien qu'ils ne puissent avoir recours à la magie, les Chonos créent un lien entre Karnaï et Ogma lorsqu'ils se battent, tout comme le ferait un mage pour lancer un sort.</li>
+            <li><span class="big_underline">Anathos</span>Inkarnaï de la mort, sa puissance vient du fait qu'il absobre la psyché restante des Ogmarim mourants, ses sorts serait capable de ramener quelqu'un à la vie.</li>
+            <li><span class="big_underline">Dikaï</span>Inkarnaï de la justice et de la pitié, il accorde un partie de son pouvoir sous la forme de protections et d'entraves magiques.</li>
+            <li><span class="big_underline">Eftis</span>Inkarnaï des voleurs, il est toujours dissimulé dans les ombres de son domaine.</li>
+            <li><span class="big_underline">Kormo</span>Inkarnaï des forêts, Mère des Sakhas, elle gouverne la vie et la mort de la flore.</li>
+            <li><span class="big_underline">Kynigi</span>Inkarnaï de la chasse, son domaine est celui de la sauvagerie, il permet de contrôler les bêtes ou même d'en devenir une</li>
+            <li><span class="big_underline">Nero</span>Inkarnaï de la mer et des océans, son domaine est une beauté gelée. </li>
+            <li><span class="big_underline">Orizo</span>Inkarnaï du savoir, la lumière de la connaissance permet d'affronter les ténèbres de l'ignorance.</li>
+            <li><span class="big_underline">Ourgal</span>Inkarnaï de la forge, Père des Steinns, les flammes sont son outil ainsi que son domaine. </li>
+            <li><span class="big_underline">Psema</span>Inkarnaï des mensonges, les sorts de son domaine berçent d'illusions leurs victimes. </li>
+            <li><span class="big_underline">Tychi</span>Inkarnaï de la chance, elle apporte bonne fortune ou grand malheur.</li>
     </ul>
     </div>
 
+    <div>
+        <h1>Économie mondiale</h1>
+        <p>La plupart des échanges commerciaux se font par convoi maritime, les marchandises vont et viennent, transportées par bateaux par les légendaires marins Mushuks.</p>
+        <p>Les factions humaines interviennent dans le commerce, ils contrôlent les ports et taxent toute les marchandises. Les Steinns, et principalement le clan Rakaj, fournissent la majeure partie des objets métalliques raffinées, que ce soit des armes, des armures ou des bijoux; bien sûr, les forgerons humains et bestiaux sont capables de forger de tels objets, mais il ne peuvent surpasser le savoir-faire des Steinns.</p>
+        <p>La monnaie principale pour ce genre d'échange sont les lingots de bérylium, un métal fragile et inutilisable pour la métallurgie, il a donc été transformé en monnaie d'échange par les Ogmarim.</p>
+        <p>Les marchands utilisent plutôt des pièces de platine, d'or, d'argent ou de cuivre. Un lingot de bérylium vaut 50 pièces de platine, 500 pièces d'or, 5 000 pièces d'agent ou 50 000 pièces de cuivre. L'avantage principal des lingots de bérylium est leur poids, il ne pèse que 500 grammes, alors que 500 pièces d'or pèsent 5 kilogrammes.</p>
+    </div>
 </div>
 
 </body>

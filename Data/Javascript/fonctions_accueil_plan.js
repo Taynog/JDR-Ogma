@@ -38,14 +38,25 @@ function setnormalmap(){
     img.setAttribute( "src", "../../Images/Carte_Ogma.jpg");
 }
 
-/* Set the width of the side navigation to 200px */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "200px";
-    document.getElementById("main").style.marginLeft = "200px";
+/* toggle the side navigation */
+function toggleNav() {
+    if (document.getElementById("mySidenav").style.display === "none") {
+        document.getElementById("mySidenav").style.display = "block";
+        document.getElementById("main").style.marginLeft = "200px";
+
+    } else {
+        document.getElementById("mySidenav").style.display = "none";
+        document.getElementById("main").style.marginLeft = "0px";
+    }
 }
 
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
+
+
+function openCloseTable(n) {
+    let x = document.getElementById(n);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
 }
