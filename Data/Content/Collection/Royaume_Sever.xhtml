@@ -13,29 +13,29 @@
 <div id="mySidenav" class="sidenav" style="display: block">
     <ul class="sidenav ">
         <li><span class="index"><a href="index.html">Accueil</a></span></li>
-        <li><span class="partie">Lore</span>
+        <li><span class="partie shown" onclick="hideContent(this)">Lore</span>
             <ul>
-                <li><span class="medium"><a href="../Collection/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
-                <li><span class="medium"><a href="Carte_Ogma.xhtml">Carte du monde</a></span></li>
-                <li><span class="medium"><a href="Bestiaire.xhtml">Bestiaire</a></span></li>
-                <li><span class="dossier">Races</span>
-                    <ul>
-                        <li><span class="sous-dossier">Humaines</span>
-                            <ul>
+                <li><span class="medium shown"><a href="Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium shown"><a href="Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium shown"><a href="Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier shown" onclick="hideContent(this)">Races</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
+                            <ul class="hidden">
                                 <li><span class="little"><a href="Empire_Azuma.xhtml">Azuma</a></span></li>
                                 <li><span class="little"><a href="Royaume_Sever.xhtml">Sever</a></span></li>
                                 <li><span class="little"><a href="Sultanat_Tuskizi.xhtml">Tuskizi</a></span></li>
                             </ul>
                         </li>
-                        <li><span class="sous-dossier">Magiques</span>
-                            <ul>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Magiques</span>
+                            <ul class="hidden">
                                 <li><span class="little"><a href="Tribus_Sakha.xhtml">Sakha</a></span></li>
                                 <li><span class="little"><a href="Domaine_Sihir.xhtml">Sihir</a></span></li>
                                 <li><span class="little"><a href="Clans_Steinn.xhtml">Steinn</a></span></li>
                             </ul>
                         </li>
-                        <li><span class="sous-dossier">Bestiales</span>
-                            <ul>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Bestiales</span>
+                            <ul class="hidden">
                                 <li><span class="little"><a href="Hordes_Chono.xhtml">Chono</a></span></li>
                                 <li><span class="little"><a href="Communautés_Kanta.xhtml">Kanta</a></span></li>
                                 <li><span class="little"><a href="Ligues_Mushuk.xhtml">Mushuk</a></span></li>
@@ -47,28 +47,53 @@
                 </li>
             </ul>
         </li>
-        <li><span class="partie">Jeu de Rôle</span>
+        <li><span class="partie shown" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
-                <li><span class="medium"><a href="Rules.xhtml#Combat">Combat</a></span></li>
-                <li><span class="medium"><a href="Rules.xhtml#equipement">Équipement</a></span>
-                    <ul>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#Combat">Combat</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Magie">Magie</a></span></li>
+                    </ul></li>
+
+                <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#creation_perso">Création personnage</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Competences">Compétences</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#table_race">Traits raciaux</a></span></li>
+                    </ul></li>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#rupture">Rupture</a></span></li>
                         <li><span class="little"><a href="Rules.xhtml#Armes">Armes</a></span></li>
                         <li><span class="little"><a href="Rules.xhtml#Armures">Armures</a></span></li>
                         <li><span class="little"><a href="Rules.xhtml#materiel">Matériel</a></span></li>
                     </ul></li>
-                <li><span class="medium"><a href="Rules.xhtml#Magie">Magie</a></span></li>
-                <li><span class="medium"><a href="Rules.xhtml#table_race">Tableau Races</a></span></li>
-                <li><span class="medium"><a href="Rules.xhtml#Competences">Compétences</a></span></li>
-                <li><span class="medium"><a href="Rules.xhtml#fiche_perso">Fiche personnage</a></span></li>
-                <li><span class="medium"><a href="Rules.xhtml#creation_perso">Création personnage</a></span></li>
-                <li><span class="medium"><a href="Tableaux.xhtml">Tableaux de règles</a></span></li>
+                <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_parade">Parade</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
+                            </ul></li>
+                        <li><span class="medium"><a href="Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                    </ul>
+                </li>
             </ul>
         </li>
         <li><span class="nav_ajout"><a href="Rules.xhtml#form_ajout">Une proposition ?</a></span></li>
     </ul>
 </div>
-<div id="main" class="main" style="margin-left: 200px">
+<div id="main" class="main" align="center" style="margin-left: 200px">
     <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1 align="center">Le Royaume Sever</h1>
     <img src="../../Images/Sever_picture.jpg" alt="Guerrier Sever" height="600" title="https://legends.bethesda.net/fr/media"/>
