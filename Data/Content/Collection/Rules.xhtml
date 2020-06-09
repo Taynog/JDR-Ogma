@@ -136,11 +136,11 @@
 
             <h3>Blessures et mort</h3>
             <p>Les dégâts n’affectent pas le personnage tant qu’il ne tombe pas à 0 PV. Si les PV d'une entité tombent à 1 ou que le total de dégâts non-létaux sont égaux à son nombre actuel de PV, l'entité devient chancelante et ne peut que se déplacer, toute autre action lui ferait perdre son dernier PV, ce qu'elle est en droit de faire.</p>
-            <p>Si les dégâts non létaux dépassent le nombre de points de vie restants du personnage, il s’effondre, inconscient. Il est alors sans défense.</p>
+            <p>Si les dégâts non létaux dépassent le nombre de points de vie restants du personnage, il s’effondre, inconscient. Il est alors hors de combat.</p>
             <p>De 0 PV jusqu’à une valeur négative égale à sa valeur de Constitution, il est mourant.</p>
             <p>Quand son total de PV négatifs est égal à sa valeur de Constitution, il meurt.</p>
-            <p>Un personnage sans défense est inconscient et ne peut rien faire, son état est stable et il ne subit pas de dégâts au cours du temps(sauf si il est toujours sous les effets de dégâts continus (poison, feu, etc...)</p>
-            <p>Un personnage mourant sombre immédiatement dans l’inconscience et ne peut plus rien faire. Il perd 1 point de vie chaque round (et les dégâts continuels si il en subissait toujours les effets). Cela continue jusqu’à ce qu’il meure ou soit stabilisé. Si le personnage est stabilisé, il devient sans défense</p>
+            <p>Un personnage hors de combat est inconscient et ne peut rien faire, son état est stable et il ne subit pas de dégâts au cours du temps(sauf si il est toujours sous les effets de dégâts continus (poison, feu, etc...)</p>
+            <p>Un personnage mourant sombre immédiatement dans l’inconscience et ne peut plus rien faire. Il perd 1 point de vie chaque round (et les dégâts continuels si il en subissait toujours les effets). Cela continue jusqu’à ce qu’il meure ou soit stabilisé. Si le personnage est stabilisé, il devient hors de combat</p>
             <p>Stabiliser un personnage mourant en combat requiert de lui faire regagner des points de vie par quelque manière que ce soit (sorts, potions).À la fin d'un combat, les compagnons d'un personnage mourant peuvent prendre le temps de le stabiliser si ils possèdent des fournitures médicales (bandages, etc...).</p>
 
             <h3>Jets de sauvegarde</h3>
@@ -292,10 +292,9 @@
 
                 <h3>Climats et vents</h3>
                 <p>Il arrive que le temps joue un rôle important dans une aventure. La table ci-dessous tient lieu des aléas du temps. Le sens des termes employés dans ce tableau est expliqué plus bas.</p>
-                <button onclick="openCloseTable('table_climat')">Ouvrir/Fermer le tableau des climats</button>
+                <p class="caption" onclick="openCloseTable('table_climat')">Climats</p>
                 <div id="table_climat" style="display: block">
                     <table width="90%">
-                        <caption>Détermination aléatoire du climat</caption>
                         <thead>
                         <tr>
                             <th>d100</th>
@@ -365,10 +364,10 @@
                     <p><span class="underline">Ouragan :</span> En plus de la violence terrible de leurs vents et de leurs précipitations, les ouragans s’accompagnent souvent de crues éclair (voir inondations). Les individus pris à découvert ne peuvent pas faire grand-chose d’autre que d’essayer de trouver un abri au plus vite.</p>
                     <p><span class="underline">Blizzard :</span> Le mélange de vents très violents, d’importantes chutes de neige (généralement 1d3 x 30 cm, voir Pluie, neige, neige fondue et grêle) et de froid font que les blizzards constituent une terrible menace pour quiconque se laisse surprendre.</p>
                 </div>
-                <button onclick="openCloseTable('table_vents')">Ouvrir/Fermer le tableau des vents</button>
+
+                <p class="caption" onclick="openCloseTable('table_vents')">Effets du vent</p>
                 <div id="table_vents" style="display: block">
                     <table width="90%">
-                        <caption>Effets du vent</caption>
                         <thead>
                         <tr>
                             <th>Force du Vent</th>
@@ -454,8 +453,8 @@
                     <span class="big_underline">Tornade :</span> toutes les flammes sont instantanément soufflées et il est impossible d’attaquer à distance, même pour les machines de guerre. Les tests de Perception basés sur l’ouïe échouent automatiquement. Au lieu d’être emportés au loin, les personnages se situant trop près de la tornade sont au contraire aspirés (jet de vigueur pour annuler l’effet). Ceux qui entrent en contact avec l’œil de la tornade, c’est-à-dire le tourbillon autour duquel celle-ci s’enroule, sont projetés dans les airs et secoués en tous sens pendant 1d10 rounds, ce qui leur inflige 6d6 points de dégâts par round, après quoi ils sont violemment expulsés (subissant du même coup des dégâts proportionnels à la hauteur de chute). La vitesse de rotation de la tornade peut atteindre les 500 km/h, mais l’œil est bien plus lent (50 km/h environ, soit dans les 75 m par round). Une tornade déracine les arbres, ravage les bâtiments et cause d’autres dégâts similaires.<br/>
                 </div>
 
-                <div id="dangers_naturels">
-                    <h3>Dangers naturels</h3>
+                <h3 id="dangers_naturels" onclick="hideContent(this)">Dangers naturels</h3>
+                <div>
                     <h4>L'acide</h4>
                     <p>L’acide inflige 1d6 points de dégâts par round d’exposition, excepté dans le cas d’une immersion totale (qui peut par exemple se produire si un aventurier tombe dans une grande vasque), laquelle occasionne 10d6 points de dégâts par round. Une attaque acide (salive de monstre, flasque lancée à la main, etc.) représente un round d’exposition.</p>
                     <p>Les émanations libérées par la plupart des acides ont l’effet d’un poison fonctionnant par inhalation. Quiconque s’approche trop d’une vaste étendue d’acide doit réussir à chaque round un jet de vigueur sous peine de subir un affaiblissement temporaire de 1 point de Constitution par round. Ce poison n’a pas de fréquence, et n’agit plus dès qu’on s’en éloigne.</p>
@@ -1083,6 +1082,7 @@
         <h1 id="equipement" onclick="hideContent(this)">Équipement</h1>
         <div>
             <p>L'équipement joue un grand rôle dans la puissance du personnage, surtout si il n'a que peu recours à la magie. Une arme forgée par un grand maître infligera plus de dégâts et sera plus solide qu'une vieille lame décrépite.</p>
+            <p>Les armes et les armures nécessitent un entraînement pour être utilisés convenablement, un entraînement est considéré comme un dons et concernent une ou plusieurs catégorie d'armes ou d'armures. Un personnage utilisant une arme qu'il ne maîtrise pas reçoit un malus de 4 pour ses jets d'attaque. Un personnage portant une armure qu'il ne maitrise pas reçoit un malus de 2 à l'Agilité, ne peut pas avoir recours à la magie et les malus de l'armure sont doublés</p>
             <div>
                 <h2 id="rupture" onclick="hideContent(this)">Rupture</h2>
                 <p>Les armes et armures possèdent une statistique appelée Rupture qui correspond à la solidité de l'objet, plus cette statistique est petite, plus l'objet est solide. L'amulette anti-magie des Chonos par exemple possède une rupture de 1.</p>
@@ -1559,7 +1559,7 @@
                             <td>/</td>
                             <td>/</td>
                             <td>Intermédiaire</td>
-                            <td>Bruyante (-3 en furtivité), Lourde (-1 AGI)</td>
+                            <td>Bruyante (-3 en furtivité), Lourde (-2 AGI)</td>
                             <td>150 po</td>
                             <td>15 kg</td>
                         </tr>
@@ -1594,7 +1594,7 @@
                             <td>1</td>
                             <td>1</td>
                             <td>Lourde</td>
-                            <td>Bruyante (-4 en furtivité), Lourde (- 2 AGI)</td>
+                            <td>Bruyante (-4 en furtivité), Lourde (-3 AGI)</td>
                             <td>350 po</td>
                             <td>20 kg</td>
                         </tr>
@@ -1605,7 +1605,7 @@
                             <td>2</td>
                             <td>1</td>
                             <td>Lourde</td>
-                            <td>Bruyante (-5 en furtivité), Lourde (- 3 AGI), Difficile à équiper (besoin d'aide)</td>
+                            <td>Bruyante (-5 en furtivité), Lourde (-5 AGI), Difficile à équiper (besoin d'aide)</td>
                             <td>750 po</td>
                             <td>25 kg</td>
 
@@ -1617,7 +1617,7 @@
                             <td>2</td>
                             <td>1</td>
                             <td>Lourde</td>
-                            <td>Bruyante (-5 en furtivité), Lourde (- 2 AGI), Difficile à équiper (besoin d'aide)</td>
+                            <td>Bruyante (-5 en furtivité), Lourde (-5 AGI), Difficile à équiper (besoin d'aide)</td>
                             <td>1500 po</td>
                             <td>22,5 kg</td>
                         </tr>

@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Communautés_Kanta.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Communautés_Kanta.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Domaine_Sihir.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Domaine_Sihir.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Empire_Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Empire_Azuma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Glossaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Histoire_Ogma.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Hordes_Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Hordes_Chono.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Ligues_Mushuk.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Ligues_Mushuk.xhtml" afterDir="false" />
@@ -19,11 +20,6 @@
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Sultanat_Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Sultanat_Tuskizi.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Tableaux.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Tribus_Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Tribus_Sakha.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/test_navmenu.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Images/fiche_perso1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Images/fiche_perso1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Images/fiche_perso2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Images/fiche_perso2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Images/fiche_perso3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Images/fiche_perso3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +103,7 @@
       <workItem from="1591215211082" duration="2708000" />
       <workItem from="1591258633854" duration="7074000" />
       <workItem from="1591275737207" duration="25220000" />
-      <workItem from="1591608736231" duration="33961000" />
+      <workItem from="1591608736231" duration="41856000" />
     </task>
     <servers />
   </component>
