@@ -1,0 +1,2301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Page de Règles</title>
+    <meta http-equiv="Content-Script-Type" content="application/javascript"/>
+    <script type="application/javascript" src="../../../Javascript/fonctions_accueil_plan.js"> </script>
+    <link rel="stylesheet" type="text/css" title="style_plan" href="../../../Styles/common_rules.css"/>
+</head>
+<body>
+<div id="mySidenav" class="sidenav" style="display: block">
+    <ul class="sidenav ">
+        <li><span class="index"><a href="../../../../index.xhtml">Accueil</a></span></li>
+        <li><span class="partie shown" onclick="hideContent(this)">Lore</span>
+            <ul>
+                <li><span class="medium shown"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium shown"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium shown"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier shown" onclick="hideContent(this)">Races/Factions</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Azuma.xhtml">Azuma</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sever.xhtml">Sever</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tuskizi.xhtml">Tuskizi</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Magiques</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Sakha.xhtml">Sakha</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sihir.xhtml">Sihir</a></span></li>
+                                <li><span class="little"><a href="../Factions/Steinn.xhtml">Steinn</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Bestiales</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Chono.xhtml">Chono</a></span></li>
+                                <li><span class="little"><a href="../Factions/Kanta.xhtml">Kanta</a></span></li>
+                                <li><span class="little"><a href="../Factions/Mushuk.xhtml">Mushuk</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sarpa.xhtml">Sarpa</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tori.xhtml">Tori</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="partie shown" onclick="hideContent(this)">Jeu de Rôle</span>
+            <ul>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#Combat">Combat</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Magie">Magie</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Survie">Survie</a></span></li>
+                    </ul></li>
+
+                <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#creation_perso">Création personnage</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Competences">Compétences</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#table_race">Traits raciaux</a></span></li>
+                    </ul></li>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#rupture">Rupture</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Armes">Armes</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Armures">Armures</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#materiel">Matériel</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_parade">Parade</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
+                            </ul></li>
+                        <li><span class="medium"><a href="Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="medium"><a href="Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
+                <ul class="hidden">
+                    <li><span class="little"><a href="Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
+                </ul></li>
+            </ul>
+        </li>
+        <li><span class="nav_ajout"><a href="Rules.xhtml#form_ajout">Une proposition ?</a></span></li>
+    </ul>
+</div>
+<div id="main" class="main" style="margin-left: 200px">
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
+
+    <div id="rules">
+        <h1 id="Combat" onclick="hideContent(this)">Combat</h1>
+        <div>
+            <p>Les combats se déroulent selon des round d'une durée de 6 secondes, chaque entité présente en combat dispose de points d'action (PA) qu'elle peut utiliser pour effectuer des actions lors de son tour. Le nombre de PA peut être modifié par certains sorts ou compétences. Les Pa d'une entité sont restaurés à la fin de son tour. Le nombre par défaut pour une entité normale de PA est 4.</p>
+
+            <h3>Premier round</h3>
+            <p>Lors du premier tour du combat, tout les personnes/monstres participant au combat lance un dé d'initiative (1d20 + PER), l'ordre de jeu est déterminé par ce jet du plus grand score au plus petit, si il ya  égalité entre deux ou plusieurs entités, elles doivent relancer un jet d'initiative pour déterminer leur ordre de jeu.</p>
+
+            <h3>Surprise</h3>
+            <p>Toute entité est prise par surprise tant qu'elle n'a pas joué son premier tour, à moins d'être consciente du danger via un test de perception réussi. Une entité prise par surprise ne peut bénéficier de ses modificateurs de caractéristiques positifs.</p>
+
+            <h3>Types d'actions</h3>
+            <p>Une entité peut utiliser ses PA pour :</p>
+            <ul><li>se déplacer, la distance parcourue par PA est égale à AGI/2 en mètres. Elle peut aussi se déplacer de façon particulière (ex : charge, saut, glissade).</li>
+                <li>effectuer une action simple par exemple dégainer une arme (1PA), ouvrir une porte(1PA), utiliser/ramasser un objet(coût différent selon l'objet), intéragir avec un mécanisme(1PA), aider un allié(2PA).</li>
+                <li>attaquer un adversaire, le coût dépend de l'arme utilisée, limité à une attaque par tour.</li>
+                <li>lancer un sort, le coût en PA dépend de la magnitude du sort. Les sorts se lancent en plusieurs tours et nécessitent un certain nombre de PA pendant la concentration.</li>
+                <li>effectuer une action complexe par exemple crocheter une serrure(3PA), persuader/intimider un adversaire(2PA), utilisez un parchemin(Coût équivalent à celui du sort), sortir un objet de son sac(coût selon le poids de l'objet).</li>
+            </ul>
+            <p>Les PA non utilisés à la fin du tour sont perdus.</p>
+
+            <h3>Zones de contrôle et attaques d'opportunités</h3>
+            <p>Chaque entité contrôle une zone autour d'elle équivalente à la portée de son arme de mêlée, les entités peuvent rentrer dans cette zone sans risquer d'attaque d'opportunité si elle sont en garde.</p>
+            <p>Quitter cet espace sans faire attention peut déclencher une attaque d'opportunité de la part de l'entité contrôlant cette zone. Sortir d'une zone de contrôle ennemie est une action de complexe coûtant 2 PA.</p>
+
+            <h3>Type de dégâts</h3>
+            <p>Il y a deux types de dégâts, les dégâts létaux causés par les armes tranchantes, perforantes et contondantes lourdes(marteaux de guerre, masses) et les dégaux non-létaux causés par les attaques contondantes légères(mains nues et bâtons), le climat et la fatigue</p>
+            <p>Les dégâts létaux réduisent les points de vie des entités tandis que les non-létaux s'accumulent et ne comptent pas comme de réels dégâts.</p>
+
+            <h3>Parades et Esquives</h3>
+            <p>Pour pouvoir parer les attaques, il faut posséder un bouclier ou une amre permettant la parade (voir <a href="Rules.xhtml#Armes">le tableau des armes</a>) et savoir s'en servir sous peine de malus, les jet de parade se base sur la Constitution avec un bouclier et sur la Dextérité avec une arme.</p>
+            <p>Pour esquiver une attaque, le jet se base sur l'Agilité, certaines compétences et dons permettent d'avoir un bonus, porter une armure ou des vêtements gênants les mouvements(armure de plates, robe ample,...) impose un malus selon l'ampleur de la gêne occasionnée.</p>
+
+            <h3>Blessures et mort</h3>
+            <p>Les dégâts n’affectent pas le personnage tant qu’il ne tombe pas à 0 PV. Si les PV d'une entité tombent à 1 ou que le total de dégâts non-létaux sont égaux à son nombre actuel de PV, l'entité devient chancelante et ne peut que se déplacer, toute autre action lui ferait perdre son dernier PV, ce qu'elle est en droit de faire.</p>
+            <p>Si les dégâts non létaux dépassent le nombre de points de vie restants du personnage, il s’effondre, inconscient. Il est alors hors de combat.</p>
+            <p>De 0 PV jusqu’à une valeur négative égale à sa valeur de Constitution, il est mourant.</p>
+            <p>Quand son total de PV négatifs est égal à sa valeur de Constitution, il meurt.</p>
+            <p>Un personnage hors de combat est inconscient et ne peut rien faire, son état est stable et il ne subit pas de dégâts au cours du temps(sauf si il est toujours sous les effets de dégâts continus (poison, feu, etc...)</p>
+            <p>Un personnage mourant sombre immédiatement dans l’inconscience et ne peut plus rien faire. Il perd 1 point de vie chaque round (et les dégâts continuels si il en subissait toujours les effets). Cela continue jusqu’à ce qu’il meure ou soit stabilisé. Si le personnage est stabilisé, il devient hors de combat</p>
+            <p>Stabiliser un personnage mourant en combat requiert de lui faire regagner des points de vie par quelque manière que ce soit (sorts, potions).À la fin d'un combat, les compagnons d'un personnage mourant peuvent prendre le temps de le stabiliser si ils possèdent des fournitures médicales (bandages, etc...).</p>
+
+            <h3>Jets de sauvegarde</h3>
+            <p id="save_reflexes">Jet de Réflexes. Ce type de jet de sauvegarde représente la faculté du personnage à esquiver les attaques de zone et les situations inattendues. On y applique le modificateur d'Agilité.</p>
+            <p id="save_vigueur">Jet de Vigueur. Ce type de jet de sauvegarde reflète la capacité du personnage à résister aux attaques mettant sa vitalité ou sa santé en danger, ainsi qu’à résister à la douleur. On y applique le modificateur de Constitution.</p>
+            <p id="save_volonte">Jet de Volonté. Ce type de jet de sauvegarde représente la faculté du personnage à se soustraire aux tentatives de domination et à d’autres effets magiques similaires. On y ajoute le modificateur de Volonté.</p>
+
+            <h3>Attaquer un adversaire(Exemple)</h3>
+            <p>Prenons Edwin, un officier de l'Empire Azuma, qui souhaite ataquer un gobelin situé à 10 mètres. Edwin possède un score de 14 en AGI, 15 en FOR et 12 en DEX, son arme est une épée longue impériale se basant sur la plus haute caractéristiques entre FOR et DEX (donc pour Edwin sur la FOR).</p>
+            <p>Le tour d'Edwin vient avant celui du gobelin, il peut donc s'avancer pour parcourir la distance les séparants, il peut parcourir 7m/PA, il en utilise donc 2(il pourra se déplacer d'encore 4 mètres après son attaque), il lui en reste 2 autre qu'il peut utiliser pour attaquer, il lance son dé 20 de FOR et fait un 6 !</p>
+            <p>L'attaque est réussie, le gobelin ne peut pas faire de parade avec sa dague, il tente d'esquiver, un dé 20 d'AGI, il obtient 8, le jet est réussi(le gobelin a un score de 11 en AGI) mais insuffisant car Edwin a obtenu un 6, l'attaque touche !</p>
+            <p>Edwin lance son jet de dégats (1d6+modificateur de FOR à une main), il obtient 5, le gobelin est déjà mal en point, il ne possède plus que 3 PV,il tombe à -2 PV, il est mourant.</p>
+        </div>
+
+        <h1 id="Magie" onclick="hideContent(this)">Magie</h1>
+        <div>
+            <h3>Origine de la Magie</h3>
+            <p>La magie est apparu en Ogma suite au Grand Cataclysme, l'impact météoritique a créé un lien entre deux plans de l'existence, reliant ainsi le monde d'Ogma et celui de Karnaï.</p>
+            <p>Le cratère d'impact, où se situe Jikaï la capitale Sihir, est la source de toute la magie d'Ogma.</p>
+
+            <h3>Usage de la Magie</h3>
+            <p>Toute entité suffisament intelligente pour penser peut avoir recours à la magie.</p>
+            <p>Utiliser la magie revient à se rendre mentalement dans le domaine d'un Inkarnaï, d'y façonner sa création en la dessinant puis de la ramener dans le plan d'Ogma via sa force psychique. Le type de sort dépend du domaine d'où on puise sa création.</p>
+            <p>Plus un dessin est imposant, plus il est difficile de le faire basculer dans la réalité. Les aptitudes mentales du créateur jouent beacoup pour la réussite d'une telle entreprise. Son intelligence permet de façonner des images plus grandes et sa volonté de les maintenir plus longtemps dans le plan réel.</p>
+            <p>L'usage de la magie requiert de la force mentale, représenté par des points des points de Psyché. Quiconque a recours à la magie sans suffisament de Psyché ou s'essaye à des créations trop imposantes pour son esprit s'expose à des risques pour son enveloppe physique.</p>
+
+            <h3>Magie en combat</h3>
+            <p>Pour utiliser la magie durant un combat, il faut avoir suffisament de temps pour se concentrer. Le test se base sur l'intelligence et est lancé au dernier round de concentration, si le lanceur est pertubé lors de sa concentration, il doit réussir un jet de sauvegarde (volonté) basé sur la difficulté du sort pour le maintenir. La psyché est perdue après que le jet d'intelligence.</p>
+            <p>Les utilisations ne sont limités que par la créativité de joueur et le bon vouloir du MJ.</p>
+            <p>On peut imaginer une simple boule de feu au milieu des adversaires, un mur de pierre devant soi pour créer un abri temporaire, faire tomber des litres d'eau pour rendre le sol boueux,...</p>
+            <p>Il est même possible de créer des choses directement dans la tête de son ennemi(si on possèdes les connaissances bien entendu), on peut lui faire voir des monstres, altérer sa perception, le rendre sourd/aveugle, l'endormir,...</p>
+            <p>Une réussite critique lors d'un lancer sort permet d'augmenter n'importe quel facteur d'un cran gratuitement</p>
+
+            <h3>Magie hors-combat</h3>
+            <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
+            <p>Les utilisateurs plus confirmés peuvent également transmettre des messages via la magie, ainsi la transmission de messages en Ogma est très rapide. Il est même possible de recevoir un message sans avoir aucune formation avec la magie, il suffit à l'expéditeur de connaître un tant soit peu le destinataire.</p>
+            <p>Les Sarpas par exemple utilisent constamment la magie pour produire de la chaleur si ils ne peuvent pas profiter de celle des astres.</p>
+            <p>On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
+
+            <h3 onclick="hideContent(this)">Règles et coût des sorts</h3>
+            <div>
+                <table width="90%">
+                    <thead>
+                    <tr>
+                        <th rowspan="2">Cercle de Pouvoir</th>
+                        <th rowspan="2">Niveau de difficulté<br/>(malus appliqué à l'INT)</th>
+                        <th colspan="4">Facteurs</th>
+                        <th rowspan="2">Coût en Psyché</th>
+                        <th rowspan="2">Temps d'invocation</th>
+                    </tr>
+                    <tr>
+                        <th>Nombre de cibles</th>
+                        <th>Portée</th>
+                        <th>Persistance</th>
+                        <th>Dégâts</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Standard (/)</td>
+                        <td>1</td>
+                        <td>Toucher</td>
+                        <td>1 round</td>
+                        <td>1d10</td>
+                        <td>3</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Compliqué (-2)</td>
+                        <td>2</td>
+                        <td>10 m</td>
+                        <td>3 round</td>
+                        <td>2d8</td>
+                        <td>5</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Difficile(-5)</td>
+                        <td>3</td>
+                        <td>50 m</td>
+                        <td>1 minute</td>
+                        <td>3d8</td>
+                        <td>10</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Très difficile(-8)</td>
+                        <td>4</td>
+                        <td>100 m</td>
+                        <td>1 heure</td>
+                        <td>4d8</td>
+                        <td>15</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Exceptionnel(-12)</td>
+                        <td>5</td>
+                        <td>1 km</td>
+                        <td> 1 journée</td>
+                        <td>5d8</td>
+                        <td>20</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Héroïque(-16)</td>
+                        <td>spécial</td>
+                        <td>spécial</td>
+                        <td>spécial</td>
+                        <td>spécial</td>
+                        <td>spécial</td>
+                        <td>spécial</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h1 id="Survie" onclick="hideContent(this)">Survie</h1>
+        <div>
+            <p>Partir à l'aventure n'est pas chose aisée, on risque gros si l'on néglige les nombreux risques des terres sauvages éloignées de toute civilisation. Un groupe d'aventuriers mal préparé s'expose aux climats difficiles, à la famine et à la soif, aux bêtes et monstres affamés.</p>
+            <h2 id="besoins_journaliers" onclick="hideContent(this)">Besoins journaliers</h2>
+            <div>
+                <h3>Nourriture</h3>
+                <p>Un personnage a besoin de 500 g de nourriture par jour et peut faire durer sa réserve de nourriture plus longtemps en ne mangeant que des demi-rations. Manger 250 g de nourriture par jour compte comme un demi-jour sans nourriture.</p>
+                <p>Un personnage peut survivre sans nourriture pendant un nombre de jours égal à 3 + son modificateur de Constitution (minimum 1). À la fin de chaque jour au-delà de cette limite, un personnage souffre automatiquement d'un niveau d'épuisement. Un jour passé en ayant mangé normalement remet le compteur de jours sans nourriture à zéro.</p>
+
+                <h3>Eau</h3>
+                <p>Un personnage a besoin de 3 litres d'eau par jour par température normale, de 6 litres s'il fait chaud ou de 9 si il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de sauvegarde de Constitution ou encaisser un niveau d'épuisement à la fin du jour. Un personnage qui boit encore moins d'eau que cela encaisse automatiquement un niveau d'épuisement à la fin du jour. Si un personnage a déjà un ou plusieurs niveaux d'épuisement, le personnage encaisse deux niveaux dans les deux cas.</p>
+
+                <h3>Repos</h3>
+                <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit pour la magie, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent prendre des repos courts au milieu d'une journée d'aventure et un repos long en fin de journée.</p>
+                <h4>Repos court</h4>
+                <p>Un repos court est une période de temps mort qui dure au moins 1 heure, et durant laquelle un personnage ne fait rien de plus demandant que manger, boire, lire ou panser ses plaies. Un personnage récupère naturellement 20% de ses points de vie lors d'un repos court, il est possible d'en récupérer plus via des sorts du domaine d'Agapi ou des remèdes alchimiques entres autres.</p>
+                <h4>Repos long</h4>
+                <p>Un repos long est une période de temps mort d'au moins 8 heures lors de laquelle un personnage dort au moins 6 heures et entreprend des activités légères comme lire, parler, manger ou monter la garde durant un maximum de 2 heures. Si le repos est interrompu par une période d'activité soutenue (au moins une heure de marche, de combat, d'incantation ou d'activités similaires), le personnage doit recommencer le repos long depuis le début pour en bénéficier.</p>
+                <p>Au terme d'un repos long, un personnage récupère 80% de ses points de vie. Un personnage ne peut bénéficier de plus d'un repos long par période de 24 heures et doit avoir au moins un point de vie au début du repos pour en gagner ses bienfaits.</p>
+            </div>
+
+            <h2 id="environnement" onclick="hideContent(this)">Environnement</h2>
+            <div>
+                <h3>Biomes</h3>
+                <p>Le monde d'ogma est parsemé de biomes différents, certains sont cléments d'autres beaucoup moins. Il est possible de trouver de la nourriture et de l'eau potable dans la plupart de ceux-ci, mais la tâche est plus ardue dans une montagne gelée balayée par des blizzards plutôt que dans une plaine paisible.</p>
+
+                <h3>Climats et vents</h3>
+                <p>Il arrive que le temps joue un rôle important dans une aventure. La table ci-dessous tient lieu des aléas du temps. Le sens des termes employés dans ce tableau est expliqué plus bas.</p>
+                <p class="caption" onclick="openCloseTable('table_climat')">Climats</p>
+                <div id="table_climat" style="display: block">
+                    <table width="90%">
+                        <thead>
+                        <tr>
+                            <th>d100</th>
+                            <th>Temps</th>
+                            <th>Région froide</th>
+                            <th>Région tempérée*</th>
+                            <th>Désert</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>01–70</td>
+                            <td>Normal</td>
+                            <td>Froid, temps calme</td>
+                            <td>Normal pour la saison**</td>
+                            <td>Très chaud, temps calme</td>
+                        </tr>
+                        <tr>
+                            <td>71-80</td>
+                            <td>Mauvais</td>
+                            <td>Neige</td>
+                            <td>Précipitations</td>
+                            <td>Très chaud, venteux</td>
+                        </tr>
+                        <tr>
+                            <td>81-90</td>
+                            <td>Tempête</td>
+                            <td>Tempête de neige</td>
+                            <td>Orage, tempête de neige(hiver)</td>
+                            <td>Tempête de sable</td>
+                        </tr>
+                        <tr>
+                            <td>91-100</td>
+                            <td>Violente tempête</td>
+                            <td>Blizzard</td>
+                            <td>Tornade, Ouragan(Été), Blizzard(hiver)</td>
+                            <td>Trombes d'eau</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">* Les régions tempérées comprennent les forêts, collines, marécages, montagnes, plaines et mers chaudes.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">** Froid pendant l’hiver, chaud pendant l'été, tempéré pendant l'automne et le printemps. En hiver, les régions marécageuses sont toujours légèrement plus chaudes que les autres.</td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                    <h4>Températures</h4>
+                    <p> <span class="underline">Froid :</span> de -15° C à 5° C le jour, 5° C à 10° C de moins la nuit.<br/><span class="underline">Tempéré :</span> de 5° C à 15° C pendant le jour, 5° C à 10° C de moins pendant la nuit.<br/><span class="underline">Chaud :</span> de 15° C à 30° C le jour, 5° C à 10° C de moins la nuit.<br/><span class="underline">Très chaud :</span> de 30° C à 45° C le jour, 5° C à 10° C de moins la nuit.</p>
+
+                    <h4>Temps</h4>
+                    <p><span class="underline">Précipitations :</span> jetez 1d100 afin de savoir si les précipitations prennent la forme de brouillard (01–30), de pluie ou de neige (31–90), ou de neige fondue ou de grêle (91–00). La neige ne peut se former qu’en cas de température inférieure à 0° C. La plupart des types de précipitations tombent durant 2d4 heures, à l’exception de la grêle (1d20 minutes seulement, mais elle s’accompagne généralement de 1d4 heures de pluie).</p>
+                    <p><span class="underline">Tempête (de sable, de neige, orage) :</span> les vents sont violents (50 à 80 km/h) et la visibilité diminuée de 75 %. Une tempête sévit pendant 2d4-1 heures.</p>
+                    <p><span class="underline">Temps calme :</span> Très faible vent (de 0 à 15 km/h).</p>
+                    <p><span class="underline">Trombes d’eau :</span> semblables à la pluie (voir « Précipitations », ci-dessus), mais leur violence est telle qu’elles limitent le champ de vision comme le brouillard. Elles peuvent provoquer des inondations. Les trombes d’eau durent pendant 2d4 heures.</p>
+                    <p><span class="underline">Venteux :</span> Vent moyen (15 à 30 km/h) ou important (30 à 50 km/h).<br/><span class="underline">Violente tempête (blizzard, tornade) :</span> la vitesse des vents s’élève au dessus de 80 km/h. De plus, il se joint aux blizzards d’importantes chutes de neige (1d3 x 30 cm) et aux ouragans des trombes d’eau (voir ci-dessus). Un blizzard persiste 1d3 jours. Un ouragan peut parfois durer jusqu’à une semaine, mais il aura principalement de l’impact sur les personnages de vingt-quatre à quarante-huit heures, le temps que sa partie centrale traverse la région où se trouve le groupe. Quand à la tornade, elle possède une durée de vie extrêmement réduite (1d6 x 10 minutes). Généralement, elle se forme dans le cadre d’un orage.</p>
+
+                    <h4>Tempêtes</h4>
+                    <p>L’effet combiné du vent et des précipitations (ou du sable soulevé) diminue la visibilité de trois quarts, ce qui se traduit par un malus de -8 aux tests de Perception. Les attaques à distance sont impossibles, excepté à l’aide de machines de guerre (et encore se font-elles à -4). Les flammes à l’air libre sont instantanément éteintes, et celles qui sont protégées (lanternes, etc.) ont 50 % de chances d’être soufflées. Les tempêtes sont réparties en trois familles : tempêtes de sable, tempêtes de neige et orages.</p>
+                    <p><span class="underline">Tempête de sable :</span> Cette sorte de tempête est semblable aux autres à la différence qu’elle ne s’accompagne pas de précipitations. Au lieu de cela, le vent soulève le sable du désert, et c’est ce dernier qui réduit le champ de vision, étouffe les flammes à l’air libre et a 50 % de chances d’éteindre celles qui sont protégées. La plupart des tempêtes de sable sont accompagnées de vents violents et laissent derrière elles une couche de sable plus ou moins épaisse (1d6 x 2,5 cm). Chaque tempête de sable a toutefois 10 % de risques d’être d’une intensité bien supérieure à la normale, auquel cas elle s’accompagne de vents de tempête. Quiconque se trouve à découvert lorsqu’elle se déclenche subit 1d3 points de dégâts non-létaux par round et risque d’étouffer (voir noyade, si ce n’est qu’un personnage se protégeant la bouche et le nez, par exemple avec une écharpe, ne commence à étouffer qu’après un nombre de rounds égal à dix fois sa valeur de Constitution). Une tempête de sable aussi virulente laisse plusieurs dizaines de centimètres de sable sur son passage (jetez 2d3-1 et multipliez le résultat par 30 cm pour savoir l’épaisseur exacte).</p>
+                    <p><span class="underline">Tempête de neige</span> En plus des vents et des précipitations, cette tempête dépose plusieurs centimètres de neige sur son passage (1d6 x 2,5 cm).</p>
+                    <p><span class="underline">Orage :</span> En plus des vents et des précipitations (qui prennent le plus souvent la forme de pluie, même si les orages de grêle sont possibles), les orages s’accompagnant d’éclairs représentent un danger potentiel pour les personnages se trouvant à découvert quand les éléments se déchaînent (surtout pour ceux qui portent une armure métallique). Pour simplifier, considérez que la foudre frappe une fois par minute près du centre de l’orage, et ce pendant une heure. Chaque éclair inflige un nombre de points de dégâts d’électricité compris entre 4d8 et 10d8. Un orage sur dix se change en tornade.</p>
+
+                    <h4>Tempêtes violentes</h4>
+                    <p>Les vents extrêmement violents et la pluie battante (ou la neige cinglante) qui caractérisent ce type de condition climatique diminue la visibilité jusqu’à zéro, ce qui rend impossible les attaques à distance et les tests de Perception. Les flammes non protégées sont systématiquement éteintes, et même les autres ont 75 % de risques de l’être. Les créatures surprises à découvert doivent réussir un jet de vigueur(avec un malus de 5) pour ne pas être affectées par l’effet des vents.</p>
+                    <p><span class="underline">Tornade :</span> En plus de la violence terrible de leurs vents, les tornades peuvent gravement blesser, voir tuer quiconque se retrouve pris dans les bourrasques.</p>
+                    <p><span class="underline">Ouragan :</span> En plus de la violence terrible de leurs vents et de leurs précipitations, les ouragans s’accompagnent souvent de crues éclair (voir inondations). Les individus pris à découvert ne peuvent pas faire grand-chose d’autre que d’essayer de trouver un abri au plus vite.</p>
+                    <p><span class="underline">Blizzard :</span> Le mélange de vents très violents, d’importantes chutes de neige (généralement 1d3 x 30 cm, voir Pluie, neige, neige fondue et grêle) et de froid font que les blizzards constituent une terrible menace pour quiconque se laisse surprendre.</p>
+                </div>
+
+                <p class="caption" onclick="openCloseTable('table_vents')">Effets du vent</p>
+                <div id="table_vents" style="display: block">
+                    <table width="90%">
+                        <thead>
+                        <tr>
+                            <th>Force du Vent</th>
+                            <th>Vitesse du Vent (km/h)</th>
+                            <th>Attaque à distance/machines de guerre</th>
+                            <th>Taille des créatures affectées*</th>
+                            <th>Taille des créatures emportées**</th>
+                            <th>Malus de vol</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Léger</td>
+                            <td>0-15</td>
+                            <td>-/-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Modéré</td>
+                            <td>16-30</td>
+                            <td>-/-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Important</td>
+                            <td>31-45</td>
+                            <td>-2/-</td>
+                            <td>TP</td>
+                            <td>-</td>
+                            <td>-2</td>
+                        </tr>
+                        <tr>
+                            <td>Violent</td>
+                            <td>46-75</td>
+                            <td>-4/-</td>
+                            <td>P</td>
+                            <td>TP</td>
+                            <td>-4</td>
+                        </tr>
+                        <tr>
+                            <td>Tempête</td>
+                            <td>76-120</td>
+                            <td>Impossible/-4</td>
+                            <td>M</td>
+                            <td>P</td>
+                            <td>-8</td>
+                        </tr>
+                        <tr>
+                            <td>Ouragan</td>
+                            <td>121-280</td>
+                            <td>Impossible/Impossible</td>
+                            <td>G</td>
+                            <td>M</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>Tornade</td>
+                            <td>281-500</td>
+                            <td>Impossible/Impossible</td>
+                            <td>TG</td>
+                            <td>G</td>
+                            <td>-16</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">* Les créatures de cette taille et les créatures de taille inférieure sont incapables d’avancer contre le vent à moins de réussir un test de Force sans malus si elles se trouvent au sol ou malus de 10 si elles volent.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">** Les créatures terrestres sont renversées et roulent sur 1d4 x 3 mètres, ce qui leur inflige 1d4 points de dégâts non-létaux par tranche de 3 mètres à moins de réussir un test de Force avec un malus de 5. Les créatures volantes sont repoussées sur 2d6 x 3 mètres, tandis que les vents violents leur infligent 2d6 points de dégâts non-létaux à moins de réussir un test de Vol avec un malus de 15.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <span class="big_underline">Vent léger :</span> légère brise sans effets en termes de jeu.<br/>
+                    <span class="big_underline">Vent modéré :</span> vent soutenu ayant 50 % de chances de souffler les petites flammes non protégées, comme celles des bougies.<br/>
+                    <span class="big_underline">Vent important :</span> vent soutenu accompagné de rafales plus violentes, éteignant systématiquement les flammes non protégées (bougies, torches, etc.). Donne un malus de -2 aux attaques à distance et aux tests de Perception.<br/>
+                    <span class="big_underline">Vent violent (grand vent) :</span> éteint systématiquement toutes les flammes non protégées et fait danser follement celles qui sont protégées (lanternes, etc.), en ayant 50 % de chances de les souffler. Les jets d’attaque à distance et les tests de Perception reçoivent un malus de -4. Le sort bourrasque peut produire cet effet.<br/>
+                    <span class="big_underline">Vent de tempête :</span> suffisamment violent pour faire tomber les branches, voire les arbres malades ; souffle systématiquement les flammes non protégées et a 75 % de chance d’éteindre celles qui le sont. Il est impossible d’attaquer à distance, les machines de guerre recevant pour leur part un malus de -4. Les hurlements du vent donnent un malus de -8 aux tests de Perception basés sur l’ouïe.<br/>
+                    <span class="big_underline">Ouragan :</span> toutes les flammes sont systématiquement soufflées et il est impossible d’attaquer à distance (sauf pour les machines de guerre, et encore le font-elles à -8). Les tests de Perception basés sur l’ouïe échouent forcément; on n’entend rien d’autre que le hurlement du vent, devant lequel même les arbres en bonne santé risquent de se coucher.<br/>
+                    <span class="big_underline">Tornade :</span> toutes les flammes sont instantanément soufflées et il est impossible d’attaquer à distance, même pour les machines de guerre. Les tests de Perception basés sur l’ouïe échouent automatiquement. Au lieu d’être emportés au loin, les personnages se situant trop près de la tornade sont au contraire aspirés (jet de vigueur pour annuler l’effet). Ceux qui entrent en contact avec l’œil de la tornade, c’est-à-dire le tourbillon autour duquel celle-ci s’enroule, sont projetés dans les airs et secoués en tous sens pendant 1d10 rounds, ce qui leur inflige 6d6 points de dégâts par round, après quoi ils sont violemment expulsés (subissant du même coup des dégâts proportionnels à la hauteur de chute). La vitesse de rotation de la tornade peut atteindre les 500 km/h, mais l’œil est bien plus lent (50 km/h environ, soit dans les 75 m par round). Une tornade déracine les arbres, ravage les bâtiments et cause d’autres dégâts similaires.<br/>
+                </div>
+
+                <h3 id="dangers_naturels" onclick="hideContent(this)">Dangers naturels</h3>
+                <div>
+                    <h4>L'acide</h4>
+                    <p>L’acide inflige 1d6 points de dégâts par round d’exposition, excepté dans le cas d’une immersion totale (qui peut par exemple se produire si un aventurier tombe dans une grande vasque), laquelle occasionne 10d6 points de dégâts par round. Une attaque acide (salive de monstre, flasque lancée à la main, etc.) représente un round d’exposition.</p>
+                    <p>Les émanations libérées par la plupart des acides ont l’effet d’un poison fonctionnant par inhalation. Quiconque s’approche trop d’une vaste étendue d’acide doit réussir à chaque round un jet de vigueur sous peine de subir un affaiblissement temporaire de 1 point de Constitution par round. Ce poison n’a pas de fréquence, et n’agit plus dès qu’on s’en éloigne.</p>
+                    <p>Les créatures immunisées contre l’acide risquent tout de même s’y noyer si elles sont totalement immergées.</p>
+
+                    <h4>L'asphyxie</h4>
+                    <p>Un personnage n’ayant plus d’air à respirer peut retenir son souffle durant 2 rounds par point de Constitution. S'il entreprend une action simple ou une action complexe, le temps pendant lequel il peut retenir sa respiration est réduit d'un round.</p>
+                    <p>Au-delà, il doit tenter un test de Constitution chaque round pour continuer à retenir son souffle. Le premier test n'a pas de malus, puis le malus augmente de 1 à chaque round. Dès que le personnage manque un de ces tests, il commence à suffoquer. Au premier round, il perd connaissance et tombe à 0 pv. Le deuxième round, il glisse à -1 pv et est considéré comme mourant. Enfin, le troisième round, il meurt asphyxié.</p>
+                    <p><span class="underline">Asphyxie lente :</span> Dans une pièce hermétiquement close de 3 m de côté, un personnage de taille M dispose de suffisamment d’air pour respirer durant six heures. Après, l’air vicié lui inflige 1d6 points de dégâts non-létaux toutes les quinze minutes. Chaque créature de Taille M supplémentaire (ou chaque source de feu importante, comme par exemple une torche) diminue proportionnellement la durée de survie. Une fois inconsciente, elle subira des dégâts létaux au même rythme, jusqu’à ce qu’elle meure.</p>
+
+                    <h4>La chaleur</h4>
+                    <p>Pour peu qu’elle soit suffisamment forte, la chaleur inflige des points de dégâts non-létaux qui ne peuvent être soignés tant que le personnage n’a pas eu l’occasion de se rafraîchir (par exemple en se plongeant dans l’eau, en se mettant à l’ombre, en survivant jusqu’à la nuit, etc...). Une fois que l’accumulation des dégâts non-létaux a engendré une perte de connaissance, les dégâts deviennent normaux et sont subis au même rythme.</p>
+                    <p>En cas de chaleur accablante (35° C ou plus), le personnage doit réussir un jet de vigueur par heure (malus de 0, +1 par jet effectué au préalable) sous peine de subir 1d4 points de dégâts non-létaux à chaque fois. S’il porte une armure ou des vêtements épais, un malus de -4 s'applique à ce jet. Un aventurier doté de la compétence Survie peut bénéficier d’un bonus de 4, voire en faire profiter ses compagnons (voir la description de la compétence). Si le personnage sombre dans l’inconscience, les dégâts qu’il reçoit par la suite sont létaux (1d4 points par heure).</p>
+                    <p>Si la chaleur est torride (45° C ou plus), la règle reste inchangée, mais les jets de Constitution sont espacés de dix minutes seulement (malus de 0, +1 par jet effectué au préalable). Là encore, les dégâts non-létaux reçus s’élèvent à 1d4 points par jet raté et le port d’une armure ou de vêtements épais impose un malus de -4. Tout individu maîtrisant la compétence Survie peut bénéficier d’un bonus de 4, voire en faire profiter ses compagnons. Si l’aventurier sombre dans l’inconscience, les dégâts qu’il reçoit par la suite sont létaux (1d4 points par dix minutes).</p>
+                    <p>Tout individu subissant des points de dégâts non-létaux à cause de la chaleur est victime d’une insolation et se retrouve fatigué. Les malus que lui impose cet état durent jusqu’à la disparition des points de dégâts non-létaux.</p>
+                    <p>Une chaleur épouvantable (température supérieure à 60° C, feu, eau bouillante, lave) administre des dégâts létaux. Si le personnage est obligé de respirer dans une telle fournaise, l’air surchauffé lui rôtit les poumons (1d6 points de dégâts par minute, sans jet de sauvegarde). De plus, il doit réussir un jet de vigueur toutes les cinq minutes (malus de 0, +1 par jet effectué au préalable) pour ne pas recevoir 1d4 points de dégâts non-létaux. Le port de l’armure ou de vêtements épais se traduit par un malus de -4 au jet et si le personnage porte une armure métallique (ou s’il touche un objet métallique), il subit un d6 de dégâts de feu.</p>
+                    <p>L’eau bouillante administre 1d6 points de dégâts si on plonge la main dedans ou si on en est aspergé. Si un individu est immergé dans un liquide en ébullition, il perd 10d6 points de vie par round.</p>
+
+                    <h4>Les chutes</h4>
+                    <p>Une chute inflige 1d6 points de dégâts par tranche de trois mètres, jusqu’à un maximum de 20d6. Les créatures subissant des dégâts létaux d’une chute sont à terre.</p>
+                    <p>Si, au lieu de tomber ou de glisser, un aventurier saute délibérément, les 1d6 premiers points de dégâts reçus sont seulement non-létaux. Si le test de Saut est un succès (jet d'Agilité), les dégâts infligés par les trois premiers mètres de chute sont annulés et ceux dus aux trois mètres suivants deviennent non-létaux. Ainsi, un personnage tombant d’une corniche haute de neuf mètres de haut subit 3d6 points de dégâts. S’il avait volontairement sauté, il aurait seulement reçu 2d6 points de dégâts létaux et 1d6 points de dégâts non-létaux. Enfin, s’il avait volontairement sauté en réussissant son test de Saut, les dégâts reçus auraient été plus réduits encore : 1d6 points létaux et 1d6 points non-létaux.</p>
+                    <p>Si l’aventurier atterrit sur une surface meuble (sable, boue, etc.), les 1d6 premiers points de dégâts sont, là encore, transformés en points de dégâts non-létaux. Cette réduction s’ajoute aux précédentes, le cas échéant.</p>
+                    <p><span class="underline">Chute dans l'eau :</span> Les dégâts donnés par les chutes s’achevant dans l’eau sont déterminés différemment. Du moment que l’eau fait au moins trois mètres de profondeur, les six premiers mètres de chute n’administrent pas le moindre dégât. Pour les six mètres suivants, les dégâts sont non-létaux (1d3 points tous les trois mètres). Passée cette limite, ils deviennent létaux (1d6 points tous les trois mètres supplémentaires).</p>
+                    <p>Un personnage plongeant volontairement ne subit pas le moindre dégât du moment qu’il réussit un test d’Acrobaties ou de Natation (Agilité dans les deux cas) et que la profondeur de l’eau est au moins égale au tiers de la hauteur de chute (trois mètres ou plus s’il plonge d’une hauteur de neuf mètres, etc.). Le malus du test d’Acrobaties ou de Natation augmente de 5 tous les quinze mètres de hauteur de chute.</p>
+
+                    <h4>Les chutes d'objets</h4>
+                    <table style="float: right" class="table_compact">
+                        <thead>
+                        <tr>
+                            <th>Taille de l’objet</th>
+                            <th>Dégâts</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Très petit et moins</td>
+                            <td>1d6</td>
+                        </tr>
+                        <tr>
+                            <td>Petit</td>
+                            <td>2d6</td>
+                        </tr>
+                        <tr>
+                            <td>Moyen</td>
+                            <td>3d6</td>
+                        </tr>
+                        <tr>
+                            <td>Grand</td>
+                            <td>4d6</td>
+                        </tr>
+                        <tr>
+                            <td>Très grand</td>
+                            <td>6d6</td>
+                        </tr>
+                        <tr>
+                            <td>Gigantesque</td>
+                            <td>8d6</td>
+                        </tr>
+                        <tr>
+                            <td>Colossal</td>
+                            <td>10d6</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>De la même façon que les personnages se blessent s’ils tombent de plus de trois mètres, ils doivent faire attention aux chutes d’objets.</p>
+                    <p>La chute d’un objet n’inflige des dégâts que s’il tombe d’une hauteur suffisamment importante et qu’il est fait d’une matière dense et lourde, comme la pierre. La table ci-contre détermine les dégâts infligés par un objet selon la taille de celui-ci. À la discrétion du MJ, des objets plus légers n’infligeront qu’une partie des dégâts. Par exemple, un personnage heurté par rocher de taille TG encaissera 6d6 points de dommages, alors qu’un chariot de bois de la même taille pourra n’en causer que la moitié. Si un objet tombe d’une hauteur supérieure à cinquante mètres, il inflige le double des dégâts. Bien entendu, un objet qui chute subira autant de dommages qu’il en a infligés.</p>
+                    <p>Si l’objet tombe sur une créature, celle-ci doit réussir un jet d'Agilité pour éviter les dégâts. Les objets qui font partie d’un piège utilisent les règles qui sont applicables à ce piège.</p>
+
+
+                    <h4>L'eau</h4>
+                    <p>Un personnage ayant pied peut traverser une eau assez calme sans le moindre jet de dé. Pareillement, nager dans une eau calme nécessite juste un test de Natation (souvenez-vous toutefois qu’une armure ou une charge importante constitue une gêne importante)</p>
+                    <p>L’eau devient plus dangereuse en cas de courant important. Le personnage doit faire un test de Natation avec un malus de 5 pour ne pas couler. En cas d’échec, il subit 1d3 points de dégâts non-létaux par round (1d6 points de dégâts létaux s’il est jeté contre des rochers ou s’il tombe du haut d’une cascade).</p>
+                    <p>En profondeur, l’eau est généralement sombre, ce qui pose des problèmes d’orientation. Dans le même temps, la pression administre 1d6 points de dégâts létaux par tranche de trente mètres de profondeur et par minute que le personnage passe sous la surface. En cas de jet de vigueur réussi (malus de 2, +1 par jet effectué au préalable), l’aventurier ne perd pas de points de vie durant la minute en cours. L’eau très froide provoque l’hypothermie, ce qui représente 1d6 points de dégâts non-létaux par minute.</p>
+
+                    <h4>La fumée</h4>
+                    <p>Un aventurier respirant une épaisse fumée doit réussir un jet de vigueur à chaque round (malus de 0, +1 par jet effectué au préalable). En cas d’échec, il passe le round à fortement tousser. Si cela se répète sur un deuxième round, il subit 1d6 points de dégâts non-létaux. La fumée diminue la visibilité (-5 en Perception pour vue et odorat) et offre un camouflage (20 % de chances de rater) aux créatures qui s’y dissimulent.</p>
+
+                    <h4>Le froid</h4>
+                    <p>Le froid administre des dégâts non-létaux, qui ne peuvent pas disparaître tant que le personnage ne s’est pas réchauffé. Dès que l’aventurier tombe inconscient suite à l’accumulation de dégâts non-létaux, le froid lui inflige des dégâts normaux, au même rythme que précédemment.</p>
+                    <p>Par temps froid (température inférieure à 5° C), un individu non protégé doit réussir un jet de vigueur par heure (malus de 0, +1 par jet effectué au préalable) pour ne pas subir 1d6 points de dégâts non-létaux. Un personnage possédant la compétence Survie peut bénéficier d’un bonus de 4, voire en faire profiter ses compagnons.</p>
+                    <p>Si le froid est important (-15° C et en dessous), le jet de Vigueur est identique (malus de 0, +1 par jet effectué au préalable), mais il est joué toutes les dix minutes. Là encore, les dégâts s’élèvent à 1d6 points non-létaux en cas d’échec. Tout personnage possédant la compétence Survie peut bénéficier d’un bonus de 4, voire en faire profiter ses compagnons. Si l’aventurier est équipé de vêtements chauds, il effectue uniquement un jet de vigueur par heure.</p>
+                    <p>Tout personnage recevant des dégâts non-létaux dus au froid souffre de gelures ou d’hypothermie et est considéré comme fatigué. Les malus dus à cet état des dissipent quand il a réussi à se réchauffer.</p>
+                    <p>Un froid extrême (-30° C et en dessous) administre 1d6 points de dégâts létaux toutes les minutes, sans jet de sauvegarde. De plus, le personnage doit réussir un jet de Vigueur (malus de 0, +1 par jet effectué au préalable) pour ne pas recevoir 1d4 points de dégâts non-létaux. Les porteurs d’une armure lourde ou les créatures en contact avec des objets métalliques extrêmement froids subissent 1d6 de dégâts de givre</p>
+
+                    <h4>La glace</h4>
+                    <p>La vitesse de déplacement sur la glace est divisée par deux. Les tests d’Acrobaties obtienne un malus de 5. Les créatures demeurant trop longtemps au contact de la glace risquent d’être affectées par un froid important.</p>
+
+                    <h4>La lave</h4>
+                    <p>La lave et le magma infligent 2d6 points de dégâts de feu par round d’exposition, excepté dans le cas d’une immersion totale (par exemple quand un personnage tombe dans le cratère d’un volcan en activité), laquelle occasionne 20d6 points de dégâts de feu par round.</p>
+                    <p>Les dégâts de feu se prolongent pendant 1d3 rounds après la fin de l’exposition, mais ils sont deux fois moindres (1d6 ou 10d6 points par round, respectivement). Une immunité ou une résistance au feu protège aussi contre la lave ou le magma. Notez cependant qu’une créature immunisée ou résistante au feu peut parfaitement se noyer dans un bassin de lave.</p>
+
+                    <h4>La noyade</h4>
+                    <p>Tout personnage peut retenir son souffle pendant un nombre de rounds égal au double de sa valeur de Constitution. S’il effectue une action autre que se déplacer, la durée au cours de laquelle le personnage peut retenir son souffle est réduite de 1 round. Après cela, il doit réussir un test de Constitution par round pour continuer à retenir son souffle. Le malus augmente de 1 à chaque round.</p>
+                    <p>Dès que le personnage manque un test de Constitution, il se noie. Durant le premier round, il tombe à 0 pv et perd connaissance. Le round d’après, il passe à -1 pv et est considéré comme mourant. Au troisième round, il décède.</p>
+                    <p>Les personnages inconscients doivent faire des tests de Constitution dès qu’ils commencent à couler (ou dès qu’ils tombent inconscient s’ils étaient déjà en train de couler). Dès qu’il en rate un, il passe immédiatement à -1 pv et est considéré comme mourant. Le round suivant, il meurt.</p>
+                    <p>On peut se noyer dans d’autres substances que l’eau, comme par exemple le sable, les sables mouvants, ou encore un silo à céréales.</p>
+
+                    <h4>L'obscurité</h4>
+                    <p>La vision dans le noir permet à de nombreux personnages et monstres de voir parfaitement bien dans l’obscurité la plus totale, mais les autres individus sont alors comme aveuglés (et ce même s’ils possèdent la vision nocturne). Des bourrasques de vents souterrains peuvent éteindre les torches et les lanternes, les sources d’illumination magique peuvent être dissipées et les pièges magiques peuvent créer des aires de ténèbres magiques impénétrables.</p>
+                    <p>Pour la majorité des rencontres dans l’obscurité, seule une partie des belligérants sera handicapée par l’absence de lumière, tandis que les autres seront considérés comme étant aveuglés. Tous les points suivants s’appliquent aux créatures aveuglées et également à celles qui ne peuvent voir dans l’obscurité.</p>
+                    <p>La vitesse de déplacement d’un personnage aveuglé par l’obscurité est réduite de moitié. Une créature aveuglée est incapable de courir ou de charger.</p>
+                    <p>Tous les adversaires d’un personnage aveuglé par l’obscurité bénéficient d’un camouflage total à son égard et ses attaques ont donc 50 % de risques de rater. De plus, il lui faut trouver la localisation d’un adversaire par d’autres sens que la vue avant de pouvoir l’attaquer. Il est bien sûr toujours possible d’attaquer une case au hasard en espérant déceler la présence d’un ennemi. Dans le cas des sorts qui ne nécessite pas de ciblage, on tire au hasard une direction et la créature la plus proche du personnage dans cette direction est choisie comme cible.</p>
+                    <p>Un personnage aveuglé ne peut ni esquiver, ni parer une attaque</p>
+                    <p>Un personnage aveuglé rate automatiquement les épreuves liées à la vue, il reçoit également un malus de -4 sur la plupart des tests.</p>
+                    <p>Un personnage aveuglé peut tenter de situer ses adversaires à l’oreille. Tout personnage cherchant à le faire doit tenter un test de Perception par round (au prix d'un PA). S’il obtient un meilleur résultat que le test de Discrétion de son adversaire, il le localise, mais il sait juste qu’il y a quelqu’un dans une certaine direction. Pour situer la créature avec précision, il lui faut faire un score inférieur à 5 (mais l’adversaire du personnage dispose toujours d’un camouflage total).</p>
+                    <p>Un personnage aveuglé peut tenter de trouver une créature invisible à tâtons. Un personnage peut tenter une attaque de contact, à l’aide de sa main ou d’une arme, dans deux cases adjacentes au moyen d’une action simple. Si une créature invisible se situe dans une de ces deux zones, l’attaque a 50 % de chances de porter. Dans ce cas, le personnage n’inflige pas le moindre dégât mais détecte la créature (sauf si cette dernière recommence à bouger, évidemment).</p>
+                    <p>Si l’un de ses adversaires frappe un personnage aveuglé par l’obscurité, celui-ci sait d’où est venu le coup, ce qui lui permet de situer son agresseur (sauf si ce dernier bouge aussitôt). Cette règle possède deux exceptions : les créatures ayant une allonge supérieure à 1,50 m (dans ce cas, le personnage sait dans quelle zone se trouve son adversaire, mais pas où précisément) et les attaques à distance (dans ce cas, le personnage connaît juste la direction générale de son adversaire, mais pas sa position).</p>
+                    <p>Les Chonos, Mushuks et Kanta peuvent localiser précisément un adversaire à l'odeur si il est situé à moins de 3 mètres</p>
+
+                    <h4>Prendre feu</h4>
+                    <p>Un personnage exposé à des flammes durables (huile enflammée, brasier, sort tel que mur de feu, etc.) risque de voir ses habits, ses cheveux ou son équipement s’enflammer. Au contraire, des sorts du premier cercle sont trop instantanés pour avoir un tel effet.</p>
+                    <p>Tout individu risquant de prendre feu peut l’éviter en réussissant un jet de Réflexes. Si ses habits ou ses cheveux s’enflamment, il reçoit aussitôt 1d6 points de dégâts de feu. Après, il a droit à un nouveau jet de Réflexes par round. En cas d’échec, il reçoit 1d6 points de dégâts de feu supplémentaires. Dès qu’il réussit un jet de Réflexes, les flammes s’éteignent et le personnage ne risque plus rien.</p>
+                    <p>Si le personnage peut sauter dans l’eau, les flammes sont automatiquement éteintes. S’il n’y a pas d’eau à proximité, le fait de se rouler par terre ou de se faire aider par un compagnon tentant d’étouffer les flammes avec une couverture ou une cape offre un bonus de +4 au jet de Réflexes.</p>
+                    <p>Dans le cas où les vêtements ou l’équipement du personnage s’enflamment, celui-ci doit tenter un jet de Réflexes pour chaque objet menacé. Les objets inflammables ratant leur jet de sauvegarde doivent faire un jet de rupture sous peine de partir en cendres.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="character">
+        <h1 id="Caracteristiques" onclick="hideContent(this)">Caractéristiques</h1>
+        <div>
+            <ol type="I" >
+                <li>Physiques
+                    <ul class="space_list">
+                        <li><span class="big_underline">Force (FOR) :</span>Détermine la puissance musculaire du personnage, requise pour utiliser des armes et armures lourdes.</li>
+                        <li><span class="big_underline">Dextérité (DEX) :</span>Détermine l'habilité du personnage avec ses mains, requise pour utiliser des armes sophistiqués, dérober une bourse,etc...</li>
+                        <li><span class="big_underline">Agilité (AGI) :</span>Mesure le contrôle qu'a le personnage sur son corps, requise pour les déplacements complexes tels que des sauts ou des esquives.</li>
+                        <li><span class="big_underline">Constitution (CON) :</span>Représente la robustesse et la résistance à la fatigue, requise pour utiliser des armures lourdes et des bouclier.</li>
+                    </ul>
+                </li>
+                <li>Mentales
+                    <ul class="space_list">
+                        <li><span class="big_underline">Intelligence (INT) :</span>Détermine l'étendue du savoir et des capacités magiques du personnage.</li>
+                        <li><span class="big_underline">Volonté (VOL) :</span>Gouverne la résistance aux attaques magiques et la persistance des créations magiques.</li>
+                        <li><span class="big_underline">Perception (PER) :</span>Rassemble les capacaités des cinq sens et fait office d'initiative, permet de détecter les pièges et autres fourberies.</li>
+                        <li><span class="big_underline">Éloquence (ELO) :</span>Permet de persuader/convaincre quelqu'un, d'obtenir un meilleur prix chez un marchand, etc...</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Le total de Point de vie d'un personnage est déterminé par cette formule : CON*2+FOR*0.5+Niveau*2</p>
+            <p>Le total de Point de psyché d'un personnage est déterminé par cette formule : VOL*2+INT*0.5+Niveau*2</p>
+            <p>Si lors d'un lancer, on obtient un nombre décimal, l'arrondi se fait à l'entier inférieur. (ex : 15.25 devient 15)</p>
+            <p>Une fois que les ajustements dépendant de la race ont été effectués, chacune des caractéristiques se voit associer un modificateur. Le modificateur est calculé de cette façon : (Caractéristique - 10) / 2. Un personnage possédant une Force de 12 et une intelligence de 6 aura un modificateur de +1 pour la force et -3 pour l'intelligence. Ces modificateurs sont utiles pour les lancers de dés, un modificateur positif est un bonus qui rendra les actions liés à la caractéristique plus simples, un modificateur négatif est un malus qui les rendra plus ardues.</p>
+        </div>
+
+        <h1 id="creation_perso" onclick="hideContent(this)">Création de Personnage</h1>
+        <div>
+            <h2 onclick="hideContent(this)">Caractéristiques de départ et progression</h2>
+            <div>
+                <p>Pour définir les caractéristiques de départ d'un personnage, on lance 2D6 et, on additionne les résultats des dés et on ajoute 4 (plus ou moins les bonus raciaux).</p>
+                <p>Ces caractéristiques sont voués à s'améliorer avec le temps et l'entrainement, par exemple, entre deux aventures, un personnage peut tout à fait décider de dépenser son or pour s'entrainer en ville, selon l'endroit où il s'entraine, une de ses caractéristiques augmentera (chez les gardes pour la force, les voleurs ou un maitre d'arme pour la dextérité) tout dépend du choix du joueur.</p>
+                <p>Un personnage pourra aussi augmenter ses caractéritiques de façon plus naturelle, dans ce cas un caractéristique faible augmente plus rapidement qu'une autre déjà developpée. Un aventurier avec une éloquence de 7 qui parvient malgré tout à convaincre une personne très difficile à convaincre, pourra (avec l'accord du MJ) passer de 7 à 8 en éloquence. Cela vaut pour toute les autres caractéristiques, réussir un défi incroyablement difficile peut rendre un aventuirier plus doué.</p>
+                <p>Les compétences peuvent être apprises en passant du temps avec quelqu'un de qualifié dans le domaine, les dons peuvent également s'apprendre de cette manière, mais une action héroïque peut également accorder de façon permanente un don à un personnage.</p>
+            </div>
+            <h2 onclick="hideContent(this)">Richesse de départ</h2>
+            <div>
+                <p>Le nombre de pièces d'or d'un personnage au début de l'aventure est également tiré au dés selon l'origine du personnage.</p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Origine sociale</th>
+                        <th>Nombre de dés de Po</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Noble/Riche</td>
+                        <td>5d4 x10</td>
+                    </tr>
+                    <tr>
+                        <td>Bourgeois/Artisan</td>
+                        <td>4d4 x10</td>
+                    </tr>
+                    <tr>
+                        <td>Marchand</td>
+                        <td>3d4 x10</td>
+                    </tr>
+                    <tr>
+                        <td>Roturier</td>
+                        <td>2d4 x10</td>
+                    </tr>
+                    <tr>
+                        <td>Pauvre</td>
+                        <td>1d4 x10</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2 id="fiche_perso" onclick="hideContent(this)">Fiche de Personnage</h2>
+            <div class="hidden">
+                <img src="../../../Images/Misc/fiche_perso1.png" alt="Fiche1" height="1000"/>
+                <img src="../../../Images/Misc/fiche_perso2.png" alt="Fiche2" height="1000"/>
+                <img src="../../../Images/Misc/fiche_perso3.png" alt="Fiche3" height="1000"/>
+            </div>
+        </div>
+
+        <h1 id="Competences" onclick="hideContent(this)">Compétences</h1>
+        <div>
+            <div>
+                <table width="90%">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Description</th>
+                        <th>Effet(s)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td id="acrobaties">Acrobaties</td>
+                        <td>Le personnage peut garder son équilibre lorsqu’il marche sur des surfaces étroites ou un sol traître sans faire de test. Il peut également se baisser, se retourner, sauter ou effectuer un roulé-boulé pour éviter les coups ou traverser certains obstacles.</td>
+                        <td>Pas de jet pour conserver son équilibre<br/> AGI + 2 pour les tests de mouvement</td>
+                    </tr>
+                    <tr>
+                        <td id="ambidextrie">Ambidextrie</td>
+                        <td>Le personnage sait utiliser deux armes légères à la fois</td>
+                        <td>Pas de malus pour l'ambidextrie</td>
+                    </tr>
+                    <tr>
+                        <td id="armes_a_deux_mains">Armes à deux mains</td>
+                        <td>Le personnage sait utiliser sait manier une arme longue/lourde à deux mains</td>
+                        <td>Pas de malus pour le maniement à deux mains</td>
+                    </tr>
+                    <tr>
+                        <td id="art_de_la_magie">Art de la magie</td>
+                        <td>L’art de lancer des sorts n’a pas beaucoup de secrets pour le personnage. Il sait identifier les objets magiques et reconnaître les sorts que d’autres personnes lancent.</td>
+                        <td>Permet d'identifier un sort/objet/enchantement et de déchiffrer un parchemin selon l'INT</td>
+                    </tr>
+                    <tr>
+                        <td id="artisanat">Artisanat</td>
+                        <td>Le personnage est entraîné à créer un type spécifique d’objets.</td>
+                        <td>Permet de créer des objets dans certains domaines</td>
+                    </tr>
+                    <tr>
+                        <td id="bluff">Bluff</td>
+                        <td>Le personnage sait comment mentir.</td>
+                        <td>ELO + 4 pour les mensonges<br/>Capacité de feinter en combat(empêche parade/esquive)</td>
+                    </tr>
+                    <tr>
+                        <td id="connaissances">Connaissances</td>
+                        <td>Le personnage possède des connaissances dans un domaine spécifique, qui lui permettent de répondre à des questions simples ou complexes.</td>
+                        <td>Pas de jet de connaissances pour le domaine maitrisé</td>
+                    </tr>
+                    <tr>
+                        <td id="deguisement">Déguisement</td>
+                        <td>Le personnage sait comment changer d’apparence.</td>
+                        <td>PER - 5 au jet des observateurs si le personnage est déguisé</td>
+                    </tr>
+                    <tr>
+                        <td id="discretion">Discrétion</td>
+                        <td>Le personnage sait comment éviter de se faire repérer, ce qui lui permet de tromper la surveillance des gardes ou encore de se cacher et de se déplacer en silence pour pouvoir ensuite attaquer par surprise.</td>
+                        <td>AGI + 3 pour se dissimuler<br/>Utilisation possible de la furtivité au combat</td>
+                    </tr>
+                    <tr>
+                        <td id="dressage">Dressage</td>
+                        <td>Le personnage sait comment s’y prendre avec les animaux et peut leur enseigner des tours, les faire obéir à des ordres simples ou même les apprivoiser.</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td id="equitation">Équitation</td>
+                        <td>Le personnage sait monter à cheval ou utiliser d’autres montures plus exotiques</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td id="escalade">Escalade</td>
+                        <td>Le personnage s’est entraîné à escalader toutes sortes de parois verticales, des murs relativement lisses de la ville jusqu’aux falaises rocailleuses.</td>
+                        <td>AGI + 4 pour les tentatives d'escalades</td>
+                    </tr>
+                    <tr>
+                        <td id="estimation">Estimation</td>
+                        <td>Le personnage sait estimer la valeur monétaire des objets.</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td id="evasion">Évasion</td>
+                        <td>Le personnage s’est entraîné pour pouvoir se libérer de liens et se soustraire aux étreintes lors d’une lutte.</td>
+                        <td>DEX + 5 pour se libérer</td>
+                    </tr>
+                    <tr>
+                        <td id="explosifs">Explosif</td>
+                        <td>Le personnage sait fabriquer et utiliser des explosifs</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td id="filouterie">Filouterie</td>
+                        <td>Le personnage s’est entraîné à agir comme un pickpocket, à dissimuler des armes et à faire toute une série d’autres choses sans se faire remarquer.</td>
+                        <td>DEX + 3 pour les actions de filou<br/>Permet d'amuser la galerie(jongle, tour de pass-passe,...)</td>
+                    </tr>
+                    <tr>
+                        <td id="fin_gourmet">Fin gourmet</td>
+                        <td>Le personnage peut manger presque n'importe quoi sans risquer un empoisonnement ou une maladie</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td id="hors_la_loi">Hors-la-loi</td>
+                        <td>Le personnage a baigné dans les environnements criminels et connait les ficelles du métier de contrebandier</td>
+                        <td>+ 2 aux jets liés aux actions illégales.</td>
+                    </tr>
+                    <tr>
+                        <td id="intimidation">Intimidation</td>
+                        <td>Cette compétence permet au personnage d’effrayer ses adversaires ou de les contraindre à agir à son avantage grâce à des menaces verbales et à des démonstrations de force.</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td id="linguistique">Linguistique</td>
+                        <td>Le personnage s’est entraîné à bien manier les mots, à la fois oralement et par écrit. Il peut parler plusieurs langages et déchiffrer pratiquement n’importe quelle langue s’il dispose d’assez de temps. Il peut également contrefaire des documents écrits et repérer les faux en écriture.</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td id="natation">Natation</td>
+                        <td>Le personnage a appris à nager et peut même le faire dans des eaux agitées.</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td id="marchandage">Marchandage</td>
+                        <td>Le personnage sait éviter les affaires douteuses et convaincre les marchands grippe-sous</td>
+                        <td>+2 ELO pour marchander</td>
+                    </tr>
+                    <tr>
+                        <td id="medecine">Médecine</td>
+                        <td>Le personnage sait comment soigner les blessures et les autres maux.</td>
+                        <td>INT + 5 pour soigner un personnage</td>
+                    </tr>
+                    <tr>
+                        <td id="profession">Profession</td>
+                        <td>Le personnage connaît les ficelles d’une profession en particulier.</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td id="psychologie">Psychologie</td>
+                        <td>Le personnage sait comment repérer les mensonges et percevoir les intentions véritables des individus qu’il croise.</td>
+                        <td>PER + 4 pour détecter un mensonge</td>
+                    </tr>
+                    <tr>
+                        <td id="representation">Représentation</td>
+                        <td>Le personnage connaît un ou plusieurs arts du spectacle.</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td id="sabotage">Sabotage</td>
+                        <td>Le personnage sait comment désamorcer les pièges et crocheter les serrures. Cette compétence lui permet également de saboter des objets mécaniques simples comme les catapultes, les roues d’un chariot et les portes.</td>
+                        <td>DEX + 3 pour crocheter une serrure, désamorcer un piège<br/>DEX + 4 pour saboter quelquechose</td>
+                    </tr>
+                    <tr>
+                        <td id="survie">Survie</td>
+                        <td>Le personnage sait comment survivre et se diriger dans les régions sauvages. Il est également entraîné à suivre les pistes ou les traces laissées par d’autres créatures.</td>
+                        <td>PER + 2 pour se repérer et suivre une piste</td>
+                    </tr>
+                    <tr>
+                        <td id="vol">Vol</td>
+                        <td>Lorsque le personnage vole (grâce à des ailes ou par magie), il sait le faire avec agilité. Il peut réaliser des manœuvres aériennes complexes ou dangereuses. Cette compétence ne lui donne cependant pas la capacité de voler.</td>
+                        <td>AGI+ 5 aux épreuves de vol</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <h4 id="domaines_connaissances">Domaines de Connaissances</h4>
+                    <ul>
+                        <li>Mystères (créatures artificielles, créatures magiques, morts-vivants, mystères anciens, symboles ésotériques, traditions magiques)</li>
+                        <li>Exploration souterraine (aberrations, cavernes, spéléologie, vases)</li>
+                        <li>Ingénierie (aqueducs, bâtiments, fortifications, ponts)</li>
+                        <li>Géographie (climat, pays, peuples, types de terrain)</li>
+                        <li>Histoire (colonies, guerres, histoire des villes, migrations)</li>
+                        <li>Folklore local (coutumes, habitants, humanoïdes, légendes, lois et traditions, personnalités)</li>
+                        <li>Nature (animaux, climat, cycles et saisons, plantes, vermines)</li>
+                        <li>Noblesse (lignées, héraldique, personnalités, familles royales)</li>
+                        <li>Religion (Inkarnaïs)</li>
+                    </ul>
+
+                    <br/>
+
+                    <h4 id="professions">Professions les plus courantes</h4>
+                    <p>architecte, avocat, berger, bibliothécaire, boucher, boulanger, brasseur, bûcheron, clerc, conducteur d’attelage, courtisan, cuisinier, fermier, gladiateur, herboriste, ingénieur, jardinier, joueur, maître d’écurie, marchand, marin, meunier, mineur, pêcheur, porteur, sage-femme, scribe, soldat, tanneur, tavernier et trappeur</p>
+                    <br/>
+                    <h4>Domaines d'Artisanat</h4>
+                    <p>alchimie, arcs, calligraphie, menuiserie, maçonnerie, joaillerie, livres, mécanique, navires, peintures, pièges, poteries, serrures, maroquinerie, ferronerie, couture, travail du verre.</p>
+                    <br/>
+
+                    <h4 id="arts_du_spectacles">Arts du spectacles (Représentation)</h4>
+                    <ul>
+                        <li>Chant (ballades, chorale, mélodie)</li>
+                        <li>Danse (ballet, gigue, valse)</li>
+                        <li>Déclamation (odes, sagas épiques, talent de conteur)</li>
+                        <li>Farce (bouffonnerie, boutades, humour)</li>
+                        <li>Instruments à clavier (clavecin, orgue, piano)</li>
+                        <li>Instruments à cordes (harpe, luth, mandoline, violon)</li>
+                        <li>Instruments à vent (bombardon, flûte, flûte à bec, flûte de Pan, trompette)</li>
+                        <li>Percussions (carillons, cloches, tambours, gong)</li>
+                        <li>Scène (comédie, drame, mime)</li>
+                    </ul>
+
+                    <h4 id="langages">Langues courantes</h4>
+                    <ul>
+                        <li>Abyssal (démons et autres Extérieurs maléfiques)</li>
+                        <li>Aquatique (créatures aquatiques, créatures de l’Eau)</li>
+                        <li>Aérien (créatures volantes, créatures de l’Air)</li>
+                        <li>Céleste (anges et autres Extérieurs bénéfiques)</li>
+                        <li>Commun (humains, ainsi que les races de base)</li>
+                        <li>Draconien (dragons et humanoïdes reptiliens)</li>
+                        <li>Sakhaï (sakhas)</li>
+                        <li>Sihiräll (elfes)</li>
+                        <li>Géant (cyclopes, géants, ogres, trolls)</li>
+                        <li>Igneux (créatures du Feu)</li>
+                        <li>Infernal (diables et autres Extérieurs diaboliques)</li>
+                        <li>Steinndarr (steinn)</li>
+                        <li>Sylvestre (centaures, créatures du type plante, fées, licornes)</li>
+                        <li>Terreux (créatures de la Terre)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h1 id="table_race" onclick="hideContent(this)">Traits raciaux</h1>
+        <div>
+            <div>
+                <table width="90%" class="race">
+                    <thead>
+                    <tr>
+                        <th>Race</th>
+                        <th>Sous-Race</th>
+                        <th width="30">FOR</th>
+                        <th width="30">DEX</th>
+                        <th width="30">AGI</th>
+                        <th width="30">CON</th>
+                        <th width="30">INT</th>
+                        <th width="30">VOL</th>
+                        <th width="30">PER</th>
+                        <th width="30">ÉLO</th>
+                        <th width="500">Traits raciaux</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td colspan="2">Azuma</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>+2</td>
+                        <td>+1</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td><span class="underline">Diplomé de l'Académie :</span>2 domaines de connaissances au choix<br/><span class="underline">Aisance avec la magie :</span> Peut relancer un jet raté pour un sort une fois par jour</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Chono</td>
+                        <td>+2</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td>+2</td>
+                        <td>-3</td>
+                        <td>/</td>
+                        <td class="sens">+2</td>
+                        <td>/</td>
+                        <td><span class="underline">Sens affutés :</span> +2 PER, +3 aux jet lié à l'odorat et l'ouïe<br/><span class="underline">Rage Primordiale :</span> Jet de sauvegarde (VOL) si touché par un effet magique</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Mushuk</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>+1</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td class="sens">+2</td>
+                        <td>+2</td>
+                        <td><span class="underline">Sens affutés :</span> +2 PER, +2 aux jets liés à l'odorat et l'ouïe<br/><span class="underline">Vision féline :</span> Vision nocturne<br/><span class="underline">Marchand né :</span> Compétence Estimation et Marchandage</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Kanta</td>
+                        <td>+3</td>
+                        <td>-2</td>
+                        <td>-2</td>
+                        <td>+4</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td><span class="underline">Fourrure épaisse :</span> +50% de résitance au froid, +1 d'armure naturelle<br/><span class="underline">Sagesse :</span> +3 ELO pour calmer un conflit<br/><span class="underline">Imposante stature :</span> Compétence intimidation</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Sakha</td>
+                        <td>/</td>
+                        <td>+3</td>
+                        <td>+4</td>
+                        <td>-2</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>-2</td>
+                        <td><span class="underline">Peuple sylvestre :</span> En forêt : compétences survie, médecine et discrétion, +5 aux jet de sorts -2 en dehors<br/><span class="underline">Druide :</span> Compétences d'artisanat en alchimie et arcs</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Sarpa</td>
+                        <td style="font-weight: normal">Lézards</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>+1</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td><span class="underline">Connaisances ancestrales :</span> Compétence d'artisanat en alchimie<br/><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Régénération :</span> Régénère les membres perdus</td>
+                    </tr>
+                    <tr>
+                        <td>Serpents</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>+1</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td><span class="underline">Connaisances ancestrales :</span> Compétence d'artisanat en alchimie<br/><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Vision serpentine :</span>Peut voir la signature thermique des êtres vivants</td>
+                    </tr>
+                    <tr>
+                        <td>Crocodiles</td>
+                        <td>+1</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Écailles solides :</span> +2 d'armure naturelle</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Sever</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>+1</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td><span class="underline">Endurance Nordique :</span> + 10 % de PV <br/><span class="underline">Honneur du guerrier :</span> +2 au jets de dégâts quand PV&lt;50% pendant 2 tours une fois par jour<br/><span class="underline">Savoir-faire :</span>Compétences d'artisanat maroquinerie et ferronerie</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Sihir</td>
+                        <td>-1</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>-2</td>
+                        <td>+3</td>
+                        <td>+3</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td><span class="underline">Fait de magie :</span> +30% de Psyché, connaissances en Mystères, compétence Arts de la Magie<br/><span class="underline">Sensibilité magique :</span> 30% de vulnérabilité à la magie, 25% de chances d'absorber la psyché d'un sort</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Steinn</td>
+                        <td style="font-weight: normal">Rakaj</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td>-3</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>+2</td>
+                        <td><span class="underline">Vie Souterraine :</span> Vision nocturne, connaissances en Exploration souterraine<br/><span class="underline">Peuple d'ingénieurs :</span> connaissances en Ingénierie, compétence d'artisanat ferronerie et joaillerie<br/><span class="underline">Froideur d'Hortak :</span> +50 % de résistance au froid</td>
+                    </tr>
+                    <tr>
+                        <td>Khazun</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td>-3</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>+2</td>
+                        <td><span class="underline">Vie Souterraine :</span> Vision nocturne, connaissances en Exploration souterraine<br/><span class="underline">Peuple d'ingénieurs :</span> connaissances en Ingénierie, compétence d'artisanat ferronerie et joaillerie<br/><span class="underline">Chaleur des Monts Ardents :</span> +50 % de résistance au feu</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Tori</td>
+                        <td>-2</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>+3</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td class="sens">+4</td>
+                        <td><span class="underline">Poète :</span> +4 ELO, compétence Représentation déclamation (+ 2 au choix)<br/><span class="underline">Pacifique :</span> -2 à tout les dégâts létaux, +2 aux dégâts non-létaux<br/><span class="underline">Ailes :</span> Compétence Vol, peut voler à volonté</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Tuskizi</td>
+                        <td>/</td>
+                        <td>+2</td>
+                        <td>+1</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td><span class="underline">Fortitude du désert :</span> +50% de résistance au poison, insensible au climat<br/><span class="underline">Nomade :</span> toute pénalité de mouvement est divisée par 2</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="objets">
+
+        <h1 id="equipement" onclick="hideContent(this)">Équipement</h1>
+        <div>
+            <p>L'équipement joue un grand rôle dans la puissance du personnage, surtout si il n'a que peu recours à la magie. Une arme forgée par un grand maître infligera plus de dégâts et sera plus solide qu'une vieille lame décrépite.</p>
+            <p>Les armes et les armures nécessitent un entraînement pour être utilisés convenablement, un entraînement est considéré comme un dons et concernent une ou plusieurs catégorie d'armes ou d'armures. Un personnage utilisant une arme qu'il ne maîtrise pas reçoit un malus de 4 pour ses jets d'attaque. Un personnage portant une armure qu'il ne maitrise pas reçoit un malus de 2 à l'Agilité, ne peut pas avoir recours à la magie et les malus de l'armure sont doublés</p>
+            <div>
+                <h2 id="rupture" onclick="hideContent(this)">Rupture</h2>
+                <p>Les armes et armures possèdent une statistique appelée Rupture qui correspond à la solidité de l'objet, plus cette statistique est petite, plus l'objet est solide. L'amulette anti-magie des Chonos par exemple possède une rupture de 1.</p>
+                <p>La Rupture entre en compte uniquement lors d'un coup critique étant donné que l'armure est ignorée. On lance alors un D6 et si le chiffre est supérieur à la rupture, l'objet ne se brise pas et protège son porteur des effets secondaires du critique s'il s'agit d'une armure </p>
+                <p>Exemple : Un personnage portant un casque en fer Steinn de rupture 1-2, il subit une attaque critique à la tête, il obtient 3 à son jet de rupture, le casque n'est pas brisé, le personnage ne subit pas de traumatisme cranien, mais il subit tout le même les dégâts du coup critique.</p>
+                <p>La rupture étant une statistique variant d'un équipement à un autre, on ne peut que l'estimer globalement selon le matériau de l'objet, le choix précis revient donc au MJ qui décidera au cas-par-cas.</p>
+                <table width="90%">
+                    <thead>
+                    <tr>
+                        <th colspan="2">Matériau</th>
+                        <th rowspan="2">Rupture</th>
+                    </tr>
+                    <tr>
+                        <th>Armure</th>
+                        <th>Arme</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Tissu/Bois</td>
+                        <td>Bois/Pierre</td>
+                        <td>1-5</td>
+                    </tr>
+                    <tr>
+                        <td>Cuir/Peau</td>
+                        <td>Métal fragile (bronze,cuivre,...)</td>
+                        <td>1-4</td>
+                    </tr>
+                    <tr>
+                        <td>Cuir Renforcé/Écailles/Métal fin/Mailles</td>
+                        <td>Métal commun (fer,...)</td>
+                        <td>1-3</td>
+                    </tr>
+                    <tr>
+                        <td>Métal épais</td>
+                        <td>Métal de qualité (acier,...</td>
+                        <td>1-2</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Materiau rare (virgonium,...)</td>
+                        <td>1</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="Armes" onclick="hideContent(this)">Armes</h2>
+            <div>
+                <p>Lors d'un coup critique, il faut se référer au <a href="Tableaux.xhtml#table_critiques"> tableau des critiques</a> équivalent au type de dégâts infligés par le coup (les dégâts bonus du coup critiques sont ajoutés après le multiplicateur)</p>
+                <div>
+                    <p class="caption" onclick="hideContent(this)">Listes des armes de corps-à-corps</p>
+                    <table width="90%">
+                        <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Type de Dégâts</th>
+                            <th>Dégâts</th>
+                            <th>Critique</th>
+                            <th>Bonus de<br/>Force</th>
+                            <th>Bonus de<br/>Dextérité</th>
+                            <th>Parade possible</th>
+                            <th>Spécial</th>
+                            <th>Prix</th>
+                            <th>Poids</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th colspan="10">Armes à une main</th>
+                        </tr>
+                        <tr>
+                            <td>Dagues</td>
+                            <td>Perforants, Tranchants</td>
+                            <td>1d4</td>
+                            <td>1-4 x3</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>Non</td>
+                            <td>Attaque furtive, Légère</td>
+                            <td>2 po</td>
+                            <td>500 g</td>
+                        </tr>
+                        <tr>
+                            <td>Épées courtes</td>
+                            <td>Tranchants, Perforants</td>
+                            <td>1d6</td>
+                            <td>1-2 x2</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Légère</td>
+                            <td>10 po</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Épées courbes</td>
+                            <td>Tranchants</td>
+                            <td>1d6</td>
+                            <td>1-3 x2</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Légère</td>
+                            <td>25 po</td>
+                            <td>1,5 kg5</td>
+                        </tr>
+                        <tr>
+                            <td>Rapières</td>
+                            <td>Perforants</td>
+                            <td>1d6</td>
+                            <td>1-3 x3</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Légère</td>
+                            <td>25 po</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Épées longues</td>
+                            <td>Tranchants, Perforants</td>
+                            <td>1d6</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Polyvalente(1d8)</td>
+                            <td>15</td>
+                            <td>1,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Haches</td>
+                            <td>Tranchants</td>
+                            <td>1d8</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>Polyvalente(1d10)</td>
+                            <td>10 po</td>
+                            <td>2 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Masses</td>
+                            <td>Contondants</td>
+                            <td>1d6</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Non</td>
+                            <td>Non</td>
+                            <td>Polyvalente(1d8)</td>
+                            <td>10 po</td>
+                            <td>2 kg</td>
+                        </tr>
+                        <tr>
+                            <th colspan="10">Armes à deux mains</th>
+                        </tr>
+                        <tr>
+                            <td>Bâtons</td>
+                            <td>Contondants</td>
+                            <td>2d4 non létaux</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>À deux mains</td>
+                            <td>2 pa</td>
+                            <td>2 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Espadons</td>
+                            <td>Tranchants, Perforants</td>
+                            <td>1d10</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>À deux mains, Lourde</td>
+                            <td>50 po</td>
+                            <td>3 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Haches de guerre</td>
+                            <td>Tranchants</td>
+                            <td>1d12</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>À deux mains, Lourde</td>
+                            <td>30 po</td>
+                            <td>3.,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Marteaux de guerre</td>
+                            <td>Contondants</td>
+                            <td>1d10</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>À deux mains, Lourde, Imparable</td>
+                            <td>30 po</td>
+                            <td>5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Lances</td>
+                            <td>Perforants</td>
+                            <td>1d8</td>
+                            <td>x3</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Non</td>
+                            <td>Allonge, Polyvalente, Charge</td>
+                            <td>1 po</td>
+                            <td>1,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Hallebardes</td>
+                            <td>Tranchants, Perforants, Contondants</td>
+                            <td>1d8</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>Allonge, Lourde, À deux mains, Imparable</td>
+                            <td>20 po</td>
+                            <td>3 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Coutille</td>
+                            <td>Tranchants</td>
+                            <td>1d8</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>Allonge</td>
+                            <td>20 po</td>
+                            <td>3 kg</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <br/>
+                    <p class="caption" onclick="hideContent(this)">Liste des armes à distance</p>
+                    <table width="90%">
+                        <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Type de Dégâts</th>
+                            <th>Dégâts</th>
+                            <th>Portée</th>
+                            <th>Munitions</th>
+                            <th>Critique</th>
+                            <th>Bonus de<br/>Force</th>
+                            <th>Bonus de<br/>Dextérité</th>
+                            <th>Spécial</th>
+                            <th>Prix</th>
+                            <th>Poids</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th colspan="12">Armes de lancer</th>
+                        </tr>
+                        <tr>
+                            <td>Couteaux</td>
+                            <td>Tranchants, Perforants</td>
+                            <td>1d4</td>
+                            <td>6m/18m</td>
+                            <td>/</td>
+                            <td>x2</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>/</td>
+                            <td>5 pa</td>
+                            <td>500 g</td>
+                        </tr>
+                        <tr>
+                            <td>Hachette</td>
+                            <td>Tranchants</td>
+                            <td>1d6</td>
+                            <td>6m/18m</td>
+                            <td>/</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Non</td>
+                            <td>/</td>
+                            <td>1 po</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Javelots</td>
+                            <td>Perforants</td>
+                            <td>1d8</td>
+                            <td>12m/36m</td>
+                            <td>/</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>/</td>
+                            <td>5 pa</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Fléchettes</td>
+                            <td>Perforants</td>
+                            <td>1d4</td>
+                            <td>6m/18m</td>
+                            <td>/</td>
+                            <td>x2</td>
+                            <td>Oui</td>
+                            <td>Oui</td>
+                            <td>/</td>
+                            <td>5 pc</td>
+                            <td>100 g</td>
+                        </tr>
+                        <tr>
+                            <th colspan="12">Armes à distance</th>
+                        </tr>
+                        <tr>
+                            <td>Fronde</td>
+                            <td>Contondants</td>
+                            <td>1d6 non-létaux</td>
+                            <td>12m/36m</td>
+                            <td>Pierres</td>
+                            <td>x3</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>/</td>
+                            <td>1 pa</td>
+                            <td>250 g</td>
+                        </tr>
+                        <tr>
+                            <td>Arc Court</td>
+                            <td>Perforants</td>
+                            <td>1d6</td>
+                            <td>24m/96m</td>
+                            <td>Flèches</td>
+                            <td>x3</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>À deux mains</td>
+                            <td>25 po</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Arc Long</td>
+                            <td>Perforants</td>
+                            <td>1d8</td>
+                            <td>45m/180m</td>
+                            <td>Flèches</td>
+                            <td>x3</td>
+                            <td>Non</td>
+                            <td>Oui</td>
+                            <td>À deux mains, Lourde</td>
+                            <td>50 po</td>
+                            <td>1,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Arbalète</td>
+                            <td>Perforants</td>
+                            <td>1d8</td>
+                            <td>24m/96m</td>
+                            <td>Carreaux</td>
+                            <td>x3</td>
+                            <td>Non</td>
+                            <td>Non</td>
+                            <td>À deux mains, Chargement</td>
+                            <td>25 po</td>
+                            <td>2,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Arbalète lourde</td>
+                            <td>Perforants</td>
+                            <td>1d12</td>
+                            <td>30m/120m</td>
+                            <td>Carreaux</td>
+                            <td>x3</td>
+                            <td>Non</td>
+                            <td>Non</td>
+                            <td>À deux mains, Lourde, Chargement</td>
+                            <td>50 po</td>
+                            <td>9 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Arbalète à main</td>
+                            <td>Perforants</td>
+                            <td>1d6</td>
+                            <td>9m/36m</td>
+                            <td>Carreaux</td>
+                            <td>x3</td>
+                            <td>Non</td>
+                            <td>Non</td>
+                            <td>Légère, Chargement</td>
+                            <td>70 po</td>
+                            <td>1,5 kg</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h3 onclick="hideContent(this)">Propriétés spéciales des armes</h3>
+                    <div>
+                        <p><span class="big_underline">Attaque furtive :</span>Une attaque furtive effectuée avec cette arme ne fait aucun bruit et empêche la victime de crier.</p>
+                        <p><span class="big_underline">Légère</span>Une arme légère est petite et facile à manier, ce qui la rend idéale pour les combats à deux armes.</p>
+                        <p><span class="big_underline">Lourde</span>Une arme lourde est difficilement utilisable par les petites créatures(&lt;1m20), de plus il faut posséder une caractéristique de Force d'au moins 12 pour les utiliser convenablement.</p>
+                        <p><span class="big_underline">Polyvalente</span>Polyvalente. Cette arme peut être tenue à une ou deux mains. Le chiffre indiqué entre parenthèses correspond aux dégâts si l'arme est tenue à deux mains lors d'une attaque au corps à corps.</p>
+                        <p><span class="big_underline">À deux mains</span>Cette arme nécessite les deux mains lorsque vous attaquez avec. </p>
+                        <p><span class="big_underline">Allonge</span>Ce type d'arme ajoute 1,50 mètre à votre allonge lorsque vous attaquez avec, ou pour déterminer votre allonge lorsque vous effectuez une attaque d'opportunité avec. </p>
+                        <p><span class="big_underline">Chargement</span>Cette arme doit être rechargée avant d'être utilisée, cette action coûte un PA </p>
+                        <p><span class="big_underline">Imparable</span>Cette arme est trop lourde pour être parée avec une arme, il faut un bouclier pour tenter une parade</p>
+                        <p><span class="big_underline">Charge</span>Une charge effectuée avec cette arme inflige le double de dégâts, le triple si la charge est faite depuis une monture.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="Armures" onclick="hideContent(this)">Armures</h2>
+            <div>
+                <p>Comme on peut le voir sur la deuxième page de la fiche de personnage, chaque partie du corps peut recevoir un vêtement, ou une pièce d'armure différente, la protection procurée par l'armure est globale (chaque pièce contribue au total malgré sa localisation).</p>
+                <p>Le matériau de l'armure est le facteur principale de l'efficaité d'une armure, un brassard en peau ne protège pas aussi bien qu'un gantelet intégral de plates en acier.</p>
+                <p>Les armures sont séparées selon 3 catégories, les armures légères qui n'imposent aucun malus, les armures intermédiaires imposent des malus légers en agilité et parfois en discrétion, les armures lourdes imposent de lourds malus en agilité et rendent la discrétion presque impossible</p>
+                <p>Les armures peuvent couvrir différentes parties du corps, une cotte de maille par exemple protège le torse, les jambes et les épaules, si un coup critique porte sur une de ces parties du corps, c'est la rupture de la cotte qui sera mise à l'épreuve.</p>
+                <div>
+                    <p class="caption" onclick="hideContent(this)">Liste des Armures</p>
+                    <table width="90%">
+                        <thead>
+                        <tr>
+                            <th rowspan="2">Matériau/type d'armure</th>
+                            <th colspan="6">Valeur d'armure</th>
+                            <th rowspan="2">Catégorie</th>
+                            <th rowspan="2">Malus</th>
+                            <th rowspan="2">Prix</th>
+                            <th rowspan="2">Poids</th>
+                        </tr>
+                        <tr>
+                            <th>Tete</th>
+                            <th>Torse</th>
+                            <th>Épaules</th>
+                            <th>Jambes</th>
+                            <th>Mains</th>
+                            <th>Pieds</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Cuir/peau/tissu matelassé</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>Légère</td>
+                            <td>/</td>
+                            <td>10 po</td>
+                            <td>5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Cuir renforcé/clouté</td>
+                            <td>0</td>
+                            <td colspan="2">2</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Légère</td>
+                            <td>/</td>
+                            <td>50 po</td>
+                            <td>7,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Mailles</td>
+                            <td>1</td>
+                            <td colspan="3">3</td>
+                            <td>/</td>
+                            <td>/</td>
+                            <td>Intermédiaire</td>
+                            <td>Bruyante (-3 en furtivité), Lourde (-2 AGI)</td>
+                            <td>150 po</td>
+                            <td>15 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Cuirasse</td>
+                            <td>/</td>
+                            <td>3</td>
+                            <td>/</td>
+                            <td>/</td>
+                            <td>/</td>
+                            <td>/</td>
+                            <td>Intermédiaire</td>
+                            <td>Lourde (-1 AGI)</td>
+                            <td>250 po</td>
+                            <td>10 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Écailles</td>
+                            <td>1</td>
+                            <td colspan="3">3</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Intermédiaire</td>
+                            <td>Bruyante (-2 en furtivité), Lourde (-1 AGI)</td>
+                            <td>200 po</td>
+                            <td>15 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Lamellaire</td>
+                            <td>1</td>
+                            <td colspan="3">4</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Lourde</td>
+                            <td>Bruyante (-4 en furtivité), Lourde (-3 AGI)</td>
+                            <td>350 po</td>
+                            <td>20 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Plaques articulées</td>
+                            <td>2</td>
+                            <td colspan="3">5</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>Lourde</td>
+                            <td>Bruyante (-5 en furtivité), Lourde (-5 AGI), Difficile à équiper (besoin d'aide)</td>
+                            <td>750 po</td>
+                            <td>25 kg</td>
+
+                        </tr>
+                        <tr>
+                            <td>Harnois</td>
+                            <td>2</td>
+                            <td colspan="3">6</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>Lourde</td>
+                            <td>Bruyante (-5 en furtivité), Lourde (-5 AGI), Difficile à équiper (besoin d'aide)</td>
+                            <td>1500 po</td>
+                            <td>22,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td colspan="11">Le malus de furtivité pour les armures bruyantes ne s'appliquent pas pour le casque, les gantelets et les bottes d'écailles</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>Il faut un certain temps pour s'équiper de son armure, ce temps est défini par la catégorie de l'armure. Il est possible de réduire ce temps en enfiler à la hâte son armure, mais la protection octroyée par celle ci est alors amoindrie</p>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td><strong>Catégorie</strong></td>
+                            <td><strong>Mettre</strong></td>
+                            <td><strong>Ôter</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Armure légère</td>
+                            <td>1 minute</td>
+                            <td>1 minute</td>
+                        </tr>
+                        <tr>
+                            <td>Armure intermédiaire</td>
+                            <td>5 minutes</td>
+                            <td>1 minute</td>
+                        </tr>
+                        <tr>
+                            <td>Armure lourde</td>
+                            <td>10 minutes</td>
+                            <td>5 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Bouclier</td>
+                            <td>1 action</td>
+                            <td>1 action</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <h1 id="materiel" onclick="hideContent(this)">Matériel</h1>
+        <div>
+            <p>Pour partir à l'aventure et y trouver un profit, il faut un investissement de départ pour acheter le matériel nécessaire à savoir un sac ou au moins une sacoche, un sac de couchage ainsi que de quoi manger et boire.</p>
+            <p>La quantité de matériel qu'un personnage peut porter dépend de sa constitution et de sa force (moyenne entre les deux* 7.5 en kilogrammes) et aussi de la capacité de ses sacs/sacoches.</p>
+            <h2 id="contenants"  onclick="hideContent(this)">Contenants</h2>
+            <div>
+                <table width="90%">
+                    <caption>Contenants et sacoches</caption>
+                    <thead>
+                    <tr>
+                        <th>Contenant</th>
+                        <th>Capacité</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Bouteille</td>
+                        <td>1 L</td>
+                    </tr>
+                    <tr>
+                        <td>Coffre</td>
+                        <td>330 L / 150 kg de matériel</td>
+                    </tr>
+                    <tr>
+                        <td>Cruche ou pichet</td>
+                        <td>4 L</td>
+                    </tr>
+                    <tr>
+                        <td>Fiole</td>
+                        <td>100 mL / 100 g</td>
+                    </tr>
+                    <tr>
+                        <td>Flasque ou chope</td>
+                        <td>50 cL</td>
+                    </tr>
+                    <tr>
+                        <td>Gourde</td>
+                        <td>2 L</td>
+                    </tr>
+                    <tr>
+                        <td>Panier</td>
+                        <td>50 L / 20 kg de matériel</td>
+                    </tr>
+                    <tr>
+                        <td>Pot en fer</td>
+                        <td>4 L</td>
+                    </tr>
+                    <tr>
+                        <td>Sac</td>
+                        <td>30 L / 15 kg de matériel</td>
+                    </tr>
+                    <tr>
+                        <td>Sac à dos *</td>
+                        <td>40 L / 20 kg de matériel</td>
+                    </tr>
+                    <tr>
+                        <td>Sacoche</td>
+                        <td>5 L / 3 kg de matériel</td>
+                    </tr>
+                    <tr>
+                        <td>Seau</td>
+                        <td>11 L</td>
+                    </tr>
+                    <tr>
+                        <td>Tonneau</td>
+                        <td>150 L</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">* Vous pouvez également attacher des objets, comme un sac de couchage, une corde ou une sacoche, à l'extérieur du sac à dos.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="materiel_aventurier" onclick="hideContent(this)">Équipement d'aventurier</h2>
+            <div>
+                <p>Cette section décrit les objets qui ont des règles spéciales ou nécessitent de plus amples explications.</p>
+                <table width="90%">
+                    <thead>
+                    <tr>
+                        <th>Objet</th>
+                        <th>Prix</th>
+                        <th>Poids</th>
+                        <th>Objet</th>
+                        <th>Prix</th>
+                        <th>Poids</th>
+                        <th>Objet</th>
+                        <th>Prix</th>
+                        <th>Poids</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Acide (fiole)</td>
+                        <td>25 po</td>
+                        <td>500 g</td>
+                        <td>Antidote (fiole)</td>
+                        <td>50 po</td>
+                        <td>-</td>
+                        <td>Balance de marchand</td>
+                        <td>5 po</td>
+                        <td>1,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Bélier portatif</td>
+                        <td>4 po</td>
+                        <td>17,5 kg</td>
+                        <td>Billes (sac de 1000)</td>
+                        <td>1 po</td>
+                        <td>1 kg</td>
+                        <td>Boite d'allume-feu</td>
+                        <td>5 pa</td>
+                        <td>500 g</td>
+                    </tr>
+                    <tr>
+                        <td>Bougie</td>
+                        <td>1 pc</td>
+                        <td>-</td>
+                        <td>Boulier</td>
+                        <td>2 po</td>
+                        <td>1 kg</td>
+                        <td>Bouteille en verre</td>
+                        <td>2 po</td>
+                        <td>1 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Cadenas</td>
+                        <td>10 po</td>
+                        <td>500 g</td>
+                        <td>Carquois</td>
+                        <td>1 po</td>
+                        <td>500 g</td>
+                        <td>Chaîne (3 m)</td>
+                        <td>5 po</td>
+                        <td>5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Chevalière</td>
+                        <td>5 po</td>
+                        <td>-</td>
+                        <td>Chausse-trappes (sac de 20)</td>
+                        <td>1 po</td>
+                        <td>1 kg</td>
+                        <td>Cire à cacheter</td>
+                        <td>5 pa</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Cloche</td>
+                        <td>1 po</td>
+                        <td>-</td>
+                        <td>Coffre</td>
+                        <td>5 po</td>
+                        <td>12,5 kg</td>
+                        <td>Corde en chanvre (15 m)</td>
+                        <td>1 po</td>
+                        <td>5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Corde en soie (15 m)</td>
+                        <td>10 po</td>
+                        <td>2,5 kg</td>
+                        <td>Couverture</td>
+                        <td>5 pa</td>
+                        <td>1,5 kg</td>
+                        <td>Craie (un morceau)</td>
+                        <td>1 pc</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Cruche ou pichet</td>
+                        <td>2 pc</td>
+                        <td>2 kg</td>
+                        <td>Eau bénite (flasque)</td>
+                        <td>25 po</td>
+                        <td>500 g</td>
+                        <td>Échelle (3 m)</td>
+                        <td>1 pa</td>
+                        <td>12,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Encre (bouteille de 30 ml)</td>
+                        <td>10 po</td>
+                        <td>-</td>
+                        <td>Équipement d’escalade</td>
+                        <td>25 po</td>
+                        <td>6 kg</td>
+                        <td>Étui à carreaux</td>
+                        <td>1 po</td>
+                        <td>500 g</td>
+                    </tr>
+                    <tr>
+                        <td>Étui à cartes ou parchemins</td>
+                        <td>1 po</td>
+                        <td>500 g</td>
+                        <td>Feu grégeois (flasque)</td>
+                        <td>50 po</td>
+                        <td>500 g</td>
+                        <td>Fiole (10 cl)</td>
+                        <td>1 po</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Flasque ou chope (50 cl)</td>
+                        <td>2 pc</td>
+                        <td>500 g</td>
+                        <td>Gamelle</td>
+                        <td>2 pa</td>
+                        <td>500 g</td>
+                        <td>Gourde (pleine)</td>
+                        <td>2 pa</td>
+                        <td>2,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Grappin</td>
+                        <td>2 po</td>
+                        <td>2 kg</td>
+                        <td>Grimoire</td>
+                        <td>50 po</td>
+                        <td>1,5 kg</td>
+                        <td>Huile (flasque)</td>
+                        <td>1 pa</td>
+                        <td>500 g</td>
+                    </tr>
+                    <tr>
+                        <td>Lampe</td>
+                        <td>5 pa</td>
+                        <td>500 g</td>
+                        <td>Lanterne à capote</td>
+                        <td>5 po</td>
+                        <td>1 kg</td>
+                        <td>Lanterne sourde</td>
+                        <td>10 po</td>
+                        <td>1 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Livre</td>
+                        <td>25 po</td>
+                        <td>2,5 kg</td>
+                        <td>Longue-vue</td>
+                        <td>1000 po</td>
+                        <td>500 g</td>
+                        <td>Loupe</td>
+                        <td>100 po</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Marteau</td>
+                        <td>1 po</td>
+                        <td>1,5 kg</td>
+                        <td>Marteau de forgeron</td>
+                        <td>2 po</td>
+                        <td>5 kg</td>
+                        <td>Matériel de pêche</td>
+                        <td>1 po</td>
+                        <td>2 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Menottes</td>
+                        <td>2 po</td>
+                        <td>3 kg</td>
+                        <td>Miroir en acier</td>
+                        <td>5 po</td>
+                        <td>250 g</td>
+                        <td>Aiguilles de sarbacane (50)</td>
+                        <td>1 po</td>
+                        <td>500 g</td>
+                    </tr>
+                    <tr>
+                        <td>Billes de fronde (20)</td>
+                        <td>4 pc</td>
+                        <td>750 g</td>
+                        <td>Carreaux d'arbalète (20)</td>
+                        <td>1 po</td>
+                        <td>750 g</td>
+                        <td>Flèches (20)</td>
+                        <td>1 po</td>
+                        <td>500 g</td>
+                    </tr>
+                    <tr>
+                        <td>Palan</td>
+                        <td>1 po</td>
+                        <td>2,5 kg</td>
+                        <td>Panier</td>
+                        <td>4 pa</td>
+                        <td>1 kg</td>
+                        <td>Papier (une feuille)</td>
+                        <td>2 pa</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Parchemin (une feuille)</td>
+                        <td>1 pa</td>
+                        <td>-</td>
+                        <td>Parfum (fiole)</td>
+                        <td>5 po</td>
+                        <td>-</td>
+                        <td>Pelle</td>
+                        <td>2 po</td>
+                        <td>2,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Perche (3 m)</td>
+                        <td>5 pc</td>
+                        <td>3 kg</td>
+                        <td>Pied-de-biche</td>
+                        <td>2 po</td>
+                        <td>2 kg</td>
+                        <td>Piège à mâchoires</td>
+                        <td>5 po</td>
+                        <td>12,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Pierre à aiguiser</td>
+                        <td>1 pc</td>
+                        <td>500 g</td>
+                        <td>Pioche de mineur</td>
+                        <td>2 po</td>
+                        <td>5 kg</td>
+                        <td>Piton</td>
+                        <td>5 pc</td>
+                        <td>100 g</td>
+                    </tr>
+                    <tr>
+                        <td>Plume d’écriture</td>
+                        <td>2 pc</td>
+                        <td>-</td>
+                        <td>Pointes en fer (10)</td>
+                        <td>1 po</td>
+                        <td>2,5 kg</td>
+                        <td>Poison (fiole)</td>
+                        <td>100 po</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Pot en fer</td>
+                        <td>2 po</td>
+                        <td>5 kg</td>
+                        <td>Potion de soins</td>
+                        <td>50 po</td>
+                        <td>250 g</td>
+                        <td>Rations (1 jour)</td>
+                        <td>5 pa</td>
+                        <td>1 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Robes</td>
+                        <td>1 po</td>
+                        <td>2 kg</td>
+                        <td>Sablier</td>
+                        <td>25 po</td>
+                        <td>500 g</td>
+                        <td>Sac</td>
+                        <td>1 pc</td>
+                        <td>250 g</td>
+                    </tr>
+                    <tr>
+                        <td>Sac à dos</td>
+                        <td>2 po</td>
+                        <td>2,5 kg</td>
+                        <td>Sac de couchage</td>
+                        <td>1 po</td>
+                        <td>2 kg</td>
+                        <td>Sacoche</td>
+                        <td>5 pa</td>
+                        <td>500 g</td>
+                    </tr>
+                    <tr>
+                        <td>Sacoche à composantes</td>
+                        <td>25 po</td>
+                        <td>1 kg</td>
+                        <td>Savon</td>
+                        <td>2 pc</td>
+                        <td>-</td>
+                        <td>Seau</td>
+                        <td>5 pc</td>
+                        <td>1 kg</td>
+                    </tr>
+                    <tr>
+
+                        <td>Sifflet</td>
+                        <td>5 pc</td>
+                        <td>-</td>
+                        <td>Tente</td>
+                        <td>2 po</td>
+                        <td>10 kg</td>
+                        <td>Tonneau</td>
+                        <td>2 po</td>
+                        <td>35 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Torche</td>
+                        <td>1 pc</td>
+                        <td>500 g</td>
+                        <td>Trousse de soins</td>
+                        <td>5 po</td>
+                        <td>1,5 kg</td>
+                        <td>Vêtements, communs</td>
+                        <td>5 pa</td>
+                        <td>1,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Vêtements, costume</td>
+                        <td>5 po</td>
+                        <td>2 kg</td>
+                        <td>Vêtements, fins</td>
+                        <td>15 po</td>
+                        <td>3 kg</td>
+                        <td>Vêtements, voyage</td>
+                        <td>2 po</td>
+                        <td>2 kg</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p><strong>Acide</strong>. Au prix d'une action, vous pouvez lancer le contenu de ce flacon sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, le brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet, en considérant l'acide comme une arme improvisée. En cas de succès, la cible reçoit 2d6 dégâts d'acide.</p>
+                <p><strong>Antidote</strong>. Une créature qui boit cette fiole gagne un avantage aux jets de sauvegarde contre le poison pendant 1 heure. Il ne confère aucun avantage aux morts-vivants et aux créatures artificielles.</p>
+                <p><strong>Balance de marchand</strong>. Cela comprend une petite balance, des plateaux et un assortiment de poids approprié jusqu'à 1 kg. Avec, vous pouvez mesurer le poids exact de petits objets, tels que des métaux précieux ou des biens commerciaux, pour aider à déterminer leur valeur.</p>
+                <p><strong>Bélier portatif</strong>. Vous pouvez utiliser un bélier portatif pour enfoncer des portes. Ce faisant, vous gagnez un bonus de +4 au jet de Force. Un autre personnage peut vous aider à utiliser le bélier, ce qui vous donne un avantage à ce jet.</p>
+                <p><strong>Billes</strong>. Au prix d'une action, vous pouvez sortir ces petites billes métalliques de leur poche pour recouvrir une zone de 3 m x 3 m. Une créature se déplaçant à travers la zone recouverte doit réussir un jet de sauvegarde de Dextérité DD 10 ou tomber à terre. Une créature se déplaçant à travers la zone à la moitié de sa vitesse n'a pas besoin de faire le jet de sauvegarde.</p>
+                <p><strong>Boite d'allume-feu</strong>. Cette petite boite contient un silex, des amorces et de l'amadou (généralement des bouts de tissu sec trempés dans de l'huile), soit tout le nécessaire pour allumer un feu. L'utiliser pour allumer une torche, ou autre chose qui contient suffisamment d'huile, prend une action. Allumer tout autre type de feu prend 1 minute.</p>
+                <p><strong>Bougie</strong>. Une bougie génère une lumière vive dans un rayon de 1,50 mètre et une lumière faible sur 1,50 mètre supplémentaire durant 1 heure.</p>
+                <p><strong>Cadenas</strong>. Une clé est fournie avec le cadenas. Sans la clé, une créature qui maîtrise les outils de voleur peut ouvrir le cadenas en réussissant un jet de Dextérité DD 15. Votre MD peut décider que des cadenas de meilleure qualité sont disponibles à des prix plus élevés.</p>
+                <p><strong>Carquois</strong>. Un carquois peut contenir jusqu'à 20 flèches.</p>
+                <p><strong>Chaîne</strong>. Une chaîne dispose de 10 pv. Elle peut être brisée en réussissant un jet de Force de DD 20.</p>
+                <p><strong>Chausse-trappes</strong>. Au prix d'une action, vous pouvez étaler le contenu d'un sac de chausse-trappes pour couvrir une zone de 1,50 m x 1,50 m. Toute créature qui entre dans la zone doit réussir un jet de sauvegarde de Dextérité DD 15 ou mettre fin à son mouvement et prendre 1 point de dégâts perforants. Jusqu'à ce que la créature retrouve au moins 1 point de vie, sa vitesse de marche est réduite de 3 mètres. Une créature se déplaçant à travers la zone à la moitié de sa vitesse n'a pas besoin de faire le jet de sauvegarde.</p>
+                <p><strong>Corde</strong>. Une corde, qu'elle soit faite de chanvre ou de soie, possède 2 pv et peut être cassée avec un jet de Force DD 17.</p>
+                <p><strong>Eau bénite</strong>. Au prix d'une action, vous pouvez lancer le contenu de cette flasque sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, la brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature, en considérant l'eau bénite comme une arme improvisée. Si la cible est un fiélon ou mort-vivant, elle reçoit 2d6 dégâts radiant. Un clerc ou un paladin peut créer de l'eau bénite lors d'un rituel spécial. Le rituel dure 1 heure, consomme pour 25 po de poudre d'argent, et nécessite que le lanceur dépense un emplacement de sort de niveau 1.</p>
+                <p><strong>Équipement d'escalade</strong>. Ce kit comprend des pitons spéciaux, des pointes pour les chaussures, des gants et un harnais. Vous pouvez utiliser le matériel d'escalade pour vous accrocher au prix d'une action ; une fois fait, vous ne pouvez pas tomber de plus de 7,50 mètres de l'endroit où vous êtes ancré, et ne pouvez pas monter de plus de 7,50 mètres de ce point sans devoir défaire l'ancrage.</p>
+                <p><strong>Étui à carreaux</strong>. Cet étui en bois peut contenir jusqu'à vingt carreaux d'arbalète.</p>
+                <p><strong>Étui à cartes ou parchemins</strong>. Cet étui en cuir cylindrique peut contenir jusqu'à dix feuilles de papier enroulées ou cinq feuilles de parchemin enroulées.</p>
+                <p><strong>Feu grégeois</strong>. Ce liquide adhésif et collant s'enflamme lorsqu'il est exposé à l'air. Au prix d'une action, vous pouvez jeter cette flasque jusqu'à 6 mètres, la brisant à l'impact. Faire une attaque à distance contre une créature ou un objet, en considérant le feu grégeois comme une arme improvisée. En cas de succès, la cible reçoit 1d4 dégâts de feu au début de chacun de ses tours. Une créature peut mettre fin à ces dégâts en utilisant son action pour faire un jet de Dextérité DD 10 pour éteindre les flammes.</p>
+                <p><strong>Focaliseur arcanique</strong>. Un focaliseur arcanique est un objet spécial (orbe, boule de cristal, baguette, bâton, sceptre) conçu pour canaliser la puissance de sorts de la magie des arcanes. Un ensorceleur, un sorcier ou un magicien peut utiliser ce type d'objet comme focaliseur pour ses sorts.</p>
+                <p><strong>Focaliseur druidique</strong>. Un focaliseur druidique peut être un brin de gui ou de houx, une baguette ou un sceptre en bois d'if ou autre bois spécial, un bâton pris d'un arbre vivant, ou bien encore un objet totem qui intègre des plumes, de la fourrure, des os ou des dents d'animaux sacrés. Un druide peut utiliser ce type d'objet comme focaliseur pour ses sorts.</p>
+                <p><strong>Gamelle</strong>. Cette boîte en étain contient une tasse et des couverts. Faite de deux parties qui s'assemblent, un côté de la boîte peut être utilisé pour cuire des aliments et l'autre comme une assiette ou une petite cuvette.</p>
+                <p><strong>Grimoire</strong>. Essentiel pour les magiciens, un grimoire est un livre relié en cuir qui contient 100 pages de vélin blanc, et sur lesquelles on peut recopier des sorts.</p>
+                <p><strong>Huile</strong>. L'huile vient habituellement dans une flasque d'argile de 50 cl. Au prix d'une action, vous pouvez lancer le contenu de cette flasque sur une créature à 1,50 mètre ou moins de vous, ou jeter la flasque jusqu'à 6 mètres, la brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet, en considérant l'huile comme une arme improvisée. En cas de succès, la cible est couverte d'huile. Si la cible reçoit des dégâts de feu avant que l'huile ne sèche (après 1 minute), la cible prend 5 points de dégâts de feu supplémentaire dus à l'huile brûlante. Vous pouvez aussi verser une flasque d'huile sur le sol pour couvrir une zone de 1,50 m x 1,50 m, à condition que la surface soit plane. Une fois allumée, l'huile brûle pendant 2 rounds et inflige 5 points de dégâts de feu à toute créature qui pénètre dans la zone ou qui y termine son tour. Une créature ne peut prendre ces dégâts qu'une fois par tour.</p>
+                <p><strong>Lampe</strong>. Une lampe projette une lumière vive dans un rayon de 4,50 mètres et une lumière faible sur 9 mètres supplémentaires. Une fois allumée, elle brûle pendant 6 heures tout en consommant une flasque d'huile (50 cl).</p>
+                <p><strong>Lanterne à capote</strong>. Une lanterne à capote projette une lumière vive dans un rayon de 9 mètres et une lumière faible sur 9 mètres supplémentaires. Une fois allumée, elle brûle pendant 6 heures tout en consommant une flasque d'huile (50 cl). Au prix d'une action, vous pouvez ajuster la capote, ce qui réduit la lumière à une lumière faible dans un rayon de 1,50 mètre.</p>
+                <p><strong>Lanterne sourde</strong>. Une lanterne sourde projette une lumière vive dans un cône de 18 mètres et une lumière faible sur 18 mètres supplémentaires. Une fois allumée, elle brûle pendant 6 heures tout en consommant une flasque d'huile (50 cl).</p>
+                <p><strong>Livre</strong>. Un livre peut contenir de la poésie, des récits historiques, des informations relatives à un domaine particulier de connaissance, des diagrammes et des notes sur une invention gnome, ou n'importe quoi d'autre qui peut être représenté en utilisant du texte ou des images. Un livre de sorts est un grimoire (voir la description plus loin ci-dessus).</p>
+                <p><strong>Longue-vue</strong>. Les objets vus à travers une longue-vue sont amplifiés de deux fois leur taille.</p>
+                <p><strong>Loupe</strong>. Ce verre permet un examen plus minutieux des petits objets. Il est également utile comme substitut au silex pour allumer un feu. Allumer un feu avec une loupe nécessite une lumière aussi vive que celle du soleil pour faire prendre l'amadou, et environ 5 minutes pour que le feu prenne. Une loupe donne un avantage aux jets de caractéristique pour évaluer ou inspecter un objet de petite taille ou très détaillé.</p>
+                <p><strong>Matériel de pêche</strong>. Ce kit comprend une tige en bois, une ligne de soie, des flotteurs en liège, des hameçons en acier, des plombs, des leurres en velours et un petit filet.</p>
+                <p><strong>Menottes</strong>. Ces menottes métalliques servent pour une créature de taille Petite ou Moyenne. Se libérer des menottes nécessite un jet de Dextérité DD 20 réussi. Briser les menottes nécessite un jet de Force DD 20 réussi. Chaque paire de menottes est livrée avec une clé. Sans la clé, une créature qui maîtrise les outils de voleur peut ouvrir les menottes en réussissant un jet de Dextérité DD 15. Les menottes ont 15 points de vie.</p>
+                <p><strong>Palan</strong>. Ensemble de poulies avec un câble et un crochet pour attacher des objets, un palan permet de hisser jusqu'à quatre fois le poids que vous pouvez normalement soulever.</p>
+                <p><strong>Pied-de-biche</strong>. Un pied de biche octroie un avantage aux jets de Force lorsque le levier du pied de biche peut être utilisé.</p>
+                <p><strong>Piège à mâchoires</strong>. Lorsque vous utilisez votre action pour l'installer, ce piège forme un anneau d'acier en dents de scie qui se referme lorsqu'une créature marche sur la plaque de pression située au centre. Le piège est fixé par une lourde chaîne à un objet immobile, comme un arbre ou un pic enfoncé dans le sol. Une créature qui marche sur la plaque doit réussir un jet de sauvegarde de Dextérité DD 13 ou prendre 1d4 points de dégâts perforants et devoir s'arrêter de bouger. Par la suite, tant que la créature ne s'échappe pas du piège, son mouvement est limité par la longueur de la chaîne (généralement un mètre de long). Une créature peut utiliser son action pour faire un jet de Force DD 13 pour se libérer ou libérer une autre créature à sa portée en cas de succès. Chaque échec inflige 1 point de dégâts perforants à la créature piégée.</p>
+                <p><strong>Poison</strong>. Vous pouvez utiliser le poison de cette fiole pour couvrir une arme tranchante ou perforante, ou jusqu'à trois munitions. Appliquer le poison prend une action. Une créature touchée par une arme ou une munition empoisonnée doit réussir un jet de sauvegarde de Constitution DD 10 ou prendre 1d4 points de dégâts de poison. Une fois appliqué, le poison conserve son activité 1 minute avant de sécher.</p>
+                <p><strong>Potion de soins</strong>. Un personnage qui boit le liquide magique rouge de ce flacon reprend 2d4 + 2 points de vie. Boire ou administrer une potion prend une action.</p>
+                <p><strong>Rations</strong>. Aliments compacts et secs appropriés pour un voyage prolongé, les rations incluent du bœuf séché, des fruits secs, des biscuits et des noix.</p>
+                <p><strong>Sacoche</strong>. Une sacoche en tissu ou en cuir peut contenir jusqu'à 20 billes de fronde ou 50 aiguilles de sarbacane, entre autres choses. Une sacoche compartimentée pour abriter des composantes de sorts est appelée une sacoche à composantes (voir la description ci-dessous).</p>
+                <p><strong>Sacoche à composantes</strong>. Une sacoche à composantes est une petite sacoche étanche en cuir qui possède des compartiments pour contenir toutes les composantes matérielles et autres éléments spéciaux dont vous avez besoin pour lancer vos sorts, à exception des composantes qui ont un coût spécifique (comme indiqué dans la description des sorts).</p>
+                <p><strong>Symbole sacré</strong>. Un symbole sacré est une représentation d'un dieu ou d'un panthéon. Cela peut être une amulette avec un symbole représentant une divinité, ce même symbole gravé ou incrusté tel un emblème sur un bouclier, ou une toute petite boîte renfermant le fragment d'une relique sacrée. Un clerc ou paladin peut utiliser un symbole sacré comme focaliseur magique. Pour utiliser le symbole de cette manière, le lanceur doit le porter visiblement, en main ou sur un bouclier.</p>
+                <p><strong>Tente</strong>. Abri de toile simple et portable, une tente peut accueillir deux personnes.</p>
+                <p><strong>Torche</strong>. Une torche brûle pendant 1 heure, projetant une lumière vive dans un rayon de 6 mètres et une lumière faible sur 6 mètres supplémentaires. Si vous effectuez une attaque au corps à corps avec une torche enflammée et touchez, vous infligez 1 point de dégât de feu.</p>
+                <p><strong>Trousse de soins</strong>. Ce kit est un étui en cuir qui contient des bandages, des pommades et des attelles. Le kit permet dix utilisations. Au prix d'une action, vous pouvez dépenser une utilisation du kit pour stabiliser une créature qui a 0 pv sans avoir à réaliser un jet de Sagesse (Médecine).</p>
+                <p><strong>SACS D'ÉQUIPEMENTS</strong><br/><br/>L'équipement de départ que propose la description de chaque classe comprend différents matériels utiles à l'aventure, assemblés sous forme de kit. Le contenu de ces kits est répertorié ici. Si vous achetez votre équipement de départ, vous pouvez acheter un kit pour le prix indiqué, ce qui peut revenir moins cher que d'acheter les objets séparément.<br/><br/><strong>Sac d'artiste (40 po)</strong>. Comprend un sac à dos, un sac de couchage, 2 costumes, 5 bougies, 5 jours de rations, une gourde d'eau et un kit de déguisement.<br/><br/><strong>Sac de cambrioleur (16 po)</strong>. Comprend un sac à dos, un sac de 1000 billes, 3 mètres de chaîne, une cloche, 5 bougies, un pied-de-biche, un marteau, 10 pitons, une lanterne à capuchon, 2 flasques d'huile, 5 jours de rations, une boite d'allume-feu et une gourde d'eau. Le sac comprend aussi 15 mètres de corde de chanvre attachée sur son côté.<br/><br/><strong>Sac de diplomate (39 po)</strong>. Comprend un coffre, 2 étuis à cartes ou parchemins, des vêtements fins, une bouteille d'encre, une plume d'écriture, une lampe, deux flasques d'huile, 5 feuilles de papier, un flacon de parfum, de la cire à cacheter et du savon.<br/><br/><strong>Sac d'ecclésiastique (19 po)</strong>. Comprend un sac à dos, une couverture, 10 bougies, une boite d'allume-feu, une boîte pour l'aumône, 2 bâtonnets d'encens, un encensoir, des habits de cérémonie, 2 jours de rations et une gourde d'eau.<br/><br/><strong>Sac d'érudit (40 po)</strong>. Comprend un sac à dos, un livre de connaissance, une bouteille d'encre, une plume d'écriture, 10 feuilles de parchemin, un petit sac de sable et un petit couteau.<br/><br/><strong>Sac d'explorateur (10 po)</strong>. Comprend un sac à dos, un sac de couchage, une gamelle, une boite d'allume-feu, 10 torches, 10 jours de rations et une gourde d'eau. Le sac comprend aussi 15 mètres de corde de chanvre attachée sur son côté.<br/><br/><strong>Sac d'exploration souterraine (12 po)</strong>. Comprend un sac à dos, un pied de biche, un marteau, 10 pitons, 10 torches, une boite d'allume-feu, 10 jours de rations et une gourde d'eau. Le sac comprend aussi 15 mètres de corde de chanvre attachée sur son côté.</p>
+            </div>
+
+            <h2 id="outils" onclick="hideContent(this)">Outils</h2>
+            <div>
+                <p>Les outils vous aident à faire quelque chose que vous ne pourriez pas faire autrement, comme de l'artisanat, réparer un objet, falsifier un document ou crocheter une serrure. Votre race, votre classe, votre historique ou bien encore vos dons vous donnent la maîtrise de certains outils. La maîtrise d'un outil vous permet d'ajouter votre bonus de maîtrise à tous les jets de caractéristique que vous réalisez avec cet outil. L'utilisation de l'outil n'est pas liée à une seule caractéristique, car la maîtrise d'un outil représente une connaissance qui va au-delà de sa simple utilisation. Par exemple, le MJ peut vous demander de faire un jet de Dextérité pour sculpter un détail sur du bois avec des outils de menuisier, puis un jet de Force pour faire quelque chose sur un bois particulièrement dur.</p>
+                <table width="90%">
+                    <thead>
+                    <tr>
+                        <th>Objet</th>
+                        <th>Prix</th>
+                        <th>Poids</th>
+                        <th>Objet</th>
+                        <th>Prix</th>
+                        <th>Poids</th>
+                        <th>Objet</th>
+                        <th>Prix</th>
+                        <th>Poids</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Chalemie</td>
+                        <td style="text-align: right;">2 po</td>
+                        <td style="text-align: right;">500 g</td>
+                        <td>Cor</td>
+                        <td style="text-align: right;">3 po</td>
+                        <td style="text-align: right;">1 kg</td>
+                        <td>Cornemuse</td>
+                        <td style="text-align: right;">30 po</td>
+                        <td style="text-align: right;">3 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Flûte</td>
+                        <td style="text-align: right;">2 po</td>
+                        <td style="text-align: right;">500 g</td>
+                        <td>Flûte de pan</td>
+                        <td style="text-align: right;">12 po</td>
+                        <td style="text-align: right;">1 kg</td>
+                        <td>Luth</td>
+                        <td style="text-align: right;">35 po</td>
+                        <td style="text-align: right;">1 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Lyre</td>
+                        <td style="text-align: right;">30 po</td>
+                        <td style="text-align: right;">1 kg</td>
+                        <td>Tambour</td>
+                        <td style="text-align: right;">6 po</td>
+                        <td style="text-align: right;">1,5 kg</td>
+                        <td>Tympanon</td>
+                        <td style="text-align: right;">25 po</td>
+                        <td style="text-align: right;">5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Viole</td>
+                        <td style="text-align: right;">30 po</td>
+                        <td style="text-align: right;">500 g</td>
+                        <td>Dés</td>
+                        <td style="text-align: right;">1 pa</td>
+                        <td style="text-align: center;">-</td>
+                        <td>Jeu de cartes</td>
+                        <td style="text-align: right;">5 pa</td>
+                        <td style="text-align: center;">-</td>
+                    </tr>
+                    <tr>
+                        <td>Kit d'empoisonneur</td>
+                        <td style="text-align: right;">50 po</td>
+                        <td style="text-align: right;">1 kg</td>
+                        <td>Kit d'herboriste</td>
+                        <td style="text-align: right;">5 po</td>
+                        <td style="text-align: right;">1,5 kg</td>
+                        <td>Kit de contrefaçon</td>
+                        <td style="text-align: right;">15 po</td>
+                        <td style="text-align: right;">2,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Kit de déguisement</td>
+                        <td style="text-align: right;">25 po</td>
+                        <td style="text-align: right;">1,5 kg</td>
+                        <td>Matériel d'alchimiste</td>
+                        <td style="text-align: right;">50 po</td>
+                        <td style="text-align: right;">4 kg</td>
+                        <td>Matériel de brasseur</td>
+                        <td style="text-align: right;">20 po</td>
+                        <td style="text-align: right;">4,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Matériel de calligraphe</td>
+                        <td style="text-align: right;">10 po</td>
+                        <td style="text-align: right;">2,5 kg</td>
+                        <td>Matériel de peintre</td>
+                        <td style="text-align: right;">10 po</td>
+                        <td style="text-align: right;">2,5 kg</td>
+                        <td>Outils de bijoutier</td>
+                        <td style="text-align: right;">25 po</td>
+                        <td style="text-align: right;">1 kg</td>
+
+                    </tr>
+                    <tr>
+                        <td>Outils de bricoleur</td>
+                        <td style="text-align: right;">50 po</td>
+                        <td style="text-align: right;">5 kg</td>
+                        <td>Outils de cartographe</td>
+                        <td style="text-align: right;">15 po</td>
+                        <td style="text-align: right;">3 kg</td>
+                        <td>Outils de charpentier</td>
+                        <td style="text-align: right;">8 po</td>
+                        <td style="text-align: right;">3 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Outils de cordonnier</td>
+                        <td style="text-align: right;">5 po</td>
+                        <td style="text-align: right;">2,5 kg</td>
+                        <td>Outils de forgeron</td>
+                        <td style="text-align: right;">20 po</td>
+                        <td style="text-align: right;">4 kg</td>
+                        <td>Outils de maçon</td>
+                        <td style="text-align: right;">10 po</td>
+                        <td style="text-align: right;">4 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Outils de menuisier</td>
+                        <td style="text-align: right;">1 po</td>
+                        <td style="text-align: right;">2,5 kg</td>
+                        <td>Outils de potier</td>
+                        <td style="text-align: right;">10 po</td>
+                        <td style="text-align: right;">1 kg</td>
+                        <td>Outils de souffleur de verre</td>
+                        <td style="text-align: right;">30 po</td>
+                        <td style="text-align: right;">2,5 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Outils de tanneur</td>
+                        <td style="text-align: right;">5 po</td>
+                        <td style="text-align: right;">2,5 kg</td>
+                        <td>Outils de tisserand</td>
+                        <td style="text-align: right;">1 po</td>
+                        <td style="text-align: right;">2,5 kg</td>
+                        <td>Ustensiles de cuisinier</td>
+                        <td style="text-align: right;">1 po</td>
+                        <td style="text-align: right;">4 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Outils de navigateur</td>
+                        <td style="text-align: right;">25 po</td>
+                        <td style="text-align: right;">1 kg</td>
+                        <td>Outils de voleur</td>
+                        <td style="text-align: right;">25 po</td>
+                        <td style="text-align: right;">500 g</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p><strong>Instruments de musique</strong>. Les instruments de musique les plus communs sont représentés dans la table à titre d'exemple. Si vous maîtrisez un instrument de musique particulier, vous ajoutez votre bonus de maîtrise à tous les jets de caractéristique pour jouer de la musique avec cet instrument. Un barde peut utiliser un instrument de musique comme focaliseur magique.&nbsp;Chaque instrument de musique nécessite une maîtrise distincte.</p>
+                <p><strong>Jeux</strong>. Cette entrée couvre un large éventail de jeux, comme les dés et les jeux de cartes (pour des jeux tels que le jeu des Dragons) entre autres. Quelques exemples sont présentés dans la table, mais il existe d'autres types de jeux. Si vous maîtrisez un type de jeu, vous ajoutez votre bonus de maîtrise à tous les jets de caractéristique lorsque vous jouez à ce jeu. Chaque type de jeu nécessite une maîtrise distincte.</p>
+                <p><strong>Kit d'empoisonneur</strong>. Ce kit comprend les flacons, produits chimiques et autres appareils nécessaires à la création de poisons. Si vous maîtrisez le kit d'empoisonneur, vous ajoutez votre bonus de maîtrise à tous les jets de caractéristique pour créer et manipuler des poisons.</p>
+                <p><strong>Kit d'herboriste</strong>. Ce kit contient une variété d'instruments, tels des pinces, un pilon, des sachets et des flacons que les herboristes utilisent pour créer des remèdes et des potions. Si vous maîtrisez le kit d'herboriste, vous ajoutez votre bonus de maîtrise à tous les jets de caractéristique pour identifier des herbes ou concocter des mélanges et des infusions. Maîtriser le kit d'herboriste est indispensable pour créer des potions de soins et des antidotes.</p>
+                <p><strong>Kit de contrefaçon</strong>. Cette petite boîte contient une variété de papiers et parchemins, plumes et encres, sceaux et cire à cacheter, feuilles d'argent et d'or, et autres fournitures nécessaires à la création de faux documents physiques convaincants. La maîtrise de ce kit vous permet d'ajouter votre bonus de maîtrise à tous les jets de caractéristique pour créer un faux d'un document physique.</p>
+                <p><strong>Kit de déguisement</strong>. Ce kit comprend des produits cosmétiques, de la teinture pour les cheveux et de petits accessoires pour vous permettre de créer des déguisements qui changent votre apparence physique. Si vous maîtrisez le kit de déguisement, vous ajoutez votre bonus de maîtrise à tous les jets de caractéristiques pour créer un déguisement visuel.</p>
+                <p><strong>Outils d'artisan</strong>. Ces outils spéciaux comprennent les éléments nécessaires à l'exercice d'un métier ou d'un commerce. La table montre des exemples des types d'outils les plus communs, chacun offrant des objets liés à un seul métier. La maîtrise d'un type d'outil d'artisan vous permet d'ajouter votre bonus de maîtrise à tous les jets de caractéristique que vous faites en utilisant les outils de votre travail. Chaque type d'outil d'artisan nécessite une maîtrise distincte.</p>
+                <p><strong>Outils de navigateur</strong>. Ces outils sont utilisés pour la navigation en mer. La maîtrise des outils de navigateur vous permet de tracer le parcours d'un navire et de suivre des cartes de navigation. En outre, ces outils vous permettent d'ajouter votre bonus de maîtrise à tous les jets de caractéristique pour éviter de se perdre en mer.</p>
+                <p><strong>Outils de voleur</strong>. Ces outils comprennent une petite lime, divers outils de crochetage, un petit miroir monté sur une poignée en métal, une paire de ciseaux à lames fines et une paire de pinces. Si vous maîtrisez les outils de voleur, vous pouvez ajouter votre bonus de maîtrise à tous les jets de caractéristique pour désactiver un piège ou crocheter une serrure.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="form_ajout" onclick="hideContent(this)">Proposition d'ajouts</h2>
+    <div>
+        <form action="https://formspree.io/mdowgeba" method="post">
+            <p>Que souhaitez vous proposer ?</p>
+            <input type="checkbox" id="ajout_arme" name="arme"/>
+            <label for="ajout_arme">Arme(s)</label><br/>
+            <input type="checkbox" id="ajout_armure" name="armure"/>
+            <label for="ajout_armure">Armure(s)</label><br/>
+            <input type="checkbox" id="ajout_competence" name="competence"/>
+            <label for="ajout_competence">Compétence(s)</label><br/>
+            <input type="checkbox" id="ajout_autre" name="autre"/>
+            <label for="ajout_autre" style="padding-right: 3px">Autre</label>
+            <input name="precision" value="Précisez" onfocus="if(this.value===this.defaultValue)this.value=''" onblur="if(this.value==='')this.value=this.defaultValue"/>
+            <br/><br/>
+            <label for="proposition">Veuillez décrire le plus possible votre (vos) proposition(s) :</label><br/>
+            <textarea cols="100" rows="15" id="proposition" name="proposition(s)"/><br/><br/>
+            <label for="mail">Email (optionnel)</label>
+            <input name="mail" id="mail"/><br/><br/>
+            <input type="submit" value="Envoyer"/>
+        </form>
+    </div>
+
+
+
+
+</div>
+</body>
+</html>

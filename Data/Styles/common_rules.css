@@ -1,5 +1,5 @@
 body{
-    background-color: lightgray; /*Change la couleur du fond*/
+    background-color: antiquewhite; /*Change la couleur du fond*/
 }
 
 div[align=center] div p{
@@ -38,7 +38,7 @@ table.table_compact{
 table.table_compact tbody td{
     border-style: none;
     border-bottom: 1px solid black;
-    padding: 0px;
+    padding: 0;
     margin: 0;
 }
 table.table_compact thead th{
@@ -94,8 +94,12 @@ caption{/*Affecte la caption d'id 'synoptique'*/
 }
 
 a {
-    color: rebeccapurple;
+    color: dimgrey;
     text-decoration: none;
+}
+
+a:hover {
+    color: rebeccapurple; !important;
 }
 
 .space_list>li {
@@ -116,7 +120,7 @@ a {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: lightslategray;
+    background-color: burlywood;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 10px; /* Place content Xpx from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -127,7 +131,7 @@ a {
 
 
 .sidenav a:hover {
-    color: rebeccapurple;
+    color: rebeccapurple; !important;
 }
 
 span.index a{

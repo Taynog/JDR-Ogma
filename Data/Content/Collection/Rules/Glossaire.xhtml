@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Glossaire</title>
+    <meta http-equiv="Content-Script-Type" content="application/javascript"/>
+    <script type="application/javascript" src="../../../Javascript/fonctions_accueil_plan.js"> </script>
+    <link rel="stylesheet" type="text/css" title="style_plan" href="../../../Styles/common_rules.css"/>
+</head>
+<body>
+<div id="mySidenav" class="sidenav" style="display: block">
+    <ul class="sidenav ">
+        <li><span class="index"><a href="../../../../index.xhtml">Accueil</a></span></li>
+        <li><span class="partie shown" onclick="hideContent(this)">Lore</span>
+            <ul>
+                <li><span class="medium shown"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium shown"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium shown"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier shown" onclick="hideContent(this)">Races/Factions</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Azuma.xhtml">Azuma</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sever.xhtml">Sever</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tuskizi.xhtml">Tuskizi</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Magiques</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Sakha.xhtml">Sakha</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sihir.xhtml">Sihir</a></span></li>
+                                <li><span class="little"><a href="../Factions/Steinn.xhtml">Steinn</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Bestiales</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Chono.xhtml">Chono</a></span></li>
+                                <li><span class="little"><a href="../Factions/Kanta.xhtml">Kanta</a></span></li>
+                                <li><span class="little"><a href="../Factions/Mushuk.xhtml">Mushuk</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sarpa.xhtml">Sarpa</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tori.xhtml">Tori</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="partie shown" onclick="hideContent(this)">Jeu de Rôle</span>
+            <ul>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#Combat">Combat</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Magie">Magie</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Survie">Survie</a></span></li>
+                    </ul></li>
+
+                <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#creation_perso">Création personnage</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Competences">Compétences</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#table_race">Traits raciaux</a></span></li>
+                    </ul></li>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#rupture">Rupture</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Armes">Armes</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Armures">Armures</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#materiel">Matériel</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_parade">Parade</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
+                            </ul></li>
+                        <li><span class="medium"><a href="Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="medium"><a href="Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
+                    </ul></li>
+            </ul>
+        </li>
+        <li><span class="nav_ajout"><a href="Rules.xhtml#form_ajout">Une proposition ?</a></span></li>
+    </ul>
+</div>
+<div id="main" class="main" style="margin-left: 200px">
+    <h1 id="etats_prejudiciables" onclick="hideContent(this)">États préjudiciables</h1>
+    <div>
+        <p>Si plus d’un état préjudiciable affecte le personnage, appliquez-en tous les effets. Si les effets ne peuvent se combiner, appliquez les plus handicapants.</p>
+
+        <h3 id="a_terre" onclick="hideContent(this)">À Terre</h3>
+        <div>
+            <p>Le personnage se trouve étendu sur le sol. Il reçoit un malus de -4 sur les jets d’attaque au corps à corps et l’arbalète est la seule arme à distance dont il puisse se servir (il le fait sans malus). Il reçoit un malus de -4 à la parade et à l'esquive contre les attaques au corps à corps mais les adversaires utilisant une attaques à distance contre lui subissent un malus de -4 à la visée.</p>
+            <p>Se relever est considéré comme un déplacement et provoque donc une attaque d’opportunité.</p>
+        </div>
+
+        <h3 id="agrippe" onclick="hideContent(this)">Agrippé</h3>
+        <div>
+            <p>Un personnage agrippé est retenu par une créature, un piège ou un effet. Il ne peut plus bouger et subit un malus de -4 à son Agilité, ainsi qu’un malus de -2 à ses jets d’attaque et à ses manœuvres de combat, à l’exception des mouvements faits pour agripper ou se libérer d’une prise. D'autre part, une créature agrippée ne peut entreprendre aucune action qui nécessite l'utilisation de ses deux mains. S’il tente de lancer un sort ou un pouvoir magique, le personnage doit réussir un test de Concentration (jet de Volonté avec malus selon le cercle du sort et l'adversaire). Il lui est de plus impossible de porter des attaques d’opportunité.</p>
+        </div>
+
+        <h3 id="assourdi" onclick="hideContent(this)">Assourdi</h3>
+        <div>
+            <p>Un individu assourdi n’entend rien. Il reçoit un malus de -4 à l’initiative, manque automatiquement ses tests de Perception liés à l’ouïe, subit un malus de -4 aux tests de Perception. Si l’état de surdité persiste suffisamment longtemps, il peut arriver à s’y habituer plus ou moins.</p>
+        </div>
+
+        <h3 id="aveugle" onclick="hideContent(this)">Aveuglé</h3>
+        <div>
+            <p>Le personnage ne voit plus rien. Il subit un malus de -2 à la parade/esquive, perd son éventuel bonus de Agilité/Dextérité/Constitution pour les esquives et les parades, et subit un malus de -4 sur ses tests de Perception et de la plupart des compétences associées à la Force et à la Dextérité. Il ne peut pas effectuer le moindre test de compétence nécessitant d’y voir (comme lire ou utiliser une compétence de Perception basée sur la vue). Tous ses adversaires bénéficient d’un camouflage total à son égard (50 % de risques de manquer son jet d'attaque). Un personnage aveuglé se déplace à la moitié de sa vitesse habituelle (test d’Agilité pour se déplacer plus vite). Une créature qui rate ce test tombe à terre. Un personnage aveuglé pendant suffisamment longtemps peut s’habituer partiellement à sa condition et circonvenir certains de ces désavantages.</p>
+        </div>
+
+        <h3 id="confus" onclick="hideContent(this)">Confus</h3>
+        <div>
+            <p>Une créature confuse a l’esprit totalement embrouillé et ne peut agir normalement. Elle ne fait pas de différence entre un ami et un ennemi, et attaque l’un et l’autre indifféremment. Si l’un de ses alliés souhaite lancer sur elle un sort bénéfique et qu’il a besoin pour ce faire de la toucher, il devra faire un jet d’attaque au corps à corps. Si un personnage confus est agressé, il attaquera en retour celui qui l’a frappé en dernier et ne s’arrêtera que lorsque son assaillant mourra ou ne sera plus dans son champ de vision.</p>
+            <p>Pour savoir comment agis un personnage confus, on lance un D100 : (01–25) Agit normalement, (26–50) Ne fait rien et babille de manière incohérente, (51–75) S’inflige 1d8 points de dégâts + bonus de Force avec un objet en main, (76–100) Attaque la créature la plus proche.</p>
+            <p>Si un personnage confus est dans l’incapacité d’effectuer l’action tirée pour ce round, il se contente de balbutier de façon incompréhensible. Si le personnage confus est attaqué, il riposte automatiquement en frappant son agresseur à son prochain tour de jeu (du moins s’il est encore confus), mais ce dernier ne tirera aucun avantage de l’état de sa victime. Un personnage confus ne porte pas d’attaque d’opportunité quand il en a l’occasion, sauf si celle-ci est provoquée par une créature qu’il a décidé d’attaquer.</p>
+        </div>
+
+        <h3 id="ebloui" onclick="hideContent(this)">Ébloui</h3>
+        <div>
+            <p>Le personnage est dans l’incapacité de voir clairement suite à une trop forte stimulation de la rétine. Il reçoit un malus de -1 sur les jets d’attaque et les tests de Perception.</p>
+        </div>
+
+        <h3 id="effraye" onclick="hideContent(this)">Effrayé</h3>
+        <div>
+            <p>Un personnage effrayé fuit la source de sa peur aussi rapidement qu’il le peut. Si aucune issue ne s’ouvre à lui, il peut combattre. Il reçoit un malus de -2 à tout ses jets. Il peut user de ses pouvoirs et ses sorts pour s’enfuir et le fait inévitablement si aucune autre solution ne s’offre à lui.</p>
+            <p>Cet état s’apparente au fait d’être secoué, sauf que le personnage fait tout pour s’enfuir. Paniqué est un état de terreur encore plus poussé.</p>
+        </div>
+
+        <h3 id="enchevetre" onclick="hideContent(this)">Enchevêtré</h3>
+        <div>
+            <p>Le personnage est comme ficelé. L’enchevêtrement handicape le mouvement mais ne le bloque pas totalement, à moins que les liens soient fixés à un objet immobile ou retenus avec force. Un personnage enchevêtré se déplace à demi-vitesse et il lui est impossible de courir ou de charger. Il reçoit un malus de -2 au jet d’attaque et un malus de -4 en Agilité. S’il se risque à lancer un sort, il doit réussir un test de volonté avec un malus de 5.</p>
+        </div>
+
+        <h3 id="epuise" onclick="hideContent(this)">Épuisé</h3>
+        <div>
+            <p>Le personnage se déplace deux fois moins vite qu’habituellement, est dans l’incapacité de courir et de charger, et il subit un malus de -6 en Force, Dextérité et Agilité . Un personnage épuisé redevient fatigué au terme d’une heure de repos total. Un personnage fatigué devient épuisé dès qu’il fait quoi que ce soit de fatiguant.</p>
+        </div>
+
+        <h3 id="etourdi" onclick="hideContent(this)">Étourdi</h3>
+        <div>
+            <p>Un personnage étourdi laisse tomber ce qu’il avait en main, ne peut intenter aucune action, subit un malus de -2 à l'esquive et à la parade. Les attaquants reçoivent un bonus à l'attaque de +4 lorsqu'ils tentent une manoeuvre de combat contre un ennemi étourdi.</p>
+        </div>
+
+        <h3 id="fascine" onclick="hideContent(this)">Fasciné</h3>
+        <div>
+            <p>Une créature est fascinée par un sort ou un effet surnaturel. Tant que l’effet reste en place, une créature fascinée reste assise ou debout, dans l’incapacité d’effectuer d’autre action que se concentrer sur l’effet en question. Elle reçoit un malus de -4 sur tout les jets. L’arrivée d’une menace potentielle (comme une créature hostile) donne droit à un nouveau jet de sauvegarde contre l’effet de fascination. Toute menace évidente, comme dégainer une arme, lancer un sort ou tirer sur la créature, rompt immédiatement l’effet de fascination. Pour 1 PA, il est possible de secouer une créature fascinée pour lui faire reprendre ses esprits.</p>
+        </div>
+
+        <h3 id="fatigue" onclick="hideContent(this)">Fatigué</h3>
+        <div>
+            <p>Un personnage fatigué est dans l’incapacité de courir et de charger. Il subit un malus de -2 en Force, en Dextérité ainsi qu'en Agilité. La fatigue se dissipe au bout de huit heures de repos total. Un personnage fatigué devient épuisé dès qu’il fait quoi que ce soit qui causerait un nouvel état fatigué.</p>
+        </div>
+
+        <h3 id="fievreux" onclick="hideContent(this)">Fiévreux</h3>
+        <div>
+            <p>Le personnage reçoit un malus de -2 aux jets d’attaque, de dégâts d’armes et de sauvegarde ainsi qu’aux tests de compétence et de caractéristique.</p>
+        </div>
+
+        <h3 id="hebete" onclick="hideContent(this)">Hébété</h3>
+        <div>
+            <p>La créature est incapable d’agir de manière normale. Elle est dans l’incapacité d’accomplir la moindre action.</p>
+        </div>
+
+        <h3 id="hors_combat" onclick="hideContent(this)">Hors de combat</h3>
+        <div>
+            <p>Un personnage hors de combat est inconscient et ne peut rien faire, son état est stable et il ne subit pas de dégâts au cours du temps(sauf si il est toujours sous les effets de dégâts continus (poison, feu, etc...)</p>
+        </div>
+
+        <h3 id="immobilise" onclick="hideContent(this)">Immobilisé</h3>
+        <div>
+            <p>Une créature immobilisée est fermement retenue et ne peut pas entreprendre la moindre action. Elle ne peut pas se déplacer et elle ne bénéficie pas de son bonus d'Agilité. Elle subit un malus de -4 à la parade/esquive. Même si elle peut toujours tenter de se libérer en utilisant un test de manœuvre de combat ou la compétence Évasion, ses actions sont également limitées. Elle ne peut lancer aucun sort autre que du premier cercle. Si elle veut lancer un sort ou utiliser un pouvoir magique, il lui faut réussir un test de Concentration (jet de Volonté avec malus selon le cercle du sort et l'adversaire). Immobilisé est une version plus puissante d’agrippé et leurs effets ne se cumulent pas.</p>
+        </div>
+
+        <h3 id="inconscient" onclick="hideContent(this)">Inconscient</h3>
+        <div>
+            <p>Un personnage inconscient est sans connaissance et sans défense. Un personnage sombre dans l’inconscience quand son total de points de vie tombe en dessous de 0 (mais pas plus que sa valeur de Constitution), mais aussi quand il encaisse plus de points de dégâts non-létaux qu’il lui reste de points de vie.</p>
+        </div>
+
+        <h3 id="intagible" onclick="hideContent(this)">Intagible</h3>
+        <div>
+            <p>Dénuées de corps physique, les créatures intangibles sont immunisées contre les attaques non-magiques. Elles ne subissent que la moitié des dommages de la part d’armes magiques, de sorts, de pouvoirs magiques et d’effets surnaturels. Cependant, les autres créatures intangibles et les effets intangibles infligent eux des dommages normaux.</p>
+        </div>
+
+        <h3 id="invisible" onclick="hideContent(this)">Invisible</h3>
+        <div>
+            <p>Indétectable à l’œil nu. Les créatures invisibles bénéficient d’un bonus de +2 aux jets d’attaque et leur cible perd son éventuel bonus de Agilité/Dextérité/Constitution pour une esquive/parade.</p>
+        </div>
+
+        <h3 id="mort" onclick="hideContent(this)">Mort</h3>
+        <div>
+            <p>Le personnage est arrivé à un total de points de vie négatifs égal à sa valeur de Constitution ou une valeur de Constitution de 0, ou a directement été achevé par un sort, un effet ou des dégâts excessifs. La psyché du personnage quitte son enveloppe corporelle. On ne peut plus soigner un personnage mort que ce soit par des moyens ordinaires ou magiques, mais il peut être ramené à la vie par magie. Un corps sans vie se décompose normalement si on ne le préserve pas magiquement mais le sort qui le ramène à la vie la ramène à 0 point de vie dans un état stable.</p>
+        </div>
+
+        <h3 id="mourant" onclick="hideContent(this)">Mourant</h3>
+        <div>
+            <p>Le personnage est inconscient et en train de mourir. Une créature qui a un nombre de points de vie négatif et qui n’est pas stabilisée agonise. Une créature agonisante ne peut pas entreprendre la moindre action. À son tour à chaque round (en commençant par celui où il est tombé en dessous de 0 point de vie) et jusqu’à ce que sont état soit stable ou qu’il meure, le personnage doit faire un test de Constitution. Il subit un malus égal à son nombre de points de vie négatifs. Un personnage stabilisé n’a pas besoin de faire ce test. S’il le rate, il perd 1 point de vie. Une créature mourante meurt quand son nombre de points de vie négatifs égale sa valeur de Constitution.</p>
+        </div>
+
+        <h3 id="nauseeux" onclick="hideContent(this)">Nauséeux</h3>
+        <div>
+            <p>Souffrant de violentes douleurs abdominales, un personnage dans cet état est incapable d’attaquer, de lancer le moindre sort ou de maintenir l’effet de ceux qu’il a jetés précédemment, bref de faire quoi que ce soit nécessitant un minimum de concentration. Ses capacités d’action sont limitées aux déplacements.</p>
+        </div>
+
+        <h3 id="panique" onclick="hideContent(this)">Paniqué</h3>
+        <div>
+            <p>Un personnage paniqué lâche ce qu’il tient en main et s’enfuit au hasard en s’éloignant de la source de sa peur et sans s’approcher des autres sources de danger potentielles. Il ne peut effectuer aucune autre action. Il subit un malus de -2 aux jets de sauvegarde, ainsi qu’aux tests de compétence et de caractéristique. S’il se retrouve acculé, il se recroqueville sur lui-même sans pouvoir attaquer. Il peut se servir de ses pouvoirs ou de ses sorts pour s’enfuir (il y est même obligé si ceux-ci constituent la seule façon de s’enfuir).</p>
+        </div>
+
+        <h3 id="paralyse" onclick="hideContent(this)">Paralysé</h3>
+        <div>
+            <p>Incapable de bouger ou d’agir, figé sur place, le personnage a une valeur effective de Force, de Dextérité et d'Agilité de 0, mais peut tenter des actions mentales. Une créature en vol à ce moment ne peut plus battre des ailes et tombe. Un personnage qui nage peut se noyer. Il est possible d’entrer dans le même espace qu’une créature paralysée, alliée ou non, mais le traverser compte comme deux cases de déplacement.</p>
+            <p>Un personnage paralysé est sans défense.</p>
+        </div>
+
+        <h3 id="petrifie" onclick="hideContent(this)">Pétrifié</h3>
+        <div>
+            <p>Un personnage pétrifié a été changé en pierre. Il est tenu pour inconscient. Si la statue qu’il constitue n’est que légèrement lézardée ou si les morceaux cassés sont accolés à leur place quand on le retransforme en être de chair, son corps se reforme sans qu’il en souffre. Par contre, si la statue a été sérieusement abîmée (bras cassé et réduit en poussière ou oubliée par terre, etc.), le personnage sera marqué des mêmes blessures quand on le ramènera dans le monde des vivants. On doit alors définir les conséquences en termes de perte permanente de points de vie ou handicap.</p>
+        </div>
+
+        <h3 id="pris_au_depourvu" onclick="hideContent(this)">Pris au dépourvu</h3>
+        <div>
+            <p>Tout personnage n’ayant pas encore entamé d’action au cours d’un combat est automatiquement pris au dépourvu. Il perd son éventuel bonus de Agilité/Dextérité/Constitution pour les esquives/parades et n’a pas la possibilité de lancer une attaque d’opportunité.</p>
+        </div>
+
+        <h3 id="recroqueville" onclick="hideContent(this)">Recroquevillé sur soi-même</h3>
+        <div>
+            <p>Le personnage éprouve une telle terreur qu’il est dans l’incapacité de faire la moindre action. Il reçoit un malus de -5 aux parades/esquives</p>
+        </div>
+
+        <h3 id="saignement" onclick="hideContent(this)">Saignement</h3>
+        <div>
+            <p>La créature se met à saigner et subit des dommages au début de chaque round.</p>
+            <p>Il est possible d’arrêter l’hémorragie en réussissant un test de Medecine ou en utilisant un sort curatif. Il arrive parfois que le personnage subisse un saignement qui lui inflige des affaiblissements temporaires ou des diminutions permanentes de caractéristique. Ces dégâts ne se cumulent pas, sauf s’ils sont de nature différente. Lorsque deux sources infligent des hémorragies de même nature, appliquez le résultat le plus handicapant.</p>
+        </div>
+
+        <h3 id="sans_defense" onclick="hideContent(this)">Sans défense</h3>
+        <div>
+            <p>Un personnage peut se retrouver paralysé, immobilisé par un sort, ligoté, endormi, inconscient ou à la merci de ses ennemis d’une façon ou d’une autre. Un personnage sans défense possède une valeur effective d'Agilité de 0. Toute attaque de corps à corps lancée contre le personnage s’effectue à +4 au jet (ce qui revient à attaquer un adversaire à terre). Les attaques à distance ne profitent d’aucun bonus.</p>
+            <p>Pour 3 PA, un ennemi peut essayer d’achever le personnage à l’aide d’une arme de corps à corps. On peut aussi porter un coup de grâce à l’aide d’un arc ou d’une arbalète, à condition de se trouver à moins de 1,50 m de l’individu sans défense (c’est-à-dire d’occuper une position adjacente). L’agresseur touche automatiquement et l’attaque est considérée comme un coup critique. Même si la cible survit, elle doit effectuer avec succès un jet de Vigueur (malus équivalent au nombre de points de dégâts infligés) sous peine de succomber au choc. Tenter d’achever un ennemi sans défense provoque une attaque d’opportunité.</p>
+            <p>Les créatures invulnérables aux coups critiques le sont également contre les tentatives de coup de grâce.</p>
+        </div>
+
+        <h3 id="secoue" onclick="hideContent(this)">Secoué</h3>
+        <div>
+            <p>Le personnage reçoit un malus de -2 aux jets d’attaque et de sauvegarde, ainsi qu’aux tests de compétence et de caractéristique. Être secoué représente un état de terreur moins avancé qu’être effrayé ou paniqué.</p>
+        </div>
+
+        <h3 id="stable" onclick="hideContent(this)">Stable</h3>
+        <div>
+            <p>Un personnage qui était mourant mais qui a cessé de perdre des points de vie (et dont le total de points de vie est toujours négatif) est stable. Le personnage n’est plus mourant mais reste inconscient. S’il est devenu stable grâce à une assistance extérieure, il ne perd plus de points de vie. Chaque heure qui passe, il doit faire un jet de Constitution afin de reprendre ses esprits et de ne plus être que hors de combat (même si son total de points de vie reste négatif), en tenant compte d’un malus égal à son total de points de vie négatifs.</p>
+            <p>S’il est devenu stable sans aide extérieure, il risque de recommencer à perdre des points de vie. Chaque heure, il doit faire un jet de Constitution afin de rester stable (comme s’il recevait l’aide de quelqu’un), mais à chaque fois qu’il échoue, il perd 1 point de vie.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
