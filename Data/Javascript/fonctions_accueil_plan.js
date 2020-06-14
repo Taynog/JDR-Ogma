@@ -15,7 +15,7 @@ function displayTime(){
 
 function sendMail(){
     let mailto = document.getElementById("mail");
-    let mail = "mailto:tanguy.smodis@gmail.com?subject=" + "Retour sur Ogma";
+    let mail = "mailto:taynog.ogmarim@gmail.com?subject=" + "Retour sur Ogma";
     mailto.setAttribute("href",mail)
 }
 
