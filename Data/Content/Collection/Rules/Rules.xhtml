@@ -625,9 +625,10 @@
             <h2 onclick="hideContent(this)">Caractéristiques de départ et progression</h2>
             <div>
                 <p>Pour définir les caractéristiques de départ d'un personnage, on lance 2D6 et, on additionne les résultats des dés et on ajoute 4 (plus ou moins les bonus raciaux).</p>
+                <p>Les règles concernants les compétences de départ son a décider entre le MJ et ses joueurs selon l'histoire des personnages. Les joueurs peuvent demander au MJ de créer des traits particulier pour leur personnage et de définir des règles spécifiques.</p>
                 <p>Ces caractéristiques sont voués à s'améliorer avec le temps et l'entrainement, par exemple, entre deux aventures, un personnage peut tout à fait décider de dépenser son or pour s'entrainer en ville, selon l'endroit où il s'entraine, une de ses caractéristiques augmentera (chez les gardes pour la force, les voleurs ou un maitre d'arme pour la dextérité, etc...) tout dépend du choix du joueur.</p>
                 <p>Un personnage pourra aussi augmenter ses caractéritiques de façon plus naturelle, dans ce cas un caractéristique faible augmente plus rapidement qu'une autre déjà developpée. Un aventurier avec une éloquence de 7 qui parvient malgré tout à convaincre une personne très difficile à convaincre, pourra (avec l'accord du MJ) passer de 7 à 8 en éloquence. Cela vaut pour toute les autres caractéristiques, réussir un défi incroyablement difficile peut rendre un aventuirier plus doué.</p>
-                <p>Les compétences peuvent être apprises en passant du temps avec quelqu'un de qualifié dans le domaine, les dons peuvent également s'apprendre de cette manière, mais une action héroïque peut également accorder de façon permanente un don à un personnage.</p>
+                <p>Les compétences peuvent être apprises en passant du temps avec quelqu'un de qualifié dans le domaine.</p>
             </div>
             <h2 onclick="hideContent(this)">Richesse de départ</h2>
             <div>
@@ -688,19 +689,9 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td id="acrobaties">Acrobaties</td>
+                        <td id="acrobaties">>Acrobaties</td>
                         <td>Le personnage peut garder son équilibre lorsqu’il marche sur des surfaces étroites ou un sol traître sans faire de test. Il peut également se baisser, se retourner, sauter ou effectuer un roulé-boulé pour éviter les coups ou traverser certains obstacles.</td>
                         <td>Pas de jet pour conserver son équilibre<br/> AGI + 2 pour les tests de mouvement</td>
-                    </tr>
-                    <tr>
-                        <td id="ambidextrie">Ambidextrie</td>
-                        <td>Le personnage sait utiliser deux armes légères à la fois</td>
-                        <td>Pas de malus pour l'ambidextrie</td>
-                    </tr>
-                    <tr>
-                        <td id="armes_a_deux_mains">Armes à deux mains</td>
-                        <td>Le personnage sait utiliser sait manier une arme longue/lourde à deux mains</td>
-                        <td>Pas de malus pour le maniement à deux mains</td>
                     </tr>
                     <tr>
                         <td id="art_de_la_magie">Art de la magie</td>
@@ -710,7 +701,7 @@
                     <tr>
                         <td id="artisanat">Artisanat</td>
                         <td>Le personnage est entraîné à créer un type spécifique d’objets.</td>
-                        <td>Permet de créer des objets dans certains domaines</td>
+                        <td>Permet de créer des objets dans certains <a href="Rules.xhtml#domaines_artisanat">domaines</a></td>
                     </tr>
                     <tr>
                         <td id="bluff">Bluff</td>
@@ -720,26 +711,16 @@
                     <tr>
                         <td id="connaissances">Connaissances</td>
                         <td>Le personnage possède des connaissances dans un domaine spécifique, qui lui permettent de répondre à des questions simples ou complexes.</td>
-                        <td>Pas de jet de connaissances pour le domaine maitrisé</td>
-                    </tr>
-                    <tr>
-                        <td id="deguisement">Déguisement</td>
-                        <td>Le personnage sait comment changer d’apparence.</td>
-                        <td>PER - 5 au jet des observateurs si le personnage est déguisé</td>
+                        <td>Pas de jet de connaissances pour le <a href="Rules.xhtml#domaines_connaissances">domaine</a> maitrisé</td>
                     </tr>
                     <tr>
                         <td id="discretion">Discrétion</td>
                         <td>Le personnage sait comment éviter de se faire repérer, ce qui lui permet de tromper la surveillance des gardes ou encore de se cacher et de se déplacer en silence pour pouvoir ensuite attaquer par surprise.</td>
-                        <td>AGI + 3 pour se dissimuler<br/>Utilisation possible de la furtivité au combat</td>
+                        <td>AGI + 3 pour se dissimuler</td>
                     </tr>
                     <tr>
                         <td id="dressage">Dressage</td>
                         <td>Le personnage sait comment s’y prendre avec les animaux et peut leur enseigner des tours, les faire obéir à des ordres simples ou même les apprivoiser.</td>
-                        <td>/</td>
-                    </tr>
-                    <tr>
-                        <td id="equitation">Équitation</td>
-                        <td>Le personnage sait monter à cheval ou utiliser d’autres montures plus exotiques</td>
                         <td>/</td>
                     </tr>
                     <tr>
@@ -748,34 +729,14 @@
                         <td>AGI + 4 pour les tentatives d'escalades</td>
                     </tr>
                     <tr>
-                        <td id="estimation">Estimation</td>
-                        <td>Le personnage sait estimer la valeur monétaire des objets.</td>
-                        <td>/</td>
-                    </tr>
-                    <tr>
                         <td id="evasion">Évasion</td>
                         <td>Le personnage s’est entraîné pour pouvoir se libérer de liens et se soustraire aux étreintes lors d’une lutte.</td>
                         <td>DEX + 5 pour se libérer</td>
                     </tr>
                     <tr>
-                        <td id="explosifs">Explosif</td>
-                        <td>Le personnage sait fabriquer et utiliser des explosifs</td>
-                        <td>/</td>
-                    </tr>
-                    <tr>
                         <td id="filouterie">Filouterie</td>
                         <td>Le personnage s’est entraîné à agir comme un pickpocket, à dissimuler des armes et à faire toute une série d’autres choses sans se faire remarquer.</td>
                         <td>DEX + 3 pour les actions de filou<br/>Permet d'amuser la galerie(jongle, tour de pass-passe,...)</td>
-                    </tr>
-                    <tr>
-                        <td id="fin_gourmet">Fin gourmet</td>
-                        <td>Le personnage peut manger presque n'importe quoi sans risquer un empoisonnement ou une maladie</td>
-                        <td>/</td>
-                    </tr>
-                    <tr>
-                        <td id="hors_la_loi">Hors-la-loi</td>
-                        <td>Le personnage a baigné dans les environnements criminels et connait les ficelles du métier de contrebandier</td>
-                        <td>+ 2 aux jets liés aux actions illégales.</td>
                     </tr>
                     <tr>
                         <td id="intimidation">Intimidation</td>
@@ -784,7 +745,7 @@
                     </tr>
                     <tr>
                         <td id="linguistique">Linguistique</td>
-                        <td>Le personnage s’est entraîné à bien manier les mots, à la fois oralement et par écrit. Il peut parler plusieurs langages et déchiffrer pratiquement n’importe quelle langue s’il dispose d’assez de temps. Il peut également contrefaire des documents écrits et repérer les faux en écriture.</td>
+                        <td>Le personnage s’est entraîné à bien manier les mots, à la fois oralement et par écrit. Il peut parler plusieurs <a href="Rules.xhtml#langages">langages</a> et déchiffrer pratiquement n’importe quelle langue s’il dispose d’assez de temps. Il peut également contrefaire des documents écrits et repérer les faux en écriture.</td>
                         <td>/</td>
                     </tr>
                     <tr>
@@ -803,24 +764,19 @@
                         <td>INT + 5 pour soigner un personnage</td>
                     </tr>
                     <tr>
-                        <td id="profession">Profession</td>
-                        <td>Le personnage connaît les ficelles d’une profession en particulier.</td>
-                        <td>/</td>
-                    </tr>
-                    <tr>
                         <td id="psychologie">Psychologie</td>
                         <td>Le personnage sait comment repérer les mensonges et percevoir les intentions véritables des individus qu’il croise.</td>
                         <td>PER + 4 pour détecter un mensonge</td>
                     </tr>
                     <tr>
                         <td id="representation">Représentation</td>
-                        <td>Le personnage connaît un ou plusieurs arts du spectacle.</td>
+                        <td>Le personnage connaît un ou plusieurs <a href="Rules.xhtml#arts_du_spectacles">arts du spectacle</a>.</td>
                         <td>/</td>
                     </tr>
                     <tr>
                         <td id="sabotage">Sabotage</td>
                         <td>Le personnage sait comment désamorcer les pièges et crocheter les serrures. Cette compétence lui permet également de saboter des objets mécaniques simples comme les catapultes, les roues d’un chariot et les portes.</td>
-                        <td>DEX + 3 pour crocheter une serrure, désamorcer un piège<br/>DEX + 4 pour saboter quelquechose</td>
+                        <td>DEX + 4 pour crocheter une serrure, désamorcer un piège, saboter un objet</td>
                     </tr>
                     <tr>
                         <td id="survie">Survie</td>
@@ -848,14 +804,8 @@
                         <li>Religion (Inkarnaïs)</li>
                     </ul>
 
-                    <br/>
-
-                    <h4 id="professions">Professions les plus courantes</h4>
-                    <p>architecte, avocat, berger, bibliothécaire, boucher, boulanger, brasseur, bûcheron, clerc, conducteur d’attelage, courtisan, cuisinier, fermier, gladiateur, herboriste, ingénieur, jardinier, joueur, maître d’écurie, marchand, marin, meunier, mineur, pêcheur, porteur, sage-femme, scribe, soldat, tanneur, tavernier et trappeur</p>
-                    <br/>
                     <h4 id="domaines_artisanat">Domaines d'Artisanat</h4>
                     <p>alchimie, arcs, calligraphie, menuiserie, maçonnerie, joaillerie, livres, mécanique, navires, peintures, pièges, poteries, serrures, maroquinerie, ferronerie, couture, travail du verre.</p>
-                    <br/>
 
                     <h4 id="arts_du_spectacles">Arts du spectacles (Représentation)</h4>
                     <ul>
@@ -945,7 +895,7 @@
                         <td>/</td>
                         <td class="sens">+2</td>
                         <td>+2</td>
-                        <td><span class="underline">Sens affutés :</span> +2 PER, +2 aux jets liés à l'odorat et l'ouïe<br/><span class="underline">Vision féline :</span> Vision nocturne<br/><span class="underline">Marchand né :</span> Compétence Estimation et Marchandage</td>
+                        <td><span class="underline">Sens affutés :</span> +2 PER, +2 aux jets liés à l'odorat et l'ouïe<br/><span class="underline">Vision féline :</span> Vision nocturne<br/><span class="underline">Marchand né :</span> Compétence Marchandage</td>
                     </tr>
                     <tr>
                         <td colspan="2">Kanta</td>

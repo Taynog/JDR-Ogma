@@ -101,12 +101,46 @@
 <div id="main" class="main" style="margin-left: 200px">
     <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1>Bestiaire</h1>
-
+    <h3 id="" onclick="hideContent(this)"></h3>
+    <div class="hidden">
+        <div class="txt_bestiaire">
+            <img src="../../../Images/Bestiary/aigle_picture.jpg" alt="aigle" class="img_bestiaire"/>
+            <p><i></i></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p><span class="big_underline">Caractéristiques</span><br/>
+                <strong> For </strong>
+                <strong> Dex </strong>
+                <strong> Agi </strong>
+                <strong> Con </strong>
+                <strong> Int </strong>
+                <strong> Per </strong>
+                <strong> Vol </strong>
+                <strong> Elo </strong>
+                <br/>
+                <strong> Compétences </strong>Vol (Agi + 8 en vol)<br/>
+                <strong> Modificateurs raciaux </strong>Vue perçante (PER + 5 vision)
+            </p>
+            <p><span class="big_underline">Défense</span><br/>
+                <strong> PV </strong><strong> Armure </strong>
+            </p>
+            <p><span class="big_underline">Attaque</span><br/>
+                <strong> Vitesse </strong><br/>
+                <strong> Corps à Corps </strong>
+            </p>
+            <p><span class="big_underline">Écologie</span><br/>
+                <strong> Environnement </strong><br/>
+                <strong> Organisation sociale </strong><br/>
+                <strong> Trésor </strong>
+            </p>
+        </div>
+    </div>
     <h1 id="aberrations" onclick="hideContent(this)">Aberrations</h1>
     <div>
         <p>Les aberrations possèdent une anatomie bizarre, des capacités étranges, un mode de pensée hors-normes ou plusieurs de ces caractéristiques.</p>
-        <p>Les aberrations possèdent les traits suivants (sauf mention contraire dans leur profil) :</p>
-        <ul>
+        <p onclick="hideContent(this)">Les aberrations possèdent les traits suivants (sauf mention contraire dans leur profil) :</p>
+        <ul class="hidden">
             <li>Vision dans le noir à 18 m.</li>
             <li>Formée au maniement de leurs armes naturelles. Les aberrations qui possèdent une forme vaguement humanoïde sont formées au maniement de toutes les armes courantes et des armes citées dans leur description.</li>
             <li> Formées au maniement des armures du type cité dans leur profil (légères,intermédiaires ou lourdes) et des types plus légers.Les aberrations qui ne portent aucune armure dans leur profil ne disposent d'aucune formation en matière de port d'armures. Les aberrations qui sont formées au port d'au moins un type d'armures le sont également à l'utilisation des boucliers.</li>
@@ -116,8 +150,9 @@
 
     <h1 id="betes" onclick="hideContent(this)">Bêtes</h1>
     <div>
-        <p>Les animaux sont des créatures vivantes et non humaines. Il s'agit le plus souvent de vertébrés dénués de pouvoirs magiques et sans propension au développement d'un langage et d'une culture.</p>
-        <ul>
+        <p>Les bêtes sont des créatures vivantes et non humaines. Il s'agit le plus souvent de vertébrés dénués de pouvoirs magiques et sans propension au développement d'un langage et d'une culture.</p>
+        <p onclick="hideContent(this)">Les bêtes possèdent les traits suivants (sauf mention contraire dans leur profil) :</p>
+        <ul class="hidden">
             <li>valeur d'Intelligence égale à 1 ou 2 (aucune créature avec une Intelligence supérieure ou égale à 3 ne peut être un animal).</li>
             <li>Vision nocturne.</li>
             <li>Formés uniquement au maniement de leurs armes naturelles. Les herbivores qui ne combattent pas considèrent leurs attaques naturelles comme des attaques secondaires ; celles-ci subissent un malus de -5 aux jets d'attaque et un ajustement de dégâts correspondant à la moitié de leur modificateur de Force.</li>
@@ -125,49 +160,13 @@
             <li>Les animaux respirent, mangent et dorment.</li>
         </ul>
 
-        <h3 id="aigle" onclick="hideContent(this)">Aigle</h3>
-        <div>
-            <div class="txt_bestiaire">
-                <img src="../../../Images/Bestiary/aigle_picture.jpg" alt="aigle" class="img_bestiaire"/>
-                <p><i>Ce magnifique oiseau de proie est couvert de plumes sombres sauf au sommet de la tête, où elles sont d’une blancheur éclatante.</i></p>
-                <p>Ces prédateurs, qui figurent parmi les rapaces les plus magnifiques, attrapent les poissons qui nagent dans les rivières et les lacs, fondent sur les rongeurs et les petits mammifères qui vivent dans les prairies en haute altitude et s’emparent parfois de jeunes caprins qui pensaient être bien en sécurité en haut des falaises rocheuses.</p>
-                <p>Comme tous les oiseaux de proie, les aigles possèdent des serres puissantes et des becs crochus parfait pour déchirer les chairs. Leur vue aiguisée leur permet de repérer les proies lointaines et ils chassent généralement en faisant de larges cercles au-dessus du sol.</p>
-                <p>Les aigles construisent de grands nids au sommet des arbres les plus grands ou sur les roches escarpées des falaises abruptes. Au cours de la saison de la reproduction, ils pondent deux oeufs mais généralement un seul aiglon survit, car le plus fort des deux tue et dévore l’autre.</p>
-                <p>Les aigles pèsent entre 4 et 7,50 kg et possèdent une envergure pouvant aller jusqu’à 2,10 mètres chez certaines espèces.</p>
-                <p><span class="big_underline">Caractéristiques</span><br/>
-                    <strong> For </strong>10
-                    <strong> Dex </strong>15
-                    <strong> Agi </strong>8
-                    <strong> Con </strong>12
-                    <strong> Int </strong>2
-                    <strong> Per </strong>10
-                    <strong> Vol </strong>8
-                    <strong> Elo </strong>6<br/>
-                    <strong> Dons </strong>attaque en finesse<br/>
-                    <strong> Compétences </strong>Vol (Agi + 8 en vol)<br/>
-                    <strong> Modificateurs raciaux </strong>Vue perçante (PER + 5 vision)
-                </p>
-                <p><span class="big_underline">Défense</span><br/>
-                    <strong> PV </strong>5(1d8 +1)<strong> Armure </strong>0
-                </p>
-                <p><span class="big_underline">Attaque</span><br/>
-                    <strong> Vitesse </strong>3m, vol 24m<br/>
-                    <strong> Corps à Corps </strong>serres 2d4, morsure 1d6
-                </p>
-                <p><span class="big_underline">Écologie</span><br/>
-                    <strong> Environnement </strong>montagnes tempérées<br/>
-                    <strong> Organisation sociale </strong>solitaire ou couple<br/>
-                    <strong> Trésor </strong>aucun
-                </p>
-            </div>
-        </div>
     </div>
 
     <h1 id="creatures_artificielles" onclick="hideContent(this)">Créatures artificielles</h1>
     <div>
         <p>Les créatures artificielles sont des objets animés ou des créatures construites de toutes pièces.</p>
-        <p>Les créatures artificielles possèdent les traits suivant (sauf mention contraire dans leur profil).</p>
-        <ul>
+        <p onclick="hideContent(this)">Les créatures artificielles possèdent les traits suivant (sauf mention contraire dans leur profil).</p>
+        <ul class="hidden">
             <li>Pas de valeur de Constitution. Tous les jets qui dépendent normalement de la Constitution fonctionnent comme si ces créatures avaient une constitution de 10 (ni bonus ni malus).</li>
             <li>Vision dans le noir à 18 m.</li>
             <li>Vision nocturne</li>
@@ -186,8 +185,8 @@
     <h1 id="creatures_magiques" onclick="hideContent(this)">Créatures magiques</h1>
     <div>
         <p>Les créatures magiques ressemblent aux animaux mais leur valeur d'Intelligence peut être supérieure à 2 (auquel cas, elles connaissent au moins un langage, sans pour autant pouvoir forcément le parler). Les créatures magiques possèdent généralement des capacités surnaturelles ou extraordinaires mais parfois, elles se distinguent simplement par une apparence ou des coutumes étranges.</p>
-        <p>Les créatures magiques possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul>
+        <p onclick="hideContent(this)">Les créatures magiques possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
+        <ul class="hidden">
             <li>Vision dans le noir à 18 m.</li>
             <li>Vision nocturne.</li>
             <li>Formées seulement au maniement de leurs armes naturelles.</li>
@@ -196,22 +195,11 @@
         </ul>
     </div>
 
-    <h1 id="inkarnai" onclick="hideContent(this)">Inkarnaï</h1>
-    <div>
-        <p>Les Extérieurs sont constitués en partie ou en totalité d'essence (mais pas forcément de matériaux) provenant d'un autre plan que le plan Matériel. Certaines créatures appartiennent à un autre type lors de leur création puis deviennent des Extérieurs lorsqu'elles atteignent un niveau supérieur (ou inférieur) d'existence spirituelle. Les Extérieurs partagent les attributs suivants.</p>
-        <p>Les Extérieurs possèdent les traits suivants (sauf mention contraire dans leur profil) :</p>
-        <ul>
-            <li>Vision dans le noir à 18 m.</li>
-            <li>Formés au maniement de toutes les armes courantes et de toutes les armes de guerre ainsi qu'au maniement de toutes les armes citées dans leur profil.</li>
-            <li>Formés au port des armures du type cité dans leur profil (légères, intermédiaire, ou lourdes) Les Extérieurs qui ne portent aucune armure dans leur profil ne disposent d'aucune formation en matière de port d'armures. Les Extérieurs qui sont formés au port d'au moins un type d'armure le sont également à l'utilisation des boucliers.</li>
-        </ul>
-    </div>
-
     <h1 id="humanoides" onclick="hideContent(this)">Humanoïdes</h1>
     <div>
         <p>Les humanoïdes possèdent généralement deux bras, deux jambes et une tête, ou encore un torse semblable à celui des humains, des bras et une tête. Ils n'ont peu ou pas de capacités surnaturelles ou extraordinaires, mais la plupart d'entre eux peuvent parler et possèdent des sociétés bien développées.</p>
-        <p>Les humanoïdes possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul>
+        <p onclick="hideContent(this)">Les humanoïdes possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
+        <ul class="hidden">
             <li>Formés au maniement de toutes les armes courantes et de toutes les armes citées dans leur profil.</li>
             <li>Formés au port des armures du type cité dans leur profil (légères, intermédiaires ou lourdes). Les humanoïdes qui sont formés au port d'au moins un type d'armures le sont également à l'utilisation des boucliers.</li>
             <li>Les humanoïdes respirent, mangent et dorment.</li>
@@ -220,9 +208,9 @@
 
     <h1 id="humanoides_monstrueux" onclick="hideContent(this)">Humanoïdes monstrueux</h1>
     <div>
-          <p>Les humanoïdes monstrueux ressemblent aux humanoïdes mais possèdent des caractéristiques monstrueuses ou animales ainsi que, bien souvent des capacités magiques.</p>
-        <p>Les humanoïdes monstrueux possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul>
+        <p>Les humanoïdes monstrueux ressemblent aux humanoïdes mais possèdent des caractéristiques monstrueuses ou animales ainsi que, bien souvent des capacités magiques.</p>
+        <p onclick="hideContent(this)">Les humanoïdes monstrueux possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
+        <ul class="hidden">
             <li>Vision dans le noir à 18 m.</li>
             <li>Formés au maniement de toutes les armes courantes et de toutes les armes citées dans leur profil.</li>
             <li>Formés au port des armures du type cité dans leur profil (légères, intermédiaires ou lourdes). Les humanoïdes monstreux qui sont formés au port d'au moins un type d'armures le sont également à l'utilisation des boucliers.</li>
@@ -230,11 +218,21 @@
         </ul>
     </div>
 
+    <h1 id="karnarim" onclick="hideContent(this)">Karnarim</h1>
+    <div>
+        <p>Les Karnarim sont constitués en partie ou en totalité d'essence (mais pas forcément de matériaux) provenant du plan de Karnaï.</p>
+        <p onclick="hideContent(this)">Les Karnarim possèdent les traits suivants (sauf mention contraire dans leur profil) :</p>
+        <ul class="hidden">
+            <li>Vision dans le noir à 18 m.</li>
+            <li>Formés au maniement de toutes les armes courantes et de toutes les armes de guerre ainsi qu'au maniement de toutes les armes citées dans leur profil.</li>
+            <li>Formés au port des armures du type cité dans leur profil (légères, intermédiaire, ou lourdes) Les Extérieurs qui ne portent aucune armure dans leur profil ne disposent d'aucune formation en matière de port d'armures. Les Extérieurs qui sont formés au port d'au moins un type d'armure le sont également à l'utilisation des boucliers.</li>
+        </ul>
+    </div>
     <h1 id="morts_vivants" onclick="hideContent(this)">Morts-vivants</h1>
     <div>
         <p>Les morts-vivants sont des créatures qui ont cessé de vivre et ont été animées par des forces spirituelles ou surnaturelles.</p>
-        <p>Les morts-vivants possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul>
+        <p onclick="hideContent(this)">Les morts-vivants possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
+        <ul class="hidden">
             <li>Pas de valeur de Constitution. Les morts-vivants utilisent leur Volonté pour calculer leurs points de vie, leur jets de Vigueur et toutes les capacités spéciales qui dépendent normalement de la Constitution.</li>
             <li>Vision dans le noir à 18 m.</li>
             <li>Immunité contre tous les effets mentaux (charmes, coercitions, effets de moral, mirages et fantasmes).</li>
@@ -252,8 +250,8 @@
     <h1 id="plantes" onclick="hideContent(this)">Plantes</h1>
     <div>
         <p>Ce type rassemble les créatures végétales.</p>
-        <p>Les plantes possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul>
+        <p onclick="hideContent(this)">Les plantes possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
+        <ul class="hidden">
             <li>Vision nocturne.</li>
             <li>Immunités contre tous les effets mentaux (charmes, coercitions, effets de moral, mirages et fantasmes).</li>
             <li>Immunité contre la paralysie, le poison, la métamorphose, les effets de sommeil et l’étourdissement.</li>
@@ -266,8 +264,8 @@
     <h1 id="vermine" onclick="hideContent(this)">Vermine</h1>
     <div>
         <p>Ce type de créature regroupe les insectes, les arachnides, les arthropodes, les vers et autres invertébrés du même genre.</p>
-        <p>Les vermines possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul>
+        <p onclick="hideContent(this)">Les vermines possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
+        <ul class="hidden">
             <li>Dénuées d'Intelligence : pas de valeur d'Intelligence et immunité contre tous les effets mentaux (charmes, coercition, fantasmes, mirages et effets de moral). Les créatures ressemblant à des vermines qui possèdent une valeur d'Intelligence sont généralement des animaux ou des créatures magiques (en fonction de leurs autres capacités).</li>
             <li>Vision dans le noir à 18 m.</li>
             <li>Formées uniquement au maniement de leurs armes naturelles.</li>
