@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Types d'actions</title>
+    <meta http-equiv="Content-Script-Type" content="application/javascript"/>
+    <script type="application/javascript" src="../../../Javascript/fonctions_accueil_plan.js"> </script>
+    <link rel="stylesheet" type="text/css" title="style_plan" href="../../../Styles/common_rules.css"/>
+</head>
+<body>
+<div id="mySidenav" class="sidenav" style="display: block">
+    <ul class="sidenav ">
+        <li><span class="index"><a href="../../../../index.xhtml">Accueil</a></span></li>
+        <li><span class="partie shown" onclick="hideContent(this)">Lore</span>
+            <ul>
+                <li><span class="medium shown"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium shown"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium shown"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier shown" onclick="hideContent(this)">Races/Factions</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Azuma.xhtml">Azuma</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sever.xhtml">Sever</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tuskizi.xhtml">Tuskizi</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Magiques</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Sakha.xhtml">Sakha</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sihir.xhtml">Sihir</a></span></li>
+                                <li><span class="little"><a href="../Factions/Steinn.xhtml">Steinn</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Bestiales</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Chono.xhtml">Chono</a></span></li>
+                                <li><span class="little"><a href="../Factions/Kanta.xhtml">Kanta</a></span></li>
+                                <li><span class="little"><a href="../Factions/Mushuk.xhtml">Mushuk</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sarpa.xhtml">Sarpa</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tori.xhtml">Tori</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="partie shown" onclick="hideContent(this)">Jeu de Rôle</span>
+            <ul>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Combat">Combat</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Magie">Magie</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Survie">Survie</a></span></li>
+                    </ul></li>
+
+                <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#creation_perso">Création personnage</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Competences">Compétences</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#table_race">Traits raciaux</a></span></li>
+                    </ul></li>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#rupture">Rupture</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Armes">Armes</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Armures">Armures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#materiel">Matériel</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
+                            </ul></li>
+                        <li><span class="medium"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="medium"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
+                    </ul></li>
+            </ul>
+        </li>
+        <li><span class="nav_ajout"><a href="../Rules/Rules.xhtml#form_ajout">Une proposition ?</a></span></li>
+    </ul>
+</div>
+<div id="main" class="main" style="margin-left: 200px">
+    <h1 id="simple" onclick="hideContent(this)">Actions simples</h1>
+    <div>
+        <h2 onclick="hideContent(this)">Attaquer</h2>
+        <div>
+            <p>Porter une attaque est une action simple</p>
+            <h3 id="atq_cac" onclick="hideContent(this)">Attaque au corps-à-corps</h3>
+            <div>
+                <p>La plupart des armes de corps à corps permettent de frapper un adversaire distant de 1 m ou moins (on considère ces ennemis comme étant adjacents au personnage). Certaines armes offrent toutefois une plus grande allonge. Ces armes, dites « à allonge », permettent en général de toucher un adversaire distant de 2 m.</p>
+            </div>
+
+            <h3 id="atq_mains_nues" onclick="hideContent(this)">Attaques à mains nues</h3>
+            <div>
+                <p>Frapper des poings, des pieds ou de la tête revient à faire une attaque de corps à corps à quelques exceptions près.</p>
+                <p><span class="big_underline">Attaques d’opportunité</span>L’attaque à mains nues provoque une attaque d’opportunité de la part de la cible à condition qu’elle soit armée. Cette attaque d’opportunité a lieu avant l’attaque qui la provoque. Une attaque à mains nues ne provoque pas d’attaque d’opportunité de la part des autres adversaires contrairement au tir à l’arc. Il n’y a aucun risque à attaquer à mains nues un adversaire qui ne porte pas d’arme de corps à corps. Un personnage ne peut pas porter d’attaques d’opportunité à mains nues.</p>
+                <p><span class="big_underline">Être armé à mains nues</span>Certains personnages ou monstres sont parfois considérés comme armés même lorsqu’ils se battent à mains nues. C’est le cas des personnages dotés du don Science du combat à mains nues, des lanceurs de sorts qui lancent un sort de contact ou des monstres qui combattent avec des armes naturelles.</p>
+                <p>Cette distinction vaut aussi bien pour l’attaque que pour la défense (le personnage peut donc porter des attaques d’opportunité).</p>
+                <p><span class="big_underline">Dégâts des attaques à mains nues</span>Les attaques à mains nues d’une créature de taille M infligent 2d4 points de dégâts (plus le modificateur de Force, comme à l’accoutumée). Celles d’une créature de taille P infligent 2d3 points de dégâts et celles d’une créature de taille G 2d6 points. Les dégâts infligés à mains nues sont toujours considérés comme non-létaux.</p>
+                <p><span class="big_underline">Infliger des dégâts létaux</span>Un personnage peut déclarer vouloir infliger des dégâts létaux à mains nues avant son attaque, mais il subit alors un malus de -4 au jet d’attaque. Un personnage doté du don Science du combat à mains nues peut infliger des dégâts létaux ou non-létaux à mains nues sans subir de malus au jet d’attaque. </p>
+            </div>
+
+            <h3 id="atq_distance" onclick="hideContent(this)">Attaques à distances</h3>
+            <div>
+                <p>Le personnage peut utiliser des armes de jet ou à projectiles contre toute cible qui se trouve à portée et dont la ligne de mire est dégagée.</p>
+                <p><span class="big_underline">Tir dans le tas</span>Quand le personnage utilise une arme de jet ou à projectiles sur un adversaire qui se bat au corps à corps avec un compagnon, il subit un malus de -4 au jet d’attaque. Dans ce cas de figure, on considère que deux individus sont au corps à corps s’ils sont ennemis et si l’un des deux contrôle l’espace de l’autre (un personnage inconscient ou immobilisé est donc considéré au corps à corps uniquement s’il se fait attaquer.) </p>
+                <p>Si la créature ciblée par le personnage (ou la partie de la créature qu’il cible, si c’est une immense créature) est à plus de 3 m de l’allié le plus proche, le malus de -4 ne s’applique pas, même si la cible est engagé au corps à corps grâce à son allonge supérieure. Si la cible est de deux catégories de taille de plus que les personnages amis, il n’y a pas de malus.</p>
+                <p><span class="big_underline">Tir de précision</span>Un personnage possédant le don Tir de précision ne tient pas compte de ce malus. </p>
+            </div>
+
+            <h3 id="atq_naturelle" onclick="hideContent(this)">Attaques naturelles</h3>
+            <div>
+                <p>Les attaques portées avec des armes naturelles, comme les crocs ou les griffes, sont considérées comme des attaques de corps à corps que la créature peut faire contre n’importe quel ennemi à portée (généralement à 1 m). Ces attaques emploient le <a href="Types_actions.xhtml#atq_a_outrance">bonus d’attaque à outrance</a> et infligent des dégâts en fonction de leur type (plus le modificateur de Force, comme à l’accoutumée). Si le personnage n’a qu’une attaque (comme une morsure mais pas deux attaques de griffes) il peut ajouter 1,5 fois son bonus de Force aux jets de dégâts pour cette attaque.</p>
+                <p>Le personnage peut combiner des attaques avec des armes naturelles à des attaques avec des armes de corps à corps et des attaques à mains nues, tant qu’il utilise un membre différent pour chaque attaque. Par exemple, il ne peut pas faire une attaque de griffes avec la main qui lui sert à faire une attaque à l’épée longue. Ce genre de suite d'attaques emploie le <a href="Types_actions.xhtml#atq_a_outrance">bonus d’attaque à outrance</a> et les règlent qui vont avec.</p>
+            </div>
+
+            <h3 id="atq_multiple" onclick="hideContent(this)">Attaques multiples</h3>
+            <div>
+                <p>Un personnage disposant de plusieurs attaques par round doit choisir l’<a href="Types_actions.xhtml#atq_a_outrance">attaque à outrance</a> s’il veut bénéficier de toutes ses attaques. Sinon, il ne peut en faire qu’une.</p>
+            </div>
+
+            <h3 id="combattre_sur_la_defensive" onclick="hideContent(this)">Combattre sur la défensive</h3>
+            <div>
+                <p>Un personnage peut choisir de combattre sur la défensive lorsqu'il attaque. Dans ce cas, il subit un malus de -4 sur toutes ses attaques du round mais bénéficie alors d’un bonus de +2 à ses esquives et parades jusqu'au début de son prochain tour.</p>
+            </div>
+        </div>
+
+        <h2 id="activer_objet_magique" onclick="hideContent(this)">Activer un objet magique</h2>
+            <div>
+                <p>La plupart des objets magiques fonctionnent en permanence, mais certains doivent être activés. À moins qu’il n’en soit précisé autrement, le processus d’activation requiert une action simple.</p>
+                <p>Activer un objet magique à fin d’incantation revient effectivement à lancer un sort. Le personnage doit rester concentré et s’expose à des attaques d’opportunité. Le sort est perdu si le personnage se laisse distraire. Il peut tenter d’activer son objet sur la défensive, comme s’il lançait un sort.</p>
+            </div>
+
+        <h2 id="lancer_un_sort">Lancer un sort</h2>
+        <p>La plupart des sorts du premier cercle nécessitent une action simple pour être lancés. On peut lancer un tel sort avant ou après une action de mouvement.</p>
+        <div>
+            <h3 id="concentration" onclick="hideContent(this)">Concentration</h3>
+            <div>
+                <p>Le personnage doit se concentrer pour lancer un sort du deuxième cercle ou supérieur. S’il se trouve dans l’incapacité de le faire, il ne peut pas utiliser la magie. S’il se laisse déconcentrer en pleine incantation, il doit réussir un test de Volonté ou perdre son sort. Le malus du test dépend de la source de distraction. En cas d’échec, le sort est perdu.</p>
+            </div>
+
+            <h3 id="maintenir_effet_sort" onclick="hideContent(this)">Maintenir l’effet d’un sort</h3>
+            <div>
+                <p>Certains sorts fonctionnent uniquement tant que leur lanceur continue de se concentrer, ce qui constitue une action simple qui ne déclenche pas d’attaque d’opportunité. Tout ce qui peut distraire un personnage en pleine incantation risque de briser la concentration nécessaire pour maintenir l’effet du sort. Si le personnage est déconcentré, le sort se dissipe aussitôt.</p>
+            </div>
+
+            <h3 id="opportunite_lancer_sorts" onclick="hideContent(this)">Attaques d’opportunité</h3>
+            <div>
+                <p>En règle générale, lancer un sort provoque une attaque d’opportunité de la part des adversaires qui menacent le personnage. Si ce dernier est blessé par une attaque d’opportunité, il doit réussir un test de Volonté dépendant du cercle du sort et des dégâts encaissés sous peine de perdre son sort. Les sorts qui ne nécessitent qu’une action libre pour être lancés ne provoquent pas d’attaque d’opportunité.</p>
+            </div>
+
+            <h3 id="incatation_sur_defensive" onclick="hideContent(this)">Incantation sur la défensive</h3>
+            <div>
+                <p>Lancer un sort sur la défensive ne provoque pas d’attaque d’opportunité. Par contre, cela nécessite un test de Volonté avec un malus de 5. Si le personnage le rate, le sort est perdu.</p>
+            </div>
+
+            <h3 id="retenir_sort" onclick="hideContent(this)">Retenir un sort</h3>
+            <div>
+                <p>Si le personnage ne veut pas décharger le sort au cours du round où il a prononcé l’incantation, il peut le retenir indéfiniment.</p>
+            </div>
+
+            <h3 id="mettre_terme_sort" onclick="hideContent(this)">Mettre un terme à un sort</h3>
+            <div>
+                <p>Mettre un terme à un sort actif est une action simple qui ne provoque pas d’attaque d’opportunité.</p>
+            </div>
+        </div>
+
+        <h2 id="commencer_finir_action_complexe">Commencer ou finir une action complexe</h2>
+        <div>
+            <p>Cette action simple permet de débuter une action complexe et de la terminer au round suivant en utilisant une autre action simple. Cette action ne permet pas de commencer ou de terminer une attaque à outrance, une charge, une course ou une retraite.</p>
+        </div>
+
+        <h2 id="defense_totale">Défense totale</h2>
+        <div>
+            <p>Un personnage peut consacrer une action simple à sa défense, ce qui lui confère un bonus de +4 à la parade et à l'esquive jusqu'à son prochain tour. Le personnage ne peut pas cumuler une défense totale avec un combat sur la défensive ou avec le don Expertise du combat. Un personnage en défense totale ne peut pas faire d’attaques d’opportunité.</p>
+        </div>
+    </div>
+
+    <h1 id="mouvement" onclick="hideContent(this)">Actions de mouvement</h1>
+    <div>
+        <h2 id="deplacement" onclick="hideContent(this)">Déplacement</h2>
+        <div>
+            <p>L’action de mouvement la plus courante consiste à se déplacer sur une distance égale à sa vitesse. Si le personnage effectue une action de ce type pendant son tour, il ne peut pas faire de <a href="Types_actions.xhtml#pas_de_placement">pas de placement</a>.</p>
+            <p>La plupart des formes de déplacement utilisent ce type d’action, y compris l’escalade (à un quart de la vitesse de base) et la nage (à un quart de la vitesse de base).</p>
+            <p><span class="big_underline">Escalade accélérée</span>Le personnage peut grimper à la moitié de sa vitesse de base lors d’une action de mouvement avec un malus de -5 au jet d'Agilité. </p>
+            <p><span class="big_underline">Ramper</span>Un personnage peut ramper sur 1 m lors d’une action de mouvement. Il s’expose alors à une attaque d’opportunité de la part de tous les adversaires qui le menacent, en tout point de son déplacement. </p>
+        </div>
+
+        <h2 id="dégainer_arme" onclick="hideContent(this)">Dégainer ou rengainer une arme</h2>
+        <div>
+            <p>Une action de mouvement permet de dégainer une arme pour se battre avec ou de la ranger pour avoir une main libre. Cette action s’applique aussi à des objets assimilés aux armes et rangés à portée de main, comme les baguettes. Par contre, si une arme ou un objet similaire est rangé au fond d’un sac ou dans un autre endroit difficile d’accès, il faut une action du type <a href="Types_actions.xhtml#manipuler_objet">manipuler un objet</a> pour le récupérer.</p>
+            <p>Si le personnage est formé avec cette arme, il peut dégainer une arme par une action libre combinée à un déplacement normal. S’il dispose du don Combat à deux armes, il peut dégainer deux armes légères ou à une main aussi rapidement que s’il en dégainait une seule.</p>
+            <p>Une action libre suffit pour rechercher une munition d’arme à distance.</p>
+        </div>
+
+        <h2 id="manipuler_objet" onclick="hideContent(this)">Manipuler un objet</h2>
+        <div>
+            <p>Dans la plupart des cas, déplacer ou manipuler un objet est une action de mouvement.</p>
+            <p>Cela permet de récupérer un objet dans un sac ou de l’y ranger, de ramasser un objet à terre, de déplacer un objet lourd ou d’ouvrir une porte.</p>
+        </div>
+
+        <h2 id="monter_selle" onclick="hideContent(this)">Monter ou descendre de selle</h2>
+        <div>
+            <p>Une action de mouvement est nécessaire pour monter ou descendre de sa monture.</p>
+            <p><span class="big_underline">Se mettre en selle ou mettre pied à terre rapidement</span>Le personnage peur se mettre en selle ou mettre pied à terre par une action libre, à condition de réussir un test d’Agilité avec un malus de 5. S’il rate ce test, cela lui demande automatiquement une action de mouvement (le personnage ne peut pas tenter cette manœuvre sans avoir au moins une action de mouvement disponible au cours du round). </p>
+        </div>
+
+        <h2 id="preparer_bouclier" onclick="hideContent(this)">Préparer ou détacher un bouclier</h2>
+        <div>
+            <p>Le personnage utilise une action de mouvement pour s’attacher un bouclier au bras, ou pour le détacher et le lâcher un bouclier afin d’avoir une main libre. Si le personnage est formé à l'utilisation des boucliers, il peut préparer ou détacher un bouclier par une action libre combinée à un déplacement normal.</p>
+            <p>Le personnage peut lâcher un bouclier tenu en main (s’il n’est pas attaché) par une action libre.</p>
+        </div>
+
+        <h2 id="se_relever" onclick="hideContent(this)">Se relever</h2>
+        <div>
+            <p>Un personnage à terre peut se relever par une action de mouvement qui provoque une attaque d’opportunité.</p>
+        </div>
+    </div>
+
+    <h1 id="complexe" onclick="hideContent(this)">Actions complexes</h1>
+    <div>
+        <h2 id="atq_a_outrance" onclick="hideContent(this)">Attaquer à outrance</h2>
+        <div>
+            <p>Si le personnage a droit à plusieurs attaques par round parce qu’il combat à l’aide de deux armes ou d’une arme double ou pour toute autre raison, il doit attaquer à outrance s’il veut bénéficier de la totalité de ses attaques. Il n’a pas besoin d’indiquer à l’avance comment il compte répartir ses attaques ; il peut décider au fur et à mesure, en fonction du résultat des précédentes.</p>
+            <p>Lorsque le personnage attaque à outrance, il ne peut pas se déplacer autrement qu’en faisant un <a href="Types_actions.xhtml#pas_de_placement">pas de placement</a> de 1 m, avant, après ou entre ses attaques.</p>
+            <p><span class="big_underline">Conversion d’attaque à outrance en attaque normale</span>Après la première attaque, le personnage peut changer d’avis et décider de faire une action de mouvement au lieu de porter sa ou ses attaques restante(s).S’il a déjà effectué son <a href="Types_actions.xhtml#pas_de_placement">pas de placement</a>, il ne peut utiliser cette action pour se déplacer, mais il peut entreprendre une <a href="Types_actions.xhtml#mouvement">autre action de mouvement</a>. </p>
+            <p><span class="big_underline">Combattre sur la défensive lors d’une attaque à outrance</span>Le personnage peut combattre sur la défensive même s’il décide d’attaquer à outrance. Dans ce cas, il subit un malus de -4 à toutes ses attaques du round mais il bénéficie d’un bonus d’esquive de +2 à ses esquives et parades jusqu'au début de son prochain tour. </p>
+        </div>
+
+        <h2 id="lancer_sort_complexe" onclick="hideContent(this)">Lancer un sort complexe</h2>
+        <div>
+            <p>Il faut une action complexe pour commencer l'incantation d'un sort du deuxième cercle ou supérieur. Celui-ci peut utiliser une <a href="Types_actions.xhtml#concentration">action simple</a> pour continuer l'incantation lors des tours suivants.</p>
+            <p>Lancer un sort ne provoque une attaque d’opportunité seulement au début de l’incantation, même si celle-ci dure pendant plusieurs rounds. Tant qu’un personnage se concentre sur l'incantation, il ne contrôle aucun espace autour de lui.</p>
+            <p>En dehors de ceci, cette action est identique à l’action <a href="Types_actions.xhtml#lancer_un_sort">Lancer un sort</a>.</p>
+        </div>
+
+        <h2 id="se_deplacer_terrain_difficile" onclick="hideContent(this)">Se déplacer de 1 m sur un terrain difficile</h2>
+        <div>
+            <p>Dans certaines situations, le terrain est si encombré et inégal qu’une action de mouvement ne permet même pas d’avancer de 1 m (une seule case). Dans ce cas, le personnage a recourt à une action complexe pour parcourir 1 m (1 case) dans n’importe quelle direction, même en diagonale. Bien que cela ressemble à un <a href="Types_actions.xhtml#pas_de_placement">pas de placement</a>, ce n’est pas le cas et ce mouvement provoque des attaques d’opportunité comme à l’accoutumée.</p>
+        </div>
+
+        <h2 id="courir" onclick="hideContent(this)">Courir </h2>
+        <div>
+            <p>Un personnage peut courir lors d’une action complexe. Dans ce cas, il sacrifie son <a href="Types_actions.xhtml#pas_de_placement">pas de placement</a>. Un personnage qui décide de courir parcourt, en ligne droite, une distance égale à quatre fois sa vitesse de déplacement de base.</p>
+            <p>Un personnage peut courir sans problème pendant un nombre de rounds égal à sa valeur de Constitution. Ensuite, il doit réussir un test de Constitution s’il veut poursuivre son effort. Il doit effectuer un nouveau test à chaque round et le malus augmente de 1 point à chaque fois. Dès qu’il échoue, il est obligé de s’arrêter et de se reposer une minute (10 rounds) au minimum avant de pouvoir reprendre sa course. Tant qu’il se repose, il ne peut pas se déplacer plus vite qu’une action de mouvement normale.</p>
+            <p>Un personnage ne peut pas courir sur un terrain difficile ou s’il ne voit pas où il va.</p>
+        </div>
+
+        <h2 id="retraite" onclick="hideContent(this)">Retraite</h2>
+        <div>
+            <p>La retraite nécessite une action complexe. Lorsqu’un personnage se retire, il peut se déplacer deux fois plus vite que sa vitesse de base. La case dans laquelle il commence son mouvement n’est pas considérée comme étant contrôlée par les adversaires que le personnage peut voir. Ces adversaires ne peuvent donc pas faire d’attaque d’opportunité lorsqu’il sort de cette case. En revanche, les ennemis invisibles ont droit à des attaques d’opportunité et un personnage ne peut pas battre retraite s’il est aveugle. Il n’a pas le droit de faire un <a href="Types_actions.xhtml#pas_de_placement">pas de placement</a> de 1 m au cours du même round que sa retraite.</p>
+            <p>Si, suite à sa retraite, le personnage pénètre dans une autre case contrôlée, quand il la quitte, il provoque les attaques d’opportunités habituelles de la part des adversaires qui la contrôlent.</p>
+            <p>Malgré le nom de cette action, le personnage qui l’utilise n’est pas obligé d’abandonner le combat.</p>
+            <p><span class="big_underline">Retraite restreinte</span>Si l’activité d’un personnage est limitée à une action simple par round, il peut battre en retraite par une action simple, mais il se déplacera alors uniquement à sa vitesse de base.</p>
+        </div>
+    </div>
+
+    <h1 id="libre" onclick="hideContent(this)">Actions libres</h1>
+    <div>
+        <h2 id="cesser_concentration_sort" onclick="hideContent(this)">Cesser de se concentrer sur un sort</h2>
+        <p>Il suffit d’une action libre pour cesser de se concentrer sur un sort actif.</p>
+
+        <h2 id="lacher_objet" onclick="hideContent(this)">Lâcher un objet</h2>
+        <p>Une action libre permet de lâcher un objet qu’on tient en main dans sa case ou dans une case adjacente.</p>
+
+        <h2 id="plonger_au_sol" onclick="hideContent(this)">Plonger au sol</h2>
+        <p>Il suffit d’une action libre pour se laisser tomber à terre dans sa case.</p>
+
+        <h2 id="parler" onclick="hideContent(this)">Parler</h2>
+        <p>En règle générale, le personnage peut parler librement, même en dehors de son tour de jeu mais s’il prononce plus de quelques phrases cela dure généralement trop longtemps pour constituer une action libre.</p>
+
+        <h2 id="lancer_sort_rapide" onclick="hideContent(this)">Lancer un sort à incantation rapide</h2>
+        <div>
+        <p>Certains sorts du premier cercle peuvent être lancer grâce à une action libre, ce ne peut pas être un sort offensif. (exemples : un flash lumineux, une apparition de sable projetée dans les yeux, une petite flamme pour allumer une torche)</p>
+        <p>Cette action libre ne peut être utilisée qu'une seule fois par tour.</p>
+        </div>
+    </div>
+
+    <h1 id="actions_diverses" onclick="hideContent(this)">Actions Diverses</h1>
+    <div>
+        <p>Les actions suivantes prennent un temps variable ou bien fonctionnent différemment des autres.</p>
+
+        <h2 id="pas_de_placement">Pas de placement</h2>
+        <div>
+            <p>Un personnage qui ne se déplace pas lors d’un round peut faire un pas de placement de 1 m. Ce pas de côté ne provoque jamais d’attaque d’opportunité. Un personnage ne peut jamais faire plusieurs pas de placement au cours du même round et il ne peut pas cumuler un pas de placement et un autre déplacement, de quelque forme et distance qu’il soit, lors du même round.</p>
+            <p>Le personnage peut faire son pas de placement avant, pendant ou après ses autres actions du round.</p>
+            <p>Il est impossible de faire un pas de placement sur un terrain difficile ou dans les ténèbres. Une créature dont la vitesse de déplacement est de 1 m ou moins ne peut pas faire de pas de placement puisqu’elle doit utiliser une action de mouvement pour se déplacer sur cette distance.</p>
+        </div>
+
+        <h2 id="utiliser_don">Utiliser un don</h2>
+        <div>
+            <p>Certains dons permettent d’exécuter une action spéciale en combat. D’autres ne nécessitent pas d’action mais offrent un bonus au personnage quand il tente de faire quelque chose qu’il est déjà capable de faire. Enfin, certains dons ne sont pas conçus pour être utilisés au combat. La description de chaque don indique tout ce qu’il faut savoir à leur sujet.</p>
+        </div>
+
+        <h2 id="utiliser_compétence">Utiliser une compétence</h2>
+        <div>
+            <p>La plupart des compétences nécessitent une action simple mais certaines requièrent des actions de mouvement, des actions complexes ou des actions libres ou d’autres choses.</p>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

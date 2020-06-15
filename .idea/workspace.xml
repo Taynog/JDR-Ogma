@@ -4,9 +4,7 @@
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Tableaux.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Javascript/fonctions_accueil_plan.js" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Javascript/fonctions_accueil_plan.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +25,9 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1bIrkLg5ShYynbTbyBwC3s6qnBE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -94,6 +94,7 @@
       <workItem from="1591873312954" duration="20915000" />
       <workItem from="1591955968722" duration="9837000" />
       <workItem from="1592162172952" duration="1359000" />
+      <workItem from="1592217439665" duration="14982000" />
     </task>
     <servers />
   </component>
