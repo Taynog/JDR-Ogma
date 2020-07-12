@@ -101,39 +101,37 @@
 <div id="main" class="main" style="margin-left: 200px">
     <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1>Bestiaire</h1>
-    <h3 id="" onclick="hideContent(this)"></h3>
+    <h3 id="empty" onclick="hideContent(this)"></h3>
     <div class="hidden">
-        <div class="txt_bestiaire">
-            <img src="../../../Images/Bestiary/aigle_picture.jpg" alt="aigle" class="img_bestiaire"/>
-            <p><i></i></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p><span class="big_underline">Caractéristiques</span><br/>
-                <strong> For </strong>
-                <strong> Dex </strong>
-                <strong> Agi </strong>
-                <strong> Con </strong>
-                <strong> Int </strong>
-                <strong> Per </strong>
-                <strong> Vol </strong>
-                <strong> Elo </strong>
-                <br/>
-                <strong> Compétences </strong>Vol (Agi + 8 en vol)<br/>
-                <strong> Modificateurs raciaux </strong>Vue perçante (PER + 5 vision)
-            </p>
-            <p><span class="big_underline">Défense</span><br/>
-                <strong> PV </strong><strong> Armure </strong>
-            </p>
-            <p><span class="big_underline">Attaque</span><br/>
-                <strong> Vitesse </strong><br/>
-                <strong> Corps à Corps </strong>
-            </p>
-            <p><span class="big_underline">Écologie</span><br/>
-                <strong> Environnement </strong><br/>
-                <strong> Organisation sociale </strong><br/>
-                <strong> Trésor </strong>
-            </p>
+        <div class="bestiary_entity">
+            <div class="bestiary_entity_part">
+                <p></p>
+                <hr/>
+                <table class="table_bestiary">
+                    <tbody>
+                    <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                    <tr><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td></tr>
+                    </tbody>
+                </table>
+                <hr/>
+                <p><strong>Points de vie : </strong></p>
+                <p><strong>Protection : </strong><br/><i></i></p>
+                <p><strong>Taille : </strong></p>
+                <p><strong>Langages : </strong></p>
+                <hr/>
+                <table class="table_bestiary">
+                    <tbody>
+                    <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                    <tr><td></td> <td></td> <td></td> <td></td></tr>
+                    <tr><td></td> <td></td> <td></td> <td></td></tr>
+                    </tbody>
+                </table>
+                <hr/>
+                <i><strong></strong></i>
+            </div>
+            <div class="bestiary_entity_part">
+                <img alt="" src="../../../Images/Bestiary/"/>
+            </div>
         </div>
     </div>
     <h1 id="aberrations" onclick="hideContent(this)">Aberrations</h1>
@@ -142,8 +140,6 @@
         <p onclick="hideContent(this)">Les aberrations possèdent les traits suivants (sauf mention contraire dans leur profil) :</p>
         <ul class="hidden">
             <li>Vision dans le noir à 18 m.</li>
-            <li>Formée au maniement de leurs armes naturelles. Les aberrations qui possèdent une forme vaguement humanoïde sont formées au maniement de toutes les armes courantes et des armes citées dans leur description.</li>
-            <li> Formées au maniement des armures du type cité dans leur profil (légères,intermédiaires ou lourdes) et des types plus légers.Les aberrations qui ne portent aucune armure dans leur profil ne disposent d'aucune formation en matière de port d'armures. Les aberrations qui sont formées au port d'au moins un type d'armures le sont également à l'utilisation des boucliers.</li>
             <li>Les aberrations respirent, mangent et dorment.</li>
         </ul>
     </div>
@@ -155,8 +151,6 @@
         <ul class="hidden">
             <li>valeur d'Intelligence égale à 1 ou 2 (aucune créature avec une Intelligence supérieure ou égale à 3 ne peut être un animal).</li>
             <li>Vision nocturne.</li>
-            <li>Formés uniquement au maniement de leurs armes naturelles. Les herbivores qui ne combattent pas considèrent leurs attaques naturelles comme des attaques secondaires ; celles-ci subissent un malus de -5 aux jets d'attaque et un ajustement de dégâts correspondant à la moitié de leur modificateur de Force.</li>
-            <li>Aucune formation en matière de port d'armures sauf dans le cas des animaux entraînés au combat.</li>
             <li>Les animaux respirent, mangent et dorment.</li>
         </ul>
 
@@ -176,8 +170,6 @@
             <li>Ne subissent pas les affaiblissement temporaires de caractéristiques, les diminutions permanentes de caractéristiques, la fatigue, l'épuisement, l'absorption d'énergie, les saignements, ni les dégâts non-létaux.</li>
             <li>Immunité contre tous les effets qui imposent un jet de Vigueur (sauf ceux qui fonctionnent également sur les objets ou sont inoffensifs).</li>
             <li>Ne risquent pas la mort par dégâts excessifs. Ces créatures sont immédiatement détruites lorsque leurs points de vie atteignent 0 ou moins.</li>
-            <li>Formées seulement au maniement de leurs armes naturelles sauf si elles possèdent une forme vaguement humanoïde, auquel cas elles sont formées au maniement de toutes les armes citées dans leur profil.</li>
-            <li>Aucune formation en matière de port d'armures.</li>
             <li>Les créatures artificielles ne respirent pas, ne mangent pas et ne dorment pas.</li>
         </ul>
     </div>
@@ -189,8 +181,6 @@
         <ul class="hidden">
             <li>Vision dans le noir à 18 m.</li>
             <li>Vision nocturne.</li>
-            <li>Formées seulement au maniement de leurs armes naturelles.</li>
-            <li>Aucune formation en matière de port d'armures.</li>
             <li>Les créatures magiques respirent, mangent, et dorment.</li>
         </ul>
     </div>
@@ -200,8 +190,6 @@
         <p>Les humanoïdes possèdent généralement deux bras, deux jambes et une tête, ou encore un torse semblable à celui des humains, des bras et une tête. Ils n'ont peu ou pas de capacités surnaturelles ou extraordinaires, mais la plupart d'entre eux peuvent parler et possèdent des sociétés bien développées.</p>
         <p onclick="hideContent(this)">Les humanoïdes possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
         <ul class="hidden">
-            <li>Formés au maniement de toutes les armes courantes et de toutes les armes citées dans leur profil.</li>
-            <li>Formés au port des armures du type cité dans leur profil (légères, intermédiaires ou lourdes). Les humanoïdes qui sont formés au port d'au moins un type d'armures le sont également à l'utilisation des boucliers.</li>
             <li>Les humanoïdes respirent, mangent et dorment.</li>
         </ul>
     </div>
@@ -211,11 +199,43 @@
         <p>Les humanoïdes monstrueux ressemblent aux humanoïdes mais possèdent des caractéristiques monstrueuses ou animales ainsi que, bien souvent des capacités magiques.</p>
         <p onclick="hideContent(this)">Les humanoïdes monstrueux possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
         <ul class="hidden">
-            <li>Vision dans le noir à 18 m.</li>
-            <li>Formés au maniement de toutes les armes courantes et de toutes les armes citées dans leur profil.</li>
-            <li>Formés au port des armures du type cité dans leur profil (légères, intermédiaires ou lourdes). Les humanoïdes monstreux qui sont formés au port d'au moins un type d'armures le sont également à l'utilisation des boucliers.</li>
             <li>Les humanoïdes monstrueux respirent, mangent et dorment.</li>
         </ul>
+
+        <h3 id="minotaure" onclick="hideContent(this)">Minotaure</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Les minotaures sont d'immenses créatures pouvant rivaliser avec les Kantas les plus massifs. Ils sont taillés pour le combat et n'hésitent pas à foncer tête baissée pour embrocher leurs adversaires.</p>
+                    <p>Ils vivent dans des lieux éloignés de toute civilisation tels que les Étendues Mortelles et les Plaines Silencieuses bien que certains spécimens eut étés observés près des frontières de la civilisation.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>17</td> <td>8</td> <td>12</td> <td>15</td> <td>6</td> <td>10</td> <td>14</td> <td>10</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>80</p>
+                    <p><strong>Protection : </strong>2<br/><i>Le cuir épais du minotaure le protège des coups les plus faibles.</i></p>
+                    <p><strong>Taille : </strong>Grande</p>
+                    <p><strong>Langages : </strong>Géant</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Hache à deux mains</td> <td>10</td> <td>10</td> <td>1d10+5 T</td></tr>
+                        <tr><td>Cornes</td> <td>12</td> <td>0</td> <td>1d6+5 P</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <i><strong>Charge : </strong>Si le minotaure se déplace d'au moins 3 mètres en ligne droite vers une cible, puis la touche lors d'une attaque avec sa corne dans le même tour, la cible subis 2d6+5 de dégâts perforants. Si la cible est une créature, elle doit réussir un jet de force ou être repoussée de 3 mètres et tomber à terre.</i>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="minotaure" src="../../../Images/Bestiary/Minotaure_picture.jpg"/>
+                </div>
+        </div>
+        </div>
     </div>
 
     <h1 id="karnarim" onclick="hideContent(this)">Karnarim</h1>
@@ -224,8 +244,6 @@
         <p onclick="hideContent(this)">Les Karnarim possèdent les traits suivants (sauf mention contraire dans leur profil) :</p>
         <ul class="hidden">
             <li>Vision dans le noir à 18 m.</li>
-            <li>Formés au maniement de toutes les armes courantes et de toutes les armes de guerre ainsi qu'au maniement de toutes les armes citées dans leur profil.</li>
-            <li>Formés au port des armures du type cité dans leur profil (légères, intermédiaire, ou lourdes) Les Extérieurs qui ne portent aucune armure dans leur profil ne disposent d'aucune formation en matière de port d'armures. Les Extérieurs qui sont formés au port d'au moins un type d'armure le sont également à l'utilisation des boucliers.</li>
         </ul>
     </div>
     <h1 id="morts_vivants" onclick="hideContent(this)">Morts-vivants</h1>
@@ -234,15 +252,12 @@
         <p onclick="hideContent(this)">Les morts-vivants possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
         <ul class="hidden">
             <li>Pas de valeur de Constitution. Les morts-vivants utilisent leur Volonté pour calculer leurs points de vie, leur jets de Vigueur et toutes les capacités spéciales qui dépendent normalement de la Constitution.</li>
-            <li>Vision dans le noir à 18 m.</li>
             <li>Immunité contre tous les effets mentaux (charmes, coercitions, effets de moral, mirages et fantasmes).</li>
             <li>Immunité contre les effets de mort, les maladies, la paralysie, le poison, les saignements, les effets de sommeil et l'étourdissement.</li>
             <li>Pas affectés par les dégâts non-létaux, l'absorption d'énergie ou les diminutions permanentes de caractéristiques physiques ainsi que contre les effets de fatigue et d'épuisement.</li>
             <li>Incapables de guérir naturellement s'ils ne possèdent pas de valeur d'Intelligence, mais ils peuvent être guéris par d'autre méthodes. L'énergie négative (libérée par un sort de blessure par exemple) peut soigner les morts-vivants. Ceci dit, les morts-vivants qui possèdent la capacité de guérison accélérée peuvent en bénéficier normalement.</li>
             <li>Immunité contre tous les effets qui imposent un jet de vigueur (sauf ceux qui agissent également sur les objets ou sont inoffensifs.</li>
             <li>Ne risquent pas la mort par dégâts excessifs mais sont immédiatement détruits si leurs points de vie atteignent ou passent sous 0.</li>
-            <li>Formés au maniement de leurs armes naturelles, des armes courantes et de toutes les armes citées dans leur profil.</li>
-            <li>Formés au port des armures du type cité dans leur profil (légères, intermédiaires ou lourdes) et des types plus légers. Les morts-vivants qui ne portent aucune armure dans leur profil ne disposent d'aucune formation en matière de port d'armures. Les morts-vivants qui sont formés au port d'au moins un type d'armures le sont également à l'utilisation des boucliers.</li>
             <li>Les morts-vivants ne respirent pas, ne mangent pas et ne dorment pas.</li>
         </ul>
     </div>
@@ -252,11 +267,8 @@
         <p>Ce type rassemble les créatures végétales.</p>
         <p onclick="hideContent(this)">Les plantes possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
         <ul class="hidden">
-            <li>Vision nocturne.</li>
             <li>Immunités contre tous les effets mentaux (charmes, coercitions, effets de moral, mirages et fantasmes).</li>
             <li>Immunité contre la paralysie, le poison, la métamorphose, les effets de sommeil et l’étourdissement.</li>
-            <li>Formés uniquement au maniement de leurs armes naturelles.</li>
-            <li>Aucune formation en matière de port d'armures.</li>
             <li>Les plantes respirent et mangent mais ne dorment pas.</li>
         </ul>
     </div>
@@ -268,8 +280,6 @@
         <ul class="hidden">
             <li>Dénuées d'Intelligence : pas de valeur d'Intelligence et immunité contre tous les effets mentaux (charmes, coercition, fantasmes, mirages et effets de moral). Les créatures ressemblant à des vermines qui possèdent une valeur d'Intelligence sont généralement des animaux ou des créatures magiques (en fonction de leurs autres capacités).</li>
             <li>Vision dans le noir à 18 m.</li>
-            <li>Formées uniquement au maniement de leurs armes naturelles.</li>
-            <li>Aucune formation en matière de port d'armures.</li>
             <li>Les vermines respirent, mangent et dorment.</li>
         </ul>
     </div>

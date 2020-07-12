@@ -13,9 +13,6 @@ h1::first-line{
 .hidden{
     display : none; /*Permet de cacher les listes et ce qu'elles contiennent quand on clique dessus en lien avec hideContent()*/
 }
-.hidden{
-    display : none; /*Permet de cacher les objets et ce qu'ils contiennent quand on clique dessus en lien avec hideContent()*/
-}
 
 *[onclick]:hover{
     color: rebeccapurple !important; /*Change la couleur des éléments possédant un attribut onclick, il est important car sinon il ne fonctionne pas avec le style alternatif*/
@@ -45,6 +42,24 @@ table.table_compact thead th{
     border-style: none;
     border-bottom: 2px solid black;
     padding: 0px;
+    margin: 0;
+}
+
+table.table_bestiary{
+    border-style: none;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table.table_bestiary tbody th{
+    border-style: none;
+    padding: 0px 4px 1px 4px;
+    margin: 2px;
+}
+
+table.table_bestiary tbody td{
+    border-style: none;
+    padding: 0;
     margin: 0;
 }
 
@@ -112,10 +127,20 @@ a:hover {
     text-align: center;
 }
 
+.bestiary_entity {
+    display: flex;
+    width: 100%;
+}
+
+.bestiary_entity_part {
+    flex: 1;
+    padding: 3px;
+}
+
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 200px; /* 0 width - change this with JavaScript */
+    width: 200px;
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -222,17 +247,4 @@ a>img:hover{
     transition: .3s ease-in-out;
 }
 
-.txt_bestiaire{
-    width:100%;
-    height:100%;
-    display: inline-block;
-}
 
-
-
-.img_bestiaire{
-    float: right;
-    width:35%;
-    max-height:100% !important;
-    z-index:1;
-}
