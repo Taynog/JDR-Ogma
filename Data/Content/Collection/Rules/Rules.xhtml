@@ -188,7 +188,7 @@
             <p>On peut imaginer une simple boule de feu au milieu des adversaires, un mur de pierre devant soi pour créer un abri temporaire, faire tomber des litres d'eau pour rendre le sol boueux,...</p>
             <p>Il est même possible de créer des choses directement dans la tête de son ennemi(si on possèdes les connaissances bien entendu), on peut lui faire voir des monstres, altérer sa perception, le rendre sourd/aveugle, l'endormir,...</p>
             <p>Une réussite critique lors d'un lancer sort permet d'augmenter n'importe quel facteur d'un cran gratuitement</p>
-			<p>La caractéristique d'intelligence du lanceur de sort augmente les dégâts des sorts pour chaque point supérieur à 12((13 INT → +1; 15 INT → +3). La caractéristique de volonté quand à elle augmente la persistance des sorts d'un cran si elle dépasse 14.</p>
+			<p>La caractéristique d'intelligence du lanceur de sort augmente les dégâts des sorts pour tout les deux points au dessus de 12((14 INT → +1; 16 INT → +2). La caractéristique de volonté quand à elle augmente la persistance des sorts d'un cran si elle dépasse 14.</p>
 
             <h3>Magie hors-combat</h3>
             <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
@@ -1056,14 +1056,15 @@
                 <div>
                     <p>Les armes appartiennent à des catégories (dagues/poignards, épées courtes, longues ou même courbes, haches, marteaux à deux mains, etc...), elles possèdent des caractéristiques spéciales comme un taux de critique supérieur, la possibilité de les manier à deux mains, etc...</p>
                     <p>Chaque arme possède deux caractéristiques en plus de la rupture et des dégâts, il s'agit de l'attaque et de la parade. L'attaque détermine à quel point il est facile de toucher un adversaire et la parade détermine la probabilité de parer un coup avec cette arme. Une arme peut être modifié de diverses manières (poignée améliorée, fil aiguisé, renfort, lame dentelée, etc..) et ainsi posséder des caractéristiques différentes de sa catégorie.</p>
-                    <p>Pour toucher un adversaire avec son arme, il faut d'abord réussir un jet d'attaque, l'adversaire peut tenter une parade, si il réussi aussi son jet il faut alors regarder la marge de réussite (statistique de l'arme - valeur du jet obtenu).</p>
+                    <p>Pour toucher un adversaire avec une arme de corps-à-corps ou un bouclier, il faut d'abord réussir un jet d'attaque, l'adversaire peut tenter une parade, si il réussi aussi son jet il faut alors regarder la marge de réussite (statistique de l'arme - valeur du jet obtenu). Les armes à distance se basent toute sur la dextérité de l'utilisateur.</p>
                     <p>Les dégâts d'une armes sont équivalents à un dé et sont généralement accompagné d'un bonus selon la qualité de l'arme(ex : une dague en bronze → 1d4 une dague en acier 1d4+2). La rupture est majoritairement influencée par le matériau de l'arme mais peut varier selon l'artisan, ou certaines modifications telles qu'un renfort métallique sur la poignée.</p>
                     <p>Les caractéristiques ont également un impact sur les caractéristiques d'une arme :</p>
                     <ul>
-                        <li><span class="big_underline">Force :</span>chaque point de force au dessus de 12 :  +1 point de dégât (13 FOR → +1; 15 FOR → +3). Si la force est inférieure à 8, les dégâts sont diminués d'un point.</li>
-                        <li><span class="big_underline">Dextérité :</span>tout les deux points de dextérité supérieur à 12 augmente l'attaque et la parade de 1 (14 DEX → +1 ; 18 DEX →+3). Pour chaque point de dextérité inférieur à 8, l'attaque et la parade diminuent de 1  (6 DEX → -2 ; 3 DEX → -5).</li>
+                        <li><span class="big_underline">Force :</span>tout les deux points de force supérieur à 12 augmente :  +1 point de dégât (14 FOR → +1; 16 FOR → +2). Si la force est inférieure à 8, les dégâts sont diminués d'un point.</li>
+                        <li><span class="big_underline">Dextérité :</span>tout les deux points de dextérité supérieur à 12 augmente l'attaque et la parade de 1 (14 DEX → +1 ; 18 DEX →+3). Un malus s'applique si la dextérité est inférieure à 8, l'attaque et la parade diminuent de 1  (6 DEX → -1 ; 4 DEX → -2).</li>
                     </ul>
                     <p>Lors d'un coup critique, il faut se référer au <a href="Tableaux.xhtml#table_critiques"> tableau des critiques</a> équivalent au type de dégâts infligés par le coup (les dégâts bonus du coup critiques sont ajoutés après le multiplicateur)</p>
+                    <p>La liste d'armes ci dessous n'est pas exhaustive, il revient au MJ de décider des statistiques d'une arme.</p>
                 </div>
                 <div>
                     <p class="caption" onclick="hideContent(this)" id="table_armes_cac">Armes de corps-à-corps</p>
@@ -1087,7 +1088,7 @@
                         <tr>
                             <td>Dagues</td>
                             <td>Perforants, Tranchants</td>
-                            <td>13</td>
+                            <td>15</td>
                             <td>8</td>
                             <td>1d4</td>
                             <td>1-4 x3</td>
@@ -1101,23 +1102,23 @@
                             <td>13</td>
                             <td>1d6</td>
                             <td>1 x2</td>
-                            <td>Légère, Finesse</td>
+                            <td>Légère</td>
                             <td>1 kg</td>
                         </tr>
                         <tr>
                             <td>Épées courbes</td>
                             <td>Tranchants</td>
-                            <td>12</td>
+                            <td>14</td>
                             <td>10</td>
                             <td>1d6</td>
                             <td>1-2 x2</td>
                             <td>Légère, Finesse</td>
-                            <td>25 po</td>
+                            <td>1kg</td>
                         </tr>
                         <tr>
                             <td>Rapières</td>
                             <td>Perforants</td>
-                            <td>12</td>
+                            <td>14</td>
                             <td>10</td>
                             <td>1d6</td>
                             <td>1-2 x3</td>
@@ -1139,7 +1140,7 @@
                             <td>Tranchants</td>
                             <td>12</td>
                             <td>8</td>
-                            <td>1d6 (50% perce-armure)</td>
+                            <td>1d6</td>
                             <td>x2</td>
                             <td>Polyvalente(1d8)</td>
                             <td>2 kg</td>
@@ -1149,7 +1150,7 @@
                             <td>Contondants</td>
                             <td>11</td>
                             <td>8</td>
-                            <td>1d6 (perce-armure)</td>
+                            <td>1d6 (50% perce-armure)</td>
                             <td>x2</td>
                             <td>Polyvalente(1d8)</td>
                             <td>2 kg</td>
@@ -1182,7 +1183,7 @@
                             <td>Tranchants</td>
                             <td>10</td>
                             <td>10</td>
-                            <td>1d10 (50 % perce-armure)</td>
+                            <td>1d10 </td>
                             <td>x2</td>
                             <td>À deux mains, Lourde</td>
                             <td>3.,5 kg</td>
@@ -1192,7 +1193,7 @@
                             <td>Contondants</td>
                             <td>10</td>
                             <td>8</td>
-                            <td>1d10 (perce-armure)</td>
+                            <td>1d10 (50% perce-armure)</td>
                             <td>x2</td>
                             <td>À deux mains, Lourde</td>
                             <td>5 kg</td>
@@ -1205,9 +1206,9 @@
                             <td>Perforants</td>
                             <td>13</td>
                             <td>11</td>
-                            <td>1d8</td>
+                            <td>1d6</td>
                             <td>x3</td>
-                            <td>Allonge, Polyvalente, Charge</td>
+                            <td>Allonge, Polyvalente (1d8), Charge</td>
                             <td>1,5 kg</td>
                         </tr>
                         <tr>
@@ -1227,7 +1228,7 @@
                             <td>11</td>
                             <td>1d8</td>
                             <td>x2</td>
-                            <td>Allonge</td>
+                            <td>Allonge, À deux mains</td>
                             <td>3 kg</td>
                         </tr>
                         </tbody>
@@ -1370,7 +1371,7 @@
                         <tbody>
                         <tr>
                             <td>Rondache</td>
-                            <td>9</td>
+                            <td>10</td>
                             <td>14</td>
                             <td rowspan="4">1d4 non-létal</td>
                             <td>Atq -1</td>
@@ -1378,7 +1379,7 @@
                         </tr>
                         <tr>
                             <td>Écu</td>
-                            <td>8</td>
+                            <td>9</td>
                             <td>15</td>
                             <td>Atq -2</td>
                             <td>3 kg</td>
@@ -1392,8 +1393,8 @@
                         </tr>
                         <tr>
                             <td>Pavois</td>
-                            <td>6</td>
-                            <td>17</td>
+                            <td>8</td>
+                            <td>16</td>
                             <td>Atq -3</td>
                             <td>10 kg</td>
                         </tr>
@@ -1402,7 +1403,6 @@
                     <h3 onclick="hideContent(this)">Propriétés spéciales des armes</h3>
                     <div class="hidden">
                         <p><span class="big_underline">Attaque furtive</span>Une attaque furtive effectuée avec cette arme ne fait aucun bruit et empêche la victime de crier.</p>
-                        <p><span class="big_underline">Finesse</span>Une arme possédant la propriété Finesse double le bonus (et le malus) à l'attaque et à la parade dû à la dextérité.</p>
 						<p><span class="big_underline">Légère</span>Une arme légère est petite et facile à manier, ce qui la rend idéale pour les combats à deux armes.</p>
                         <p><span class="big_underline">Lourde</span>Une arme lourde est difficilement utilisable par les petites créatures(&lt;1m20), de plus il faut posséder une caractéristique de Force d'au moins 12 pour les utiliser convenablement.</p>
                         <p><span class="big_underline">Polyvalente</span>Polyvalente. Cette arme peut être tenue à une ou deux mains. Le chiffre indiqué entre parenthèses correspond aux dégâts si l'arme est tenue à deux mains lors d'une attaque au corps à corps.</p>
@@ -1420,6 +1420,7 @@
                 <p>Les pièces d'armure couvrent une ou plusieurs localisation(s) (tête, torse, bras, mains, jambes et pieds) mais la protection octroyée par ces pièces reste globale tant que l'on a pas affaire à un coup critique. Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation, d'un point de vue réaliste, on est sensé porté une cotte de maille sous une armure de plate, et un gambison rembourré sous cette cotte de maille, mais pour simplifier tout ça on part du principe que c'est inclus dans la protection offerte par l'armure de plate.</p>
                 <p>Les armures peuvent également être modifiés pour mieux correspondre à leur porteur. On peut imaginer une armure lourde mais ajustée ce qui réduirait les malus de dextérité et/ou d'atq/prd; une armure allégée protégeant moins mais ralentissant moins son porteur ou au contraire renforcée. Une armure peut également être teinte en noir pour apporter des bonus de furtivité ou alors décorée pour augmenter l'éloquence.</p>
                 <p>Les armures complètes couvrent et donc protègent toutes les localisations en cas de coup critiques, elles protègent mieux que les pièces d'armures individuelles, mais imposent de plus lourds malus selon leur poids.</p>
+                <p>Les listes d'armures ne sont pas exhaustives, il revient au MJ de décides des statistiques d'une armure.</p>
                 <div>
                     <p class="caption" onclick="hideContent(this)">Pièces d'armures</p>
                     <table width="90%" class="hidden">
