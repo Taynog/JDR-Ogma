@@ -32,19 +32,44 @@ table.table_compact{
     border-collapse: collapse;
     text-align: center;
 }
+
 table.table_compact tbody td{
     border-style: none;
     border-bottom: 1px solid black;
-    padding: 0;
-    margin: 0;
+    padding: 2px;
+    margin: 2px;
 }
+table.table_compact tbody th{
+    border-style: none;
+    border-bottom: 2px solid black;
+    padding: 2px;
+    margin: 2px;
+}
+
 table.table_compact thead th{
     border-style: none;
     border-bottom: 2px solid black;
-    padding: 0px;
-    margin: 0;
+    padding: 2px;
+    margin: 2px;
+}
+table.table_horizontal{
+    border-style: none;
+    border-collapse: collapse;
+    text-align: center;
 }
 
+table.table_horizontal tbody td{
+    border-style: none;
+    border-bottom: 1px solid black;
+    padding: 1px 4px 1px 4px;
+    margin: 5px;
+}
+table.table_horizontal tbody th{
+    border-style: none;
+    border-bottom: 1px solid black;
+    padding: 1px 8px 1px 8px;
+    margin: 5px;
+}
 table.table_bestiary{
     border-style: none;
     border-collapse: collapse;
