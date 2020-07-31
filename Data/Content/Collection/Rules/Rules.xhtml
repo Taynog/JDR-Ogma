@@ -626,16 +626,17 @@
             <h2 onclick="hideContent(this)">Caractéristiques de départ et progression</h2>
             <div>
                 <p>Pour définir les caractéristiques de départ d'un personnage il existe plusieurs méthodes :</p>
-                <ul>
+                <ul class="space_list">
                     <li><span class="big_underline">Methode classique :</span>on lance 2D6 on additionne les résultats des dés et on ajoute 4.</li>
                     <li><span class="big_underline">Méthode aléatoire total :</span>on lance 3d6, on additionne les résultats des dés.</li>
                     <li><span class="big_underline">Méthode aléatoire moindre :</span>on lance 4d6, on retire le résultat le plus faible, et on additionne les résultats des 3 dés restants.</li>
-                    <li><span class="big_underline">Achat de caractéritiques :</span>on reçoit un certain nombre de point que l'on peut dépenser pour acquérir une certaine valeur de caractéristique. Le minimum que puisse atteindre une caractéristique est 8, le maximum est 16.
-                    <div align="center">
-                        <table style="border-width: thin; display: inline-block">
+                    <li><span class="big_underline">Achat de caractéritiques :</span>on reçoit un certain nombre de point que l'on peut dépenser pour augmenter la valeur d'une caractéristique, on peut récupérer des points en diminuant la valeur d'une caractéristique.. Le minimum que puisse atteindre une caractéristique est 7, le maximum est 16. Toutes les caractéristiques commencent à 10, puis on leur ajoute les bonus/malus raciaux avant de les améliorer via les points.
+                    <div align="center" class="bestiary_entity">
+                        <table style="border-width: thin" class="bestiary_entity_part">
                         <tbody>
                         <tr>
-                            <th>Valeur</th>
+                            <th>Modification de valeur</th>
+                            <td>7</td>
                             <td>8</td>
                             <td>9</td>
                             <td>10</td>
@@ -647,7 +648,8 @@
                             <td>16</td>
                         </tr>
                         <tr>
-                            <th>Points</th>
+                            <th>Coût en points</th>
+                            <td>-3</td>
                             <td>-2</td>
                             <td>-1</td>
                             <td>0</td>
@@ -658,10 +660,13 @@
                             <td>7</td>
                             <td>10</td>
                         </tr>
+                        <tr>
+                            <td colspan="11">Exemple : pour passer une caractéritique de 14 à 16, cela coûte 5 points (10-5); de 10 à 13, 3 points (3-0); de 12 à 8, on obtient 4 points((-2)-2)</td>
+                        </tr>
                         </tbody>
                     </table>
 
-                        <table class="table_compact" style="display: inline-block; padding-left: 10px">
+                        <table class="table_compact bestiary_entity_part">
                         <thead>
                         <tr>
                             <th>Type de campagne</th>
@@ -691,7 +696,7 @@
                     </li>
                 </ul>
 
-                <p>Chaque joueur commence avec 2 compétences au niveau novice, et 1 au niveau apprenti. Le nombre de compétences qu'un personnage peut maîtriser augmente avec le niveau du personnage.</p>
+                <p>Chaque joueur commence avec 2 compétences au niveau novice, et 1 au niveau apprenti. Le nombre de compétences qu'un personnage peut maîtriser augmente avec le niveau du personnage. Les compétences raciales n'occupent pas un emplacement de compétences, elle ne peuvent cependant pas progresser au delà du plus haut palier accessible au personnage.</p>
                 <p>Pour apprendre une nouvelle compétence ou progresser dans les paliers d'une compétence connues, il est nécessaire de s’entraîner, que ce soit auprès d’une personnage possédant un meilleur niveau dans la compétence ou alors en pratiquant le domaine régi par la compétence.<br/>Cette restriction a pour but de rendre le jeu immersif au maximum, il n’est pas question qu’un personnage n’ayant jamais manié une hallebarde ni même vu quelqu’un en manier une, devienne Novice en maîtrise des hallebardes. De même qu’un personnage possédant la compétence marchandage au niveau Adepte, ne pourra pas suite à une montée de niveau passer Expert en marchandage si son dernier échange remonte à plusieurs années.</p>
                 <p>Les joueurs peuvent demander au MJ de créer des traits particulier pour leur personnage pour affiner la personalisation.</p>
                 <p>Les caractéristiques sont voués à s'améliorer avec le temps et l'entrainement, par exemple, entre deux aventures, un personnage peut tout à fait décider de dépenser son or pour s'entrainer en ville, selon l'endroit où il s'entraine, une de ses caractéristiques augmentera (chez les gardes pour la force, les voleurs ou un maitre d'arme pour la dextérité, etc...) tout dépend du choix du joueur.</p>
@@ -699,118 +704,121 @@
                 <p>Les niveaux quand à eux s'acquièrent lors de l'accomplissement d'étapes importantes pour les aventuriers, que ce soit après une grande bataille ou lors du retour à la civilistation après des semaines d'expédition. C'est au MJ que revient la décision de faire monter ou non son groupe de niveau.</p>
                 <p class="caption" onclick="hideContent(this)">Nombre des paliers de compétences selon le niveau</p>
                 <div class="hidden">
-                <table class="table_horizontal">
-                    <tbody>
-                    <tr>
-                        <th>Niveau</th>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                        <th>9</th>
-                        <th>10</th>
-                        <th>11</th>
-                        <th>12</th>
-                        <th>13</th>
-                        <th>14</th>
-                        <th>15</th>
-                    </tr>
-                    <tr>
-                        <th>Novice</th>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>4</td>
-                        <td>4</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <th>Apprenti</th>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <th>Adepte</th>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <th>Expert</th>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <th>Maître</th>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>2</td>
-                    </tr>
-                    </tbody>
-                </table>
+                    <table class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Niveau</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                        </tr>
+                        <tr>
+                            <th>Novice</th>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th>Apprenti</th>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <th>Adepte</th>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <th>Expert</th>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <th>Maître</th>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="16">Les compétences raciales n'occupent pas un emplacement de compétences, elle ne peuvent cependant pas progresser au delà du plus haut palier accessible au personnage.</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <h2 onclick="hideContent(this)">Richesse de départ</h2>
@@ -1265,31 +1273,31 @@
                         <td>+1</td>
                         <td>/</td>
                         <td>/</td>
-                        <td><span class="underline">Diplomé de l'Académie :</span>2 domaines de connaissances au choix<br/><span class="underline">Aisance avec la magie :</span> Peut relancer un jet raté pour un sort une fois par jour</td>
+                        <td><span class="underline">Diplomé de l'Académie :</span>INT + 2 aux épreuves de connaissances<br/><span class="underline">Aisance avec la magie :</span> Peut relancer un jet raté pour un sort une fois par jour</td>
                     </tr>
                     <tr>
                         <td colspan="2">Chono</td>
                         <td>+2</td>
-                        <td>+2</td>
+                        <td>/</td>
                         <td>/</td>
                         <td>+2</td>
                         <td>-3</td>
                         <td>/</td>
-                        <td class="sens">+2</td>
+                        <td>+2</td>
                         <td>/</td>
-                        <td><span class="underline">Sens affutés :</span> +2 PER, +3 aux jet lié à l'odorat et l'ouïe<br/><span class="underline">Rage Primordiale :</span> Jet de sauvegarde (VOL) si touché par un effet magique</td>
+                        <td><span class="underline">Rage Primordiale :</span> Jet de sauvegarde (VOL) si touché par un effet magique</td>
                     </tr>
                     <tr>
                         <td colspan="2">Mushuk</td>
                         <td>/</td>
-                        <td>/</td>
                         <td>+1</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td class="sens">+2</td>
                         <td>+2</td>
-                        <td><span class="underline">Sens affutés :</span> +2 PER, +2 aux jets liés à l'odorat et l'ouïe<br/><span class="underline">Vision féline :</span> Vision nocturne<br/><span class="underline">Marchand né :</span> Compétence Marchandage</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td><span class="underline">Vision féline :</span> Vision nocturne<br/><span class="underline">Marchand né :</span> Compétence Marchandage (Apprenti)</td>
                     </tr>
                     <tr>
                         <td colspan="2">Kanta</td>
@@ -1301,32 +1309,32 @@
                         <td>/</td>
                         <td>/</td>
                         <td>/</td>
-                        <td><span class="underline">Fourrure épaisse :</span> +50% de résitance au froid, +1 d'armure naturelle<br/><span class="underline">Sagesse :</span> +3 ELO pour calmer un conflit<br/><span class="underline">Imposante stature :</span> Compétence intimidation</td>
+                        <td><span class="underline">Fourrure épaisse :</span> +50% de résitance au froid<br/><span class="underline">Sagesse :</span> Compétence Diplomatie (Apprenti)<br/><span class="underline">Imposante stature :</span> Compétence Intimidation</td>
                     </tr>
                     <tr>
                         <td colspan="2">Sakha</td>
                         <td>/</td>
                         <td>+3</td>
-                        <td>+4</td>
+                        <td>+2</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
                         <td>-2</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>-2</td>
-                        <td><span class="underline">Peuple sylvestre :</span> En forêt : compétences survie, médecine et discrétion, +5 aux jet de sorts -2 en dehors<br/><span class="underline">Druide :</span> Compétences d'artisanat en alchimie et arcs</td>
+                        <td><span class="underline">Peuple sylvestre :</span> En forêt : compétences Survie (Novice), Acrobaties (Apprenti) et Discrétion (Apprenti), +4 aux épreuves de lancer de sorts</td>
                     </tr>
                     <tr>
                         <td rowspan="3">Sarpa</td>
                         <td style="font-weight: normal">Lézards</td>
                         <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
                         <td>+1</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
                         <td>+2</td>
                         <td>/</td>
                         <td>/</td>
-                        <td><span class="underline">Connaisances ancestrales :</span> Compétence d'artisanat en alchimie<br/><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Régénération :</span> Régénère les membres perdus</td>
+                        <td><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Régénération :</span> Régénère les membres perdus</td>
                     </tr>
                     <tr>
                         <td>Serpents</td>
@@ -1334,18 +1342,18 @@
                         <td>/</td>
                         <td>/</td>
                         <td>/</td>
-                        <td>+1</td>
                         <td>+2</td>
+                        <td>+1</td>
                         <td>/</td>
                         <td>/</td>
-                        <td><span class="underline">Connaisances ancestrales :</span> Compétence d'artisanat en alchimie<br/><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Vision serpentine :</span>Peut voir la signature thermique des êtres vivants</td>
+                        <td><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Vision serpentine :</span>Peut voir la signature thermique des êtres vivants</td>
                     </tr>
                     <tr>
                         <td>Crocodiles</td>
-                        <td>+2</td>
+                        <td>+3</td>
                         <td>-2</td>
                         <td>/</td>
-                        <td>+3</td>
+                        <td>+2</td>
                         <td>/</td>
                         <td>/</td>
                         <td>/</td>
@@ -1362,7 +1370,7 @@
                         <td>/</td>
                         <td>/</td>
                         <td>/</td>
-                        <td><span class="underline">Endurance Nordique :</span> + 10 % de PV <br/><span class="underline">Honneur du guerrier :</span> +2 au jets de dégâts quand PV&lt;50% pendant 3 tours une fois par jour<br/><span class="underline">Savoir-faire :</span>Compétences d'artisanat maroquinerie et ferronerie</td>
+                        <td><span class="underline">Endurance Nordique :</span> + 10 % de PV <br/><span class="underline">Honneur du guerrier :</span> +2 au jets de dégâts quand PV&lt;50% pendant 3 tours une fois par jour.</td>
                     </tr>
                     <tr>
                         <td colspan="2">Sihir</td>
@@ -1374,7 +1382,7 @@
                         <td>+3</td>
                         <td>/</td>
                         <td>/</td>
-                        <td><span class="underline">Fait de magie :</span> +30% de Psyché, connaissances en Mystères, compétence Arts de la Magie<br/><span class="underline">Sensibilité magique :</span> 30% de vulnérabilité à la magie, 25% de chances d'absorber la psyché d'un sort</td>
+                        <td><span class="underline">Fait de magie :</span> +20% de Psyché, compétence Arts de la Magie<br/><span class="underline">Sensibilité magique :</span> 30% de vulnérabilité à la magie, 25% de chances d'absorber la psyché d'un sort</td>
                     </tr>
                     <tr>
                         <td rowspan="2">Steinn</td>
@@ -1387,7 +1395,7 @@
                         <td>/</td>
                         <td>/</td>
                         <td>+2</td>
-                        <td><span class="underline">Vie Souterraine :</span> Vision nocturne, connaissances en Exploration souterraine<br/><span class="underline">Peuple d'ingénieurs :</span> connaissances en Ingénierie, compétence d'artisanat ferronerie et joaillerie<br/><span class="underline">Froideur d'Hortak :</span> +50 % de résistance au froid</td>
+                        <td><span class="underline">Froideur d'Hortak :</span> +50 % de résistance au froid</td>
                     </tr>
                     <tr>
                         <td>Khazun</td>
@@ -1399,19 +1407,19 @@
                         <td>/</td>
                         <td>/</td>
                         <td>+2</td>
-                        <td><span class="underline">Vie Souterraine :</span> Vision nocturne, connaissances en Exploration souterraine<br/><span class="underline">Peuple d'ingénieurs :</span> connaissances en Ingénierie, compétence d'artisanat ferronerie et joaillerie<br/><span class="underline">Chaleur des Monts Ardents :</span> +50 % de résistance au feu</td>
+                        <td><span class="underline">Chaleur des Monts Ardents :</span> +50 % de résistance au feu</td>
                     </tr>
                     <tr>
                         <td colspan="2">Tori</td>
-                        <td>-2</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
                         <td>/</td>
                         <td>/</td>
                         <td>/</td>
                         <td>+3</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td class="sens">+4</td>
-                        <td><span class="underline">Poète :</span> +4 ELO, compétence Représentation déclamation (+ 2 au choix)<br/><span class="underline">Pacifique :</span> -2 à tout les dégâts létaux, +2 aux dégâts non-létaux<br/><span class="underline">Ailes :</span> Compétence Vol, peut voler à volonté</td>
+                        <td><span class="underline">Pacifique :</span> -2 à tout les dégâts létaux, +2 aux dégâts non-létaux<br/><span class="underline">Ailes :</span> Compétence Vol, peut voler à volonté</td>
                     </tr>
                     <tr>
                         <td colspan="2">Tuskizi</td>

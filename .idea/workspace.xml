@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Glossaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Histoire_Ogma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Bestiaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +103,7 @@
       <workItem from="1595188118828" duration="2107000" />
       <workItem from="1595954015135" duration="661000" />
       <workItem from="1596124485227" duration="16910000" />
+      <workItem from="1596183956883" duration="4743000" />
     </task>
     <servers />
   </component>
@@ -111,9 +111,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="345" y="43" key="CommitChangelistDialog2" timestamp="1590857258931">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="143" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596188669244">
+      <screen x="0" y="0" width="1378" height="900" />
     </state>
+    <state x="143" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596188669244" />
+    <state x="330" y="43" key="CommitChangelistDialog2" timestamp="1596188649689">
+      <screen x="0" y="0" width="1378" height="900" />
+    </state>
+    <state x="330" y="43" key="CommitChangelistDialog2/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596188649689" />
     <state x="345" y="43" key="CommitChangelistDialog2/0.0.1440.900/-1280.0.1280.1024@0.0.1440.900" timestamp="1590857258931" />
     <state x="500" y="204" key="FileChooserDialogImpl" timestamp="1588351526815">
       <screen x="0" y="0" width="1440" height="900" />

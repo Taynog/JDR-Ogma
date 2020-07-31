@@ -101,10 +101,6 @@ table.race>tbody>tr>td{/*Affecte les cases du tableau des races*/
     font-weight: bold;
  }
 
-table.race>tbody>tr>td.sens{
-    color: purple;
-}
-
 
 th,td{/*Affecte les cases d'en-tête et celle de corps*/
     border-style: solid;  /*Rend la bordure pleine*/
