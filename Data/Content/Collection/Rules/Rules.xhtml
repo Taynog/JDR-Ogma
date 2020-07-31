@@ -1464,7 +1464,7 @@
                     <p>Les caractéristiques ont également un impact sur les caractéristiques d'une arme de corps-à-corps ou de lancer :</p>
                     <ul>
                         <li><span class="big_underline">Force :</span>tous les deux points de force supérieur à 12 :  +1 point de dégât (14 FOR → +1; 16 FOR → +2). Si la force est inférieure à 8, les dégâts sont diminués d'un point.</li>
-                        <li><span class="big_underline">Dextérité :</span>tous les deux points de dextérité supérieur à 12 augmente l'attaque et la parade de 1 (14 DEX → +1 ; 18 DEX →+3). Un malus s'applique si la dextérité est inférieure à 8, l'attaque et la parade diminuent de 1  (6 DEX → -1 ; 4 DEX → -2).</li>
+                        <li><span class="big_underline">Dextérité :</span>tous les deux points de dextérité supérieur à 12 augmente l'attaque et la parade de 1 (14 DEX → +1 ; 18 DEX →+3). Un malus s'applique si la dextérité est inférieure à 8, l'attaque et la parade diminuent de 1.</li>
                     </ul>
 					<p>Lors d'un coup critique, il faut se référer au <a href="Tableaux.xhtml#table_critiques"> tableau des critiques</a> équivalent au type de dégâts infligés par le coup (les dégâts bonus du coup critiques sont ajoutés après le multiplicateur)</p>
                     <p>La liste d'armes ci dessous n'est pas exhaustive, il revient au MJ de décider des statistiques d'une arme.</p>
@@ -1627,10 +1627,10 @@
                         </tr>
                         <tr>
                             <td>Courbes</td>
+                            <td>Tranchants</td>
                             <td>11</td>
                             <td>9</td>
                             <td>1d10</td>
-                            <td>x2</td>
                             <td>x2</td>
                             <td>À deux mains, Lourde</td>
                             <td>3 kg</td>
@@ -1958,34 +1958,34 @@
                         </tr>
                         <tr>
                             <td>Plastron de cuir</td>
-                            <td>1</td>
+                            <td>0,5</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>Plastron de cuir renforcé de métal</td>
-                            <td>2</td>
+                            <td>1</td>
                             <td>AGI -1</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>Plastron de métal</td>
-                            <td>3</td>
+                            <td>1,5</td>
                             <td>AGI -2</td>
-                            <td>3</td>
+                            <td>4</td>
                         </tr>
                         <tr>
                             <th rowspan="3">Vestes (torse, bras)</th>
                         </tr>
                         <tr>
                             <td>Veste en toile renforcée</td>
-                            <td>1</td>
+                            <td>0,5</td>
                             <td>/</td>
                             <td>1</td>
                         </tr>
                         <tr>
                             <td>Gambison rembourré</td>
-                            <td>2</td>
+                            <td>1</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
@@ -1994,95 +1994,113 @@
                         </tr>
                         <tr>
                             <td>Cotte de mailles sans manches</td>
-                            <td>3</td>
+                            <td>1,5</td>
                             <td>AGI -2</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>Cotte de mailles avec manches</td>
-                            <td>4</td>
+                            <td>2</td>
                             <td>AGI -2 DEX -1</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>Cotte de mailles de qualité</td>
-                            <td>4</td>
+                            <td>2</td>
                             <td>AGI -2</td>
                             <td>4</td>
                         </tr>
                         <tr>
-                            <th rowspan="3">Casques (tête)</th>
+                            <th rowspan="4">Casques (tête)</th>
                         </tr>
                         <tr>
                             <td>Casque de cuir</td>
-                            <td>0</td>
+                            <td>0,25</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>Casque de métal</td>
-                            <td>1</td>
+                            <td>0,5</td>
                             <td>/</td>
                             <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Heaume de métal</td>
+                            <td>1</td>
+                            <td>DEX - 2 pour tirer</td>
+                            <td>4</td>
                         </tr>
                         <tr>
                             <th rowspan="3">Jambières (jambes)</th>
                         </tr>
                         <tr>
                             <td>Jambières de cuir</td>
-                            <td>0</td>
+                            <td>0,25</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>Jambières de métal</td>
-                            <td>1</td>
+                            <td>0,5</td>
                             <td>AGI - 1</td>
                             <td>3</td>
                         </tr>
                         <tr>
-                            <th rowspan="3">Brassards (Bras)</th>
+                            <th rowspan="4">Brassards (Bras)</th>
                         </tr>
                         <tr>
                             <td>Brassards de cuir</td>
-                            <td>0</td>
+                            <td>0,25</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>Brassards de métal</td>
-                            <td>1</td>
+                            <td>0,5</td>
                             <td>DEX - 1</td>
                             <td>3</td>
                         </tr>
                         <tr>
-                            <th rowspan="3">Gantelets (mains)</th>
+                            <td>Brassards de métal avec cubitières et spallières</td>
+                            <td>1</td>
+                            <td>DEX - 2 Atq - 2 Prd -2</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="4">Gantelets (mains)</th>
                         </tr>
                         <tr>
                             <td>Gants de cuir</td>
-                            <td>0</td>
+                            <td>0,25</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>Gantelets de métal</td>
-                            <td>1</td>
+                            <td>0,5</td>
                             <td>DEX -1</td>
                             <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Gantelets complet de métal</td>
+                            <td>1</td>
+                            <td>DEX -1 Atq -1 Prd -1</td>
+                            <td>4</td>
                         </tr>
                         <tr>
                             <th rowspan="3">Bottes (pieds)</th>
                         </tr>
                         <tr>
-                            <td>Bottes de cuir</td>
-                            <td>0</td>
+                            <td>Bottes de cuir renforcées</td>
+                            <td>0,25</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
 
                         <tr>
                             <td>Solerets de métal</td>
-                            <td>0</td>
+                            <td>0,5</td>
                             <td>AGI -1</td>
                             <td>3</td>
                         </tr>
@@ -2104,25 +2122,25 @@
                         </tr>
                         <tr>
                             <td>Armure de plaques articulées</td>
-                            <td>10</td>
+                            <td>6</td>
                             <td>AGI -5 DEX -3 Atq -2 Prd -2</td>
                             <td>5</td>
                         </tr>
                         <tr>
                             <td>O-yoroï</td>
-                            <td>9</td>
+                            <td>6</td>
                             <td>AGI -4 DEX -2 Atq -2 Prd -2</td>
                             <td>5</td>
                         </tr>
                         <tr>
                             <td>Aswãrãn</td>
-                            <td>8</td>
+                            <td>5</td>
                             <td>AGI -3 DEX -2 Atq -2 Prd -2</td>
                             <td>5</td>
                         </tr>
                         <tr>
                             <td>Armure lamellaire</td>
-                            <td>8</td>
+                            <td>5</td>
                             <td>AGI -4 DEX -2 Atq -2 Prd -2</td>
                             <td>5</td>
                         </tr>
@@ -2131,25 +2149,25 @@
                         </tr>
                         <tr>
                             <td>Armure de cuir métal</td>
-                            <td>6</td>
+                            <td>4</td>
                             <td>AGI -2 DEX -1 Atq -1 Prd -1</td>
                             <td>4</td>
                         </tr>
                         <tr>
                             <td>Dõ-maru</td>
-                            <td>5</td>
-                            <td>AGI -2</td>
+                            <td>4</td>
+                            <td>AGI -2 DEX -1</td>
                             <td>4</td>
                         </tr>
                         <tr>
                             <td>Armure de cuir écailles</td>
-                            <td>5</td>
+                            <td>3</td>
                             <td>AGI -1 Atq -1 Prd -1</td>
                             <td>4</td>
                         </tr>
                         <tr>
                             <td>Armure de bois</td>
-                            <td>5</td>
+                            <td>3</td>
                             <td>AGI -2 Atq -1 Prd -1</td>
                             <td>3</td>
                         </tr>
@@ -2158,7 +2176,7 @@
                         </tr>
                         <tr>
                             <td>Armure de cuir</td>
-                            <td>3</td>
+                            <td>2</td>
                             <td>AGI -1</td>
                             <td>3</td>
                         </tr>
@@ -2166,7 +2184,7 @@
                             <td>Armure de peaux</td>
                             <td>2</td>
                             <td>/</td>
-                            <td>3</td>
+                            <td>2</td>
                         </tr>
                         </tbody>
                     </table>

@@ -4,8 +4,6 @@
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Bestiaire.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +102,7 @@
       <workItem from="1595954015135" duration="661000" />
       <workItem from="1596124485227" duration="16910000" />
       <workItem from="1596183956883" duration="4743000" />
+      <workItem from="1596212863231" duration="2095000" />
     </task>
     <servers />
   </component>
@@ -115,10 +114,10 @@
       <screen x="0" y="0" width="1378" height="900" />
     </state>
     <state x="143" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596188669244" />
-    <state x="330" y="43" key="CommitChangelistDialog2" timestamp="1596188649689">
+    <state x="330" y="43" key="CommitChangelistDialog2" timestamp="1596215123124">
       <screen x="0" y="0" width="1378" height="900" />
     </state>
-    <state x="330" y="43" key="CommitChangelistDialog2/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596188649689" />
+    <state x="330" y="43" key="CommitChangelistDialog2/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596215123124" />
     <state x="345" y="43" key="CommitChangelistDialog2/0.0.1440.900/-1280.0.1280.1024@0.0.1440.900" timestamp="1590857258931" />
     <state x="500" y="204" key="FileChooserDialogImpl" timestamp="1588351526815">
       <screen x="0" y="0" width="1440" height="900" />
@@ -128,9 +127,10 @@
       <screen x="0" y="0" width="1378" height="900" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1591618323944" />
-    <state x="529" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590857250653">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="506" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596215075080">
+      <screen x="0" y="0" width="1378" height="900" />
     </state>
+    <state x="506" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596215075080" />
     <state x="529" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1280.0.1280.1024@0.0.1440.900" timestamp="1590857250653" />
     <state x="367" y="190" width="672" height="678" key="search.everywhere.popup" timestamp="1592321931724">
       <screen x="0" y="0" width="1378" height="900" />
