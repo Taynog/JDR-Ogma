@@ -88,11 +88,13 @@
                             </ul></li>
                         <li><span class="medium"><a href="Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="medium"><a href="Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="medium"><a href="Tableaux.xhtml#arts_du_combat">Arts du combat</a></span> </li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
-                <ul class="hidden">
-                    <li><span class="little"><a href="Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
-                </ul></li>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
+                        <li><span class="little"><a href="Glossaire.xhtml#capacite_speciales">Capacités spéciales</a></span></li>
+                    </ul></li>
             </ul>
         </li>
         <li><span class="nav_ajout"><a href="Rules.xhtml#form_ajout">Une proposition ?</a></span></li>
@@ -111,7 +113,6 @@
                 <p>Lors du premier tour du combat, tout les entités participant au combat lance un dé d'initiative (1d20 + PER), l'ordre de jeu est déterminé par ce jet du plus grand score au plus petit, si il y a  égalité entre deux ou plusieurs entités, elles relancent un jet d'initiative pour déterminer leur ordre de jeu.</p>
                 <p>Toute entité est prise par surprise tant qu'elle n'a pas joué son premier tour, à moins d'être consciente du danger via un test de perception réussi. Une entité prise par surprise ne peut pas se défendre.</p>
             </div>
-
             <h3 onclick="hideContent(this)">Vitesse de base en combat</h3>
             <div>
                 <p>Chaque entité possède une vitesse de déplacement qui lui est propre. Cette vitesse diffère principalement selon la caractéristique d'Agilité et l'armure portée.</p>
@@ -119,7 +120,6 @@
                 <p>Un individu possédant une Agilité supérieure à 12 obtient un bonus d'un mètre sur sa vitesse de déplacement tous les 2 points au dessus de 12 (14 AGI → +1m ; 16 AGI → +2m)</p>
                 <p>Il est possible de se déplacer sur une plus grande distance chaque round en <a href="Types_actions.xhtml#courir">courant</a></p>
             </div>
-
             <h3 onclick="hideContent(this)">Types d'actions</h3>
             <div>
                 <p>Chaque type d’action définit le temps requis pour l’effectuer (dans le cadre des 6 secondes du round de combat) et comment gérer le déplacement. Il y a quatre types d’actions : l’action simple, l’action de mouvement, l’action complexe et l’action libre.</p>
@@ -129,6 +129,152 @@
                 <p><span class="big_underline">Action de mouvement</span>L’action de mouvement permet au personnage de se déplacer ou d’accomplir une action demandant le même temps. Voir la <a href="Types_actions.xhtml#mouvement">liste des actions de mouvement</a>.<br/>On peut faire une action de mouvement au lieu d’une action simple. Si un personnage ne se déplace pas au cours du round (souvent parce qu’il a troqué son déplacement contre une ou plusieurs actions équivalentes), il peut tout de même accomplir un pas de placement de 1 m, pendant, avant ou après son action. </p>
                 <p><span class="big_underline">Action complexe</span>Une action complexe demande un round entier. Le déplacement du personnage se limite à un pas de placement (avant, pendant ou après son action). Il peut aussi accomplir des actions libres et des actions rapides. Voir la <a href="Types_actions.xhtml#complexe">liste des actions complexes</a>.<br/>Certaines actions complexes ne laissent pas de temps pour un pas de placement. </p>
                 <p><span class="big_underline">Action libre</span>Les actions libres prennent un temps négligeable et ne demandent presque aucun effort. Le personnage peut en accomplir une ou plusieurs tout en exécutant l’action qu’il a choisie. On peut effectuer plusieurs actions libres au cours d’un round, dans les limites du raisonnable et avec l’accord du MJ. Voir la <a href="Types_actions.xhtml#libre">liste des actions libres</a>. </p>
+            </div>
+            <h3 onclick="hideContent(this)">Frappes localisées</h3>
+            <div>
+                <p>Il est possible de frapper un adversaire sur une zone précise dans le but de lui infliger des dégâts supplémentaires et potentiellement des handicaps selon les dégâts effectués.</p>
+                <p>Ces frappes sont alors plus difficiles qu'une attaque standard mais peuvent permettre de toucher un endroit non protégé par l'armure. Un handicap n'est infligé que si le coup inflige plus du double du montant de la protection (hors bonus de dégâts dû à la localisation), par exemple un coup de dague(1d4+1 dégâts) à la tête infligeant 3 points de dégâts à un adversaire possédant un casque en métal (PR 2) n'infligera pas le malus de 2 dans toutes les caractéristiques mais l'adversaire subira 3+8-2=9 points de dégâts.</p>
+                <p>Les joueurs doivent faire attention à ne pas abuser du système en ne ciblant que la même zone parce qu'à découvert dans le but d'infliger un maximum de dégâts. Un bras salement amoché finit par se faire sectionner.</p>
+                <p>Seuls les adversaires les plus intelligents/compétentes peuvent effectuer des frappes localisées, les monstres n'effectuent que des attaques standards, pour de telles attaques, on ne prend en compte que l'armure du torse.</p>
+                <p align="center"><strong>Frappes localisées au corps-à-corps</strong></p>
+                <table class="table_horizontal" id="table_frappe_localisees_cac">
+                    <tbody>
+                    <tr>
+                        <th>Zone ciblée</th>
+                        <th>Armure prise en compte</th>
+                        <th>Bonus/malus de l'attaquant</th>
+                        <th>Bonus/malus du défenseur</th>
+                        <th>Bonus de dégâts</th>
+                        <th>Handicap infligé</th>
+                    </tr>
+                    <tr>
+                        <th>Tête</th>
+                        <td>Casque</td>
+                        <td>Atq -4</td>
+                        <td>Prd +2, Esquive +2</td>
+                        <td>+8</td>
+                        <td>Caractéristiques -2</td>
+                    </tr>
+                    <tr>
+                        <th>Torse</th>
+                        <td>Plastron/Veste/Cotte</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <th>Bras armé</th>
+                        <td>Brassards</td>
+                        <td>Atq -1</td>
+                        <td>Prd +2</td>
+                        <td>+2</td>
+                        <td>Atq/Prd -2</td>
+                    </tr>
+                    <tr>
+                        <th>Bras désarmé</th>
+                        <td>Brassards</td>
+                        <td>Atq -2</td>
+                        <td>/</td>
+                        <td>+2</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <th>Main armée</th>
+                        <td>Gants/Gantelets</td>
+                        <td>Atq -2</td>
+                        <td>Prd +2</td>
+                        <td>+4</td>
+                        <td>Désarmement, Atq/Prd -3</td>
+                    </tr>
+                    <tr>
+                        <th>Jambes</th>
+                        <td>Jambières</td>
+                        <td>/</td>
+                        <td>Prd +1, Esquive +1</td>
+                        <td>+2</td>
+                        <td>Agi -3, vitesse/2</td>
+                    </tr>
+                    <tr>
+                        <th>Pieds</th>
+                        <td>Bottes</td>
+                        <td>Atq -3</td>
+                        <td>Esquive +2</td>
+                        <td>+4</td>
+                        <td>Agi -3, vitesse/2</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p align="center"><strong>Frappes localisées à distance</strong></p>
+                <table class="table_horizontal" id="table_frappe_localisees_distance">
+                    <tbody>
+                    <tr>
+                        <th>Zone ciblée</th>
+                        <th>Armure prise en compte</th>
+                        <th>Bonus/malus de l'attaquant</th>
+                        <th>Bonus/malus du défenseur</th>
+                        <th>Bonus de dégâts</th>
+                        <th>Handicap infligé</th>
+                    </tr>
+                    <tr>
+                        <th>Tête</th>
+                        <td>Casque</td>
+                        <td>DEX -6</td>
+                        <td>Esquive +3</td>
+                        <td>+10</td>
+                        <td>Caractéristiques -2</td>
+                    </tr>
+                    <tr>
+                        <th>Torse</th>
+                        <td>Plastron/Veste/Cotte</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <th>Bras armé</th>
+                        <td>Brassards</td>
+                        <td>DEX -3</td>
+                        <td>Esquive +1</td>
+                        <td>+3</td>
+                        <td>Atq/Prd -2</td>
+                    </tr>
+                    <tr>
+                        <th>Bras désarmé</th>
+                        <td>Brassards</td>
+                        <td>DEX -3</td>
+                        <td>Esquive +1</td>
+                        <td>+3</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <th>Main armée</th>
+                        <td>Gants/Gantelets</td>
+                        <td>DEX -4</td>
+                        <td>Esquive +2</td>
+                        <td>+5</td>
+                        <td>Désarmement, Atq/Prd -3</td>
+                    </tr>
+                    <tr>
+                        <th>Jambes</th>
+                        <td>Jambières</td>
+                        <td>DEX -1</td>
+                        <td>Esquive -1</td>
+                        <td>+2</td>
+                        <td>Agi -3, vitesse/2</td>
+                    </tr>
+                    <tr>
+                        <th>Pieds</th>
+                        <td>Bottes</td>
+                        <td>DEX -3</td>
+                        <td>Esquive +2</td>
+                        <td>+5</td>
+                        <td>Agi -3, vitesse/2</td>
+                    </tr>
+                    </tbody>
+                </table>
+
             </div>
             <h3 onclick="hideContent(this)">Zones de contrôle et attaques d'opportunités</h3>
             <div>
@@ -958,11 +1104,11 @@
                             <td colspan="5">Facilite les attaques avec les armes à distance et améliore la portée des armes à distance.</td>
                         </tr>
                         <tr>
-                            <td>Novice : DEX +1 lors d’un tir</td>
-                            <td>Apprenti : DEX +2 lors d’un tir</td>
-                            <td>Adepte : DEX +3 lors d’un tir, tirer ne provoque pas d’attaque d’opportunité</td>
-                            <td>Expert : DEX +4 lors d’un tir</td>
-                            <td>Maître : DEX +5 lors d’un tir, le multiplicateur de critique monte d’un cran</td>
+                            <td>Novice : DEX +1 lors d’un tir, portée + 10%</td>
+                            <td>Apprenti : DEX +2 lors d’un tir portée + 20%</td>
+                            <td>Adepte : DEX +3 lors d’un tir, tirer ne provoque pas d’attaque d’opportunité portée + 30%</td>
+                            <td>Expert : DEX +4 lors d’un tir portée + 40%</td>
+                            <td>Maître : DEX +5 lors d’un tir, le multiplicateur de critique monte d’un cran portée + 50%</td>
                         </tr>
                         </tbody>
                     </table>
@@ -1148,7 +1294,7 @@
                             <td>Expert : Nombre de biome connus : 2. Ne peut plus se perdre qu’importe le biome</td>
                             <td>Maître : Nombre de biome connus : 3</td>
                         </tr>
-                        <tr>
+                        <tr id="vol">
                             <th>Vol</th>
                             <td colspan="5">Le personnage sait voler avec agilité, il est capable d’effectuer des manoeuvres complexes tout en étant en l’air. Cette compétences ne permet pas de voler pour autant.</td>
                         </tr>
@@ -1288,6 +1434,18 @@
                         <td><span class="underline">Rage Primordiale :</span> Jet de sauvegarde (VOL) si touché par un effet magique</td>
                     </tr>
                     <tr>
+                        <td colspan="2">Kanta</td>
+                        <td>+3</td>
+                        <td>-2</td>
+                        <td>-2</td>
+                        <td>+4</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td><span class="underline">Fourrure épaisse :</span> +50% de résitance au froid<br/><span class="underline">Sagesse :</span> Compétence Diplomatie (Apprenti)<br/><span class="underline">Imposante stature :</span>Taille G, Compétence Intimidation</td>
+                    </tr>
+                    <tr>
                         <td colspan="2">Mushuk</td>
                         <td>/</td>
                         <td>+1</td>
@@ -1298,18 +1456,6 @@
                         <td>/</td>
                         <td>/</td>
                         <td><span class="underline">Vision féline :</span> Vision nocturne<br/><span class="underline">Marchand né :</span> Compétence Marchandage (Apprenti)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Kanta</td>
-                        <td>+3</td>
-                        <td>-2</td>
-                        <td>-2</td>
-                        <td>+4</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td><span class="underline">Fourrure épaisse :</span> +50% de résitance au froid<br/><span class="underline">Sagesse :</span> Compétence Diplomatie (Apprenti)<br/><span class="underline">Imposante stature :</span> Compétence Intimidation</td>
                     </tr>
                     <tr>
                         <td colspan="2">Sakha</td>
@@ -1338,12 +1484,12 @@
                     </tr>
                     <tr>
                         <td>Serpents</td>
-                        <td>/</td>
+                        <td>-2</td>
                         <td>/</td>
                         <td>/</td>
                         <td>/</td>
                         <td>+2</td>
-                        <td>+1</td>
+                        <td>+3</td>
                         <td>/</td>
                         <td>/</td>
                         <td><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Vision serpentine :</span>Peut voir la signature thermique des êtres vivants</td>
@@ -1395,7 +1541,7 @@
                         <td>/</td>
                         <td>/</td>
                         <td>+2</td>
-                        <td><span class="underline">Froideur d'Hortak :</span> +50 % de résistance au froid</td>
+                        <td><span class="underline">Vision souterraine :</span> Vision nocturne<br/><span class="underline">Froideur d'Hortak :</span> +50 % de résistance au froid</td>
                     </tr>
                     <tr>
                         <td>Khazun</td>
@@ -1407,7 +1553,7 @@
                         <td>/</td>
                         <td>/</td>
                         <td>+2</td>
-                        <td><span class="underline">Chaleur des Monts Ardents :</span> +50 % de résistance au feu</td>
+                        <td><span class="underline">Vision souterraine :</span> Vision nocturne<br/><span class="underline">Chaleur des Monts Ardents :</span> +50 % de résistance au feu</td>
                     </tr>
                     <tr>
                         <td colspan="2">Tori</td>
@@ -1936,9 +2082,9 @@
             <h2 id="Armures" onclick="hideContent(this)">Armures</h2>
             <div>
                 <p>L'armure est très importante pour éviter de subir trop de dégâts lors d'une passe d'armes. Il est possible de négliger totalement une attaque si l'armure est suffisamment efficace, cependant, plus une armure protège, plus elle rend la vie difficile.</p>
-                <p>Les pièces d'armure couvrent une ou plusieurs localisation(s) (tête, torse, bras, mains, jambes et pieds) mais la protection octroyée par ces pièces reste globale tant que l'on a pas affaire à un coup critique. Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation, d'un point de vue réaliste, on est sensé porté une cotte de maille sous une armure de plate, et un gambison rembourré sous cette cotte de maille, mais pour simplifier tout ça on part du principe que c'est inclus dans la protection offerte par l'armure de plate.</p>
+                <p>Les pièces d'armure couvrent une ou plusieurs localisation(s) (tête, torse, bras, mains, jambes et pieds). Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation, d'un point de vue réaliste, on est sensé porté une cotte de maille sous une armure de plate, et un gambison rembourré sous cette cotte de maille, mais pour simplifier tout ça on part du principe que c'est inclus dans la protection offerte par l'armure de plate.</p>
                 <p>Les armures peuvent également être modifiés pour mieux correspondre à leur porteur. On peut imaginer une armure lourde mais ajustée ce qui réduirait les malus de dextérité et/ou d'atq/prd; une armure allégée protégeant moins mais ralentissant moins son porteur ou au contraire renforcée. Une armure peut également être teinte en noir pour apporter des bonus de furtivité ou alors décorée pour augmenter l'éloquence.</p>
-                <p>Les armures complètes couvrent et donc protègent toutes les localisations en cas de coup critiques, elles protègent mieux que les pièces d'armures individuelles, mais imposent de plus lourds malus selon leur poids.</p>
+                <p>L'armure naturelle et la protection magique s'appliquent à toutes les localisations (sauf précisé autrement).</p>
                 <p>Les listes d'armures ne sont pas exhaustives, il revient au MJ de décides des statistiques d'une armure.</p>
                 <div>
                     <p class="caption" onclick="hideContent(this)">Pièces d'armures</p>
@@ -1954,38 +2100,62 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <th rowspan="4">Plastrons (torse)</th>
+                            <th rowspan="7">Plastrons (torse)</th>
                         </tr>
                         <tr>
                             <td>Plastron de cuir</td>
-                            <td>0,5</td>
+                            <td>2</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>Plastron de cuir renforcé de métal</td>
-                            <td>1</td>
+                            <td>3</td>
+                            <td>AGI -1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Plastron d'écailles</td>
+                            <td>3</td>
+                            <td>AGI -1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Plastron de bois</td>
+                            <td>3</td>
+                            <td>AGI -2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Plastron lamelaire</td>
+                            <td>4</td>
                             <td>AGI -1</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>Plastron de métal</td>
-                            <td>1,5</td>
+                            <td>5</td>
                             <td>AGI -2</td>
                             <td>4</td>
                         </tr>
                         <tr>
-                            <th rowspan="3">Vestes (torse, bras)</th>
+                            <th rowspan="4">Vestes (torse, bras)</th>
                         </tr>
                         <tr>
                             <td>Veste en toile renforcée</td>
-                            <td>0,5</td>
+                            <td>1</td>
+                            <td>/</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Veste en peaux</td>
+                            <td>2</td>
                             <td>/</td>
                             <td>1</td>
                         </tr>
                         <tr>
                             <td>Gambison rembourré</td>
-                            <td>1</td>
+                            <td>2</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
@@ -1994,19 +2164,19 @@
                         </tr>
                         <tr>
                             <td>Cotte de mailles sans manches</td>
-                            <td>1,5</td>
+                            <td>3</td>
                             <td>AGI -2</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>Cotte de mailles avec manches</td>
-                            <td>2</td>
+                            <td>4</td>
                             <td>AGI -2 DEX -1</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>Cotte de mailles de qualité</td>
-                            <td>2</td>
+                            <td>5</td>
                             <td>AGI -2</td>
                             <td>4</td>
                         </tr>
@@ -2015,19 +2185,19 @@
                         </tr>
                         <tr>
                             <td>Casque de cuir</td>
-                            <td>0,25</td>
+                            <td>1</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>Casque de métal</td>
-                            <td>0,5</td>
+                            <td>2</td>
                             <td>/</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>Heaume de métal</td>
-                            <td>1</td>
+                            <td>3</td>
                             <td>DEX - 2 pour tirer</td>
                             <td>4</td>
                         </tr>
@@ -2036,35 +2206,47 @@
                         </tr>
                         <tr>
                             <td>Jambières de cuir</td>
-                            <td>0,25</td>
+                            <td>1</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>Jambières de métal</td>
-                            <td>0,5</td>
+                            <td>2</td>
                             <td>AGI - 1</td>
                             <td>3</td>
                         </tr>
                         <tr>
-                            <th rowspan="4">Brassards (Bras)</th>
+                            <th rowspan="4">Brassards et Spallières (Bras)</th>
                         </tr>
                         <tr>
                             <td>Brassards de cuir</td>
-                            <td>0,25</td>
+                            <td>1</td>
+                            <td>/</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Spallières de cuir</td>
+                            <td>1</td>
+                            <td>/</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Brassards et spallière de cuir</td>
+                            <td>2</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>Brassards de métal</td>
-                            <td>0,5</td>
+                            <td>2</td>
                             <td>DEX - 1</td>
                             <td>3</td>
                         </tr>
                         <tr>
-                            <td>Brassards de métal avec cubitières et spallières</td>
-                            <td>1</td>
-                            <td>DEX - 2 Atq - 2 Prd -2</td>
+                            <td>Brassards, cubitières et spallières de métal</td>
+                            <td>3</td>
+                            <td>DEX - 1 Atq - 1 Prd -1</td>
                             <td>4</td>
                         </tr>
                         <tr>
@@ -2072,19 +2254,19 @@
                         </tr>
                         <tr>
                             <td>Gants de cuir</td>
-                            <td>0,25</td>
+                            <td>1</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
                             <td>Gantelets de métal</td>
-                            <td>0,5</td>
+                            <td>2</td>
                             <td>DEX -1</td>
                             <td>3</td>
                         </tr>
                         <tr>
                             <td>Gantelets complet de métal</td>
-                            <td>1</td>
+                            <td>3</td>
                             <td>DEX -1 Atq -1 Prd -1</td>
                             <td>4</td>
                         </tr>
@@ -2093,98 +2275,15 @@
                         </tr>
                         <tr>
                             <td>Bottes de cuir renforcées</td>
-                            <td>0,25</td>
+                            <td>1</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
-
                         <tr>
                             <td>Solerets de métal</td>
-                            <td>0,5</td>
-                            <td>AGI -1</td>
-                            <td>3</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <p class="caption" onclick="hideContent(this)">Armures complètes</p>
-                    <table width="90%" class="hidden">
-                    <thead>
-                    <tr>
-                        <th>Type d'armure</th>
-                        <th>Protection</th>
-                        <th>Malus</th>
-                        <th>Rupture</th>
-                    </tr>
-                    </thead>
-                        <tbody>
-                        <tr>
-                            <td colspan="4"><strong>Armures lourdes : </strong>Ces armures sont pénibles à porter et imposent un malus de -6 pour la nage, l'escalade et la discrétion </td>
-                        </tr>
-                        <tr>
-                            <td>Armure de plaques articulées</td>
-                            <td>6</td>
-                            <td>AGI -5 DEX -3 Atq -2 Prd -2</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>O-yoroï</td>
-                            <td>6</td>
-                            <td>AGI -4 DEX -2 Atq -2 Prd -2</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>Aswãrãn</td>
-                            <td>5</td>
-                            <td>AGI -3 DEX -2 Atq -2 Prd -2</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>Armure lamellaire</td>
-                            <td>5</td>
-                            <td>AGI -4 DEX -2 Atq -2 Prd -2</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"><strong>Armures intermédiaires : </strong>Ces armures gènent légèrement leur porteur et imposent un malus de -4 pour la nage, l'escalade et la discrétion </td>
-                        </tr>
-                        <tr>
-                            <td>Armure de cuir métal</td>
-                            <td>4</td>
-                            <td>AGI -2 DEX -1 Atq -1 Prd -1</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>Dõ-maru</td>
-                            <td>4</td>
-                            <td>AGI -2 DEX -1</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>Armure de cuir écailles</td>
-                            <td>3</td>
-                            <td>AGI -1 Atq -1 Prd -1</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>Armure de bois</td>
-                            <td>3</td>
-                            <td>AGI -2 Atq -1 Prd -1</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"><strong>Armures légères : </strong>Ces armures sont assez souples et imposent un malus de -2 pour la nage, l'escalade et la discrétion </td>
-                        </tr>
-                        <tr>
-                            <td>Armure de cuir</td>
                             <td>2</td>
                             <td>AGI -1</td>
                             <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>Armure de peaux</td>
-                            <td>2</td>
-                            <td>/</td>
-                            <td>2</td>
                         </tr>
                         </tbody>
                     </table>

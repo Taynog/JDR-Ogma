@@ -88,10 +88,12 @@
                             </ul></li>
                         <li><span class="medium"><a href="Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="medium"><a href="Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="medium"><a href="Tableaux.xhtml#arts_du_combat">Arts du combat</a></span> </li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
+                        <li><span class="little"><a href="Glossaire.xhtml#capacite_speciales">Capacités spéciales</a></span></li>
                     </ul></li>
             </ul>
         </li>
@@ -947,9 +949,8 @@
         </table><br/><br/>
     </div>
 
-    <div>
-        <p id="table_taille_creatures" class="caption" onclick="hideContent(this)">Taille des creatures</p>
-        <table>
+    <p id="table_taille_creatures" class="caption" onclick="hideContent(this)">Taille des creatures</p>
+    <table>
             <thead>
                 <tr>
                    <th>Taille de la créature</th>
@@ -1024,7 +1025,134 @@
             </tr>
             </tbody>
         </table>
-    </div>
+
+    <p id="arts_du_combat" class="caption" onclick="hideContent(this)">Arts du combat</p>
+    <table width="95%">
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Condition(s)</th>
+            <td>Fréquence d'utilisation</td>
+            <td>Épreuve</td>
+            <td>Effets</td>
+            <td>Critique</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Feinte</th>
+            <td>/</td>
+            <td>1/rencontre</td>
+            <td>Action bonus avant l'Atq</td>
+            <td>La cible ne peut pas se défendre</td>
+            <td>R: dégâts + 4<br/>E: Le héros subit une attaque d'opportunité</td>
+        </tr>
+        <tr>
+            <th>Balayette</th>
+            <td>/</td>
+            <td>1/rencontre</td>
+            <td>DEX</td>
+            <td>la cible est au sol et passe son prochain tour, elle subit 2 dégâts</td>
+            <td>R: La cible s'assome et sombre dans l'inconscience<br/>E: Le héros chute et passe son prochain tour</td>
+        </tr>
+        <tr>
+            <th>Charge d'épaule</th>
+            <td>Force du héros supérieure de 4 à celle de la cible</td>
+            <td>1/rencontre</td>
+            <td>FOR</td>
+            <td>la cible est au sol et passe son prochain tour, elle subit 4 dégâts</td>
+            <td>R: La cible s'assome et sombre dans l'inconscience<br/>E: Le héros trébuche et passe son prochain tour</td>
+        </tr>
+        <tr>
+            <th>Tranche-tendons</th>
+            <td>/</td>
+            <td>1/rencontre</td>
+            <td>Atq -5</td>
+            <td>cible immobilisée</td>
+            <td>R: dégâts + 3<br/>E: Le héros est vulnérable jusqu'à son prochain tour (attaqué avec avantage)</td>
+        </tr>
+        <tr>
+            <th>Coup dans les yeux</th>
+            <td>Dague<br/>cible sans casque</td>
+            <td>1/rencontre</td>
+            <td>Atq -4</td>
+            <td>cible aveuglée partiellement : Atq et Prd -4 (4 tours)</td>
+            <td>R: Dégâts + 2<br/>E: Le héros est vulnérable jusqu'à son prochain tour (attaqué avec avantage)</td>
+        </tr>
+        <tr>
+            <th>Tranche</th>
+            <td>Arme lourde</td>
+            <td>1/rencontre</td>
+            <td>Atq -3</td>
+            <td>Touche toutes les cibles en face et à portée</td>
+            <td>R: Dégâts + 2<br/>E: L'arme se brise sur celle de la première cible (Rupture)</td>
+        </tr>
+        <tr>
+            <th>Désarmement</th>
+            <td>Après une attaque réussie</td>
+            <td>1/rencontre</td>
+            <td>Action bonus : moyenne DEX/FOR</td>
+            <td>L'arme de la cible tombe à 3 mètres</td>
+            <td>R: /<br/>E: Le héros fait tomber son arme à ses pieds.</td>
+        </tr>
+        <tr>
+            <th>Double attaque</th>
+            <td>Maître d'armes (Apprenti)</td>
+            <td>1/rencontre</td>
+            <td>2 jets d'Atq à -2</td>
+            <td>2 jets de dégâts</td>
+            <td>R: /<br/>E: L'arme se brise contre celle de l'adversaire (Rupture)</td>
+        </tr>
+        <tr>
+            <th>Coup de bouclier</th>
+            <td>Protecteur (Apprenti)<br/>Après attaque réussie</td>
+            <td>1/rencontre</td>
+            <td>Action bonus : Atq du bouclier</td>
+            <td>Atq et Prd de la cible -2 (3 rounds)</td>
+            <td>R: Cible passe son prochain tour<br/>E: La sangle du bouclier lâche, il tombe à 3 mètres</td>
+        </tr>
+        <tr>
+            <th>Oeil de faucon</th>
+            <td>Tireur d'élite (Apprenti)</td>
+            <td>1/rencontre</td>
+            <td>DEX - 3</td>
+            <td>Dégâts + 2, ignore l'armure</td>
+            <td>R: Dégâts + 4<br/>E: /</td>
+        </tr>
+        <tr>
+            <th>Frappe de précision</th>
+            <td>Coup précis (Apprenti)</td>
+            <td>1/rencontre</td>
+            <td>Atq - 3</td>
+            <td>Dégâts + 2, ignore l'armure</td>
+            <td>R: Dégâts + 4<br/>E: L'arme glisse sur l'armure et tombe à 3 mètres</td>
+        </tr>
+        <tr>
+            <th>Rage apaisante</th>
+            <td>Rage du berzerker (Apprenti)<br/></td>
+            <td>1/jour</td>
+            <td>Action bonus : CON</td>
+            <td>Récupère sa valeur de constitution en PV, fin de rage</td>
+            <td>R: +50% de PV récupérés<br/>E: Perte de contrôle (1 tour)</td>
+        </tr>
+        <tr>
+            <th>Rafale de coup</th>
+            <td>Attaquant habile(Adepte)<br/>Arme légère</td>
+            <td>1/rencontre</td>
+            <td>4 jets d'Atq à -2</td>
+            <td>4 jets de dégâts</td>
+            <td>R: /<br/>E: L'arme se brise contre celle de l'adversaire (Rupture)</td>
+        </tr>
+        <tr>
+            <th>Triple attaque</th>
+            <td>Maître d'arme(Expert)</td>
+            <td>1/rencontre</td>
+            <td>3 jets d'Atq à -3</td>
+            <td>3 jets de dégâts</td>
+            <td>R: /<br/>E: L'arme se brise contre celle de l'adversaire (Rupture)</td>
+        </tr>
+        </tbody>
+    </table>
 
 </div>
 </body>

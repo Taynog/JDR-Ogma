@@ -113,7 +113,7 @@ tr td:first-child{/*Affecte la premier case de corps d'une ligne(en l'occurence 
     padding-top: 15px;  /*Crée une marge de 10 pixel en haut pour les images*/
 }
 
-caption{/*Affecte la caption d'id 'synoptique'*/
+caption{/*Affecte la classe caption*/
     font-size: 25px;  /*Augmente la taille de la police du titre du tableau*/
     text-decoration: underline;  /*Souligne le titre du tableau*/
     padding-bottom: 10px;  /*Crée une marge de 10 pixel en bas du titre du tableau*/
@@ -184,7 +184,7 @@ span.index a{
     text-decoration: none;
     font-size: 28px;
     font-weight: bolder;
-    color: aliceblue;
+    color: white;
     display: block;
 }
 
@@ -211,14 +211,14 @@ span.sous-dossier {
 span.little a{
     text-decoration: none;
     font-size: 15px;
-    color: aliceblue;
+    color: white;
     display: block;
 }
 
 span.medium a{
     text-decoration: none;
     font-size: 17px;
-    color: aliceblue;
+    color: white;
     display: block;
 }
 

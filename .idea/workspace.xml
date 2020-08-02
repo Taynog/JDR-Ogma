@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="">
+    <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Azuma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Chono.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Kanta.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Kanta.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Mushuk.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Mushuk.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sakha.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sarpa.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sarpa.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sever.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sever.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sihir.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sihir.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Steinn.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Steinn.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Tori.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Tori.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Tuskizi.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Glossaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Tableaux.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Types_actions.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Types_actions.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Bestiaire.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Carte_Ogma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Histoire_Ogma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +44,7 @@
   </component>
   <component name="ProjectId" id="1bIrkLg5ShYynbTbyBwC3s6qnBE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -102,22 +122,36 @@
       <workItem from="1595954015135" duration="661000" />
       <workItem from="1596124485227" duration="16910000" />
       <workItem from="1596183956883" duration="4743000" />
-      <workItem from="1596212863231" duration="2095000" />
+      <workItem from="1596212863231" duration="3010000" />
+      <workItem from="1596310184731" duration="4797000" />
+      <workItem from="1596359167498" duration="8640000" />
     </task>
+    <task id="LOCAL-00001" summary="maj armures">
+      <created>1596215171617</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596215171617</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="maj armures" />
+    <option name="LAST_COMMIT_MESSAGE" value="maj armures" />
   </component>
   <component name="WindowStateProjectService">
     <state x="143" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596188669244">
       <screen x="0" y="0" width="1378" height="900" />
     </state>
     <state x="143" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596188669244" />
-    <state x="330" y="43" key="CommitChangelistDialog2" timestamp="1596215123124">
+    <state x="330" y="43" key="CommitChangelistDialog2" timestamp="1596369614367">
       <screen x="0" y="0" width="1378" height="900" />
     </state>
-    <state x="330" y="43" key="CommitChangelistDialog2/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596215123124" />
+    <state x="330" y="43" key="CommitChangelistDialog2/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596369614367" />
     <state x="345" y="43" key="CommitChangelistDialog2/0.0.1440.900/-1280.0.1280.1024@0.0.1440.900" timestamp="1590857258931" />
     <state x="500" y="204" key="FileChooserDialogImpl" timestamp="1588351526815">
       <screen x="0" y="0" width="1440" height="900" />
@@ -127,6 +161,10 @@
       <screen x="0" y="0" width="1378" height="900" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1591618323944" />
+    <state x="281" y="182" key="Vcs.Push.Dialog.v2" timestamp="1596215177549">
+      <screen x="0" y="0" width="1378" height="900" />
+    </state>
+    <state x="281" y="182" key="Vcs.Push.Dialog.v2/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596215177549" />
     <state x="506" y="366" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596215075080">
       <screen x="0" y="0" width="1378" height="900" />
     </state>
