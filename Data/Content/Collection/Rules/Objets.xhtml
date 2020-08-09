@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Objets et Tarifs</title>
+    <meta http-equiv="Content-Script-Type" content="application/javascript"/>
+    <script type="application/javascript" src="../../../Javascript/fonctions_accueil_plan.js"> </script>
+    <link rel="stylesheet" type="text/css" title="style_plan" href="../../../Styles/common_rules.css"/>
+</head>
+<body>
+<div id="mySidenav" class="sidenav" style="display: block">
+    <ul class="sidenav ">
+        <li><span class="index"><a href="../../../../index.xhtml">Accueil</a></span></li>
+        <li><span class="partie shown" onclick="hideContent(this)">Lore</span>
+            <ul>
+                <li><span class="medium shown"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium shown"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium shown"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier shown" onclick="hideContent(this)">Races/Factions</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Azuma.xhtml">Azuma</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sever.xhtml">Sever</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tuskizi.xhtml">Tuskizi</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Magiques</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Sakha.xhtml">Sakha</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sihir.xhtml">Sihir</a></span></li>
+                                <li><span class="little"><a href="../Factions/Steinn.xhtml">Steinn</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Bestiales</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Chono.xhtml">Chono</a></span></li>
+                                <li><span class="little"><a href="../Factions/Kanta.xhtml">Kanta</a></span></li>
+                                <li><span class="little"><a href="../Factions/Mushuk.xhtml">Mushuk</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sarpa.xhtml">Sarpa</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tori.xhtml">Tori</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="partie shown" onclick="hideContent(this)">Jeu de Rôle</span>
+            <ul>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#Combat">Combat</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Magie">Magie</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Survie">Survie</a></span></li>
+                    </ul></li>
+
+                <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#creation_perso">Création personnage</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Competences">Compétences</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#table_race">Traits raciaux</a></span></li>
+                    </ul></li>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#rupture">Rupture</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Armes">Armes</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#Armures">Armures</a></span></li>
+                        <li><span class="little"><a href="Rules.xhtml#materiel">Matériel</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#critiques_parade">Parade</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
+                            </ul></li>
+                        <li><span class="medium"><a href="Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="medium"><a href="Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="medium"><a href="Tableaux.xhtml#arts_du_combat">Arts du combat</a></span> </li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
+                        <li><span class="little"><a href="Glossaire.xhtml#capacite_speciales">Capacités spéciales</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Objets</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="Objets.xhtml#armes">Armes</a></span></li>
+                                <li><span class="little"><a href="Objets.xhtml#armures">Armures</a></span></li>
+                                <li><span class="little"><a href="Objets.xhtml#contenants">Contenants</a></span></li>
+                                <li><span class="little"><a href="Objets.xhtml#materiel_aventurier">Matériel</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Services</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="Objets.xhtml#taverne">Taverne</a></span></li>
+                                <li><span class="little"><a href="Objets.xhtml#transports">Transports</a></span></li>
+                            </ul></li>
+                    </ul></li>
+            </ul>
+        </li>
+        <li><span class="nav_ajout"><a href="Rules.xhtml#form_ajout">Une proposition ?</a></span></li>
+    </ul>
+</div>
+<div id="main" class="main" style="margin-left: 200px">
+    <h1>Listes d'objets</h1>
+    <h2 id="armes" onclick="hideContent(this)">Armes</h2>
+    <div>
+        <table width="95%">
+            <thead>
+            <tr>
+                <th>Catégorie</th>
+                <th>Arme</th>
+                <th>Valeur</th>
+                <th>Poids</th>
+                <th>Arme</th>
+                <th>Valeur</th>
+                <th>Poids</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th rowspan="7">Armes à une main</th>
+            </tr>
+            <tr>
+                <td>Dague</td>
+                <td>25 po</td>
+                <td>500 g</td>
+                <td>Épée courte</td>
+                <td>50 po</td>
+                <td>1 kg</td>
+            </tr>
+            <tr>
+                <td>Épée courbe</td>
+                <td>60 po</td>
+                <td>1 kg</td>
+                <td>Épée longue</td>
+                <td>75 po</td>
+                <td>1,5 kg</td>
+            </tr>
+            <tr>
+                <td>Rapière</td>
+                <td>70 po</td>
+                <td>1 kg</td>
+                <td>Katanas</td>
+                <td>75 po</td>
+                <td>1 kg</td>
+            </tr>
+            <tr>
+                <td>Hache</td>
+                <td>35 po</td>
+                <td>1,5 kg</td>
+                <td>Masse</td>
+                <td>50 po</td>
+                <td>2 kg</td>
+            </tr>
+            <tr>
+                <td>Lance</td>
+                <td>30 po</td>
+                <td>2 kg</td>
+                <td>Faucille</td>
+                <td>30 po</td>
+                <td>500 g</td>
+            </tr>
+            <tr>
+                <td>Pic de guerre</td>
+                <td>45 po</td>
+                <td>1 kg</td>
+                <td>Fouet</td>
+                <td>20 po</td>
+                <td>500 g</td>
+            </tr>
+            <tr>
+                <th rowspan="4">Armes à deux mains</th>
+            </tr>
+            <tr>
+                <td>Grande épée droite</td>
+                <td>150 po</td>
+                <td>3 kg</td>
+                <td>Grande épée courbe</td>
+                <td>170 po</td>
+                <td>3 kg</td>
+            </tr>
+            <tr>
+                <td>Grande hache</td>
+                <td>125 po</td>
+                <td>2,5 kg</td>
+                <td>Grand marteau</td>
+                <td>140 po</td>
+                <td>5 kg</td>
+            </tr>
+            <tr>
+                <td>Bâton</td>
+                <td>5 pa</td>
+                <td>1 kg</td>
+                <td>Faux</td>
+                <td>50 po</td>
+                <td>2 kg</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Armes d'hast</th>
+            </tr>
+            <tr>
+                <td>Pique</td>
+                <td>50 po</td>
+                <td>2 kg</td>
+                <td>Hallebarde</td>
+                <td>150 po</td>
+                <td>3 kg</td>
+            </tr>
+            <tr>
+                <td>Fauchard</td>
+                <td>120 po</td>
+                <td>2,5 kg</td>
+                <td colspan="3"/>
+            </tr>
+            <tr>
+                <th rowspan="3">Armes de lancer</th>
+            </tr>
+            <tr>
+                <td>Couteaux</td>
+                <td>5 po</td>
+                <td>250 g</td>
+                <td>Hachette</td>
+                <td>8 po</td>
+                <td>500 g</td>
+            </tr>
+            <tr>
+                <td>Javelot</td>
+                <td>3 po</td>
+                <td>500 g</td>
+                <td>Fléchette</td>
+                <td>5 pa</td>
+                <td>100 g</td>
+            </tr>
+            <tr>
+                <th rowspan="4">Armes à distance</th>
+            </tr>
+            <tr>
+                <td>Fronde</td>
+                <td>1 po</td>
+                <td>250 g</td>
+                <td>Arc court</td>
+                <td>35 po</td>
+                <td>1 kg</td>
+            </tr>
+            <tr>
+                <td>Arc long</td>
+                <td>75 po</td>
+                <td>1,5 kg</td>
+                <td>Arbalète</td>
+                <td>50 po</td>
+                <td>2 kg</td>
+            </tr>
+            <tr>
+                <td>Arbalète lourde</td>
+                <td>150 po</td>
+                <td>6 kg</td>
+                <td>Arbalète à main</td>
+                <td>80 po</td>
+                <td>1 kg</td>
+            </tr>
+            <tr>
+                <th rowspan="5">Boucliers</th>
+            </tr>
+            <tr>
+                <td>Bocle</td>
+                <td>15 po</td>
+                <td>500 g</td>
+                <td>Rondache</td>
+                <td>5 po</td>
+                <td>1 kg</td>
+            </tr>
+            <tr>
+                <td>Écu</td>
+                <td>45 po</td>
+                <td>3 kg</td>
+                <td>Parma</td>
+                <td>25 po</td>
+                <td>2,5 kg</td>
+            </tr>
+            <tr>
+                <td>Bouclier Viking</td>
+                <td>35 po</td>
+                <td>5 kg</td>
+                <td>Bouclier en amande</td>
+                <td>50 po</td>
+                <td>2,5 kg</td>
+            </tr>
+            <tr>
+                <td>Pavois</td>
+                <td>40 po</td>
+                <td>8 kg</td>
+                <td>Égide</td>
+                <td>75 po</td>
+                <td>10 kg</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="armures" onclick="hideContent(this)">Armures</h2>
+    <div>
+        <table width="95%">
+            <thead>
+            <tr>
+                <th>Catégorie</th>
+                <th>Armure</th>
+                <th>Valeur</th>
+                <th>Poids</th>
+                <th>Armure</th>
+                <th>Valeur</th>
+                <th>Poids</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th rowspan="4">Plastron</th>
+            </tr>
+            <tr>
+                <td>Plastron de cuir</td>
+                <td>50 po</td>
+                <td>2 kg</td>
+                <td>Plastron de cuir renforcé de métal</td>
+                <td>120 po</td>
+                <td>2,5 kg</td>
+            </tr>
+            <tr>
+                <td>Plastron d'écailles</td>
+                <td>350 po</td>
+                <td>3,5 kg</td>
+                <td>Plastron de bois</td>
+                <td>45 po</td>
+                <td>5 kg</td>
+            </tr>
+            <tr>
+                <td>Plastron lamellaire</td>
+                <td>450 po</td>
+                <td>4 kg</td>
+                <td>Plastron de métal</td>
+                <td>650 po</td>
+                <td>5 kg</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Vestes</th>
+            </tr>
+            <tr>
+                <td>Veste en toile renforcé</td>
+                <td>35 po</td>
+                <td>1 kg</td>
+                <td>Veste en peaux</td>
+                <td>40 po</td>
+                <td>1, 5 kg</td>
+            </tr>
+            <tr>
+                <td>Gambison rembourré</td>
+                <td>50 po</td>
+                <td>2 kg</td>
+                <td colspan="3"/>
+            </tr>
+            <tr>
+                <th rowspan="3">Cottes de mailles</th>
+            </tr>
+            <tr>
+                <td>Cotte de mailles sans manches</td>
+                <td>300 po</td>
+                <td>8 kg</td>
+                <td>Cotte de mailles avec manches</td>
+                <td>350 po</td>
+                <td>10 kg</td>
+            </tr>
+            <tr>
+                <td>Cotte de mailles de qualité</td>
+                <td>500 po</td>
+                <td>10 kg</td>
+                <td colspan="3"/>
+            </tr>
+            <tr>
+                <th rowspan="3">Casques</th>
+            </tr>
+            <tr>
+                <td>Casque de cuir</td>
+                <td>30 po</td>
+                <td>1 kg</td>
+                <td>Casque de métal</td>
+                <td>100 po</td>
+                <td>1,5 kg</td>
+            </tr>
+            <tr>
+                <td>Heaume de métal</td>
+                <td>250 po</td>
+                <td>2 kg</td>
+                <td colspan="3"/>
+            </tr>
+            <tr>
+                <th rowspan="2">Jambières</th>
+            </tr>
+            <tr>
+                <td>Jambières de cuir</td>
+                <td>35 po</td>
+                <td>1 kg</td>
+                <td>Jambières de métal</td>
+                <td>85 po</td>
+                <td>1,5 kg</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Brassards et spallières</th>
+            </tr>
+            <tr>
+                <td>Brassards de cuir</td>
+                <td>15 po</td>
+                <td>500 g</td>
+                <td>Spallières de cuir</td>
+                <td>20 po</td>
+                <td>500 g</td>
+            </tr>
+            <tr>
+                <td>Spallières de métal</td>
+                <td>80 po</td>
+                <td>1 kg</td>
+                <td>Brassards et cubitières de métal</td>
+                <td>70 po</td>
+                <td>1 kg</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Gantelets</th>
+            </tr>
+            <tr>
+                <td>Gants de cuir</td>
+                <td>20 po</td>
+                <td>500 g</td>
+                <td>Gantelets de cuir renforcé de métal</td>
+                <td>50 po</td>
+                <td>1 kg</td>
+            </tr>
+            <tr>
+                <td>Gantelets complets de métal</td>
+                <td>120 po</td>
+                <td>1,5 kg</td>
+                <td colspan="3"/>
+            </tr>
+            <tr>
+                <th rowspan="2">Bottes</th>
+            </tr>
+            <tr>
+                <td>Bottes de cuir renforcées</td>
+                <td>50 po</td>
+                <td>1 kg</td>
+                <td>Solerets de métal</td>
+                <td>100 po</td>
+                <td>1,5 kg</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="contenants"  onclick="hideContent(this)">Contenants</h2>
+    <div>
+        <table width="95%">
+            <thead>
+            <tr>
+                <th>Contenant</th>
+                <th>Poids (vide)</th>
+                <th>Capacité</th>
+                <th>Contenant</th>
+                <th>Poids (vide)</th>
+                <th>Capacité</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Bouteille</td>
+                <td>250 g</td>
+                <td>1 L</td>
+                <td>Carquois</td>
+                <td>250 g</td>
+                <td>30 flèches/carreaux</td>
+            </tr>
+            <tr>
+                <td>Coffre</td>
+                <td>10 kg</td>
+                <td>150 kg de matériel</td>
+                <td>Coffret</td>
+                <td>2 kg</td>
+                <td>10 kg de matériel</td>
+            </tr>
+            <tr>
+                <td>Cruche ou pichet</td>
+                <td>500 g</td>
+                <td>4 L</td>
+                <td>Étui à parchemin</td>
+                <td>250 g</td>
+                <td>10 parchemins</td>
+            </tr>
+            <tr>
+                <td>Fiole</td>
+                <td>100 g</td>
+                <td>100 mL / 100 g</td>
+                <td>Flasque ou chope</td>
+                <td>250 g</td>
+                <td>50 cL</td>
+            </tr>
+            <tr>
+                <td>Gourde</td>
+                <td>250 g</td>
+                <td>2 L</td>
+                <td>Panier</td>
+                <td>500 g</td>
+                <td>20 kg de matériel</td>
+            </tr>
+            <tr>
+                <td>Pot en fer</td>
+                <td>500 g</td>
+                <td>4 L</td>
+                <td>Sac</td>
+                <td>10 kg de matériel</td>
+                <td>500 g</td>
+            </tr>
+            <tr>
+                <td>Sac à dos *</td>
+                <td>1 kg</td>
+                <td>20 kg de matériel</td>
+                <td>Sacoche</td>
+                <td>250 g</td>
+                <td>2,5 kg de matériel</td>
+            </tr>
+            <tr>
+                <td>Seau</td>
+                <td>500 g</td>
+                <td>10 L</td>
+                <td>Tonneau</td>
+                <td>5 kg</td>
+                <td>150 L</td>
+            </tr>
+            <tr>
+                <td colspan="6">* Vous pouvez également attacher des objets, comme un sac de couchage, une corde ou une sacoche, à l'extérieur du sac à dos.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="materiel_aventurier" onclick="hideContent(this)">Équipement d'aventurier</h2>
+    <div>
+        <table width="95%">
+            <thead>
+            <tr>
+                <th>Catégorie</th>
+                <th>Objet</th>
+                <th>Prix</th>
+                <th>Poids</th>
+                <th>Objet</th>
+                <th>Prix</th>
+                <th>Poids</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th rowspan="3">Munitions</th>
+            </tr>
+            <tr>
+                <td>Aiguilles de sarbacane (50)</td>
+                <td>1 po</td>
+                <td>500 g</td>
+                <td>Billes de fronde (20)</td>
+                <td>1 po</td>
+                <td>750 g</td>
+            </tr>
+            <tr>
+                <td>Carreaux d'arbalète (20)</td>
+                <td>5 po</td>
+                <td>800 g</td>
+                <td>Flèches (20)</td>
+                <td>5 po</td>
+                <td>800 g</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Fioles</th>
+            </tr>
+            <tr>
+                <td>Antidote</td>
+                <td>20 po</td>
+                <td>250 g</td>
+                <td>Encre</td>
+                <td>10 po</td>
+                <td>150 g</td>
+            </tr>
+            <tr>
+                <td>Parfum</td>
+                <td>5 po</td>
+                <td>150 g</td>
+                <td>Poison</td>
+                <td>10 po</td>
+                <td>250 g</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Flasque</th>
+            </tr>
+            <tr>
+                <td>Acide</td>
+                <td>20 po</td>
+                <td>250 g</td>
+                <td>Feu grégeois</td>
+                <td>20 po</td>
+                <td>500 g</td>
+            </tr>
+            <tr>
+                <td>Huile</td>
+                <td>1 pa</td>
+                <td>500 g</td>
+                <td>Potion de soins</td>
+                <td>20 po</td>
+                <td>250 g</td>
+            </tr>
+            <tr>
+                <th rowspan="4">Outils</th>
+            </tr>
+            <tr>
+                <td>Bélier portatif</td>
+                <td>15 po</td>
+                <td>10 kg</td>
+                <td>Marteau</td>
+                <td>1 po</td>
+                <td>1,5 kg</td>
+            </tr>
+            <tr>
+                <td>Pelle</td>
+                <td>5 po</td>
+                <td>2,5 kg</td>
+                <td>Pied-de-biche</td>
+                <td>10 po</td>
+                <td>2 kg</td>
+            </tr>
+            <tr>
+                <td>Pioche</td>
+                <td>5 po</td>
+                <td>5 kg</td>
+                <td colspan="3"/>
+            </tr>
+            <tr>
+                <th rowspan="2">Optique</th>
+            </tr>
+            <tr>
+                <td>Longue-vue</td>
+                <td>50 po</td>
+                <td>500 g</td>
+                <td>Loupe</td>
+                <td>20 po</td>
+                <td>100 g</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Éclairage</th>
+            </tr>
+            <tr>
+                <td>Bougie</td>
+                <td>1 pc</td>
+                <td>100 g</td>
+                <td>Lanterne</td>
+                <td>5 po</td>
+                <td>1 kg</td>
+            </tr>
+            <tr>
+                <td>Lanterne sourde</td>
+                <td>10 po</td>
+                <td>1 kg</td>
+                <td>Torche</td>
+                <td>1 pc</td>
+                <td>250 g</td>
+            </tr>
+            <tr>
+                <th rowspan="4">Campement</th>
+            </tr>
+            <tr>
+                <td>Boite d'allume-feu</td>
+                <td>5 pa</td>
+                <td>500 g</td>
+                <td>Gamelle</td>
+                <td>2 pa</td>
+                <td>500 g</td>
+            </tr>
+            <tr>
+                <td>Rations (1 jour)</td>
+                <td>5 pa</td>
+                <td>500 g</td>
+                <td>Tente</td>
+                <td>10 po</td>
+                <td>5 kg</td>
+            </tr>
+            <tr>
+                <td>Sac de couchage</td>
+                <td>1 po</td>
+                <td>2 kg</td>
+                <td>Couverture</td>
+                <td>5 pa</td>
+                <td>1,5 kg</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Cordes et chaînes</th>
+            </tr>
+            <tr>
+                <td>Chaîne (3 m)</td>
+                <td>35 po</td>
+                <td>5 kg</td>
+                <td>Corde en chanvre (15 m)</td>
+                <td>1 po</td>
+                <td>5 kg</td>
+            </tr>
+            <tr>
+                <td>Corde en soie (15 m)</td>
+                <td>10 po</td>
+                <td>2,5 kg</td>
+                <td colspan="3"/>
+            </tr>
+            <tr>
+                <th rowspan="3">Pièges</th>
+            </tr>
+            <tr>
+                <td>Billes (sac de 1000)</td>
+                <td>10 po</td>
+                <td>1 kg</td>
+                <td>Chausse-trappes (sac de 20)</td>
+                <td>5 po</td>
+                <td>1 kg</td>
+            </tr>
+            <tr>
+                <td>Piège à mâchoires</td>
+                <td>25 po</td>
+                <td>5 kg</td>
+                <td>Pointes en fer (10)</td>
+                <td>1 po</td>
+                <td>2,5 kg</td>
+            </tr>
+            <tr>
+                <th rowspan="4">Écrits</th>
+            </tr>
+            <tr>
+                <td>Craie (un morceau)</td>
+                <td>1 pc</td>
+                <td>-</td>
+                <td>Grimoire</td>
+                <td>20 po</td>
+                <td>1,5 kg</td>
+            </tr>
+            <tr>
+                <td>Livre</td>
+                <td>15 po</td>
+                <td>1 kg</td>
+                <td>Papier (une feuille)</td>
+                <td>1 pa</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Parchemin (une feuille)</td>
+                <td>2 pa</td>
+                <td>-</td>
+                <td>Plume d’écriture</td>
+                <td>2 pc</td>
+                <td>100 g</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Outils de marchand</th>
+            </tr>
+            <tr>
+                <td>Balance de marchand</td>
+                <td>25 po</td>
+                <td>3 kg</td>
+                <td>Boulier</td>
+                <td>2 po</td>
+                <td>1 kg</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Déplacement</th>
+            </tr>
+            <tr>
+                <td>Échelle de corde (3 m)</td>
+                <td>5 pa</td>
+                <td>5 kg</td>
+                <td>Équipement d’escalade</td>
+                <td>25 po</td>
+                <td>5 kg</td>
+            </tr>
+            <tr>
+                <td>Grappin</td>
+                <td>2 po</td>
+                <td>2 kg</td>
+                <td>Palan</td>
+                <td>3 po</td>
+                <td>2,5 kg</td>
+            </tr>
+            <tr>
+                <th rowspan="8">Divers</th>
+            </tr>
+            <tr>
+                <td>Cadenas</td>
+                <td>35 po</td>
+                <td>500 g</td>
+                <td>Chevalière</td>
+                <td>20 po</td>
+                <td>250 g</td>
+            </tr>
+            <tr>
+                <td>Cire à cacheter</td>
+                <td>5 pa</td>
+                <td>100 g</td>
+                <td>Cloche</td>
+                <td>1 po</td>
+                <td>250 g</td>
+            </tr>
+            <tr>
+                <td>Matériel de pêche</td>
+                <td>1 po</td>
+                <td>2,5 kg</td>
+                <td>Menottes</td>
+                <td>25 po</td>
+                <td>500 g</td>
+            </tr>
+            <tr>
+                <td>Miroir en acier</td>
+                <td>15 po</td>
+                <td>250 g</td>
+                <td>Perche (3 m)</td>
+                <td>5 pc</td>
+                <td>3 kg</td>
+            </tr>
+            <tr>
+                <td>Pierre à aiguiser</td>
+                <td>1 pc</td>
+                <td>500 g</td>
+                <td>Sablier</td>
+                <td>25 po</td>
+                <td>500 g</td>
+            </tr>
+            <tr>
+                <td>Savon</td>
+                <td>5 pc</td>
+                <td>100 g</td>
+                <td>Sifflet</td>
+                <td>5 pc</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Trousse de soins</td>
+                <td>25 po</td>
+                <td>1,5 kg</td>
+                <td colspan="3"/>
+            </tr>
+            </tbody>
+        </table>
+        <h3 onclick="hideContent(this)">Description et règles spéciales des objets</h3>
+        <div class="hidden">
+            <p><strong>Acide</strong>. Au prix d'une action, vous pouvez lancer le contenu de ce flacon sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, le brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet. En cas de succès, la cible reçoit 2d6 dégâts d'acide.</p>
+            <p><strong>Antidote</strong>. Une créature qui boit cette fiole gagne un bonus de 5 aux jets de sauvegarde contre le poison pendant 1 heure. Il ne confère aucun avantage aux morts-vivants et aux créatures artificielles.</p>
+            <p><strong>Balance de marchand</strong>. Cela comprend une petite balance, des plateaux et un assortiment de poids approprié jusqu'à 1 kg. Avec, vous pouvez mesurer le poids exact de petits objets, tels que des métaux précieux ou des biens commerciaux, pour aider à déterminer leur valeur.</p>
+            <p><strong>Bélier portatif</strong>. Vous pouvez utiliser un bélier portatif pour enfoncer des portes. Ce faisant, vous gagnez un bonus de +4 au jet de Force. Un autre personnage peut vous aider à utiliser le bélier, ce qui vous donne un avantage à ce jet.</p>
+            <p><strong>Billes</strong>. Au prix d'une action, vous pouvez sortir ces petites billes métalliques de leur poche pour recouvrir une zone de 3 m x 3 m. Une créature se déplaçant à travers la zone recouverte doit réussir un jet de sauvegarde d'Agilité ou tomber à terre. Une créature se déplaçant à travers la zone à la moitié de sa vitesse n'a pas besoin de faire le jet de sauvegarde.</p>
+            <p><strong>Boite d'allume-feu</strong>. Cette petite boite contient un silex, des amorces et de l'amadou (généralement des bouts de tissu sec trempés dans de l'huile), soit tout le nécessaire pour allumer un feu. L'utiliser pour allumer une torche, ou autre chose qui contient suffisamment d'huile, prend une action. Allumer tout autre type de feu prend 1 minute.</p>
+            <p><strong>Bougie</strong>. Une bougie génère une lumière vive dans un rayon de 1,50 mètre et une lumière faible sur 1,50 mètre supplémentaire durant 1 heure.</p>
+            <p><strong>Cadenas</strong>. Une clé est fournie avec le cadenas. Des cadenas de meilleure qualité (plus difficile à crocheter) sont disponibles à des prix plus élevés.</p>
+            <p><strong>Carquois</strong>. Un carquois peut contenir jusqu'à 20 flèches.</p>
+            <p><strong>Chaîne</strong>. Une chaîne peut être brisée en réussissant un jet de Force avec un malus de 10.</p>
+            <p><strong>Chausse-trappes</strong>. Au prix d'une action, vous pouvez étaler le contenu d'un sac de chausse-trappes pour couvrir une zone de 1,50 m x 1,50 m. Toute créature qui entre dans la zone doit réussir un jet de sauvegarde d'Agilité avec un malus de 5 ou mettre fin à son mouvement et prendre 1 point de dégâts perforants. Jusqu'à ce que la créature retrouve au moins 1 point de vie, sa vitesse de marche est réduite de moitié. Une créature se déplaçant à travers la zone à la moitié de sa vitesse n'a pas besoin de faire le jet de sauvegarde.</p>
+            <p><strong>Corde</strong>. Une corde, qu'elle soit faite de chanvre ou de soie, peut être cassée avec un jet de Force avec un malus de 5.</p>
+            <p><strong>Eau bénite</strong>. Au prix d'une action, vous pouvez lancer le contenu de cette flasque sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, la brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature. Si la cible est un fiélon ou mort-vivant, elle reçoit 2d6 dégâts radiant. L'eau bénite est une création des prêtres d'Agapi.</p>
+            <p><strong>Équipement d'escalade</strong>. Ce kit comprend des pitons spéciaux, des pointes pour les chaussures, des gants et un harnais. Vous pouvez utiliser le matériel d'escalade pour vous accrocher au prix d'une action ; une fois fait, vous ne pouvez pas tomber de plus de 7,50 mètres de l'endroit où vous êtes ancré. l'équipement accorde un bonus de 4 aux tentatives d'escalade.</p>
+            <p><strong>Feu grégeois</strong>. Ce liquide adhésif et collant s'enflamme lorsqu'il est exposé à l'air. Au prix d'une action, vous pouvez jeter cette flasque jusqu'à 6 mètres, la brisant à l'impact. Faire une attaque à distance contre une créature ou un objet. En cas de succès, la cible reçoit 1d4 dégâts de feu au début de chacun de ses tours. Une créature peut mettre fin à ces dégâts en utilisant son action pour faire un jet de Dextérité pour éteindre les flammes.</p>
+            <p><strong>Gamelle</strong>. Cette boîte en étain contient une tasse et des couverts. Faite de deux parties qui s'assemblent, un côté de la boîte peut être utilisé pour cuire des aliments et l'autre comme une assiette ou une petite cuvette.</p>
+            <p><strong>Grimoire</strong>. Essentiel pour les érudits, un grimoire est un livre relié en cuir qui contient 100 pages de vélin blanc.</p>
+            <p><strong>Huile</strong>. L'huile vient habituellement dans une flasque d'argile de 50 cl. Au prix d'une action, vous pouvez lancer le contenu de cette flasque sur une créature à 1,50 mètre ou moins de vous, ou jeter la flasque jusqu'à 6 mètres, la brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet. En cas de succès, la cible est couverte d'huile. Si la cible reçoit des dégâts de feu avant que l'huile ne sèche (après 1 minute), la cible prend 5 points de dégâts de feu supplémentaire dus à l'huile brûlante. Vous pouvez aussi verser une flasque d'huile sur le sol pour couvrir une zone de 1,50 m x 1,50 m, à condition que la surface soit plane. Une fois allumée, l'huile brûle pendant 2 rounds et inflige 5 points de dégâts de feu à toute créature qui pénètre dans la zone ou qui y termine son tour. Une créature ne peut prendre ces dégâts qu'une fois par tour.</p>
+            <p><strong>Lanterne</strong>. Une lanterne projette une lumière vive dans un rayon de 9 mètres et une lumière faible sur 9 mètres supplémentaires. Une fois allumée, elle brûle pendant 6 heures tout en consommant une flasque d'huile (50 cl). Au prix d'une action, vous pouvez ajuster la capote, ce qui réduit la lumière à une lumière faible dans un rayon de 1,50 mètre.</p>
+            <p><strong>Lanterne sourde</strong>. Une lanterne sourde projette une lumière vive dans un cône de 18 mètres et une lumière faible sur 18 mètres supplémentaires. Une fois allumée, elle brûle pendant 6 heures tout en consommant une flasque d'huile (50 cl).</p>
+            <p><strong>Livre</strong>. Un livre peut contenir de la poésie, des récits historiques, des informations relatives à un domaine particulier de connaissance, des diagrammes et des notes sur une invention gnome, ou n'importe quoi d'autre qui peut être représenté en utilisant du texte ou des images. Un livre contient 50 pages de vélin blanc.</p>
+            <p><strong>Longue-vue</strong>. Les objets vus à travers une longue-vue sont amplifiés de cinq fois leur taille.</p>
+            <p><strong>Loupe</strong>. Ce verre permet un examen plus minutieux des petits objets. Il est également utile comme substitut au silex pour allumer un feu. Allumer un feu avec une loupe nécessite une lumière aussi vive que celle du soleil pour faire prendre l'amadou, et environ 5 minutes pour que le feu prenne. Une loupe donne un avantage aux jets de caractéristique pour évaluer ou inspecter un objet de petite taille ou très détaillé.</p>
+            <p><strong>Matériel de pêche</strong>. Ce kit comprend une tige en bois, une ligne de soie, des flotteurs en liège, des hameçons en acier, des plombs, des leurres en velours et un petit filet.</p>
+            <p><strong>Menottes</strong>. Ces menottes métalliques servent pour une créature de taille Petite ou Moyenne. Se libérer des menottes nécessite un jet de Dextérité avec un malus de 10. Briser les menottes nécessite un jet de Force avec un malus de 10. Chaque paire de menottes est livrée avec une clé.</p>
+            <p><strong>Palan</strong>. Ensemble de poulies avec un câble et un crochet pour attacher des objets, un palan permet de hisser jusqu'à quatre fois le poids que vous pouvez normalement soulever.</p>
+            <p><strong>Pied-de-biche</strong>. Un pied de biche octroie un avantage aux jets de Force lorsque le levier du pied de biche peut être utilisé.</p>
+            <p><strong>Piège à mâchoires</strong>. Lorsque vous utilisez votre action pour l'installer, ce piège forme un anneau d'acier en dents de scie qui se referme lorsqu'une créature marche sur la plaque de pression située au centre. Le piège est fixé par une lourde chaîne à un objet immobile, comme un arbre ou un pic enfoncé dans le sol. Une créature qui marche sur la plaque doit réussir un jet de sauvegarde d'Agilité avec un malus de 5 ou prendre 1d6 points de dégâts perforants et devoir s'arrêter de bouger. Par la suite, tant que la créature ne s'échappe pas du piège, son mouvement est limité par la longueur de la chaîne (généralement un mètre de long). Une créature peut utiliser son action pour faire un jet de Force avec un malus de 5 pour se libérer ou libérer une autre créature à sa portée en cas de succès. Chaque échec inflige 1 point de dégâts perforants à la créature piégée.</p>
+            <p><strong>Poison</strong>. Vous pouvez utiliser le poison de cette fiole pour couvrir une arme tranchante ou perforante, ou jusqu'à trois munitions. Appliquer le poison prend une action. Une créature touchée par une arme ou une munition empoisonnée doit réussir un jet de sauvegarde de Constitution ou prendre 1d4 points de dégâts de poison. Une fois appliqué, le poison conserve son activité 1 minute avant de sécher.</p>
+            <p><strong>Potion de soins</strong>. Un personnage qui boit le liquide alchimique rouge de ce flacon reprend 2d4 + 2 points de vie. Boire ou administrer une potion prend une action.</p>
+            <p><strong>Rations</strong>. Aliments compacts et secs appropriés pour un voyage prolongé, les rations incluent du bœuf séché, des fruits secs, des biscuits et des noix.</p>
+            <p><strong>Tente</strong>. Abri de toile simple et portable, une tente peut accueillir deux personnes.</p>
+            <p><strong>Torche</strong>. Une torche brûle pendant 1 heure, projetant une lumière vive dans un rayon de 6 mètres et une lumière faible sur 6 mètres supplémentaires. Si vous effectuez une attaque au corps à corps avec une torche enflammée et touchez, vous infligez 3 point de dégât de feu.</p>
+            <p><strong>Trousse de soins</strong>. Ce kit est un étui en cuir qui contient des bandages, des pommades et des attelles. Le kit permet dix utilisations. Au prix d'une action, vous pouvez dépenser une utilisation du kit pour stabiliser une créature mourante sans avoir à réaliser de jet.</p>
+        </div>
+    </div>
+
+    <h1>Listes de services</h1>
+    <h2 id="taverne" onclick="hideContent(this)">Taverne</h2>
+    <div>
+        <table width="95%">
+            <thead>
+            <tr>
+                <th>Catégorie</th>
+                <th>Service</th>
+                <th>Prix</th>
+                <th>Service</th>
+                <th>Prix</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th colspan="5">Repas</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Petit-déjeuner de roturier</th>
+            </tr>
+            <tr>
+                <td>Omelette au fromage</td>
+                <td>4 pc</td>
+                <td>Jambon et fromage sur pain de riz</td>
+                <td>5 pc</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Petit-déjeuner de marchand</th>
+            </tr>
+            <tr>
+                <td>Sandwich aux oeufs et bacon</td>
+                <td>3 pa</td>
+                <td>Fougasse aux lardons</td>
+                <td>5 pa</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Petit-déjeuner de noble</th>
+            </tr>
+            <tr>
+                <td>Steak de sanglier et oeuf à cheval</td>
+                <td>2 po</td>
+                <td>Omellette à la truffe</td>
+                <td>3 po</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Déjeuner de roturier</th>
+            </tr>
+            <tr>
+                <td>Soupe aux légumes</td>
+                <td>4 pc</td>
+                <td>Chèvre grillée</td>
+                <td>6 pc</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Déjeuner de marchand</th>
+            </tr>
+            <tr>
+                <td>Chèvre grillée et fromage</td>
+                <td>3 pa</td>
+                <td>Oie grillée briochée</td>
+                <td>5 pa</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Déjeuner de noble</th>
+            </tr>
+            <tr>
+                <td>Carré d'agneau</td>
+                <td>2 po</td>
+                <td>Salade de gésiers</td>
+                <td>3 po</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Diner de roturier</th>
+            </tr>
+            <tr>
+                <td>Soupe de légumes</td>
+                <td>4 pc</td>
+                <td>Lapin et patates sautées</td>
+                <td>6 pc</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Diner de marchand</th>
+            </tr>
+            <tr>
+                <td>Tourte du chasseur</td>
+                <td>4 pa</td>
+                <td>Salade de venaison</td>
+                <td>5 pa</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Diner de noble</th>
+            </tr>
+            <tr>
+                <td>Steak de venaison et légumes</td>
+                <td>2 po</td>
+                <td>Saumon fumé</td>
+                <td>4 po</td>
+            </tr>
+            <tr>
+                <td colspan="5">Les repas sont apportés avec un accompagnement(sauf spécifié), une tranche de pain et une chope (d'eau pour roturier, de bière pour marchand, de vin pour noble). Les parts des repas marchands et nobles sont plus importantes.</td>
+            </tr>
+            <tr>
+                <th colspan="5">Boissons</th>
+            </tr>
+            <tr>
+                <th rowspan="5">Sans-alcool</th>
+            </tr>
+            <tr>
+                <td>Eau (pichet)</td>
+                <td>2 pc</td>
+                <td>Eau minérale (chope)</td>
+                <td>2 pc</td>
+            </tr>
+            <tr><td>Eau gazeuse (chope)</td>
+                <td>2 pc</td>
+                <td>Jus de fruit (chope)</td>
+                <td>2 pc</td>
+            </tr>
+            <tr>
+                <td>Lait de vache(chope)</td>
+                <td>1 pc</td>
+                <td>Lait de chèvre(chope)</td>
+                <td>1 pc</td>
+            </tr>
+            <tr>
+                <td>Café (tasse)</td>
+                <td>3 pc</td>
+                <td>Thé (tasse)</td>
+                <td>2 pc</td>
+            </tr>
+            <tr>
+                <th rowspan="4">Alcoolisée</th>
+            </tr>
+            <tr>
+                <td>Bière (chope)</td>
+                <td>1 pa</td>
+                <td>Bière de qualité (chope)</td>
+                <td>2 pa</td>
+            </tr>
+            <tr>
+                <td>Vin (chope)</td>
+                <td>4 pa</td>
+                <td>Vin de qualité (chope)</td>
+                <td>8 pa</td>
+            </tr>
+            <tr>
+                <td>Cidre/Poirer (chope)</td>
+                <td>3 pa</td>
+                <td>Eau de vie/Alcool fort (fond de chope)</td>
+                <td>2 pa</td>
+            </tr>
+            <tr>
+                <th colspan="5">Nuitée</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Dortoir</th>
+            </tr>
+            <tr>
+                <td>Paillase</td>
+                <td>5 pc</td>
+                <td>Lit</td>
+                <td>1 pa</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Chambre individuelles</th>
+            </tr>
+            <tr>
+                <td>Chambre simple</td>
+                <td>1 po</td>
+                <td>Chambre avec baquet</td>
+                <td>2 po</td>
+            </tr>
+            <tr>
+                <td>Suite de luxe</td>
+                <td>5 po</td>
+                <td>Suite royale</td>
+                <td>10 po</td>
+            </tr>
+            <tr>
+                <th colspan="5">Services additionnels</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Montures</th>
+            </tr>
+            <tr>
+                <td>Box dans l'écurie</td>
+                <td>1 po</td>
+                <td>Nourriture et toilettage</td>
+                <td>5 pa</td>
+            </tr>
+            <tr>
+                <th rowspan="3">Hygiène</th>
+            </tr>
+            <tr>
+                <td>Lessive</td>
+                <td>1 pa</td>
+                <td>Baquet d'eau chaude et savon</td>
+                <td>1 po</td>
+            </tr>
+            <tr>
+                <td>Seau d'eau et savon</td>
+                <td>1 pa</td>
+                <td colspan="2"/>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="transports" onclick="hideContent(this)">Transports</h2>
+    <div>
+        <table width="95%">
+            <thead>
+            <tr>
+                <th>Type</th>
+                <th>Prix</th>
+                <th>Distance/jour</th>
+                <th>Type</th>
+                <th>Prix</th>
+                <th>Distance/jour</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th colspan="6">Montures</th>
+            </tr>
+            <tr>
+                <td>Cheval de trait</td>
+                <td>400 po</td>
+                <td>50 km</td>
+                <td>Cheval de course</td>
+                <td>600 po</td>
+                <td>60 km</td>
+            </tr>
+            <tr>
+                <td>Cheval de guerre</td>
+                <td>750 po</td>
+                <td>60 km</td>
+                <td>Dromadaire</td>
+                <td>300 po</td>
+                <td>50 km</td>
+            </tr>
+            <tr>
+                <td>Chameau</td>
+                <td>300 po</td>
+                <td>50 km</td>
+                <td>Âne</td>
+                <td>200 po</td>
+                <td>40 km</td>
+            </tr>
+            <tr>
+                <th colspan="6">Voyage terrestre</th>
+            </tr>
+            <tr>
+                <td>Charrette</td>
+                <td>3 pa/personne/jour</td>
+                <td>30 km</td>
+                <td>Caravane</td>
+                <td>5 pa/personne/jour</td>
+                <td>30 km</td>
+            </tr>
+            <tr>
+                <td>Carrosse</td>
+                <td>1 po/personne/jour</td>
+                <td>70 km</td>
+                <td>Traîneau</td>
+                <td>1 po/personne/jour</td>
+                <td>40 km (neige uniquement)</td>
+            </tr>
+            <tr>
+                <th colspan="6">Voyage maritime</th>
+            </tr>
+            <tr>
+                <td>Barge</td>
+                <td>2 pa/personne/jour</td>
+                <td>10 km + courant</td>
+                <td>Barque</td>
+                <td>5 pa/jour</td>
+                <td>20 km + courant</td>
+            </tr>
+            <tr>
+                <td>Jonque</td>
+                <td>5 pa/personne/jour</td>
+                <td>100 km</td>
+                <td>Drakkar</td>
+                <td>5 pa/personne/jour</td>
+                <td>100 km</td>
+            </tr>
+            <tr>
+                <td>Ganja</td>
+                <td>5 pa/personne/jour</td>
+                <td>100 km</td>
+                <td>Galion</td>
+                <td>1 po/personne/jour</td>
+                <td>80 km</td>
+            </tr>
+            <tr>
+                <td>Caravelle</td>
+                <td>1 po/personne/jour</td>
+                <td>120 km</td>
+                <td colspan="3"/>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
