@@ -3,24 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Azuma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Chono.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Kanta.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Kanta.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Mushuk.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Mushuk.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sakha.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sarpa.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sarpa.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sever.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sever.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sihir.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Sihir.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Steinn.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Steinn.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Tori.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Tori.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Factions/Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Factions/Tuskizi.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Glossaire.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Objets.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Objets.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Tableaux.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Types_actions.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Types_actions.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Bestiaire.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Carte_Ogma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Histoire_Ogma.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +34,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -57,13 +42,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Data/Content/Collection" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content\Collection" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -125,6 +111,10 @@
       <workItem from="1596310184731" duration="4797000" />
       <workItem from="1596359167498" duration="8640000" />
       <workItem from="1596964256303" duration="23143000" />
+      <workItem from="1597053671937" duration="435000" />
+      <workItem from="1597054419933" duration="255000" />
+      <workItem from="1597054697800" duration="1720000" />
+      <workItem from="1597056597980" duration="16382000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
@@ -137,7 +127,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="maj armures" />
@@ -153,10 +143,10 @@
     </state>
     <state x="330" y="43" key="CommitChangelistDialog2/0.0.1378.900/-1280.0.1280.1024@0.0.1378.900" timestamp="1596369614367" />
     <state x="345" y="43" key="CommitChangelistDialog2/0.0.1440.900/-1280.0.1280.1024@0.0.1440.900" timestamp="1590857258931" />
-    <state x="500" y="204" key="FileChooserDialogImpl" timestamp="1588351526815">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="190" y="81" key="SettingsEditor" timestamp="1597056933850">
+      <screen x="0" y="0" width="1378" height="900" />
     </state>
-    <state x="500" y="204" key="FileChooserDialogImpl/0.0.1440.900/-1280.0.1280.984@0.0.1440.900" timestamp="1588351526815" />
+    <state x="190" y="81" key="SettingsEditor/-1280.0.1218.1024/0.0.1378.900@0.0.1378.900" timestamp="1597056933850" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1591618323944">
       <screen x="0" y="0" width="1378" height="900" />
     </state>

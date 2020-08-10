@@ -137,13 +137,14 @@
             </div>
             <h3 onclick="hideContent(this)">Types d'actions</h3>
             <div>
-                <p>Chaque type d’action définit le temps requis pour l’effectuer (dans le cadre des 6 secondes du round de combat) et comment gérer le déplacement. Il y a quatre types d’actions : l’action simple, l’action de mouvement, l’action complexe et l’action libre.</p>
+                <p>Chaque type d’action définit le temps requis pour l’effectuer (dans le cadre des 6 secondes du round de combat) et comment gérer le déplacement. Il y a cinq types d’actions : l’action simple, l’action de mouvement, l’action complexe, l’action libre et l'action bonus.</p>
                 <p>Au cours d’un round ordinaire, un personnage peut effectuer une action simple et une action de mouvement ou bien une seule action complexe. Il peut ajouter une ou plusieurs actions libres aux actions du tour. Il peut toujours remplacer une action simple par une action de mouvement. </p>
                 <p>Dans certaines situations, comme pendant le round de surprise, l’activité d’un personnage peut être restreinte. Celui-ci ne peut alors effectuer qu’une action simple ou une action de mouvement.</p>
                 <p><span class="big_underline">Action simple</span>Une action simple permet d’accomplir quelque chose, comme attaquer ou lancer un sort. Voir la <a href="Types_actions.xhtml#simple">liste des actions simples</a>.</p>
                 <p><span class="big_underline">Action de mouvement</span>L’action de mouvement permet au personnage de se déplacer ou d’accomplir une action demandant le même temps. Voir la <a href="Types_actions.xhtml#mouvement">liste des actions de mouvement</a>.<br/>On peut faire une action de mouvement au lieu d’une action simple. Si un personnage ne se déplace pas au cours du round (souvent parce qu’il a troqué son déplacement contre une ou plusieurs actions équivalentes), il peut tout de même accomplir un pas de placement de 1 m, pendant, avant ou après son action. </p>
                 <p><span class="big_underline">Action complexe</span>Une action complexe demande un round entier. Le déplacement du personnage se limite à un pas de placement (avant, pendant ou après son action). Il peut aussi accomplir des actions libres et des actions rapides. Voir la <a href="Types_actions.xhtml#complexe">liste des actions complexes</a>.<br/>Certaines actions complexes ne laissent pas de temps pour un pas de placement. </p>
                 <p><span class="big_underline">Action libre</span>Les actions libres prennent un temps négligeable et ne demandent presque aucun effort. Le personnage peut en accomplir une ou plusieurs tout en exécutant l’action qu’il a choisie. On peut effectuer plusieurs actions libres au cours d’un round, dans les limites du raisonnable et avec l’accord du MJ. Voir la <a href="Types_actions.xhtml#libre">liste des actions libres</a>. </p>
+                <p><span class="big_underline">Action bonus</span>Les actions bonus permettent d'effectuer certaines actions. De base, un personnage ne possède pas d'action bonus, il doit pour cela obtenir certaines <a href="Rules.xhtml#Competences">compétences</a> ou certains <a href="Tableaux.xhtml#arts_du_combat">arts du combat</a>. On ne peut effectuer qu'une action bonus par tour. </p>
             </div>
             <h3 onclick="hideContent(this)">Frappes localisées</h3>
             <div>
@@ -295,6 +296,22 @@
             <div>
                 <p>Chaque entité contrôle une zone autour d'elle équivalente à la portée de son arme de mêlée. Quitter ou pénétrer cet espace sans faire attention peut déclencher une attaque d'opportunité de la part de l'entité contrôlant cette zone.</p>
                 <p>On peut entreprendre autant d'attaque d'opportunité que possible lors du même tour. Une entité souhaitant traverser une zone de contrôle ne subira qu'une seule attaque d'opportunité mais sera forcée d'arrêter son mouvement et à rester dans la zone de contrôle si elle ne parvient pas à esquiver ou parer l'attaque.</p>
+            </div>
+            <h3 onclick="hideContent(this)">Avantage et désavantage</h3>
+            <div>
+                <p>Parfois un jet de caractéristique, d’attaque ou de sauvegarde se fait dans des conditions particulières qui entraînent un avantage ou un désavantage. Un avantage reflète des circonstances favorables à une action, le désavantage implique le contraire. L’un comme l’autre nécessite de lancer deux fois le dé. Sur un avantage, le meilleur des deux jets sera conservé ; sur un désavantage, ce sera le moins bon. Par exemple vous obtenez 17 et 5, un désavantage conclura sur 5, un avantage sur 17.</p>
+                <p onclick="hideContent(this)">Exemples d'avantages :</p>
+                <ul class="hidden">
+                    <li>Être assisté par un allié compétent pour une action pouvant être effectuée à plusieurs (crochetage, stabilisation d'un mourant, forçage d'une porte, etc)</li>
+                    <li>Frapper un ennemi au sol, immobilisé, inconscient du danger, aveuglé, dans le dos, étourdi</li>
+                    <li>Posséder un objet facilitant une action (examiner avec une loupe, ouvrir une porte avec un pied-de-biche/bélier portatif</li>
+                </ul>
+                <p onclick="hideContent(this)">Exemples de désavantages :</p>
+                <ul class="hidden">
+                    <li>Effectuer une action délicate sous pression</li>
+                    <li>Nager, escalader ou se faire discret avec une armure lourde</li>
+                    <li>Porter une charge trop importante, utiliser une arme/armure sans en satifaire les prérequis</li>
+                </ul>
             </div>
             <h3 onclick="hideContent(this)">Type de dégâts</h3>
             <div>
@@ -1051,7 +1068,7 @@
             <p>Un certain palier peut être nécessaire pour entreprendre une action difficile. Un novice en sabotage ne pourra pas crocheter une serrure sophistiquée et ce quelque soit sa dextérité.</p>
             <div>
                 <p class="caption" onclick="hideContent(this)">Compétences de Combat</p>
-                <div class="hidden">
+                <div>
                     <table width="95%">
                         <tbody>
                         <tr id="attaquant_habile">
@@ -1082,11 +1099,11 @@
                             <td colspan="5">Le personnage est habitué à utiliser un bouclier, il s'en sert plus facilement et peut protéger ses alliés.</td>
                         </tr>
                         <tr>
-                            <td>Novice : Diminue le malus en Atq de 1</td>
-                            <td>Apprenti : Diminue le malus en Atq de 1. Permet de parer à la place d’un allié adjacent, 1 fois/tour</td>
-                            <td>Adepte : Diminue le malus en Atq de 2</td>
-                            <td>Expert : Diminue le malus en Atq de 2. Permet de parer à la place d’un allié adjacent, 2 fois/tour</td>
-                            <td>Maître : Diminue le malus en Atq de 3</td>
+                            <td>Novice : Diminue le malus en Atq de 1. Augmente l'attaque et la parade du bouclier de 1</td>
+                            <td>Apprenti :Permet de parer à la place d’un allié adjacent, 1 fois/tour</td>
+                            <td>Adepte : Diminue le malus en Atq de 2. Augmente l'attaque et la la parade du bouclier de 2</td>
+                            <td>Expert : Permet de parer à la place d’un allié adjacent, 2 fois/tour</td>
+                            <td>Maître : Diminue le malus en Atq de 3. Augmente l'attaque et la la parade du bouclier de 3</td>
                         </tr>
                         <tr id="maitres_des_armures">
                             <th rowspan="2">Maître des armures</th>
@@ -1127,9 +1144,9 @@
                         </tr>
                         <tr>
                             <td>Novice : DEX +1 lors d’un tir, portée + 10%</td>
-                            <td>Apprenti : DEX +2 lors d’un tir portée + 20%</td>
+                            <td>Apprenti : DEX +2 lors d’un tir, portée + 20%, rechargement arbalète (hors lourde) possible durant déplacement</td>
                             <td>Adepte : DEX +3 lors d’un tir, tirer ne provoque pas d’attaque d’opportunité portée + 30%</td>
-                            <td>Expert : DEX +4 lors d’un tir portée + 40%</td>
+                            <td>Expert : DEX +4 lors d’un tir portée + 40%, rechargement arbalète (hors lourde) possible en action bonus</td>
                             <td>Maître : DEX +5 lors d’un tir, le multiplicateur de critique monte d’un cran portée + 50%</td>
                         </tr>
                         </tbody>
@@ -1138,19 +1155,19 @@
 
 
                 <p class="caption" onclick="hideContent(this)">Compétences de Savoir</p>
-                <div class="hidden">
+                <div>
                     <table width="95%">
                         <tbody>
                         <tr id="alchimie">
                             <th rowspan="2">Alchimie</th>
-                            <td colspan="5">Permet d’identifier les ingrédients alchimiques tels que les plantes, les minéraux pour en faire des potions, des poisons ou même des bombes.</td>
+                            <td colspan="5">Permet d’identifier les ingrédients alchimiques tels que les plantes, les minéraux pour en faire des potions, des poisons ou même des bombes alchimiques.</td>
                         </tr>
                         <tr>
                             <td>Novice : Potions, poisons et bombes basiques</td>
                             <td>Apprenti : Potions, poisons et bombes de qualité</td>
                             <td>Adepte : Potions, poisons et bombes avancés</td>
                             <td>Expert : Potions, poisons et bombes exceptionnels</td>
-                            <td>Maître : Potions, poisons et bombes parfaits</td>
+                            <td>Maître : Potions, poisons et bombes de maître</td>
                         </tr>
                         <tr id="art_de_la_magie">
                             <th>Art de la magie</th>
@@ -1170,6 +1187,17 @@
                             <td>Adepte : Nombre maximum de domaine de prédilection : 2</td>
                             <td>Expert : Nombre maximum de domaine de prédilection : 3</td>
                             <td>Maître : Nombre maximum de domaine de prédilection : 3. le multiplicateur de coût de surcharge passe à 2</td>
+                        </tr>
+                        <tr id="expert_explosifs">
+                            <th rowspan="2">Expert en explosif</th>
+                            <td colspan="5">Le personnage sait utiliser la poudre noire, que ce soit pour fabriquer des bombes, ou manier des armes à feu.</td>
+                        </tr>
+                        <tr>
+                            <td>Novice : Risque des armes à feu -1, bombes basiques</td>
+                            <td>Apprenti : Rechargement possible durant déplacement, bombes de qualité</td>
+                            <td>Adepte : Risque des armes à feu -2, bombes avancées</td>
+                            <td>Expert : Rechargement possible en action bonus, bombes exceptionnelles</td>
+                            <td>Maître : Risque des armes à feu -3, bombes de maître</td>
                         </tr>
                         <tr id="ingenierie">
                             <th>Ingénierie</th>
@@ -1228,7 +1256,7 @@
                 </div>
 
                 <p class="caption" onclick="hideContent(this)">Compétences d'Exploration </p>
-                <div class="hidden">
+                <div>
                     <table width="95%">
                         <tbody>
                         <tr id="acrobaties">
@@ -1326,7 +1354,7 @@
 
 
                 <p class="caption" onclick="hideContent(this)">Compétences Sociales </p>
-                <div class="hidden">
+                <div>
                     <table width="95%">
                         <tbody>
                         <tr id="diplomatie">
@@ -1380,7 +1408,7 @@
                         </tr>
                         <tr id="representation">
                             <th>Représentation</th>
-                            <td colspan="5">Le personnage est doué dans un art du spectacle.</td>
+                            <td colspan="5">Le personnage est doué dans un art du spectacle. (N'occupe qu'un emplacement qu'importe le nombre d'arts du spectacle maîtrisés).</td>
                         </tr>
                         <tr id="tromperie">
                             <th rowspan="2">Tromperie</th>
@@ -1414,7 +1442,6 @@
 
         <h1 id="table_race" onclick="hideContent(this)">Traits raciaux</h1>
         <div>
-            <div>
                 <table width="90%" class="race">
                     <thead>
                     <tr>
@@ -1604,7 +1631,6 @@
                     </tbody>
                 </table>
             </div>
-        </div>
     </div>
 
     <div id="objets">
@@ -1628,7 +1654,8 @@
                     <p>Les armes appartiennent à des catégories (dagues/poignards, épées courtes, longues ou même courbes, haches, marteaux à deux mains, etc...), elles possèdent des caractéristiques spéciales comme un taux de critique supérieur, la possibilité de les manier à deux mains, etc...</p>
                     <p>Chaque arme possède deux caractéristiques en plus de la rupture et des dégâts, il s'agit de l'attaque et de la parade. L'attaque détermine à quel point il est facile de toucher un adversaire et la parade détermine la probabilité de parer un coup avec cette arme. Une arme peut être modifié de diverses manières (poignée améliorée, fil aiguisé, renfort, lame dentelée, etc..) et ainsi posséder des caractéristiques différentes de sa catégorie.</p>
                     <p>Pour toucher un adversaire avec une arme de corps-à-corps ou un bouclier, il faut d'abord réussir un jet d'attaque, l'adversaire peut tenter une parade, si il réussi aussi son jet il faut alors regarder la marge de réussite (statistique de l'arme - valeur du jet obtenu). Les armes à distance se basent toute sur la dextérité de l'utilisateur.</p>
-                    <p>Les dégâts d'une armes sont équivalents à un dé et sont généralement accompagné d'un bonus selon la qualité de l'arme(ex : une dague en bronze → 1d4 une dague en acier 1d4+2). La rupture est majoritairement influencée par le matériau de l'arme mais peut varier selon l'artisan, ou certaines modifications telles qu'un renfort métallique sur la poignée.</p>
+                    <p>Les dégâts d'une armes sont équivalents à un (ou plusieurs) dé(s) et sont généralement accompagné d'un bonus selon la qualité de l'arme(ex : une dague en bronze → 1d4 une dague en acier 1d4+2). La rupture est majoritairement influencée par le matériau de l'arme mais peut varier selon l'artisan, ou certaines modifications telles qu'un renfort métallique sur la poignée.</p>
+                    <p>La portée d'une arme à distance ou de lancer est indiqué de cete façon XXm/YYm, XX représente la portée normale à laquelle l'arme peut toucher sans malus, YY représente la portée maximale à laquelle l'arme peut espérer toucher, plus on s'approche de la portée maximale, plus le malus de dextérité est grand.</p>
                     <p>Les caractéristiques ont également un impact sur les caractéristiques d'une arme de corps-à-corps ou de lancer :</p>
                     <ul>
                         <li><span class="big_underline">Force :</span>tous les deux points de force supérieur à 12 :  +1 point de dégât (14 FOR → +1; 16 FOR → +2). Si la force est inférieure à 8, les dégâts sont diminués d'un point.</li>
@@ -1918,7 +1945,7 @@
                             <td>Fronde</td>
                             <td>Contondants</td>
                             <td>1d4 non-létaux</td>
-                            <td>25m/100m</td>
+                            <td>25m/75m</td>
                             <td>Pierres</td>
                             <td>x3</td>
                             <td>/</td>
@@ -1927,7 +1954,7 @@
                             <td>Sarbacane</td>
                             <td>Perforants</td>
                             <td>1d4</td>
-                            <td>15m/30m</td>
+                            <td>10m/20m</td>
                             <td>Aiguilles</td>
                             <td>x3</td>
                             <td>/</td>
@@ -1936,7 +1963,7 @@
                             <td>Arc Court</td>
                             <td>Perforants</td>
                             <td>1d6</td>
-                            <td>25m/100m</td>
+                            <td>25m/75m</td>
                             <td>Flèches</td>
                             <td>x3</td>
                             <td>À deux mains</td>
@@ -1945,7 +1972,7 @@
                             <td>Arc Long</td>
                             <td>Perforants</td>
                             <td>1d8</td>
-                            <td>50m/200m</td>
+                            <td>50m/120m</td>
                             <td>Flèches</td>
                             <td>x3</td>
                             <td>À deux mains, Lourde</td>
@@ -1954,7 +1981,7 @@
                             <td>Arbalète</td>
                             <td>Perforants</td>
                             <td>1d8</td>
-                            <td>30m/120m</td>
+                            <td>30m/100m</td>
                             <td>Carreaux</td>
                             <td>x3</td>
                             <td>À deux mains, Chargement</td>
@@ -1963,7 +1990,7 @@
                             <td>Arbalète lourde</td>
                             <td>Perforants</td>
                             <td>1d12</td>
-                            <td>75m/250m</td>
+                            <td>75m/150m</td>
                             <td>Carreaux</td>
                             <td>x3</td>
                             <td>À deux mains, Lourde, Chargement</td>
@@ -1975,7 +2002,192 @@
                             <td>20m/40m</td>
                             <td>Carreaux</td>
                             <td>x3</td>
-                            <td>Légère, Chargement</td>
+                            <td>Chargement</td>
+                        </tr>
+                        <tr>
+                            <th colspan="7">Artillerie</th>
+                        </tr>
+                        <tr>
+                            <td>Baliste légère</td>
+                            <td>Perforants</td>
+                            <td>3d8</td>
+                            <td>125m</td>
+                            <td>Grands carreaux</td>
+                            <td>x2</td>
+                            <td>1 tours de rechargement</td>
+                        </tr>
+                        <tr>
+                            <td>Baliste lourde</td>
+                            <td>Perforants</td>
+                            <td>4d8</td>
+                            <td>200m</td>
+                            <td>Grands carreaux</td>
+                            <td>x2</td>
+                            <td>2 tours de rechargement</td>
+                        </tr>
+                        <tr>
+                            <td>Catapulte</td>
+                            <td>Contondants</td>
+                            <td>6d8</td>
+                            <td>350m</td>
+                            <td>Boulet</td>
+                            <td>/</td>
+                            <td>3 tours de rechargement</td>
+                        </tr>
+                        <tr>
+                            <td>Trébuchet</td>
+                            <td>Contondants</td>
+                            <td>7d8</td>
+                            <td>450m</td>
+                            <td>Boulet</td>
+                            <td>/</td>
+                            <td>3 tours de rechargement</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="caption" onclick="hideContent(this)" id="table_arme_feu">Armes à feu</p>
+                    <table width="90%" class="hidden">
+                        <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Dégâts</th>
+                            <th>Portée</th>
+                            <th>Critique</th>
+                            <th>Capacité</th>
+                            <th>Risque</th>
+                            <th>Spécial</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th colspan="7">Armes à une main</th>
+                        </tr>
+                        <tr>
+                            <td>Pistolet de poche</td>
+                            <td>1d6</td>
+                            <td>10m/25m</td>
+                            <td>x3</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>/</td>
+                        </tr>
+                        <tr>
+                            <td>Pistolet à silex</td>
+                            <td>1d8</td>
+                            <td>20m/50m</td>
+                            <td>x3</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>/</td>
+                        </tr>
+                        <tr>
+                            <td>Pistolet à double canon</td>
+                            <td>1d8</td>
+                            <td>20m/50m</td>
+                            <td>x3</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>Peut tirer deux balles en même temps</td>
+                        </tr>
+                        <tr>
+                            <td>Poivrière</td>
+                            <td>1d8</td>
+                            <td>10m/20m</td>
+                            <td>x2</td>
+                            <td>6</td>
+                            <td>5</td>
+                            <td>/</td>
+                        </tr>
+                        <tr>
+                            <td>Pétoire</td>
+                            <td>2d4</td>
+                            <td>6m/12m</td>
+                            <td>x2</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>Dispersion</td>
+                        </tr>
+                        <tr>
+                            <td>Targe pistolet</td>
+                            <td>1d6</td>
+                            <td>6m/15m</td>
+                            <td>x2</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>Se fixe à l'avant bras et n'occupe pas de main</td>
+                        </tr>
+                        <tr>
+                            <th colspan="7">Armes à deux mains</th>
+                        </tr>
+                        <tr>
+                            <td>Mousquet</td>
+                            <td>1d12</td>
+                            <td>50m/100m</td>
+                            <td>x3</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>À deux mains</td>
+                        </tr>
+                        <tr>
+                            <td>Mousquet à double canon</td>
+                            <td>1d12</td>
+                            <td>50m/100m</td>
+                            <td>x3</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>À deux mains, peut tirer deux balles en même temps</td>
+                        </tr>
+                        <tr>
+                            <td>Tromblon</td>
+                            <td>3d4</td>
+                            <td>10m/20m</td>
+                            <td>x2</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>À deux mains, Dispersion</td>
+                        </tr>
+                        <tr>
+                            <th colspan="7">Artillerie</th>
+                        </tr>
+                        <tr>
+                            <td>Canon</td>
+                            <td>6d10</td>
+                            <td>450m</td>
+                            <td>/</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>3 round de rechargement</td>
+                        </tr>
+                        <tr>
+                            <td>Canon orgue</td>
+                            <td>4d10</td>
+                            <td>200m</td>
+                            <td>/</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>5 tours de rechargement</td>
+                        </tr>
+                        <tr>
+                            <td>Mortier</td>
+                            <td>6d10</td>
+                            <td>350m</td>
+                            <td>/</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>3 tours de rechargement</td>
+                        </tr>
+                        <tr>
+                            <td>Canon à flammes</td>
+                            <td>6d8 + 1d6/tour pdt 5 tours</td>
+                            <td>250m</td>
+                            <td>/</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>4 tours de rechargement</td>
+                        </tr>
+                        <tr>
+                            <td colspan="7">Les armes à feu infligent des dégâts contondants et perforants. Elles requierent de la poudre noire pour fonctionner (une dose par canon, dix pour l'artillerie). Une dose correspond à 10g de poudre noire. Les armes à dispersion utilisent des plombs, les autres des balles en métal. Toutes les armes à feu possèdent le trait Chargement. Si le jet d'attaque avec une arme à feu obtient un résultat égal ou inférieur à la valeur Risque, l'arme explose et est considérée comme endommagée.</td>
                         </tr>
                         </tbody>
                     </table>
@@ -1999,7 +2211,7 @@
                             <td>Bocle</td>
                             <td>13</td>
                             <td>13</td>
-                            <td rowspan="2">1d4 non-létal</td>
+                            <td rowspan="3">1d4 non-létal</td>
                             <td>/</td>
                         </tr>
                         <tr>
@@ -2007,6 +2219,12 @@
                             <td>12</td>
                             <td>14</td>
                             <td>Atq -1</td>
+                        </tr>
+                        <tr>
+                            <td>Targe</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>Se fixe à l'avant bras et n'occupe pas de main</td>
                         </tr>
                         <tr>
                             <td colspan="5">Boucliers moyens : procurent un abri partiel contre les projectiles dans une direction (chance de toucher -4).</td>
@@ -2056,14 +2274,15 @@
                     </table>
                     <h3 onclick="hideContent(this)">Propriétés spéciales des armes</h3>
                     <div class="hidden">
-						<p><span class="big_underline">Légère</span>Une arme légère est petite et facile à manier, ce qui la rend idéale pour les combats à deux armes.</p>
-                        <p><span class="big_underline">Lourde</span>Une arme lourde est difficilement utilisable par les petites créatures(&lt;1m20), de plus il faut posséder une caractéristique de Force d'au moins 12 pour les utiliser convenablement.</p>
-                        <p><span class="big_underline">Polyvalente</span>Cette arme peut être tenue à une ou deux mains. Le chiffre indiqué entre parenthèses correspond aux dégâts si l'arme est tenue à deux mains lors d'une attaque au corps à corps.</p>
                         <p><span class="big_underline">À deux mains</span>Cette arme nécessite les deux mains lorsque vous attaquez avec.</p>
                         <p><span class="big_underline">Allonge</span>Ce type d'arme ajoute un mètre à votre allonge lorsque vous attaquez avec, ou pour déterminer votre allonge lorsque vous effectuez une attaque d'opportunité avec. </p>
-                        <p><span class="big_underline">Chargement</span>Cette arme doit être rechargée avant d'être utilisée, cette action necessite une action simple. </p>
+                        <p><span class="big_underline">Artillerie</span>Ce genre d'arme nécessite une connaissance pointue en balistique et mécanique. Elles sont généralement trop lourde pour être déplacée sans aide et il faut une équipe pour la manier.</p>
+                        <p><span class="big_underline">Chargement</span>Cette arme doit être rechargée avant d'être utilisée, cette action nécessite une action simple. </p>
                         <p><span class="big_underline">Charge</span>Une charge effectuée avec cette arme inflige le double de dégâts, le triple si la charge est faite depuis une monture.</p>
-                    </div>
+                        <p><span class="big_underline">Légère</span>Une arme légère est petite et facile à manier, ce qui la rend idéale pour les combats à deux armes.</p>
+                        <p><span class="big_underline">Lourde</span>Une arme lourde est difficilement utilisable par les petites créatures(&lt;1m20), de plus il faut posséder une caractéristique de Force d'au moins 12 pour les utiliser convenablement.</p>
+                        <p><span class="big_underline">Polyvalente</span>Cette arme peut être tenue à une ou deux mains. Le chiffre indiqué entre parenthèses correspond aux dégâts si l'arme est tenue à deux mains lors d'une attaque au corps à corps.</p>
+                        </div>
                 </div>
             </div>
 
@@ -2282,7 +2501,7 @@
         <h1 id="materiel" onclick="hideContent(this)">Matériel</h1>
         <div>
             <p>Pour partir à l'aventure et y trouver un profit, il faut un investissement de départ pour acheter le matériel nécessaire à savoir un sac ou au moins une sacoche, un sac de couchage ainsi que de quoi manger et boire.</p>
-            <p>Un aventurier peut porter un poids équivalent à 2.5 fois la moyenne entre sa valeur de constitution et de force sans être encombré. Si il porte un poids supérieur, sa vitesse est diminuée de 2 mètres. Si le poids porté excède 5 fois la moyenne entre la constitution et la force, il est considéré comme fortement encombré, sa vitesse diminue encore de 2 mètres pour un total de 4 mètres, et il effectue les épreuves physiques avec un désavantage.</p>
+            <p>Un aventurier peut porter un poids équivalent à 3 fois la moyenne entre sa valeur de constitution et de force sans être encombré. Si il porte un poids supérieur, sa vitesse est diminuée de 2 mètres. Si le poids porté excède 6 fois la moyenne entre la constitution et la force, il est considéré comme fortement encombré, sa vitesse diminue encore de 2 mètres pour un total de 4 mètres, et il effectue les épreuves physiques avec un désavantage.</p>
             <p>Retrouvez les listes d'équipement sur la page <a href="Objets.xhtml">Objets</a>.</p>
         </div>
     </div>
