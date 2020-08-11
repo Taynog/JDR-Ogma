@@ -320,8 +320,8 @@
             </div>
             <h3 onclick="hideContent(this)">Se défendre</h3>
             <div>
-                <p>L'esquive et la parade sont des actions défensives qu'on ne peut entreprendre qu'une fois par tour. Si on risque de se faire frapper par plusieurs adversaires, il faudra choisir les coup à encaisser et les coup à éviter/bloquer. </p>
-                <p>Un bouclier facilite la parade et permet (selon sa taille) de parer plusieurs attaques venant de la même direction. Les attaques multiples (attaque à outrance) compte comme une seule et même attaque et on peut donc tenter de parer ou d'esquiver tous les coups.</p>
+                <p>L'esquive et la parade sont des actions défensives qu'on ne peut entreprendre qu'une fois par tour. Si on risque de se faire frapper par plusieurs adversaires, il faudra choisir contre quel adversaire on va se défendre. </p>
+                <p>Un bouclier facilite la parade et permet (selon sa taille) de parer les attaques de différents adversaires venant de la même direction.</p>
                 <p>L'esquive permet de se repositionner tout en évitant de subir des dégâts, cependant si une attaque suite à un jet d'esquive raté, on subit 25 % de dégâts supplémentaires dus à la baisse de la garde.</p>
                 <p>Pour connaître ses capacités de parade, il faut se référer aux caractéritiques des <a href="Rules.xhtml#table_armes_cac">armes</a> et des <a href="Rules.xhtml#table_boucliers">boucliers</a>. L'esquive quand à elle, dépend de l'Agilité.</p>
             </div>
@@ -341,6 +341,12 @@
                 <p id="save_vigueur"><span class="big_underline">Jet de Vigueur</span>Ce type de jet de sauvegarde reflète la capacité du personnage à résister aux attaques mettant sa vitalité ou sa santé en danger, ainsi qu’à résister à la douleur. Il dépend de la Constitution.</p>
                 <p id="save_volonte"><span class="big_underline">Jet de Volonté</span> Ce type de jet de sauvegarde représente la faculté du personnage à se soustraire aux tentatives de domination et à d’autres effets magiques similaires. Il dépend de la Volonté.</p>
             </div>
+            <h3 id="marge_reussite" onclick="hideContent(this)">Marge de réussite</h3>
+            <div>
+                <p>Tout les lancers de dés impliquant deux (ou plus) personnes opposées tiennent compte de la marge de réussite du jet. Le personnage obtenant la plus grande marge l'emporte.</p>
+                <p>Par exemple : lors d'un bras de fer s'affronte Gurdil (16 FOR) et Crom (18), ils font chacun un test de force pour savoir qui l'emporte. Gurdil obtient 2 et Crom 8, pour obtenir la marge de réussite, il suffit de soustraire le résultat du jet à la caractéristique du personnage. Gurdil obtient une marge de 14 et Crom une marge de 10. C'est Gurdil qui gagne ce bras de fer bien qu'il possède une force inférieure à Crom.</p>
+            </div>
+
             <h3 onclick="hideContent(this)">Attaquer un adversaire(Exemple)</h3>
             <div>
                 <p>Prenons Edwin, un officier de l'Empire Azuma, qui souhaite ataquer un bandit situé à 5 mètres. Edwin possède un score de 14 en AGI, 13 en FOR et 12 en DEX, son arme est une épée longue impériale (Attaque 13 Parade 12 Degâts 1d8+2 (la force d'Edwin apporte un bonus de 1 aux dégâts, la qualité de l'arme ajoute 1 aussi).</p>

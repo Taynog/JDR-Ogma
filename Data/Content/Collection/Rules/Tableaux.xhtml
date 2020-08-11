@@ -1040,167 +1040,265 @@
             </tr>
             </tbody>
         </table>
+    
+    <h2 id="arts_du_combat" onclick="hideContent(this)">Arts du combat</h2>
+    <div>
+        <p>Ici sont répertoriés quelques règles pour les manoeuvres spéciales en combat, la liste n'est pas exhaustive et les joueurs sont encouragés à chercher toujours plus d'actions en combat.</p>
+        <p>La répétition et l'abus de ces manoeuvres les rendent de moins en moins efficaces, les ennemis seront capables de s'y préparer et se défendront plus facilement.</p>
+        <p>Tout les jets prennent en compte la <a href="Rules.xhtml#marge_reussite">marge de réussite</a> pour déterminer si le coup est une réussite ou non.</p>
 
-    <p id="arts_du_combat" class="caption" onclick="hideContent(this)">Arts du combat</p>
-    <table width="95%">
-        <thead>
-        <tr>
-            <th>Nom</th>
-            <th>Condition(s)</th>
-            <th>Fréquence d'utilisation</th>
-            <th>Épreuve</th>
-            <th>Effets</th>
-            <th>Critique</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th>Feinte</th>
-            <td>/</td>
-            <td>1/rencontre</td>
-            <td>Action bonus avant l'Atq</td>
-            <td>La cible ne peut pas se défendre</td>
-            <td>R: dégâts + 4<br/>E: Le héros subit une attaque d'opportunité</td>
-        </tr>
-        <tr>
-            <th>Fente</th>
-            <td>Arme de corps-à-corps pouvant infliger des dégâts perforants</td>
-            <td>1/rencontre</td>
-            <td>Atq</td>
-            <td>La portée augmente d'un mètre</td>
-            <td>R: /<br/>E: Le héros trébuche et tombe au sol</td>
-        </tr>
-        <tr>
-            <th>Provocation</th>
-            <td>/</td>
-            <td>1/rencontre</td>
-            <td>Action bonus : ELO</td>
-            <td>La cible se concentre sur le héros et attaque désormais avec désavantage les autres cibles pendant 3 rounds</td>
-            <td>R: La durée de provocation passe à 5 rounds, la cible ne frappe que le héros<br/>E: Le héros subit une attaque d'opportunité</td>
-        </tr>
-        <tr>
-            <th>Ralliement</th>
-            <td>/</td>
-            <td>1/jour</td>
-            <td>Action bonus : ELO</td>
-            <td>Les alliés récupèrent 1d6+(ELO du héros-10) PV temporaires</td>
-            <td>R: PV temporaires récupérés doublés<br/>E: Le héros subit une attaque d'opportunité</td>
-        </tr>
-        <tr>
-            <th>Balayette</th>
-            <td>/</td>
-            <td>1/rencontre</td>
-            <td>DEX</td>
-            <td>la cible est au sol et passe son prochain tour, elle subit 2 dégâts</td>
-            <td>R: La cible s'assome et sombre dans l'inconscience<br/>E: Le héros chute et passe son prochain tour</td>
-        </tr>
-        <tr>
-            <th>Charge d'épaule</th>
-            <td>Force du héros supérieure de 4 à celle de la cible</td>
-            <td>1/rencontre</td>
-            <td>FOR</td>
-            <td>la cible est au sol et passe son prochain tour, elle subit 4 dégâts</td>
-            <td>R: La cible s'assome et sombre dans l'inconscience<br/>E: Le héros trébuche et passe son prochain tour</td>
-        </tr>
-        <tr>
-            <th>Tranche-tendons</th>
-            <td>/</td>
-            <td>1/rencontre</td>
-            <td>Atq -5</td>
-            <td>cible immobilisée</td>
-            <td>R: dégâts + 3<br/>E: Le héros est vulnérable jusqu'à son prochain tour (attaqué avec avantage)</td>
-        </tr>
-        <tr>
-            <th>Coup dans les yeux</th>
-            <td>Dague<br/>Cible sans casque</td>
-            <td>1/rencontre</td>
-            <td>Atq -4</td>
-            <td>cible aveuglée partiellement : Atq et Prd -4 (4 tours)</td>
-            <td>R: Dégâts + 2<br/>E: Le héros est vulnérable jusqu'à son prochain tour (attaqué avec avantage)</td>
-        </tr>
-        <tr>
-            <th>Tranche</th>
-            <td>Arme lourde</td>
-            <td>1/rencontre</td>
-            <td>Atq -3</td>
-            <td>Touche toutes les cibles en face et à portée</td>
-            <td>R: Dégâts + 2<br/>E: L'arme se brise sur celle de la première cible (Rupture)</td>
-        </tr>
-        <tr>
-            <th>Désarmement</th>
-            <td>Après une attaque réussie</td>
-            <td>1/rencontre</td>
-            <td>Action bonus : moyenne DEX/FOR</td>
-            <td>L'arme de la cible tombe à 3 mètres</td>
-            <td>R: /<br/>E: Le héros fait tomber son arme à ses pieds.</td>
-        </tr>
-        <tr>
-            <th>Double attaque</th>
-            <td>Maître d'armes (Apprenti)</td>
-            <td>1/rencontre</td>
-            <td>2 jets d'Atq à -2</td>
-            <td>2 jets de dégâts</td>
-            <td>R: /<br/>E: L'arme se brise contre celle de l'adversaire (Rupture)</td>
-        </tr>
-        <tr>
-            <th>Coup de bouclier</th>
-            <td>Protecteur (Apprenti)<br/>Après attaque réussie</td>
-            <td>1/rencontre</td>
-            <td>Action bonus : Atq du bouclier</td>
-            <td>Atq et Prd de la cible -2 (3 rounds)</td>
-            <td>R: Cible passe son prochain tour<br/>E: La sangle du bouclier lâche, il tombe à 3 mètres</td>
-        </tr>
-        <tr>
-            <th>Oeil de faucon</th>
-            <td>Tireur d'élite (Apprenti)</td>
-            <td>1/rencontre</td>
-            <td>DEX - 3</td>
-            <td>Dégâts + 2, ignore l'armure</td>
-            <td>R: Dégâts + 4<br/>E: /</td>
-        </tr>
-        <tr>
-            <th>Frappe de précision</th>
-            <td>Coup précis (Apprenti)</td>
-            <td>1/rencontre</td>
-            <td>Atq - 3</td>
-            <td>Dégâts + 2, ignore l'armure</td>
-            <td>R: Dégâts + 4<br/>E: L'arme glisse sur l'armure et tombe à 3 mètres</td>
-        </tr>
-        <tr>
-            <th>Rage apaisante</th>
-            <td>Rage du berzerker (Apprenti)<br/></td>
-            <td>1/jour</td>
-            <td>Action bonus : CON</td>
-            <td>Récupère sa valeur de constitution en PV, fin de rage</td>
-            <td>R: +50% de PV récupérés<br/>E: Perte de contrôle (1 tour)</td>
-        </tr>
-        <tr>
-            <th>Rafale de coup</th>
-            <td>Attaquant habile(Adepte)<br/>Arme légère</td>
-            <td>1/rencontre</td>
-            <td>4 jets d'Atq à -2</td>
-            <td>4 jets de dégâts</td>
-            <td>R: /<br/>E: L'arme se brise contre celle de l'adversaire (Rupture)</td>
-        </tr>
-        <tr>
-            <th>Volée de flèches</th>
-            <td>Tireur d'élite(Expert)<br/>Arc</td>
-            <td>1/rencontre</td>
-            <td>5 jets d'Atq à -3</td>
-            <td>5 jets de dégâts</td>
-            <td>R: /<br/>E: La corde de l'arc se brise (Rupture)</td>
-        </tr>
-        <tr>
-            <th>Triple attaque</th>
-            <td>Maître d'arme(Expert)</td>
-            <td>1/rencontre</td>
-            <td>3 jets d'Atq à -3</td>
-            <td>3 jets de dégâts</td>
-            <td>R: /<br/>E: L'arme se brise contre celle de l'adversaire (Rupture)</td>
-        </tr>
-        </tbody>
-    </table>
-
+            <p id="arts_du_combat_basiques" class="caption" onclick="hideContent(this)">Arts du combat basiques</p>
+        <div>
+            <p>Ces manoeuvres sont utilisables par quiconque maîtrise les bases du combat</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Condition(s)</th>
+                    <th>Épreuve<br/>(pour le joueur)</th>
+                    <th>Épreuve<br/>(pour l'adversaire)</th>
+                    <th>Effets si réussite</th>
+                    <th>Critique</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>Fente</th>
+                    <td>Le héros s'appuie sur sa jambe avant pour frapper de loin</td>
+                    <td>Arme de corps-à-corps pouvant infliger des dégâts perforants</td>
+                    <td>Jet d'attaque se basant sur la moyenne entre l'Atq et l'AGI</td>
+                    <td>Parade/Esquive classique</td>
+                    <td>La portée augmente d'un mètre</td>
+                    <td>R: /<br/>E: Le héros trébuche et tombe au sol</td>
+                </tr>
+                <tr>
+                    <th>Feinte</th>
+                    <td>Le héros distrait son adversaire avant de frapper. La forme de la feinte est à préciser par le joueur</td>
+                    <td>Arme de corps-à-corps pouvant infliger des dégâts perforants</td>
+                    <td colspan="2">Le joueur lance un d20 avant de faire son jet d'attaque (avec bonus éventuels selon le personnage et au choix du MJ), son adversaire lance aussi un d20 (encore bonus et malus au choix du MJ). Le meilleur score l'emporte.</td>
+                    <td>La cible ne peut pas se défendre</td>
+                    <td>R: dégâts + 4<br/>E: Le héros subit une attaque d'opportunité</td>
+                </tr>
+                <tr>
+                    <th>Provocation</th>
+                    <td>Le héros provoque son/ses adversaire(s) et le(s) pousse(nt) à l'attaquer en priorité</td>
+                    <td>/</td>
+                    <td>Action bonus : ELO</td>
+                    <td>Un jet de VOL pour chaque adversaire provoqué</td>
+                    <td>La cible se concentre sur le héros et attaque désormais avec désavantage les autres cibles pendant 3 rounds</td>
+                    <td>R: La durée de provocation passe à 5 rounds, la cible ne frappe que le héros<br/>E: Le héros subit une attaque d'opportunité</td>
+                </tr>
+                <tr>
+                    <th>Ralliement</th>
+                    <td>Le héros motive ses alliés à continuer le combat</td>
+                    <td>/</td>
+                    <td>Action bonus : ELO</td>
+                    <td>/</td>
+                    <td>Les alliés récupèrent 1d6+(ELO du héros-10) PV temporaires</td>
+                    <td>R: PV temporaires récupérés doublés<br/>E: Le héros subit une attaque d'opportunité</td>
+                </tr>
+                <tr>
+                    <th>Balayette</th>
+                    <td>Le héros tente de faire tomber son adversaire au sol</td>
+                    <td>/</td>
+                    <td>Action bonus : DEX</td>
+                    <td>AGI</td>
+                    <td>La cible est au sol et passe son prochain tour, elle subit 2 dégâts</td>
+                    <td>R: La cible s'assome et sombre dans l'inconscience<br/>E: Le héros chute et passe son prochain tour</td>
+                </tr>
+                <tr>
+                    <th>Charge d'épaule</th>
+                    <td>Le héros bouscule son adversaire pour le faire tomber  au sol</td>
+                    <td>/</td>
+                    <td>Action bonus : DEX</td>
+                    <td>CON</td>
+                    <td>La cible est au sol et passe son prochain tour, elle subit 4 dégâts</td>
+                    <td>R: La cible s'assome et sombre dans l'inconscience<br/>E: Le héros trébuche et passe son prochain tour</td>
+                </tr>
+                <tr>
+                    <th>Tranche-tendons</th>
+                    <td>Le héros frappe la cible dans les articulations des jambes pour l'empêcher de bouger.</td>
+                    <td>/</td>
+                    <td>Jet d'attaque d'Atq à -5</td>
+                    <td>Parade/Esquive à -2</td>
+                    <td>Déplacement de la cible limité à  un mètre par round</td>
+                    <td>R: dégâts + 3<br/>E: Le héros est vulnérable jusqu'à son prochain tour (attaqué avec avantage)</td>
+                </tr>
+                <tr>
+                    <th>Lacération</th>
+                    <td>Le héros frappe pour ouvrir les veines de son adversaire</td>
+                    <td>Cible sans armure à l'endroit ciblé</td>
+                    <td>Jet d'Atq -3, les dégâts sont divisés par deux</td>
+                    <td>Parade/Esquive classsique, si le coup touche, épreuve de CON pour contrer le saignement</td>
+                    <td>la cible saigne (1d6/tour) pendant 3 tours</td>
+                    <td>R: 5 tours de saignement<br/>E: Le héros est vulnérable jusqu'à son prochain tour (attaqué avec avantage)</td>
+                </tr>
+                <tr>
+                    <th>Coup dans les yeux</th>
+                    <td>Avec un rapide coup de dague au visage, le héros aveugle momentanément son adversaire</td>
+                    <td>Dague<br/>Cible sans casque</td>
+                    <td>Jet d'Atq à -5</td>
+                    <td>Parade/Esquive à +2</td>
+                    <td>cible aveuglée partiellement : Atq et Prd -4 (3 tours)</td>
+                    <td>R: Dégâts + 2, cible aveugle 5 tours<br/>E: Le héros est vulnérable jusqu'à son prochain tour (attaqué avec avantage)</td>
+                </tr>
+                <tr>
+                    <th>Tranche</th>
+                    <td>Le héros saisit son arme à deux mains pour un violent coup horizontal</td>
+                    <td>Arme polyvalente ou à deux mains</td>
+                    <td>Un seul jet d'Atq à -3</td>
+                    <td>Chaque cible peut parer ou esquiver</td>
+                    <td>Touche toutes les cibles en face et à portée</td>
+                    <td>R: Dégâts + 2<br/>E: L'arme se brise sur celle de la première cible (Rupture)</td>
+                </tr>
+                <tr>
+                    <th>Désarmement</th>
+                    <td>Le héros lutte habilement pour ôter son arme à son adversaire</td>
+                    <td>Après une attaque réussie</td>
+                    <td>Action bonus : moyenne DEX/FOR</td>
+                    <td>DEX</td>
+                    <td>La cible est désarmée</td>
+                    <td>R: /<br/>E: Le héros fait tomber son arme à ses pieds.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p id="arts_du_combat_specialistes" class="caption" onclick="hideContent(this)">Arts du combat de spécialiste</p>
+        <div>
+            <p>Ces manoeuvres ne sont utilisables que pour les personnages maîtrisant certaines compétences</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Compétence</th>
+                    <th>Palier</th>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Condition(s)</th>
+                    <th>Épreuve<br/>(pour le joueur)</th>
+                    <th>Épreuve<br/>(pour l'adversaire)</th>
+                    <th>Effets si réussite</th>
+                    <th>Critique</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th rowspan="5">Maître d'arme</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Apprenti</th>
+                </tr>
+                <tr>
+                    <th>Double attaque</th>
+                    <td>Le héros frappe deux fois avec son arme dans un mouvement fluide</td>
+                    <td>/</td>
+                    <td>1er coup : Attaque classique<br/>2ème coup : Jet d'Atq à -2</td>
+                    <td>Parade/Esquive classique pour chaque frappe</td>
+                    <td>Autant de jets que d'attaques réussies</td>
+                    <td>R: /<br/>E: L'arme se brise contre celle de l'adversaire (Rupture)</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Expert</th>
+                </tr>
+                <tr>
+                    <th>Triple attaque</th>
+                    <td>Le héros délivre un déluge de coup sur son adversaires et frappe trois fois</td>
+                    <td>/</td>
+                    <td>1er coup : Attaque classique<br/>2ème coup : Jet d'Atq à -2<br/>3ème coup : Jet d'atq à -4</td>
+                    <td>Parade/Esquive classique pour chaque frappe</td>
+                    <td>Autant de jets que d'attaques réussies</td>
+                    <td>R: /<br/>E: L'arme se brise contre celle de l'adversaire (Rupture)</td>
+                </tr>
+                <tr>
+                    <th rowspan="3">Défenseur</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Apprenti</th>
+                </tr>
+                <tr>
+                    <th>Coup de bouclier</th>
+                    <td>Le héros utilise son bouclier pour étourdir son adversaire en le frappant à la tête</td>
+                    <td>/</td>
+                    <td>Action bonus : Atq du bouclier</td>
+                    <td>jet d'AGI pour esquiver puis CON pour résister à l'étourdissement</td>
+                    <td>Atq et Prd de la cible -2 (3 rounds)</td>
+                    <td>R: Cible passe son prochain tour<br/>E: La sangle du bouclier lâche, il tombe au sol</td>
+                </tr>
+                <tr>
+                    <th rowspan="5">Tireur d'élite</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Apprenti</th>
+                </tr>
+                <tr>
+                    <th>Oeil de faucon</th>
+                    <td>Le héros vise un un point faible de l'armure</td>
+                    <td>/</td>
+                    <td>Jet de DEX à -4</td>
+                    <td>Esquive classique</td>
+                    <td>Ignore l'armure</td>
+                    <td>R: Dégâts + 4<br/>E: /</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Expert</th>
+                </tr>
+                <tr>
+                    <th>Volée de flèches</th>
+                    <td>Le héros tire une flèche sur chacun des opposants qu'il a en ligne de mire (max 5)</td>
+                    <td>Arc</td>
+                    <td>1er tir : DEX<br/>2ème tir : DEX -2<br/>3ème tir : DEX -4<br/>4ème tir : DEX -6<br/>5ème tir : DEX -8</td>
+                    <td>Esquive classique</td>
+                    <td>Autant de jets que d'attaques réussies</td>
+                    <td>R: /<br/>E: La corde de l'arc se brise (Rupture)</td>
+                </tr>
+                <tr>
+                    <th rowspan="3">Coup précis</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Apprenti</th>
+                </tr>
+                <tr>
+                    <th>Frappe de précision</th>
+                    <td>Le héros vise un un point faible de l'armure</td>
+                    <td>/</td>
+                    <td>Atq - 4</td>
+                    <td>Parade/Esquive classique</td>
+                    <td>Ignore l'armure</td>
+                    <td>R: Dégâts + 4<br/>E: L'arme glisse sur l'armure et tombe au sol</td>
+                </tr>
+                <tr>
+                    <th rowspan="3">Rage du berzerker</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Apprenti</th>
+                </tr>
+                <tr>
+                    <th>Rage controlée</th>
+                    <td>Le héros canalise sa rage et dissipe la douleur</td>
+                    <td>En rage</td>
+                    <td>Action bonus: CON</td>
+                    <td>/</td>
+                    <td>Récupère sa valeur de constitution en PV, fin de rage</td>
+                    <td>R: +50% de PV récupérés<br/>E: Perte de contrôle (1 tour)</td>
+                </tr>
+                <tr>
+                    <th rowspan="3">Attaquant habile</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Adepte</th>
+                </tr>
+                <tr>
+                    <th>Rafale de coup</th>
+                    <td>En un seul mouvement, le héros délivre quatre attaques rapides sur son adversaire</td>
+                    <td>Arme légère</td>
+                    <td>1er coup : Attaque classique<br/>2ème coup : Jet d'Atq à -2<br/>3ème coup : Jet d'atq à -4<br/>4ème coup : Jet d'Atq à -6</td>
+                    <td>Autant de jets que d'attaques réussies</td>
+                    <td>R: /<br/>E: L'arme se brise contre celle de l'adversaire (Rupture)</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 </body>
 </html>
