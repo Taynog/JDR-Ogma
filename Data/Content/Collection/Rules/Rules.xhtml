@@ -131,8 +131,8 @@
             <h3 onclick="hideContent(this)">Vitesse de base en combat</h3>
             <div>
                 <p>Chaque entité possède une vitesse de déplacement qui lui est propre. Cette vitesse diffère principalement selon la caractéristique d'Agilité et l'armure portée.</p>
-                <p>La vitesse de déplacement de base est de 6 mètres, le port d'une armure lourde diminue la vitesse de 2 mètres, une armure intermédiaire d'un mètres seulement. Les Steinns sont petits et ont donc une vitesse plus faible de 4 mètres cependant de par leur robustesse, ils ne subissent que la moitié des malus de vitesse dus aux armures (1m pour les lourdes, 0,5m pour les intermédiaires).</p>
-                <p>Un individu possédant une Agilité supérieure à 12 obtient un bonus d'un mètre sur sa vitesse de déplacement tous les 2 points au dessus de 12 (14 AGI → +1m ; 16 AGI → +2m)</p>
+                <p>La vitesse de déplacement de base est de 9 mètres. Les Steinns, de part leur petite taille ne possèdent qu'une vitesse de 6 mais en contrepartie ne sont pas ralentis par les armures qu'ils portent.Le poids de l'équipement et du matériel peut influé sur la vitesse de déplacement. Voir <a href="Rules.xhtml#Armures">Armures</a> et <a href="Rules.xhtml#materiel">Matériel</a>.</p>
+                <p>Un individu possédant une Agilité supérieure à 10 obtient un bonus d'un mètre sur sa vitesse de déplacement tous les 2 points au dessus de 10 (12 AGI → +1m ; 14 AGI → +2m). Si l'agilité d'un personnage est inférieure à 8, sa vitesse diminue d'un mètre.</p>
                 <p>Il est possible de se déplacer sur une plus grande distance chaque round en <a href="Types_actions.xhtml#courir">courant</a></p>
             </div>
             <h3 onclick="hideContent(this)">Types d'actions</h3>
@@ -1117,9 +1117,9 @@
                         </tr>
                         <tr>
                             <td>Novice : AGI +1</td>
-                            <td>Apprenti : AGI +1, Atq +1. L’armure intermédiaire ne ralentit plus</td>
+                            <td>Apprenti : AGI +1, Atq +1.</td>
                             <td>Adepte : AGI +2, Atq +1, Prd +1</td>
-                            <td>Expert : AGI +3, DEX +1 Atq +1, Prd +1. L’armure lourde ne ralentit plus</td>
+                            <td>Expert : AGI +3, DEX +1 Atq +1, Prd +1.</td>
                             <td>Maître : AGI +3, DEX +2,  Atq +2, Prd +1</td>
                         </tr>
                         <tr id="maitre_d_arme">
@@ -1127,11 +1127,11 @@
                             <td colspan="5">Accorde un bonus d’attaque, de parade et de dégâts avec une catégorie d’arme. Le personnage sait entretenir ses armes.</td>
                         </tr>
                         <tr>
-                            <td>Novice : +1 en attaque, parade et dégâts</td>
-                            <td>Apprenti : +2 en attaque, parade et dégâts</td>
-                            <td>Adepte : +3 en attaque, parade et dégâts, +2 pour résister au désarmement</td>
-                            <td>Expert : +4 en attaque, parade et dégâts, +4 pour résister au désarmement</td>
-                            <td>Maître : +5 en attaque, parade et dégâts, +6 pour résister au désarmement</td>
+                            <td>Novice : +1 en attaque, parade</td>
+                            <td>Apprenti : +1 en attaque, parade et dégâts</td>
+                            <td>Adepte : +2 en attaque, parade. +1 aux dégâts. +2 pour résister au désarmement</td>
+                            <td>Expert : +2 en attaque, parade. +2 aux dégâts. +4 pour résister au désarmement</td>
+                            <td>Maître : +3 en attaque, parade. +3 aux dégâts. +6 pour résister au désarmement</td>
                         </tr>
                         <tr id="rage_berserker">
                             <th rowspan="2">Rage de berserker</th>
@@ -1150,15 +1150,14 @@
                         </tr>
                         <tr>
                             <td>Novice : DEX +1 lors d’un tir, portée + 10%</td>
-                            <td>Apprenti : DEX +2 lors d’un tir, portée + 20%, rechargement arbalète (hors lourde) possible durant déplacement</td>
-                            <td>Adepte : DEX +3 lors d’un tir, tirer ne provoque pas d’attaque d’opportunité portée + 30%</td>
-                            <td>Expert : DEX +4 lors d’un tir portée + 40%, rechargement arbalète (hors lourde) possible en action bonus</td>
-                            <td>Maître : DEX +5 lors d’un tir, le multiplicateur de critique monte d’un cran portée + 50%</td>
+                            <td>Apprenti : DEX +1 lors d’un tir, portée + 20%, rechargement arbalète (hors lourde) possible durant déplacement</td>
+                            <td>Adepte : DEX +2 lors d’un tir, tirer ne provoque pas d’attaque d’opportunité, portée + 30%</td>
+                            <td>Expert : DEX +2 lors d’un tir portée + 40%, rechargement arbalète (hors lourde) possible en action bonus</td>
+                            <td>Maître : DEX +3 lors d’un tir, le multiplicateur de critique monte d’un cran portée + 50%</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
-
 
                 <p class="caption" onclick="hideContent(this)">Compétences de Savoir</p>
                 <div>
@@ -1189,21 +1188,14 @@
                         </tr>
                         <tr>
                             <td>Novice : Nombre maximum de domaine de prédilection : 1</td>
-                            <td>Apprenti : Nombre maximum de domaine de prédilection : 1. le multiplicateur de coût de surcharge passe à 2,5</td>
+                            <td>Apprenti : Nombre maximum de domaine de prédilection : 1. Le multiplicateur de coût de surcharge passe à 2,5</td>
                             <td>Adepte : Nombre maximum de domaine de prédilection : 2</td>
-                            <td>Expert : Nombre maximum de domaine de prédilection : 3</td>
-                            <td>Maître : Nombre maximum de domaine de prédilection : 3. le multiplicateur de coût de surcharge passe à 2</td>
+                            <td>Expert : Nombre maximum de domaine de prédilection : 2. Le multiplicateur de coût de surcharge passe à 2</td>
+                            <td>Maître : Nombre maximum de domaine de prédilection : 3</td>
                         </tr>
                         <tr id="expert_explosifs">
-                            <th rowspan="2">Expert en explosif</th>
+                            <th>Expert en explosif</th>
                             <td colspan="5">Le personnage sait utiliser la poudre noire, que ce soit pour fabriquer des bombes, ou manier des armes à feu.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : Risque des armes à feu -1, bombes basiques</td>
-                            <td>Apprenti : Rechargement possible durant déplacement, bombes de qualité</td>
-                            <td>Adepte : Risque des armes à feu -2, bombes avancées</td>
-                            <td>Expert : Rechargement possible en action bonus, bombes exceptionnelles</td>
-                            <td>Maître : Risque des armes à feu -3, bombes de maître</td>
                         </tr>
                         <tr id="ingenierie">
                             <th>Ingénierie</th>
@@ -2060,8 +2052,7 @@
                             <th>Dégâts</th>
                             <th>Portée</th>
                             <th>Critique</th>
-                            <th>Capacité</th>
-                            <th>Risque</th>
+                            <th>Capacité en munitions</th>
                             <th>Spécial</th>
                         </tr>
                         </thead>
@@ -2075,7 +2066,6 @@
                             <td>10m/25m</td>
                             <td>x3</td>
                             <td>1</td>
-                            <td>2</td>
                             <td>/</td>
                         </tr>
                         <tr>
@@ -2084,7 +2074,6 @@
                             <td>20m/50m</td>
                             <td>x3</td>
                             <td>1</td>
-                            <td>3</td>
                             <td>/</td>
                         </tr>
                         <tr>
@@ -2093,7 +2082,6 @@
                             <td>20m/50m</td>
                             <td>x3</td>
                             <td>2</td>
-                            <td>4</td>
                             <td>Peut tirer deux balles en même temps</td>
                         </tr>
                         <tr>
@@ -2102,7 +2090,6 @@
                             <td>10m/20m</td>
                             <td>x2</td>
                             <td>6</td>
-                            <td>5</td>
                             <td>/</td>
                         </tr>
                         <tr>
@@ -2111,7 +2098,6 @@
                             <td>6m/12m</td>
                             <td>x2</td>
                             <td>1</td>
-                            <td>5</td>
                             <td>Dispersion</td>
                         </tr>
                         <tr>
@@ -2120,7 +2106,6 @@
                             <td>6m/15m</td>
                             <td>x2</td>
                             <td>2</td>
-                            <td>3</td>
                             <td>Se fixe à l'avant bras et n'occupe pas de main</td>
                         </tr>
                         <tr>
@@ -2132,7 +2117,6 @@
                             <td>50m/100m</td>
                             <td>x3</td>
                             <td>1</td>
-                            <td>2</td>
                             <td>À deux mains</td>
                         </tr>
                         <tr>
@@ -2141,7 +2125,6 @@
                             <td>50m/100m</td>
                             <td>x3</td>
                             <td>1</td>
-                            <td>3</td>
                             <td>À deux mains, peut tirer deux balles en même temps</td>
                         </tr>
                         <tr>
@@ -2150,7 +2133,6 @@
                             <td>10m/20m</td>
                             <td>x2</td>
                             <td>1</td>
-                            <td>4</td>
                             <td>À deux mains, Dispersion</td>
                         </tr>
                         <tr>
@@ -2162,7 +2144,6 @@
                             <td>450m</td>
                             <td>/</td>
                             <td>1</td>
-                            <td>3</td>
                             <td>3 round de rechargement</td>
                         </tr>
                         <tr>
@@ -2170,7 +2151,6 @@
                             <td>4d10</td>
                             <td>200m</td>
                             <td>/</td>
-                            <td>4</td>
                             <td>4</td>
                             <td>5 tours de rechargement</td>
                         </tr>
@@ -2180,7 +2160,6 @@
                             <td>350m</td>
                             <td>/</td>
                             <td>1</td>
-                            <td>3</td>
                             <td>3 tours de rechargement</td>
                         </tr>
                         <tr>
@@ -2189,11 +2168,10 @@
                             <td>250m</td>
                             <td>/</td>
                             <td>1</td>
-                            <td>4</td>
                             <td>4 tours de rechargement</td>
                         </tr>
                         <tr>
-                            <td colspan="7">Les armes à feu infligent des dégâts contondants et perforants. Elles requierent de la poudre noire pour fonctionner (une dose par canon, dix pour l'artillerie). Une dose correspond à 10g de poudre noire. Les armes à dispersion utilisent des plombs, les autres des balles en métal. Toutes les armes à feu possèdent le trait Chargement. Si le jet d'attaque avec une arme à feu obtient un résultat égal ou inférieur à la valeur Risque, l'arme explose et est considérée comme endommagée.</td>
+                            <td colspan="7">Les armes à feu infligent des dégâts contondants et perforants. Elles requierent de la poudre noire pour fonctionner (une dose par canon, dix pour l'artillerie). Une dose correspond à 10g de poudre noire. Les armes à dispersion utilisent des plombs, les autres des balles en métal. Toutes les armes à feu possèdent le trait Chargement.</td>
                         </tr>
                         </tbody>
                     </table>
@@ -2298,6 +2276,45 @@
                 <p>Les pièces d'armure couvrent une ou plusieurs localisation(s) (tête, torse, bras, mains, jambes et pieds). Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation, d'un point de vue réaliste, on est sensé porté une cotte de maille sous une armure de plate, et un gambison rembourré sous cette cotte de maille, mais pour simplifier tout ça on part du principe que c'est inclus dans la protection offerte par l'armure de plate.</p>
                 <p>Les armures peuvent également être modifiés pour mieux correspondre à leur porteur. On peut imaginer une armure lourde mais ajustée ce qui réduirait les malus de dextérité et/ou d'atq/prd; une armure allégée protégeant moins mais ralentissant moins son porteur ou au contraire renforcée. Une armure peut également être teinte en noir pour apporter des bonus de furtivité ou alors décorée pour augmenter l'éloquence.</p>
                 <p>L'armure naturelle et la protection magique s'appliquent à toutes les localisations (sauf précisé autrement).</p>
+                <p>On considère la catégorie d'armure d'un personnage par les deux pièces d'armure les plus lourdes qu'il porte.</p>
+                <table class="table_compact" width="50%">
+                    <tbody>
+                    <tr>
+                        <td/>
+                        <td/>
+                        <th colspan="3">Catégorie de la plus lourde pièce</th>
+                    </tr>
+                    <tr>
+                        <th/>
+                        <th/>
+                        <th>Léger</th>
+                        <th>Intermédiaire</th>
+                        <th>Lourd</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="4" width="20%">Catégorie de la 2ème plus lourde pièce</th>
+                    </tr>
+                    <tr>
+                        <th>Léger</th>
+                        <td>Léger</td>
+                        <td>Léger</td>
+                        <td>Intermédiaire</td>
+                    </tr>
+                    <tr>
+                        <th>Intermédiaire</th>
+                        <td>Léger</td>
+                        <td>Intermédiaire</td>
+                        <td>Intermédiaire</td>
+                    </tr>
+                    <tr>
+                        <th>Lourd</th>
+                        <td>Intermédiaire</td>
+                        <td>Intermédiaire</td>
+                        <td>Lourd</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>Une armure légère n'impose aucun malus à son porteur, une armure intermédiaire diminue la vitesse de son porteur d'un mètre et impose un désavantage aux épreuves de nage, une armure lourde diminue la vitesse de son porteur de deux mètres et l'empêche de nager. De plus, plus une armure est lourde, plus elle fatigue son porteur.</p>
                 <p>Les listes d'armures ne sont pas exhaustives, il revient au MJ de décides des statistiques d'une armure.  Pour voir le poids et la valeur de base des armures : <a href="Objets.xhtml#armures">Listes des armures</a>.</p>
                 <div>
                     <p class="caption" onclick="hideContent(this)">Pièces d'armures</p>
@@ -2306,6 +2323,7 @@
                         <tr>
                             <th>Type d'armure (Localisation)</th>
                             <th>Catégorie</th>
+                            <th>Type</th>
                             <th>Protection</th>
                             <th>Malus</th>
                             <th>Rupture</th>
@@ -2313,13 +2331,19 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <th rowspan="7">Plastrons (torse)</th>
+                            <th rowspan="10">Plastrons (torse)</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Léger</th>
                         </tr>
                         <tr>
                             <td>Plastron de cuir</td>
                             <td>2</td>
                             <td>/</td>
                             <td>2</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="4">Intermédiaire</th>
                         </tr>
                         <tr>
                             <td>Plastron de cuir renforcé de métal</td>
@@ -2340,6 +2364,9 @@
                             <td>3</td>
                         </tr>
                         <tr>
+                            <th rowspan="3">Lourd</th>
+                        </tr>
+                        <tr>
                             <td>Plastron lamelaire</td>
                             <td>4</td>
                             <td>AGI -1</td>
@@ -2352,7 +2379,10 @@
                             <td>4</td>
                         </tr>
                         <tr>
-                            <th rowspan="4">Vestes (torse, bras)</th>
+                            <th rowspan="6">Vestes (torse, bras)</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">Légère</th>
                         </tr>
                         <tr>
                             <td>Veste en toile renforcée</td>
@@ -2367,19 +2397,28 @@
                             <td>1</td>
                         </tr>
                         <tr>
+                            <th rowspan="2">Intermédiaire</th>
+                        </tr>
+                        <tr>
                             <td>Gambison rembourré</td>
                             <td>2</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
-                            <th rowspan="4">Cottes (torse, jambes, bras)</th>
+                            <th rowspan="6">Cottes (torse, jambes, bras)</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Intermédiaire</th>
                         </tr>
                         <tr>
                             <td>Cotte de mailles sans manches</td>
                             <td>3</td>
                             <td>AGI -2</td>
                             <td>3</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">Lourde</th>
                         </tr>
                         <tr>
                             <td>Cotte de mailles avec manches</td>
@@ -2394,7 +2433,10 @@
                             <td>4</td>
                         </tr>
                         <tr>
-                            <th rowspan="4">Casques (tête)</th>
+                            <th rowspan="7">Casques (tête)</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Léger</th>
                         </tr>
                         <tr>
                             <td>Casque de cuir</td>
@@ -2403,10 +2445,16 @@
                             <td>2</td>
                         </tr>
                         <tr>
+                            <th rowspan="2">Intermédiaire</th>
+                        </tr>
+                        <tr>
                             <td>Casque de métal</td>
                             <td>2</td>
                             <td>/</td>
                             <td>3</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Lourd</th>
                         </tr>
                         <tr>
                             <td>Heaume de métal</td>
@@ -2415,22 +2463,31 @@
                             <td>4</td>
                         </tr>
                         <tr>
-                            <th rowspan="3">Jambières (jambes)</th>
+                            <th rowspan="5">Jambières (jambes)</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Léger</th>
                         </tr>
                         <tr>
                             <td>Jambières de cuir</td>
-                            <td>1</td>
+                            <td>2</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
+                            <th rowspan="2">Lourd</th>
+                        </tr>
+                        <tr>
                             <td>Jambières de métal</td>
-                            <td>2</td>
+                            <td>3</td>
                             <td>AGI - 1</td>
                             <td>3</td>
                         </tr>
                         <tr>
-                            <th rowspan="6">Brassards et Spallières (Bras)</th>
+                            <th rowspan="8">Brassards et Spallières (Bras)</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="4">Léger</th>
                         </tr>
                         <tr>
                             <td>Brassards de cuir</td>
@@ -2451,6 +2508,9 @@
                             <td>2</td>
                         </tr>
                         <tr>
+                            <th rowspan="3">Lourd</th>
+                        </tr>
+                        <tr>
                             <td>Spallières de métal</td>
                             <td>2</td>
                             <td>DEX - 1</td>
@@ -2463,7 +2523,10 @@
                             <td>4</td>
                         </tr>
                         <tr>
-                            <th rowspan="4">Gantelets (mains)</th>
+                            <th rowspan="7">Gantelets (mains)</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Léger</th>
                         </tr>
                         <tr>
                             <td>Gants de cuir</td>
@@ -2472,10 +2535,16 @@
                             <td>2</td>
                         </tr>
                         <tr>
+                            <th rowspan="2">Intermédiaire</th>
+                        </tr>
+                        <tr>
                             <td>Gantelets de cuir renforcé de métal</td>
                             <td>2</td>
                             <td>DEX -1</td>
                             <td>3</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Lourd</th>
                         </tr>
                         <tr>
                             <td>Gantelets complet de métal</td>
@@ -2484,17 +2553,23 @@
                             <td>4</td>
                         </tr>
                         <tr>
-                            <th rowspan="3">Bottes (pieds)</th>
+                            <th rowspan="5">Bottes (pieds)</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Intermédiaire</th>
                         </tr>
                         <tr>
                             <td>Bottes de cuir renforcées</td>
-                            <td>1</td>
+                            <td>2</td>
                             <td>/</td>
                             <td>2</td>
                         </tr>
                         <tr>
+                            <th rowspan="2">Lourd</th>
+                        </tr>
+                        <tr>
                             <td>Solerets de métal</td>
-                            <td>2</td>
+                            <td>3</td>
                             <td>AGI -1</td>
                             <td>3</td>
                         </tr>
@@ -2507,7 +2582,8 @@
         <h1 id="materiel" onclick="hideContent(this)">Matériel</h1>
         <div>
             <p>Pour partir à l'aventure et y trouver un profit, il faut un investissement de départ pour acheter le matériel nécessaire à savoir un sac ou au moins une sacoche, un sac de couchage ainsi que de quoi manger et boire.</p>
-            <p>Un aventurier peut porter un poids équivalent à 3 fois la moyenne entre sa valeur de constitution et de force sans être encombré. Si il porte un poids supérieur, sa vitesse est diminuée de 2 mètres. Si le poids porté excède 6 fois la moyenne entre la constitution et la force, il est considéré comme fortement encombré, sa vitesse diminue encore de 2 mètres pour un total de 4 mètres, et il effectue les épreuves physiques avec un désavantage.</p>
+            <p>La charge d'équipement et de matériel maximale qu'un aventurier peut supporter équivaux à 5 fois la moyenne entre sa valeur de constitution et de force. La charge d'un aventurier peut être légère, intermédiaire ou lourde. La charge est légère si elle est inférieure à 40% de la charge maximale, intermédiaire si entre 40% et 70%, lourde au délà.</p>
+            <p>Si il porte une charge légère, l'aventurier n'est pas génée par le poids, il ne subit donc aucun malus. Si sa charge est intermédiaire, sa vitesse de déplacement diminue d'un mètre. Si elle est lourde, sa vitesse diminue encore d'un mètre pour un total de 2 et il effectue toutes les épreuves physiques avec un désavantage.</p>
             <p>Retrouvez les listes d'équipement sur la page <a href="Objets.xhtml">Objets</a>.</p>
         </div>
     </div>
