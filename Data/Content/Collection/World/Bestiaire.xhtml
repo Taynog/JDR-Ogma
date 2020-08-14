@@ -117,7 +117,6 @@
 </div>
 <div id="main" class="main" style="margin-left: 200px">
     <button onclick="toggleNav()" class="openbtn">MENU</button>
-    <h1>Bestiaire</h1>
     <h3 id="empty" onclick="hideContent(this)"></h3>
     <div class="hidden">
         <div class="bestiary_entity">
@@ -133,6 +132,10 @@
                 <hr/>
                 <p><strong>Points de vie : </strong></p>
                 <p><strong>Protection : </strong><br/><i></i></p>
+                <p><strong>Immunitée(s) : </strong></p>
+                <p><strong>Résistance(s) : </strong></p>
+                <p><strong>Vulnérabilité(s) : </strong></p>
+                <p><strong>Vitesse : </strong></p>
                 <p><strong>Taille : </strong></p>
                 <p><strong>Langages : </strong></p>
                 <hr/>
@@ -144,80 +147,466 @@
                     </tbody>
                 </table>
                 <hr/>
-                <i><strong></strong></i>
+                <p><strong></strong></p>
             </div>
             <div class="bestiary_entity_part">
                 <img alt="" src="../../../Images/Bestiary/"/>
             </div>
         </div>
+        <hr/>
     </div>
-    <h1 id="aberrations" onclick="hideContent(this)">Aberrations</h1>
-    <div>
-        <p>Les aberrations possèdent une anatomie bizarre, des capacités étranges, un mode de pensée hors-normes ou plusieurs de ces caractéristiques.</p>
-        <p onclick="hideContent(this)">Les aberrations possèdent les traits suivants (sauf mention contraire dans leur profil) :</p>
-        <ul class="hidden">
-            <li>Vision dans le noir à 18 m.</li>
-            <li>Les aberrations respirent, mangent et dorment.</li>
-        </ul>
-    </div>
+
+    <h1>Bestiaire</h1>
+    <p>Ici sont recensés la plupart des créatures d'Ogma selon différentes catégories. Quelques précisions vis-à-vis des termes utilisés dans les fiches :</p>
+    <ul>
+        <li>Résistance : divise les dommages reçus par un type de dégâts par deux (sauf précisé autrement).</li>
+        <li>Vulnérabilité : multiplie par deux les dommages reçus par un type de dégâts (sauf précisé autrement).</li>
+        <li>Les résistances et les vulnérabilités sont appliqués en dernier, après toutes les autres réductions/augmentations de dégâts et ne se cumulent pas. Si une créature a une résistance au feu ainsi qu'une résistance à tous les dégâts non magiques, les dégâts non magiques de feu subis par la créature sont réduits de moitié et non de trois-quarts.</li>
+    </ul>
 
     <h1 id="betes" onclick="hideContent(this)">Bêtes</h1>
     <div>
-        <p>Les bêtes sont des créatures vivantes et non humaines. Il s'agit le plus souvent de vertébrés dénués de pouvoirs magiques et sans propension au développement d'un langage et d'une culture.</p>
-        <p onclick="hideContent(this)">Les bêtes possèdent les traits suivants (sauf mention contraire dans leur profil) :</p>
-        <ul class="hidden">
-            <li>valeur d'Intelligence égale à 1 ou 2 (aucune créature avec une Intelligence supérieure ou égale à 3 ne peut être un animal).</li>
-            <li>Vision nocturne.</li>
-            <li>Les animaux respirent, mangent et dorment.</li>
-        </ul>
+        <p>Les bêtes sont des créatures non-humanoïdes dénués de véritable langage.</p>
 
+        <h3 id="bulvak" onclick="hideContent(this)">Bulvak</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Ces imposants cervidés vivent dans les contrées froides d'Ogma, ils vivent y vivent paisiblement en troupeau d'une quinzaine d'individus.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>15</td> <td>6</td> <td>12</td> <td>15</td> <td>1</td> <td>1</td> <td>10</td> <td>3</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>50</p>
+                    <p><strong>Protection : </strong>1<br/><i>Une épaisse couche de poils et de graisse protèges les organes vitaux du bulvak</i></p>
+                    <p><strong>Résistance(s) : </strong>Froid</p>
+                    <p><strong>Vitesse : </strong>12m</p>
+                    <p><strong>Taille : </strong>Grande</p>
+                    <p><strong>Langages : </strong>Aucun</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Bois</td> <td>12</td> <td>10</td> <td>1d6+2 C</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Charge : </strong>Si le bulvak parcourt plus de 10m en ligne droite et percute un adversaire avec ses bois, la cible reçoit 2d6 +3 de dégâts contondants et doit réussir un jet de Vigueur ou être mise à terre.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Bulvak.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
+
+        <h3 id="kipine" onclick="hideContent(this)">Kipine</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Les kipines sont de redoutables prédateurs nocturnes capables de voler sans le moindre bruit pour fondre sur une proie trop audacieuse.</p>
+                    <p>Ces chouettes monstrueuses sont dotés de serres acérées, au sommet de leur crâne trônent des bois recherchés par les alchimistes. Leurs plumes noires les camouflent parfaitement dans l'obscurité.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>14</td> <td>16</td> <td>18</td> <td>12</td> <td>3</td> <td>5</td> <td>17</td> <td>6</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>75</p>
+                    <p><strong>Protection : </strong>0</p>
+                    <p><strong>Taille : </strong>Grande</p>
+                    <p><strong>Vitesse: </strong>au sol 15m, en vol 30m</p>
+                    <p><strong>Langages : </strong>Aucun</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Serres</td> <td>14</td> <td>/</td> <td>2d6+2 P et T</td></tr>
+                        <tr><td>Bois</td> <td>15</td> <td>8</td> <td>1d8+2 C</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Saisie : </strong>La kipine peut survoler à toute vitesse un opposant et le saisir avec ses serres, si la cible ne parvient pas à se défendre (via une esquive ou autre chose), elle subit 2d6 de dégâts perforants et est prisonière des serres de la kipine mais peut essayer de défendre pour la faire lâcher prise.</p>
+                    <p><strong>Vision nocturne : </strong>Même par une nuit sans lune, la kipine est parfaitement capable de discerner sa cible à plus de 40m d'altitude.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Kipine.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
+
+        <h3 id="koibra" onclick="hideContent(this)">Koïbra</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Résidant dans les étangs et les rivières calmes, le koïbra est un prédateur mortel. Les neurotoxines qu'il injecte par sa morsure affecte le système nerveux de sa victime, causant une paralysie et de terribles douleures.</p>
+                    <p>Cette salamandre se nourrit principalement de poissons, grenouilles et petits serpents. Le koïbra préfère fuir sous la surface lorsqu'on le dérange et ne se bat qu'en dernier recours.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>11</td> <td>15</td> <td>13</td> <td>8</td> <td>2</td> <td>3</td> <td>11</td> <td>3</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>40</p>
+                    <p><strong>Protection : </strong>1<br/><i>Sa peau écailleuse fait glisser les lames et les flèches.</i></p>
+                    <p><strong>Vitesse : </strong>au sol 12m, dans l'eau 25m</p>
+                    <p><strong>Taille : </strong>Moyenne</p>
+                    <p><strong>Langages : </strong>Aucun</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Morsure</td> <td>14</td> <td>/</td> <td>1d6+2 P</td></tr>
+                        <tr><td>Griffes</td> <td>12</td> <td>/</td> <td>2d4+1 T</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Poison : </strong>Si une créature est mordu par le koïbra, elle doit réussir un jet de Vigueur avec un malus de 2 ou être empoisonnée. Les effets du poison sont : 1d6 de dégâts par tour et paralysie totale. Si la cible rate son jet de Vigueur, elle peut le relancer une fois par tour, sur une réussite les effets du poison se dissipent.</p>
+                    <p><strong>Amphibien : </strong>Le koïbra peut respirer à la fois dans l'air et sous l'eau.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Koibra.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
+
+        <h3 id="scaratrok" onclick="hideContent(this)">Scaratrok</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Ces scarabés géants vivent dans des cavernes souterraines infestées de champignons toxiques. Leur carapace et leurs cornes sont recouverte de spores.</p>
+                    <p>Ce sont des animaux passifs tant qu'on ne vient pas les chercher dans leur tanière, ils se nourisent de petits mamifères et de racines.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>17</td> <td>12</td> <td>10</td> <td>14</td> <td>2</td> <td>3</td> <td>7</td> <td>4</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>70</p>
+                    <p><strong>Protection : </strong>5<br/><i>La carapace su skaratrok est aussi solide que le métal.</i></p>
+                    <p><strong>Résistances : </strong>Acide</p>
+                    <p><strong>Immunitées : </strong>Poison</p>
+                    <p><strong>Vitesse : </strong>9m qu'importe la surface</p>
+                    <p><strong>Taille : </strong>Grande</p>
+                    <p><strong>Langages : </strong>Aucun</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Cornes</td> <td>14</td> <td>8</td> <td>2d6+4</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Poison : </strong>Une créature touchée par une des cornes du scaratrok doit réussir un jet de Vigueur ou subir 1d6 de dégâts de poison pendant 5 tours. Une épreuve ratée peut être retentée tout les tours au prix d'une action simple.</p>
+                    <p><strong>Spores incapacitants : </strong>Un fois par jour, le scaratrok peut relacher une nuée de spore sur toutes les créatures situées à moins de 5m de lui. Les créatures ne parvenant pas à s'enfuir de la zone doivent réussir un jet de Vigueur ou être étourdies. Une épreuve ratée peut être retentée tout les tours au prix d'une action simple.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Scaratrok.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
+
+        <h3 id="spitfire" onclick="hideContent(this)">Spitfire</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Ces petites bêtes cracheuses de feu pullulent dans les Monts Ardents. Se nourrissant de charbon, elles sont capables de grimper sur n'importe quelle surface pour dénicher une veine.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>8</td> <td>8</td> <td>13</td> <td>10</td> <td>2</td> <td>2</td> <td>8</td> <td>3</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>8</p>
+                    <p><strong>Protection : </strong>2<br/><i>Ses écailles sont dures comme la pierre et difficiles à pénétrer.</i></p>
+                    <p><strong>Résistance : </strong>Feu</p>
+                    <p><strong>Vitesse : </strong>12m</p>
+                    <p><strong>Taille : </strong>Très petite</p>
+                    <p><strong>Langages : </strong>Aucun</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Morsure</td> <td>11</td> <td>/</td> <td>1d6 P</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Crâchat brûlant : </strong> Le spitfire crache un mélange de bave et de roche brûlante, infligeant 1d6+2 de dégâts de feu à une seule cible. Portée 10m/30m</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Spitfire.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
     </div>
 
     <h1 id="creatures_artificielles" onclick="hideContent(this)">Créatures artificielles</h1>
     <div>
         <p>Les créatures artificielles sont des objets animés ou des créatures construites de toutes pièces.</p>
-        <p onclick="hideContent(this)">Les créatures artificielles possèdent les traits suivant (sauf mention contraire dans leur profil).</p>
-        <ul class="hidden">
-            <li>Pas de valeur de Constitution. Tous les jets qui dépendent normalement de la Constitution fonctionnent comme si ces créatures avaient une constitution de 10 (ni bonus ni malus).</li>
-            <li>Vision dans le noir à 18 m.</li>
-            <li>Vision nocturne</li>
-            <li>Immunité contre tous les effets mentaux (charmes, coercitions, effets de moral, mirages et fantasmes).</li>
-            <li>Immunité contre les maladies, les effets de mort, de nécromancie, la paralysie, le poison, les effets de sommeil et l'étourdissement.</li>
-            <li>Les créatures artificielles ne guérissent pas naturellement mais elles peuvent généralement se réparer lorsqu'elles sont exposées à certains types d'effets (se référer aux détails présentés dans la description des créatures individuelles).</li>
-            <li>Ne subissent pas les affaiblissement temporaires de caractéristiques, les diminutions permanentes de caractéristiques, la fatigue, l'épuisement, l'absorption d'énergie, les saignements, ni les dégâts non-létaux.</li>
-            <li>Immunité contre tous les effets qui imposent un jet de Vigueur (sauf ceux qui fonctionnent également sur les objets ou sont inoffensifs).</li>
-            <li>Ne risquent pas la mort par dégâts excessifs. Ces créatures sont immédiatement détruites lorsque leurs points de vie atteignent 0 ou moins.</li>
-            <li>Les créatures artificielles ne respirent pas, ne mangent pas et ne dorment pas.</li>
-        </ul>
+        <h3 id="arbre_golem" onclick="hideContent(this)">Arbre golem</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Protecteurs des Sakhas, les arbres golems sont une création de Kormo. Ils montent la garde dans les villages et les lieux sacrés pour empêcher les visiteur importants de saccager les lieux.</p>
+                    <p>Ils sont un assemblent de racines et d'écorce, capables d'endurer les assaults les plus rudes en se régénérant lorsqu'ils prennent racines.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>18</td> <td>6</td> <td>8</td> <td>18</td> <td>5</td> <td>15</td> <td>8</td> <td>1</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>120</p>
+                    <p><strong>Protection : </strong>2<br/><i>L'écorce magique de Kormo les rend résistant.</i></p>
+                    <p><strong>Résistance(s) : </strong>Poison</p>
+                    <p><strong>Vulnérabilité(s) : </strong>Feu</p>
+                    <p><strong>Vitesse : </strong>6m</p>
+                    <p><strong>Taille : </strong>Grande</p>
+                    <p><strong>Langages : </strong>Sylvestre (ne peut pas parler)</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Poings</td> <td>14</td> <td>8</td> <td>2d8 C</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Fouet végétal</strong>L'arbre golem peut aggriper une créature située à moins de 10m de lui et l'amener à son contact grâce à un fouet de lianes ou de racines. La cible peut esquiver, en cas d'échec elle subit 2d6 de dégâts tranchants et doit réussir un jet de Force (opposée à celui du golem) pour résister au déplacement.</p>
+                    <p><strong>Racines</strong>Le golem peut fusionner ses pieds avec le sol s'il se trouve sur de la terre, tant qu'il est enraciné, il regagne 2d10 points de vie par tour, et ne peut pas être déplacé ni mis à terre.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Arbre_golem.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
     </div>
 
     <h1 id="creatures_magiques" onclick="hideContent(this)">Créatures magiques</h1>
     <div>
-        <p>Les créatures magiques ressemblent aux animaux mais leur valeur d'Intelligence peut être supérieure à 2 (auquel cas, elles connaissent au moins un langage, sans pour autant pouvoir forcément le parler). Les créatures magiques possèdent généralement des capacités surnaturelles ou extraordinaires mais parfois, elles se distinguent simplement par une apparence ou des coutumes étranges.</p>
-        <p onclick="hideContent(this)">Les créatures magiques possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul class="hidden">
-            <li>Vision dans le noir à 18 m.</li>
-            <li>Vision nocturne.</li>
-            <li>Les créatures magiques respirent, mangent, et dorment.</li>
-        </ul>
+        <p>Les créatures magiques sont des créatures non-humanoïdes intelligentes, comprenant au moins une langue, certains peuvent même s'exprimer dans une ou plusieurs langues.</p>
+
+        <h3 id="demigriffon" onclick="hideContent(this)">Demigriffon</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Les demigriffons sont des hybrides entre les griffons et les chevaux. Ces créatures sont extrêmement rares et difficiles à obtenir. La meilleur méthode pour créer un demi griffon consiste à obtenir un oeuf de griffon, l'élever de façon à lui retirer son appétit pour les chevaux et le faire se reproduire avec les meilleurs destriers.</p>
+                    <p>Ce sont des montures fantastiques de par leur puissance et leur robustesse bien qu'elles ne possèdent pas les ailes des griffons purs.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>16</td> <td>8</td> <td>14</td> <td>15</td> <td>4</td> <td>8</td> <td>8</td> <td>6</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>60</p>
+                    <p><strong>Protection : </strong>1<br/><i>Le cuir et les muscles des demigriffons les rendent robustes.</i></p>
+                    <p><strong>Vitesse : </strong>20m</p>
+                    <p><strong>Taille : </strong>Grande</p>
+                    <p><strong>Langages : </strong></p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Bec</td> <td>14</td> <td>/</td> <td>1d8+2 P</td></tr>
+                        <tr><td>Griffes</td> <td>12</td> <td>/</td> <td>2d6 T</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Charge : </strong>Si le demigriffon parcourt plus de 10m en ligne droite et frappe un adversaire avec ses griffes, la cible reçoit 3d6+3 de dégâts tranchants et doit réussir un jet de Vigueur ou être mise à terre.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Demigriffon.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
+
+        <h3 id="griffon" onclick="hideContent(this)">Griffon</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Ces créatures majestueuses parcourent le ciel au dessus des montagnes. Les griffons forment des couple durant pour la vie, protégeant jusqu'à la mort leur progéniture.</p>
+                    <p>Ils trônent au sommet de la chaîne alimentaire aux cotés d'autre super-prédateurs, ils sont capable d'emporter dans les airs avec eux une vache ou un cheval.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>20</td> <td>14</td> <td>18</td> <td>14</td> <td>6</td> <td>12</td> <td>12</td> <td>8</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>120</p>
+                    <p><strong>Protection : </strong>1<br/><i>Les griffons sont protégés par un cuir épais.</i></p>
+                    <p><strong>Vitesse : </strong>au sol 12m, en vol 30m</p>
+                    <p><strong>Taille : </strong>Très grande</p>
+                    <p><strong>Langages : </strong>Commun (ne sait pas parler)</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Bec</td> <td>15</td> <td>/</td> <td>2d10+4 P</td></tr>
+                        <tr><td>Griffes</td> <td>14</td> <td>/</td> <td>2d12+2 T</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Saisie : </strong>Le griffon peut survoler à toute vitesse un opposant et le saisir avec ses serres, si la cible ne parvient pas à se défendre (via une esquive ou autre chose), elle subit 3d6 de dégâts perforants et est prisonière des serres du griffon mais peut essayer de défendre pour le faire lâcher prise.</p>
+                    <p><strong>Cri perçant : </strong>Le griffon pousse un hurlement puissant, chaque créature dans un rayon de 10m autour de sa tête et qui peuvent l'entendre doivent réussir un jet de Vigueur avec un malus de 4 sous peine d'être étourdi jusqu'à la fin du prochain tour du griffon et assourdi pendant 10 tours. 6 tours de recharge.</p>
+                    <p><strong>Balayage : </strong>Le griffon frappe violement avec ses ailes tout autour de lui. Toute créature se trouvant à moins de 6m de lui subit une attaque de griffes.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Griffon.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
+
+        <h3 id="leshen" onclick="hideContent(this)">Leshen</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Véritable gardien des bois, le leshen est une créature territoriale qui n'hésite pas à tuer pour protéger son domaine. Capable de contrôler la faune et la flore l'entourant, c'est un redoutable adversaire.</p>
+                    <p>Certains disent qu'ils seraient liés aux Sakhas, d'autre que ce sont une incarnation de Kormo elle même. Les leshens ne sont pas toujours hostiles, il leur arrivent de guider des voyageurs ou des animaux domestiques perdus dans les sous-bois, il ne le fait pas directement et évite le contact direct.</p>
+                    <p>Un leshen est capable de se métamorphoser en n'importe quelle créature forestière pour passer inaperçu. Pour tuer un leshen, il est nécessaire de détruire les totems qu'ils placent dans son domaine.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>24</td> <td>14</td> <td>12</td> <td>16</td> <td>14</td> <td>20</td> <td>16</td> <td>14</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>180</p>
+                    <p><strong>Protection : </strong>4<br/><i>Son écorce est renforcée par sa magie puissante.</i></p>
+                    <p><strong>Immunitée(s) : </strong>Poison</p>
+                    <p><strong>Résistance(s) : </strong>Dégâts contondants</p>
+                    <p><strong>Vulnérabilité(s) : </strong>Feu</p>
+                    <p><strong>Vitesse : </strong>12m</p>
+                    <p><strong>Taille : </strong>Grande</p>
+                    <p><strong>Langages : </strong>Sylvestre</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Griffes</td> <td>16</td> <td>12</td> <td>2d10+2</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Régénération : </strong>Le leshen récupère 20 points de vie par tour tant qu'il lui reste un totem, il ne se régénère pas s'il a subi des dégâts de feu ce tour.</p>
+                    <p><strong>Pas totémique : </strong>Le leshen peut, par une action complexe, se téléporter vers un de ses totems s'il se trouve sur son domaine.</p>
+                    <p><strong>Assault végétal : </strong>S'il le souhaite, le leshen peut frapper deux cibles situées à moins de 30m de lui avec des racines surgissants du sol. Les cibles doivent réussir un jet de Réflexes ou subir 3d6 de dommages contondants et être agrippées. Les créatures aggrippées peuvent se libérer en réussissant un jet de Force, d'Agilité, de Constitution ou en tranchant les racines. Chaque tour passés en étant aggrpiés par les racines fait subir 2d6 de dégâts contondants car les racines resserent leur prise. 5 tours de recharge.</p>
+                    <p><strong>Appel bestial : </strong>Le leshen peut appeler 2d6 corbeaux (PV 2, Atq 10, Dgt 1d4 P), 1d4+1 loups (PV 15, Atq 12, Dgt 1d6 P), ou un ours (PV 50, Atq 14, Dgt 2d6 T) pour lui venir en aide. Les créatures sont controlées par le leshen et ne fuient pas le combat sauf s'il les laisse partir.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Leshen.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
+
+        <h3 id="zheng" onclick="hideContent(this)">Zheng</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Le zheng est un grand léopard à cinq queue vivant dans les régions montagneuses. Souvent appellés le léopard licorne à cause des cornes qu'il possède sur son visage.</p>
+                    <p>Il est chassé pour sa fourrure et ses cornes, malgré cela il aide les voyageurs paisibles traversant son territoire. Ils communiquent par télépathie.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>14</td> <td>16</td> <td>18</td> <td>12</td> <td>12</td> <td>12</td> <td>14</td> <td>15</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>90</p>
+                    <p><strong>Protection : </strong>0</p>
+                    <p><strong>Vitesse : </strong>16m</p>
+                    <p><strong>Taille : </strong>Grande</p>
+                    <p><strong>Langages : </strong>Commun</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Crocs</td> <td>14</td> <td>/</td> <td>1d8+2 P</td></tr>
+                        <tr><td>Griffes</td> <td>13</td> <td>/</td> <td>2d6 T</td></tr>
+                        <tr><td>Queues</td> <td>12</td> <td>/</td> <td>3d4 C</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Bond : </strong>Si le zheng parcourt plus de 10m en ligne droite, il peut bondir sur un adversaire. La cible doit réussir un jet de Vigueur ou être mis au sol. Le zheng peut porter une attaque de crocs avec un bonus de 3 en action bonus à la cible.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Zheng.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </div>
+
+    <h1 id="geants" onclick="hideContent(this)">Géants</h1>
+    <div>
+        <p>Les géants sont plus grands que les humains. Ils ont pour la plupart une forme humanoïde. Les ogres et les trolles sont également des géants.</p>
+
+        <h3 id="geant_foret" onclick="hideContent(this)">Géant des forêts</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Les géants des forêts sont des créatures lentes et silencieurs arpentant les bois les plus profonds au sommet des plus hautes montagnes. Vivants au plus loin de la civilisation, il est bien rare d'en rencontrer un.</p>
+                    <p>La plupart des géants des forêt possèdent plus de deux yeux, une longue barbe infesté de lichen, mousses et branchages. Ils sont passifs à moins qu'on ne leur montre du feu.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>25</td> <td>6</td> <td>12</td> <td>20</td> <td>10</td> <td>13</td> <td>14</td> <td>7</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Points de vie : </strong>160</p>
+                    <p><strong>Protection : </strong>3<br/><i>Le cuir d'un géant estr difficile à perçer</i></p>
+                    <p><strong>Résistances : </strong>Magie(25% (hors feu))</p>
+                    <p><strong>Vulnérabilités : </strong>Feu</p>
+                    <p><strong>Vitesse : </strong>12m</p>
+                    <p><strong>Taille : </strong>Gigantesque</p>
+                    <p><strong>Langages : </strong>Géant</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Poings</td> <td>12</td> <td>6</td> <td>3d8 C</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Éruption : </strong>Le géant enfonce ses deux poings dans le sol, causant une éruption florale. Les créatures se trouvant dans un rayon de 5m de l'impact subissent 4d8 de dégâts contondants et le sol autour de l'impact devient un terrain difficile jusqu'a ce qu'on coupe les plantes ce qui prend environ une minute.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../../Images/Bestiary/Geant_foret.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
     </div>
 
     <h1 id="humanoides" onclick="hideContent(this)">Humanoïdes</h1>
     <div>
-        <p>Les humanoïdes possèdent généralement deux bras, deux jambes et une tête, ou encore un torse semblable à celui des humains, des bras et une tête. Ils n'ont peu ou pas de capacités surnaturelles ou extraordinaires, mais la plupart d'entre eux peuvent parler et possèdent des sociétés bien développées.</p>
-        <p onclick="hideContent(this)">Les humanoïdes possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul class="hidden">
-            <li>Les humanoïdes respirent, mangent et dorment.</li>
-        </ul>
-    </div>
-
-    <h1 id="humanoides_monstrueux" onclick="hideContent(this)">Humanoïdes monstrueux</h1>
-    <div>
-        <p>Les humanoïdes monstrueux ressemblent aux humanoïdes mais possèdent des caractéristiques monstrueuses ou animales ainsi que, bien souvent des capacités magiques.</p>
-        <p onclick="hideContent(this)">Les humanoïdes monstrueux possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul class="hidden">
-            <li>Les humanoïdes monstrueux respirent, mangent et dorment.</li>
-        </ul>
+        <p>Les humanoïdes possèdent généralement deux bras, deux jambes et une tête, ou encore un torse semblable à celui des humains, des bras et une tête. La plupart d'entre eux peuvent parler et possèdent un certain degré de sociabilité.</p>
 
         <h3 id="minotaure" onclick="hideContent(this)">Minotaure</h3>
         <div class="hidden">
@@ -233,8 +622,9 @@
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>50</p>
+                    <p><strong>Points de vie : </strong>80</p>
                     <p><strong>Protection : </strong>2<br/><i>Le cuir épais du minotaure le protège des coups les plus faibles.</i></p>
+                    <p><strong>Vitesse : </strong>9m</p>
                     <p><strong>Taille : </strong>Grande</p>
                     <p><strong>Langages : </strong>Géant</p>
                     <hr/>
@@ -242,63 +632,304 @@
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
                         <tr><td>Hache à deux mains</td> <td>10</td> <td>10</td> <td>1d10+3 T</td></tr>
-                        <tr><td>Cornes</td> <td>12</td> <td>0</td> <td>1d6+3 P</td></tr>
+                        <tr><td>Cornes</td> <td>12</td> <td>6</td> <td>1d8+3 P</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <i><strong>Charge : </strong>Si le minotaure se déplace d'au moins 3 mètres en ligne droite vers une cible, puis la touche lors d'une attaque avec sa corne dans le même tour, la cible subis 2d6+3 de dégâts perforants. Si la cible est une créature, elle doit réussir un jet de force ou être repoussée de 3 mètres et tomber à terre.</i>
+                    <p><strong>Charge : </strong>Si le minotaure se déplace d'au moins 9 mètres en ligne droite vers une cible, puis la touche lors d'une attaque avec sa corne dans le même tour, la cible subis 2d6+3 de dégâts perforants. Si la cible est une créature, elle doit réussir un jet de force ou être repoussée de 3 mètres et tomber à terre.</p>
                 </div>
                 <div class="bestiary_entity_part">
-                    <img alt="minotaure" src="../../../Images/Bestiary/Minotaure_picture.jpg"/>
+                    <img alt="minotaure" src="../../../Images/Bestiary/Minotaure.png"/>
                 </div>
+            </div>
+            <hr/>
         </div>
+
+        <h2 id="soldats" onclick="hideContent(this)">Soldats</h2>
+        <div class="hidden">
+            <p>Les personnages présentés ci-dessous sont des archétypes pour de multiples races ou factions, il convient de leur ajouter leur bonus et traits raciaux. Il est également possible de modifier leur équipement.</p>
+            <ul type="square">
+
+                <li><h3 id="cavalier" onclick="hideContent(this)">Cavalier</h3>
+                    <div class="hidden">
+                        <div class="bestiary_entity">
+                            <div class="bestiary_entity_part">
+                                <p>Du haut de leur montures, les cavaliers sont la force de frappe mobile des armées. Qu'ils se battent à la pique, à l'épée ou même à l'arc, ce sont des soldats d'exception.</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                                    <tr><td>12</td> <td>12</td> <td>10</td> <td>10</td> <td>10</td> <td>10</td> <td>10</td> <td>12</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <p><strong>Points de vie : </strong>30</p>
+                                <p><strong>Protection : </strong>4<br/><i>Armure lourde composée d'une cotte de mailles, d'un casque, de jambières et solerets de métal.</i></p>
+                                <p><strong>Vitesse : </strong>20m</p>
+                                <p><strong>Taille : </strong>Grande</p>
+                                <p><strong>Langages : </strong>Selon race</p>
+                                <p><strong>Races applicables : </strong>Toutes (monture différente selon race)</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                                    <tr><td>Pique</td> <td>13</td> <td>10</td> <td>1d8 P</td></tr>
+                                    <tr><td>Épée longue</td> <td>13</td> <td>11</td> <td>1d6 P et T</td></tr>
+                                    <tr><td>Bouclier</td> <td>10</td> <td>15</td> <td>1d4 NL</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <p><strong>Charge : </strong>Si le cavalier parcourt plus de 10m en ligne droite et frappe un adversaire avec sa pique, la cible reçoit 3d8 de dégâts perforants et doit réussir un jet de Vigueur ou être mise à terre.</p>
+                            </div>
+                            <div class="bestiary_entity_part">
+                                <img alt="" src="../../../Images/Bestiary/Soldat_cavalier.png"/>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div></li>
+
+                <li><h3 id="combattant" onclick="hideContent(this)">Combattant</h3>
+                    <div class="hidden">
+                        <div class="bestiary_entity">
+                            <div class="bestiary_entity_part">
+                                <p>Ces guerriers au bouclier forment l'infaterie de choc d'une armée. Habiles de leur lame, ils peuvent taillader les rangs adverses tout en se protégeant grâce à leur bouclier.</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                                    <tr><td>12</td> <td>12</td> <td>10</td> <td>12</td> <td>10</td> <td>10</td> <td>10</td> <td>10</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <p><strong>Points de vie : </strong>30</p>
+                                <p><strong>Protection : </strong>3<br/><i>Armure intermédiaire de cuir renforcé</i></p>
+                                <p><strong>Vitesse : </strong>8m</p>
+                                <p><strong>Taille : </strong>Moyenne</p>
+                                <p><strong>Langages : </strong>Selon la race</p>
+                                <p><strong>Races applicables : </strong>Toutes</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                                    <tr><td>Épée courte</td> <td>13</td> <td>11</td> <td>1d6 P et T</td></tr>
+                                    <tr><td>Bouclier</td> <td>10</td> <td>15</td> <td>1d4 NL</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                            </div>
+                            <div class="bestiary_entity_part">
+                                <img alt="" src="../../../Images/Bestiary/Soldat_combattant.png"/>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div></li>
+
+                <li><h3 id="éclaireur" onclick="hideContent(this)">Éclaireur</h3>
+                    <div class="hidden">
+                        <div class="bestiary_entity">
+                            <div class="bestiary_entity_part">
+                                <p>Envoyés en avant pour sécuriser le passage du corps principal et recueillir des inforamtions, les éclaireurs sont aussi silencieux que mortels.</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                                    <tr><td>10</td> <td>14</td> <td>12</td> <td>10</td> <td>10</td> <td>10</td> <td>12</td> <td>8</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <p><strong>Points de vie : </strong>25</p>
+                                <p><strong>Protection : </strong>1<br/><i>Armure légère de cuir</i></p>
+                                <p><strong>Vitesse : </strong>10m</p>
+                                <p><strong>Taille : </strong>Moyenne</p>
+                                <p><strong>Langages : </strong>Selon race</p>
+                                <p><strong>Races applicables : </strong>Toutes</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                                    <tr><td>Arc court</td> <td>DEX</td> <td>/</td> <td>1d6+1 P</td></tr>
+                                    <tr><td>Arbalète</td> <td>DEX</td> <td>/</td> <td>1d8+2</td></tr>
+                                    <tr><td>Épée courte</td> <td>13</td> <td>12</td> <td>1d6</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                            </div>
+                            <div class="bestiary_entity_part">
+                                <img alt="" src="../../../Images/Bestiary/Soldat_eclaireur.png"/>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div></li>
+
+                <li><h3 id="lancier" onclick="hideContent(this)">Lancier</h3>
+                    <div class="hidden">
+                        <div class="bestiary_entity">
+                            <div class="bestiary_entity_part">
+                                <p>Formant la colonne vertébrale d'une armées, les lanciers peuvent tenir une ligne ou stopper une charge en restant en formation.</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                                    <tr><td>12</td> <td>12</td> <td>10</td> <td>12</td> <td>10</td> <td>10</td> <td>10</td> <td>10</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <p><strong>Points de vie : </strong>30</p>
+                                <p><strong>Protection : </strong>3<br/><i>Armure intermédiaire de cuir renforcé</i></p>
+                                <p><strong>Vitesse : </strong>8m</p>
+                                <p><strong>Taille : </strong>Moyenne</p>
+                                <p><strong>Langages : </strong>Selon race</p>
+                                <p><strong>Races applicables : </strong>Toutes</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                                    <tr><td>Lance</td> <td>13</td> <td>11</td> <td>1d6 P</td></tr>
+                                    <tr><td>Pique</td> <td>12</td> <td>10</td> <td>1d8 P</td></tr>
+                                    <tr><td>Bouclier</td> <td>10</td> <td>15</td> <td>1d4 NL</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                            </div>
+                            <div class="bestiary_entity_part">
+                                <img alt="" src="../../../Images/Bestiary/Soldat_lancier.png"/>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div></li>
+
+                <li><h3 id="mage_guerre" onclick="hideContent(this)">Mage de guerre</h3>
+                    <div class="hidden">
+                        <div class="bestiary_entity">
+                            <div class="bestiary_entity_part">
+                                <p>Les mages de guerre sont des soldats spécialisés dans la magie. Ils ne sont pas nombreux dans un corps d'armée et sont souvent gradés.</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                                    <tr><td>10</td> <td>12</td> <td>10</td> <td>10</td> <td>14</td> <td>14</td> <td>10</td> <td>12</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <p><strong>Points de vie : </strong>45</p>
+                                <p><strong>Protection : </strong>3<br/><i>Leur tunique semble légère, mais elle est renforcée par magie.</i></p>
+                                <p><strong>Vitesse : </strong>9m</p>
+                                <p><strong>Taille : </strong>Moyenne</p>
+                                <p><strong>Langages : </strong>Selon race (2 langues)</p>
+                                <p><strong>Races applicables : </strong>Toutes (sauf Chonos)</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                                    <tr><td>Épée longue</td> <td>14</td> <td>13</td> <td>1d6+1 P et T</td></tr>
+                                    <tr><td>Rapière</td> <td>15</td> <td>12</td> <td>1d6+1 P</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <p><strong>Doué de magie : </strong>Les mages de guerre sont tout à fait capables de se servir de leur magie en plein coeur de la bataille, bien qu'il préfèrent rester à distance.</p>
+                            </div>
+                            <div class="bestiary_entity_part">
+                                <img alt="" src="../../../Images/Bestiary/Soldat_mage.png"/>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div></li>
+
+                <li><h3 id="officier" onclick="hideContent(this)">Officier</h3>
+                    <div class="hidden">
+                        <div class="bestiary_entity">
+                            <div class="bestiary_entity_part">
+                                <p>Dirigeant des opérations, l'officier commande une partie des troupes, il a obtenu ce poste à la sueur de son front et le fait bien comprendre à ses subordonnés.</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                                    <tr><td>15</td> <td>14</td> <td>10</td> <td>13</td> <td>10</td> <td>10</td> <td>10</td> <td>15</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <p><strong>Points de vie : </strong>45</p>
+                                <p><strong>Protection : </strong>5<br/><i>Armure lourde de métal</i></p>
+                                <p><strong>Vitesse : </strong>7m</p>
+                                <p><strong>Taille : </strong>Moyenne</p>
+                                <p><strong>Langages : </strong>Selon race</p>
+                                <p><strong>Races applicables : </strong>Toutes</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                                    <tr><td>Épée longue</td> <td>15</td> <td>14</td> <td>1d6+3 P et T</td></tr>
+                                    <tr><td>Bouclier</td> <td>11</td> <td>16</td> <td>1d4+2 NL</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                            </div>
+                            <div class="bestiary_entity_part">
+                                <img alt="" src="../../../Images/Bestiary/Soldat_officier.png"/>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div></li>
+
+                <li><h3 id="soldat_sorcier" onclick="hideContent(this)">Soldat Sorcier</h3>
+                    <div class="hidden">
+                        <div class="bestiary_entity">
+                            <div class="bestiary_entity_part">
+                                <p>Les soldats sorcier forment une force d’élite indépendante de l’armée régulière Azuma, ils se distinguent par une maîtrise totale de la magie et des armes plus conventionnelles.</p>
+                                <p>Ils effectuent des missions secrètes en temps de paix mais sont tout autant efficace sur le front pour faire une percée dans les lignes ennemis.</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>CON</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                                    <tr><td>15</td> <td>15</td> <td>12</td> <td>13</td> <td>14</td> <td>14</td> <td>12</td> <td>16</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <p><strong>Points de vie : </strong>50</p>
+                                <p><strong>Protection : </strong>6<br/><i>Armure lourde faite sur mesure pour chaque soldat</i></p>
+                                <p><strong>Vitesse : </strong>9m</p>
+                                <p><strong>Taille : </strong>Moyenne</p>
+                                <p><strong>Langages : </strong>Commun + 2 autres</p>
+                                <p><strong>Races applicables : </strong>Azumas</p>
+                                <hr/>
+                                <table class="table_bestiary">
+                                    <tbody>
+                                    <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                                    <tr><td>Katana</td> <td>16</td> <td>15</td> <td>1d6+3 P et T</td></tr>
+                                    <tr><td>Wakizashi</td> <td>16</td> <td>12</td> <td>1d4+3 P et T</td></tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+                                <p><strong>Doué de magie : </strong>Les soldats sorciers sont tout à fait capables de se servir de leur magie en plein coeur de la bataille.</p>
+                            </div>
+                            <div class="bestiary_entity_part">
+                                <img alt="" src="../../../Images/Bestiary/Soldat_sorcier.png"/>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div></li>
+            </ul>
         </div>
     </div>
 
     <h1 id="karnarim" onclick="hideContent(this)">Karnarim</h1>
     <div>
-        <p>Les Karnarim sont constitués en partie ou en totalité d'essence (mais pas forcément de matériaux) provenant du plan de Karnaï.</p>
-        <p onclick="hideContent(this)">Les Karnarim possèdent les traits suivants (sauf mention contraire dans leur profil) :</p>
-        <ul class="hidden">
-            <li>Vision dans le noir à 18 m.</li>
-        </ul>
+        <p>Les Karnarim sont des êtres provenant du plan de Karnaï.</p>
     </div>
+
     <h1 id="morts_vivants" onclick="hideContent(this)">Morts-vivants</h1>
     <div>
         <p>Les morts-vivants sont des créatures qui ont cessé de vivre et ont été animées par des forces spirituelles ou surnaturelles.</p>
-        <p onclick="hideContent(this)">Les morts-vivants possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul class="hidden">
-            <li>Pas de valeur de Constitution. Les morts-vivants utilisent leur Volonté pour calculer leurs points de vie, leur jets de Vigueur et toutes les capacités spéciales qui dépendent normalement de la Constitution.</li>
-            <li>Immunité contre tous les effets mentaux (charmes, coercitions, effets de moral, mirages et fantasmes).</li>
-            <li>Immunité contre les effets de mort, les maladies, la paralysie, le poison, les saignements, les effets de sommeil et l'étourdissement.</li>
-            <li>Pas affectés par les dégâts non-létaux, l'absorption d'énergie ou les diminutions permanentes de caractéristiques physiques ainsi que contre les effets de fatigue et d'épuisement.</li>
-            <li>Incapables de guérir naturellement s'ils ne possèdent pas de valeur d'Intelligence, mais ils peuvent être guéris par d'autre méthodes. L'énergie négative (libérée par un sort de blessure par exemple) peut soigner les morts-vivants. Ceci dit, les morts-vivants qui possèdent la capacité de guérison accélérée peuvent en bénéficier normalement.</li>
-            <li>Immunité contre tous les effets qui imposent un jet de vigueur (sauf ceux qui agissent également sur les objets ou sont inoffensifs.</li>
-            <li>Ne risquent pas la mort par dégâts excessifs mais sont immédiatement détruits si leurs points de vie atteignent ou passent sous 0.</li>
-            <li>Les morts-vivants ne respirent pas, ne mangent pas et ne dorment pas.</li>
-        </ul>
     </div>
 
     <h1 id="plantes" onclick="hideContent(this)">Plantes</h1>
     <div>
-        <p>Ce type rassemble les créatures végétales.</p>
-        <p onclick="hideContent(this)">Les plantes possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul class="hidden">
-            <li>Immunités contre tous les effets mentaux (charmes, coercitions, effets de moral, mirages et fantasmes).</li>
-            <li>Immunité contre la paralysie, le poison, la métamorphose, les effets de sommeil et l’étourdissement.</li>
-            <li>Les plantes respirent et mangent mais ne dorment pas.</li>
-        </ul>
+        <p>Les plantes ne sont pas de la flore ordinaire, ce sont des créatures végétales. La plupart d'entre elles peuvent se mouvoir et certaines sont carnivores.</p>
     </div>
 
     <h1 id="vermine" onclick="hideContent(this)">Vermine</h1>
     <div>
         <p>Ce type de créature regroupe les insectes, les arachnides, les arthropodes, les vers et autres invertébrés du même genre.</p>
-        <p onclick="hideContent(this)">Les vermines possèdent les traits suivants (sauf mention contraire dans leur profil).</p>
-        <ul class="hidden">
-            <li>Dénuées d'Intelligence : pas de valeur d'Intelligence et immunité contre tous les effets mentaux (charmes, coercition, fantasmes, mirages et effets de moral). Les créatures ressemblant à des vermines qui possèdent une valeur d'Intelligence sont généralement des animaux ou des créatures magiques (en fonction de leurs autres capacités).</li>
-            <li>Vision dans le noir à 18 m.</li>
-            <li>Les vermines respirent, mangent et dorment.</li>
-        </ul>
     </div>
 </div>
 </body>

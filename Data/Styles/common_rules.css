@@ -78,14 +78,14 @@ table.table_bestiary{
 
 table.table_bestiary tbody th{
     border-style: none;
-    padding: 0px 4px 1px 4px;
+    padding: 0 6px 2px 6px;
     margin: 2px;
 }
 
 table.table_bestiary tbody td{
     border-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0 6px 2px 6px;
+    margin: 2px;
 }
 
 table.race>tbody>tr>:first-child { /*Affecte les premières cases du tableau des races*/
@@ -156,6 +156,16 @@ a:hover {
 .bestiary_entity_part {
     flex: 1;
     padding: 3px;
+    margin: auto;
+    max-width: 50%;
+}
+.bestiary_entity_part img{
+    flex: 1;
+    padding: 3px;
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* The sidebar menu */
