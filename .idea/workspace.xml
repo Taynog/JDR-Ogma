@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Glossaire.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Tableaux.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/Rules/Rules.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Bestiaire.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Collection/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Collection/World/Histoire_Ogma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Minotaure_picture.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/ef469762f1ab614c3fed9fdcac2857e1.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +118,8 @@
       <workItem from="1597315585136" duration="6234000" />
       <workItem from="1597345791968" duration="27118000" />
       <workItem from="1597436008519" duration="6174000" />
+      <workItem from="1597481733663" duration="322000" />
+      <workItem from="1597572243914" duration="145000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
