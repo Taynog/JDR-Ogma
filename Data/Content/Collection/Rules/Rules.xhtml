@@ -476,15 +476,15 @@
                 <p>Un personnage peut survivre sans nourriture pendant 3 jour. À la fin de chaque jour au-delà de cette limite, un personnage souffre automatiquement d'un niveau d'épuisement. Un jour passé en ayant mangé normalement remet le compteur de jours sans nourriture à zéro.</p>
 
                 <h3>Eau</h3>
-                <p>Un personnage a besoin de 3 litres d'eau par jour par température normale, de 6 litres s'il fait chaud ou de 9 si il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de sauvegarde de Constitution ou encaisser un niveau d'épuisement à la fin du jour. Un personnage qui boit encore moins d'eau que cela encaisse automatiquement un niveau d'épuisement à la fin du jour. Si un personnage a déjà un ou plusieurs niveaux d'épuisement, le personnage encaisse deux niveaux dans les deux cas.</p>
+                <p>Un personnage a besoin de 1,5 litres d'eau par jour par température normale, de 3 litres s'il fait chaud ou de 5 si il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de Vigueur ou devient <a href="Glossaire.xhtml#fatigue">fatigué</a>. Un personnage qui boit encore moins d'eau que cela devient automatiquement <a href="Glossaire.xhtml#fatigue">fatigué</a>. Si un personnage est déjà <a href="Glossaire.xhtml#fatigue">fatigué</a>, il devient alors <a href="Glossaire.xhtml#epuise">épuisé</a>.</p>
 
                 <h3>Repos</h3>
-                <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit pour la magie, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent prendre des repos courts au milieu d'une journée d'aventure et un repos long en fin de journée.</p>
+                <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent prendre des repos courts au milieu d'une journée d'aventure et un repos long en fin de journée.</p>
                 <h4>Repos court</h4>
-                <p>Un repos court est une période de temps mort qui dure au moins 1 heure, et durant laquelle un personnage ne fait rien de plus demandant que manger, boire, lire ou panser ses plaies. Un personnage récupère naturellement 20% de ses points de vie lors d'un repos court, il est possible d'en récupérer plus via des sorts du domaine d'Agapi ou des remèdes alchimiques entres autres.</p>
+                <p>Un repos court est une période de temps mort qui dure au moins 1 heure, et durant laquelle un personnage ne fait rien de plus demandant que manger, boire, lire ou panser ses plaies. Un personnage récupère naturellement 10% de ses points de vie et de psy lors d'un repos court, il est possible d'en récupérer plus via des sorts du domaine d'Agapi ou des remèdes alchimiques entres autres.</p>
                 <h4>Repos long</h4>
                 <p>Un repos long est une période de temps mort d'au moins 8 heures lors de laquelle un personnage dort au moins 6 heures et entreprend des activités légères comme lire, parler, manger ou monter la garde durant un maximum de 2 heures. Si le repos est interrompu par une période d'activité soutenue (au moins une heure de marche, de combat, d'incantation ou d'activités similaires), le personnage doit recommencer le repos long depuis le début pour en bénéficier.</p>
-                <p>Au terme d'un repos long, un personnage récupère 80% de ses points de vie. Un personnage ne peut bénéficier de plus d'un repos long par période de 24 heures et doit avoir au moins un point de vie au début du repos pour en gagner ses bienfaits.</p>
+                <p>Au terme d'un repos long, un personnage récupère 50% de ses points de vie et de psy. Un personnage ne peut bénéficier de plus d'un repos long par période de 24 heures et doit avoir au moins un point de vie au début du repos pour en gagner ses bienfaits.</p>
             </div>
 
             <h2 id="environnement" onclick="hideContent(this)">Environnement</h2>
@@ -660,7 +660,7 @@
                 <h3 id="dangers_naturels" onclick="hideContent(this)">Dangers naturels</h3>
                 <div class="hidden">
                     <h4>L'acide</h4>
-                    <p>L’acide inflige 1d6 points de dégâts par round d’exposition, excepté dans le cas d’une immersion totale (qui peut par exemple se produire si un aventurier tombe dans une grande vasque), laquelle occasionne 10d6 points de dégâts par round. Une attaque acide (salive de monstre, flasque lancée à la main, etc.) représente un round d’exposition.</p>
+                    <p>L’acide inflige 1d6 points de dégâts par round d’exposition, excepté dans le cas d’une immersion totale (qui peut par exemple se produire si un aventurier tombe dans une grande vasque), laquelle occasionne 5d6 points de dégâts par round. Une attaque acide (salive de monstre, flasque lancée à la main, etc.) représente un round d’exposition.</p>
                     <p>Les émanations libérées par la plupart des acides ont l’effet d’un poison fonctionnant par inhalation. Quiconque s’approche trop d’une vaste étendue d’acide doit réussir à chaque round un jet de vigueur sous peine de subir un affaiblissement temporaire de 1 point de Constitution par round. Ce poison n’a pas de fréquence, et n’agit plus dès qu’on s’en éloigne.</p>
                     <p>Les créatures immunisées contre l’acide risquent tout de même s’y noyer si elles sont totalement immergées.</p>
 
@@ -671,11 +671,11 @@
 
                     <h4>La chaleur</h4>
                     <p>Pour peu qu’elle soit suffisamment forte, la chaleur inflige des points de dégâts non-létaux qui ne peuvent être soignés tant que le personnage n’a pas eu l’occasion de se rafraîchir (par exemple en se plongeant dans l’eau, en se mettant à l’ombre, en survivant jusqu’à la nuit, etc...). Une fois que l’accumulation des dégâts non-létaux a engendré une perte de connaissance, les dégâts deviennent normaux et sont subis au même rythme.</p>
-                    <p>En cas de chaleur accablante (35° C ou plus), le personnage doit réussir un jet de vigueur par heure (malus de 0, +1 par jet effectué au préalable) sous peine de subir 1d4 points de dégâts non-létaux à chaque fois. S’il porte une armure ou des vêtements épais, un malus de -4 s'applique à ce jet. Un aventurier doté de la compétence Survie peut bénéficier d’un bonus de 4, voire en faire profiter ses compagnons (voir la description de la compétence). Si le personnage sombre dans l’inconscience, les dégâts qu’il reçoit par la suite sont létaux (1d4 points par heure).</p>
-                    <p>Si la chaleur est torride (45° C ou plus), la règle reste inchangée, mais les jets de Constitution sont espacés de dix minutes seulement (malus de 0, +1 par jet effectué au préalable). Là encore, les dégâts non-létaux reçus s’élèvent à 1d4 points par jet raté et le port d’une armure ou de vêtements épais impose un malus de -4. Tout individu maîtrisant la compétence Survie peut bénéficier d’un bonus de 4, voire en faire profiter ses compagnons. Si l’aventurier sombre dans l’inconscience, les dégâts qu’il reçoit par la suite sont létaux (1d4 points par dix minutes).</p>
+                    <p>En cas de chaleur accablante (35° C ou plus), le personnage doit réussir un jet de Vigueur par heure (malus de 0, +1 par jet effectué au préalable) sous peine de subir 1d4 points de dégâts non-létaux à chaque fois. S’il porte une armure ou des vêtements épais, un malus de -4 s'applique à ce jet. Si le personnage sombre dans l’inconscience, les dégâts qu’il reçoit par la suite sont létaux (1d4 points par heure).</p>
+                    <p>Si la chaleur est torride (45° C ou plus), la règle reste inchangée, mais les jets de Vigueur sont espacés de dix minutes seulement (malus de 0, +1 par jet effectué au préalable). Là encore, les dégâts non-létaux reçus s’élèvent à 1d4 points par jet raté et le port d’une armure ou de vêtements épais impose un malus de -4. Si l’aventurier sombre dans l’inconscience, les dégâts qu’il reçoit par la suite sont létaux (1d4 points par dix minutes).</p>
                     <p>Tout individu subissant des points de dégâts non-létaux à cause de la chaleur est victime d’une insolation et se retrouve fatigué. Les malus que lui impose cet état durent jusqu’à la disparition des points de dégâts non-létaux.</p>
-                    <p>Une chaleur épouvantable (température supérieure à 60° C, feu, eau bouillante, lave) administre des dégâts létaux. Si le personnage est obligé de respirer dans une telle fournaise, l’air surchauffé lui rôtit les poumons (1d6 points de dégâts par minute, sans jet de sauvegarde). De plus, il doit réussir un jet de vigueur toutes les cinq minutes (malus de 0, +1 par jet effectué au préalable) pour ne pas recevoir 1d4 points de dégâts non-létaux. Le port de l’armure ou de vêtements épais se traduit par un malus de -4 au jet et si le personnage porte une armure métallique (ou s’il touche un objet métallique), il subit un d6 de dégâts de feu.</p>
-                    <p>L’eau bouillante administre 1d6 points de dégâts si on plonge la main dedans ou si on en est aspergé. Si un individu est immergé dans un liquide en ébullition, il perd 10d6 points de vie par round.</p>
+                    <p>Une chaleur épouvantable (température supérieure à 60° C, feu, eau bouillante, lave) administre des dégâts létaux. Si le personnage est obligé de respirer dans une telle fournaise, l’air surchauffé lui rôtit les poumons (1d6 points de dégâts par minute, sans jet de sauvegarde). De plus, il doit réussir un jet de Vigueur toutes les cinq minutes (malus de 0, +1 par jet effectué au préalable) pour ne pas recevoir 1d4 points de dégâts non-létaux. Le port de l’armure ou de vêtements épais se traduit par un malus de -4 au jet et si le personnage porte une armure métallique (ou s’il touche un objet métallique), il subit 1d6 de dégâts de feu.</p>
+                    <p>L’eau bouillante administre 1d6 points de dégâts si on plonge la main dedans ou si on en est aspergé. Si un individu est immergé dans un liquide en ébullition, il perd 5d6 points de vie par round.</p>
 
                     <h4>Les chutes</h4>
                     <p>Une chute inflige 1d6 points de dégâts par tranche de trois mètres, jusqu’à un maximum de 20d6. Les créatures subissant des dégâts létaux d’une chute sont à terre.</p>
@@ -738,8 +738,8 @@
 
                     <h4>Le froid</h4>
                     <p>Le froid administre des dégâts non-létaux, qui ne peuvent pas disparaître tant que le personnage ne s’est pas réchauffé. Dès que l’aventurier tombe inconscient suite à l’accumulation de dégâts non-létaux, le froid lui inflige des dégâts normaux, au même rythme que précédemment.</p>
-                    <p>Par temps froid (température inférieure à 5° C), un individu non protégé doit réussir un jet de vigueur par heure (malus de 0, +1 par jet effectué au préalable) pour ne pas subir 1d6 points de dégâts non-létaux. Un personnage possédant la compétence Survie peut bénéficier d’un bonus de 4, voire en faire profiter ses compagnons.</p>
-                    <p>Si le froid est important (-15° C et en dessous), le jet de Vigueur est identique (malus de 0, +1 par jet effectué au préalable), mais il est joué toutes les dix minutes. Là encore, les dégâts s’élèvent à 1d6 points non-létaux en cas d’échec. Tout personnage possédant la compétence Survie peut bénéficier d’un bonus de 4, voire en faire profiter ses compagnons. Si l’aventurier est équipé de vêtements chauds, il effectue uniquement un jet de vigueur par heure.</p>
+                    <p>Par temps froid (température inférieure à 5° C), un individu non protégé doit réussir un jet de Vigueur par heure (malus de 0, +1 par jet effectué au préalable) pour ne pas subir 1d6 points de dégâts non-létaux.</p>
+                    <p>Si le froid est important (-15° C et en dessous), le jet de Vigueur est identique (malus de 0, +1 par jet effectué au préalable), mais il est joué toutes les dix minutes. Là encore, les dégâts s’élèvent à 1d6 points non-létaux en cas d’échec. Si l’aventurier est équipé de vêtements chauds, il effectue uniquement un jet de vigueur par heure.</p>
                     <p>Tout personnage recevant des dégâts non-létaux dus au froid souffre de gelures ou d’hypothermie et est considéré comme fatigué. Les malus dus à cet état des dissipent quand il a réussi à se réchauffer.</p>
                     <p>Un froid extrême (-30° C et en dessous) administre 1d6 points de dégâts létaux toutes les minutes, sans jet de sauvegarde. De plus, le personnage doit réussir un jet de Vigueur (malus de 0, +1 par jet effectué au préalable) pour ne pas recevoir 1d4 points de dégâts non-létaux. Les porteurs d’une armure lourde ou les créatures en contact avec des objets métalliques extrêmement froids subissent 1d6 de dégâts de givre</p>
 
@@ -747,7 +747,7 @@
                     <p>La vitesse de déplacement sur la glace est divisée par deux. Les tests d’Acrobaties obtienne un malus de 5. Les créatures demeurant trop longtemps au contact de la glace risquent d’être affectées par un froid important.</p>
 
                     <h4>La lave</h4>
-                    <p>La lave et le magma infligent 2d6 points de dégâts de feu par round d’exposition, excepté dans le cas d’une immersion totale (par exemple quand un personnage tombe dans le cratère d’un volcan en activité), laquelle occasionne 20d6 points de dégâts de feu par round.</p>
+                    <p>La lave et le magma infligent 2d6 points de dégâts de feu par round d’exposition, excepté dans le cas d’une immersion totale (par exemple quand un personnage tombe dans le cratère d’un volcan en activité), laquelle occasionne 10d6 points de dégâts de feu par round.</p>
                     <p>Les dégâts de feu se prolongent pendant 1d3 rounds après la fin de l’exposition, mais ils sont deux fois moindres (1d6 ou 10d6 points par round, respectivement). Une immunité ou une résistance au feu protège aussi contre la lave ou le magma. Notez cependant qu’une créature immunisée ou résistante au feu peut parfaitement se noyer dans un bassin de lave.</p>
 
                     <h4>La noyade</h4>
@@ -792,17 +792,17 @@
             <ol type="I" >
                 <li>Physiques
                     <ul class="space_list">
-                        <li><span class="big_underline">Force (FOR) :</span>Détermine la puissance musculaire du personnage, requise pour utiliser des armes et armures lourdes.</li>
+                        <li><span class="big_underline">Force (FOR) :</span>Détermine la puissance musculaire du personnage, requise pour utiliser des armes lourdes.</li>
                         <li><span class="big_underline">Dextérité (DEX) :</span>Détermine l'habilité du personnage avec ses mains, requise pour utiliser des armes sophistiqués, dérober une bourse,etc...</li>
                         <li><span class="big_underline">Agilité (AGI) :</span>Mesure le contrôle qu'a le personnage sur son corps, requise pour les déplacements complexes tels que des sauts ou des esquives.</li>
-                        <li><span class="big_underline">Constitution (CON) :</span>Représente la robustesse et la résistance à la fatigue, requise pour utiliser des armures lourdes et des bouclier.</li>
+                        <li><span class="big_underline">Constitution (CON) :</span>Représente la robustesse et la résistance à la fatigue.</li>
                     </ul>
                 </li>
                 <li>Mentales
                     <ul class="space_list">
                         <li><span class="big_underline">Intelligence (INT) :</span>Détermine l'étendue du savoir et des capacités magiques du personnage.</li>
                         <li><span class="big_underline">Volonté (VOL) :</span>Représente la solidité de l'esprit du personnage, sa capacité à résister aux effets magiques, son courage, et sa capacité à puiser la magie.</li>
-                        <li><span class="big_underline">Perception (PER) :</span>Rassemble les capacaités des cinq sens et fait office d'initiative, permet de détecter les pièges et autres fourberies.</li>
+                        <li><span class="big_underline">Perception (PER) :</span>Rassemble les capacités des cinq sens et fait office d'initiative, permet de détecter les pièges.</li>
                         <li><span class="big_underline">Éloquence (ELO) :</span>Permet de persuader/convaincre quelqu'un, d'obtenir un meilleur prix chez un marchand, etc...</li>
                     </ul>
                 </li>
@@ -915,55 +915,37 @@
                             <th>8</th>
                             <th>9</th>
                             <th>10</th>
-                            <th>11</th>
-                            <th>12</th>
-                            <th>13</th>
-                            <th>14</th>
-                            <th>15</th>
                         </tr>
                         <tr>
                             <th>Novice</th>
                             <td>2</td>
-                            <td>3</td>
-                            <td>3</td>
+                            <td>2</td>
                             <td>3</td>
                             <td>3</td>
                             <td>3</td>
                             <td>4</td>
                             <td>4</td>
                             <td>4</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>5</td>
-                            <td>5</td>
                             <td>5</td>
                             <td>5</td>
                         </tr>
                         <tr>
                             <th>Apprenti</th>
                             <td>1</td>
-                            <td>1</td>
                             <td>2</td>
                             <td>2</td>
                             <td>2</td>
                             <td>3</td>
                             <td>3</td>
                             <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
                         </tr>
                         <tr>
                             <th>Adepte</th>
                             <td> </td>
                             <td> </td>
-                            <td> </td>
-                            <td>1</td>
-                            <td>1</td>
                             <td>1</td>
                             <td>2</td>
                             <td>2</td>
@@ -971,9 +953,7 @@
                             <td>3</td>
                             <td>3</td>
                             <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
+                            <td>4</td>
                         </tr>
                         <tr>
                             <th>Expert</th>
@@ -981,11 +961,6 @@
                             <td> </td>
                             <td> </td>
                             <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td>1</td>
-                            <td>1</td>
                             <td>1</td>
                             <td>2</td>
                             <td>2</td>
@@ -1001,18 +976,13 @@
                             <td> </td>
                             <td> </td>
                             <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
                             <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
+                            <td>2</td>
+                            <td>2</td>
                             <td>2</td>
                         </tr>
                         <tr>
-                            <td colspan="16">Les compétences raciales n'occupent pas un emplacement de compétences, elle ne peuvent cependant pas progresser au delà du plus haut palier accessible au personnage.</td>
+                            <td colspan="11">Les compétences raciales n'occupent pas un emplacement de compétences, elle ne peuvent cependant pas progresser au delà du plus haut palier accessible au personnage.</td>
                         </tr>
                         </tbody>
                     </table>
@@ -1084,17 +1054,9 @@
                     <table width="95%">
                         <tbody>
                         <tr id="attaquant_habile">
-                            <th rowspan="2">Attaquant habile</th>
+                            <th>Attaquant habile</th>
                             <td colspan="5">Le personnage sait utiliser son habileté plutôt que la force brute pour infliger des dégâts. Permet d’augmenter les dégâts grâce à la dextérité plutôt que la force (même formule). Ne fonctionne pas sur les armes lourdes.</td>
                         </tr>
-                        <tr>
-                            <td>Novice :  Bonus maximum : +2</td>
-                            <td>Apprenti : Bonus maximum : +3</td>
-                            <td>Adepte : Bonus maximum : +4</td>
-                            <td>Expert : Bonus maximum : +5</td>
-                            <td>Maître : Pas de bonus maximum</td>
-                        </tr>
-
                         <tr id="coup_precis">
                             <th rowspan="2">Coup précis</th>
                             <td colspan="5">Augmente les chance de porter un coup critique, et les dégâts du coup critique.</td>
@@ -1185,8 +1147,15 @@
                             <td colspan="5">Le personnage peut identifier les objets magiques, désarmer un piège magique et reconnaître les sorts que d’autres personnes lancent sur une épreuve d’intelligence.</td>
                         </tr>
                         <tr id="connaissances">
-                            <th>Connaissances</th>
+                            <th  rowspan="2">Connaissances</th>
                             <td colspan="5">Le personnage est capable de se souvenir d’informations globales sans efforts dans un domaine particulier, il peut fouiller sa mémoire (épreuve d’intelligence) pour retrouver des informations complexes.</td>
+                        </tr>
+                        <tr>
+                            <td>Novice : 1 domaine maximum</td>
+                            <td>Apprenti : 3 domaines maximum</td>
+                            <td>Adepte : 5 domaines maximum</td>
+                            <td>Expert : 7 domaines maximum</td>
+                            <td>Maître : tous les domaines </td>
                         </tr>
                         <tr id="domaine_favori">
                             <th rowspan="2">Domaine de prédilection</th>
@@ -1342,20 +1311,25 @@
                             <td colspan="5">Le personnage sait comment survivre et se repérer dans un biome particulier.</td>
                         </tr>
                         <tr>
-                            <td>Novice : Nombre de biome connus : 1</td>
-                            <td>Apprenti : Nombre de biome connus : 1. CON +3 pour le personnage et ses alliés pour résister aux problèmes climatiques du biome</td>
-                            <td>Adepte : Nombre de biome connus : 2</td>
-                            <td>Expert : Nombre de biome connus : 2. Ne peut plus se perdre qu’importe le biome</td>
-                            <td>Maître : Nombre de biome connus : 3</td>
-                        </tr>
-                        <tr id="vol">
-                            <th>Vol</th>
-                            <td colspan="5">Le personnage sait voler avec agilité, il est capable d’effectuer des manoeuvres complexes tout en étant en l’air. Cette compétences ne permet pas de voler pour autant.</td>
+                            <td>Novice : Nombre de biomes connus : 1</td>
+                            <td>Apprenti : Nombre de biomes connus : 1. CON +3 pour le personnage et ses alliés pour résister aux problèmes climatiques du biome</td>
+                            <td>Adepte : Nombre de biomes connus : 2</td>
+                            <td>Expert : Nombre de biomes connus : 2. Ne peut plus se perdre qu’importe le biome</td>
+                            <td>Maître : Nombre de biomes connus : 3</td>
                         </tr>
                         </tbody>
                     </table>
+                    <h4 id="biomes" onclick="hideContent(this)">Biomes</h4>
+                    <ul class="hidden">
+                        <li>Plaines</li>
+                        <li>Montagnes</li>
+                        <li>Désert</li>
+                        <li>Marécage</li>
+                        <li>Forêt</li>
+                        <li>Océan/Mer</li>
+                        <li>Toundra</li>
+                    </ul>
                 </div>
-
 
                 <p class="caption" onclick="hideContent(this)">Compétences Sociales </p>
                 <div>
@@ -1411,8 +1385,15 @@
                             <td>Maître : PER +5 pour détecter un mensonge</td>
                         </tr>
                         <tr id="representation">
-                            <th>Représentation</th>
-                            <td colspan="5">Le personnage est doué dans un art du spectacle. (N'occupe qu'un emplacement qu'importe le nombre d'arts du spectacle maîtrisés).</td>
+                            <th rowspan="2">Représentation</th>
+                            <td colspan="5">Le personnage est doué dans un art du spectacle.</td>
+                        </tr>
+                        <tr>
+                            <td>Novice : 1 art du spectacle maximum</td>
+                            <td>Apprenti : 3 arts du spectacle maximum</td>
+                            <td>Adepte : 5 arts du spectacle maximum</td>
+                            <td>Expert : 7 arts du spectacle maximum</td>
+                            <td>Maître : tous les arts du spectacle</td>
                         </tr>
                         <tr id="tromperie">
                             <th rowspan="2">Tromperie</th>
@@ -1446,195 +1427,195 @@
 
         <h1 id="table_race" onclick="hideContent(this)">Traits raciaux</h1>
         <div>
-                <table width="95%" class="race">
-                    <thead>
-                    <tr>
-                        <th colspan="2">Race</th>
-                        <th width="30">FOR</th>
-                        <th width="30">DEX</th>
-                        <th width="30">AGI</th>
-                        <th width="30">CON</th>
-                        <th width="30">INT</th>
-                        <th width="30">VOL</th>
-                        <th width="30">PER</th>
-                        <th width="30">ÉLO</th>
-                        <th width="500">Traits raciaux</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td colspan="2">Azuma</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>+2</td>
-                        <td>+1</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td><span class="underline">Diplomé de l'Académie :</span>INT + 2 aux épreuves de connaissances<br/><span class="underline">Aisance avec la magie :</span> Peut relancer un jet raté pour un sort une fois par jour</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Chono</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>+2</td>
-                        <td>-3</td>
-                        <td>/</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td><span class="underline">Rage Primordiale :</span> Jet de sauvegarde (VOL) si touché par un effet magique</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Kanta</td>
-                        <td>+3</td>
-                        <td>-2</td>
-                        <td>-2</td>
-                        <td>+4</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td><span class="underline">Fourrure épaisse :</span> +50% de résitance au froid<br/><span class="underline">Sagesse :</span> Compétence Diplomatie (Apprenti)<br/><span class="underline">Imposante stature :</span>Taille G, Compétence Intimidation</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Mushuk</td>
-                        <td>/</td>
-                        <td>+1</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td><span class="underline">Vision féline :</span> Vision nocturne<br/><span class="underline">Marchand né :</span> Compétence Marchandage (Apprenti)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Sakha</td>
-                        <td>/</td>
-                        <td>+3</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>-2</td>
-                        <td><span class="underline">Peuple sylvestre :</span> En forêt : compétences Survie (Novice), Acrobaties (Apprenti) et Discrétion (Apprenti), +4 aux épreuves de lancer de sorts</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="3">Sarpa</td>
-                        <td style="font-weight: normal">Lézards</td>
-                        <td>/</td>
-                        <td>+1</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Régénération :</span> Régénère les membres perdus</td>
-                    </tr>
-                    <tr>
-                        <td>Serpents</td>
-                        <td>-2</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>+2</td>
-                        <td>+3</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Vision serpentine :</span>Peut voir la signature thermique des êtres vivants</td>
-                    </tr>
-                    <tr>
-                        <td>Crocodiles</td>
-                        <td>+3</td>
-                        <td>-2</td>
-                        <td>/</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Écailles solides :</span> +2 d'armure naturelle</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Sever</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>+1</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td><span class="underline">Endurance Nordique :</span> + 10 % de PV <br/><span class="underline">Honneur du guerrier :</span> +2 au jets de dégâts quand PV&lt;50% pendant 3 tours une fois par jour.</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Sihir</td>
-                        <td>-1</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>-2</td>
-                        <td>+3</td>
-                        <td>+3</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td><span class="underline">Fait de magie :</span> +20% de Psyché, compétence Arts de la Magie<br/><span class="underline">Sensibilité magique :</span> 30% de vulnérabilité à la magie, 25% de chances d'absorber la psyché d'un sort</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">Steinn</td>
-                        <td style="font-weight: normal">Rakaj</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td>-3</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>+2</td>
-                        <td><span class="underline">Vision souterraine :</span> Vision nocturne<br/><span class="underline">Froideur d'Hortak :</span> +50 % de résistance au froid</td>
-                    </tr>
-                    <tr>
-                        <td>Khazun</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td>-3</td>
-                        <td>+2</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>+2</td>
-                        <td><span class="underline">Vision souterraine :</span> Vision nocturne<br/><span class="underline">Chaleur des Monts Ardents :</span> +50 % de résistance au feu</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Tori</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>+3</td>
-                        <td><span class="underline">Pacifique :</span> -2 à tout les dégâts létaux, +2 aux dégâts non-létaux<br/><span class="underline">Ailes :</span> Compétence Vol, peut voler à volonté</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Tuskizi</td>
-                        <td>/</td>
-                        <td>+2</td>
-                        <td>+1</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td>/</td>
-                        <td><span class="underline">Adaptation climatique:</span> +50% de résistance au poison, effet du climat divisé par 2<br/><span class="underline">Nomade :</span> toute pénalité de mouvement est divisée par 2</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            <table width="95%" class="race">
+                <thead>
+                <tr>
+                    <th colspan="2">Race</th>
+                    <th width="30">FOR</th>
+                    <th width="30">DEX</th>
+                    <th width="30">AGI</th>
+                    <th width="30">CON</th>
+                    <th width="30">INT</th>
+                    <th width="30">VOL</th>
+                    <th width="30">PER</th>
+                    <th width="30">ÉLO</th>
+                    <th width="500">Traits raciaux</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td colspan="2">Azuma</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>+2</td>
+                    <td>+1</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td><span class="underline">Diplomé de l'Académie :</span>INT + 2 aux épreuves de connaissances<br/><span class="underline">Aisance avec la magie :</span> Peut relancer un jet raté pour un sort une fois par jour</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Chono</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>+2</td>
+                    <td>-3</td>
+                    <td>/</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td><span class="underline">Rage Primordiale :</span> Jet de sauvegarde (VOL) si touché par un effet magique</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Kanta</td>
+                    <td>+3</td>
+                    <td>-2</td>
+                    <td>-2</td>
+                    <td>+4</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td><span class="underline">Fourrure épaisse :</span> +50% de résitance au froid<br/><span class="underline">Sagesse :</span> Compétence Diplomatie (Apprenti)<br/><span class="underline">Imposante stature :</span>Taille G, Compétence Intimidation</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Mushuk</td>
+                    <td>/</td>
+                    <td>+1</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td><span class="underline">Vision féline :</span> Vision nocturne<br/><span class="underline">Marchand né :</span> Compétence Marchandage (Apprenti)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Sakha</td>
+                    <td>/</td>
+                    <td>+3</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>-2</td>
+                    <td><span class="underline">Peuple sylvestre :</span> En forêt : compétences Survie (Novice), Acrobaties (Apprenti) et Discrétion (Apprenti), +4 aux épreuves de lancer de sorts</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Sarpa</td>
+                    <td style="font-weight: normal">Lézards</td>
+                    <td>/</td>
+                    <td>+1</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Régénération :</span> Régénère les membres perdus</td>
+                </tr>
+                <tr>
+                    <td>Serpents</td>
+                    <td>-2</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>+2</td>
+                    <td>+3</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="underline">Vision serpentine :</span>Peut voir la signature thermique des êtres vivants</td>
+                </tr>
+                <tr>
+                    <td>Crocodiles</td>
+                    <td>+3</td>
+                    <td>-2</td>
+                    <td>/</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td><span class="underline">Sang-froid :</span> +50% de vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="underline">Écailles solides :</span> +2 d'armure naturelle</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Sever</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>+1</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td><span class="underline">Endurance Nordique :</span> + 10 % de PV <br/><span class="underline">Honneur du guerrier :</span> +2 au jets de dégâts quand PV&lt;50% pendant 3 tours une fois par jour.</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Sihir</td>
+                    <td>-1</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>-2</td>
+                    <td>+3</td>
+                    <td>+3</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td><span class="underline">Fait de magie :</span> +20% de Psyché, compétence Arts de la Magie<br/><span class="underline">Sensibilité magique :</span> 30% de vulnérabilité à la magie, 25% de chances d'absorber la psyché d'un sort</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Steinn</td>
+                    <td style="font-weight: normal">Rakaj</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td>-3</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>+2</td>
+                    <td><span class="underline">Vision souterraine :</span> Vision nocturne<br/><span class="underline">Froideur d'Hortak :</span> +50 % de résistance au froid</td>
+                </tr>
+                <tr>
+                    <td>Khazun</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td>-3</td>
+                    <td>+2</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>+2</td>
+                    <td><span class="underline">Vision souterraine :</span> Vision nocturne<br/><span class="underline">Chaleur des Monts Ardents :</span> +50 % de résistance au feu</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Tori</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>+3</td>
+                    <td><span class="underline">Pacifique :</span> -2 à tout les dégâts létaux, +2 aux dégâts non-létaux<br/><span class="underline">Ailes :</span> Peut voler à volonté</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Tuskizi</td>
+                    <td>/</td>
+                    <td>+2</td>
+                    <td>+1</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td><span class="underline">Adaptation climatique:</span> +50% de résistance au poison, effet du climat divisé par 2<br/><span class="underline">Nomade :</span> toute pénalité de mouvement est divisée par 2</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div id="objets">
@@ -2064,7 +2045,7 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <th colspan="7">Armes à une main</th>
+                            <th colspan="6">Armes à une main</th>
                         </tr>
                         <tr>
                             <td>Pistolet de poche</td>
@@ -2115,7 +2096,7 @@
                             <td>Se fixe à l'avant bras et n'occupe pas de main</td>
                         </tr>
                         <tr>
-                            <th colspan="7">Armes à deux mains</th>
+                            <th colspan="6">Armes à deux mains</th>
                         </tr>
                         <tr>
                             <td>Mousquet</td>
@@ -2142,7 +2123,7 @@
                             <td>À deux mains, Dispersion</td>
                         </tr>
                         <tr>
-                            <th colspan="7">Artillerie</th>
+                            <th colspan="6">Artillerie</th>
                         </tr>
                         <tr>
                             <td>Canon</td>
@@ -2177,7 +2158,7 @@
                             <td>4 tours de rechargement</td>
                         </tr>
                         <tr>
-                            <td colspan="7">Les armes à feu infligent des dégâts contondants et perforants. Elles requierent de la poudre noire pour fonctionner (une dose par canon, dix pour l'artillerie). Une dose correspond à 10g de poudre noire. Les armes à dispersion utilisent des plombs, les autres des balles en métal. Toutes les armes à feu possèdent le trait Chargement.</td>
+                            <td colspan="6">Les armes à feu infligent des dégâts contondants et perforants. Elles requierent de la poudre noire pour fonctionner (une dose par canon, dix pour l'artillerie). Une dose correspond à 10g de poudre noire. Les armes à dispersion utilisent des plombs, les autres des balles en métal. Toutes les armes à feu possèdent le trait Chargement.</td>
                         </tr>
                         </tbody>
                     </table>
