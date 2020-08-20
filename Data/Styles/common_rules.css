@@ -24,7 +24,6 @@ table{/*Affecte tout les tableaux*/
     text-align: center; /*Centre le texte*/
     border-collapse: collapse;  /*Fusionne les cases du tableau*/
     margin: auto;  /*Centre le tableau*/
-    max-width: 1200px;
 }
 
 table.table_compact{
