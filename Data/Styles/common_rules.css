@@ -105,12 +105,9 @@ th,td{/*Affecte les cases d'en-tête et celle de corps*/
     border-style: solid;  /*Rend la bordure pleine*/
     border-color: black;  /*Rend la bordure noire*/
     border-width: medium;  /*Rend la bordure moyennement épaisse*/
-    padding: 10px;  /*Crée une marge de 10 pixel entre le contenu des cellules et les bordures*/
+    padding: 7px;  /*Crée une marge de 10 pixel entre le contenu des cellules et les bordures*/
 }
 
-tr td:first-child{/*Affecte la premier case de corps d'une ligne(en l'occurence les cases contenant les images*/
-    padding-top: 15px;  /*Crée une marge de 10 pixel en haut pour les images*/
-}
 
 caption{/*Affecte la classe caption*/
     font-size: 25px;  /*Augmente la taille de la police du titre du tableau*/

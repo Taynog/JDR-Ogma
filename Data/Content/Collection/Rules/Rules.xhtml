@@ -1050,131 +1050,235 @@
             </ul>
             <p>Un certain palier peut être nécessaire pour entreprendre une action difficile. Un novice en sabotage ne pourra pas crocheter une serrure sophistiquée et ce quelque soit sa dextérité.</p>
             <div>
-                <p class="caption" onclick="hideContent(this)">Compétences de Combat</p>
-                <div>
-                    <table width="95%">
-                        <tbody>
-                        <tr id="attaquant_habile">
-                            <th>Attaquant habile</th>
-                            <td colspan="5">Le personnage sait utiliser son habileté plutôt que la force brute pour infliger des dégâts. Permet d’augmenter les dégâts grâce à la dextérité plutôt que la force (même formule). Ne fonctionne pas sur les armes lourdes.</td>
-                        </tr>
-                        <tr id="champion">
-                            <th rowspan="2">Champion</th>
-                            <td colspan="5">Le personnage se spécialise dans le combat avec les armes lourdes. Il est capable d'infliger des coup dévastateurs même aux adversaires portant des armures.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : +1 en attaque et parade</td>
-                            <td>Apprenti : Le bonus de dégâts dû à la force augmente de 50% (arrondi au supérieur)<br/><a href="Tableaux.xhtml#frappe_lourde">Frappe lourde</a></td>
-                            <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#destruction">Destruction</a></td>
-                            <td>Expert : Le bonus de dégâts dû à la force double</td>
-                            <td>Maître : +3 en attaque et parade</td>
-                        </tr>
-                        <tr id="coup_precis">
-                            <th rowspan="2">Coup précis</th>
-                            <td colspan="5">Augmente les chances de porter un coup critique, et les dégâts du coup critique.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : Chance de coup critique +1</td>
-                            <td>Apprenti : Le multiplicateur de critique monte d’un cran<br/><a href="Tableaux.xhtml#frappe_precision">Frappe de précision</a></td>
-                            <td>Adepte : Chance de coup critique +2</td>
-                            <td>Expert : Le multiplicateur de critique monte d’un cran</td>
-                            <td>Maître : Chance de coup critique +3</td>
-                        </tr>
-                        <tr id="defenseur">
-                            <th rowspan="2">Défenseur</th>
-                            <td colspan="5">Le personnage est habitué à utiliser un bouclier, il s'en sert plus facilement et peut protéger ses alliés.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : Diminue le malus en Atq de 1. Augmente l'attaque et la parade du bouclier de 1</td>
-                            <td>Apprenti :Permet de parer à la place d’un allié adjacent, 1 fois/tour<br/><a href="Tableaux.xhtml#coup_bouclier">Coup de bouclier</a></td>
-                            <td>Adepte : Diminue le malus en Atq de 2. Augmente l'attaque et la la parade du bouclier de 2</td>
-                            <td>Expert : Permet de parer à la place d’un allié adjacent, 2 fois/tour</td>
-                            <td>Maître : Diminue le malus en Atq de 3. Augmente l'attaque et la la parade du bouclier de 3</td>
-                        </tr>
-                        <tr id="duelliste">
-                            <th rowspan="2">Duelliste</th>
-                            <td colspan="5">Le personnage se spécialise dans l'art délicat de se battre avec une arme à une main et d'utiliser sa main libre pour garder son équilibre mais aussi pour bloquer, pousser et distraire ses adversaires.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : +1 en attaque et parade. +2 aux manoeuvres de combat</td>
-                            <td>Apprenti : +1 aux dégâts. +2 pour résister aux manoeuvres de combat<br/><a href="Tableaux.xhtml#double_attaque">Double attaque</a></td>
-                            <td>Adepte : +2 en attaque, parade. +3 aux manoeuvres de combat</td>
-                            <td>Expert : +2 aux dégâts. +4 pour résister aux manoeuvres de combat<br/><a href="Tableaux.xhtml#triple_attaque">Triple attaque</a></td>
-                            <td>Maître : +3 en attaque, parade +3 aux dégâts. +4 aux manoeuvres de combat</td>
-                        </tr>
-                        <tr id="faucheur">
-                            <th rowspan="2">Faucheur</th>
-                            <td colspan="5">Le personnage se spécialise dans le maniement des faux, des faucilles et des pics de guerre. Il est capable de déplacer ses adversaires ou de les frapper dans le dos.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : +1 en attaque et parade</td>
-                            <td>Apprenti : +1 aux dégâts.<br/><a href="Tableaux.xhtml#deplacement_force">Déplacement forcé</a></td>
-                            <td>Adepte : +2 en attaque et parade.<br/><a href="Tableaux.xhtml#frappe_dos">Frappe dans le dos</a></td>
-                            <td>Expert : +2 aux dégâts.<br/><a href="Tableaux.xhtml#frappe_faucheuse">Frappe de la faucheuse</a></td>
-                            <td>Maître : +3 en attaque et parade. +3 aux dégâts.</td>
-                        </tr>
-                        <tr id="maitres_des_armures">
-                            <th rowspan="2">Maître des armures</th>
-                            <td colspan="5">Réduit les pénalités des armures, ne fonctionne que si l’armure apporte un malus. Ne peut en aucun cas apporter un bonus. Le personnage sait entretenir son armure.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : AGI +1</td>
-                            <td>Apprenti : AGI +1, Atq +1</td>
-                            <td>Adepte : AGI +2, Atq +1, Prd +1</td>
-                            <td>Expert : AGI +3, DEX +1 Atq +1, Prd +1</td>
-                            <td>Maître : AGI +3, DEX +2,  Atq +2, Prd +1</td>
-                        </tr>
-                        <tr id="maitre_arme">
-                            <th rowspan="2">Maître d’arme</th>
-                            <td colspan="5">Accorde un bonus d’attaque, de parade et de dégâts avec une catégorie d’arme. Incompatible avec <a href="Rules.xhtml#champion">Champion</a>, <a href="Rules.xhtml#duelliste">Duelliste</a>, <a href="Rules.xhtml#faucheur">Faucheur</a> et <a href="Rules.xhtml#spadassin">Spadassin</a>.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : +1 en attaque et parade</td>
-                            <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#double_attaque">Double attaque</a></td>
-                            <td>Adepte : +2 en attaque et parade. +2 pour résister au désarmement</td>
-                            <td>Expert : +2 aux dégâts. +4 pour résister au désarmement<br/><a href="Tableaux.xhtml#triple_attaque">Triple attaque</a></td>
-                            <td>Maître : +3 en attaque et parade. +3 aux dégâts. +6 pour résister au désarmement</td>
-                        </tr>
-                        <tr id="rage_berserker">
-                            <th rowspan="2">Rage de berserker</th>
-                            <td colspan="5">Possibilité d’entrer en rage lors d’un combat au coût d’une action libre si on ne porte pas d’armure lourde. Ils peuvent rester dans cet état pendant un nombre de rounds égal à 4 + (CON-10) par jour.<br/>La transe prend fin si le personnage n’en est plus capable, ou si il le décide au prix d’une action libre; le personnage devient fatigué pendant un nombre de round équivalent au double du nombre de round passé en rage et il lui est impossible de passer en rage si il est fatigué ou épuisé.<br/>Tant qu’il est en rage, le personnage ne peut pas effectuer d’action basée sur la dextérité, l’éloquence (sauf intimidation) ou l’intelligence; son score de parade et d’esquive diminue de 2.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : Durant la rage, FOR +2 et CON +2</td>
-                            <td>Apprenti : Durant la rage, FOR +2 et CON +2, VOL +1. Rounds de rage par jour = 4 + (CON-8). Protection naturelle +1<br/><a href="Tableaux.xhtml#rage_controlee">Rage controllée</a></td>
-                            <td>Adepte : Durant la rage, FOR +3 et CON +3, VOL +1. Rounds de rage par jour = 4 + (CON-6)</td>
-                            <td>Expert : Durant la rage, FOR +3 et CON +3, VOL +2. Rounds de rage par jour = 4 + (CON-4). Protection naturelle +2</td>
-                            <td>Maître : Durant la rage, FOR +4 et CON +4, VOL +3. Rage illimitée</td>
-                        </tr>
-                        <tr id="rechargement_rapide">
-                            <th>Rechargement rapide</th>
-                            <td colspan="5">Permet de recharger plus rapidement les armes nécessitant d'être rechargées telles que les arbalètes et les armes à feu. Le temps de recharge passe à une action libre (pour une arbalète de poing), à une action de mouvement (pour une arbalète légère ou une arme à feu à une main) ou à une action simple (pour une arbalète lourde ou une arme à feu à deux mains).</td>
-                        </tr>
-                        <tr id="spadassin">
-                            <th rowspan="2">Spadassin</th>
-                            <td colspan="5">Le personnage se spécialise dans le combat à deux armes légères. Il est alors considérée comme ambidextre et n'a plus de main dominante.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : +1 en attaque et parade<br/><a href="Tableaux.xhtml#double_frappe">Double frappe</a></td>
-                            <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#atq_deux_temps">Attaque en deux temps</a></td>
-                            <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#triple_frappe">Triple frappe</a></td>
-                            <td>Expert : +2 aux dégâts. Attaque d'oppportunité avec les deux armes</td>
-                            <td>Maître : +3 en attaque et parade</td>
-                        </tr>
-                        <tr id="tireur_elite">
-                            <th rowspan="2">Tireur d’élite</th>
-                            <td colspan="5">Facilite les attaques avec les armes à distance et améliore la portée des armes à distance.</td>
-                        </tr>
-                        <tr>
-                            <td>Novice : DEX +1 lors d’un tir</td>
-                            <td>Apprenti : Portée + 25%<br/><a href="Tableaux.xhtml#oeil_faucon">Oeil de faucon</a></td>
-                            <td>Adepte : DEX +2 lors d’un tir</td>
-                            <td>Expert : Portée +50%<br/><a href="Tableaux.xhtml#volee_fleches">Volée de flèches</a></td>
-                            <td>Maître : DEX +3 lors d’un tir, le multiplicateur de critique monte d’un cran</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <p id="maitrise_armes" class="caption" onclick="hideContent(this)">Maîtrise d'armes</p>
+                <table width="95%">
+                    <tbody>
+                    <tr id="arbaletrier">
+                        <th rowspan="2">Arbalétrier</th>
+                        <td colspan="5">Le personnage est adepte de la maxime "un tir, un mort". Ses armes de prédiléction sont l'arbalète à main, légère et lourde.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : DEX +1 au tir à l'arbalète</td>
+                        <td>Apprenti : +2 aux dégâts<br/><a href="Tableaux.xhtml#tir_precis_arbalete">Tir précis</a></td>
+                        <td>Adepte : DEX +2 au tir à l'arbalète<br/><a href="Tableaux.xhtml#tir_destabilisant_arbalete">Tir destabilisant</a></td>
+                        <td>Expert : +4 aux dégâts<br/><a href="Tableaux.xhtml#tir_rapide_arbalete">Tir rapide</a><br/><a href="Tableaux.xhtml#tir_penetrant">Tir pénétrant</a></td>
+                        <td>Maître : DEX +3 au tir à l'arbalète. Le multiplicateur de critique monte d'un cran</td>
+                    </tr>
+                    <tr id="archer">
+                        <th rowspan="2">Archer</th>
+                        <td colspan="5">Le personnage peut cribler de flèches n'importe quel opposant avant même que celui ne puisse l'approcher. Ses armes de prédiléction sont l'arc court et l'arc long.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : DEX +1 au tir à l'arc</td>
+                        <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#tir_precis_arc">Tir précis</a></td>
+                        <td>Adepte : DEX +2 au tir à l'arc<br/><a href="Tableaux.xhtml#tir_destabilisant_arc">Tir déstabilisant</a></td>
+                        <td>Expert : +2 aux dégâts<br/><a href="Tableaux.xhtml#volee_fleches">Volée de flèches</a></td>
+                        <td>Maître : DEX +3 au tir à l'arc. Le multiplicateur de critique monte d'un cran</td>
+                    </tr>
+                    <tr id="assassin">
+                        <th rowspan="2">Assassin</th>
+                        <td colspan="5">Le personnage préfère les armes capables d'infliger des blessures mortelles en un éclair. Ses armes de prédiléction sont la dague, l'épée courte ou courbe et la rapière.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : +1 en attaque et aux dégâts</td>
+                        <td>Apprenti : Le multiplicateur de critique monte d'un cran<br/><a href="Tableaux.xhtml#frappe_assassine">Frappe assassine</a></td>
+                        <td>Adepte : +2 en attaque et aux dégâts</td>
+                        <td>Expert : Les chances de critique augmentent de 1<br/><a href="Tableaux.xhtml#coup_mortel">Coup mortel</a></td>
+                        <td>Maître : +3 en attaque et aux dégâts</td>
+                    </tr>
+                    <tr id="barbare">
+                        <th rowspan="2">Barbare</th>
+                        <td colspan="5">Le personnage ne juge les armes que par leur puissance destructrice. Ses armes de prédiléction sont la hache et la grande hache.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : +1 en attaque et parade</td>
+                        <td>Apprenti : Le bonus de dégâts dû à la force augmente de 50% (arrondi au supérieur)<br/><a href="Tableaux.xhtml#frappe_lourde_barbare">Frappe lourde</a></td>
+                        <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#destruction_barbare">Destruction</a></td>
+                        <td>Expert : Le bonus de dégâts dû à la force double</td>
+                        <td>Maître : +3 en attaque et parade</td>
+                    </tr>
+                    <tr id="epeiste">
+                        <th rowspan="2">Épéiste</th>
+                        <td colspan="5">Le personnage préfèrent la polyvalence aux armes de spécialistes. Ses armes de prédiléction sont l'épée longue, le katana et les grandes épées.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : +1 en attaque et parade</td>
+                        <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#double_attaque">Double attaque</a></td>
+                        <td>Adepte : +2 en attaque et parade</td>
+                        <td>Expert : +2 aux dégâts<br/><a href="Tableaux.xhtml#triple_attaque">Triple attaque</a></td>
+                        <td>Maître : +3 en attaque et parade. +3 aux dégâts</td>
+                    </tr>
+                    <tr id="faucheur">
+                        <th rowspan="2">Faucheur</th>
+                        <td colspan="5">Le personnage sait que même une arme d'origine agricole peut être mortelle entre de bonnes mains. Ses armes de prédiléction sont la faucille, le pic de guerre et la faux.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : +1 en attaque et parade</td>
+                        <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#deplacement_force">Déplacement forcé</a></td>
+                        <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#frappe_dos">Frappe dans le dos</a></td>
+                        <td>Expert : +2 aux dégâts<br/><a href="Tableaux.xhtml#frappe_faucheuse">Frappe de la faucheuse</a></td>
+                        <td>Maître : +3 en attaque et parade. +3 aux dégâts</td>
+                    </tr>
+                    <tr id="fusilier">
+                        <th rowspan="2">Fusilier</th>
+                        <td colspan="5">Le personnage peut abattre une cible lointaine sans que celle-ci ne puisse s'en rendre compte. Ses armes de prédiléction sont le mousquet et le mousquet à double canon.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : DEX +1 au tir au fusil</td>
+                        <td>Apprenti : +2 aux dégât<br/><a href="Tableaux.xhtml#tir_precis_fusil">Tir précis</a></td>
+                        <td>Adepte : DEX +2 au tir au fusil<br/><a href="Tableaux.xhtml#tir_destabilisant_fusil">Tir déstabilisant</a></td>
+                        <td>Expert : +4 aux dégâts</td>
+                        <td>Maître : DEX +3 au tir au fusil. Le multiplicateur de critique monte d'un cran</td>
+                    </tr>
+                    <tr id="hallebardier">
+                        <th rowspan="2">Hallebardier</th>
+                        <td colspan="5">Le personnage utilise les armes considérées comme les plus versatiles au monde. Ses armes de prédiléction sont la hallebarde et le fauchard.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : +1 en attaque et parade<br/><a href="Tableaux.xhtml#reception_charge_hallebarde">Réception de charge</a></td>
+                        <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#mise_au_sol">Mise au sol</a></td>
+                        <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#frappe_hampe">Frappe de la hampe</a></td>
+                        <td>Expert : +2 aux dégâts</td>
+                        <td>Maître : +3 en attaque et parade. +3 aux dégâts</td>
+                    </tr>
+                    <tr id="lanceur">
+                        <th rowspan="2">Lanceur</th>
+                        <td colspan="5">Le personnage est habile avec les armes de lancer, il sait toucher uen cible éloigné sans difficultées. Ses armes de prédiléction sont les couteaux de lancer, les hachette, les javelots et les fléchettes.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : DEX +1 au lancer</td>
+                        <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#tir_precis_lanceur">Tir précis</a></td>
+                        <td>Adepte : DEX +2 au lancer<br/><a href="Tableaux.xhtml#tir_destabilisant_lanceur">Tir déstabilisant</a></td>
+                        <td>Expert : +2 aux dégâts</td>
+                        <td>Maître : DEX +3 au lancer. Le multiplicateur de critique monte d'un cran</td>
+                    </tr>
+                    <tr id="lancier">
+                        <th rowspan="2">Lancier</th>
+                        <td colspan="5">Le personnage se sait à l'abri grâce à la portée et à sa maîtrise de son arme. Ses armes de prédiléction sont la lance et la pique.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : +1 en attaque et parade<br/><a href="Tableaux.xhtml#reception_charge_lance">Réception de charge</a></td>
+                        <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#double_estoc">Double estoc</a></td>
+                        <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#triple_estoc">Triple estoc</a></td>
+                        <td>Expert : +2 aux dégâts</td>
+                        <td>Maître : +3 en attaque et parade. +3 aux dégâts</td>
+                    </tr>
+                    <tr id="martelier">
+                        <th rowspan="2">Martelier</th>
+                        <td colspan="5">Le personnage connaît les ravages que font une arme contondante sur un adversaire en armure. Ses armes de prédiléction sont la masse et le grand marteau.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : +1 en attaque et parade</td>
+                        <td>Apprenti : Le bonus de dégâts dû à la force augmente de 50% (arrondi au supérieur)<br/><a href="Tableaux.xhtml#frappe_lourde_martelier">Frappe lourde</a></td>
+                        <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#destruction_martelier">Destruction</a></td>
+                        <td>Expert : Le bonus de dégâts dû à la force double</td>
+                        <td>Maître : +3 en attaque et parade</td>
+                    </tr>
+                    <tr id="moine">
+                        <th rowspan="2">Moine</th>
+                        <td colspan="5">Le personnage manie une arme non létale, elle peut cependant le devenir entre ses mains. Son arme de prédiléction est le bâton.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : +1 en attaque et parade</td>
+                        <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#coup_etourdissant">Coup étourdissant</a></td>
+                        <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#enchainement">Enchaînement</a></td>
+                        <td>Expert : +2 aux dégâts<br/><a href="Tableaux.xhtml#enchainement_superieur">Enchaînement supérieur</a></td>
+                        <td>Maître : +3 en attaque et parade. +3 aux dégâts</td>
+                    </tr>
+                    <tr id="pistolier">
+                        <th rowspan="2">Pistolier</th>
+                        <td colspan="5">Le personnage sait faire parler la poudre, il manie ses pistolets avec une précision mortelle. Ses armes de prédiléction sont le pistolet de poche, le pistolet à silex, le pistolet à double canon, la poivrière, la pétoire et la targe pistolet.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : DEX +1 au tir au pistolet</td>
+                        <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#tir_precis_pistolet">Tir précis</a></td>
+                        <td>Adepte : DEX +2 au tir au pistolet<br/><a href="Tableaux.xhtml#tir_destabilisant_pistolet">Tir déstabilisant</a></td>
+                        <td>Expert : +2 aux dégâts<br/><a href="Tableaux.xhtml#tir_rapide_pistolet">Tir rapide</a></td>
+                        <td>Maître : DEX +3 au tir au fusil. Le multiplicateur de critique monte d'un cran</td>
+                    </tr>
+                    <tr id="tirailleur">
+                        <th rowspan="2">Tirailleur</th>
+                        <td colspan="5">Le personnage est capable de rendre fou un opposant en l'harcelant de projectiles. Ses armes de prédiléction sont la fronde et la sarbacane.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : DEX +1 au tir</td>
+                        <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#tir_precis_tirailleur">Tir précis</a></td>
+                        <td>Adepte : DEX +2 au tir<br/><a href="Tableaux.xhtml#harcelement">Harcelement</a></td>
+                        <td>Expert : +2 aux dégâts</td>
+                        <td>Maître : DEX +3 au tir au fusil. Le multiplicateur de critique monte d'un cran</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p id="comp_combat_general" class="caption" onclick="hideContent(this)">Compétences de Combat</p>
+                <table width="95%">
+                    <tbody>
+                    <tr id="attaquant_habile">
+                        <th>Attaquant habile</th>
+                        <td colspan="5">Le personnage sait utiliser son habileté plutôt que la force brute pour infliger des dégâts. Permet d’augmenter les dégâts grâce à la dextérité plutôt que la force (même formule). Ne fonctionne pas sur les armes lourdes.</td>
+                    </tr>
+                    <tr id="coup_precis">
+                        <th rowspan="2">Coup précis</th>
+                        <td colspan="5">Améliore les coups critiques et permet de contourner l'armure.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : Chance de coup critique +1</td>
+                        <td>Apprenti : Le multiplicateur de critique monte d’un cran<br/><a href="Tableaux.xhtml#frappe_precision">Frappe de précision</a></td>
+                        <td>Adepte : Ignore 1 point d'armure</td>
+                        <td>Expert : Le multiplicateur de critique monte d’un cran</td>
+                        <td>Maître : Chance de coup critique +2. Ignore 2 points d'armure</td>
+                    </tr>
+                    <tr id="defenseur">
+                        <th rowspan="2">Défenseur</th>
+                        <td colspan="5">Le personnage est habitué à utiliser un bouclier, il s'en sert plus facilement et peut protéger ses alliés.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : Diminue le malus en Atq de 1. Augmente l'attaque et la parade du bouclier de 1</td>
+                        <td>Apprenti :Permet de parer à la place d’un allié adjacent, 1 fois/tour<br/><a href="Tableaux.xhtml#coup_bouclier">Coup de bouclier</a></td>
+                        <td>Adepte : Diminue le malus en Atq de 2. Augmente l'attaque et la la parade du bouclier de 2</td>
+                        <td>Expert : Permet de parer à la place d’un allié adjacent, 2 fois/tour</td>
+                        <td>Maître : Diminue le malus en Atq de 3. Augmente l'attaque et la la parade du bouclier de 3</td>
+                    </tr>
+                    <tr id="gardien">
+                        <th>Gardien</th>
+                        <td colspan="5">Le personnage sait contrôler une vaste zone grâce à la portée de son arme. Il peut porter une attaque d'opportunité aux entités entrant dans sa zone de contrôle, ces attaques bloquent la cible jusqu'au prochain tour.</td>
+                    </tr>
+                    <tr id="maitres_des_armures">
+                        <th rowspan="2">Maître des armures</th>
+                        <td colspan="5">Réduit les pénalités des armures, ne fonctionne que si l’armure apporte un malus. Ne peut en aucun cas apporter un bonus. Le personnage sait entretenir son armure.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : AGI +1</td>
+                        <td>Apprenti : AGI +1, Atq +1</td>
+                        <td>Adepte : AGI +2, Atq +1, Prd +1</td>
+                        <td>Expert : AGI +3, DEX +1 Atq +1, Prd +1</td>
+                        <td>Maître : AGI +3, DEX +2,  Atq +2, Prd +1</td>
+                    </tr>
+                    <tr id="rage_berserker">
+                        <th rowspan="2">Rage de berserker</th>
+                        <td colspan="5">Possibilité d’entrer en rage lors d’un combat au coût d’une action libre si on ne porte pas d’armure lourde. Ils peuvent rester dans cet état pendant un nombre de rounds égal à 4 + (CON-10) par jour.<br/>La transe prend fin si le personnage n’en est plus capable, ou si il le décide au prix d’une action libre; le personnage devient fatigué pendant un nombre de round équivalent au double du nombre de round passé en rage et il lui est impossible de passer en rage si il est fatigué ou épuisé.<br/>Tant qu’il est en rage, le personnage ne peut pas effectuer d’action basée sur la dextérité, l’éloquence (sauf intimidation) ou l’intelligence; son score de parade et d’esquive diminue de 2.</td>
+                    </tr>
+                    <tr>
+                        <td>Novice : Durant la rage, FOR +2 et CON +2</td>
+                        <td>Apprenti : Durant la rage, FOR +2 et CON +2, VOL +1. Rounds de rage par jour = 4 + (CON-8). Protection naturelle +1<br/><a href="Tableaux.xhtml#rage_controlee">Rage controllée</a></td>
+                        <td>Adepte : Durant la rage, FOR +3 et CON +3, VOL +1. Rounds de rage par jour = 4 + (CON-6)</td>
+                        <td>Expert : Durant la rage, FOR +3 et CON +3, VOL +2. Rounds de rage par jour = 4 + (CON-4). Protection naturelle +2</td>
+                        <td>Maître : Durant la rage, FOR +4 et CON +4, VOL +3. Rage illimitée</td>
+                    </tr>
+                    <tr id="rechargement_rapide">
+                        <th>Rechargement rapide</th>
+                        <td colspan="5">Permet de recharger plus rapidement les armes nécessitant d'être rechargées telles que les arbalètes et les armes à feu. Le temps de recharge passe à une action libre (pour une arbalète de poing), à une action de mouvement (pour une arbalète légère ou une arme à feu à une main) ou à une action simple (pour une arbalète lourde ou une arme à feu à deux mains).</td>
+                    </tr>
+                    <tr id="spadassin">
+                        <th>Spadassin</th>
+                        <td colspan="5">Le personnage se spécialise dans le combat à deux armes légères. Il est alors considérée comme ambidextre et n'a plus de main dominante. Il peut frapper avec chacune de ses armes lors d'un même attaque.</td>
+                    </tr>
+                    <tr id="tireur_elite">
+                        <th>Tireur d’élite</th>
+                        <td colspan="5">Facilite les attaques à longue distance et permet de toucher les cibles à l'abri. La portée normale d'une arme est équivalente à sa portée maximal, divise par 2 les malus pour toucher les cibles protégés par un abri partiel ou important.</td>
+                    </tr>
+                    </tbody>
+                </table>
 
                 <p class="caption" onclick="hideContent(this)">Compétences de Savoir</p>
                 <div>
@@ -1729,7 +1833,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">Dagues</td>
-                            <td>Perforants, Tranchants</td>
+                            <td>Perforants ou Tranchants</td>
                             <td>14</td>
                             <td>8</td>
                             <td>1d4</td>
@@ -1739,7 +1843,7 @@
                         <tr><td rowspan="4">Épées</td></tr>
                         <tr>
                             <td>Courtes</td>
-                            <td>Tranchants, Perforants</td>
+                            <td>Tranchants ou Perforants</td>
                             <td>11</td>
                             <td>12</td>
                             <td>1d6</td>
@@ -1757,7 +1861,7 @@
                         </tr>
                         <tr>
                             <td>Longues</td>
-                            <td>Tranchants, Perforants</td>
+                            <td>Tranchants ou Perforants</td>
                             <td>12</td>
                             <td>11</td>
                             <td>1d6</td>
@@ -1775,7 +1879,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">Katanas</td>
-                            <td>Tranchants, Perforants</td>
+                            <td>Tranchants ou Perforants</td>
                             <td>12</td>
                             <td>11</td>
                             <td>1d6</td>
@@ -1844,7 +1948,7 @@
                         </tr>
                         <tr>
                             <td>Droites</td>
-                            <td>Tranchants, Perforants</td>
+                            <td>Tranchants ou Perforants</td>
                             <td>10</td>
                             <td>10</td>
                             <td>1d10</td>
@@ -1910,12 +2014,12 @@
                         </tr>
                         <tr>
                             <td colspan="2">Hallebardes</td>
-                            <td>Tranchants, Perforants, Contondants</td>
+                            <td>Tranchants ou Perforants</td>
                             <td>12</td>
                             <td>10</td>
                             <td>1d8</td>
                             <td>x1,5</td>
-                            <td>Allonge, Lourde, À deux mains</td>
+                            <td>Allonge, À deux mains</td>
                         </tr>
                         <tr>
                             <td colspan="2">Fauchard</td>
@@ -2286,7 +2390,7 @@
                             <td>Atq -2</td>
                         </tr>
                         <tr>
-                            <td colspan="5">Grands boucliers : procurent un abri total contre les projectiles dans une direction (chance de toucher nulles).</td>
+                            <td colspan="5">Grands boucliers : procurent un abri important contre les projectiles dans une direction (chance de toucher -8).</td>
                         </tr>
                         <tr>
                             <td>Pavois</td>
