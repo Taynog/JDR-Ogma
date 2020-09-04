@@ -8,6 +8,7 @@
     <meta http-equiv="Content-Script-Type" content="application/javascript"/>
     <script type="application/javascript" src="../../../Javascript/fonctions_accueil_plan.js"> </script>
     <link rel="stylesheet" type="text/css" title="style_plan" href="../../../Styles/common_rules.css"/>
+    <link rel="icon" type="image/ico" href="../../../../favicon.ico"/>
 </head>
 <body>
 <div id="mySidenav" class="sidenav" style="display: block">
@@ -51,6 +52,7 @@
             <ul>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
                     <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#resolution_action">Résolution des actions</a></span></li>
                         <li><span class="little"><a href="Rules.xhtml#Combat">Combat</a></span></li>
                         <li><span class="little"><a href="Rules.xhtml#Magie">Magie</a></span></li>
                         <li><span class="little"><a href="Rules.xhtml#Survie">Survie</a></span></li>
@@ -118,7 +120,54 @@
 <div id="main" class="main" style="margin-left: 200px">
     <button onclick="toggleNav()" class="openbtn">MENU</button>
 
+
+
     <div id="rules">
+        <h1 id="resolution_action" onclick="hideContent(this)">Résolution des actions</h1>
+        <div>
+            <h3 id="des_utilises" onclick="hideContent(this)">Dés utilisés</h3>
+            <div>
+                <p>Dans Ogma, on utilise 3d6 pour résoudre la plupart des actions. Utiliser de tels dés permet des probabilités plus intéressantes qu'un d20.</p>
+                <p>Divers dés sont utilisés pour les dégâts des armes (d8,d10 et d12)</p>
+            </div>
+
+            <h3 id="chance_reussite" onclick="hideContent(this)">Chance de réussite</h3>
+            <div>
+                <p>Pour savoir si une action est une réussite ou un échec, il faut se fier à la chance de réussite (CR). Le résultat des dés doit être égal ou inférieur à la CR pour que l'action soit réussie.</p>
+                <p>Une action difficile aura une CR plus petite qu'une tache simple. La CR d'une tâche peut ne peut être la même pour tout le monde selon les caractéristiques et/ou compétences. Par exemple pour enfoncer une porte solide, la CR de base est de 6, elle sera de 4 pour un personnnage fatigué, de 8 pour un personnage fort, de 10 pour un personnage utilisant un bélier portatif.</p>
+                <p>Les bonus et les malus s'appliquent directement à la CR et non au résultat des dés.</p>
+            </div>
+
+            <h3 id="avantage" onclick="hideContent(this)">Avantage et désavantage</h3>
+            <div>
+                <p>Parfois une épreuve se déroule dans des conditions particulières pouvant entraîner un avantage ou un désavantage. Un avantage reflète des circonstances favorables à une action, le désavantage implique le contraire. L’un comme l’autre nécessite de lancer 4d6 au lieu de 3. Sur un avantage, on ne prend pas en compte le plus grand des dés; sur un désavantage, on exclue le plus petit. Par exemple vous obtenez 3, 4, 6 et 1; si l'épreuve se fait avec avantage le résultat sera 1+3+4=8, avec un désavantage, le résultat devient 3+4+6=13.</p>
+                <p onclick="hideContent(this)">Exemples d'avantages :</p>
+                <ul class="hidden">
+                    <li>Être assisté par un allié compétent pour une action pouvant être effectuée à plusieurs (crochetage, stabilisation d'un mourant, forçage d'une porte, etc)</li>
+                    <li>Frapper un ennemi au sol, immobilisé, inconscient du danger, aveuglé, dans le dos, étourdi</li>
+                    <li>Posséder un objet facilitant une action (examiner avec une loupe, ouvrir une porte avec un pied-de-biche/bélier portatif</li>
+                </ul>
+                <p onclick="hideContent(this)">Exemples de désavantages :</p>
+                <ul class="hidden">
+                    <li>Effectuer une action délicate sous pression</li>
+                    <li>Nager, escalader ou se faire discret avec une armure lourde</li>
+                    <li>Porter une charge trop importante, utiliser une arme/armure sans en satifaire les prérequis</li>
+                </ul>
+            </div>
+
+            <h3 id="marge_reussite" onclick="hideContent(this)">Marge de réussite</h3>
+            <div>
+                <p>Tout les lancers de dés impliquant deux (ou plus) personnes opposées tiennent compte de la marge de réussite du jet. Le personnage obtenant la plus grande marge l'emporte.</p>
+                <p>Par exemple : lors d'un bras de fer s'affronte Gurdil (16 FOR) et Crom (18 FOR), ils font chacun un test de force CR 8 de base (CR 11 pour Gurdil, 12 pour Crom) pour savoir qui l'emporte. Gurdil obtient 4 et Crom 7, pour obtenir la marge de réussite, il suffit de soustraire le résultat du jet à la CR de l'épreuve du personnage. Gurdil obtient une marge de 7 et Crom une marge de 5. C'est Gurdil qui gagne ce bras de fer bien qu'il possède une force inférieure à Crom.</p>
+            </div>
+
+            <h3 id="jet_critique" onclick="hideContent(this)">Jet critique</h3>
+            <div>
+                <p>Un jet très bas ou très haut est considéré comme critique. Une réussite critique permet souvent d'accomplir plus que la tâche prévue ou de l'accomplir de façon remarquable. Un échec critique au contraire apporte souvent des complications.</p>
+                <p>On considère les 3, les 4 et les 5 comme des réussites critiques et les 16, 17 et 18 comme des échecs critiques</p>
+            </div>
+        </div>
+
         <h1 id="Combat" onclick="hideContent(this)">Combat</h1>
         <div>
             <p>Les combats se déroulent selon des rounds d'une durée de 6 secondes. Pendant un tour, le personnage peut accomplir tout un éventail d’actions, qu’il s’agisse de frapper avec son épée ou de lancer un sort.</p>
@@ -132,7 +181,7 @@
             <div>
                 <p>Chaque entité possède une vitesse de déplacement qui lui est propre. Cette vitesse diffère principalement selon la caractéristique d'Agilité et l'armure portée.</p>
                 <p>La vitesse de déplacement de base est de 9 mètres. Les Steinns, de part leur petite taille ne possèdent qu'une vitesse de 6 mais en contrepartie ne sont pas ralentis par les armures qu'ils portent.Le poids de l'équipement et du matériel peut influé sur la vitesse de déplacement. Voir <a href="Rules.xhtml#Armures">Armures</a> et <a href="Rules.xhtml#materiel">Matériel</a>.</p>
-                <p>Un individu possédant une Agilité supérieure à 10 obtient un bonus d'un mètre sur sa vitesse de déplacement tous les 2 points au dessus de 10 (12 AGI → +1m ; 14 AGI → +2m). Si l'agilité d'un personnage est inférieure à 8, sa vitesse diminue d'un mètre.</p>
+                <p>Un individu possédant une Agilité supérieure à 10 obtient un bonus d'un mètre sur sa vitesse de déplacement tous les 2 points au dessus de 11 (13 AGI → +1m ; 15 AGI → +2m). Si l'agilité d'un personnage est inférieure à 8, sa vitesse diminue d'un mètre.</p>
                 <p>Il est possible de se déplacer sur une plus grande distance chaque round en <a href="Types_actions.xhtml#courir">courant</a></p>
             </div>
             <h3 onclick="hideContent(this)">Types d'actions</h3>
@@ -290,28 +339,11 @@
                     </tr>
                     </tbody>
                 </table>
-
             </div>
             <h3 onclick="hideContent(this)">Zones de contrôle et attaques d'opportunités</h3>
             <div>
                 <p>Chaque entité contrôle une zone autour d'elle équivalente à la portée de son arme de mêlée. Quitter ou pénétrer cet espace sans faire attention peut déclencher une attaque d'opportunité de la part de l'entité contrôlant cette zone.</p>
                 <p>On peut entreprendre autant d'attaque d'opportunité que possible lors du même tour. Une entité souhaitant traverser une zone de contrôle ne subira qu'une seule attaque d'opportunité mais sera forcée d'arrêter son mouvement et à rester dans la zone de contrôle si elle ne parvient pas à esquiver ou parer l'attaque.</p>
-            </div>
-            <h3 onclick="hideContent(this)">Avantage et désavantage</h3>
-            <div>
-                <p>Parfois un jet de caractéristique, d’attaque ou de sauvegarde se fait dans des conditions particulières qui entraînent un avantage ou un désavantage. Un avantage reflète des circonstances favorables à une action, le désavantage implique le contraire. L’un comme l’autre nécessite de lancer deux fois le dé. Sur un avantage, le meilleur des deux jets sera conservé ; sur un désavantage, ce sera le moins bon. Par exemple vous obtenez 17 et 5, un désavantage conclura sur 5, un avantage sur 17.</p>
-                <p onclick="hideContent(this)">Exemples d'avantages :</p>
-                <ul class="hidden">
-                    <li>Être assisté par un allié compétent pour une action pouvant être effectuée à plusieurs (crochetage, stabilisation d'un mourant, forçage d'une porte, etc)</li>
-                    <li>Frapper un ennemi au sol, immobilisé, inconscient du danger, aveuglé, dans le dos, étourdi</li>
-                    <li>Posséder un objet facilitant une action (examiner avec une loupe, ouvrir une porte avec un pied-de-biche/bélier portatif</li>
-                </ul>
-                <p onclick="hideContent(this)">Exemples de désavantages :</p>
-                <ul class="hidden">
-                    <li>Effectuer une action délicate sous pression</li>
-                    <li>Nager, escalader ou se faire discret avec une armure lourde</li>
-                    <li>Porter une charge trop importante, utiliser une arme/armure sans en satifaire les prérequis</li>
-                </ul>
             </div>
             <h3 onclick="hideContent(this)">Type de dégâts</h3>
             <div>
@@ -335,23 +367,11 @@
                 <p>Un personnage mourant sombre immédiatement dans l’inconscience et ne peut plus rien faire. Il perd 1 point de vie chaque round (et les dégâts continuels si il en subissait toujours les effets). Cela continue jusqu’à ce qu’il meure ou soit stabilisé. Si le personnage est stabilisé, il devient hors de combat</p>
                 <p>Stabiliser un personnage mourant en combat requiert de lui faire regagner des points de vie par quelque manière que ce soit (sorts, potions).À la fin d'un combat, les compagnons d'un personnage mourant peuvent prendre le temps de le stabiliser si ils possèdent des fournitures médicales (bandages, etc...).</p>
             </div>
-            <h3 id="jet_save" onclick="hideContent(this)">Jets de sauvegarde</h3>
-            <div>
-                <p id="save_reflexes"><span class="big_underline">Jet de Réflexes</span>Ce type de jet de sauvegarde représente la faculté du personnage à esquiver les attaques de zone et les situations inattendues. Il dépend de l'Agilité.</p>
-                <p id="save_vigueur"><span class="big_underline">Jet de Vigueur</span>Ce type de jet de sauvegarde reflète la capacité du personnage à résister aux attaques mettant sa vitalité ou sa santé en danger, ainsi qu’à résister à la douleur. Il dépend de la Constitution.</p>
-                <p id="save_volonte"><span class="big_underline">Jet de Volonté</span> Ce type de jet de sauvegarde représente la faculté du personnage à se soustraire aux tentatives de domination et à d’autres effets magiques similaires. Il dépend de la Volonté.</p>
-            </div>
-            <h3 id="marge_reussite" onclick="hideContent(this)">Marge de réussite</h3>
-            <div>
-                <p>Tout les lancers de dés impliquant deux (ou plus) personnes opposées tiennent compte de la marge de réussite du jet. Le personnage obtenant la plus grande marge l'emporte.</p>
-                <p>Par exemple : lors d'un bras de fer s'affronte Gurdil (16 FOR) et Crom (18), ils font chacun un test de force pour savoir qui l'emporte. Gurdil obtient 2 et Crom 8, pour obtenir la marge de réussite, il suffit de soustraire le résultat du jet à la caractéristique du personnage. Gurdil obtient une marge de 14 et Crom une marge de 10. C'est Gurdil qui gagne ce bras de fer bien qu'il possède une force inférieure à Crom.</p>
-            </div>
-
             <h3 onclick="hideContent(this)">Attaquer un adversaire(Exemple)</h3>
             <div>
                 <p>Prenons Edwin, un officier de l'Empire Azuma, qui souhaite ataquer un bandit situé à 5 mètres. Edwin possède un score de 14 en AGI, 13 en FOR et 12 en DEX, son arme est une épée longue impériale (Attaque 13 Parade 12 Degâts 1d8+2 (la force d'Edwin apporte un bonus de 1 aux dégâts, la qualité de l'arme ajoute 1 aussi).</p>
-                <p>Le tour d'Edwin vient avant celui du bandit, il peut donc s'avancer pour parcourir la distance les séparant, il peut parcourir 7m par round, il effectue une action de mouvement et se retrouve face au brignad, il peut désormais lancer une attaque de corps à corps via une action simple, il lance son dé d'attaque et fait un 6 !</p>
-                <p>L'attaque est réussie, le brigand essaie de parer avec son épée courte rouillée (Attaque 12 Parade 13 Dégâts 1d6-1), il lance sont jet de parade et fait un 8, le jet est réussi mais insuffisant car Edwin a obtenu un 6, l'attaque touche !</p>
+                <p>Le tour d'Edwin vient avant celui du bandit, il peut donc s'avancer pour parcourir la distance les séparant, il peut parcourir 9m (+1 de par son AGI élevée, mais -1 à cause de son armure intermédiaire) par round, il effectue une action de mouvement et se retrouve face au brigand, il peut désormais lancer une attaque de corps à corps via une action simple, il lance son jet d'attaque et fait un 6 (2+1+3) !</p>
+                <p>L'attaque est réussie, le brigand essaie de parer avec son épée courte rouillée (Attaque 12 Parade 13 Dégâts 1d8-1), il lance son jet de parade et fait un 8, le jet est réussi mais insuffisant car Edwin a obtenu un 6, l'attaque touche !</p>
                 <p>Edwin lance son jet de dégats (1d8+2), il obtient 5(3+2) le brigand est déjà mal en point, il ne possède plus que 3 PV,il tombe à -2 PV, il est mourant.</p>
             </div>
         </div>
@@ -381,6 +401,7 @@
             <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
             <p>Les utilisateurs plus confirmés peuvent également transmettre des messages via la magie, ainsi la transmission de messages en Ogma est très rapide. Il est même possible de recevoir un message sans avoir aucune formation avec la magie, il suffit à l'expéditeur de connaître un tant soit peu le destinataire.</p>
             <p>Les Sarpas par exemple utilisent constamment la magie pour produire de la chaleur si ils ne peuvent pas profiter de celle des astres.</p>
+            <p>Lorsque le lanceur de sorts est dans un environnement calme, il peut se concentrer plus longtemps sur son sortillège et donc augmenter sa portée et/ou sa persistance jusqu'à deux crans.</p>
             <p>On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
 
             <h3 onclick="hideContent(this)">Règles et coût des sorts</h3>
@@ -389,7 +410,7 @@
                     <thead>
                     <tr>
                         <th rowspan="2">Cercle de Pouvoir</th>
-                        <th rowspan="2">Niveau de difficulté<br/>(malus appliqué à l'INT)</th>
+                        <th rowspan="2">Chance de réussite (CR)<br/></th>
                         <th colspan="4">Facteurs</th>
                         <th rowspan="2">Coût en Psyché</th>
                         <th rowspan="2">Temps d'invocation<br/>(rounds)</th>
@@ -404,7 +425,7 @@
                     <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Standard (/)</td>
+                        <td>Simple (12)</td>
                         <td>1</td>
                         <td>Toucher</td>
                         <td>1 round</td>
@@ -414,7 +435,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Compliqué (-2)</td>
+                        <td>Standard (10)</td>
                         <td>2</td>
                         <td>20 m</td>
                         <td>3 round</td>
@@ -424,7 +445,7 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Difficile(-5)</td>
+                        <td>Complexe (8)</td>
                         <td>3</td>
                         <td>50 m</td>
                         <td>1 minute</td>
@@ -434,7 +455,7 @@
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Très difficile(-8)</td>
+                        <td>Difficile (7)</td>
                         <td>4</td>
                         <td>100 m</td>
                         <td>1 heure</td>
@@ -444,7 +465,7 @@
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Exceptionnel(-12)</td>
+                        <td>Exceptionnel (6)</td>
                         <td>5</td>
                         <td>1 km</td>
                         <td> 1 journée</td>
@@ -454,7 +475,7 @@
                     </tr>
                     <tr>
                         <td>6</td>
-                        <td>Héroïque(-16)</td>
+                        <td>Héroïque (5)</td>
                         <td>spécial</td>
                         <td>spécial</td>
                         <td>spécial</td>
@@ -802,15 +823,17 @@
                 <li>Mentales
                     <ul class="space_list">
                         <li><span class="big_underline">Intelligence (INT) :</span>Détermine l'étendue du savoir et des capacités magiques du personnage.</li>
-                        <li><span class="big_underline">Volonté (VOL) :</span>Représente la solidité de l'esprit du personnage, sa capacité à résister aux effets magiques, son courage, et sa capacité à puiser la magie.</li>
+                        <li><span class="big_underline">Volonté (VOL) :</span>Représente la solidité de l'esprit du personnage, sa capacité à résister aux effets magiques, son courage.</li>
                         <li><span class="big_underline">Perception (PER) :</span>Rassemble les capacités des cinq sens et fait office d'initiative, permet de détecter les pièges.</li>
                         <li><span class="big_underline">Éloquence (ELO) :</span>Permet de persuader/convaincre quelqu'un, d'obtenir un meilleur prix chez un marchand, etc...</li>
                     </ul>
                 </li>
             </ol>
-            <p>Le total de Point de vie d'un personnage est déterminé par cette formule : ((CON*2)+(FOR*0,5))*(0,75 + niveau/4)</p>
-            <p>Le total de Point de psyché d'un personnage est déterminé par cette formule : ((VOL*2)+(INT*0,5))*(0,75 + niveau/4)</p>
-            <p>Si lors d'un lancer, on obtient un nombre décimal, l'arrondi se fait à l'entier inférieur. (ex : 15,25 devient 15)</p>
+            <p>Une caractéristique moyenne équivaut à un score de 10. Un personnage avec un score de 10 en Force n'est ni fort ni faible. Le représentation réelle du score est exponentielle, un score de 12 est supérieur à la moyenne mais reste commun, un score de 14 est remarquable, un score de 16 est incroyable et représente les limites extrêmes du commun des mortel, au delà se trouvent les héros de légende ou de redoutables monstres.</p>
+            <p id="modificateurs_carac">Les caractéristiques élévées apportent un bonus lors des lancers de dés. Ce bonus appelé modificateur est équivalent à : (CARACTÉRISTIQUE-10)/2. Soit un modificateur de +1 pour une caractéristique à 12 ou 13, +2 à 14 ou 15 et ainsi de suite. Le modificateur peut également être négatif dans le cas d'une caractéristiques inférieure à la moyenne.</p>
+            <p>Le total de Point de vie d'un personnage est déterminé par cette formule : ((CON*1,5)+(FOR*0,5))*(1,1^NIVEAU-1)</p>
+            <p>Le total de Point de psyché d'un personnage est déterminé par cette formule : (((INT^1,45)+(VOL^1,15))-30)*(1,1^NIVEAU-1)</p>
+            <p>Si on obtient un nombre décimal, l'arrondi se fait à l'entier inférieur. (ex : 15,25 devient 15)</p>
         </div>
 
         <h1 id="creation_perso" onclick="hideContent(this)">Création de Personnage</h1>
@@ -1039,6 +1062,8 @@
         <h1 id="Competences" onclick="hideContent(this)">Compétences</h1>
         <div>
             <p>Les compétences sont séparées en 4 catégories : Combat, Savoir, Exploration et Social; cette distinction n’est là que pour clarifier les choses et faciliter les recherches, rien n'empêche de prendre des compétences dans ces 4 catégories.</p>
+            <p>Les maîtrise d'armes sont des compétences à part se focalisant sur certains types d'armes.</p>
+            <p>La caractéristique entre parenthèse indique quel modificateur s'applique pour les tests liés à cette compétence.</p>
             <p>La majorité des compétences possèdent plusieurs paliers, chaque palier apportant plus d’avantages, d’autre sont des compétences simples, accordants un bonus fixe et n’occupant qu’un emplacement novice.</p>
             <p>Les paliers sont :</p>
             <ul>
@@ -1058,22 +1083,22 @@
                         <td colspan="5">Le personnage est adepte de la maxime "un tir, un mort". Ses armes de prédiléction sont l'arbalète à main, légère et lourde.</td>
                     </tr>
                     <tr>
-                        <td>Novice : DEX +1 au tir à l'arbalète</td>
+                        <td>Novice : PRÉ +1 au tir à l'arbalète</td>
                         <td>Apprenti : +2 aux dégâts<br/><a href="Tableaux.xhtml#tir_precis_arbalete">Tir précis</a></td>
-                        <td>Adepte : DEX +2 au tir à l'arbalète<br/><a href="Tableaux.xhtml#tir_destabilisant_arbalete">Tir destabilisant</a></td>
-                        <td>Expert : +4 aux dégâts<br/><a href="Tableaux.xhtml#tir_rapide_arbalete">Tir rapide</a><br/><a href="Tableaux.xhtml#tir_penetrant">Tir pénétrant</a></td>
-                        <td>Maître : DEX +3 au tir à l'arbalète. Le multiplicateur de critique monte d'un cran</td>
+                        <td>Adepte : PRÉ +2 au tir à l'arbalète<br/><a href="Tableaux.xhtml#tir_destabilisant_arbalete">Tir destabilisant</a></td>
+                        <td>Expert : +5 aux dégâts<br/><a href="Tableaux.xhtml#tir_rapide_arbalete">Tir rapide</a><br/><a href="Tableaux.xhtml#tir_penetrant">Tir pénétrant</a></td>
+                        <td>Maître : PRÉ +3 au tir à l'arbalète. Le multiplicateur de critique monte d'un cran</td>
                     </tr>
                     <tr id="archer">
                         <th rowspan="2">Archer</th>
                         <td colspan="5">Le personnage peut cribler de flèches n'importe quel opposant avant même que celui ne puisse l'approcher. Ses armes de prédiléction sont l'arc court et l'arc long.</td>
                     </tr>
                     <tr>
-                        <td>Novice : DEX +1 au tir à l'arc</td>
+                        <td>Novice : PRÉ +1 au tir à l'arc</td>
                         <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#tir_precis_arc">Tir précis</a></td>
-                        <td>Adepte : DEX +2 au tir à l'arc<br/><a href="Tableaux.xhtml#tir_destabilisant_arc">Tir déstabilisant</a></td>
-                        <td>Expert : +2 aux dégâts<br/><a href="Tableaux.xhtml#volee_fleches">Volée de flèches</a></td>
-                        <td>Maître : DEX +3 au tir à l'arc. Le multiplicateur de critique monte d'un cran</td>
+                        <td>Adepte : PRÉ +2 au tir à l'arc<br/><a href="Tableaux.xhtml#tir_destabilisant_arc">Tir déstabilisant</a></td>
+                        <td>Expert : +3 aux dégâts<br/><a href="Tableaux.xhtml#volee_fleches">Volée de flèches</a></td>
+                        <td>Maître : PRÉ +3 au tir à l'arc. Le multiplicateur de critique monte d'un cran</td>
                     </tr>
                     <tr id="assassin">
                         <th rowspan="2">Assassin</th>
@@ -1105,7 +1130,7 @@
                         <td>Novice : +1 en attaque et parade</td>
                         <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#double_attaque">Double attaque</a></td>
                         <td>Adepte : +2 en attaque et parade</td>
-                        <td>Expert : +2 aux dégâts<br/><a href="Tableaux.xhtml#triple_attaque">Triple attaque</a></td>
+                        <td>Expert : +3 aux dégâts<br/><a href="Tableaux.xhtml#triple_attaque">Triple attaque</a></td>
                         <td>Maître : +3 en attaque et parade. +3 aux dégâts</td>
                     </tr>
                     <tr id="faucheur">
@@ -1116,7 +1141,7 @@
                         <td>Novice : +1 en attaque et parade</td>
                         <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#deplacement_force">Déplacement forcé</a></td>
                         <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#frappe_dos">Frappe dans le dos</a></td>
-                        <td>Expert : +2 aux dégâts<br/><a href="Tableaux.xhtml#frappe_faucheuse">Frappe de la faucheuse</a></td>
+                        <td>Expert : +3 aux dégâts<br/><a href="Tableaux.xhtml#frappe_faucheuse">Frappe de la faucheuse</a></td>
                         <td>Maître : +3 en attaque et parade. +3 aux dégâts</td>
                     </tr>
                     <tr id="fusilier">
@@ -1124,11 +1149,11 @@
                         <td colspan="5">Le personnage peut abattre une cible lointaine sans que celle-ci ne puisse s'en rendre compte. Ses armes de prédiléction sont le mousquet et le mousquet à double canon.</td>
                     </tr>
                     <tr>
-                        <td>Novice : DEX +1 au tir au fusil</td>
+                        <td>Novice : PRÉ +1 au tir au fusil</td>
                         <td>Apprenti : +2 aux dégât<br/><a href="Tableaux.xhtml#tir_precis_fusil">Tir précis</a></td>
-                        <td>Adepte : DEX +2 au tir au fusil<br/><a href="Tableaux.xhtml#tir_destabilisant_fusil">Tir déstabilisant</a></td>
-                        <td>Expert : +4 aux dégâts</td>
-                        <td>Maître : DEX +3 au tir au fusil. Le multiplicateur de critique monte d'un cran</td>
+                        <td>Adepte : PRÉ +2 au tir au fusil<br/><a href="Tableaux.xhtml#tir_destabilisant_fusil">Tir déstabilisant</a></td>
+                        <td>Expert : +5 aux dégâts</td>
+                        <td>Maître : PRÉ +3 au tir au fusil. Le multiplicateur de critique monte d'un cran</td>
                     </tr>
                     <tr id="hallebardier">
                         <th rowspan="2">Hallebardier</th>
@@ -1138,7 +1163,7 @@
                         <td>Novice : +1 en attaque et parade<br/><a href="Tableaux.xhtml#reception_charge_hallebarde">Réception de charge</a></td>
                         <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#mise_au_sol">Mise au sol</a></td>
                         <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#frappe_hampe">Frappe de la hampe</a></td>
-                        <td>Expert : +2 aux dégâts</td>
+                        <td>Expert : +3 aux dégâts</td>
                         <td>Maître : +3 en attaque et parade. +3 aux dégâts</td>
                     </tr>
                     <tr id="lanceur">
@@ -1146,11 +1171,11 @@
                         <td colspan="5">Le personnage est habile avec les armes de lancer, il sait toucher uen cible éloigné sans difficultées. Ses armes de prédiléction sont les couteaux de lancer, les hachette, les javelots et les fléchettes.</td>
                     </tr>
                     <tr>
-                        <td>Novice : DEX +1 au lancer</td>
+                        <td>Novice : PRÉ +1 au lancer</td>
                         <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#tir_precis_lanceur">Tir précis</a></td>
-                        <td>Adepte : DEX +2 au lancer<br/><a href="Tableaux.xhtml#tir_destabilisant_lanceur">Tir déstabilisant</a></td>
-                        <td>Expert : +2 aux dégâts</td>
-                        <td>Maître : DEX +3 au lancer. Le multiplicateur de critique monte d'un cran</td>
+                        <td>Adepte : PRÉ +2 au lancer<br/><a href="Tableaux.xhtml#tir_destabilisant_lanceur">Tir déstabilisant</a></td>
+                        <td>Expert : +3 aux dégâts</td>
+                        <td>Maître : PRÉ +3 au lancer. Le multiplicateur de critique monte d'un cran</td>
                     </tr>
                     <tr id="lancier">
                         <th rowspan="2">Lancier</th>
@@ -1160,7 +1185,7 @@
                         <td>Novice : +1 en attaque et parade<br/><a href="Tableaux.xhtml#reception_charge_lance">Réception de charge</a></td>
                         <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#double_estoc">Double estoc</a></td>
                         <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#triple_estoc">Triple estoc</a></td>
-                        <td>Expert : +2 aux dégâts</td>
+                        <td>Expert : +3 aux dégâts</td>
                         <td>Maître : +3 en attaque et parade. +3 aux dégâts</td>
                     </tr>
                     <tr id="martelier">
@@ -1182,7 +1207,7 @@
                         <td>Novice : +1 en attaque et parade</td>
                         <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#coup_etourdissant">Coup étourdissant</a></td>
                         <td>Adepte : +2 en attaque et parade<br/><a href="Tableaux.xhtml#enchainement">Enchaînement</a></td>
-                        <td>Expert : +2 aux dégâts<br/><a href="Tableaux.xhtml#enchainement_superieur">Enchaînement supérieur</a></td>
+                        <td>Expert : +3 aux dégâts<br/><a href="Tableaux.xhtml#enchainement_superieur">Enchaînement supérieur</a></td>
                         <td>Maître : +3 en attaque et parade. +3 aux dégâts</td>
                     </tr>
                     <tr id="pistolier">
@@ -1190,22 +1215,22 @@
                         <td colspan="5">Le personnage sait faire parler la poudre, il manie ses pistolets avec une précision mortelle. Ses armes de prédiléction sont le pistolet de poche, le pistolet à silex, le pistolet à double canon, la poivrière, la pétoire et la targe pistolet.</td>
                     </tr>
                     <tr>
-                        <td>Novice : DEX +1 au tir au pistolet</td>
+                        <td>Novice : PRÉ +1 au tir au pistolet</td>
                         <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#tir_precis_pistolet">Tir précis</a></td>
-                        <td>Adepte : DEX +2 au tir au pistolet<br/><a href="Tableaux.xhtml#tir_destabilisant_pistolet">Tir déstabilisant</a></td>
-                        <td>Expert : +2 aux dégâts<br/><a href="Tableaux.xhtml#tir_rapide_pistolet">Tir rapide</a></td>
-                        <td>Maître : DEX +3 au tir au fusil. Le multiplicateur de critique monte d'un cran</td>
+                        <td>Adepte : PRÉ +2 au tir au pistolet<br/><a href="Tableaux.xhtml#tir_destabilisant_pistolet">Tir déstabilisant</a></td>
+                        <td>Expert : +3 aux dégâts<br/><a href="Tableaux.xhtml#tir_rapide_pistolet">Tir rapide</a></td>
+                        <td>Maître : PRÉ +3 au tir au fusil. Le multiplicateur de critique monte d'un cran</td>
                     </tr>
                     <tr id="tirailleur">
                         <th rowspan="2">Tirailleur</th>
                         <td colspan="5">Le personnage est capable de rendre fou un opposant en l'harcelant de projectiles. Ses armes de prédiléction sont la fronde et la sarbacane.</td>
                     </tr>
                     <tr>
-                        <td>Novice : DEX +1 au tir</td>
+                        <td>Novice : PRÉ +1 au tir</td>
                         <td>Apprenti : +1 aux dégâts<br/><a href="Tableaux.xhtml#tir_precis_tirailleur">Tir précis</a></td>
-                        <td>Adepte : DEX +2 au tir<br/><a href="Tableaux.xhtml#harcelement">Harcelement</a></td>
-                        <td>Expert : +2 aux dégâts</td>
-                        <td>Maître : DEX +3 au tir au fusil. Le multiplicateur de critique monte d'un cran</td>
+                        <td>Adepte : PRÉ +2 au tir<br/><a href="Tableaux.xhtml#harcelement">Harcelement</a></td>
+                        <td>Expert : +3 aux dégâts</td>
+                        <td>Maître : PRÉ +3 au tir au fusil. Le multiplicateur de critique monte d'un cran</td>
                     </tr>
                     </tbody>
                 </table>
@@ -1222,11 +1247,11 @@
                         <td colspan="5">Améliore les coups critiques et permet de contourner l'armure.</td>
                     </tr>
                     <tr>
-                        <td>Novice : Chance de coup critique +1</td>
-                        <td>Apprenti : Le multiplicateur de critique monte d’un cran<br/><a href="Tableaux.xhtml#frappe_precision">Frappe de précision</a></td>
+                        <td>Novice : Le multiplicateur de critique monte d’un cran</td>
+                        <td>Apprenti : Chance de coup critique +1<br/><a href="Tableaux.xhtml#frappe_precision">Frappe de précision</a></td>
                         <td>Adepte : Ignore 1 point d'armure</td>
                         <td>Expert : Le multiplicateur de critique monte d’un cran</td>
-                        <td>Maître : Chance de coup critique +2. Ignore 2 points d'armure</td>
+                        <td>Maître : Ignore 2 points d'armure</td>
                     </tr>
                     <tr id="defenseur">
                         <th rowspan="2">Défenseur</th>
@@ -1251,8 +1276,8 @@
                         <td>Novice : AGI +1</td>
                         <td>Apprenti : AGI +1, Atq +1</td>
                         <td>Adepte : AGI +2, Atq +1, Prd +1</td>
-                        <td>Expert : AGI +3, DEX +1 Atq +1, Prd +1</td>
-                        <td>Maître : AGI +3, DEX +2,  Atq +2, Prd +1</td>
+                        <td>Expert : AGI +2, DEX +1 Atq +2, Prd +1</td>
+                        <td>Maître : AGI +3, DEX +1, Atq +2, Prd +2</td>
                     </tr>
                     <tr id="rage_berserker">
                         <th rowspan="2">Rage de berserker</th>
@@ -1275,7 +1300,7 @@
                     </tr>
                     <tr id="tireur_elite">
                         <th>Tireur d’élite</th>
-                        <td colspan="5">Facilite les attaques à longue distance et permet de toucher les cibles à l'abri. La portée normale d'une arme est équivalente à sa portée maximal, divise par 2 les malus pour toucher les cibles protégés par un abri partiel ou important.</td>
+                        <td colspan="5">Facilite les attaques à longue distance et permet de toucher les cibles à l'abri. La portée normale d'une arme est équivalente à sa portée maximale, divise par 2 les malus pour toucher les cibles protégées par un abri partiel ou important.</td>
                     </tr>
                     </tbody>
                 </table>
@@ -1285,22 +1310,22 @@
                     <table width="95%">
                         <tbody>
                         <tr id="alchimie">
-                            <th rowspan="2">Alchimie</th>
+                            <th rowspan="2">Alchimie (INT)</th>
                             <td colspan="5">Permet d’identifier les ingrédients alchimiques tels que les plantes, les minéraux pour en faire des potions, des poisons ou même des bombes alchimiques.</td>
                         </tr>
                         <tr>
-                            <td>Novice : Potions, poisons et bombes basiques</td>
-                            <td>Apprenti : Potions, poisons et bombes de qualité</td>
-                            <td>Adepte : Potions, poisons et bombes avancés</td>
-                            <td>Expert : Potions, poisons et bombes exceptionnels</td>
-                            <td>Maître : Potions, poisons et bombes de maître</td>
+                            <td>Novice : CR +1 pour la fabrication de potions, poisons et bombes basiques</td>
+                            <td>Apprenti : CR +2 pour la fabrication de potions, poisons et bombes de qualité</td>
+                            <td>Adepte : CR +3 pour la fabrication de potions, poisons et bombes avancés</td>
+                            <td>Expert : CR +4 pour la fabrication de potions, poisons et bombes exceptionnels</td>
+                            <td>Maître : CR +5 pour la fabrication de potions, poisons et bombes de maître</td>
                         </tr>
                         <tr id="art_de_la_magie">
-                            <th>Art de la magie</th>
+                            <th>Art de la magie (INT)</th>
                             <td colspan="5">Le personnage peut identifier les objets magiques, désarmer un piège magique et reconnaître les sorts que d’autres personnes lancent sur une épreuve d’intelligence.</td>
                         </tr>
                         <tr id="connaissances">
-                            <th  rowspan="2">Connaissances</th>
+                            <th  rowspan="2">Connaissances (INT)</th>
                             <td colspan="5">Le personnage est capable de se souvenir d’informations globales sans efforts dans un domaine particulier, il peut fouiller sa mémoire (épreuve d’intelligence) pour retrouver des informations complexes.</td>
                         </tr>
                         <tr>
@@ -1311,7 +1336,7 @@
                             <td>Maître : tous les domaines </td>
                         </tr>
                         <tr id="domaine_favori">
-                            <th rowspan="2">Domaine de prédilection</th>
+                            <th rowspan="2">Domaine de prédilection (INT)</th>
                             <td colspan="5">Le personnage est capable de lancer les sorts d’un domaine en particulier plus rapidement. Permet également de surcharger les sorts de son/ses domaines favori pour en augmenter une composante (nb de cibles, portée, persistance ou dégâts). Les sorts provenant d’un domaine de prédilection se lance un round plus rapidement. La surcharge multiplie le coût du sort par 3.</td>
                         </tr>
                         <tr>
@@ -1322,41 +1347,41 @@
                             <td>Maître : Nombre maximum de domaine de prédilection : 3</td>
                         </tr>
                         <tr id="expert_explosifs">
-                            <th>Expert en explosif</th>
+                            <th>Expert en explosif (INT)</th>
                             <td colspan="5">Le personnage sait utiliser la poudre noire, que ce soit pour fabriquer des bombes, ou manier des armes à feu.</td>
                         </tr>
                         <tr id="ingenierie">
-                            <th>Ingénierie</th>
+                            <th>Ingénierie (INT)</th>
                             <td colspan="5">Permet de créer des machines simples comme complexes et d’identifier les points faibles/forts d’un engin mécanique.</td>
                         </tr>
                         <tr id="lien_magique">
-                            <th  rowspan="2">Lien magique</th>
+                            <th  rowspan="2">Lien magique (INT)</th>
                             <td colspan="5">Augmente les chances et les effets des critiques magiques.</td>
                         </tr>
                         <tr>
-                            <td>Novice : Chance de coup critique +1</td>
-                            <td>Apprenti : Le critique magique permet d'augmenter 2 facteurs au lieu d'un seul</td>
-                            <td>Adepte : Chance de coup critique +2.</td>
+                            <td>Novice : Le critique magique permet d'augmenter 2 facteurs au lieu d'un seul</td>
+                            <td>Apprenti : Chance de coup critique +1</td>
+                            <td>Adepte : Chance d'échec critique -1</td>
                             <td>Expert : Le critique magique permet d'augmenter 3 facteurs au lieu de deux</td>
-                            <td>Maître : Chance de coup critique +3.</td>
+                            <td>Maître : Chance d'échec critique -2</td>
                         </tr>
                         <tr id="linguistique">
-                            <th>Linguistique</th>
+                            <th>Linguistique (INT)</th>
                             <td colspan="5">Permet de déchiffrer n’importe quelle langue inconnue si on dispose d’assez de temps, de contrefaire convenablement un document et de repérer les documents contrefaits. Nécessite de parler au moins 3 langues.</td>
                         </tr>
                         <tr id="maitrise_magie">
-                            <th rowspan="2">Maîtrise de la magie</th>
+                            <th rowspan="2">Maîtrise de la magie (INT)</th>
                             <td colspan="5">Le personnage est à l'aise avec l'utilisation de la magie, il peut lancer des sorts plus facilement.</td>
                         </tr>
                         <tr>
-                            <td>Novice : Les sorts du premier cercle se lance avec un bonus de 2</td>
-                            <td>Apprenti : Les sorts du deuxième cercle se lance sans malus</td>
-                            <td>Adepte : Les sorts du troisième cercle se lance avec un malus de 2</td>
-                            <td>Expert : Les sorts du quatrième cercle se lancent avec un malus de 5</td>
-                            <td>Maître : Les sorts du cinquième cercle se lancent avec un malus de 8</td>
+                            <td>Novice : Les sorts du premier cercle se lance avec une CR de 14</td>
+                            <td>Apprenti : Les sorts du deuxième cercle se lance avec une CR de 12</td>
+                            <td>Adepte : Les sorts du troisième cercle se lance avec une CR de 10</td>
+                            <td>Expert : Les sorts du quatrième cercle se lancent avec une CR de 8</td>
+                            <td>Maître : Les sorts du cinquième cercle se lancent avec une CR de 7</td>
                         </tr>
                         <tr id="medecine">
-                            <th>Médecine</th>
+                            <th>Médecine (INT)</th>
                             <td colspan="5">Le personnage est capable de stabiliser une personne mourante, d'identifier des maladies communes sans efforts et des maladies rares ou magiques sur une épreuve d'intelligence</td>
                         </tr>
                         </tbody>
@@ -1397,78 +1422,78 @@
                     <table width="95%">
                         <tbody>
                         <tr id="acrobaties">
-                            <th rowspan="2">Acrobaties</th>
+                            <th rowspan="2">Acrobaties (AGI)</th>
                             <td colspan="5">Le personnage est capable de se déplacer facilement de toit en toit, ou d’escalader une falaise escarpée.</td>
                         </tr>
                         <tr>
-                            <td>Novice : AGI +1 pour les actions du type saut, escalade, etc</td>
-                            <td>Apprenti : AGI +2 pour les actions du type saut, escalade, etc. Dégâts des chutes réduits de 5</td>
-                            <td>Adepte : AGI +3 pour les actions du type saut, escalade, etc</td>
-                            <td>Expert : AGI +4 pour les actions du type saut, escalade, etc. Dégâts des chutes réduits de 10</td>
-                            <td>Maître : AGI +5 pour les actions du type saut, escalade, etc</td>
+                            <td>Novice : CR +1 pour les actions du type saut, escalade, etc</td>
+                            <td>Apprenti : CR +2 pour les actions du type saut, escalade, etc. Dégâts des chutes réduits de 5</td>
+                            <td>Adepte : CR +3 pour les actions du type saut, escalade, etc</td>
+                            <td>Expert : CR +4 pour les actions du type saut, escalade, etc. Dégâts des chutes réduits de 10</td>
+                            <td>Maître : CR +5 pour les actions du type saut, escalade, etc</td>
                         </tr>
                         <tr id="dressage">
-                            <th>Dressage</th>
+                            <th>Dressage (ÉLO)</th>
                             <td colspan="5">Le personnage sait s’y prendre avec les animaux, il peut les apprivoiser, leur apprendre des tours et leur donner des ordres simples.</td>
                         </tr>
                         <tr id="filouterie">
-                            <th rowspan="2">Filouterie</th>
+                            <th rowspan="2">Filouterie (DEX)</th>
                             <td colspan="5">Le personnage sait faire bien des choses sans se faire remarquer, dérober une bourse, dissimuler des armes, etc.</td>
                         </tr>
                         <tr>
-                            <td>Novice : DEX +1 pour les actions dissimulées</td>
-                            <td>Apprenti : DEX +2 pour les actions dissimulées</td>
-                            <td>Adepte : DEX +3 pour les actions dissimulées</td>
-                            <td>Expert : DEX +4 pour les actions dissimulées</td>
-                            <td>Maître : DEX +5 pour les actions dissimulées</td>
+                            <td>Novice : CR +1 pour les actions dissimulées</td>
+                            <td>Apprenti : CR +2 pour les actions dissimulées</td>
+                            <td>Adepte : CR +3 pour les actions dissimulées</td>
+                            <td>Expert : CR +4 pour les actions dissimulées</td>
+                            <td>Maître : CR +5 pour les actions dissimulées</td>
                         </tr>
                         <tr id="furtivite">
-                            <th rowspan="2">Furtivité</th>
+                            <th rowspan="2">Furtivité (AGI)</th>
                             <td colspan="5">Le personnage est capable de se dissimuler dans l’obscurité ou parmi la foule plus facilement.</td>
                         </tr>
                         <tr>
-                            <td>Novice : AGI +1 pour se cacher</td>
-                            <td>Apprenti : AGI +2 pour se cacher. Peut porter une attaque furtive</td>
-                            <td>Adepte : AGI +3 pour se cacher. Peut se dissimuler en plein combat</td>
-                            <td>Expert : AGI +4 pour se cacher. Ne déclenche pas les piège de type plaque de pression</td>
-                            <td>Maître : AGI +5 pour se cacher.Ne fait plus de bruit en se déplaçant</td>
+                            <td>Novice : CR +1 pour se cacher</td>
+                            <td>Apprenti : CR +2 pour se cacher. Peut porter une attaque furtive</td>
+                            <td>Adepte : CR +3 pour se cacher. Peut se dissimuler en plein combat</td>
+                            <td>Expert : CR +4 pour se cacher. Ne déclenche pas les piège de type plaque de pression</td>
+                            <td>Maître : CR +5 pour se cacher.Ne fait plus de bruit en se déplaçant</td>
                         </tr>
                         <tr id="natation">
-                            <th>Natation</th>
+                            <th>Natation (AGI)</th>
                             <td colspan="5">Le personnage peut nager sans effort dans une eau calme, et peut traverser une eau agitée sur une épreuve d’agilité.</td>
                         </tr>
                         <tr id="observation">
-                            <th rowspan="2">Observation</th>
+                            <th rowspan="2">Observation (PER)</th>
                             <td colspan="5">Le personnage possède une perception passive remarquable, même lorsqu’il n’est pas concentré. Ne se cumule pas avec Enquête.</td>
                         </tr>
                         <tr>
-                            <td>Novice : PER +1 pour repérer quelque chose</td>
-                            <td>Apprenti : PER +2 pour repérer quelque chose</td>
-                            <td>Adepte : PER +3 pour repérer quelque chose. Ne peut plus être pris au dépourvu</td>
-                            <td>Expert : PER +4 pour repérer quelque chose</td>
-                            <td>Maître : PER +5 pour repérer quelque chose. Ne peut plus être pris en tenaille</td>
+                            <td>Novice : CR +1 pour repérer quelque chose</td>
+                            <td>Apprenti : CR +2 pour repérer quelque chose</td>
+                            <td>Adepte : CR +3 pour repérer quelque chose. Ne peut plus être pris au dépourvu</td>
+                            <td>Expert : CR +4 pour repérer quelque chose</td>
+                            <td>Maître : CR +5 pour repérer quelque chose. Ne peut plus être pris en tenaille</td>
                         </tr>
                         <tr id="pistage">
-                            <th rowspan="2">Pistage</th>
+                            <th rowspan="2">Pistage (PER)</th>
                             <td colspan="5">Le personnage sait traquer une cible en repérant ses empreintes, il peut obtenir beaucoup d’information à partir de simples traces.</td>
                         </tr>
                         <tr>
-                            <td>Novice : PER +1 lors de l’examination d’empreinte</td>
-                            <td>Apprenti : PER +2 lors de l’examination d’empreinte. Connaît le nombre d’entités ayant laissés les traces</td>
-                            <td>Adepte : PER +3 lors de l’examination d’empreinte</td>
-                            <td>Expert : PER +4 lors de l’examination d’empreinte. Sait précisément quelle(s) entité(s) a(ont) laissé les traces</td>
-                            <td>Maître : PER +5 lors de l’examination d’empreinte</td>
+                            <td>Novice : CR +1 lors de l’examination d’empreinte</td>
+                            <td>Apprenti : CR +2 lors de l’examination d’empreinte. Connaît le nombre d’entités ayant laissés les traces</td>
+                            <td>Adepte : CR +3 lors de l’examination d’empreinte</td>
+                            <td>Expert : CR +4 lors de l’examination d’empreinte. Sait précisément quelle(s) entité(s) a(ont) laissé les traces</td>
+                            <td>Maître : CR +5 lors de l’examination d’empreinte</td>
                         </tr>
                         <tr id="sabotage">
-                            <th rowspan="2">Sabotage</th>
+                            <th rowspan="2">Sabotage (DEX)</th>
                             <td colspan="5">Le personnage est capable de crocheter une serrure, désarmer un piège mécanique et saboter un engin mécanique simple.</td>
                         </tr>
                         <tr>
-                            <td>Novice : DEX +1 pour crocheter une serrure, désarmer un piège, saboter un objet</td>
-                            <td>Apprenti : DEX +2 pour crocheter une serrure, désarmer un piège, saboter un objet</td>
-                            <td>Adepte : DEX +3 pour crocheter une serrure, désarmer un piège, saboter un objet</td>
-                            <td>Expert : DEX +4 pour crocheter une serrure, désarmer un piège, saboter un objet</td>
-                            <td>Maître : DEX +5 pour crocheter une serrure, désarmer un piège, saboter un objet</td>
+                            <td>Novice : CR +1 pour crocheter une serrure, désarmer un piège, saboter un objet</td>
+                            <td>Apprenti : CR +2 pour crocheter une serrure, désarmer un piège, saboter un objet</td>
+                            <td>Adepte : CR +3 pour crocheter une serrure, désarmer un piège, saboter un objet</td>
+                            <td>Expert : CR +4 pour crocheter une serrure, désarmer un piège, saboter un objet</td>
+                            <td>Maître : CR +5 pour crocheter une serrure, désarmer un piège, saboter un objet</td>
                         </tr>
                         <tr id="survie">
                             <th rowspan="2">Survie</th>
@@ -1476,7 +1501,7 @@
                         </tr>
                         <tr>
                             <td>Novice : Nombre de biomes connus : 1</td>
-                            <td>Apprenti : Nombre de biomes connus : 1. CON +3 pour le personnage et ses alliés pour résister aux problèmes climatiques du biome</td>
+                            <td>Apprenti : Nombre de biomes connus : 1. CR +2 pour le personnage et ses alliés pour résister aux problèmes climatiques du biome</td>
                             <td>Adepte : Nombre de biomes connus : 2</td>
                             <td>Expert : Nombre de biomes connus : 2. Ne peut plus se perdre qu’importe le biome</td>
                             <td>Maître : Nombre de biomes connus : 3</td>
@@ -1500,56 +1525,56 @@
                     <table width="95%">
                         <tbody>
                         <tr id="diplomatie">
-                            <th rowspan="2">Diplomatie</th>
+                            <th rowspan="2">Diplomatie (ÉLO)</th>
                             <td colspan="5">Le personnage sait ranger les gens de son côté et calmer un conflit. Il est également capable mener efficacement des négociations.</td>
                         </tr>
                         <tr>
-                            <td>Novice : ELO +1 pour les actions diplomatiques</td>
-                            <td>Apprenti : ELO +2 pour les actions diplomatiques</td>
-                            <td>Adepte : ELO +3 pour les actions diplomatiques</td>
-                            <td>Expert : ELO +4 pour les actions diplomatiques</td>
-                            <td>Maître : ELO +5 pour les actions diplomatiques</td>
+                            <td>Novice : CR +1 pour les actions diplomatiques</td>
+                            <td>Apprenti : CR +2 pour les actions diplomatiques</td>
+                            <td>Adepte : CR +3 pour les actions diplomatiques</td>
+                            <td>Expert : CR +4 pour les actions diplomatiques</td>
+                            <td>Maître : CR +5 pour les actions diplomatiques</td>
                         </tr>
                         <tr id="enquete">
-                            <th rowspan="2">Enquête</th>
+                            <th rowspan="2">Enquête (PER)</th>
                             <td colspan="5">Le personnage est capable de remarquer les détails les plus infimes dans son environnement. Ne se cumule pas avec Observation.</td>
                         </tr>
                         <tr>
-                            <td>Novice : PER +1 pour trouver un détail, un point faible, etc</td>
-                            <td>Apprenti : PER +2 pour trouver un détail, un point faible, etc</td>
-                            <td>Adepte : PER +3 pour trouver un détail, un point faible, etc</td>
-                            <td>Expert : PER +4 pour trouver un détail, un point faible, etc</td>
-                            <td>Maître : PER +5 pour trouver un détail, un point faible, etc</td>
+                            <td>Novice : CR +1 pour trouver un détail, un point faible, etc</td>
+                            <td>Apprenti : CR +2 pour trouver un détail, un point faible, etc</td>
+                            <td>Adepte : CR +3 pour trouver un détail, un point faible, etc</td>
+                            <td>Expert : CR +4 pour trouver un détail, un point faible, etc</td>
+                            <td>Maître : CR +5 pour trouver un détail, un point faible, etc</td>
                         </tr>
 
                         <tr id="intimidation">
-                            <th>Intimidation</th>
+                            <th>Intimidation (FOR, CON ou ÉLO)</th>
                             <td colspan="5">Le personnage sait être impressionnant quand il le faut, il peut utiliser sa caractéristique de force ou de constitution pour intimider quelqu’un.</td>
                         </tr>
                         <tr id="marchandage">
-                            <th rowspan="2">Marchandage</th>
+                            <th rowspan="2">Marchandage (ÉLO)</th>
                             <td colspan="5">Le personnage connaît la valeur d’un objet, et sait éviter les marchands grippe-sous.</td>
                         </tr>
                         <tr>
-                            <td>Novice : ELO +1 pour marchander</td>
-                            <td>Apprenti : ELO +2 pour marchander. Connaît globalement la valeur des objets</td>
-                            <td>Adepte : ELO +3 pour marchander</td>
-                            <td>Expert : ELO +4 pour marchander. Connaît précisément la valeur des objets</td>
-                            <td>Maître : ELO +5 pour marchander</td>
+                            <td>Novice : CR +1 pour marchander</td>
+                            <td>Apprenti : CR +2 pour marchander. Connaît globalement la valeur des objets</td>
+                            <td>Adepte : CR +3 pour marchander</td>
+                            <td>Expert : CR +4 pour marchander. Connaît précisément la valeur des objets</td>
+                            <td>Maître : CR +5 pour marchander</td>
                         </tr>
                         <tr id="psychologie">
-                            <th rowspan="2">Psychologie</th>
+                            <th rowspan="2">Psychologie (PER)</th>
                             <td colspan="5">Le personnage sait comment repérer les mensonges et percevoir les intentions véritables des individus qu’il croise.</td>
                         </tr>
                         <tr>
-                            <td>Novice : PER +1 pour détecter un mensonge</td>
-                            <td>Apprenti : PER +2 pour détecter un mensonge</td>
-                            <td>Adepte : PER +3 pour détecter un mensonge</td>
-                            <td>Expert : PER +4 pour détecter un mensonge</td>
-                            <td>Maître : PER +5 pour détecter un mensonge</td>
+                            <td>Novice : CR +1 pour détecter un mensonge</td>
+                            <td>Apprenti : CR +2 pour détecter un mensonge</td>
+                            <td>Adepte : CR +3 pour détecter un mensonge</td>
+                            <td>Expert : CR +4 pour détecter un mensonge</td>
+                            <td>Maître : CR +5 pour détecter un mensonge</td>
                         </tr>
                         <tr id="representation">
-                            <th rowspan="2">Représentation</th>
+                            <th rowspan="2">Représentation (ÉLO)</th>
                             <td colspan="5">Le personnage est doué dans un art du spectacle.</td>
                         </tr>
                         <tr>
@@ -1560,15 +1585,15 @@
                             <td>Maître : tous les arts du spectacle</td>
                         </tr>
                         <tr id="tromperie">
-                            <th rowspan="2">Tromperie</th>
+                            <th rowspan="2">Tromperie (ÉLO)</th>
                             <td colspan="5">Le personnage est un menteur habile, il peut tromper les gens plus facilement.</td>
                         </tr>
                         <tr>
-                            <td>Novice : ELO +1 lors d’un mensonge</td>
-                            <td>Apprenti : ELO +2 lors d’un mensonge</td>
-                            <td>Adepte : ELO +3 lors d’un mensonge</td>
-                            <td>Expert : ELO +4 lors d’un mensonge</td>
-                            <td>Maître : ELO +5 lors d’un mensonge</td>
+                            <td>Novice : CR +1 pour mentir</td>
+                            <td>Apprenti : CR +2 pour mentir</td>
+                            <td>Adepte : CR +3 pour mentir</td>
+                            <td>Expert : CR +4 pour mentir</td>
+                            <td>Maître : CR +5 pour mentir</td>
                         </tr>
                         </tbody>
                     </table>
@@ -1802,20 +1827,20 @@
                 <div>
                     <p>Les armes appartiennent à des catégories (dagues/poignards, épées courtes, longues ou même courbes, haches, marteaux à deux mains, etc...), elles possèdent des caractéristiques spéciales comme un taux de critique supérieur, la possibilité de les manier à deux mains, etc...</p>
                     <p>Chaque arme possède deux caractéristiques en plus de la rupture et des dégâts, il s'agit de l'attaque et de la parade. L'attaque détermine à quel point il est facile de toucher un adversaire et la parade détermine la probabilité de parer un coup avec cette arme. Une arme peut être modifié de diverses manières (poignée améliorée, fil aiguisé, renfort, lame dentelée, etc..) et ainsi posséder des caractéristiques différentes de sa catégorie.</p>
-                    <p>Pour toucher un adversaire avec une arme de corps-à-corps ou un bouclier, il faut d'abord réussir un jet d'attaque, l'adversaire peut tenter une parade, si il réussi aussi son jet il faut alors regarder la marge de réussite (statistique de l'arme - valeur du jet obtenu). Les armes à distance se basent toute sur la dextérité de l'utilisateur.</p>
-                    <p>Les dégâts d'une armes sont équivalents à un (ou plusieurs) dé(s) et sont généralement accompagné d'un bonus selon la qualité de l'arme(ex : une dague en bronze → 1d4 une dague en acier 1d4+2). La rupture est majoritairement influencée par le matériau de l'arme mais peut varier selon l'artisan, ou certaines modifications telles qu'un renfort métallique sur la poignée.</p>
+                    <p>Pour toucher un adversaire avec une arme de corps-à-corps ou un bouclier, il faut d'abord réussir un jet d'attaque, l'adversaire peut tenter une parade, si il réussi aussi son jet il faut alors regarder la marge de réussite (statistique de l'arme - valeur du jet obtenu). Les armes à distance possèdent une statistique nommée précision (PRÉ) fonctionnant de la même façon que l'Atq mais ne peuvent pas être esquivée à moins de s'y être préparé via une action complexe.</p>
+                    <p>Les dégâts d'une armes sont équivalents à un (ou plusieurs) dé(s) et sont généralement accompagné d'un bonus selon la qualité de l'arme(ex : une dague en bronze → 1d6 une dague en acier 1d6+1). La rupture est majoritairement influencée par le matériau de l'arme mais peut varier selon l'artisan, ou certaines modifications telles qu'un renfort métallique sur la poignée.</p>
                     <p>La portée d'une arme à distance ou de lancer est indiqué de cete façon XXm/YYm, XX représente la portée normale à laquelle l'arme peut toucher sans malus, YY représente la portée maximale à laquelle l'arme peut espérer toucher, plus on s'approche de la portée maximale, plus le malus de dextérité est grand.</p>
                     <p>Les caractéristiques ont également un impact sur les caractéristiques d'une arme de corps-à-corps ou de lancer :</p>
                     <ul>
-                        <li><span class="big_underline">Force :</span>tous les deux points de force supérieur à 12 :  +1 point de dégât (14 FOR → +1; 16 FOR → +2). Si la force est inférieure à 8, les dégâts sont diminués d'un point.</li>
-                        <li><span class="big_underline">Dextérité :</span>tous les deux points de dextérité supérieur à 12 augmente l'attaque ou la parade de 1  (14 DEX → +1; 16 DEX → +1/+1 ou +2/0 ou 0/+2). Un malus s'applique si la dextérité est inférieure à 8, l'attaque ou la parade diminue de 1.</li>
+                        <li><span class="big_underline">Force :</span>tous les deux points de force supérieur à 11 :  +1 point de dégât (13 FOR → +1; 15 FOR → +2). Si la force est inférieure à 8, les dégâts sont diminués d'un point.</li>
+                        <li><span class="big_underline">Dextérité :</span>tous les deux points de dextérité supérieur à 11 augmente l'attaque ou la parade de 1  (13 DEX → +1; 15 DEX → +1/+1 ou +2/0 ou 0/+2). Un malus s'applique si la dextérité est inférieure à 8, l'attaque ou la parade diminue de 1.</li>
                     </ul>
 					<p>Lors d'un coup critique, il faut se référer au <a href="Tableaux.xhtml#table_critiques">tableau des critiques</a> équivalent au type de dégâts infligés par le coup (les dégâts bonus du coup critiques sont ajoutés après le multiplicateur)</p>
                     <p>La liste d'armes ci dessous n'est pas exhaustive, il revient au MJ de décider des statistiques d'une arme. Pour voir le poids et la valeur de base des armes : <a href="Objets.xhtml#armes">Listes des armes</a>.</p>
                 </div>
                 <div>
                     <p class="caption" onclick="hideContent(this)" id="table_armes_cac">Armes de corps-à-corps</p>
-                    <table width="90%" class="hidden">
+                    <table width="95%" class="hidden">
                         <thead>
                         <tr>
                             <th colspan="2">Catégorie</th>
@@ -1834,109 +1859,109 @@
                         <tr>
                             <td colspan="2">Dagues</td>
                             <td>Perforants ou Tranchants</td>
-                            <td>14</td>
-                            <td>8</td>
-                            <td>1d4</td>
-                            <td>1-2 x2</td>
+                            <td>11</td>
+                            <td>7</td>
+                            <td>1d6</td>
+                            <td>3-4-5-6 x2</td>
                             <td>Légère</td>
                         </tr>
                         <tr><td rowspan="4">Épées</td></tr>
                         <tr>
                             <td>Courtes</td>
                             <td>Tranchants ou Perforants</td>
+                            <td>10</td>
                             <td>11</td>
-                            <td>12</td>
-                            <td>1d6</td>
+                            <td>1d8</td>
                             <td>x1,5</td>
                             <td>Légère</td>
                         </tr>
                         <tr>
                             <td>Courbes</td>
                             <td>Tranchants</td>
-                            <td>13</td>
+                            <td>11</td>
                             <td>10</td>
-                            <td>1d6</td>
+                            <td>1d8</td>
                             <td>x1,5</td>
                             <td>Légère</td>
                         </tr>
                         <tr>
                             <td>Longues</td>
                             <td>Tranchants ou Perforants</td>
-                            <td>12</td>
                             <td>11</td>
-                            <td>1d6</td>
+                            <td>11</td>
+                            <td>1d8</td>
                             <td>x1,5</td>
                             <td>Polyvalente(1d8)</td>
                         </tr>
                         <tr>
                             <td colspan="2">Rapières</td>
                             <td>Perforants</td>
-                            <td>13</td>
+                            <td>11</td>
                             <td>10</td>
-                            <td>1d6</td>
-                            <td>1-2 x1,5</td>
+                            <td>1d8</td>
+                            <td>3-4-5-6 x1,5</td>
                             <td>Légère</td>
                         </tr>
                         <tr>
                             <td colspan="2">Katanas</td>
                             <td>Tranchants ou Perforants</td>
-                            <td>12</td>
                             <td>11</td>
-                            <td>1d6</td>
+                            <td>11</td>
+                            <td>1d8</td>
                             <td>x1,5</td>
                             <td>Polyvalente(1d8)</td>
                         </tr>
                         <tr>
                             <td colspan="2">Haches</td>
                             <td>Tranchants</td>
-                            <td>12</td>
-                            <td>8</td>
-                            <td>1d6</td>
+                            <td>11</td>
+                            <td>9</td>
+                            <td>1d8</td>
                             <td>x1,5</td>
                             <td>Polyvalente(1d8)</td>
                         </tr>
                         <tr>
                             <td colspan="2">Masses</td>
                             <td>Contondants</td>
-                            <td>11</td>
-                            <td>8</td>
-                            <td>1d6 (50% perce-armure)</td>
+                            <td>10</td>
+                            <td>9</td>
+                            <td>2d4 (premier dé perce-armure)</td>
                             <td>x1,5</td>
                             <td>Polyvalente(1d8)</td>
                         </tr>
                         <tr>
                             <td colspan="2">Lance</td>
                             <td>Perforants</td>
-                            <td>12</td>
                             <td>11</td>
-                            <td>1d6</td>
+                            <td>9</td>
+                            <td>1d8</td>
                             <td>x1,5</td>
                             <td>Polyvalente(1d8), Charge</td>
                         </tr>
                         <tr>
                             <td colspan="2">Faucilles</td>
                             <td>Tranchants</td>
-                            <td>13</td>
+                            <td>11</td>
                             <td>10</td>
-                            <td>1d6</td>
+                            <td>1d8</td>
                             <td>x1,5</td>
                             <td>Légère</td>
                         </tr>
                         <tr>
                             <td colspan="2">Pics de guerre</td>
                             <td>Perforants</td>
-                            <td>12</td>
-                            <td>8</td>
-                            <td>1d6 (50 % perce-armure)</td>
+                            <td>11</td>
+                            <td>9</td>
+                            <td>2d4 (premier dé perce-armure)</td>
                             <td>x1,5</td>
                             <td>Légère</td>
                         </tr>
                         <tr>
                             <td colspan="2">Fouet</td>
                             <td>Tranchants</td>
-                            <td>15</td>
+                            <td>12</td>
                             <td>/</td>
-                            <td>1d4</td>
+                            <td>1d6</td>
                             <td>x2</td>
                             <td>Légère, Allonge</td>
                         </tr>
@@ -1951,7 +1976,7 @@
                             <td>Tranchants ou Perforants</td>
                             <td>10</td>
                             <td>10</td>
-                            <td>1d10</td>
+                            <td>1d12</td>
                             <td>x1,5</td>
                             <td>À deux mains, Lourde</td>
                         </tr>
@@ -1960,7 +1985,7 @@
                             <td>Tranchants</td>
                             <td>11</td>
                             <td>9</td>
-                            <td>1d10</td>
+                            <td>1d12</td>
                             <td>x1,5</td>
                             <td>À deux mains, Lourde</td>
                         </tr>
@@ -1969,7 +1994,7 @@
                             <td>Tranchants</td>
                             <td>10</td>
                             <td>10</td>
-                            <td>1d10 </td>
+                            <td>1d12</td>
                             <td>x1,5</td>
                             <td>À deux mains, Lourde</td>
                         </tr>
@@ -1977,16 +2002,16 @@
                             <td colspan="2">Grands marteaux</td>
                             <td>Contondants</td>
                             <td>10</td>
-                            <td>8</td>
-                            <td>1d10 (50% perce-armure)</td>
+                            <td>9</td>
+                            <td>2d6 (premier dé perce-armure)</td>
                             <td>x1,5</td>
                             <td>À deux mains, Lourde</td>
                         </tr>
                         <tr>
                             <td colspan="2">Bâtons</td>
                             <td>Contondants</td>
-                            <td>12</td>
-                            <td>12</td>
+                            <td>11</td>
+                            <td>11</td>
                             <td>2d4 non létaux</td>
                             <td>x1,5</td>
                             <td>À deux mains</td>
@@ -1996,7 +2021,7 @@
                             <td>Tranchants</td>
                             <td>11</td>
                             <td>9</td>
-                            <td>1d8</td>
+                            <td>1d10</td>
                             <td>x1,5</td>
                             <td>Allonge, À deux mains</td>
                         </tr>
@@ -2006,27 +2031,27 @@
                         <tr>
                             <td colspan="2">Piques</td>
                             <td>Perforants</td>
-                            <td>12</td>
-                            <td>10</td>
-                            <td>1d8</td>
+                            <td>11</td>
+                            <td>9</td>
+                            <td>1d10</td>
                             <td>x1,5</td>
                             <td>Allonge, Charge</td>
                         </tr>
                         <tr>
                             <td colspan="2">Hallebardes</td>
                             <td>Tranchants ou Perforants</td>
-                            <td>12</td>
+                            <td>11</td>
                             <td>10</td>
-                            <td>1d8</td>
+                            <td>1d10</td>
                             <td>x1,5</td>
                             <td>Allonge, À deux mains</td>
                         </tr>
                         <tr>
                             <td colspan="2">Fauchard</td>
                             <td>Tranchants</td>
-                            <td>12</td>
+                            <td>11</td>
                             <td>10</td>
-                            <td>1d8</td>
+                            <td>1d10</td>
                             <td>x1,5</td>
                             <td>Allonge, À deux mains</td>
                         </tr>
@@ -2034,11 +2059,12 @@
                     </table>
 
                     <p class="caption" onclick="hideContent(this)" id="table_armes_lancer">Armes de lancer</p>
-                    <table width="90%" class="hidden">
+                    <table width="95%" class="hidden">
                         <thead>
                         <tr>
                             <th>Catégorie</th>
                             <th>Type de Dégâts</th>
+                            <th>Précision</th>
                             <th>Dégâts</th>
                             <th>Portée</th>
                             <th>Critique</th>
@@ -2048,28 +2074,32 @@
                         <tr>
                             <td>Couteaux</td>
                             <td>Tranchants, Perforants</td>
-                            <td>1d6</td>
+                            <td>12</td>
+                            <td>1d8</td>
                             <td>10m/20m</td>
                             <td>x2</td>
                         </tr>
                         <tr>
                             <td>Hachette</td>
                             <td>Tranchants</td>
-                            <td>1d8</td>
+                            <td>11</td>
+                            <td>1d10</td>
                             <td>10m/18m</td>
                             <td>x2</td>
                         </tr>
                         <tr>
                             <td>Javelots</td>
                             <td>Perforants</td>
-                            <td>1d8</td>
+                            <td>11</td>
+                            <td>1d10</td>
                             <td>15m/35m</td>
                             <td>x2</td>
                         </tr>
                         <tr>
                             <td>Fléchettes</td>
                             <td>Perforants</td>
-                            <td>1d4</td>
+                            <td>12</td>
+                            <td>1d6</td>
                             <td>10m/25m</td>
                             <td>x2</td>
                         </tr>
@@ -2077,11 +2107,12 @@
                     </table>
 
                     <p class="caption" onclick="hideContent(this)" id="table_armes_distance">Armes à distance</p>
-                    <table width="90%" class="hidden">
+                    <table width="95%" class="hidden">
                         <thead>
                         <tr>
                             <th>Catégorie</th>
                             <th>Type de Dégâts</th>
+                            <th>Précision</th>
                             <th>Dégâts</th>
                             <th>Portée</th>
                             <th>Munitions</th>
@@ -2093,7 +2124,8 @@
                         <tr>
                             <td>Fronde</td>
                             <td>Contondants</td>
-                            <td>1d4 non-létaux</td>
+                            <td>11</td>
+                            <td>1d6 non-létaux</td>
                             <td>25m/75m</td>
                             <td>Pierres</td>
                             <td>x2,5</td>
@@ -2102,7 +2134,8 @@
                         <tr>
                             <td>Sarbacane</td>
                             <td>Perforants</td>
-                            <td>1d4</td>
+                            <td>12</td>
+                            <td>1d6</td>
                             <td>10m/20m</td>
                             <td>Aiguilles</td>
                             <td>x2,5</td>
@@ -2111,7 +2144,8 @@
                         <tr>
                             <td>Arc Court</td>
                             <td>Perforants</td>
-                            <td>1d6</td>
+                            <td>12</td>
+                            <td>1d8</td>
                             <td>25m/75m</td>
                             <td>Flèches</td>
                             <td>x2,5</td>
@@ -2120,7 +2154,8 @@
                         <tr>
                             <td>Arc Long</td>
                             <td>Perforants</td>
-                            <td>1d8</td>
+                            <td>11</td>
+                            <td>1d10</td>
                             <td>50m/120m</td>
                             <td>Flèches</td>
                             <td>x2,5</td>
@@ -2129,7 +2164,8 @@
                         <tr>
                             <td>Arbalète</td>
                             <td>Perforants</td>
-                            <td>1d8</td>
+                            <td>12</td>
+                            <td>1d10</td>
                             <td>30m/100m</td>
                             <td>Carreaux</td>
                             <td>x2,5</td>
@@ -2138,7 +2174,8 @@
                         <tr>
                             <td>Arbalète lourde</td>
                             <td>Perforants</td>
-                            <td>1d12</td>
+                            <td>11</td>
+                            <td>2d8</td>
                             <td>75m/150m</td>
                             <td>Carreaux</td>
                             <td>x2,5</td>
@@ -2147,18 +2184,20 @@
                         <tr>
                             <td>Arbalète à main</td>
                             <td>Perforants</td>
-                            <td>1d6</td>
+                            <td>11</td>
+                            <td>1d8</td>
                             <td>20m/40m</td>
                             <td>Carreaux</td>
                             <td>x2,5</td>
                             <td>Chargement (mouvement)</td>
                         </tr>
                         <tr>
-                            <th colspan="7">Artillerie</th>
+                            <th colspan="8">Artillerie</th>
                         </tr>
                         <tr>
                             <td>Baliste légère</td>
                             <td>Perforants</td>
+                            <td>12</td>
                             <td>3d8</td>
                             <td>125m</td>
                             <td>Grands carreaux</td>
@@ -2168,7 +2207,8 @@
                         <tr>
                             <td>Baliste lourde</td>
                             <td>Perforants</td>
-                            <td>4d8</td>
+                            <td rowspan="3">/</td>
+                            <td>4d10</td>
                             <td>200m</td>
                             <td>Grands carreaux</td>
                             <td>/</td>
@@ -2196,10 +2236,11 @@
                     </table>
 
                     <p class="caption" onclick="hideContent(this)" id="table_arme_feu">Armes à feu</p>
-                    <table width="90%" class="hidden">
+                    <table width="95%" class="hidden">
                         <thead>
                         <tr>
                             <th>Catégorie</th>
+                            <th>Précision</th>
                             <th>Dégâts</th>
                             <th>Portée</th>
                             <th>Critique</th>
@@ -2209,11 +2250,12 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <th colspan="6">Armes à une main</th>
+                            <th colspan="7">Armes à une main</th>
                         </tr>
                         <tr>
                             <td>Pistolet de poche</td>
-                            <td>1d6</td>
+                            <td>11</td>
+                            <td>1d8</td>
                             <td>10m/25m</td>
                             <td>x2,5</td>
                             <td>1</td>
@@ -2221,7 +2263,8 @@
                         </tr>
                         <tr>
                             <td>Pistolet à silex</td>
-                            <td>1d8</td>
+                            <td>12</td>
+                            <td>1d10</td>
                             <td>20m/50m</td>
                             <td>x2,5</td>
                             <td>1</td>
@@ -2229,7 +2272,8 @@
                         </tr>
                         <tr>
                             <td>Pistolet à double canon</td>
-                            <td>1d8</td>
+                            <td>12</td>
+                            <td>1d10</td>
                             <td>20m/50m</td>
                             <td>x2,5</td>
                             <td>2</td>
@@ -2237,7 +2281,8 @@
                         </tr>
                         <tr>
                             <td>Poivrière</td>
-                            <td>1d8</td>
+                            <td>11</td>
+                            <td>1d10</td>
                             <td>10m/20m</td>
                             <td>x2</td>
                             <td>6</td>
@@ -2245,7 +2290,8 @@
                         </tr>
                         <tr>
                             <td>Pétoire</td>
-                            <td>2d4</td>
+                            <td>10</td>
+                            <td>2d6</td>
                             <td>6m/12m</td>
                             <td>x2</td>
                             <td>1</td>
@@ -2253,18 +2299,20 @@
                         </tr>
                         <tr>
                             <td>Targe pistolet</td>
-                            <td>1d6</td>
+                            <td>11</td>
+                            <td>1d8</td>
                             <td>6m/15m</td>
                             <td>x2</td>
                             <td>2</td>
                             <td>Se fixe à l'avant bras et n'occupe pas de main</td>
                         </tr>
                         <tr>
-                            <th colspan="6">Armes à deux mains</th>
+                            <th colspan="7">Armes à deux mains</th>
                         </tr>
                         <tr>
                             <td>Mousquet</td>
-                            <td>1d12</td>
+                            <td>12</td>
+                            <td>2d8</td>
                             <td>50m/100m</td>
                             <td>x3</td>
                             <td>1</td>
@@ -2272,7 +2320,8 @@
                         </tr>
                         <tr>
                             <td>Mousquet à double canon</td>
-                            <td>1d12</td>
+                            <td>12</td>
+                            <td>2d8</td>
                             <td>50m/100m</td>
                             <td>x2,5</td>
                             <td>1</td>
@@ -2280,17 +2329,19 @@
                         </tr>
                         <tr>
                             <td>Tromblon</td>
-                            <td>3d4</td>
+                            <td>11</td>
+                            <td>3d6</td>
                             <td>10m/20m</td>
                             <td>x2</td>
                             <td>1</td>
                             <td>À deux mains, Dispersion</td>
                         </tr>
                         <tr>
-                            <th colspan="6">Artillerie</th>
+                            <th colspan="7">Artillerie</th>
                         </tr>
                         <tr>
                             <td>Canon</td>
+                            <td rowspan="4">/</td>
                             <td>6d10</td>
                             <td>450m</td>
                             <td>/</td>
@@ -2322,13 +2373,13 @@
                             <td>4 tours de rechargement</td>
                         </tr>
                         <tr>
-                            <td colspan="6">Les armes à feu infligent des dégâts contondants et perforants. Elles requierent de la poudre noire pour fonctionner (une dose par canon, dix pour l'artillerie). Une dose correspond à 10g de poudre noire. Les armes à dispersion utilisent des plombs, les autres des balles en métal. Toutes les armes à feu possèdent le trait Chargement, les armes à une main nécessitent une action simple par canon, les armes à deux mains une action complexe par canon.</td>
+                            <td colspan="7">Les armes à feu infligent des dégâts contondants et perforants. Elles requierent de la poudre noire pour fonctionner (une dose par canon, dix pour l'artillerie). Une dose correspond à 10g de poudre noire. Les armes à dispersion utilisent des plombs, les autres des balles en métal. Toutes les armes à feu possèdent le trait Chargement, les armes à une main nécessitent une action simple par canon, les armes à deux mains une action complexe par canon.</td>
                         </tr>
                         </tbody>
                     </table>
 
                     <p class="caption" onclick="hideContent(this)" id="table_boucliers">Boucliers</p>
-                    <table width="90%" class="hidden">
+                    <table width="95%" class="hidden">
                         <thead>
                         <tr>
                             <th>Catégorie</th>
@@ -2344,21 +2395,21 @@
                         </tr>
                         <tr>
                             <td>Bocle</td>
-                            <td>13</td>
-                            <td>13</td>
-                            <td rowspan="3">1d4 non-létal</td>
+                            <td>11</td>
+                            <td>11</td>
+                            <td rowspan="3">1d6 non-létal</td>
                             <td>/</td>
                         </tr>
                         <tr>
                             <td>Rondache</td>
+                            <td>10</td>
                             <td>12</td>
-                            <td>14</td>
                             <td>Atq -1</td>
                         </tr>
                         <tr>
                             <td>Targe</td>
                             <td>11</td>
-                            <td>12</td>
+                            <td>11</td>
                             <td>Se fixe à l'avant bras et n'occupe pas de main</td>
                         </tr>
                         <tr>
@@ -2367,26 +2418,26 @@
                         <tr>
                             <td>Écu</td>
                             <td>10</td>
-                            <td>15</td>
-                            <td rowspan="4">1d4 non-létal</td>
+                            <td>13</td>
+                            <td rowspan="4">1d8 non-létal</td>
                             <td>Atq -2</td>
                         </tr>
                         <tr>
                             <td>Parma</td>
-                            <td>11</td>
-                            <td>14</td>
+                            <td>10</td>
+                            <td>13</td>
                             <td>Atq -2</td>
                         </tr>
                         <tr>
                             <td>Bouclier Viking</td>
                             <td>11</td>
-                            <td>15</td>
+                            <td>13</td>
                             <td>Atq -2</td>
                         </tr>
                         <tr>
                             <td>Bouclier en amande</td>
                             <td>10</td>
-                            <td>15</td>
+                            <td>13</td>
                             <td>Atq -2</td>
                         </tr>
                         <tr>
@@ -2395,14 +2446,14 @@
                         <tr>
                             <td>Pavois</td>
                             <td>9</td>
-                            <td>16</td>
-                            <td rowspan="2">1d6 non-létal</td>
+                            <td>14</td>
+                            <td rowspan="2">1d8 non-létal</td>
                             <td>Atq -3</td>
                         </tr>
                         <tr>
                             <td>Égide</td>
                             <td>9</td>
-                            <td>16</td>
+                            <td>14</td>
                             <td>Atq -3</td>
                         </tr>
                         </tbody>
@@ -2610,7 +2661,7 @@
                         <tr>
                             <td>Heaume de métal</td>
                             <td>3</td>
-                            <td>DEX - 2 pour tirer</td>
+                            <td>PRÉ - 2</td>
                             <td>4</td>
                         </tr>
                         <tr>
@@ -2670,7 +2721,7 @@
                         <tr>
                             <td>Brassards, cubitières et spallières de métal</td>
                             <td>3</td>
-                            <td>DEX - 1 Atq - 1 Prd -1</td>
+                            <td>DEX - 1 Prd -1</td>
                             <td>4</td>
                         </tr>
                         <tr>
@@ -2700,7 +2751,7 @@
                         <tr>
                             <td>Gantelets complet de métal</td>
                             <td>3</td>
-                            <td>DEX -1 Atq -1 Prd -1</td>
+                            <td>DEX -1 Atq -1</td>
                             <td>4</td>
                         </tr>
                         <tr>
@@ -2733,8 +2784,9 @@
         <h1 id="materiel" onclick="hideContent(this)">Matériel</h1>
         <div>
             <p>Pour partir à l'aventure et y trouver un profit, il faut un investissement de départ pour acheter le matériel nécessaire à savoir un sac ou au moins une sacoche, un sac de couchage ainsi que de quoi manger et boire.</p>
-            <p>La charge d'équipement et de matériel maximale qu'un aventurier peut supporter équivaux à 5 fois la moyenne entre sa valeur de constitution et de force. La charge d'un aventurier peut être légère, intermédiaire ou lourde. La charge est légère si elle est inférieure à 40% de la charge maximale, intermédiaire si entre 40% et 70%, lourde au délà.</p>
+            <p>La charge d'équipement et de matériel maximale qu'un aventurier peut supporter équivaux à 3,5 fois la moyenne entre sa valeur de constitution et de force. La charge d'un aventurier peut être légère, intermédiaire ou lourde. La charge est légère si elle est inférieure à 40% de la charge maximale, intermédiaire si entre 40% et 70%, lourde au délà.</p>
             <p>Si il porte une charge légère, l'aventurier n'est pas génée par le poids, il ne subit donc aucun malus. Si sa charge est intermédiaire, sa vitesse de déplacement diminue d'un mètre. Si elle est lourde, sa vitesse diminue encore d'un mètre pour un total de 2 et il effectue toutes les épreuves physiques avec un désavantage.</p>
+            <p>Si un aventurier souhaite se déplacer plus vite, il peut toujours enlever son sac le temps d'un combat et aller le récupérer plus tard.</p>
             <p>Retrouvez les listes d'équipement sur la page <a href="Objets.xhtml">Objets</a>.</p>
         </div>
     </div>

@@ -8,6 +8,7 @@
     <meta http-equiv="Content-Script-Type" content="application/javascript"/>
     <script type="application/javascript" src="../../../Javascript/fonctions_accueil_plan.js"> </script>
     <link rel="stylesheet" type="text/css" title="style_plan" href="../../../Styles/common_rules.css"/>
+    <link rel="icon" type="image/ico" href="../../../../favicon.ico"/>
 </head>
 <body>
 <div id="mySidenav" class="sidenav" style="display: block">
@@ -51,6 +52,7 @@
             <ul>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
                     <ul class="hidden">
+                        <li><span class="little"><a href="Rules.xhtml#resolution_action">Résolution des actions</a></span></li>
                         <li><span class="little"><a href="Rules.xhtml#Combat">Combat</a></span></li>
                         <li><span class="little"><a href="Rules.xhtml#Magie">Magie</a></span></li>
                         <li><span class="little"><a href="Rules.xhtml#Survie">Survie</a></span></li>
@@ -263,19 +265,17 @@
         <h3 id="saignement" onclick="hideContent(this)">Saignement</h3>
         <div>
             <p>La créature se met à saigner et subit des dommages au début de chaque round.</p>
-            <p>Il est possible d’arrêter l’hémorragie en réussissant un test de Medecine ou en utilisant un sort curatif. Il arrive parfois que le personnage subisse un saignement qui lui inflige des affaiblissements temporaires ou des diminutions permanentes de caractéristique. Ces dégâts ne se cumulent pas, sauf s’ils sont de nature différente. Lorsque deux sources infligent des hémorragies de même nature, appliquez le résultat le plus handicapant.</p>
+            <p>Il est possible d’arrêter l’hémorragie en réussissant un test de Medecine (CR selon la gravité de la blesure) ou en utilisant un sort curatif. Il arrive parfois que le personnage subisse un saignement qui lui inflige des affaiblissements temporaires ou des diminutions permanentes de caractéristique. Ces dégâts ne se cumulent pas, sauf s’ils sont de nature différente. Lorsque deux sources infligent des hémorragies de même nature, appliquez le résultat le plus handicapant.</p>
         </div>
 
         <h3 id="sans_defense" onclick="hideContent(this)">Sans défense</h3>
         <div>
             <p>Un personnage peut se retrouver paralysé, immobilisé par un sort, ligoté, endormi, inconscient ou à la merci de ses ennemis d’une façon ou d’une autre. Un personnage sans défense possède une valeur effective d'Agilité de 0. Toute attaque de corps à corps lancée contre le personnage s’effectue à +4 au jet (ce qui revient à attaquer un adversaire à terre). Les attaques à distance ne profitent d’aucun bonus.</p>
-            <p>Pour 3 PA, un ennemi peut essayer d’achever le personnage à l’aide d’une arme de corps à corps. On peut aussi porter un coup de grâce à l’aide d’un arc ou d’une arbalète, à condition de se trouver à moins de 1,50 m de l’individu sans défense (c’est-à-dire d’occuper une position adjacente). L’agresseur touche automatiquement et l’attaque est considérée comme un coup critique. Même si la cible survit, elle doit effectuer avec succès un jet de Vigueur (malus équivalent au nombre de points de dégâts infligés) sous peine de succomber au choc. Tenter d’achever un ennemi sans défense provoque une attaque d’opportunité.</p>
-            <p>Les créatures invulnérables aux coups critiques le sont également contre les tentatives de coup de grâce.</p>
         </div>
 
         <h3 id="secoue" onclick="hideContent(this)">Secoué</h3>
         <div>
-            <p>Le personnage reçoit un malus de -2 aux jets d’attaque et de sauvegarde, ainsi qu’aux tests de compétence et de caractéristique. Être secoué représente un état de terreur moins avancé qu’être effrayé ou paniqué.</p>
+            <p>Le personnage reçoit un malus de -2 aux jets d’attaque et de caractéristique, ainsi qu’aux tests de compétence et de caractéristique. Être secoué représente un état de terreur moins avancé qu’être effrayé ou paniqué.</p>
         </div>
 
         <h3 id="stable" onclick="hideContent(this)">Stable</h3>
