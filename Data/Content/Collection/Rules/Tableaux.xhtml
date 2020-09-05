@@ -1051,7 +1051,6 @@
     <div>
         <p>Ici sont répertoriés quelques règles pour les manoeuvres spéciales en combat, la liste n'est pas exhaustive et les joueurs sont encouragés à chercher toujours plus d'actions en combat. Par exemple, si on a une main libre, on peut écarter le bouclier de son adversaire, lui projetter du sable dans les yeux, lui baisser son pantalon ou lui dérober un objet à sa ceinture.</p>
         <p>La répétition et l'abus de ces manoeuvres les rendent de moins en moins efficaces, les ennemis seront capables de s'y préparer et se défendront plus facilement.</p>
-        <p>Tout les jets prennent en compte la <a href="Rules.xhtml#marge_reussite">marge de réussite</a> pour déterminer si le coup est une réussite ou non.</p>
         <p>Si rien n'est précisé en cas de réussite/échec critique, on considère que le MJ décide du résultat.</p>
         <p id="arts_du_combat_basiques" class="caption" onclick="hideContent(this)">Arts du combat basiques</p>
         <div>
@@ -1091,7 +1090,7 @@
                     <th>Coup dans les yeux</th>
                     <td>Avec un rapide coup de dague au visage, le héros aveugle momentanément son adversaire</td>
                     <td>Dague<br/>Cible sans casque</td>
-                    <td>Action simple :<br/>Jet d'Atq à -5</td>
+                    <td>Action simple :<br/>Jet d'Atq à -4</td>
                     <td>Parade/Esquive à +2</td>
                     <td>cible aveuglée partiellement : Atq et Prd -4 (3 tours)</td>
                     <td>R: Dégâts + 2, cible aveugle 5 tours<br/>E: /</td>
@@ -1100,7 +1099,7 @@
                     <th>Désarmement</th>
                     <td>Le héros lutte habilement pour ôter son arme à son adversaire</td>
                     <td>Après une attaque réussie</td>
-                    <td>Action bonus : moyenne DEX/FOR</td>
+                    <td>Action bonus : DEX ou FOR</td>
                     <td>DEX</td>
                     <td>La cible est désarmée</td>
                     <td>R: /<br/>E: Le héros fait tomber son arme à ses pieds.</td>
@@ -1117,7 +1116,7 @@
                     <th>Fente</th>
                     <td>Le héros s'appuie sur sa jambe avant pour frapper de loin</td>
                     <td>Arme de corps-à-corps pouvant infliger des dégâts perforants</td>
-                    <td>Action simple :<br/>Jet d'attaque se basant sur la moyenne entre l'Atq et l'AGI</td>
+                    <td>Action simple :<br/>Jet d'attaque (bonus malus égal à la moyenne entre celui d'Atq et d'AGI)</td>
                     <td>Parade/Esquive classique</td>
                     <td>La portée augmente d'un mètre</td>
                     <td>R: /<br/>E: Le héros trébuche et tombe au sol</td>
@@ -1126,7 +1125,7 @@
                     <th>Lacération</th>
                     <td>Le héros frappe pour ouvrir les veines de son adversaire</td>
                     <td>Cible sans armure à l'endroit ciblé</td>
-                    <td>Action simple :<br/>Jet d'Atq -3, les dégâts sont divisés par deux</td>
+                    <td>Action simple :<br/>Jet d'Atq à -2, les dégâts sont divisés par deux</td>
                     <td>Parade/Esquive classsique, si le coup touche, épreuve de CON pour contrer le saignement</td>
                     <td>la cible saigne (1d6/tour) pendant 3 tours</td>
                     <td>R: 5 tours de saignement<br/>E: /</td>
@@ -1154,15 +1153,15 @@
                     <td>/</td>
                     <td>Action bonus : ELO</td>
                     <td>/</td>
-                    <td>Les alliés récupèrent 1d6+(ELO du héros-10) PV temporaires</td>
+                    <td>Les alliés récupèrent 1d6+(modificateur d'ELO du héros) PV temporaires</td>
                     <td>R: PV temporaires récupérés doublés<br/>E: Le héros baisse sa garde et subit une attaque d'opportunité</td>
                 </tr>
                 <tr>
                     <th>Repositionnement</th>
                     <td>Le héros lutte pour déplacer son adversaire</td>
                     <td>/</td>
-                    <td>Action de mouvement : moyenne DEX/FOR</td>
-                    <td>moyenne AGI/CON</td>
+                    <td>Action de mouvement : DEX ou FOR</td>
+                    <td>AGI ou CON</td>
                     <td>La cible est déplacée de 1m + 1m par 2 points de marge de réussite.</td>
                     <td>R: /<br/>E: /</td>
                 </tr>
@@ -1179,9 +1178,9 @@
                     <th>Tranche-tendons</th>
                     <td>Le héros frappe la cible dans les articulations des jambes pour l'empêcher de bouger.</td>
                     <td>/</td>
-                    <td>Action simple :<br/>Jet d'attaque d'Atq à -5</td>
+                    <td>Action simple :<br/>Jet d'attaque d'Atq à -4</td>
                     <td>Parade/Esquive à -2</td>
-                    <td>Déplacement de la cible limité à  un mètre par round</td>
+                    <td>Déplacement de la cible limité à un mètre par round</td>
                     <td>R: dégâts + 3<br/>E: /</td>
                 </tr>
                 </tbody>
@@ -1215,7 +1214,7 @@
                     <th>Tir précis</th>
                     <td>L'arbalétrier prend son temps pour viser sa cible</td>
                     <td>/</td>
-                    <td>Action complexe :<br/>Tir à DEX +2</td>
+                    <td>Action complexe :<br/>Tir à +2</td>
                     <td>/</td>
                     <td>Dégâts normaux</td>
                     <td>R : /<br/>E : /</td>
@@ -1239,7 +1238,7 @@
                     <th>Tir rapide</th>
                     <td>L'arbalétrier effectue un tir rapide à la hanche</td>
                     <td>/</td>
-                    <td>Action bonus :<br/>Tir avec DEX-3</td>
+                    <td>Action bonus :<br/>Tir à -3</td>
                     <td>/</td>
                     <td>Dégâts normaux</td>
                     <td>R : /<br/>E : /</td>
@@ -1263,7 +1262,7 @@
                     <th>Tir précis</th>
                     <td>L'archer prend son temps pour viser sa cible</td>
                     <td>/</td>
-                    <td>Action complexe :<br/>Tir à DEX +2</td>
+                    <td>Action complexe :<br/>Tir à +2</td>
                     <td>/</td>
                     <td>Dégâts normaux</td>
                     <td>R : /<br/>E : /</td>
@@ -1314,7 +1313,7 @@
                     <th>Coup mortel</th>
                     <td>L'assassin élimine une cible incapable de se défendre</td>
                     <td>Cible vulnérable(aveuglée, immobilisée, inconscient, etc...)</td>
-                    <td>Acton complexe :<br/>Jet d'Atq à -5</td>
+                    <td>Acton complexe :<br/>Jet d'Atq à -4</td>
                     <td>Jet de Vigueur</td>
                     <td>Mort instantanée de la cible</td>
                     <td>R : /<br/>E : /</td>
@@ -1384,7 +1383,7 @@
                     <td>À l'aide de son arme, le faucheur force sa cible à se déplacer sous peine de subir une autre blessure</td>
                     <td>Après une attaque réussie</td>
                     <td>Action de mouvement :<br/>DEX pour coincer l'adversaire puis FOR pour le tirer</td>
-                    <td>AGI pour passer sous la lame ou CON pour résister au déplacement</td>
+                    <td>AGI pour passer sous la lame puis CON pour résister au déplacement</td>
                     <td>La cible est déplacée de 1m + 1m par 2 points de marge de réussite</td>
                     <td>R : /<br/>E : /</td>
                 </tr>
@@ -1422,7 +1421,7 @@
                     <th>Tir précis</th>
                     <td>Le fusilier prend son temps pour viser sa cible</td>
                     <td>/</td>
-                    <td>Action complexe :<br/>Tir à DEX +2</td>
+                    <td>Action complexe :<br/>Tir à +2</td>
                     <td>/</td>
                     <td>Dégâts normaux</td>
                     <td>R : /<br/>E : /</td>
@@ -1451,7 +1450,7 @@
                     <td>/</td>
                     <td>Action de mouvement :<br/>Aucune épreuve pour se préparer</td>
                     <td>/</td>
-                    <td>Le hallebardier peut porter une attaque d'opportunité (avec un bonus de 2) supplémentaire sur un adversaire pénétrant sa zone de contrôle.</td>
+                    <td>Le hallebardier peut porter une attaque d'opportunité (avec un bonus de 2 à l'Atq) supplémentaire sur un adversaire pénétrant sa zone de contrôle.</td>
                     <td>R : /<br/>E : /</td>
                 </tr>
                 <tr>
@@ -1488,7 +1487,7 @@
                     <th>Tir précis</th>
                     <td>Le lanceur prend son temps pour viser sa cible</td>
                     <td>/</td>
-                    <td>Action complexe :<br/>Tir à DEX +2</td>
+                    <td>Action complexe :<br/>Tir à +2</td>
                     <td>/</td>
                     <td>Dégâts normaux</td>
                     <td>R : /<br/>E : /</td>
@@ -1517,7 +1516,7 @@
                     <td>/</td>
                     <td>Action de mouvement :<br/>Aucune épreuve pour se préparer</td>
                     <td>/</td>
-                    <td>Le lancier peut porter une attaque d'opportunité (avec un bonus de 2) supplémentaire sur un adversaire pénétrant sa zone de contrôle.</td>
+                    <td>Le lancier peut porter une attaque d'opportunité (avec un bonus de 2 à l'Atq) supplémentaire sur un adversaire pénétrant sa zone de contrôle.</td>
                     <td>R : /<br/>E : /</td>
                 </tr>
                 <tr>
@@ -1620,7 +1619,7 @@
                     <th>Tir précis</th>
                     <td>Le pistolier prend son temps pour viser sa cible</td>
                     <td>/</td>
-                    <td>Action complexe :<br/>Tir à DEX +2</td>
+                    <td>Action complexe :<br/>Tir à +2</td>
                     <td>/</td>
                     <td>Dégâts normaux</td>
                     <td>R : /<br/>E : /</td>
@@ -1644,7 +1643,7 @@
                     <th>Tir rapide</th>
                     <td>Le pistolier effectue un tir rapide à la hanche</td>
                     <td>/</td>
-                    <td>Action bonus :<br/>Tir avec DEX-3</td>
+                    <td>Action bonus :<br/>Tir à -2</td>
                     <td>/</td>
                     <td>Dégâts normaux</td>
                     <td>R : /<br/>E : /</td>
@@ -1659,7 +1658,7 @@
                     <th>Tir précis</th>
                     <td>Le tirailleur prend son temps pour viser sa cible</td>
                     <td>/</td>
-                    <td>Action complexe :<br/>Tir à DEX +2</td>
+                    <td>Action complexe :<br/>Tir à +2</td>
                     <td>/</td>
                     <td>Dégâts normaux</td>
                     <td>R : /<br/>E : /</td>
@@ -1739,47 +1738,8 @@
                     <td>En rage</td>
                     <td>Action bonus: CON</td>
                     <td>/</td>
-                    <td>Récupère sa valeur de constitution en PV, fin de rage</td>
+                    <td>Récupère 1d8+modificateur de CON, fin de rage</td>
                     <td>R : +50% de PV récupérés<br/>E : Perte de contrôle (1 tour)</td>
-                </tr>
-                <tr>
-                    <th rowspan="7">Spadassin</th>
-                </tr>
-                <tr>
-                    <th rowspan="2">Novice</th>
-                </tr>
-                <tr id="double_frappe">
-                    <th>Double frappe</th>
-                    <td>Le spadassin frappe son adversaire avec chacune de ses armes</td>
-                    <td>/</td>
-                    <td>Action simple :<br/>1er coup : Attaque classique<br/>2ème coup : Jet d'Atq à -2</td>
-                    <td>1er coup : parade/esquive classique<br/>2ème coup : parade/esquive à -2</td>
-                    <td>Autant de jets que d'attaques réussies</td>
-                    <td>R : /<br/>E : /</td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Apprenti</th>
-                </tr>
-                <tr id="atq_deux_temps">
-                    <th>Attaque en deux temps</th>
-                    <td>Le spadassin bloque l'arme de son adversaire avec une arme et frappe de l'autre</td>
-                    <td>Cible sans bouclier, à une arme</td>
-                    <td>Action simple :<br/>2 attaques classiques</td>
-                    <td>La cible ne peut parer qu'une attaque mais peut esquiver l'autre.</td>
-                    <td>Autant de jets que d'attaques réussies</td>
-                    <td>R : /<br/>E : /</td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Adepte</th>
-                </tr>
-                <tr id="triple_frappe">
-                    <th>Triple frappe</th>
-                    <td>Le héros délivre un déluge de coup sur son adversaires et frappe trois fois</td>
-                    <td>/</td>
-                    <td>Action complexe :<br/>1er coup : Attaque classique<br/>2ème coup : Jet d'Atq à -2<br/>3ème coup : Jet d'atq à -4</td>
-                    <td>Parade/Esquive classique pour chaque frappe</td>
-                    <td>Autant de jets que d'attaques réussies</td>
-                    <td>R : /<br/>E : /</td>
                 </tr>
                 </tbody>
             </table>
