@@ -140,7 +140,7 @@
 
         <h3 id="aveugle" onclick="hideContent(this)">Aveuglé</h3>
         <div>
-            <p>Le personnage ne voit plus rien. Il subit un malus de -2 à la parade/esquive, perd son éventuel bonus de Agilité/Dextérité/Constitution pour les esquives et les parades, et subit un malus de -4 sur ses tests de Perception et de la plupart des compétences associées à la Force et à la Dextérité. Il ne peut pas effectuer le moindre test de compétence nécessitant d’y voir (comme lire ou utiliser une compétence de Perception basée sur la vue). Tous ses adversaires bénéficient d’un camouflage total à son égard (50 % de risques de manquer son jet d'attaque). Un personnage aveuglé se déplace à la moitié de sa vitesse habituelle (test d’Agilité pour se déplacer plus vite). Une créature qui rate ce test tombe à terre. Un personnage aveuglé pendant suffisamment longtemps peut s’habituer partiellement à sa condition et circonvenir certains de ces désavantages.</p>
+            <p>Le personnage ne voit plus rien. Il subit un malus de -2 à la parade/esquive, perd son éventuel bonus de Agilité/Dextérité/Vigueur pour les esquives et les parades, et subit un malus de -4 sur ses tests de Perception et de la plupart des compétences associées à la Force et à la Dextérité. Il ne peut pas effectuer le moindre test de compétence nécessitant d’y voir (comme lire ou utiliser une compétence de Perception basée sur la vue). Tous ses adversaires bénéficient d’un camouflage total à son égard (50 % de risques de manquer son jet d'attaque). Un personnage aveuglé se déplace à la moitié de sa vitesse habituelle (test d’Agilité pour se déplacer plus vite). Une créature qui rate ce test tombe à terre. Un personnage aveuglé pendant suffisamment longtemps peut s’habituer partiellement à sa condition et circonvenir certains de ces désavantages.</p>
         </div>
 
         <h3 id="confus" onclick="hideContent(this)">Confus</h3>
@@ -208,7 +208,7 @@
 
         <h3 id="inconscient" onclick="hideContent(this)">Inconscient</h3>
         <div>
-            <p>Un personnage inconscient est sans connaissance et sans défense. Un personnage sombre dans l’inconscience quand son total de points de vie tombe en dessous de 0 (mais pas plus que sa valeur de Constitution), mais aussi quand il encaisse plus de points de dégâts non-létaux qu’il lui reste de points de vie.</p>
+            <p>Un personnage inconscient est sans connaissance et sans défense. Un personnage sombre dans l’inconscience quand son total de points de vie tombe en dessous de 0 (mais pas plus que sa valeur de Vigueur), mais aussi quand il encaisse plus de points de dégâts non-létaux qu’il lui reste de points de vie.</p>
         </div>
 
         <h3 id="intagible" onclick="hideContent(this)">Intagible</h3>
@@ -218,17 +218,17 @@
 
         <h3 id="invisible" onclick="hideContent(this)">Invisible</h3>
         <div>
-            <p>Indétectable à l’œil nu. Les créatures invisibles bénéficient d’un bonus de +2 aux jets d’attaque et leur cible perd son éventuel bonus de Agilité/Dextérité/Constitution pour une esquive/parade.</p>
+            <p>Indétectable à l’œil nu. Les créatures invisibles bénéficient d’un bonus de +2 aux jets d’attaque et leur cible perd son éventuel bonus de Agilité/Dextérité/Vigueur pour une esquive/parade.</p>
         </div>
 
         <h3 id="mort" onclick="hideContent(this)">Mort</h3>
         <div>
-            <p>Le personnage est arrivé à un total de points de vie négatifs égal à sa valeur de Constitution ou une valeur de Constitution de 0, ou a directement été achevé par un sort, un effet ou des dégâts excessifs. La psyché du personnage quitte son enveloppe corporelle. On ne peut plus soigner un personnage mort que ce soit par des moyens ordinaires ou magiques, mais il peut être ramené à la vie par magie. Un corps sans vie se décompose normalement si on ne le préserve pas magiquement mais le sort qui le ramène à la vie la ramène à 0 point de vie dans un état stable.</p>
+            <p>Le personnage est arrivé à un total de points de vie négatifs égal à sa valeur de Vigueur. La psyché du personnage quitte son enveloppe corporelle. On ne peut plus soigner un personnage mort que ce soit par des moyens ordinaires ou magiques, mais il peut être ramené à la vie par magie. Un corps sans vie se décompose normalement si on ne le préserve pas magiquement mais le sort qui le ramène à la vie la ramène à 0 point de vie dans un état stable.</p>
         </div>
 
         <h3 id="mourant" onclick="hideContent(this)">Mourant</h3>
         <div>
-            <p>Le personnage est inconscient et en train de mourir. Une créature qui a un nombre de points de vie négatif et qui n’est pas stabilisée agonise. Une créature agonisante ne peut pas entreprendre la moindre action. À son tour à chaque round (en commençant par celui où il est tombé en dessous de 0 point de vie) et jusqu’à ce que sont état soit stable ou qu’il meure, le personnage doit faire un test de Constitution. Il subit un malus égal à son nombre de points de vie négatifs. Un personnage stabilisé n’a pas besoin de faire ce test. S’il le rate, il perd 1 point de vie. Une créature mourante meurt quand son nombre de points de vie négatifs égale sa valeur de Constitution.</p>
+            <p>Le personnage est inconscient et en train de mourir. Une créature qui a un nombre de points de vie négatif et qui n’est pas stabilisée agonise. Une créature agonisante ne peut pas entreprendre la moindre action. À son tour à chaque round (en commençant par celui où il est tombé en dessous de 0 point de vie) et jusqu’à ce que sont état soit stable ou qu’il meure, le personnage doit faire un test de Vigueur. Il subit un malus égal à son nombre de points de vie négatifs. Un personnage stabilisé n’a pas besoin de faire ce test. S’il le rate, il perd 1 point de vie. Une créature mourante meurt quand son nombre de points de vie négatifs égale sa valeur de Vigueur.</p>
         </div>
 
         <h3 id="nauseeux" onclick="hideContent(this)">Nauséeux</h3>
@@ -280,8 +280,8 @@
 
         <h3 id="stable" onclick="hideContent(this)">Stable</h3>
         <div>
-            <p>Un personnage qui était mourant mais qui a cessé de perdre des points de vie (et dont le total de points de vie est toujours négatif) est stable. Le personnage n’est plus mourant mais reste inconscient. S’il est devenu stable grâce à une assistance extérieure, il ne perd plus de points de vie. Chaque heure qui passe, il doit faire un jet de Constitution afin de reprendre ses esprits et de ne plus être que hors de combat (même si son total de points de vie reste négatif), en tenant compte d’un malus égal à son total de points de vie négatifs.</p>
-            <p>S’il est devenu stable sans aide extérieure, il risque de recommencer à perdre des points de vie. Chaque heure, il doit faire un jet de Constitution afin de rester stable (comme s’il recevait l’aide de quelqu’un), mais à chaque fois qu’il échoue, il perd 1 point de vie.</p>
+            <p>Un personnage qui était mourant mais qui a cessé de perdre des points de vie (et dont le total de points de vie est toujours négatif) est stable. Le personnage n’est plus mourant mais reste inconscient. S’il est devenu stable grâce à une assistance extérieure, il ne perd plus de points de vie. Chaque heure qui passe, il doit faire un jet de Vigueur afin de reprendre ses esprits et de ne plus être que hors de combat (même si son total de points de vie reste négatif), en tenant compte d’un malus égal à son total de points de vie négatifs.</p>
+            <p>S’il est devenu stable sans aide extérieure, il risque de recommencer à perdre des points de vie. Chaque heure, il doit faire un jet de Vigueur afin de rester stable (comme s’il recevait l’aide de quelqu’un), mais à chaque fois qu’il échoue, il perd 1 point de vie.</p>
         </div>
     </div>
 

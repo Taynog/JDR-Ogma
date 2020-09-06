@@ -470,8 +470,8 @@
             <div>
                 <p>Les dégâts n’affectent pas le personnage tant qu’il ne tombe pas à 0 PV. Si les PV d'une entité tombent à 1 ou que le total de dégâts non-létaux sont égaux à son nombre actuel de PV, l'entité devient chancelante et ne peut que se déplacer, toute autre action lui ferait perdre son dernier PV, ce qu'elle est en droit de faire.</p>
                 <p>Si les dégâts non létaux dépassent le nombre de points de vie restants du personnage, il s’effondre, inconscient. Il est alors hors de combat.</p>
-                <p>De 0 PV jusqu’à une valeur négative égale à sa valeur de Constitution, il est mourant.</p>
-                <p>Quand son total de PV négatifs est égal à sa valeur de Constitution, il meurt.</p>
+                <p>De 0 PV jusqu’à une valeur négative égale à sa valeur de Vigueur, il est mourant.</p>
+                <p>Quand son total de PV négatifs est égal à sa valeur de Vigueur, il meurt.</p>
                 <p>Un personnage hors de combat est inconscient et ne peut rien faire, son état est stable et il ne subit pas de dégâts au cours du temps(sauf si il est toujours sous les effets de dégâts continus (poison, feu, etc...)</p>
                 <p>Un personnage mourant sombre immédiatement dans l’inconscience et ne peut plus rien faire. Il perd 1 point de vie chaque round (et les dégâts continuels si il en subissait toujours les effets). Cela continue jusqu’à ce qu’il meure ou soit stabilisé. Si le personnage est stabilisé, il devient hors de combat</p>
                 <p>Stabiliser un personnage mourant en combat requiert de lui faire regagner des points de vie par quelque manière que ce soit (sorts, potions). À la fin d'un combat, les compagnons d'un personnage mourant peuvent prendre le temps de le stabiliser si ils possèdent des fournitures médicales (bandages, etc...).</p>
@@ -688,7 +688,7 @@
 
                         <h4>Tempêtes</h4>
                         <p>L’effet combiné du vent et des précipitations (ou du sable soulevé) diminue la visibilité de trois quarts, ce qui se traduit par un malus de -8 aux tests de Perception. Les attaques à distance sont impossibles, excepté à l’aide de machines de guerre (et encore se font-elles à -4). Les flammes à l’air libre sont instantanément éteintes, et celles qui sont protégées (lanternes, etc.) ont 50 % de chances d’être soufflées. Les tempêtes sont réparties en trois familles : tempêtes de sable, tempêtes de neige et orages.</p>
-                        <p><span class="underline">Tempête de sable :</span> Cette sorte de tempête est semblable aux autres à la différence qu’elle ne s’accompagne pas de précipitations. Au lieu de cela, le vent soulève le sable du désert, et c’est ce dernier qui réduit le champ de vision, étouffe les flammes à l’air libre et a 50 % de chances d’éteindre celles qui sont protégées. La plupart des tempêtes de sable sont accompagnées de vents violents et laissent derrière elles une couche de sable plus ou moins épaisse (1d6 x 2,5 cm). Chaque tempête de sable a toutefois 10 % de risques d’être d’une intensité bien supérieure à la normale, auquel cas elle s’accompagne de vents de tempête. Quiconque se trouve à découvert lorsqu’elle se déclenche subit 1d3 points de dégâts non-létaux par round et risque d’étouffer (voir noyade, si ce n’est qu’un personnage se protégeant la bouche et le nez, par exemple avec une écharpe, ne commence à étouffer qu’après un nombre de rounds égal à dix fois sa valeur de Constitution). Une tempête de sable aussi virulente laisse plusieurs dizaines de centimètres de sable sur son passage (jetez 2d3-1 et multipliez le résultat par 30 cm pour savoir l’épaisseur exacte).</p>
+                        <p><span class="underline">Tempête de sable :</span> Cette sorte de tempête est semblable aux autres à la différence qu’elle ne s’accompagne pas de précipitations. Au lieu de cela, le vent soulève le sable du désert, et c’est ce dernier qui réduit le champ de vision, étouffe les flammes à l’air libre et a 50 % de chances d’éteindre celles qui sont protégées. La plupart des tempêtes de sable sont accompagnées de vents violents et laissent derrière elles une couche de sable plus ou moins épaisse (1d6 x 2,5 cm). Chaque tempête de sable a toutefois 10 % de risques d’être d’une intensité bien supérieure à la normale, auquel cas elle s’accompagne de vents de tempête. Quiconque se trouve à découvert lorsqu’elle se déclenche subit 1d3 points de dégâts non-létaux par round et risque d’étouffer (voir noyade, si ce n’est qu’un personnage se protégeant la bouche et le nez, par exemple avec une écharpe, ne commence à étouffer qu’après un nombre de rounds égal à dix fois sa valeur de Vigueur). Une tempête de sable aussi virulente laisse plusieurs dizaines de centimètres de sable sur son passage (jetez 2d3-1 et multipliez le résultat par 30 cm pour savoir l’épaisseur exacte).</p>
                         <p><span class="underline">Tempête de neige</span> En plus des vents et des précipitations, cette tempête dépose plusieurs centimètres de neige sur son passage (1d6 x 2,5 cm).</p>
                         <p><span class="underline">Orage :</span> En plus des vents et des précipitations (qui prennent le plus souvent la forme de pluie, même si les orages de grêle sont possibles), les orages s’accompagnant d’éclairs représentent un danger potentiel pour les personnages se trouvant à découvert quand les éléments se déchaînent (surtout pour ceux qui portent une armure métallique). Pour simplifier, considérez que la foudre frappe une fois par minute près du centre de l’orage, et ce pendant une heure. Chaque éclair inflige un nombre de points de dégâts d’électricité compris entre 4d8 et 10d8. Un orage sur dix se change en tornade.</p>
 
@@ -792,12 +792,12 @@
                 <div class="hidden">
                     <h4>L'acide</h4>
                     <p>L’acide inflige 1d6 points de dégâts par round d’exposition, excepté dans le cas d’une immersion totale (qui peut par exemple se produire si un aventurier tombe dans une grande vasque), laquelle occasionne 5d6 points de dégâts par round. Une attaque acide (salive de monstre, flasque lancée à la main, etc.) représente un round d’exposition.</p>
-                    <p>Les émanations libérées par la plupart des acides ont l’effet d’un poison fonctionnant par inhalation. Quiconque s’approche trop d’une vaste étendue d’acide doit réussir à chaque round un jet de vigueur sous peine de subir un affaiblissement temporaire de 1 point de Constitution par round. Ce poison n’a pas de fréquence, et n’agit plus dès qu’on s’en éloigne.</p>
+                    <p>Les émanations libérées par la plupart des acides ont l’effet d’un poison fonctionnant par inhalation. Quiconque s’approche trop d’une vaste étendue d’acide doit réussir à chaque round un jet de vigueur sous peine de subir un affaiblissement temporaire de 1 point de Vigueur par round. Ce poison n’a pas de fréquence, et n’agit plus dès qu’on s’en éloigne.</p>
                     <p>Les créatures immunisées contre l’acide risquent tout de même s’y noyer si elles sont totalement immergées.</p>
 
                     <h4>L'asphyxie</h4>
-                    <p>Un personnage n’ayant plus d’air à respirer peut retenir son souffle durant 2 rounds par point de Constitution. S'il entreprend une action simple ou une action complexe, le temps pendant lequel il peut retenir sa respiration est réduit d'un round.</p>
-                    <p>Au-delà, il doit tenter un test de Constitution chaque round pour continuer à retenir son souffle. Le premier test n'a pas de malus, puis le malus augmente de 1 à chaque round. Dès que le personnage manque un de ces tests, il commence à suffoquer. Au premier round, il perd connaissance et tombe à 0 pv. Le deuxième round, il glisse à -1 pv et est considéré comme mourant. Enfin, le troisième round, il meurt asphyxié.</p>
+                    <p>Un personnage n’ayant plus d’air à respirer peut retenir son souffle durant 2 rounds par point de Vigueur. S'il entreprend une action simple ou une action complexe, le temps pendant lequel il peut retenir sa respiration est réduit d'un round.</p>
+                    <p>Au-delà, il doit tenter un test de Vigueur chaque round pour continuer à retenir son souffle. Le premier test n'a pas de malus, puis le malus augmente de 1 à chaque round. Dès que le personnage manque un de ces tests, il commence à suffoquer. Au premier round, il perd connaissance et tombe à 0 pv. Le deuxième round, il glisse à -1 pv et est considéré comme mourant. Enfin, le troisième round, il meurt asphyxié.</p>
                     <p><span class="underline">Asphyxie lente :</span> Dans une pièce hermétiquement close de 3 m de côté, un personnage de taille M dispose de suffisamment d’air pour respirer durant six heures. Après, l’air vicié lui inflige 1d6 points de dégâts non-létaux toutes les quinze minutes. Chaque créature de Taille M supplémentaire (ou chaque source de feu importante, comme par exemple une torche) diminue proportionnellement la durée de survie. Une fois inconsciente, elle subira des dégâts létaux au même rythme, jusqu’à ce qu’elle meure.</p>
 
                     <h4>La chaleur</h4>
@@ -882,9 +882,9 @@
                     <p>Les dégâts de feu se prolongent pendant 1d3 rounds après la fin de l’exposition, mais ils sont deux fois moindres (1d6 ou 10d6 points par round, respectivement). Une immunité ou une résistance au feu protège aussi contre la lave ou le magma. Notez cependant qu’une créature immunisée ou résistante au feu peut parfaitement se noyer dans un bassin de lave.</p>
 
                     <h4>La noyade</h4>
-                    <p>Tout personnage peut retenir son souffle pendant un nombre de rounds égal au double de sa valeur de Constitution. S’il effectue une action autre que se déplacer, la durée au cours de laquelle le personnage peut retenir son souffle est réduite de 1 round. Après cela, il doit réussir un test de Constitution par round pour continuer à retenir son souffle. Le malus augmente de 1 à chaque round.</p>
-                    <p>Dès que le personnage manque un test de Constitution, il se noie. Durant le premier round, il tombe à 0 pv et perd connaissance. Le round d’après, il passe à -1 pv et est considéré comme mourant. Au troisième round, il décède.</p>
-                    <p>Les personnages inconscients doivent faire des tests de Constitution dès qu’ils commencent à couler (ou dès qu’ils tombent inconscient s’ils étaient déjà en train de couler). Dès qu’il en rate un, il passe immédiatement à -1 pv et est considéré comme mourant. Le round suivant, il meurt.</p>
+                    <p>Tout personnage peut retenir son souffle pendant un nombre de rounds égal au double de sa valeur de Vigueur. S’il effectue une action autre que se déplacer, la durée au cours de laquelle le personnage peut retenir son souffle est réduite de 1 round. Après cela, il doit réussir un test de Vigueur par round pour continuer à retenir son souffle. Le malus augmente de 1 à chaque round.</p>
+                    <p>Dès que le personnage manque un test de Vigueur, il se noie. Durant le premier round, il tombe à 0 pv et perd connaissance. Le round d’après, il passe à -1 pv et est considéré comme mourant. Au troisième round, il décède.</p>
+                    <p>Les personnages inconscients doivent faire des tests de Vigueur dès qu’ils commencent à couler (ou dès qu’ils tombent inconscient s’ils étaient déjà en train de couler). Dès qu’il en rate un, il passe immédiatement à -1 pv et est considéré comme mourant. Le round suivant, il meurt.</p>
                     <p>On peut se noyer dans d’autres substances que l’eau, comme par exemple le sable, les sables mouvants, ou encore un silo à céréales.</p>
 
                     <h4>L'obscurité</h4>
@@ -926,7 +926,7 @@
                         <li><span class="big_underline">Force (FOR) :</span>Détermine la puissance musculaire du personnage, requise pour utiliser des armes lourdes.</li>
                         <li><span class="big_underline">Dextérité (DEX) :</span>Détermine l'habilité du personnage avec ses mains, requise pour utiliser des armes sophistiqués, dérober une bourse,etc...</li>
                         <li><span class="big_underline">Agilité (AGI) :</span>Mesure le contrôle qu'a le personnage sur son corps, requise pour les déplacements complexes tels que des sauts ou des esquives.</li>
-                        <li><span class="big_underline">Constitution (CON) :</span>Représente la robustesse et la résistance à la fatigue.</li>
+                        <li><span class="big_underline">Vigueur (VIG) :</span>Représente la robustesse et la résistance à la fatigue.</li>
                     </ul>
                 </li>
                 <li>Mentales
@@ -940,7 +940,7 @@
             </ol>
             <p>Une caractéristique moyenne équivaut à un score de 10. Un personnage avec un score de 10 en Force n'est ni fort ni faible. Le représentation réelle du score est exponentielle, un score de 12 est supérieur à la moyenne mais reste commun, un score de 14 est remarquable, un score de 16 est incroyable et représente les limites extrêmes du commun des mortel, au delà se trouvent les héros de légende ou de redoutables monstres.</p>
             <p id="modificateurs_carac">Les caractéristiques élévées apportent un bonus lors des lancers de dés. Ce bonus appelé modificateur est équivalent à : (CARACTÉRISTIQUE-10)/2. Soit un modificateur de +1 pour une caractéristique à 12 ou 13, +2 à 14 ou 15 et ainsi de suite. Le modificateur peut également être négatif dans le cas d'une caractéristiques inférieure à la moyenne.</p>
-            <p>Le total de Point de vie d'un personnage est déterminé par cette formule : ((CON*1,5)+(FOR*0,5))*(1,1^NIVEAU-1)</p>
+            <p>Le total de Point de vie d'un personnage est déterminé par cette formule : ((VIG*1,5)+(FOR*0,5))*(1,1^NIVEAU-1)</p>
             <p>Le total de Point de psyché d'un personnage est déterminé par cette formule : (((INT^1,45)+(VOL^1,15))-30)*(1,1^NIVEAU-1)</p>
             <p>Si on obtient un nombre décimal, l'arrondi se fait à l'entier inférieur. (ex : 15,25 devient 15)</p>
         </div>
@@ -1383,14 +1383,14 @@
                     </tr>
                     <tr id="rage_berserker">
                         <th rowspan="2">Rage de berserker</th>
-                        <td colspan="5">Possibilité d’entrer en rage lors d’un combat au coût d’une action libre si on ne porte pas d’armure lourde. Ils peuvent rester dans cet état pendant un nombre de rounds égal à 4 + (CON-10) par jour.<br/>La transe prend fin si le personnage n’en est plus capable, ou si il le décide au prix d’une action libre; le personnage devient fatigué pendant un nombre de round équivalent au double du nombre de round passé en rage et il lui est impossible de passer en rage si il est fatigué ou épuisé.<br/>Tant qu’il est en rage, le personnage ne peut pas effectuer d’action basée sur la dextérité, l’éloquence (sauf intimidation) ou l’intelligence; il subit un malus de 2 à la parade et à l'esquive.</td>
+                        <td colspan="5">Possibilité d’entrer en rage lors d’un combat au coût d’une action libre si on ne porte pas d’armure lourde. Ils peuvent rester dans cet état pendant un nombre de rounds égal à 4 + (VIG-10) par jour.<br/>La transe prend fin si le personnage n’en est plus capable, ou si il le décide au prix d’une action libre; le personnage devient fatigué pendant un nombre de round équivalent au double du nombre de round passé en rage et il lui est impossible de passer en rage si il est fatigué ou épuisé.<br/>Tant qu’il est en rage, le personnage ne peut pas effectuer d’action basée sur la dextérité, l’éloquence (sauf intimidation) ou l’intelligence; il subit un malus de 2 à la parade et à l'esquive.</td>
                     </tr>
                     <tr>
-                        <td>Novice : Durant la rage, FOR +2 et CON +2</td>
-                        <td>Apprenti : Durant la rage, FOR +2 et CON +2, VOL +1. Rounds de rage par jour = 4 + (CON-8). Protection naturelle +1<br/><a href="Tableaux.xhtml#rage_controlee">Rage controllée</a></td>
-                        <td>Adepte : Durant la rage, FOR +3 et CON +3, VOL +1. Rounds de rage par jour = 4 + (CON-6)</td>
-                        <td>Expert : Durant la rage, FOR +3 et CON +3, VOL +2. Rounds de rage par jour = 4 + (CON-4). Protection naturelle +2</td>
-                        <td>Maître : Durant la rage, FOR +4 et CON +4, VOL +3. Rage illimitée</td>
+                        <td>Novice : Durant la rage, FOR +2 et VIG +2</td>
+                        <td>Apprenti : Durant la rage, FOR +2 et VIG +2, VOL +1. Rounds de rage par jour = 4 + (VIG-8). Protection naturelle +1<br/><a href="Tableaux.xhtml#rage_controlee">Rage controllée</a></td>
+                        <td>Adepte : Durant la rage, FOR +3 et VIG +3, VOL +1. Rounds de rage par jour = 4 + (VIG-6)</td>
+                        <td>Expert : Durant la rage, FOR +3 et VIG +3, VOL +2. Rounds de rage par jour = 4 + (VIG-4). Protection naturelle +2</td>
+                        <td>Maître : Durant la rage, FOR +4 et VIG +4, VOL +3. Rage illimitée</td>
                     </tr>
                     <tr id="rechargement_rapide">
                         <th>Rechargement rapide</th>
@@ -1654,8 +1654,8 @@
                         </tr>
 
                         <tr id="intimidation">
-                            <th>Intimidation (FOR, CON ou ÉLO)</th>
-                            <td colspan="5">Le personnage sait être impressionnant quand il le faut, il peut utiliser sa caractéristique de force ou de constitution pour intimider quelqu’un.</td>
+                            <th>Intimidation (ÉLO+FOR ou VIG)</th>
+                            <td colspan="5">Le personnage sait être impressionnant quand il le faut, il peut ajouter son modificateur de force ou de vigueur à celui d'éloquence (ou simplement celui de force ou de vigueur) pour intimider quelqu’un.</td>
                         </tr>
                         <tr id="marchandage">
                             <th rowspan="2">Marchandage (ÉLO)</th>
@@ -1729,7 +1729,7 @@
                     <th width="30">FOR</th>
                     <th width="30">DEX</th>
                     <th width="30">AGI</th>
-                    <th width="30">CON</th>
+                    <th width="30">VIG</th>
                     <th width="30">INT</th>
                     <th width="30">VOL</th>
                     <th width="30">PER</th>
@@ -2894,7 +2894,7 @@
         <h1 id="materiel" onclick="hideContent(this)">Matériel</h1>
         <div>
             <p>Pour partir à l'aventure et y trouver un profit, il faut un investissement de départ pour acheter le matériel nécessaire à savoir un sac ou au moins une sacoche, un sac de couchage ainsi que de quoi manger et boire.</p>
-            <p>La charge d'équipement et de matériel maximale qu'un aventurier peut supporter équivaux à 3,5 fois la moyenne entre sa valeur de constitution et de force. La charge d'un aventurier peut être légère, intermédiaire ou lourde. La charge est légère si elle est inférieure à 40% de la charge maximale, intermédiaire si entre 40% et 70%, lourde au délà.</p>
+            <p>La charge d'équipement et de matériel maximale qu'un aventurier peut supporter équivaux à 3,5 fois la moyenne entre sa valeur de vigueur et de force. La charge d'un aventurier peut être légère, intermédiaire ou lourde. La charge est légère si elle est inférieure à 40% de la charge maximale, intermédiaire si entre 40% et 70%, lourde au délà.</p>
             <p>Si il porte une charge légère, l'aventurier n'est pas génée par le poids, il ne subit donc aucun malus. Si sa charge est intermédiaire, sa vitesse de déplacement diminue d'un mètre. Si elle est lourde, sa vitesse diminue encore d'un mètre pour un total de 2 et il effectue toutes les épreuves physiques avec un désavantage.</p>
             <p>Si un aventurier souhaite se déplacer plus vite, il peut toujours enlever son sac le temps d'un combat et aller le récupérer plus tard.</p>
             <p>Retrouvez les listes d'équipement sur la page <a href="Objets.xhtml">Objets</a>.</p>
