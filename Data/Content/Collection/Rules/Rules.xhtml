@@ -133,112 +133,131 @@
 
             <h3 id="chance_reussite" onclick="hideContent(this)">Degré de complexité (DC)</h3>
             <div>
-                <p>Pour savoir si une action est une réussite ou un échec, il faut se fier au degré de complexité (DC). La somme des dés doit être supérieur ou égal au DC pour que l'action soit réussie.</p>
+                <p>Pour savoir si une action est une réussite ou un échec, il faut se fier au degré de complexité (DC). La somme des dés doit être supérieure ou égal au DC pour que l'action soit réussie.</p>
                 <p>Une action difficile aura un DC plus grand qu'une tache simple. Le DC d'une tâche peut ne peut être la même pour tout le monde. Un personnage ne sachant parfaitement lire aura plus de mal à déchiffrer un parchemin ancien qu'un érudit.</p>
                 <p>Les bonus et les malus s'appliquent au résultat des dés et non au DC.</p>
                 <p align="center" onclick="hideContent(this)"><strong>Probabilité de réussite selon le DC</strong></p>
                 <table>
-                    <thead>
-                    <tr>
-                        <th>DC</th>
-                        <th>4</th>
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th>8</th>
-                        <th>9</th>
-                        <th>10</th>
-                        <th>11</th>
-                        <th>12</th>
-                        <th>13</th>
-                        <th>14</th>
-                        <th>15</th>
-                        <th>16</th>
-                        <th>17</th>
-                        <th>18</th>
-                        <th>19</th>
-                        <th>20</th>
-                        <th>21</th>
-                        <th>22</th>
-                        <th>23</th>
-                        <th>24</th>
-                    </tr>
-                    </thead>
                     <tbody>
                     <tr>
+                        <th colspan="4">Simples</th>
+                        <th colspan="4">Moyennes</th>
+                        <th colspan="4">Difficiles</th>
+                    </tr>
+                    <tr>
+                        <th>DC</th>
                         <th>Chances de réussite (%)</th>
-                        <td>100</td>
-                        <td>99.92</td>
-                        <td>99.61</td>
-                        <td>98.84</td>
-                        <td>97.30</td>
-                        <td>94.60</td>
-                        <td>90.26</td>
-                        <td>90.28</td>
-                        <td>84.10</td>
-                        <td>76.08</td>
-                        <td>66.44</td>
-                        <td>55.63</td>
-                        <td>44.37</td>
-                        <td>33.56</td>
-                        <td>15.90</td>
-                        <td>9.72</td>
-                        <td>5.40</td>
-                        <td>2.70</td>
-                        <td>1.16</td>
-                        <td>0.39</td>
-                        <td>0.08</td>
-                    </tr>
-                    <tr>
                         <th>Avec avantage</th>
-                        <td>100</td>
-                        <td>99.99</td>
-                        <td>99.92</td>
-                        <td>99.73</td>
-                        <td>99.28</td>
-                        <td>98.37</td>
-                        <td>96.69</td>
-                        <td>93.93</td>
-                        <td>89.75</td>
-                        <td>83.89</td>
-                        <td>76.23</td>
-                        <td>66.91</td>
-                        <td>56.30</td>
-                        <td>45.04</td>
-                        <td>33.91</td>
-                        <td>23.69</td>
-                        <td>15.07</td>
-                        <td>8.50</td>
-                        <td>4.06</td>
-                        <td>1.49</td>
-                        <td>0.33</td>
+                        <th>Avec désavantage</th>
+                        <th>DC</th>
+                        <th>Chances de réussite (%)</th>
+                        <th>Avec avantage</th>
+                        <th>Avec désavantage</th>
+                        <th>DC</th>
+                        <th>Chances de réussite (%)</th>
+                        <th>Avec avantage</th>
+                        <th>Avec désavantage</th>
                     </tr>
                     <tr>
-                        <th>Avec désavantage</th>
+                        <th>4</th>
                         <td>100</td>
-                        <td>99.67</td>
-                        <td>98.51</td>
-                        <td>95.94</td>
-                        <td>91.50</td>
-                        <td>84.93</td>
-                        <td>76.31</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <th>11</th>
+                        <td>90.28</td>
+                        <td>93.93</td>
                         <td>66.09</td>
-                        <td>54.96</td>
-                        <td>43.70</td>
-                        <td>33.09</td>
-                        <td>23.77</td>
-                        <td>16.11</td>
-                        <td>10.25</td>
+                        <th>18</th>
+                        <td>15.90</td>
+                        <td>33.91</td>
                         <td>6.07</td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>99.92</td>
+                        <td>99.99</td>
+                        <td>99.67</td>
+                        <th>12</th>
+                        <td>84.10</td>
+                        <td>89.75</td>
+                        <td>54.96</td>
+                        <th>19</th>
+                        <td>9.72</td>
+                        <td>23.69</td>
                         <td>3.31</td>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <td>99.61</td>
+                        <td>99.92</td>
+                        <td>98.51</td>
+                        <th>13</th>
+                        <td>76.08</td>
+                        <td>83.89</td>
+                        <td>43.70</td>
+                        <th>20</th>
+                        <td>5.40</td>
+                        <td>15.07</td>
                         <td>1.63</td>
+                    </tr>
+                    <tr>
+                        <th>7</th>
+                        <td>98.84</td>
+                        <td>99.73</td>
+                        <td>95.94</td>
+                        <th>14</th>
+                        <td>66.44</td>
+                        <td>76.23</td>
+                        <td>33.09</td>
+                        <th>21</th>
+                        <td>2.70</td>
+                        <td>8.50</td>
                         <td>0.72</td>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <td>97.30</td>
+                        <td>99.28</td>
+                        <td>91.50</td>
+                        <th>15</th>
+                        <td>55.63</td>
+                        <td>66.91</td>
+                        <td>23.77</td>
+                        <th>22</th>
+                        <td>1.16</td>
+                        <td>4.06</td>
                         <td>0.27</td>
+                    </tr>
+                    <tr>
+                        <th>9</th>
+                        <td>94.60</td>
+                        <td>98.37</td>
+                        <td>84.93</td>
+                        <th>16</th>
+                        <td>44.37</td>
+                        <td>56.30</td>
+                        <td>16.11</td>
+                        <th>23</th>
+                        <td>0.39</td>
+                        <td>1.49</td>
                         <td>0.08</td>
+                    </tr>
+                    <tr>
+                        <th>10</th>
+                        <td>90.26</td>
+                        <td>96.69</td>
+                        <td>76.31</td>
+                        <th>17</th>
+                        <td>33.56</td>
+                        <td>45.04</td>
+                        <td>10.25</td>
+                        <th>24</th>
+                        <td>0.08</td>
+                        <td>0.33</td>
                         <td>0.01</td>
                     </tr>
                     <tr>
-                        <td colspan="22">Si un personnage possède un bonus de +1 à son jet, il suffit de se déplacer d'une case vers la gauche (obtenir un 15 avec un +1 équivaut aux chances d'obtenir un 14). En revanche, si c'est un malus de -1, il faut se déplacer d'une case vers la droite. Si le bonus ou le malus est supérieur à +1/-1, il convient de se déplacer d'autant de cases que nécessaires.</td>
+                        <td colspan="12">Si un personnage possède un bonus de +1 à son jet, il suffit de prendre en compte la probabilité du DC plus petit de 1 que celui voulu (obtenir un 15 avec un +1 équivaut aux chances d'obtenir un 14). En revanche, si c'est un malus de -1, c'est l'inverse. Si le bonus ou le malus est supérieur à +1/-1, il convient de se déplacer d'autant de cases que nécessaires.</td>
                     </tr>
                     </tbody>
                 </table>
@@ -456,15 +475,15 @@
                 <p>Chaque arme possède deux caractéristiques en plus de la rupture et des dégâts, il s'agit de l'attaque et de la parade. L'attaque détermine à quel point il est facile de toucher un adversaire et la parade détermine la probabilité de parer un coup avec cette arme. Une arme peut être modifié de diverses manières (poignée améliorée, fil aiguisé, renfort, lame dentelée, etc..) et ainsi posséder des caractéristiques différentes de sa catégorie.</p>
                 <p>Pour toucher un adversaire avec une arme de corps-à-corps ou un bouclier, on oppose le jet d'attaque de l'assailant au jet de défense (parade ou esquive) du défenseur. Si le jet d'attaque est supérieur à celui de défense, l'attaque est réussie et on lance le jet de dégâts. Si l'adversaire ne peut pas se défendre (car il a déjà esquiver ou parer lors du round), l'assaillant doit seulement réussir son jet d'attaque. De nombreux bonus et malus peuvent s'appliquer selon la situation (position avantageuse, encerclement, etc...).</p>
                 <p>Les armes à distance possèdent une statistique nommée précision (PRÉ) déterminant le DC pour réussir à toucher la cible. La Dexterité a une influence sur les jets d'attaque à distance (hors artillerie) Des bonus et malus peuvent intervenir si le tireur est situé en hauteur ou si la cible est à couvert par exemple.</p>
-                <p>Le DC de base pour attaquer est de 14, il faut donc réussir un lancer égal ou au delà de 16 si on ne possède aucun bonus à la parade. Les bonus à la parade s'obtiennent avec des maîtrises d'armes, des compétences de combat ou des armes personalisées.</p>
+                <p>Le DC de base pour attaquer est de 14, il faut donc réussir un lancer égal ou au delà de 14 si on ne possède aucun bonus à l'attaque. Les bonus à l'attaque s'obtiennent avec des maîtrises d'armes, des compétences de combat ou des armes personalisées.</p>
             </div>
             <h3 onclick="hideContent(this)">Se défendre</h3>
             <div>
                 <p>L'esquive et la parade sont des actions défensives qu'on ne peut entreprendre qu'une fois par tour. Si on risque de se faire frapper par plusieurs adversaires, il faudra choisir contre quel adversaire on va se défendre. </p>
                 <p>Un bouclier facilite la parade et permet (selon sa taille) de parer les attaques de différents adversaires venant de la même direction.</p>
                 <p>L'esquive permet de se repositionner tout en évitant de subir des dégâts, cependant si une attaque suite à un jet d'esquive raté, on subit 25% de dégâts supplémentaires dus à la baisse de la garde.</p>
-                <p>Le DC de base pour parer une attaque est de 16, il faut donc réussir un lancer égal ou au delà de 14 si on ne possède aucun bonus à l'attaque. Les bonus à l'attaque s'obtiennent avec des maîtrises d'armes, des compétences de combat ou des armes personalisées.</p>
-                <p>Le DC de base pour esquiver est de 13, il est possible d'obtenir des bonus à l'esquive avec une agilité élévée ou des compétences de combat.</p>
+                <p>Le DC de base pour parer une attaque est de 16, il faut donc réussir un lancer égal ou au delà de 14 si on ne possède aucun bonus à la parade. Les bonus à la parade s'obtiennent avec des maîtrises d'armes, des compétences de combat ou des armes personalisées.</p>
+                <p>Le DC de base pour esquiver est de 15, il est possible d'obtenir des bonus à l'esquive avec une agilité élévée ou des compétences de combat.</p>
             </div>
             <h3 onclick="hideContent(this)">Blessures et mort</h3>
             <div>
@@ -504,7 +523,7 @@
             <p>Il est même possible de créer des choses directement dans la tête de son ennemi(si on possèdes les connaissances bien entendu), on peut lui faire voir des monstres, altérer sa perception, le rendre sourd/aveugle, l'endormir,...</p>
             <p>Une réussite critique lors d'un lancer sort permet d'augmenter n'importe quel facteur d'un cran gratuitement</p>
             <p>Les dés de dégâts d'un sort touchant plusieurs cibles sont à partager sur les cibles au choix du lanceur. Un sort du 4ème cercle ne touchant que deux personnes peut infliger 2d8 à un adversaire et 2d8 à l'autre ou 3d8 et 1d8.</p>
-			<p>La caractéristique d'intelligence du lanceur de sort augmente les dégâts des sorts pour tout les deux points au dessus de 12((14 INT → +1; 16 INT → +2). La caractéristique de volonté quand à elle augmente la persistance des sorts d'un cran si elle dépasse 14.</p>
+			<p>La caractéristique d'intelligence du lanceur de sort augmente les dégâts des sorts pour tout les deux points au dessus de 11((13 INT → +1; 15 INT → +2). La caractéristique de volonté quand à elle augmente la persistance des sorts d'un cran si elle dépasse 14.</p>
 
             <h3>Magie hors-combat</h3>
             <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
