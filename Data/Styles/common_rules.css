@@ -164,6 +164,16 @@ a:hover {
     max-height: 100%;
 }
 
+.side_by_side{
+    display: flex;
+    width: 100%;
+}
+.side_by_side_img{
+    flex: 50%;
+    padding: 5px;
+    alignment: center;
+}
+
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
