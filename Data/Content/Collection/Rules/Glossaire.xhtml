@@ -228,7 +228,7 @@
 
         <h3 id="mourant" onclick="hideContent(this)">Mourant</h3>
         <div>
-            <p>Le personnage est inconscient et en train de mourir. Une créature qui a un nombre de points de vie négatif et qui n’est pas stabilisée agonise. Une créature agonisante ne peut pas entreprendre la moindre action. À son tour à chaque round (en commençant par celui où il est tombé en dessous de 0 point de vie) et jusqu’à ce que sont état soit stable ou qu’il meure, le personnage doit faire un test de Vigueur (DC 15). Il subit un malus égal à son nombre de points de vie négatifs. Un personnage stabilisé n’a pas besoin de faire ce test. S’il le rate, il perd 1 point de vie. Une créature mourante meurt quand son nombre de points de vie négatifs égale sa valeur de Vigueur.</p>
+            <p>Le personnage est inconscient et en train de mourir. Une créature qui a un nombre de points de vie négatif et qui n’est pas stabilisée agonise. Une créature agonisante ne peut pas entreprendre la moindre action. À son tour à chaque round (en commençant par celui où il est tombé en dessous de 0 point de vie) et jusqu’à ce que sont état soit stable ou qu’il meure, le personnage doit faire un test de Vigueur. Il subit un malus égal à son nombre de points de vie négatifs. Un personnage stabilisé n’a pas besoin de faire ce test. S’il le rate, il perd 1 point de vie. Une créature mourante meurt quand son nombre de points de vie négatifs égale sa valeur de Vigueur.</p>
         </div>
 
         <h3 id="nauseeux" onclick="hideContent(this)">Nauséeux</h3>
@@ -265,7 +265,7 @@
         <h3 id="saignement" onclick="hideContent(this)">Saignement</h3>
         <div>
             <p>La créature se met à saigner et subit des dommages au début de chaque round.</p>
-            <p>Il est possible d’arrêter l’hémorragie en réussissant un test de Medecine (DC en fonction de la gravité de la blesure) ou en utilisant un sort curatif. Il arrive parfois que le personnage subisse un saignement qui lui inflige des affaiblissements temporaires ou des diminutions permanentes de caractéristique. Ces dégâts ne se cumulent pas, sauf s’ils sont de nature différente. Lorsque deux sources infligent des hémorragies de même nature, appliquez le résultat le plus handicapant.</p>
+            <p>Il est possible d’arrêter l’hémorragie en réussissant un test de Medecine (malus en fonction de la gravité de la blesure) ou en utilisant un sort curatif. Il arrive parfois que le personnage subisse un saignement qui lui inflige des affaiblissements temporaires ou des diminutions permanentes de caractéristique. Ces dégâts ne se cumulent pas, sauf s’ils sont de nature différente. Lorsque deux sources infligent des hémorragies de même nature, appliquez le résultat le plus handicapant.</p>
         </div>
 
         <h3 id="sans_defense" onclick="hideContent(this)">Sans défense</h3>
@@ -282,6 +282,29 @@
         <div>
             <p>Un personnage qui était mourant mais qui a cessé de perdre des points de vie (et dont le total de points de vie est toujours négatif) est stable. Le personnage n’est plus mourant mais reste inconscient. S’il est devenu stable grâce à une assistance extérieure, il ne perd plus de points de vie. Chaque heure qui passe, il doit faire un jet de Vigueur afin de reprendre ses esprits et de ne plus être que hors de combat (même si son total de points de vie reste négatif), en tenant compte d’un malus égal à son total de points de vie négatifs.</p>
             <p>S’il est devenu stable sans aide extérieure, il risque de recommencer à perdre des points de vie. Chaque heure, il doit faire un jet de Vigueur afin de rester stable (comme s’il recevait l’aide de quelqu’un), mais à chaque fois qu’il échoue, il perd 1 point de vie.</p>
+        </div>
+    </div>
+
+    <h1 id="vulnerabilites_resisances" onclick="hideContent(this)">Vulnérabilités et résistances</h1>
+    <div>
+        <h2>Vulnérabilités</h2>
+        <div>
+            <p>Une créature peut être vulnérable à un type de dégâts, ce qui signifie qu'elle subira des dommages accrus face à ce genre de dégâts. Il existe 3 niveaux de vulnérabilités :</p>
+            <ul>
+                <li>Vulnérabilité mineure : les dégâts subis augmentent d'un tiers (+33%)</li>
+                <li>Vulnérabilité : les dégâts subis augmentent de moitié (+50%)</li>
+                <li>Vulnérabilité majeure : les dégâts subis doublent (+100%)</li>
+            </ul>
+        </div>
+        <h2>Résistances</h2>
+        <div>
+            <p>Une créature peut être résitante à un type de dégâts, ce qui signifie qu'elle subira des dommages réduits face à ce genre de dégâts. Il existe 4 niveaux de résistances :</p>
+            <ul>
+                <li>Résistance mineure : les dégâts subis diminuent d'un tiers (-33%)</li>
+                <li>Résistance : les dégâts subis diminuent de moitié (-50%)</li>
+                <li>Résistance majeure : les dégâts subis sont divisés par deux (-100%)</li>
+                <li>Immunité : les dégâts subis sont nullifiés</li>
+            </ul>
         </div>
     </div>
 
