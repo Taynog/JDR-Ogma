@@ -163,6 +163,7 @@
             <div>
                 <p>Lors du premier tour du combat, tout les entités participant au combat lance un dé d'initiative (1d20 + PER), l'ordre de jeu est déterminé par ce jet du plus grand score au plus petit, si il y a  égalité entre deux ou plusieurs entités, elles relancent un jet d'initiative pour déterminer leur ordre de jeu.</p>
                 <p>Toute entité est prise par surprise tant qu'elle n'a pas joué son premier tour, à moins d'être consciente du danger via un test de perception réussi. Une entité prise par surprise ne peut pas se défendre.</p>
+                <p>Pour éviter de perdre du temps et d'interrompre l'action juste avant un combat avec de pénibles calculs d'initiative et d'écriture pour déterminer l'ordre de jeu, on peut déterminer l'inititative au début de la session et à la fin de chaque combat pour fluidifier l'entrée en mode tour par tour.</p>
             </div>
             <h3 onclick="hideContent(this)">Vitesse de base en combat</h3>
             <div>
@@ -176,6 +177,7 @@
                 <p>Chaque type d’action définit le temps requis pour l’effectuer (dans le cadre des 6 secondes du round de combat) et comment gérer le déplacement. Il y a cinq types d’actions : l’action simple, l’action de mouvement, l’action complexe, l’action libre et l'action bonus.</p>
                 <p>Au cours d’un round ordinaire, un personnage peut effectuer une action simple et une action de mouvement ou bien une seule action complexe. Il peut ajouter une ou plusieurs actions libres aux actions du tour. Il peut toujours remplacer une action simple par une action de mouvement. </p>
                 <p>Dans certaines situations, comme pendant le round de surprise, l’activité d’un personnage peut être restreinte. Celui-ci ne peut alors effectuer qu’une action simple ou une action de mouvement.</p>
+                <p>À la fin de son tour, le joueur annonce ce qu'il compte faire pendant que le reste du tour se joue, il peut se préparer à parer ou à esquiver une attaque venant d'un tel adversaire, qu'il compte lancer une attaque d'opportunité si quelqu'un passe à portée. Cela permet de fluidifier le jeu en diminuant le temps de décision à chaque tour.</p>
                 <p><span class="big_underline">Action simple</span>Une action simple permet d’accomplir quelque chose, comme attaquer ou lancer un sort. Voir la <a href="Types_actions.xhtml#simple">liste des actions simples</a>.</p>
                 <p><span class="big_underline">Action de mouvement</span>L’action de mouvement permet au personnage de se déplacer ou d’accomplir une action demandant le même temps. Voir la <a href="Types_actions.xhtml#mouvement">liste des actions de mouvement</a>.<br/>On peut faire une action de mouvement au lieu d’une action simple. Si un personnage ne se déplace pas au cours du round (souvent parce qu’il a troqué son déplacement contre une ou plusieurs actions équivalentes), il peut tout de même accomplir un pas de placement de 1 m, pendant, avant ou après son action. </p>
                 <p><span class="big_underline">Action complexe</span>Une action complexe demande un round entier. Le déplacement du personnage se limite à un pas de placement (avant, pendant ou après son action). Il peut aussi accomplir des actions libres et des actions rapides. Voir la <a href="Types_actions.xhtml#complexe">liste des actions complexes</a>.<br/>Certaines actions complexes ne laissent pas de temps pour un pas de placement. </p>
@@ -333,12 +335,24 @@
                 <p>On peut entreprendre autant d'attaque d'opportunité que possible lors du même tour. Une entité souhaitant traverser une zone de contrôle ne subira qu'une seule attaque d'opportunité mais sera forcée d'arrêter son mouvement et à rester dans la zone de contrôle si elle ne parvient pas à esquiver ou parer l'attaque.</p>
             </div>
 
+            <h3 onclick="hideContent(this)" id="postures_combat">Postures de combat</h3>
+            <div>
+                <p>La posture de combat détermine l'attitude du personnage au milieu de la bataille, on ne peut changer de posture qu'au début de son tour. Les différentes postures sont :</p>
+                <ul>
+                    <li><span class="big_underline">Posture agressive :</span>le personnage inflige au minimum la moitié de ses dégâts maximum lors d'une attaque mais ne peut pas entreprendre d'actions défensives, son taux de critique monte d'un cran.</li>
+                    <li><span class="big_underline">Posture défensive :</span>permet d'infliger une attaque d'opportunité gratuite après une parade/esquive réussie.</li>
+                    <li><span class="big_underline">Posture méditative :</span>les sorts du personnage ont un coût en psyché réduit d'un montant égal au cercle du sort (cercle 1 ->2, cercle 2 ->3, etc...).</li>
+                    <li><span class="big_underline">Posture vigilante :</span>le personnage peut effectuer une attaque d'opportunité gratuite avec une arme à distance si un adversaire se déplace dans sa ligne de mire.</li>
+                </ul>
+                <p>Une posture peut justifier un bonus lors de certaines actions. Si un personnage passe en posture vigilante et précise qu'il recherche des opposants cachés, le MJ peut lui accorder un bonus (ou un avantage) pour son épreuve de perception.</p>
+                <p>Les ennemis peuvent utiliser les postures si le MJ s'en sent capable, mais on considère que les monstres les moins intelligents sont toujours en posture offensive</p>
+            </div>
             <h3 onclick="hideContent(this)">Type de dégâts</h3>
             <div>
-                <p>Il y a deux types de dégâts, les dégâts létaux et les dégaux non-létaux causés par les attaques contondantes légères(mains nues et bâtons), le climat et la fatigue</p>
+                <p>Il y a deux types de dégâts, les dégâts létaux et les dégâts non-létaux causés par les attaques contondantes légères(mains nues et bâtons), le climat et la fatigue</p>
                 <p>Les dégâts létaux réduisent les points de vie des entités tandis que les non-létaux s'accumulent et ne comptent pas comme de réels dégâts. Les dégâts non-létaux peuvent causer une parte de connaissance et disparaissent après un repos long.</p>
                 <p>Les armes peuvent infliger différents types de dégâts selon la façon dont on les utilise : une épée longue peut servir pour un coup de taille ou un estoc, une morgensten inflige à la fois des dégâts perforants et contondant.</p>
-                <p>Certaines créatures peuvent êtres résistantes ou vulnérables à un ou plusieurs types de dégâts. Les squelttes par exemple résistent au dégâts perforants mais sont vulnérables aux dégâts contondants. Voir <a href="Glossaire.xhtml#vulnerabilites_resisances">Vulnérabilités et résitances</a> et le <a href="../World/Bestiaire.xhtml">Bestiaire</a>.</p>
+                <p>Certaines créatures peuvent êtres résistantes ou vulnérables à un ou plusieurs types de dégâts. Les squelettes par exemple résistent au dégâts perforants mais sont vulnérables aux dégâts contondants. Voir <a href="Glossaire.xhtml#vulnerabilites_resisances">Vulnérabilités et résitances</a> et le <a href="../World/Bestiaire.xhtml">Bestiaire</a>.</p>
             </div>
 
             <h3 onclick="hideContent(this)">Attaquer</h3>
@@ -380,8 +394,8 @@
 
             <h3>Usage de la Magie</h3>
             <p>Toute entité suffisament intelligente pour penser peut avoir recours à la magie.</p>
-            <p>Utiliser la magie revient à se rendre mentalement dans le domaine d'un Inkarnaï, d'y façonner sa création en la dessinant puis de la ramener dans le plan d'Ogma via sa force psychique. Le type de sort dépend du domaine d'où on puise sa création.</p>
-            <p>Plus un dessin est imposant, plus il est difficile de le faire basculer dans la réalité. Les aptitudes mentales du créateur jouent beacoup pour la réussite d'une telle entreprise. Son intelligence permet de façonner des images plus grandes et sa volonté de les maintenir plus longtemps dans le plan réel.</p>
+            <p>Utiliser la magie revient à se rendre mentalement dans le domaine d'un Inkarnaï, d'y façonner sa création puis de la ramener dans le plan d'Ogma via sa force psychique. Le type de sort dépend du domaine d'où on puise sa création.</p>
+            <p>Plus un sort est imposant, plus il est difficile de le faire basculer dans la réalité. Les aptitudes mentales du créateur jouent beaucoup pour la réussite d'une telle entreprise. Son intelligence permet de façonner des images plus grandes et sa volonté de les maintenir plus longtemps dans le plan réel.</p>
             <p>L'usage de la magie requiert de la force mentale, représenté par des points des points de Psyché. Quiconque a recours à la magie sans suffisament de Psyché ou s'essaye à des créations trop imposantes pour son esprit s'expose à des risques pour son enveloppe physique.</p>
 
             <h3>Magie en combat</h3>
