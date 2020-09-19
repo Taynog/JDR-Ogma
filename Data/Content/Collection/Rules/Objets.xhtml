@@ -119,6 +119,49 @@
 </div>
 <div id="main" class="main" style="margin-left: 200px">
     <h1>Listes d'objets</h1>
+    <h2 id="monnaie" onclick="hideContent(this)">Monnaie et conversion</h2>
+    <div>
+        <table class="table_horizontal">
+            <tbody>
+            <tr>
+                <th rowspan="2">Monnaie</th>
+                <th colspan="3">Conversion</th>
+                <th rowspan="2">Poids</th>
+            </tr>
+            <tr>
+                <th>Pièces d'or</th>
+                <th>Pièces d'argent</th>
+                <th>Pièces de cuivre</th>
+            </tr>
+            <tr>
+                <th>Lingot de bérylium</th>
+                <td>100</td>
+                <td>1 000</td>
+                <td>10 000</td>
+                <td>250g</td>
+            </tr>
+            <tr>
+                <th>Pièce d'or</th>
+                <td>1</td>
+                <td>10</td>
+                <td>100</td>
+                <td rowspan="3">10g</td>
+            </tr>
+            <tr>
+                <th>Pièce d'argent</th>
+                <td>0,1</td>
+                <td>1</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <th>Pièce de cuivre</th>
+                <td>0,01</td>
+                <td>0,1</td>
+                <td>1</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     <h2 id="armes" onclick="hideContent(this)">Armes</h2>
     <div>
         <table width="95%">
@@ -139,50 +182,50 @@
             </tr>
             <tr>
                 <td>Dague</td>
-                <td>25 po</td>
+                <td>20 pa</td>
                 <td>500 g</td>
                 <td>Épée courte</td>
-                <td>50 po</td>
+                <td>50 pa</td>
                 <td>1 kg</td>
             </tr>
             <tr>
                 <td>Épée courbe</td>
-                <td>60 po</td>
+                <td>65 pa</td>
                 <td>1 kg</td>
                 <td>Épée longue</td>
-                <td>75 po</td>
+                <td>75 pa</td>
                 <td>1,5 kg</td>
             </tr>
             <tr>
                 <td>Rapière</td>
-                <td>70 po</td>
+                <td>70 pa</td>
                 <td>1 kg</td>
                 <td>Katanas</td>
-                <td>75 po</td>
-                <td>1 kg</td>
+                <td>75 pa</td>
+                <td>1,2 kg</td>
             </tr>
             <tr>
                 <td>Hache</td>
-                <td>35 po</td>
+                <td>30 pa</td>
                 <td>1,5 kg</td>
                 <td>Masse</td>
-                <td>50 po</td>
+                <td>35 pa</td>
                 <td>2 kg</td>
             </tr>
             <tr>
                 <td>Lance</td>
-                <td>30 po</td>
+                <td>30 pa</td>
                 <td>2 kg</td>
                 <td>Faucille</td>
-                <td>30 po</td>
+                <td>30 pa</td>
                 <td>500 g</td>
             </tr>
             <tr>
                 <td>Pic de guerre</td>
-                <td>45 po</td>
+                <td>45 pa</td>
                 <td>1 kg</td>
                 <td>Fouet</td>
-                <td>20 po</td>
+                <td>20 pa</td>
                 <td>500 g</td>
             </tr>
             <tr>
@@ -190,26 +233,26 @@
             </tr>
             <tr>
                 <td>Grande épée droite</td>
-                <td>150 po</td>
+                <td>15 po</td>
                 <td>3 kg</td>
                 <td>Grande épée courbe</td>
-                <td>170 po</td>
+                <td>170 pa</td>
                 <td>3 kg</td>
             </tr>
             <tr>
                 <td>Grande hache</td>
-                <td>125 po</td>
+                <td>12 po</td>
                 <td>2,5 kg</td>
                 <td>Grand marteau</td>
-                <td>140 po</td>
+                <td>12 po</td>
                 <td>5 kg</td>
             </tr>
             <tr>
                 <td>Bâton</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
                 <td>1 kg</td>
                 <td>Faux</td>
-                <td>50 po</td>
+                <td>50 pa</td>
                 <td>2 kg</td>
             </tr>
             <tr>
@@ -217,15 +260,15 @@
             </tr>
             <tr>
                 <td>Pique</td>
-                <td>50 po</td>
+                <td>50 pa</td>
                 <td>2 kg</td>
                 <td>Hallebarde</td>
-                <td>150 po</td>
+                <td>15 po</td>
                 <td>3 kg</td>
             </tr>
             <tr>
                 <td>Fauchard</td>
-                <td>120 po</td>
+                <td>12 po</td>
                 <td>2,5 kg</td>
                 <td colspan="3"/>
             </tr>
@@ -234,18 +277,18 @@
             </tr>
             <tr>
                 <td>Couteaux</td>
-                <td>5 po</td>
+                <td>5 pa</td>
                 <td>250 g</td>
                 <td>Hachette</td>
-                <td>8 po</td>
+                <td>8 pa</td>
                 <td>500 g</td>
             </tr>
             <tr>
                 <td>Javelot</td>
-                <td>3 po</td>
+                <td>8 pa</td>
                 <td>500 g</td>
                 <td>Fléchette</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
                 <td>100 g</td>
             </tr>
             <tr>
@@ -253,26 +296,26 @@
             </tr>
             <tr>
                 <td>Fronde</td>
-                <td>1 po</td>
+                <td>1 pa</td>
                 <td>250 g</td>
                 <td>Arc court</td>
-                <td>35 po</td>
+                <td>35 pa</td>
                 <td>1 kg</td>
             </tr>
             <tr>
                 <td>Arc long</td>
-                <td>75 po</td>
+                <td>75 pa</td>
                 <td>1,5 kg</td>
                 <td>Arbalète</td>
-                <td>50 po</td>
+                <td>50 pa</td>
                 <td>2 kg</td>
             </tr>
             <tr>
                 <td>Arbalète lourde</td>
-                <td>150 po</td>
+                <td>15 po</td>
                 <td>6 kg</td>
                 <td>Arbalète à main</td>
-                <td>80 po</td>
+                <td>80 pa</td>
                 <td>1 kg</td>
             </tr>
             <tr>
@@ -280,39 +323,39 @@
             </tr>
             <tr>
                 <td>Pistolet de poche</td>
-                <td>350 po</td>
+                <td>20 po</td>
                 <td>500 g</td>
                 <td>Pistolet à silex</td>
-                <td>500 po</td>
+                <td>25 po</td>
                 <td>1,5 kg</td>
             </tr>
             <tr>
                 <td>Pistolet à double canon</td>
-                <td>650 po</td>
+                <td>30 po</td>
                 <td>2 kg</td>
                 <td>Poivrière</td>
-                <td>800 po</td>
+                <td>40 po</td>
                 <td>3 kg</td>
             </tr>
             <tr>
                 <td>Pétoire</td>
-                <td>500 po</td>
+                <td>25 po</td>
                 <td>1,5 kg</td>
                 <td>Targe pistolet</td>
-                <td>700 po</td>
+                <td>25 po</td>
                 <td>3 kg</td>
             </tr>
             <tr>
                 <td>Mousquet</td>
-                <td>750 po</td>
+                <td>50 po</td>
                 <td>3 kg</td>
                 <td>Mousquet à double canon</td>
-                <td>900 po</td>
+                <td>60 po</td>
                 <td>4 kg</td>
             </tr>
             <tr>
                 <td>Tromblon</td>
-                <td>600 po</td>
+                <td>40 po</td>
                 <td>3 kg</td>
                 <td colspan="3"/>
             </tr>
@@ -321,40 +364,40 @@
             </tr>
             <tr>
                 <td>Bocle</td>
-                <td>15 po</td>
+                <td>10 pa</td>
                 <td>500 g</td>
                 <td>Rondache</td>
-                <td>10 po</td>
+                <td>5 pa</td>
                 <td>1 kg</td>
             </tr>
             <tr>
                 <td>Targe</td>
-                <td>20 po</td>
+                <td>10 pa</td>
                 <td>500g</td>
                 <td colspan="3"/>
             </tr>
             <tr>
                 <td>Écu</td>
-                <td>45 po</td>
+                <td>20 pa</td>
                 <td>3 kg</td>
                 <td>Parma</td>
-                <td>25 po</td>
+                <td>15 pa</td>
                 <td>2 kg</td>
             </tr>
             <tr>
                 <td>Bouclier Viking</td>
-                <td>35 po</td>
+                <td>25 pa</td>
                 <td>5 kg</td>
                 <td>Bouclier en amande</td>
-                <td>50 po</td>
+                <td>20 pa</td>
                 <td>2,5 kg</td>
             </tr>
             <tr>
                 <td>Pavois</td>
-                <td>40 po</td>
+                <td>25 pa</td>
                 <td>8 kg</td>
                 <td>Égide</td>
-                <td>75 po</td>
+                <td>30 pa</td>
                 <td>10 kg</td>
             </tr>
             </tbody>
@@ -381,26 +424,26 @@
             </tr>
             <tr>
                 <td>Plastron de cuir</td>
-                <td>50 po</td>
+                <td>50 pa</td>
                 <td>3 kg</td>
                 <td>Plastron de cuir renforcé de métal</td>
-                <td>120 po</td>
+                <td>10 po</td>
                 <td>3,5 kg</td>
             </tr>
             <tr>
                 <td>Plastron d'écailles</td>
-                <td>300 po</td>
+                <td>30 po</td>
                 <td>5 kg</td>
                 <td>Plastron de bois</td>
-                <td>45 po</td>
+                <td>45 pa</td>
                 <td>5 kg</td>
             </tr>
             <tr>
                 <td>Plastron lamellaire</td>
-                <td>400 po</td>
+                <td>40 po</td>
                 <td>6 kg</td>
                 <td>Plastron de métal</td>
-                <td>500 po</td>
+                <td>50 po</td>
                 <td>8 kg</td>
             </tr>
             <tr>
@@ -408,15 +451,15 @@
             </tr>
             <tr>
                 <td>Veste en toile renforcé</td>
-                <td>35 po</td>
+                <td>35 pa</td>
                 <td>2 kg</td>
                 <td>Veste en peaux</td>
-                <td>40 po</td>
+                <td>40 pa</td>
                 <td>2,5 kg</td>
             </tr>
             <tr>
                 <td>Gambison rembourré</td>
-                <td>50 po</td>
+                <td>50 pa</td>
                 <td>3 kg</td>
                 <td colspan="3"/>
             </tr>
@@ -425,15 +468,15 @@
             </tr>
             <tr>
                 <td>Cotte de mailles sans manches</td>
-                <td>300 po</td>
+                <td>30 po</td>
                 <td>8 kg</td>
                 <td>Cotte de mailles avec manches</td>
-                <td>350 po</td>
+                <td>35 po</td>
                 <td>10 kg</td>
             </tr>
             <tr>
                 <td>Cotte de mailles de qualité</td>
-                <td>500 po</td>
+                <td>50 po</td>
                 <td>10 kg</td>
                 <td colspan="3"/>
             </tr>
@@ -442,15 +485,15 @@
             </tr>
             <tr>
                 <td>Casque de cuir</td>
-                <td>30 po</td>
+                <td>30 pa</td>
                 <td>1 kg</td>
                 <td>Casque de métal</td>
-                <td>100 po</td>
+                <td>10 po</td>
                 <td>1,5 kg</td>
             </tr>
             <tr>
                 <td>Heaume de métal</td>
-                <td>250 po</td>
+                <td>25 po</td>
                 <td>2,5 kg</td>
                 <td colspan="3"/>
             </tr>
@@ -459,10 +502,10 @@
             </tr>
             <tr>
                 <td>Jambières de cuir</td>
-                <td>35 po</td>
+                <td>35 pa</td>
                 <td>2 kg</td>
                 <td>Jambières de métal</td>
-                <td>85 po</td>
+                <td>85 pa</td>
                 <td>2,5 kg</td>
             </tr>
             <tr>
@@ -470,18 +513,18 @@
             </tr>
             <tr>
                 <td>Brassards de cuir</td>
-                <td>15 po</td>
+                <td>15 pa</td>
                 <td>500 g</td>
                 <td>Spallières de cuir</td>
-                <td>20 po</td>
+                <td>20 pa</td>
                 <td>500 g</td>
             </tr>
             <tr>
                 <td>Spallières de métal</td>
-                <td>80 po</td>
+                <td>80 pa</td>
                 <td>1 kg</td>
                 <td>Brassards et cubitières de métal</td>
-                <td>70 po</td>
+                <td>70 pa</td>
                 <td>1,5 kg</td>
             </tr>
             <tr>
@@ -489,15 +532,15 @@
             </tr>
             <tr>
                 <td>Gants de cuir</td>
-                <td>20 po</td>
+                <td>20 pa</td>
                 <td>500 g</td>
                 <td>Gantelets de cuir renforcé de métal</td>
-                <td>50 po</td>
+                <td>50 pa</td>
                 <td>750 g</td>
             </tr>
             <tr>
                 <td>Gantelets complets de métal</td>
-                <td>120 po</td>
+                <td>12 po</td>
                 <td>1 kg</td>
                 <td colspan="3"/>
             </tr>
@@ -506,10 +549,10 @@
             </tr>
             <tr>
                 <td>Bottes de cuir renforcées</td>
-                <td>50 po</td>
+                <td>50 pa</td>
                 <td>1 kg</td>
                 <td>Solerets de métal</td>
-                <td>100 po</td>
+                <td>10 po</td>
                 <td>1 kg</td>
             </tr>
             </tbody>
@@ -598,7 +641,9 @@
                 <td>Tonneau</td>
                 <td>5 kg</td>
                 <td>150 L</td>
-                <td colspan="3"/>
+                <td>Verre</td>
+                <td>150 g</td>
+                <td>20 cL</td>
             </tr>
             <tr>
                 <td colspan="6">* Vous pouvez également attacher des objets, comme un sac de couchage, une corde ou une sacoche, à l'extérieur du sac à dos.</td>
@@ -627,26 +672,26 @@
             </tr>
             <tr>
                 <td>Boite d'allume-feu</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
                 <td>500 g</td>
                 <td>Gamelle</td>
-                <td>2 pa</td>
+                <td>2 pc</td>
                 <td>500 g</td>
             </tr>
             <tr>
                 <td>Rations (1 jour)</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
                 <td>500 g</td>
                 <td>Tente</td>
-                <td>10 po</td>
+                <td>10 pa</td>
                 <td>5 kg</td>
             </tr>
             <tr>
                 <td>Sac de couchage</td>
-                <td>1 po</td>
+                <td>1 pa</td>
                 <td>2 kg</td>
                 <td>Couverture</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
                 <td>1,5 kg</td>
             </tr>
             <tr>
@@ -654,15 +699,15 @@
             </tr>
             <tr>
                 <td>Chaîne (3 m)</td>
-                <td>35 po</td>
+                <td>35 pa</td>
                 <td>5 kg</td>
                 <td>Corde en chanvre (15 m)</td>
-                <td>1 po</td>
+                <td>1 pa</td>
                 <td>5 kg</td>
             </tr>
             <tr>
                 <td>Corde en soie (15 m)</td>
-                <td>10 po</td>
+                <td>10 pa</td>
                 <td>2,5 kg</td>
                 <td colspan="3"/>
             </tr>
@@ -671,18 +716,18 @@
             </tr>
             <tr>
                 <td>Échelle de corde (3 m)</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
                 <td>5 kg</td>
                 <td>Équipement d’escalade</td>
-                <td>25 po</td>
+                <td>25 pa</td>
                 <td>5 kg</td>
             </tr>
             <tr>
                 <td>Grappin</td>
-                <td>2 po</td>
+                <td>2 pa</td>
                 <td>2 kg</td>
                 <td>Palan</td>
-                <td>3 po</td>
+                <td>3 pa</td>
                 <td>2,5 kg</td>
             </tr>
             <tr>
@@ -693,12 +738,12 @@
                 <td>1 pc</td>
                 <td>100 g</td>
                 <td>Lanterne</td>
-                <td>5 po</td>
+                <td>5 pa</td>
                 <td>1 kg</td>
             </tr>
             <tr>
                 <td>Lanterne sourde</td>
-                <td>10 po</td>
+                <td>10 pa</td>
                 <td>1 kg</td>
                 <td>Torche</td>
                 <td>1 pc</td>
@@ -712,20 +757,20 @@
                 <td>1 pc</td>
                 <td>-</td>
                 <td>Grimoire</td>
-                <td>20 po</td>
+                <td>20 pa</td>
                 <td>1,5 kg</td>
             </tr>
             <tr>
                 <td>Livre</td>
-                <td>15 po</td>
+                <td>15 pa</td>
                 <td>1 kg</td>
                 <td>Papier (une feuille)</td>
-                <td>1 pa</td>
+                <td>1 pc</td>
                 <td>-</td>
             </tr>
             <tr>
                 <td>Parchemin (une feuille)</td>
-                <td>2 pa</td>
+                <td>2 pc</td>
                 <td>-</td>
                 <td>Plume d’écriture</td>
                 <td>2 pc</td>
@@ -736,18 +781,18 @@
             </tr>
             <tr>
                 <td>Antidote</td>
-                <td>20 po</td>
+                <td>20 pa</td>
                 <td>250 g</td>
                 <td>Encre</td>
-                <td>10 po</td>
+                <td>10 pa</td>
                 <td>150 g</td>
             </tr>
             <tr>
                 <td>Parfum</td>
-                <td>5 po</td>
+                <td>5 pa</td>
                 <td>150 g</td>
                 <td>Poison</td>
-                <td>10 po</td>
+                <td>10 pa</td>
                 <td>250 g</td>
             </tr>
             <tr>
@@ -755,18 +800,18 @@
             </tr>
             <tr>
                 <td>Acide</td>
-                <td>20 po</td>
+                <td>20 pa</td>
                 <td>250 g</td>
                 <td>Feu grégeois</td>
-                <td>20 po</td>
+                <td>20 pa</td>
                 <td>500 g</td>
             </tr>
             <tr>
                 <td>Huile</td>
-                <td>1 pa</td>
+                <td>1 pc</td>
                 <td>500 g</td>
                 <td>Potion de soins</td>
-                <td>20 po</td>
+                <td>20 pa</td>
                 <td>250 g</td>
             </tr>
             <tr>
@@ -774,31 +819,31 @@
             </tr>
             <tr>
                 <td>Aiguilles de sarbacane (50)</td>
-                <td>1 po</td>
+                <td>1 pa</td>
                 <td>500 g</td>
                 <td>Billes de fronde (20)</td>
-                <td>1 po</td>
+                <td>1 pa</td>
                 <td>200 g</td>
             </tr>
             <tr>
                 <td>Carreaux d'arbalète (20)</td>
-                <td>5 po</td>
+                <td>5 pa</td>
                 <td>800 g</td>
                 <td>Flèches (20)</td>
-                <td>5 po</td>
+                <td>5 pa</td>
                 <td>800 g</td>
             </tr>
             <tr>
                 <td>Baril de poudre (100 doses)</td>
-                <td>50 po</td>
+                <td>50 pa</td>
                 <td>1,25 kg</td>
                 <td>Balles (20)</td>
-                <td>2 po</td>
+                <td>2 pa</td>
                 <td>200 g</td>
             </tr>
             <tr>
                 <td>Plombs (20 poignées)</td>
-                <td>5 po</td>
+                <td>5 pa</td>
                 <td>500 g</td>
                 <td colspan="3"/>
             </tr>
@@ -807,23 +852,23 @@
             </tr>
             <tr>
                 <td>Bélier portatif</td>
-                <td>15 po</td>
+                <td>15 pa</td>
                 <td>10 kg</td>
                 <td>Marteau</td>
-                <td>1 po</td>
+                <td>1 pa</td>
                 <td>1,5 kg</td>
             </tr>
             <tr>
                 <td>Pelle</td>
-                <td>5 po</td>
+                <td>5 pa</td>
                 <td>2,5 kg</td>
                 <td>Pied-de-biche</td>
-                <td>10 po</td>
+                <td>10 pa</td>
                 <td>2 kg</td>
             </tr>
             <tr>
                 <td>Pioche</td>
-                <td>5 po</td>
+                <td>5 pa</td>
                 <td>5 kg</td>
                 <td colspan="3"/>
             </tr>
@@ -832,10 +877,10 @@
             </tr>
             <tr>
                 <td>Longue-vue</td>
-                <td>50 po</td>
+                <td>50 pa</td>
                 <td>500 g</td>
                 <td>Loupe</td>
-                <td>20 po</td>
+                <td>20 pa</td>
                 <td>100 g</td>
             </tr>
             <tr>
@@ -843,18 +888,18 @@
             </tr>
             <tr>
                 <td>Billes (sac de 1000)</td>
-                <td>10 po</td>
+                <td>10 pa</td>
                 <td>1 kg</td>
                 <td>Chausse-trappes (sac de 20)</td>
-                <td>5 po</td>
+                <td>5 pa</td>
                 <td>1 kg</td>
             </tr>
             <tr>
                 <td>Piège à mâchoires</td>
-                <td>25 po</td>
+                <td>25 pa</td>
                 <td>5 kg</td>
                 <td>Pointes en fer (10)</td>
-                <td>1 po</td>
+                <td>1 pa</td>
                 <td>2,5 kg</td>
             </tr>
             <tr>
@@ -862,10 +907,10 @@
             </tr>
             <tr>
                 <td>Balance de marchand</td>
-                <td>25 po</td>
+                <td>25 pa</td>
                 <td>3 kg</td>
                 <td>Boulier</td>
-                <td>2 po</td>
+                <td>2 pa</td>
                 <td>1 kg</td>
             </tr>
             <tr>
@@ -873,31 +918,31 @@
             </tr>
             <tr>
                 <td>Cadenas</td>
-                <td>35 po</td>
+                <td>35 pa</td>
                 <td>500 g</td>
                 <td>Chevalière</td>
-                <td>20 po</td>
+                <td>20 pa</td>
                 <td>250 g</td>
             </tr>
             <tr>
                 <td>Cire à cacheter</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
                 <td>100 g</td>
                 <td>Cloche</td>
-                <td>1 po</td>
+                <td>1 pa</td>
                 <td>250 g</td>
             </tr>
             <tr>
                 <td>Matériel de pêche</td>
-                <td>1 po</td>
+                <td>1 pa</td>
                 <td>2,5 kg</td>
                 <td>Menottes</td>
-                <td>25 po</td>
+                <td>25 pa</td>
                 <td>500 g</td>
             </tr>
             <tr>
                 <td>Miroir en acier</td>
-                <td>15 po</td>
+                <td>15 pa</td>
                 <td>250 g</td>
                 <td>Perche (3 m)</td>
                 <td>5 pc</td>
@@ -908,7 +953,7 @@
                 <td>1 pc</td>
                 <td>500 g</td>
                 <td>Sablier</td>
-                <td>25 po</td>
+                <td>25 pa</td>
                 <td>500 g</td>
             </tr>
             <tr>
@@ -921,7 +966,7 @@
             </tr>
             <tr>
                 <td>Trousse de soins</td>
-                <td>25 po</td>
+                <td>25 pa</td>
                 <td>1,5 kg</td>
                 <td colspan="3"/>
             </tr>
@@ -988,81 +1033,81 @@
             </tr>
             <tr>
                 <td>Omelette au fromage</td>
-                <td>4 pc</td>
+                <td>1 pc</td>
                 <td>Jambon et fromage sur pain de riz</td>
-                <td>5 pc</td>
+                <td>2 pc</td>
             </tr>
             <tr>
                 <th rowspan="2">Petit-déjeuner de marchand</th>
             </tr>
             <tr>
                 <td>Sandwich aux oeufs et bacon</td>
-                <td>3 pa</td>
+                <td>3 pc</td>
                 <td>Fougasse aux lardons</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
             </tr>
             <tr>
                 <th rowspan="2">Petit-déjeuner de noble</th>
             </tr>
             <tr>
                 <td>Steak de sanglier et oeuf à cheval</td>
-                <td>2 po</td>
+                <td>2 pa</td>
                 <td>Omellette à la truffe</td>
-                <td>3 po</td>
+                <td>3 pa</td>
             </tr>
             <tr>
                 <th rowspan="2">Déjeuner de roturier</th>
             </tr>
             <tr>
                 <td>Soupe aux légumes</td>
-                <td>4 pc</td>
+                <td>1 pc</td>
                 <td>Chèvre grillée</td>
-                <td>6 pc</td>
+                <td>2 pc</td>
             </tr>
             <tr>
                 <th rowspan="2">Déjeuner de marchand</th>
             </tr>
             <tr>
                 <td>Chèvre grillée et fromage</td>
-                <td>3 pa</td>
+                <td>3 pc</td>
                 <td>Oie grillée briochée</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
             </tr>
             <tr>
                 <th rowspan="2">Déjeuner de noble</th>
             </tr>
             <tr>
                 <td>Carré d'agneau</td>
-                <td>2 po</td>
+                <td>2 pa</td>
                 <td>Salade de gésiers</td>
-                <td>3 po</td>
+                <td>3 pa</td>
             </tr>
             <tr>
                 <th rowspan="2">Diner de roturier</th>
             </tr>
             <tr>
                 <td>Soupe de légumes</td>
-                <td>4 pc</td>
+                <td>1 pc</td>
                 <td>Lapin et patates sautées</td>
-                <td>6 pc</td>
+                <td>3 pc</td>
             </tr>
             <tr>
                 <th rowspan="2">Diner de marchand</th>
             </tr>
             <tr>
                 <td>Tourte du chasseur</td>
-                <td>4 pa</td>
+                <td>4 pc</td>
                 <td>Salade de venaison</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
             </tr>
             <tr>
                 <th rowspan="2">Diner de noble</th>
             </tr>
             <tr>
                 <td>Steak de venaison et légumes</td>
-                <td>2 po</td>
+                <td>2 pa</td>
                 <td>Saumon fumé</td>
-                <td>4 po</td>
+                <td>4 pa</td>
             </tr>
             <tr>
                 <td colspan="5">Les repas sont apportés avec un accompagnement(sauf spécifié), une tranche de pain et une chope (d'eau pour roturier, de bière pour marchand, de vin pour noble). Les parts des repas marchands et nobles sont plus importantes.</td>
@@ -1101,21 +1146,21 @@
             </tr>
             <tr>
                 <td>Bière (chope)</td>
-                <td>1 pa</td>
+                <td>1 pc</td>
                 <td>Bière de qualité (chope)</td>
-                <td>2 pa</td>
+                <td>2 pc</td>
             </tr>
             <tr>
-                <td>Vin (chope)</td>
-                <td>4 pa</td>
-                <td>Vin de qualité (chope)</td>
-                <td>8 pa</td>
+                <td>Vin (verre)</td>
+                <td>4 pc</td>
+                <td>Vin de qualité (verre)</td>
+                <td>8 pc</td>
             </tr>
             <tr>
-                <td>Cidre/Poirer (chope)</td>
-                <td>3 pa</td>
+                <td>Cidre/Poiré (verre)</td>
+                <td>3 pc</td>
                 <td>Eau de vie/Alcool fort (fond de chope)</td>
-                <td>2 pa</td>
+                <td>2 pc</td>
             </tr>
             <tr>
                 <th colspan="5">Nuitée</th>
@@ -1125,24 +1170,24 @@
             </tr>
             <tr>
                 <td>Paillase</td>
-                <td>5 pc</td>
+                <td>1 pc</td>
                 <td>Lit</td>
-                <td>1 pa</td>
+                <td>5 pc</td>
             </tr>
             <tr>
                 <th rowspan="3">Chambre individuelles</th>
             </tr>
             <tr>
                 <td>Chambre simple</td>
-                <td>1 po</td>
+                <td>1 pa</td>
                 <td>Chambre avec baquet</td>
-                <td>2 po</td>
+                <td>2 pa</td>
             </tr>
             <tr>
                 <td>Suite de luxe</td>
-                <td>5 po</td>
+                <td>5 pa</td>
                 <td>Suite royale</td>
-                <td>10 po</td>
+                <td>1 po</td>
             </tr>
             <tr>
                 <th colspan="5">Services additionnels</th>
@@ -1152,24 +1197,24 @@
             </tr>
             <tr>
                 <td>Box dans l'écurie</td>
-                <td>1 po</td>
+                <td>5 pc</td>
                 <td>Nourriture et toilettage</td>
-                <td>5 pa</td>
+                <td>5 pc</td>
             </tr>
             <tr>
                 <th rowspan="3">Hygiène et santé</th>
             </tr>
             <tr>
                 <td>Lessive</td>
-                <td>1 pa</td>
+                <td>1 pc</td>
                 <td>Baquet d'eau chaude et savon</td>
-                <td>1 po</td>
+                <td>1 pa</td>
             </tr>
             <tr>
                 <td>Seau d'eau et savon</td>
-                <td>1 pa</td>
+                <td>1 pc</td>
                 <td>Guérisseur</td>
-                <td>10 po</td>
+                <td>1 po</td>
             </tr>
             </tbody>
         </table>
@@ -1194,26 +1239,26 @@
             </tr>
             <tr>
                 <td>Cheval de trait</td>
-                <td>250 po</td>
+                <td>50 po</td>
                 <td>50 km</td>
                 <td>Cheval de course</td>
-                <td>400 po</td>
+                <td>80 po</td>
                 <td>60 km</td>
             </tr>
             <tr>
                 <td>Cheval de guerre</td>
-                <td>500 po</td>
+                <td>120 po</td>
                 <td>60 km</td>
                 <td>Dromadaire</td>
-                <td>150 po</td>
+                <td>35 po</td>
                 <td>50 km</td>
             </tr>
             <tr>
                 <td>Chameau</td>
-                <td>150 po</td>
+                <td>35 po</td>
                 <td>50 km</td>
                 <td>Âne</td>
-                <td>100 po</td>
+                <td>25 po</td>
                 <td>40 km</td>
             </tr>
             <tr>
@@ -1221,29 +1266,29 @@
             </tr>
             <tr>
                 <td>Charrette</td>
-                <td>3 pa/personne/jour</td>
+                <td>3 pc/personne/jour</td>
                 <td>30 km</td>
                 <td>Caravane</td>
-                <td>5 pa/personne/jour</td>
+                <td>5 pc/personne/jour</td>
                 <td>30 km</td>
             </tr>
             <tr>
                 <td>Carrosse</td>
-                <td>1 po/personne/jour</td>
+                <td>1 pa/personne/jour</td>
                 <td>70 km</td>
                 <td>Traîneau</td>
-                <td>1 po/personne/jour</td>
-                <td>40 km (neige uniquement)</td>
+                <td>1 pa/personne/jour</td>
+                <td>40 km (neige)</td>
             </tr>
             <tr>
                 <th colspan="6">Voyage fluvial</th>
             </tr>
             <tr>
                 <td>Barge</td>
-                <td>2 pa/personne/jour</td>
+                <td>2 pc/personne/jour</td>
                 <td>10 km + courant</td>
                 <td>Barque</td>
-                <td>5 pa/jour</td>
+                <td>5 pc/jour</td>
                 <td>20 km + courant</td>
             </tr>
             <tr>
@@ -1251,23 +1296,23 @@
             </tr>
             <tr>
                 <td>Jonque</td>
-                <td>5 pa/personne/jour</td>
+                <td>5 pc/personne/jour</td>
                 <td>100 km</td>
                 <td>Drakkar</td>
-                <td>5 pa/personne/jour</td>
+                <td>5 pc/personne/jour</td>
                 <td>100 km</td>
             </tr>
             <tr>
                 <td>Ganja</td>
-                <td>5 pa/personne/jour</td>
+                <td>5 pc/personne/jour</td>
                 <td>100 km</td>
                 <td>Galion</td>
-                <td>1 po/personne/jour</td>
+                <td>1 pa/personne/jour</td>
                 <td>80 km</td>
             </tr>
             <tr>
                 <td>Caravelle</td>
-                <td>1 po/personne/jour</td>
+                <td>1 pa/personne/jour</td>
                 <td>120 km</td>
                 <td colspan="3"/>
             </tr>

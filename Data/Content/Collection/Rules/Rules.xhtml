@@ -133,7 +133,7 @@
 
             <h3 id="avantage" onclick="hideContent(this)">Avantage et désavantage</h3>
             <div>
-                <p>Parfois une épreuve se déroule dans des conditions particulières pouvant entraîner un avantage ou un désavantage. Un avantage reflète des circonstances favorables à une action, le désavantage implique le contraire. L’un comme l’autre nécessite de lancer deux fois le dé. Sur un avantage, le meilleur des deux jets sera conservé ; sur un désavantage, ce sera le moins bon. Par exemple vous obtenez 17 et 5, un désavantage conclura sur 17, un avantage sur 5.</p>
+                <p>Parfois une épreuve se déroule dans des conditions particulières pouvant entraîner un avantage ou un désavantage. Un avantage reflète des circonstances favorables à une action, le désavantage implique le contraire. L’un comme l’autre nécessite de lancer deux fois le dé. Sur un avantage le meilleur des deux jets sera conservé, sur un désavantage ce sera le moins bon. Par exemple vous obtenez 17 et 5, un désavantage conclura sur 17, un avantage sur 5.</p>
                 <p onclick="hideContent(this)">Exemples d'avantages :</p>
                 <ul class="hidden">
                     <li>Être assisté par un allié compétent pour une action pouvant être effectuée à plusieurs (crochetage, stabilisation d'un mourant, forçage d'une porte, etc)</li>
@@ -339,13 +339,13 @@
             <div>
                 <p>La posture de combat détermine l'attitude du personnage au milieu de la bataille, on ne peut changer de posture qu'au début de son tour. Les différentes postures sont :</p>
                 <ul>
-                    <li><span class="big_underline">Posture agressive :</span>le personnage inflige au minimum la moitié de ses dégâts maximum lors d'une attaque mais ne peut pas entreprendre d'actions défensives, son taux de critique monte d'un cran.</li>
+                    <li><span class="big_underline">Posture agressive :</span>le personnage inflige au minimum la moitié de ses dégâts maximum lors d'une attaque mais ne peut pas entreprendre d'actions défensives, son taux de critique monte d'un cran. (Fonctionne aussi bien avec les armes qu'avec la magie).</li>
                     <li><span class="big_underline">Posture défensive :</span>permet d'infliger une attaque d'opportunité gratuite après une parade/esquive réussie.</li>
                     <li><span class="big_underline">Posture méditative :</span>les sorts du personnage ont un coût en psyché réduit d'un montant égal au cercle du sort (cercle 1 ->2, cercle 2 ->3, etc...).</li>
                     <li><span class="big_underline">Posture vigilante :</span>le personnage peut effectuer une attaque d'opportunité gratuite avec une arme à distance si un adversaire se déplace dans sa ligne de mire.</li>
                 </ul>
-                <p>Une posture peut justifier un bonus lors de certaines actions. Si un personnage passe en posture vigilante et précise qu'il recherche des opposants cachés, le MJ peut lui accorder un bonus (ou un avantage) pour son épreuve de perception.</p>
-                <p>Les ennemis peuvent utiliser les postures si le MJ s'en sent capable, mais on considère que les monstres les moins intelligents sont toujours en posture offensive</p>
+                <p>Une posture peut justifier un bonus lors de certaines actions. Si un personnage passe en posture vigilante et précise qu'il recherche des opposants cachés, le MJ peut lui accorder un avantage pour son épreuve de perception.</p>
+                <p>Les ennemis peuvent utiliser les postures si le MJ s'en sent capable, on considère que les monstres les moins intelligents sont toujours en posture offensive.</p>
             </div>
             <h3 onclick="hideContent(this)">Type de dégâts</h3>
             <div>
@@ -1024,38 +1024,53 @@
             </div>
             <h2 onclick="hideContent(this)">Richesse de départ</h2>
             <div>
-                <p>Le nombre de pièces d'or d'un personnage au début de l'aventure est également tiré au dés selon l'origine du personnage.</p>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Origine sociale</th>
-                        <th>Nombre de dés de Po</th>
-                    </tr>
-                    </thead>
+                <p>Le patrimoine monétaire d'un personnage au début de l'aventure est également tiré au dés selon l'origine du personnage.</p>
+                <table class="table_horizontal">
                     <tbody>
                     <tr>
+                        <th rowspan="2">Origine sociale</th>
+                        <th colspan="3">Nombre de dé(s)</th>
+                    </tr>
+                    <tr>
+                        <th>Pièces d'or</th>
+                        <th>Pièces d'argent</th>
+                        <th>Pièces de cuivre</th>
+                    </tr>
+                    <tr>
                         <td>Noble/Riche</td>
-                        <td>5d8 x10</td>
+                        <td>3d8</td>
+                        <td>3d10</td>
+                        <td>1d10</td>
                     </tr>
                     <tr>
                         <td>Bourgeois/Artisan</td>
-                        <td>4d6 x10</td>
+                        <td>2d6</td>
+                        <td>3d10</td>
+                        <td>1d10</td>
                     </tr>
                     <tr>
                         <td>Marchand</td>
-                        <td>3d6 x10</td>
+                        <td>2d4</td>
+                        <td>3d10</td>
+                        <td>1d10</td>
                     </tr>
                     <tr>
                         <td>Roturier</td>
-                        <td>2d6 x10</td>
+                        <td>1d4</td>
+                        <td>3d10</td>
+                        <td>1d10</td>
                     </tr>
                     <tr>
                         <td>Pauvre</td>
-                        <td>2d4 x5</td>
+                        <td/>
+                        <td>3d8</td>
+                        <td>1d10</td>
                     </tr>
 					<tr>
                         <td>Sans-le-sou</td>
-                        <td>1d4 x5</td>
+                        <td/>
+                        <td>2d6</td>
+                        <td>1d10</td>
                     </tr>
                     </tbody>
                 </table>
@@ -1282,8 +1297,8 @@
                         <td>Expert : AGI +2, DEX +1 Atq +2, Prd +1</td>
                         <td>Maître : AGI +3, DEX +1, Atq +2, Prd +2</td>
                     </tr>
-                    <tr id="rage_berserker">
-                        <th rowspan="2">Rage de berserker</th>
+                    <tr id="rage_berzerker">
+                        <th rowspan="2">Rage de berzerker</th>
                         <td colspan="5">Possibilité d’entrer en rage lors d’un combat au coût d’une action libre si on ne porte pas d’armure lourde. Ils peuvent rester dans cet état pendant un nombre de rounds égal à 4 + (VIG-10) par jour.<br/>La transe prend fin si le personnage n’en est plus capable, ou si il le décide au prix d’une action libre; le personnage devient fatigué pendant un nombre de round équivalent au double du nombre de round passé en rage et il lui est impossible de passer en rage si il est fatigué ou épuisé.<br/>Tant qu’il est en rage, le personnage ne peut pas effectuer d’action basée sur la dextérité, l’éloquence (sauf intimidation) ou l’intelligence; il subit un malus de 2 à la parade et à l'esquive.</td>
                     </tr>
                     <tr>
@@ -1762,7 +1777,7 @@
                     <td>+3</td>
                     <td>/</td>
                     <td>/</td>
-                    <td><span class="underline">Fait de magie :</span> +20% de Psyché, compétence Arts de la Magie<br/><span class="underline">Sensibilité magique :</span> 30% de vulnérabilité à la magie, 25% de chances d'absorber la psyché d'un sort</td>
+                    <td><span class="underline">Fait de magie :</span> +20% de Psyché, compétence Arts de la Magie<br/><span class="underline">Sensibilité magique :</span> Vulnérabilité à la magie, jet de VOL à -4 pour absorber la psyché d'un sort.</td>
                 </tr>
                 <tr>
                     <td rowspan="2">Steinn</td>
