@@ -4,21 +4,21 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Sever</title>
+    <title>Carte d'Ogma</title>
     <meta http-equiv="Content-Script-Type" content="application/javascript"/>
-    <script type="application/javascript" src="../../../Javascript/fonctions_accueil_plan.js"> </script>
-    <link rel="stylesheet" type="text/css" title="style_plan" href="../../../Styles/common_rules.css"/>
-    <link rel="icon" type="image/ico" href="../../../../favicon.ico"/>
+    <script type="application/javascript" src="../../Javascript/fonctions_accueil_plan.js"> </script>
+    <link rel="stylesheet" type="text/css" title="style_plan" href="../../Styles/common_rules.css"/>
+    <link rel="icon" type="image/ico" href="../../../favicon.ico"/>
 </head>
 <body>
 <div id="mySidenav" class="sidenav" style="display: block">
     <ul class="sidenav ">
-        <li><span class="index"><a href="../../../../index.xhtml">Accueil</a></span></li>
+        <li><span class="index"><a href="../../../index.xhtml">Accueil</a></span></li>
         <li><span class="partie shown" onclick="hideContent(this)">Lore</span>
             <ul>
-                <li><span class="medium shown"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
-                <li><span class="medium shown"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
-                <li><span class="medium shown"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="medium shown"><a href="Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium shown"><a href="Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium shown"><a href="Bestiaire.xhtml">Bestiaire</a></span></li>
                 <li><span class="dossier shown" onclick="hideContent(this)">Races/Factions</span>
                     <ul class="hidden">
                         <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
@@ -117,52 +117,11 @@
         <li><span class="nav_ajout"><a href="../Rules/Rules.xhtml#form_ajout">Une proposition ?</a></span></li>
     </ul>
 </div>
-<div id="main" class="main" align="center" style="margin-left: 200px">
+<div id="main" class="main" style="margin-left: 200px">
     <button onclick="toggleNav()" class="openbtn">MENU</button>
-    <h1 align="center">Les Severs</h1>
-    <img src="../../../Images/Factions/Sever_picture.jpg" alt="Guerrière Sever" height="600"/>
-
-    <div>
-        <h3>Présentation</h3>
-        <p>Les Sever sont un peuple occupant la majeure partie de Nashira, ce sont des humains de grande taille dépassant pour la plupart le mètre quatre-vingt, leur peau est claire tout comme leurs cheveux, ils disposent d'une force physique impressionnante pouvant rivaliser avec celle des Chonos.</p>
-        <p>Ce peuple de guerriers éprouve un profond respect pour les exploits guerriers. L'ordre et la loi sont d'une grande importance pour eux, ils se battent dans l'honneur et pour la gloire.</p>
-		<p>Les Severs se font parfois tatouer des symboles sacrés par les mages. Ces tatouages sont jalousement gardés par les Severs, ils accordent des capacités extraordinaires.</p>
-	</div>
-    <div>
-        <h3>Société</h3>
-        <p>La société Sever s'articule autour des grandes cités dirigées par des jarls. Tout les villages entourants une ville appartiennent au jarl, la ville en elle-même est un lieu de commerce par lequel transite toutes sortes de marchandises venues des quatre coins du monde. Les nombreux fleuves de Nashira facilitent le transport des marchandises par bateau, chaque ville est construite autour d'un gigantesque port fluvial, maritme ou lacustre.</p>
-        <p>Les Severs sont des artisans de renom, nombre de leurs forgerons et maroquiniers sont connus à travers tout le continent. Ils n'égalent pas l'art des Steinn, mais leur prix sont bien plus raisonnables.</p>
-        <p>En ca de necessité absolue, les jarls se réunnissent pour choisir un roi qui les gouvernera jusqu'à la fin de la crise. Cela est déjà arrivé en de multiples occasions par le passé, le plus souvent ces crises sont déclenchés par des invasions Chonos.</p>
-    </div>
-    <div>
-        <h3>Relations</h3>
-        <p>Il est assez difficile de se déplacer en Nashira sans croiser des Severs, que ce soit une patrouille de gardes ou un village de paysans, bien heureusement, ils ne sont pas aussi agressifs que leur voision canins du Sud. À moins d'être un bandit recherché, vous serez acceuillis où que vous alliez.</p>
-        <p>Les villes Sever entretiennent des relations commerciales avec les autres factions humaines via la mer, ils commercent aussi avec les Nains du clan Rakaj vivants encore plus loin dans la chaîne d'Hortak. La cité de Norvar entretient des relations privilégiées avec les communautés Kanta des plaines silencieuses.</p>
-        <p>Nombreux sont les jeunes Sever voulant se forger un nom qui partent à l'aventure, ils sont souvent trop intrépides et causent une grande peine à leur famille.</p>
-    </div>
-    <div>
-        <h3>Traits</h3>
-        <p><span class="big_underline">Caractéristiques</span>Les Severs sont un peuple guerrier, ils obtiennent un bonus de 2 en force et de 1 en vigueur</p>
-        <p><span class="big_underline">Endurance Nordique</span>Les traditions martiales rendent le corps plus résistant et endurant, les Sever possèdent 10% de points de vie supplémentaire.</p>
-        <p><span class="big_underline">Honneur du guerrier</span>Quand un guerrier est blessé, il ne pose pas le genou à terre, il se bat pour la gloire du combat ! Les sever obtiennent un bonus de 2 aux dégâts pendant 3 tours quand ils tombent à moins de 50% de leurs point de vie; une fois par jour maximum.</p>
-        <p><span class="big_underline"><a href="../World/Histoire_Ogma.xhtml#langages">Langages</a></span>Les Sever savent parler, écrire et lire le Commum et le Steindarr.</p>
-    </div>
-    <div>
-        <h3>Noms Severs</h3>
-        <p>Les Severs ont souvent un surnom en plus de leur prénom et nom de famille. Ils acquièrent ce surnom au cours des batailles et des aventures qu'ils vivent.</p>
-        <p><span class="big_underline">Noms Masculins</span>Grim, Jovar, Bjorn, Guthorm, Haenir, Galdur, Stigur, Vilhelm, Oddvar, Otto </p>
-        <p><span class="big_underline">Noms Féminins</span>Aslaug, Inga, Nina, Hilde, Valka, Drifa, Gervif, Erika, Meja, Gyrid, Sofie </p>
-        <p><span class="big_underline">Noms de famille</span>Bergstrom, Ahlander, Brodd, Morner, Bergh, Hedenstam, Hellberg, Rusnak, Urusov, Huso, Morgensen </p>
-    </div>
-    <div>
-        <h2>Galerie</h2>
-        <h4>Guerrier Sever</h4>
-        <img src="../../../Images/Factions/Sever_picture2.jpg" alt="Guerrier Sever" width="50%"/>
-        <h4>Village Sever</h4>
-        <img src="../../../Images/Factions/Sever_village.jpg" alt="Village montagnard Sever" width="90%" />
-        <h4>Ville Sever</h4>
-        <img src="../../../Images/Factions/Sever_ville.jpg" alt="Ville fluviale Sever"/>
-    </div>
+    <div align="center">
+    <img src="../../Images/Misc/Carte_Ogma.png" alt="Carte Ogma" id="map"/>
+</div>
 </div>
 </body>
 </html>
