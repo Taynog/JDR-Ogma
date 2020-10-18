@@ -148,6 +148,12 @@
                 <p>Le personnage peut combiner des attaques avec des armes naturelles à des attaques avec des armes de corps à corps et des attaques à mains nues, tant qu’il utilise un membre différent pour chaque attaque. Par exemple, il ne peut pas faire une attaque de griffes avec la main qui lui sert à faire une attaque à l’épée longue.</p>
             </div>
 
+            <h3 id="atq_montee" onclick="hideContent(this)">Attaque montée</h3>
+            <div>
+                <p>Les attaques effectuées depuis une monture lancée à pleine allure infligent le double de dégâts mais provoquent une attaque d'opportunité avec un malus de 3 si l'attaque est parée ou esquivée.</p>
+                <p>Si l'arme utilisée possède la propriété "Charge", l'attaque inflige le triple de dégâts et ne provoque pas d'attaque d'opportunité.</p>
+            </div>
+
             <h3 id="atq_multiple" onclick="hideContent(this)">Attaques multiples</h3>
             <div>
                 <p>Un personnage peut effectuer plusieurs attaques par round s'il possède un <a href="Tableaux.xhtml#arts_du_combat">art du combat</a> ou une capacité spéciale.</p>
@@ -243,6 +249,11 @@
             <p>Un personnage peut courir lors d’une action complexe. Dans ce cas, il sacrifie son <a href="Types_actions.xhtml#pas_de_placement">pas de placement</a>. Un personnage qui décide de courir parcourt, en ligne droite, une distance égale à quatre fois sa vitesse de déplacement de base.</p>
             <p>Un personnage peut courir sans problème pendant un nombre de rounds égal à sa valeur de Constitution (-3 s'il porte une armure intermédiaire, -6 si l'armure est lourde). Ensuite, il doit réussir un test de Constitution s’il veut poursuivre son effort. Il doit effectuer un nouveau test à chaque round et le malus augmente de 1 point à chaque fois. Dès qu’il échoue, il est obligé de s’arrêter et de se reposer une minute (10 rounds) au minimum avant de pouvoir reprendre sa course. Tant qu’il se repose, il ne peut pas se déplacer plus vite qu’une action de mouvement normale.</p>
             <p>Un personnage ne peut pas courir sur un terrain difficile ou s’il ne voit pas où il va.</p>
+        </div>
+
+        <h2 id="charge" onclick="hideContent(this)">Charger</h2>
+        <div>
+            <p>Si le personnage à passer son tour précédent à <a href="Types_actions.xhtml#courir">Courir</a>, sa prochaine attaque peut être considéré comme une charge, auquel cas son attaque devient une action complexe infligeant 50% de dégâts supplémentaire. Le personnage peut, après avoir porter son attaque, continuer sa course s'il n'a pas pénétré la zone de contrôle de son adversaire.</p>
         </div>
 
         <h2 id="retraite" onclick="hideContent(this)">Retraite</h2>

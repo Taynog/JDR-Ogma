@@ -120,8 +120,6 @@
 <div id="main" class="main" style="margin-left: 200px">
     <button onclick="toggleNav()" class="openbtn">MENU</button>
 
-
-
     <div id="rules">
         <h1 id="resolution_action" onclick="hideContent(this)">Résolution des actions</h1>
         <div>
@@ -341,17 +339,17 @@
                 <ul>
                     <li><span class="big_underline">Posture agressive :</span>le personnage inflige au minimum la moitié de ses dégâts maximaux lors d'une attaque mais ne peut pas entreprendre d'actions défensives, son taux de critique monte d'un cran. (Fonctionne aussi bien avec les armes qu'avec la magie. Un personnage attaquant avec une arme infligeant 1d10+5 dégâts infligera au minimum 10 points de dégâts).</li>
                     <li><span class="big_underline">Posture défensive :</span>accorde une parade/esquive supplémentaire par round mais impose un malus de 4 à l'attaque.</li>
-                    <li><span class="big_underline">Posture méditative :</span>les sorts du personnage ont un coût en psyché réduit d'un montant égal au cercle du sort (cercle 1 ->2, cercle 2 ->3, etc...).</li>
                     <li><span class="big_underline">Posture vengeresse :</span>permet d'infliger une attaque d'opportunité après une parade/esquive réussie.</li>
                     <li><span class="big_underline">Posture vigilante :</span>autorise les attaques d'opportunité avec une arme à distance sur les ennemis se déplaçant dans la ligne de mire. Bonus de +5 lors du jet d'initiative.</li>
-                </ul>
+                    <li><span class="big_underline">Posture d'harmonie :</span>les sorts du personnage ont un coût en psyché réduit d'un montant égal au cercle du sort (cercle 1 ->2, cercle 2 ->3, etc...).</li>
+				</ul>
                 <p>Une posture peut justifier un bonus lors de certaines actions. Si un personnage passe en posture vigilante et précise qu'il recherche des opposants cachés, le MJ peut lui accorder un avantage pour son épreuve de perception.</p>
                 <p>Les ennemis peuvent utiliser les postures si le MJ s'en sent capable, on considère que les monstres les moins intelligents sont toujours en posture offensive.</p>
             </div>
             <h3 onclick="hideContent(this)">Type de dégâts</h3>
             <div>
                 <p>Il y a deux types de dégâts, les dégâts létaux et les dégâts non-létaux causés par les attaques contondantes légères(mains nues et bâtons), le climat et la fatigue</p>
-                <p>Les dégâts létaux réduisent les points de vie des entités tandis que les non-létaux s'accumulent et ne comptent pas comme de réels dégâts. Les dégâts non-létaux peuvent causer une parte de connaissance et disparaissent après un repos long.</p>
+                <p>Les dégâts létaux réduisent les points de vie des entités tandis que les non-létaux s'accumulent et ne comptent pas comme de réels dégâts. Les dégâts non-létaux peuvent causer une parte de connaissance et disparaissent après un repos intermédiaire.</p>
                 <p>Les armes peuvent infliger différents types de dégâts selon la façon dont on les utilise : une épée longue peut servir pour un coup de taille ou un estoc, une morgensten inflige à la fois des dégâts perforants et contondant.</p>
                 <p>Certaines créatures peuvent êtres résistantes ou vulnérables à un ou plusieurs types de dégâts. Les squelettes par exemple résistent au dégâts perforants mais sont vulnérables aux dégâts contondants. Voir <a href="Glossaire.xhtml#vulnerabilites_resisances">Vulnérabilités et résitances</a> et le <a href="../World/Bestiaire.xhtml">Bestiaire</a>.</p>
             </div>
@@ -512,12 +510,13 @@
                 <p>Un personnage a besoin de 1,5 litres d'eau par jour par température normale, de 3 litres s'il fait chaud ou de 5 si il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de Vigueur ou devient <a href="Glossaire.xhtml#fatigue">fatigué</a>. Un personnage qui boit encore moins d'eau que cela devient automatiquement <a href="Glossaire.xhtml#fatigue">fatigué</a>. Si un personnage est déjà <a href="Glossaire.xhtml#fatigue">fatigué</a>, il devient alors <a href="Glossaire.xhtml#epuise">épuisé</a>.</p>
 
                 <h3>Repos</h3>
-                <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent prendre des repos courts au milieu d'une journée d'aventure et un repos long en fin de journée.</p>
+                <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent prendre des repos courts au milieu d'une journée d'aventure et un repos intermédiaire en fin de journée.</p>
                 <h4>Repos court</h4>
                 <p>Un repos court est une période de temps mort qui dure au moins 1 heure, et durant laquelle un personnage ne fait rien de plus demandant que manger, boire, lire ou panser ses plaies. Un personnage récupère naturellement 10% de ses points de vie et de psy lors d'un repos court, il est possible d'en récupérer plus via des sorts du domaine d'Agapi ou des remèdes alchimiques entres autres.</p>
+                <h4>Repos intermédiaire</h4>
+                <p>Un repos intermédiaire est une période de temps mort d'au moins 8 heures lors de laquelle un personnage dort au moins 6 heures et entreprend des activités légères comme lire, parler, manger ou monter la garde durant un maximum de 2 heures. Si le repos est interrompu par une période d'activité soutenue (au moins une heure de marche, de combat, d'incantation ou d'activités similaires), le personnage doit recommencer le repos intermédiaire depuis le début pour en bénéficier. Au terme d'un repos intermédiaire, un personnage récupère 1/3 de ses points de vie et de psy. Un personnage ne peut bénéficier de plus d'un repos intermédiaire par période de 24 heures et doit avoir au moins un point de vie au début du repos pour en gagner ses bienfaits.</p>
                 <h4>Repos long</h4>
-                <p>Un repos long est une période de temps mort d'au moins 8 heures lors de laquelle un personnage dort au moins 6 heures et entreprend des activités légères comme lire, parler, manger ou monter la garde durant un maximum de 2 heures. Si le repos est interrompu par une période d'activité soutenue (au moins une heure de marche, de combat, d'incantation ou d'activités similaires), le personnage doit recommencer le repos long depuis le début pour en bénéficier.</p>
-                <p>Au terme d'un repos long, un personnage récupère 50% de ses points de vie et de psy. Un personnage ne peut bénéficier de plus d'un repos long par période de 24 heures et doit avoir au moins un point de vie au début du repos pour en gagner ses bienfaits.</p>
+                <p>Entre deux aventures, il est normal que des aventuriers souhaitent se reposer pendant plusieurs jours pour évacuer le stress et la pression accumulés lors de leurs péripéties. Un repos long dure au moins 3 jours, et doit se dérouler dans un environnement calme et sécurisé comme un camp fortifié, un village ou une cité. Un repos long permet aux personnages de récupérer l'intégralité de leur points de vie et de psy, de progresser dans leurs caractéristiques et compétences.</p>
             </div>
 
             <h2 id="environnement" onclick="hideContent(this)">Environnement</h2>
@@ -816,7 +815,6 @@
                 <p>Le terrain peut modifier cette distance : -25% dans les forêts et collines, -50% dans les montagnes et marécages</p>
             </div>
         </div>
-
     </div>
 
     <div id="character">
@@ -840,11 +838,10 @@
                     </ul>
                 </li>
             </ol>
-            <p>Une caractéristique moyenne équivaut à un score de 10. Un personnage avec un score de 10 en Force n'est ni fort ni faible. Le représentation réelle du score est exponentielle, un score de 12 est supérieur à la moyenne mais reste commun, un score de 14 est remarquable, un score de 16 est incroyable et représente les limites extrêmes du commun des mortel, au delà se trouvent les héros de légende ou de redoutables monstres.</p>
-            <p id="modificateurs_carac">Les caractéristiques élévées apportent un bonus lors des lancers de dés. Ce bonus appelé modificateur est équivalent à : (CARACTÉRISTIQUE-10)/2. Soit un modificateur de +1 pour une caractéristique à 12 ou 13, +2 à 14 ou 15 et ainsi de suite. Le modificateur peut également être négatif dans le cas d'une caractéristiques inférieure à la moyenne.</p>
-            <p>Le total de Point de vie d'un personnage est déterminé par cette formule : ((VIG*1,5)+(FOR*0,5))*(1,1^NIVEAU-1)</p>
-            <p>Le total de Point de psyché d'un personnage est déterminé par cette formule : (((INT^1,45)+(VOL^1,15))-30)*(1,1^NIVEAU-1)</p>
-            <p>Si on obtient un nombre décimal, l'arrondi se fait à l'entier inférieur. (ex : 15,25 devient 15)</p>
+            <p>Une caractéristique moyenne équivaut à un score de 10. Un personnage avec un score de 10 en Force n'est ni fort ni faible. Le représentation réelle du score est exponentielle, un score de 12 est supérieur à la moyenne mais reste commun, un score de 14 est remarquable, un score de 16 est incroyable et représente les limites du commun des mortel, au delà se trouvent les héros de légende ou de redoutables monstres.</p>
+            <p>Le total de Point de vie d'un personnage est déterminé par cette formule : VIG^1,3</p>
+            <p>Le total de Point de psyché d'un personnage est déterminé par cette formule : (INT^1,5)-20</p>
+            <p>Si on obtient un nombre décimal, l'arrondi se fait à l'entier le plus proche. (ex : 15,25 devient 15 mais 15,62 devient 16)</p>
         </div>
 
         <h1 id="creation_perso" onclick="hideContent(this)">Création de Personnage</h1>
@@ -901,25 +898,25 @@
                         <table class="table_compact bestiary_entity_part">
                         <thead>
                         <tr>
-                            <th>Type de campagne</th>
+                            <th>Expérience du personnage</th>
                             <th>Points</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Réaliste</td>
+                            <td>Débutant</td>
                             <td>15</td>
                         </tr>
                         <tr>
-                            <td>Standard</td>
+                            <td>Aventurier</td>
                             <td>20</td>
                         </tr>
                         <tr>
-                            <td>Fantastique</td>
+                            <td>Vétéran</td>
                             <td>25</td>
                         </tr>
                         <tr>
-                            <td>Épique</td>
+                            <td>Héros</td>
                             <td>30</td>
                         </tr>
                         </tbody>
@@ -927,102 +924,78 @@
                     </div>
                     </li>
                 </ul>
+                <p>Ces caractéristiques peuvent progresser en cours de campagnes si le personnage s'entraîne intensément ou accomplis des actions épiques. Lorsque cela se produit, le personnage obtient une ou plusieurs marque(s) de progression dans la caractéristiques relative.</p>
+                <p>Ces marques deviennent utiles lors des repos longs entre chaque aventure. Un personnage possédants des marques de progressions dans une caractéristique peut tenter de l'améliorer d'un point : il doit pour cela lancer un d20 et obtenir une valeur strictement supérieure à son score de caractéristique, chaque marque de progression augmente de 1 le résultat du dé. Les marques de progressions disparaissent après l'augmentation de caractéristique.</p>
+                <p>Par exemple : Tatu, un chono possédant un score de 7 en éloquence parvient à éviter une bataille en engageant un échange diplomatique suite à une superbe réussite sur son épreuve d'éloquence, le MJ lui accorde donc une marque de progression. Après que le groupe de Tatu ait accompli sa mission, lui et ses amis prennent un peu de temps pour se reposer. Tatu décide de tenter d'augmenter son éloquence, il peut le faire puisqu'il a une marque et devra obtenir au moins 8 pour que son éloquence augmente. Il lance le d20 et obtient un 11, soit un 12 si on prend en compte la marque, Tatu passe à 8 en éloquence.</p>
 
-                <p>Chaque joueur commence avec 2 compétences au niveau novice, et 1 au niveau apprenti. Le nombre de compétences qu'un personnage peut maîtriser augmente avec le niveau du personnage. Les compétences raciales n'occupent pas un emplacement de compétences, elle ne peuvent cependant pas progresser au delà du plus haut palier accessible au personnage.</p>
-                <p>Pour apprendre une nouvelle compétence ou progresser dans les paliers d'une compétence connues, il est nécessaire de s’entraîner, que ce soit auprès d’une personnage possédant un meilleur niveau dans la compétence ou alors en pratiquant le domaine régi par la compétence.<br/>Cette restriction a pour but de rendre le jeu immersif au maximum, il n’est pas question qu’un personnage n’ayant jamais manié une hallebarde ni même vu quelqu’un en manier une, devienne Novice en maîtrise des hallebardes. De même qu’un personnage possédant la compétence marchandage au niveau Adepte, ne pourra pas suite à une montée de niveau passer Expert en marchandage si son dernier échange remonte à plusieurs années.</p>
-                <p>Les joueurs peuvent demander au MJ de créer des traits particulier pour leur personnage pour affiner la personalisation.</p>
-                <p>Les caractéristiques sont voués à s'améliorer avec le temps et l'entrainement, par exemple, entre deux aventures, un personnage peut tout à fait décider de dépenser son or pour s'entrainer en ville, selon l'endroit où il s'entraine, une de ses caractéristiques augmentera (chez les gardes pour la force, les voleurs ou un maitre d'arme pour la dextérité, etc...) tout dépend du choix du joueur.</p>
-                <p>Un personnage pourra aussi augmenter ses caractéritiques de façon plus naturelle, dans ce cas un caractéristique faible augmente plus rapidement qu'une autre déjà developpée. Un aventurier avec une éloquence de 7 qui parvient malgré tout à convaincre une personne très difficile à convaincre, pourra (avec l'accord du MJ) passer de 7 à 8 en éloquence. Cela vaut pour toute les autres caractéristiques, réussir un défi incroyablement difficile peut rendre un aventuirier plus doué.</p>
-                <p>Les niveaux quand à eux s'acquièrent lors de l'accomplissement d'étapes importantes pour les aventuriers, que ce soit après une grande bataille ou lors du retour à la civilistation après des semaines d'expédition. C'est au MJ que revient la décision de faire monter ou non son groupe de niveau.</p>
-                <p class="caption" onclick="hideContent(this)">Nombre des paliers de compétences selon le niveau</p>
-                <div class="hidden">
-                    <table class="table_horizontal">
-                        <tbody>
-                        <tr>
-                            <th>Niveau</th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
-                            <th>5</th>
-                            <th>6</th>
-                            <th>7</th>
-                            <th>8</th>
-                            <th>9</th>
-                            <th>10</th>
-                        </tr>
-                        <tr>
-                            <th>Novice</th>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <th>Apprenti</th>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <th>Adepte</th>
-                            <td> </td>
-                            <td> </td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <th>Expert</th>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <th>Maître</th>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td> </td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td colspan="11">Les compétences raciales n'occupent pas un emplacement de compétences, elle ne peuvent cependant pas progresser au delà du plus haut palier accessible au personnage.</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
             </div>
+
+            <h2 onclick="hideContent(this)">Compétences de départ et progression</h2>
+            <div>
+                <table class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th rowspan="2">Expérience du personnage</th>
+                        <th colspan="5">Paliers de compétences de départ</th>
+                    </tr>
+                    <tr>
+                        <th>Novice</th>
+                        <th>Apprenti</th>
+                        <th>Adepte</th>
+                        <th>Expert</th>
+                        <th>Maître</th>
+                    </tr>
+                    <tr>
+                        <th>Débutant</th>
+                        <td>2</td>
+                        <td>1</td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <th>Aventurier</th>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <th>Vétéran</th>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <th>Héros</th>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">Les compétences raciales ne comptent pas dans le nombre de compétences de départ</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>Pour apprendre une nouvelle compétence, il est nécessaire de s’entraîner, que ce soit auprès d’une personnage possédant un meilleur niveau dans la compétence ou alors en pratiquant le domaine régi par la compétence.<br/>Cette restriction a pour but de rendre le jeu immersif au maximum, il n’est pas logique qu’un personnage n’ayant jamais manié une hallebarde ni même vu quelqu’un en manier une, devienne Novice en maîtrise des hallebardes.</p>
+                <p>La progression se fait d'une manière similaire à celle des caractéristiques : lorsqu'un personnage utilise sa compétence, il peut obtenir des points de compétence(PC) pour cette compétence, ce n'est pas systématique et dépend de la fréquence d'utilisation de la compétence.</p>
+                <p>Lors d'un repos long, si le personnage a accumulé suffisamment de PC, il peut passer au palier suivant en "consommant" des PC : 1 point pour passer rang Novice, 2 points pour passer Apprenti, 3 pour Adepte, 4 pour Expert et 5 pour Maître.</p>
+                <p>Les PC sont exclusifs à la compétence ayant permis leur obtention, si un personnage possède 3 compétence de rang Apprenti chacune possédant 1 PC, il ne peut pas les rassembler pour passer une de ces compétences au rang Adepte, il devra obtenir 2 PC de plus pour chacune de ses compétences pour espérer les passer au rang Adepte.</p>
+            </div>
+
+            <h2 onclick="hideContent(this)">Traits de personnage</h2>
+            <div>
+                <p>Les joueurs peuvent demander au MJ de créer des traits particulier pour leur personnage pour affiner la personalisation. Ces traits reflètent une partie de la personnalité, du passé ou des objectifs du personnage.</p>
+                <p>Ils peuvent apporter un bonus et/ou un malus lors de certaines situations, par exemple, un personnage mal-à-l'aise avec des humains de part sa nature bestiale, peut avoir un malus de 2 en éloquence lors d'interactions sociales avec des Severs, Azumas ou Tuskizis mais un bonus de 2 avec les races bestiales.</p>
+                <p>Il est possible d'obtenir des traits en cours de campagne si une action particulièrement épique ou notable est accompli par un personnage. Une héroïne survivant une aventure se déroulant dans une grotte infestée de scaratrok sans jamais se faire empoisonnée peut gagner le trait "Anticorps efficace" accordant une résistance mineure au dégâts de poison.</p>
+                <p>Pour éviter que les Traits ne soient trop puissants, il faut, comparativement à une compétence, soit que son champ d'application soit plus restraint c'est à dire qu'il est utilisé moins souvent qu'une compétence; soit que sa puissance soit moindre ou compensée par un malus.</p>
+            </div>
+
             <h2 onclick="hideContent(this)">Richesse de départ</h2>
             <div>
                 <p>Le patrimoine monétaire d'un personnage au début de l'aventure est également tiré au dés selon l'origine du personnage.</p>
@@ -1075,6 +1048,9 @@
                     </tr>
                     </tbody>
                 </table>
+                <p>La progression se fait d'une manière similaire à celle des caractéristiques : lorsqu'un personnage utilise sa compétence, il peut obtenir des points de compétence(PC) pour cette compétence, ce n'est pas systématique et dépend de la fréquence d'utilisation de la compétence.</p>
+                <p>Lors d'un repos long, si le personnage a accumulé suffisamment de PC, il peut passer au palier suivant en " consommant " des PC.(Novice : 1 point, Apprenti : 2, Adepte : 3, Expert : 4, Maître : 5).</p>
+                <p>Les PC sont exclusifs à la compétence ayant permis leur obtention, si un personnage possède 3 compétence de rang Apprenti chacune possédant 1 PC, il ne peut pas les rassembler pour passer une de ces compétences au rang Adepte, il devra obtenir 2 PC de plus pour chacune de ses compétences pour espérer les passer au rang Adepte.</p>
             </div>
         </div>
 
