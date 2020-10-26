@@ -14,10 +14,15 @@
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Rules.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +53,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Data/Content/Collection" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -159,6 +166,11 @@
       <workItem from="1603018842103" duration="658000" />
       <workItem from="1603023536154" duration="11483000" />
       <workItem from="1603038306701" duration="3074000" />
+      <workItem from="1603532404078" duration="111000" />
+      <workItem from="1603532834782" duration="25462000" />
+      <workItem from="1603641947242" duration="14740000" />
+      <workItem from="1603718180108" duration="14100000" />
+      <workItem from="1603732788527" duration="528000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
