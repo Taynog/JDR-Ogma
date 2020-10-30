@@ -138,9 +138,15 @@
             <p>Un individu assourdi n’entend rien. Il reçoit un malus de -4 à l’initiative, manque automatiquement ses tests de Perception liés à l’ouïe, subit un malus de -4 aux tests de Perception. Si l’état de surdité persiste suffisamment longtemps, il peut arriver à s’y habituer plus ou moins.</p>
         </div>
 
+        <h3 id="porte_mort" onclick="hideContent(this)">Aux portes de la mort</h3>
+        <div>
+            <p>Une entité est aux portes de la mort si elle réduite à 0 points de vitalité ou moins et qu'elle à réussir son jet de Vigueur pour rester consciente, dans cet état elle ne peut plus rien faire sinon se déplacer en marchant (ce qui revient à se déplacer à la moitié de sa vitesse de déplacement). Dans cet état, l'entité reçoit 30% de stress supplémentaire.</p>
+            <p>Il est possible pour les créatures aux portes de la mort d'effectuer n'importe quelle action, cependant, cette action se fait avec un malus de 4, et juste après l'avoir accompli, la créature s'effondre et devient <a href="Glossaire.xhtml#inconscient">inconsciente</a>.</p>
+        </div>
+
         <h3 id="aveugle" onclick="hideContent(this)">Aveuglé</h3>
         <div>
-            <p>Le personnage ne voit plus rien. Il subit un malus de -5 à ses jets d'Attaque et de Parade, un malus de 3 à la Perception et à l'Esquive. Il ne peut pas effectuer le moindre test de compétence nécessitant d’y voir (comme lire ou utiliser une compétence de Perception basée sur la vue).</p>
+            <p>Le personnage ne voit plus rien. Il subit un malus de -5 à ses jets d'Attaque et de Parade, un malus de 4 à la Perception et à l'Esquive. Il ne peut pas effectuer le moindre test de compétence nécessitant d’y voir (comme lire ou utiliser une compétence de Perception basée sur la vue).</p>
             <p>Un personnage aveuglé ne peut pas charger ni courir et se déplace à la moitié de sa vitesse habituelle (test d’Agilité pour se déplacer plus vite). Une créature qui rate ce test tombe à terre.</p>
             <p>Un personnage aveuglé pendant suffisamment longtemps peut s’habituer partiellement à sa condition et circonvenir certains de ces désavantages.</p>
         </div>
@@ -148,13 +154,13 @@
         <h3 id="confus" onclick="hideContent(this)">Confus</h3>
         <div>
             <p>Une créature confuse a l’esprit totalement embrouillé et ne peut agir normalement. Elle ne fait pas de différence entre un ami et un ennemi, et attaque l’un et l’autre indifféremment. Si l’un de ses alliés souhaite lancer sur elle un sort bénéfique et qu’il a besoin pour ce faire de la toucher, il devra faire un jet d’attaque au corps à corps. Si un personnage confus est agressé, il attaquera en retour celui qui l’a frappé en dernier et ne s’arrêtera que lorsque son assaillant mourra ou ne sera plus dans son champ de vision.</p>
-            <p>Pour savoir comment agis un personnage confus, on lance un D100 : (01–25) Agit normalement, (26–50) Ne fait rien et babille de manière incohérente, (51–75) S’inflige 1d8 points de dégâts + bonus de Force avec un objet en main, (76–100) Attaque la créature la plus proche.</p>
+            <p>Pour savoir comment agis un personnage confus, on lance un D100 : (01–25) Agit normalement, (26–50) Ne fait rien et babille de manière incohérente, (51–75) S’inflige 1d4 points de dégâts avec un objet en main, (76–100) Attaque la créature la plus proche.</p>
             <p>Si un personnage confus est dans l’incapacité d’effectuer l’action tirée pour ce round, il se contente de balbutier de façon incompréhensible. Si le personnage confus est attaqué, il riposte automatiquement en frappant son agresseur à son prochain tour de jeu (du moins s’il est encore confus), mais ce dernier ne tirera aucun avantage de l’état de sa victime. Un personnage confus ne porte pas d’attaque d’opportunité quand il en a l’occasion, sauf si celle-ci est provoquée par une créature qu’il a décidé d’attaquer.</p>
         </div>
 
         <h3 id="ebloui" onclick="hideContent(this)">Ébloui</h3>
         <div>
-            <p>Le personnage est dans l’incapacité de voir clairement suite à une trop forte stimulation de la rétine. Il reçoit un malus de -1 sur les jets d’attaque et les tests de Perception.</p>
+            <p>Le personnage est dans l’incapacité de voir clairement suite à une trop forte stimulation de la rétine. Il reçoit un malus de -2 sur les jets d’attaque et de parade ainsi que sur les tests de Perception.</p>
         </div>
 
         <h3 id="effraye" onclick="hideContent(this)">Effrayé</h3>
@@ -185,22 +191,17 @@
 
         <h3 id="fatigue" onclick="hideContent(this)">Fatigué</h3>
         <div>
-            <p>Un personnage fatigué est dans l’incapacité de courir et de charger. Il subit un malus de -2 en Force, en Dextérité ainsi qu'en Agilité. Le personnage effectue ses actions physiques avec désavantage. La fatigue se dissipe au bout de huit heures de repos total. Un personnage fatigué devient épuisé dès qu’il fait quoi que ce soit qui causerait un nouvel état fatigué.</p>
+            <p>Un personnage fatigué est dans l’incapacité de courir et de charger. Il subit un malus de -2 en Force, en Dextérité ainsi qu'en Agilité. Le personnage effectue ses actions physiques avec désavantage. La fatigue se dissipe au bout d'une heure de repos total. Un personnage fatigué devient épuisé dès qu’il fait quoi que ce soit qui causerait un nouvel état fatigué.</p>
         </div>
 
         <h3 id="fievreux" onclick="hideContent(this)">Fiévreux</h3>
         <div>
-            <p>Le personnage reçoit un malus de -2 aux jets d’attaque, de dégâts d’armes et de sauvegarde ainsi qu’aux tests de compétence et de caractéristique.</p>
+            <p>Le personnage reçoit un malus de -2 à tous ses jets.</p>
         </div>
 
         <h3 id="hebete" onclick="hideContent(this)">Hébété</h3>
         <div>
             <p>La créature est incapable d’agir de manière normale. Elle est dans l’incapacité d’accomplir la moindre action.</p>
-        </div>
-
-        <h3 id="hors_combat" onclick="hideContent(this)">Hors de combat</h3>
-        <div>
-            <p>Un personnage hors de combat est inconscient et ne peut rien faire, son état est stable et il ne subit pas de dégâts au cours du temps(sauf si il est toujours sous les effets de dégâts continus (poison, feu, etc...)</p>
         </div>
 
         <h3 id="immobilise" onclick="hideContent(this)">Immobilisé</h3>
@@ -210,12 +211,13 @@
 
         <h3 id="inconscient" onclick="hideContent(this)">Inconscient</h3>
         <div>
-            <p>Un personnage inconscient est sans connaissance et sans défense. Un personnage sombre dans l’inconscience quand son total de points de vie tombe en dessous de 0 (mais pas plus que sa valeur de Vigueur), mais aussi quand il encaisse plus de points de dégâts non-létaux qu’il lui reste de points de vie.</p>
+            <p>Un personnage inconscient est sans connaissance et sans défense. Un personnage sombre dans l’inconscience quand son total de points de vitalité tombe en dessous de 0 (mais pas plus que sa valeur de Vigueur).</p>
+            <p>Un personnage inconscient redevient conscient si il possède au moins un point de vitalité</p>
         </div>
 
-        <h3 id="intagible" onclick="hideContent(this)">Intagible</h3>
+        <h3 id="intangible" onclick="hideContent(this)">Intangible</h3>
         <div>
-            <p>Dénuées de corps physique, les créatures intangibles sont immunisées contre les attaques non-magiques. Elles ne subissent que la moitié des dommages de la part d’armes magiques, de sorts, de pouvoirs magiques et d’effets surnaturels. Cependant, les autres créatures intangibles et les effets intangibles infligent eux des dommages normaux.</p>
+            <p>Dénuées de corps physique, les créatures intangibles sont immunisées contre les attaques non-magiques. Elles ne subissent des dommages que de la part d’armes magiques, de sorts, de pouvoirs magiques et d’effets surnaturels.</p>
         </div>
 
         <h3 id="invisible" onclick="hideContent(this)">Invisible</h3>
@@ -230,7 +232,8 @@
 
         <h3 id="mourant" onclick="hideContent(this)">Mourant</h3>
         <div>
-            <p>Le personnage est inconscient et en train de mourir. Une créature qui a un nombre de points de vie négatif et qui n’est pas stabilisée agonise. Une créature agonisante ne peut pas entreprendre la moindre action. À son tour à chaque round (en commençant par celui où il est tombé en dessous de 0 point de vie) et jusqu’à ce que sont état soit stable ou qu’il meure, le personnage doit faire un test de Vigueur. Il subit un malus égal à son nombre de points de vie négatifs. Un personnage stabilisé n’a pas besoin de faire ce test. S’il le rate, il perd 1 point de vie. Une créature mourante meurt quand son nombre de points de vie négatifs égale sa valeur de Vigueur.</p>
+            <p>Le personnage est inconscient et en train de mourir. Une créature qui a un nombre de points de vitalité négatif et qui n’est pas stabilisée agonise. Une créature agonisante ne peut pas entreprendre la moindre action. À son tour à chaque round (en commençant par celui où il est tombé en dessous de 0 point de vie) et jusqu’à ce que sont état soit stable ou qu’il meure, le personnage doit faire un test de Vigueur. Il subit un malus égal à son nombre de points de vie négatifs. S’il le rate, il perd 1 point de vie. Une créature mourante meurt quand son nombre de points de vie négatifs égale sa valeur de Vigueur.</p>
+            <p>Un personnage mourant peut être stabilisé par l'intervention d'une personne extérieure, ou s'il réussit 3 jet de Vigueur.</p>
         </div>
 
         <h3 id="nauseeux" onclick="hideContent(this)">Nauséeux</h3>
@@ -240,7 +243,7 @@
 
         <h3 id="panique" onclick="hideContent(this)">Paniqué</h3>
         <div>
-            <p>Un personnage paniqué lâche ce qu’il tient en main et s’enfuit au hasard en s’éloignant de la source de sa peur et sans s’approcher des autres sources de danger potentielles. Il ne peut effectuer aucune autre action. Il subit un malus de -2 aux jets de sauvegarde, ainsi qu’aux tests de compétence et de caractéristique. S’il se retrouve acculé, il se recroqueville sur lui-même sans pouvoir attaquer. Il peut se servir de ses pouvoirs ou de ses sorts pour s’enfuir (il y est même obligé si ceux-ci constituent la seule façon de s’enfuir).</p>
+            <p>Un personnage paniqué lâche ce qu’il tient en main et s’enfuit au hasard en s’éloignant de la source de sa peur et sans s’approcher des autres sources de danger potentielles. Il ne peut effectuer aucune autre action. Il subit un malus de -2 à tous ses jets. S’il se retrouve acculé, il se recroqueville sur lui-même sans pouvoir attaquer. Il peut se servir de ses pouvoirs ou de ses sorts pour s’enfuir (il y est même obligé si ceux-ci constituent la seule façon de s’enfuir).</p>
         </div>
 
         <h3 id="paralyse" onclick="hideContent(this)">Paralysé</h3>
@@ -256,7 +259,7 @@
 
         <h3 id="pris_au_depourvu" onclick="hideContent(this)">Pris au dépourvu</h3>
         <div>
-            <p>Tout personnage n’ayant pas encore entamé d’action au cours d’un combat est automatiquement pris au dépourvu. Il ne peut pas parer d'attaquer, effectue des esquives avec un malus de 4 et n’a pas la possibilité de lancer une attaque d’opportunité.</p>
+            <p>Tout personnage n’ayant pas encore entamé d’action au cours d’un combat est automatiquement pris au dépourvu. Il effectue ses esquives/parades avec un malus de 4 et n’a pas la possibilité de lancer une attaque d’opportunité.</p>
         </div>
 
         <h3 id="recroqueville" onclick="hideContent(this)">Recroquevillé sur soi-même</h3>
@@ -267,7 +270,7 @@
         <h3 id="saignement" onclick="hideContent(this)">Saignement</h3>
         <div>
             <p>La créature se met à saigner et subit des dommages au début de chaque round.</p>
-            <p>Il est possible d’arrêter l’hémorragie en réussissant un test de Medecine (malus en fonction de la gravité de la blesure) ou en utilisant un sort curatif. Il arrive parfois que le personnage subisse un saignement qui lui inflige des affaiblissements temporaires ou des diminutions permanentes de caractéristique. Ces dégâts ne se cumulent pas, sauf s’ils sont de nature différente. Lorsque deux sources infligent des hémorragies de même nature, appliquez le résultat le plus handicapant.</p>
+            <p>Il est possible d’arrêter l’hémorragie en réussissant un test de Medicine (malus en fonction de la gravité de la blessure) ou en utilisant un sort curatif. Il arrive parfois que le personnage subisse un saignement qui lui inflige des affaiblissements temporaires ou des diminutions permanentes de caractéristique. Ces dégâts ne se cumulent pas, sauf s’ils sont de nature différente. Lorsque deux sources infligent des hémorragies de même nature, appliquez le résultat le plus handicapant.</p>
         </div>
 
         <h3 id="sans_defense" onclick="hideContent(this)">Sans défense</h3>
@@ -282,7 +285,7 @@
 
         <h3 id="stable" onclick="hideContent(this)">Stable</h3>
         <div>
-            <p>Un personnage qui était mourant mais qui a cessé de perdre des points de vie (et dont le total de points de vie est toujours négatif) est stable. Le personnage n’est plus mourant mais reste inconscient. S’il est devenu stable grâce à une assistance extérieure, il ne perd plus de points de vie. Chaque heure qui passe, il doit faire un jet de Vigueur afin de reprendre ses esprits et de ne plus être que hors de combat (même si son total de points de vie reste négatif), en tenant compte d’un malus égal à son total de points de vie négatifs.</p>
+            <p>Un personnage qui était mourant mais qui a cessé de perdre des points de vie (et dont le total de points de vie est toujours négatif) est stable. Le personnage n’est plus mourant mais reste inconscient. S’il est devenu stable grâce à une assistance extérieure, il ne perd plus de points de vie.</p>
             <p>S’il est devenu stable sans aide extérieure, il risque de recommencer à perdre des points de vie. Chaque heure, il doit faire un jet de Vigueur afin de rester stable (comme s’il recevait l’aide de quelqu’un), mais à chaque fois qu’il échoue, il perd 1 point de vie.</p>
         </div>
     </div>
@@ -303,8 +306,8 @@
             <p>Une créature peut être résitante à un type de dégâts, ce qui signifie qu'elle subira des dommages réduits face à ce genre de dégâts. Il existe 4 niveaux de résistances :</p>
             <ul>
                 <li>Résistance mineure : les dégâts subis diminuent d'un tiers (-33%)</li>
-                <li>Résistance : les dégâts subis diminuent de moitié (-50%)</li>
-                <li>Résistance majeure : les dégâts subis sont divisés par deux (-100%)</li>
+                <li>Résistance : les dégâts subis sont divisés par deux (-50%)</li>
+                <li>Résistance majeure : les dégâts subis sont divisés par quatre (-75%)</li>
                 <li>Immunité : les dégâts subis sont nullifiés</li>
             </ul>
         </div>

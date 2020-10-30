@@ -350,9 +350,7 @@
             </div>
             <h3 onclick="hideContent(this)">Type de dégâts</h3>
             <div>
-                <p>Il y a deux types de dégâts, les dégâts létaux et les dégâts non-létaux causés par les attaques contondantes légères(mains nues et bâtons), le climat et la fatigue</p>
-                <p>Les dégâts létaux réduisent les points de vie des entités tandis que les non-létaux s'accumulent et ne comptent pas comme de réels dégâts. Les dégâts non-létaux peuvent causer une parte de connaissance et disparaissent après un repos intermédiaire.</p>
-                <p>Les armes peuvent infliger différents types de dégâts selon la façon dont on les utilise : une épée longue peut servir pour un coup de taille ou un estoc, une morgensten inflige à la fois des dégâts perforants et contondant.</p>
+                <p>Les armes peuvent infliger différents types de dégâts selon la façon dont on les utilise : une épée longue peut servir pour un coup de taille ou un estoc, une étoile du matin inflige à la fois des dégâts perforants et contondant.</p>
                 <p>Certaines créatures peuvent êtres résistantes ou vulnérables à un ou plusieurs types de dégâts. Les squelettes par exemple résistent au dégâts perforants mais sont vulnérables aux dégâts contondants. Voir <a href="Glossaire.xhtml#vulnerabilites_resisances">Vulnérabilités et résistances</a> et le <a href="../World/Bestiaire.xhtml">Bestiaire</a>.</p>
             </div>
 
@@ -361,6 +359,7 @@
                 <p>Chaque arme possède deux caractéristiques en plus de la rupture et des dégâts, il s'agit de l'attaque et de la parade. L'attaque détermine à quel point il est facile de toucher un adversaire et la parade détermine la probabilité de parer un coup avec cette arme. Une arme peut être modifié de diverses manières (poignée améliorée, fil aiguisé, renfort, lame dentelée, etc..) et ainsi posséder des caractéristiques différentes de sa catégorie.</p>
                 <p>Pour toucher un adversaire avec une arme de corps-à-corps ou un bouclier, on oppose le jet d'attaque de l'assaillant au jet de défense (parade ou esquive) du défenseur. Si le jet d'attaque est supérieur à celui de défense, l'attaque est réussie et on lance le jet de dégâts. Si l'adversaire ne peut pas se défendre (car il a déjà esquiver ou parer lors du round), l'assaillant doit seulement réussir son jet d'attaque. De nombreux bonus et malus peuvent s'appliquer selon la situation (position avantageuse, encerclement, etc...).</p>
                 <p>Les armes à distance possèdent une statistique nommée précision fonctionnant de la même manière que la statistique d'attaque des armes de corps-à-corps. Des bonus et malus peuvent intervenir si le tireur est situé en hauteur ou si la cible est à couvert par exemple.</p>
+                <p>Si l'attaque est une réussite critique, alors elle inflige des dégâts directement à la vitalité de la cible, et ignore l'armure.</p>
             </div>
             <h3 onclick="hideContent(this)">Se défendre</h3>
             <div>
@@ -368,22 +367,17 @@
                 <p>Un bouclier facilite la parade et permet (selon sa taille) de parer les attaques de différents adversaires venant de la même direction.</p>
                 <p>L'esquive permet de se repositionner tout en évitant de subir des dégâts, cependant si on subit une attaque suite à un jet d'esquive raté, on subit 25% de dégâts supplémentaires dus à la baisse de la garde.</p>
             </div>
-            <h3 onclick="hideContent(this)">Blessures et mort</h3>
+            <h3 id="blessures_mort" onclick="hideContent(this)">Blessures et mort</h3>
             <div>
-                <p>Les dégâts n’affectent pas le personnage tant qu’il ne tombe pas à 0 PV. Si les PV d'une entité tombent à 1 ou que le total de dégâts non-létaux sont égaux à son nombre actuel de PV, l'entité devient chancelante et ne peut que se déplacer, toute autre action lui ferait perdre son dernier PV, ce qu'elle est en droit de faire.</p>
-                <p>Si les dégâts non létaux dépassent le nombre de points de vie restants du personnage, il s’effondre, inconscient. Il est alors hors de combat.</p>
-                <p>De 0 PV jusqu’à une valeur négative égale à sa valeur de Vigueur, il est mourant.</p>
-                <p>Quand son total de PV négatifs est égal à sa valeur de Vigueur, il meurt.</p>
-                <p>Un personnage hors de combat est inconscient et ne peut rien faire, son état est stable et il ne subit pas de dégâts au cours du temps(sauf si il est toujours sous les effets de dégâts continus (poison, feu, etc...)</p>
-                <p>Un personnage mourant sombre immédiatement dans l’inconscience et ne peut plus rien faire. Il perd 1 point de vie chaque round (et les dégâts continuels si il en subissait toujours les effets). Cela continue jusqu’à ce qu’il meure ou soit stabilisé. Si le personnage est stabilisé, il devient hors de combat</p>
-                <p>Stabiliser un personnage mourant en combat requiert de lui faire regagner des points de vie par quelque manière que ce soit (sorts, potions). À la fin d'un combat, les compagnons d'un personnage mourant peuvent prendre le temps de le stabiliser si ils possèdent des fournitures médicales (bandages, etc...).</p>
+                <p>Les dégâts subis font diminuer la jauge d'endurance et n'influent pas sur l'état du personnage tant que son endurance est positive, si la jauge d'endurance est vide, tout dégâts supplémentaires feront diminuer sa jauge de vitalité.</p>
+                <p>Si la vitalité d'une entité atteint 0 ou une valeur négative, elle doit réussir un jet de Vigueur avec un malus éventuels équivalent à son total de points de vitalité négatifs, si elle réussit son jet, elle reste consciente et est <a href="Glossaire.xhtml#porte_mort">aux portes de la mort</a>. Si elle échoue, elle devient <a href="Glossaire.xhtml#inconscient">inconsciente</a> et <a href="Glossaire.xhtml#mourant">mourante</a>.</p>
             </div>
             <h3 onclick="hideContent(this)">Attaquer un adversaire(Exemple)</h3>
             <div>
                 <p>Prenons Edwin, un officier de l'Empire Azuma, qui souhaite attaquer un bandit situé à 5 mètres. Edwin possède un score de 14 en AGI, 13 en FOR et 12 en DEX, son arme est une épée longue impériale (Attaque +2 Parade +2 Dégâts 1d6+2 (la force d'Edwin apporte un bonus de 1 aux dégâts, la qualité de l'arme ajoute 1 aussi).</p>
                 <p>Le tour d'Edwin vient avant celui du bandit, il peut donc s'avancer pour parcourir la distance les séparant, il peut parcourir 9m (+1 de par son AGI élevée, mais -1 à cause de son armure intermédiaire) par round, il effectue une action de mouvement et se retrouve face au brigand, il peut désormais lancer une attaque de corps à corps via une action simple, il lance son jet d'attaque et fait un 17 !</p>
                 <p>Le brigand essaie de parer l'attaque avec son épée courte rouillée (Attaque +0 Parade +1 Dégâts 1d6-1), il lance son jet de parade et fait un 13, le jet est insuffisant, l'attaque porte !</p>
-                <p>Edwin lance son jet de dégâts (1d6+2), il obtient 5(3+2) le brigand est déjà mal en point, il ne possède plus que 3 PV,il tombe à -2 PV, il est mourant.</p>
+                <p>Edwin lance son jet de dégâts (1d6+2), il obtient 5(3+2) le brigand est déjà mal en point, il ne possède plus que 3 point de vitalité,il tombe à -2, rate son jet de vigueur, il perd connaissance et est mourant.</p>
             </div>
         </div>
 
@@ -496,7 +490,7 @@
         <div>
             <p>Partir à l'aventure n'est pas chose aisée, on risque gros si l'on néglige les nombreux risques des terres sauvages éloignées de toute civilisation. Un groupe d'aventuriers mal préparé s'expose aux climats difficiles, à la famine et à la soif, aux bêtes et monstres affamés.</p>
             <h2 id="besoins_journaliers" onclick="hideContent(this)">Besoins journaliers</h2>
-            <div class="hidden">
+            <div>
                 <h3>Nourriture</h3>
                 <p>Un personnage a besoin de 500 g de nourriture par jour et peut faire durer sa réserve de nourriture plus longtemps en ne mangeant que des demi-rations. Manger 250 g de nourriture par jour compte comme un demi-jour sans nourriture.</p>
                 <p>Un personnage peut survivre sans nourriture pendant 3 jour. À la fin de chaque jour au-delà de cette limite, un personnage souffre automatiquement d'un niveau d'épuisement. Un jour passé en ayant mangé normalement remet le compteur de jours sans nourriture à zéro.</p>
@@ -505,13 +499,11 @@
                 <p>Un personnage a besoin de 1,5 litres d'eau par jour par température normale, de 3 litres s'il fait chaud ou de 5 si il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de Vigueur ou devient <a href="Glossaire.xhtml#fatigue">fatigué</a>. Un personnage qui boit encore moins d'eau que cela devient automatiquement <a href="Glossaire.xhtml#fatigue">fatigué</a>. Si un personnage est déjà <a href="Glossaire.xhtml#fatigue">fatigué</a>, il devient alors <a href="Glossaire.xhtml#epuise">épuisé</a>.</p>
 
                 <h3>Repos</h3>
-                <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent prendre des repos courts au milieu d'une journée d'aventure et un repos intermédiaire en fin de journée.</p>
-                <h4>Repos court</h4>
-                <p>Un repos court est une période de temps mort qui dure au moins 1 heure, et durant laquelle un personnage ne fait rien de plus demandant que manger, boire, lire ou panser ses plaies. Un personnage récupère naturellement 10% de ses points de vie et de psy lors d'un repos court, il est possible d'en récupérer plus via des sorts du domaine d'Agapi ou des remèdes alchimiques entres autres.</p>
-                <h4>Repos intermédiaire</h4>
-                <p>Un repos intermédiaire est une période de temps mort d'au moins 8 heures lors de laquelle un personnage dort au moins 6 heures et entreprend des activités légères comme lire, parler, manger ou monter la garde durant un maximum de 2 heures. Si le repos est interrompu par une période d'activité soutenue (au moins une heure de marche, de combat, d'incantation ou d'activités similaires), le personnage doit recommencer le repos intermédiaire depuis le début pour en bénéficier. Au terme d'un repos intermédiaire, un personnage récupère 1/3 de ses points de vie et de psy. Un personnage ne peut bénéficier de plus d'un repos intermédiaire par période de 24 heures et doit avoir au moins un point de vie au début du repos pour en gagner ses bienfaits.</p>
+                <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent se reposer au milieu d'une journée d'aventure et établir un camp pour dormir en fin de journée.</p>
+                <h4>Repos</h4>
+                <p>Un repos est une période de temps mort qui dure au moins 1 heure, et durant laquelle un personnage ne fait rien de plus demandant que manger, boire, lire ou panser ses plaies. Un personnage récupère naturellement 5% d'endurance et de psy par heure de repos et un point de vitalité toute les 8 heures de repos consécutives, il est possible d'en récupérer plus via des sorts du domaine d'Agapi ou des remèdes alchimiques entres autres.</p>
                 <h4>Repos long</h4>
-                <p>Entre deux aventures, il est normal que des aventuriers souhaitent se reposer pendant plusieurs jours pour évacuer le stress et la pression accumulés lors de leurs péripéties. Un repos long dure au moins 3 jours, et doit se dérouler dans un environnement calme et sécurisé comme un camp fortifié, un village ou une cité. Un repos long permet aux personnages de récupérer l'intégralité de leur points de vie et de psy, de progresser dans leurs caractéristiques et compétences.</p>
+                <p>Entre deux aventures, il est normal que des aventuriers souhaitent se reposer pendant plusieurs jours pour évacuer le stress et la pression accumulés lors de leurs péripéties. Un repos long dure au moins 3 jours, et doit se dérouler dans un environnement calme et sécurisé comme un camp fortifié, un village ou une cité. Un repos long permet aux personnages de récupérer l'intégralité de leur points d'endurance et de psy, 3 point de vitalité par jour et de progresser dans leurs caractéristiques et compétences.</p>
 
                 <h3 id="alcool">Alcool</h3>
                 <p>La consommation d'alcool est quelque chose à surveiller, si un peu de boisson peu faciliter les relations sociales, à de trop fortes doses, il peut nuire au consommateur abusif. Un aventurier tolère l'alcool comme tout un chacun, au delà d'une certaine limite, ses capacités cognitives commencent à faiblir jusqu'au point où le corps lui même s'effondre. Les doses d'alcool sont perdues au rythme d'une par heure.</p>
@@ -568,9 +560,9 @@
             </div>
 
             <h2 id="environnement" onclick="hideContent(this)">Environnement</h2>
-            <div class="hidden">
+            <div>
                 <h3 id="biomes" onclick="hideContent(this)">Biomes</h3>
-                <div class="hidden">
+                <div>
                     <p>Le monde d'Ogma est parsemé de biomes différents, certains sont cléments d'autres beaucoup moins. Il est possible de trouver de la nourriture et de l'eau potable dans la plupart de ceux-ci, mais la tâche est plus ardue dans une montagne gelée balayée par des blizzards plutôt que dans une plaine paisible.</p>
                     <h4>Steppes</h4>
                     <div>
@@ -635,7 +627,7 @@
                 </div>
 
                 <h3 onclick="hideContent(this)">Climats et vents</h3>
-                <div class="hidden">
+                <div>
                     <p>Il arrive que le temps joue un rôle important dans une aventure. La table ci-dessous tient lieu des aléas du temps. Le sens des termes employés dans ce tableau est expliqué plus bas.</p>
                     <p class="caption" onclick="hideContent(this)">Climats</p>
                     <div id="table_climat" class="hidden">
@@ -800,7 +792,7 @@
                 </div>
 
                 <h3 id="dangers_naturels" onclick="hideContent(this)">Dangers naturels</h3>
-                <div class="hidden">
+                <div>
                     <h4>L'acide</h4>
                     <p>L’acide inflige 1d6 points de dégâts par round d’exposition, excepté dans le cas d’une immersion totale (qui peut par exemple se produire si un aventurier tombe dans une grande vasque), laquelle occasionne 5d6 points de dégâts par round. Une attaque acide (salive de monstre, flasque lancée à la main, etc.) représente un round d’exposition.</p>
                     <p>Les émanations libérées par la plupart des acides ont l’effet d’un poison fonctionnant par inhalation. Quiconque s’approche trop d’une vaste étendue d’acide doit réussir à chaque round un jet de vigueur sous peine de subir un affaiblissement temporaire de 1 point de Vigueur par round. Ce poison n’a pas de fréquence, et n’agit plus dès qu’on s’en éloigne.</p>
@@ -911,7 +903,7 @@
             </div>
 
             <h2 id="eclairage" onclick="hideContent(this)">Éclairage</h2>
-            <div class="hidden">
+            <div>
                 <p>Pour contrecarrer les ténèbres, il est possible de s'armer de différentes sources de lumière allant de la simple bougie à l'incantation de Safi. Toute les sources lumineuses n'éclairent pas de la même façon : la lumière vive permet de voir distinctement, au delà du rayon de lumière vive et jusqu'à celui de lumière faible, on ne peut distinguer que les structures et les objets les plus volumineux.</p>
                 <table class="table_horizontal">
                     <thead>
@@ -988,7 +980,7 @@
             </div>
 
             <h2 id="voyage" onclick="hideContent(this)">Voyage</h2>
-            <div class="hidden">
+            <div>
                 <p>Un aventurier est capable de marcher 8 heures par jour sans risquer la fatigue. Le déplacement normal à pied permet de couvrir 30 km/jour, soit 3,75 km par heure de marche.</p>
                 <p>Il est possible de parcourir plus de distance en marchant plus de 8 heures par jour ou en utilisant <a href="Objets.xhtml#transports">une monture ou un autre moyen de transport</a>.</p>
                 <p>Le terrain peut modifier cette distance : -25% dans les forêts et collines, -50% dans les montagnes et marécages</p>
@@ -1018,10 +1010,181 @@
                 </li>
             </ol>
             <p>Une caractéristique moyenne équivaut à un score de 10. Un personnage avec un score de 10 en Force n'est ni fort ni faible. Le représentation réelle du score est exponentielle, un score de 12 est supérieur à la moyenne mais reste commun, un score de 14 est remarquable, un score de 16 est incroyable et représente les limites du commun des mortel, au delà se trouvent les héros de légende ou de redoutables monstres.</p>
-            <p>Le total de Point de vie d'un personnage est déterminé par cette formule : VIG^1,3</p>
-            <p>Le total de Point de psyché d'un personnage est déterminé par cette formule : (INT^1,5)-20</p>
-            <p>Si on obtient un nombre décimal, l'arrondi se fait à l'entier le plus proche. (ex : 15,25 devient 15 mais 15,62 devient 16)</p>
         </div>
+
+        <h1 id="Jauges" onclick="hideContent(this)">Jauges</h1>
+        <div>
+            <h2 id="sante" onclick="hideContent(this)">Vitalité et Endurance</h2>
+            <div>
+                <p>Une entité possède 2 jauges pour représenter sa santé : la vitalité représente son intégrité physique et l'endurance indique l'état d'épuisement de l'entité.</p>
+                <p>L'endurance est une sorte de protection de la vitalité, elle encaisse prioritairement les dégâts et se régénère beaucoup plus vite, la vitalité ne se vide que lorsque l'entité subit un coup critique ou qu'elle n'a plus d'endurance.</p>
+                <p>C'est la caractéristique de Vigueur qui détermine l'endurance et la vitalité d'un personnage : Endurance = VIG*2; Vitalité = VIG<br/>Pour les créatures et les PNJs, la vitalité est déterminée arbitrairement et l'endurance vaut le double de la vitalité la plupart du temps.</p>
+                <p>Si la vitalité d'une créature atteint 0, elle sombre dans l'inconscience et ce même si il lui reste de l'endurance. Pour de plus amples détails, se référer à la section <a href="Rules.xhtml#blessures_mort">Blessures et mort</a> dans la partie <a href="Rules.xhtml#Combat">Combat</a>.</p>
+                <p>L'endurance et la vitalité se régénère avec du repos, 5% d'endurance par heure, 1 point de vitalité toute les 8 heures. Ces quantité peuvent varier selon les conditions dans lesquelles on se repose, si l'on est sous la surveillance d'un médecin, etc...</p>
+                <p>Il est possible de récupérer magiquement de la santé grâce à des sorts de soin. Ces sorts ont les mêmes propriétés que les sorts de dégâts mais utilisent des dés d'un cran inférieurs. Les sorts de soins restaurent 1 point d'endurance par point de soin, et 1 point de vitalité par 5 points de soin. Par exmple un sort de soins de cercle 3 nécessitent de lancer 3d4, on obtient 8, la cible récupère 8 points d'endurance et 1 point de vitalité.</p>
+            </div>
+
+            <h2 id="psy" onclick="hideContent(this)">Psyché</h2>
+            <div>
+                <p>La psyché est une ressource mentale utilisée pour lancer des sorts, c'est la caractéristique d'Intelligence qui détermine la psyché d'un personnage : Psy = (INT^1,5)-20<br/>Pour les créatures et les PNJs capables d'utiliser la magie, la psyché est déterminée arbitrairement.</p>
+                <p>On récupère de la psyché naturellement avec le temps au rythme de 5% par heure qui passe.</p>
+            </div>
+
+            <h2 id="stress" onclick="hideContent(this)">Stress</h2>
+            <div>
+                <p>Le stress permet de mesurer la force mentale d'un personnage, ce qu'il est capable d'endurer avant de fléchir mentalement.</p>
+                <p>C'est la caractéristique de Volonté qui détermine le stress maximal d'un personnage : Stress = VOL*3<br/>Les créatures et PNJs n'ont pas de jauge de stress puisqu'ils s'effondrent généralement au premier coup dur.</p>
+                <p>La jauge de stress se remplit au fur et à mesure que le personnage subit des coups au moral pouvant prendre différentes formes, cela peut être :</p>
+                <ul>
+                    <li>des échecs répétés dans ce qu'il entreprend</li>
+                    <li>subir une attaque critique</li>
+                    <li>tomber dans un piège</li>
+                    <li>se faire humilier ou réprimander</li>
+                    <li>ressentir un manque, qu'il soit relationnel ou dû à des substances addictives telles que la drogue ou l'alcool</li>
+                    <li>une rencontre avec des créatures effrayantes</li>
+                    <li>vivre une expérience traumatisante (torture, mort de proches, etc...)</li>
+                </ul>
+                <p>Le personnage peut choisir de prendre des risques et de volontairement augmenter son stress pour améliorer un jet de caractéristiques ou de compétences (2 points de stress pour un bonus de 1) ou augmenter son initiative en se mettant en danger (1 point de stress par point d'initiative).</p>
+                <p>Si le stress atteint sa valeur maximale, le personnage doit réussir un jet de volonté avec un malus équivalent à ses points de stress au delà de sa limite. S’il échoue il développe une affliction (tirée au d10) et son stress retourne à sa valeur initiale à savoir 0. Si il réussit, son stress passe à 80% de sa valeur maximale.<br/> Chaque affliction diminue la jauge de stress maximum de 20 %. Si le stress maximal d’un personnage est de 0, il est considéré comme fou à lier et doit de toute urgence être assisté.</p>
+                <p>En cas de réussite critique au jet de volonté, le stress redescend à 50% de sa valeur maximale. Si c'est un échec critique, le personnage développe une affliction et son stress pass à 50% de sa valeur maximale Si un personnage développe une affliction, les autres membres du groupe reçoivent 1d6 de stress.</p>
+                <p>Le stress diminue lorsque le joueur vit des moments agréables : réussite critique, consommation de produit apaisants, interactions sociales bénéfiques,...</p>
+                <p>Les afflictions quand à elles nécessitent des traitement particulier dont la durée peut varier de quelques jours à plusieurs semaines.</p>
+                <p class="caption" onclick="hideContent(this)">Liste des afflictions</p>
+                <div class="hidden">
+                <table class="table_compact">
+                    <thead>
+                    <tr>
+                        <th>Résultat du dé</th>
+                        <th>Affliction</th>
+                        <th>Effets</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Peureux</td>
+                        <td>-1 VOL / +2m en vitesse / -1 Atq</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Paranoïaque</td>
+                        <td>-2 ELO / +2 PER</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Masochiste</td>
+                        <td>-3 en Esquive / -3 Prd / 1 PR naturelle</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Violent</td>
+                        <td>-1 Prd / +2 Dgt / -2 en Esquive</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Désespéré</td>
+                        <td>-1 VOL  / +25% de stress reçu</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Égoïste</td>
+                        <td>Roleplay uniquement</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Irrationnel</td>
+                        <td>- 2 INT</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Tremblant*</td>
+                        <td>- 2 DEX</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Affaibli*</td>
+                        <td>- 2 FO</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Absent*</td>
+                        <td>-2 PER</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">*Le malus se dissipe après 8 heures de repos, mais le personnage doit tout de même faire une cure pour supprimer définitivement l’affliction</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+                <p class="caption" onclick="hideContent(this)">Actions ayant un impact sur le stress</p>
+                <div class="hidden">
+                    <table class="table_compact">
+                        <thead>
+                        <tr>
+                            <th colspan="2">Augmentation de stress</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Échecs répétés</td>
+                            <td>1 de stress par jet raté</td>
+                        </tr>
+                        <tr>
+                            <td>Échec critique</td>
+                            <td>3 de stress</td>
+                        </tr>
+                        <tr>
+                            <td>subit des attaques critiques</td>
+                            <td>autant de stress que de points de dégâts reçus</td>
+                        </tr>
+                        <tr>
+                            <td>se fait humilier ou réprimander*</td>
+                            <td rowspan="3">1 de stress par marge d’échec du jet de VOL</td>
+                        </tr>
+                        <tr>
+                            <td>ressent un manque (relationnel, dû à des substances addictives)</td>
+                        </tr>
+                        <tr>
+                            <td>rencontre avec des créatures effrayantes</td>
+                        </tr>
+                        <tr>
+                            <td>subit une expérience traumatisante(torture, mort de proches)</td>
+                            <td>Selon situation</td>
+                        </tr>
+                        <tr>
+                            <td>Compagnon développant une affliction</td>
+                            <td>1d6 de stress</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Diminution de stress</th>
+                        </tr>
+                        <tr>
+                            <td>Réussite critique</td>
+                            <td>- 2 de stress</td>
+                        </tr>
+                        <tr>
+                            <td>Alcool</td>
+                            <td>- 1 de stress par 2 doses d’alcool</td>
+                        </tr>
+                        <tr>
+                            <td>Drogues</td>
+                            <td>-3 de stress par dose</td>
+                        </tr>
+                        <tr>
+                            <td>Interaction sociales agréables</td>
+                            <td>selon situation</td>
+                        </tr>
+                        <tr>
+                            <td>Repos</td>
+                            <td>-1 de stress par 2 heures de repos</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
 
         <h1 id="Competences" onclick="hideContent(this)">Compétences</h1>
         <div>
@@ -2207,7 +2370,7 @@
                             <th>Attaque</th>
                             <th>Parade</th>
                             <th>Dégâts</th>
-                            <th>Critique</th>
+                            <th>Seuil<br/>Critique</th>
                             <th>Spécial</th>
                         </tr>
                         </thead>
@@ -2221,7 +2384,7 @@
                             <td>14</td>
                             <td>8</td>
                             <td>1d4</td>
-                            <td>1-2 x2</td>
+                            <td>1-3</td>
                             <td>Légère</td>
                         </tr>
                         <tr><td rowspan="4">Épées</td></tr>
@@ -2231,7 +2394,7 @@
                             <td>11</td>
                             <td>12</td>
                             <td>1d6</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Légère</td>
                         </tr>
                         <tr>
@@ -2240,7 +2403,7 @@
                             <td>13</td>
                             <td>10</td>
                             <td>1d6</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Légère</td>
                         </tr>
                         <tr>
@@ -2249,7 +2412,7 @@
                             <td>12</td>
                             <td>11</td>
                             <td>1d6</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Polyvalente(1d8)</td>
                         </tr>
                         <tr>
@@ -2258,7 +2421,7 @@
                             <td>13</td>
                             <td>10</td>
                             <td>1d6</td>
-                            <td>1-2 x1,5</td>
+                            <td>1-2</td>
                             <td>Légère</td>
                         </tr>
                         <tr>
@@ -2267,7 +2430,7 @@
                             <td>12</td>
                             <td>11</td>
                             <td>1d6</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Polyvalente(1d8)</td>
                         </tr>
                         <tr>
@@ -2276,7 +2439,7 @@
                             <td>12</td>
                             <td>8</td>
                             <td>1d6</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Polyvalente(1d8)</td>
                         </tr>
                         <tr>
@@ -2285,7 +2448,7 @@
                             <td>11</td>
                             <td>8</td>
                             <td>1d6</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Polyvalente(1d8)</td>
                         </tr>
                         <tr>
@@ -2294,7 +2457,7 @@
                             <td>12</td>
                             <td>11</td>
                             <td>1d6</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Polyvalente(1d8), Charge</td>
                         </tr>
                         <tr>
@@ -2303,7 +2466,7 @@
                             <td>13</td>
                             <td>10</td>
                             <td>1d6</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Légère</td>
                         </tr>
                         <tr>
@@ -2312,7 +2475,7 @@
                             <td>12</td>
                             <td>8</td>
                             <td>1d6</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Légère</td>
                         </tr>
                         <tr>
@@ -2321,7 +2484,7 @@
                             <td>15</td>
                             <td>/</td>
                             <td>1d4</td>
-                            <td>x2</td>
+                            <td>1-2</td>
                             <td>Légère, Allonge</td>
                         </tr>
                         <tr>
@@ -2336,7 +2499,7 @@
                             <td>10</td>
                             <td>10</td>
                             <td>1d10</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>À deux mains, Lourde</td>
                         </tr>
                         <tr>
@@ -2345,7 +2508,7 @@
                             <td>11</td>
                             <td>9</td>
                             <td>1d10</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>À deux mains, Lourde</td>
                         </tr>
                         <tr>
@@ -2354,7 +2517,7 @@
                             <td>10</td>
                             <td>10</td>
                             <td>1d10 </td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>À deux mains, Lourde</td>
                         </tr>
                         <tr>
@@ -2363,7 +2526,7 @@
                             <td>10</td>
                             <td>8</td>
                             <td>1d10</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>À deux mains, Lourde</td>
                         </tr>
                         <tr>
@@ -2372,7 +2535,7 @@
                             <td>12</td>
                             <td>12</td>
                             <td>2d4 non létaux</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>À deux mains</td>
                         </tr>
                         <tr>
@@ -2381,7 +2544,7 @@
                             <td>11</td>
                             <td>9</td>
                             <td>1d8</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Allonge, À deux mains</td>
                         </tr>
                         <tr>
@@ -2393,7 +2556,7 @@
                             <td>12</td>
                             <td>10</td>
                             <td>1d8</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Allonge, Charge</td>
                         </tr>
                         <tr>
@@ -2402,7 +2565,7 @@
                             <td>12</td>
                             <td>10</td>
                             <td>1d8</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Allonge, À deux mains</td>
                         </tr>
                         <tr>
@@ -2411,7 +2574,7 @@
                             <td>12</td>
                             <td>10</td>
                             <td>1d8</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>Allonge, À deux mains</td>
                         </tr>
                         </tbody>
@@ -2426,7 +2589,7 @@
                             <th>Précision</th>
                             <th>Dégâts</th>
                             <th>Portée</th>
-                            <th>Critique</th>
+                            <th>Seuil<br/>Critique</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -2436,7 +2599,7 @@
                             <td>15</td>
                             <td>1d6</td>
                             <td>10m/20m</td>
-                            <td>x2</td>
+                            <td>1</td>
                         </tr>
                         <tr>
                             <td>Hachette</td>
@@ -2444,7 +2607,7 @@
                             <td>14</td>
                             <td>1d8</td>
                             <td>10m/18m</td>
-                            <td>x2</td>
+                            <td>1</td>
                         </tr>
                         <tr>
                             <td>Javelots</td>
@@ -2452,7 +2615,7 @@
                             <td>14</td>
                             <td>1d8</td>
                             <td>15m/35m</td>
-                            <td>x2</td>
+                            <td>1</td>
                         </tr>
                         <tr>
                             <td>Fléchettes</td>
@@ -2460,7 +2623,7 @@
                             <td>15</td>
                             <td>1d4</td>
                             <td>10m/25m</td>
-                            <td>x2</td>
+                            <td>1</td>
                         </tr>
                         </tbody>
                     </table>
@@ -2475,7 +2638,7 @@
                             <th>Dégâts</th>
                             <th>Portée</th>
                             <th>Munitions</th>
-                            <th>Critique</th>
+                            <th>Seuil<br/>Critique</th>
                             <th>Spécial</th>
                         </tr>
                         </thead>
@@ -2487,7 +2650,7 @@
                             <td>1d4 non-létaux</td>
                             <td>25m/75m</td>
                             <td>Pierres</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>/</td>
                         </tr>
                         <tr>
@@ -2497,7 +2660,7 @@
                             <td>1d4</td>
                             <td>10m/20m</td>
                             <td>Aiguilles</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>/</td>
                         </tr>
                         <tr>
@@ -2507,7 +2670,7 @@
                             <td>1d8</td>
                             <td>25m/75m</td>
                             <td>Flèches</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>À deux mains</td>
                         </tr>
                         <tr>
@@ -2517,7 +2680,7 @@
                             <td>1d10</td>
                             <td>50m/120m</td>
                             <td>Flèches</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>À deux mains, Lourde</td>
                         </tr>
                         <tr>
@@ -2527,7 +2690,7 @@
                             <td>1d10</td>
                             <td>30m/100m</td>
                             <td>Carreaux</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>À deux mains, Chargement (simple)</td>
                         </tr>
                         <tr>
@@ -2537,7 +2700,7 @@
                             <td>1d12</td>
                             <td>75m/150m</td>
                             <td>Carreaux</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>À deux mains, Lourde, Chargement (complexe)</td>
                         </tr>
                         <tr>
@@ -2547,7 +2710,7 @@
                             <td>1d6</td>
                             <td>20m/40m</td>
                             <td>Carreaux</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>Chargement (mouvement)</td>
                         </tr>
                         <tr>
@@ -2560,7 +2723,7 @@
                             <td>3d8</td>
                             <td>125m</td>
                             <td>Grands carreaux</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>1 tours de rechargement</td>
                         </tr>
                         <tr>
@@ -2604,7 +2767,7 @@
                             <th>Précision</th>
                             <th>Dégâts</th>
                             <th>Portée</th>
-                            <th>Critique</th>
+                            <th>Seuil<br/>Critique</th>
                             <th>Capacité en munitions</th>
                             <th>Spécial</th>
                         </tr>
@@ -2618,7 +2781,7 @@
                             <td>14</td>
                             <td>1d8</td>
                             <td>10m/25m</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>1</td>
                             <td>/</td>
                         </tr>
@@ -2627,7 +2790,7 @@
                             <td>14</td>
                             <td>1d10</td>
                             <td>20m/50m</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>1</td>
                             <td>/</td>
                         </tr>
@@ -2636,7 +2799,7 @@
                             <td>13</td>
                             <td>1d10</td>
                             <td>20m/50m</td>
-                            <td>x2,5</td>
+                            <td>1</td>
                             <td>2</td>
                             <td>Peut tirer deux balles en même temps</td>
                         </tr>
@@ -2645,7 +2808,7 @@
                             <td>13</td>
                             <td>1d10</td>
                             <td>10m/20m</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>6</td>
                             <td>/</td>
                         </tr>
@@ -2654,7 +2817,7 @@
                             <td>12</td>
                             <td>2d6</td>
                             <td>6m/12m</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>1</td>
                             <td>Dispersion</td>
                         </tr>
@@ -2663,7 +2826,7 @@
                             <td>13</td>
                             <td>1d6</td>
                             <td>6m/15m</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>2</td>
                             <td>Se fixe à l'avant bras et n'occupe pas de main</td>
                         </tr>
@@ -2675,7 +2838,7 @@
                             <td>14</td>
                             <td>1d12</td>
                             <td>50m/100m</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>1</td>
                             <td>À deux mains</td>
                         </tr>
@@ -2684,7 +2847,7 @@
                             <td>13</td>
                             <td>1d12</td>
                             <td>50m/100m</td>
-                            <td>x2</td>
+                            <td>1</td>
                             <td>1</td>
                             <td>À deux mains, peut tirer deux balles en même temps</td>
                         </tr>
@@ -2693,7 +2856,7 @@
                             <td>12</td>
                             <td>3d4</td>
                             <td>10m/20m</td>
-                            <td>x1,5</td>
+                            <td>1</td>
                             <td>1</td>
                             <td>À deux mains, Dispersion</td>
                         </tr>
@@ -2761,7 +2924,7 @@
                             <td>Bocle</td>
                             <td>13</td>
                             <td>13</td>
-                            <td rowspan="3">1d4 non-létal</td>
+                            <td rowspan="3">1d4</td>
                             <td>/</td>
                         </tr>
                         <tr>
@@ -2783,7 +2946,7 @@
                             <td>Écu</td>
                             <td>10</td>
                             <td>15</td>
-                            <td rowspan="4">1d4 non-létal</td>
+                            <td rowspan="4">1d4</td>
                             <td>Atq -2</td>
                         </tr>
                         <tr>
@@ -2811,7 +2974,7 @@
                             <td>Pavois</td>
                             <td>9</td>
                             <td>16</td>
-                            <td rowspan="2">1d6 non-létal</td>
+                            <td rowspan="2">1d6</td>
                             <td>Atq -3</td>
                         </tr>
                         <tr>
