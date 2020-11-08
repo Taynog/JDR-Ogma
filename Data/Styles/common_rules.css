@@ -87,19 +87,13 @@ table.table_bestiary tbody td{
     margin: 2px;
 }
 
-table.race>tbody>tr>:first-child { /*Affecte les premières cases du tableau des races*/
-    font-weight: normal;
-}
-table.race>tbody>tr>:last-child { /*Affecte les dernières cases du tableau des races*/
-    font-size: 15px;
-    font-weight: normal;
+td.bonus{
+    background-color: sandybrown;
 }
 
-table.race>tbody>tr>td{/*Affecte les cases du tableau des races*/
-    font-size: 20px;
-    font-weight: bold;
- }
-
+td.malus{
+    background-color: firebrick;
+}
 
 th,td{/*Affecte les cases d'en-tête et celle de corps*/
     border-style: solid;  /*Rend la bordure pleine*/

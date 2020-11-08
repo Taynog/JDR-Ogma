@@ -14,12 +14,12 @@
 <div id="mySidenav" class="sidenav" style="display: block">
     <ul class="sidenav ">
         <li><span class="index"><a href="../../../index.xhtml">Accueil</a></span></li>
-        <li><span class="partie shown" onclick="hideContent(this)">Lore</span>
+        <li><span class="partie" onclick="hideContent(this)">Lore</span>
             <ul>
-                <li><span class="medium shown"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
-                <li><span class="medium shown"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
-                <li><span class="medium shown"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
-                <li><span class="dossier shown" onclick="hideContent(this)">Races/Factions</span>
+                <li><span class="medium"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier" onclick="hideContent(this)">Races/Factions</span>
                     <ul class="hidden">
                         <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
                             <ul class="hidden">
@@ -48,7 +48,7 @@
                 </li>
             </ul>
         </li>
-        <li><span class="partie shown" onclick="hideContent(this)">Jeu de Rôle</span>
+        <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
                     <ul class="hidden">
@@ -60,11 +60,12 @@
 
                 <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
                     <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#table_race">Race</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Jauges">Jauges</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Competences">Compétences</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#traits_perso">Traits de personnage</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#table_race">Traits raciaux</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#creation_perso">Création personnage</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#faveur_tychi">Faveurs de Tychi</a></span></li>
                     </ul></li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
                     <ul class="hidden">
@@ -89,18 +90,20 @@
                                 <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
                                 <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
                             </ul></li>
-                        <li><span class="medium"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
-                        <li><span class="medium"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
-                        <li><span class="medium"><a href="../Rules/Tableaux.xhtml#arts_du_combat">Arts du combat</a></span> </li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#arts_du_combat">Arts du combat</a></span> </li>
 
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#vulnerabilites_resisances">Vulnérabilités &amp; Résistances</a></span></li>
                         <li><span class="little"><a href="../Rules/Glossaire.xhtml#capacite_speciales">Capacités spéciales</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
                     <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Objets.xhtml#monnaie">Monnaie et conversions</a></span></li>
                         <li><span class="sous-dossier" onclick="hideContent(this)">Objets</span>
                             <ul class="hidden">
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#armes">Armes</a></span></li>
@@ -145,21 +148,21 @@
         <h3>Traits</h3>
         <span class="underline">Communs</span>
         <p><span class="big_underline">Espérance de vie</span>Les Sarpas n'ont pas hérités de l'immortalité Sihir mais surpassent les humains dans ce domaine. Un Sarpa abouti sa croissance vers ses 50 ans, il accumule ainsi de l'expérience et est considéré mâture aux alentours de son premier siècle de vie. Après 180 ans, leur santé décline peu à peu et ils s'éteignent au crépuscule de leur second siècle de vie. </p>
-        <p><span class="big_underline">Sang-froid</span>Les Sarpas ne produisent pas naturellement de la chaleur, ils doivent s'exposer quotidienement à une source de chaleur sous peine de s'affaiblir, il sont aussi plus vulnérable au froid de 50%.</p>
+        <p><span class="big_underline">Sang-froid</span>Les Sarpas ne produisent pas naturellement de la chaleur, ils doivent s'exposer quotidiennement à une source de chaleur sous peine de s'affaiblir, il sont aussi plus vulnérable au froid de 50%.</p>
         <p><span class="big_underline"><a href="../World/Histoire_Ogma.xhtml#langages">Langages</a></span>Les Sarpas savent parler, écrire et lire le Sihiräll et le Draconien.</p>
 
         <span class="underline">Lézards</span>
-        <p><span class="big_underline">Caractéristiques</span>Les Sarpas-Lézards sont habiles de leur main et sont capable de maintenir leur sorts longtemps dans le plan réel, ils obtiennent un bonus de 2 en volonté et de 1 en dextérité.</p>
+        <p><span class="big_underline">Caractéristiques</span>Les Sarpas-Lézards sont habiles de leur main et sont capable de maintenir leur sorts longtemps dans le plan réel, ils obtiennent un bonus de 5 en intelligence, volonté et dextérité.</p>
         <p><span class="big_underline">Écailles</span>Les Sarpas-Lézards ont une peau recouverte d'écailles, ils possèdent un point d'armure naturelle.</p>
         <p><span class="big_underline">Régénération</span>Les Sarpas-Lézards bénéficient d'une régénération à long terme de leurs membres perdus (un jour pour un doigt, une semaine pour une main, un mois pour un bras et deux pour une jambe).</p>
 
         <span class="underline">Serpents</span>
-        <p><span class="big_underline">Caractéristiques</span>Les Sarpas-Serpents sont de puissants mages, ils obtiennent un bonus de 2 en intelligence et de 3 en volonté. Leurs bras sont courts et assez faibles, ils subissent un malus de 2 en force.</p>
+        <p><span class="big_underline">Caractéristiques</span>Les Sarpas-Serpents sont de puissants mages, ils obtiennent un bonus de 10 en intelligence et de 15 en volonté. Leurs bras sont courts et assez faibles, ils subissent un malus de 10 en force.</p>
         <p><span class="big_underline">Écailles</span>Les Sarpas-Serpents sont couvert d'écailles, ils possèdent un point d'armure naturelle.</p>
         <p><span class="big_underline">Vision serpentine</span>Les Sarpas-Serpents bénéficient d'une vision thermique, il sont capable de voir la chaleur dans le noir complet.</p>
 
         <span class="underline">Crocodiles</span>
-        <p><span class="big_underline">Caractéristiques</span>Les Sarpas-Crocodiles sont beaucoup plus physiques que leurs pairs, ils obtiennent un bonus de 3 en force et de 2 en vigueur. Leur grandes mains les empêchent d'accomplir des tâches délicates, ils subissent un malus de 2 en dextérité.</p>
+        <p><span class="big_underline">Caractéristiques</span>Les Sarpas-Crocodiles sont beaucoup plus physiques que leurs pairs, ils obtiennent un bonus de 15 en force et de 10 en vigueur. Leur corpulence les rends patauds, ils subissent un malus de 5 en dextérité et en agilité. Leur capacité magique sont moindres que leurs paris lézards et serpents il subissent un malus de 5 en intelligence et un bonus de 5 en volonté.</p>
         <p><span class="big_underline">Monstre écailleux</span>Les Sarpas-Crodiles sont massifs et protégés par une couche d'écailles solide, ils possèdent  2 point d'armure naturelle et sont des créatures de taille G.</p>
     </div>
     <div>
