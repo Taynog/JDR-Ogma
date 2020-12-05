@@ -19,7 +19,7 @@
                 <li><span class="medium"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
                 <li><span class="medium"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
                 <li><span class="medium"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
-                <li><span class="dossier" onclick="hideContent(this)">Races/Factions</span>
+                <li><span class="dossier" onclick="hideContent(this)">Origines</span>
                     <ul class="hidden">
                         <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
                             <ul class="hidden">
@@ -60,7 +60,7 @@
 
                 <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
                     <ul class="hidden">
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#table_race">Race</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#table_origine">Race</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Jauges">Jauges</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Competences">Compétences</a></span></li>
@@ -164,7 +164,7 @@
 
             <h3 onclick="hideContent(this)">Premier round</h3>
             <div>
-                <p>Lors du premier tour du combat, tout les entités participant au combat lance un dé d'initiative (1d20 + PER), l'ordre de jeu est déterminé par ce jet du plus grand score au plus petit, si il y a  égalité entre deux ou plusieurs entités, elles relancent un jet d'initiative pour déterminer leur ordre de jeu.</p>
+                <p>Lors du premier tour du combat, tout les entités participant au combat lance un dé d'initiative (PER + 1d10), l'ordre de jeu est déterminé par ce jet du plus grand score au plus petit, si il y a  égalité entre deux ou plusieurs entités, elles relancent un jet d'initiative pour déterminer leur ordre de jeu.</p>
                 <p>Toute entité est prise par surprise tant qu'elle n'a pas joué son premier tour, à moins d'être consciente du danger via un test de perception réussi. Une entité prise par surprise ne peut pas se défendre.</p>
                 <p>Pour éviter de perdre du temps et d'interrompre l'action juste avant un combat avec de pénibles calculs d'initiative et d'écriture pour déterminer l'ordre de jeu, on peut déterminer l'initiative au début de la session et à la fin de chaque combat pour fluidifier l'entrée en mode tour par tour.</p>
             </div>
@@ -591,7 +591,7 @@
                     <h4>Toundra</h4>
                     <div>
                         <p>Ces terres gelées ne se situent qu'au zones les plus au nord de Nashira et îles environnantes. Les températures extrêmement basses font régner en ces lieux un permafrost gelant les sols sur les premiers centimètres ce qui limite grandement la pousse des plantes. Les toundras reçoivent peu de précipitations mais le manque d'évaporation rend les terres légèrement marécageuses.</p>
-                        <p>Ces lieux sont inhospitalier, le manque de nourriture et d'eau liquide limite grandement la biodiversité. Les seuls animaux vivants dans ces régions s'y sont adaptés et sont donc fondamentalement différents des autres espèces d'Ogma.</p>
+                        <p>Ces lieux sont inhospitalier, le manque de nourriture et d'eau liquide limite grandement la biodiversité. Les seuls animaux vivants dans ces régions s'y sont adaptés et sont donc fondamentalement différents des autres origines d'Ogma.</p>
                     </div>
 
                     <h4>Forêts boréales</h4>
@@ -602,7 +602,7 @@
 
                     <h4>Hautes Montagnes</h4>
                     <div>
-                        <p>Lorsque le relief devient trop important et l'altitude trop élevée, la faune et la flore se font plus rares jusqu'à devenir inexistantes sur les plus hauts pics. Qu'elles soient enneigés comme la Chaîne d'Hortak ou brûlantes comme les Monts Ardents, ces montagnes sont le territoire des Steinns et bien rares sont les autres races à s'y être installés</p>
+                        <p>Lorsque le relief devient trop important et l'altitude trop élevée, la faune et la flore se font plus rares jusqu'à devenir inexistantes sur les plus hauts pics. Qu'elles soient enneigés comme la Chaîne d'Hortak ou brûlantes comme les Monts Ardents, ces montagnes sont le territoire des Steinns et bien rares sont les autres factions à s'y être installés</p>
                         <p>Le terrain étant souvent accidenté et dénué de routes convenables, les montagnes ralentissent considérablement le voyage d'un groupe aussi restreint soit-il. Les nombreuses grottes et cavernes forment parfois un réseau souterrain permettant de raccourcir les trajets à condition de bien les connaître. L'eau liquide est presque introuvable en ces lieux mais il est possible de faire fondre de la neige ou de la glace pour en obtenir. Le gibier ne simplifie pas la tâche des chasseurs de par leur pelage souvent de la couleur des sols.</p>
                     </div>
 
@@ -627,7 +627,7 @@
                     <h4>Océans</h4>
                     <div>
                         <p>Les grandes étendues d'eau d'Ogma sont calmes la plupart du temps et il est simple de les traverser par bateau. Quand Nero et Aïgida s'allient pour faire surgir d'immenses vagues lors de terribles tempêtes, les traverser est une autre affaire.</p>
-                        <p>La pêche représente l'activité principale des races civilisées sur ces territoires. Les poissons y pullulent près des côtes comme en haute mer, mais il faut prendre garde à ne pas éveiller les créatures tapis dans les abysses noires de l'océan.</p>
+                        <p>La pêche représente l'activité principale des origines civilisées sur ces territoires. Les poissons y pullulent près des côtes comme en haute mer, mais il faut prendre garde à ne pas éveiller les créatures tapis dans les abysses noires de l'océan.</p>
                     </div>
                 </div>
 
@@ -995,13 +995,15 @@
 
     <h1 id="creation_perso" onclick="hideContent(this)">Création de Personnage</h1>
     <div>
-        <h2 id="table_race" onclick="hideContent(this)">Race</h2>
+        <p>La création d'un avatar est la première étape à franchir avant de se lancer dans une aventure, et peut être la plus importante. À moins que l'aventure que vous vous apprêtez à vivre n'impose des personnages pré-tirés, il est fortement conseillé de personnaliser au mieux son avatar en suivant ce guide afin de l'incarner au mieux.</p>
+        <p>Vous pouvez disposez d'un fiche de personnage en version <a href="../../Downloads/Fiche%20Perso%20Ogma%20imprimable.pdf">imprimable</a> à remplir à la main ou <a href="../../Downloads/Fiche%20perso%20Ogma%20numérique.pdf">numérique</a> à remplir sur ordinateur.</p>
+        <h2 id="table_origine" onclick="hideContent(this)">Origine</h2>
         <div>
-            <p>Première étape de la création de son personnage : Choisir sa race. Il existe de nombreuses races dans le monde d'Ogma, si vous ne les connaissez pas encore retournez à l'<a href="../../../index.xhtml">accueil</a> pour les découvrir.</p>
+            <p>Première étape de la création de son personnage : Choisir son origine. Il existe de nombreuses origines possibles dans le monde d'Ogma, si vous ne les connaissez pas encore retournez à l'<a href="../../../index.xhtml">accueil</a> pour les découvrir.</p>
             <table>
                 <thead>
                 <tr>
-                    <th colspan="2">Race</th>
+                    <th colspan="2">Origine</th>
                     <th>Traits raciaux</th>
                 </tr>
                 </thead>
@@ -1070,7 +1072,7 @@
 
         <h2 id="Caracteristiques" onclick="hideContent(this)">Caractéristiques</h2>
         <div>
-            <p>Après avoir choisi une race pour votre personnage, il est temps de définir définir ses caractéristiques de départ. Pour ce faire, suivez la colonne correspondante à votre race et si jamais les dés ne vous sont pas favorables, vous avez la possibilité de votre résultat par la valeur moyenne du lancer de dés : pour 2d10, la valeur moyenne est de 11. Votre MJ peut vous accordez cette action une ou plusieurs fois si vous êtes vraiment maudits par Tychi.</p>
+            <p>Après avoir choisi une origine pour votre personnage, il est temps de définir définir ses caractéristiques de départ. Pour ce faire, suivez la colonne correspondante à votre origine et ajoutez les dés équivalent au niveau d'expérience de votre personnage. Si jamais les dés ne vous sont pas favorables, vous avez la possibilité de votre résultat par la valeur moyenne du lancer de dés : pour 2d10, la valeur moyenne est de 11. Votre MJ peut vous accordez cette action une ou plusieurs fois si vous êtes vraiment maudits par Tychi.</p>
             <p>Voici une description des différentes caractéristiques, vous permettant de mieux appréhendez le tableau ci dessous :</p>
             <ol type="I" >
                 <li>Physiques
@@ -1091,164 +1093,188 @@
                 </li>
             </ol>
             <p>Une caractéristique dans la moyenne équivaut à un score de 50. Un personnage avec un score de 50 en Force n'est ni fort ni faible. Le représentation réelle du score est exponentielle, un score de 60 est supérieur à la moyenne mais reste commun, un score de 70 est remarquable, un score de 80 est incroyable et représente les limites du commun des mortel, au delà se trouvent les héros de légende ou de redoutables monstres.</p>
-            <table>
-                <thead>
-                <tr>
-                    <th rowspan="3"/>
-                    <th colspan="3">Races Humaines</th>
-                    <th colspan="3">Races Magiques</th>
-                    <th colspan="7">Races Bestiales</th>
-                </tr>
-                <tr>
-                    <th rowspan="2">Azuma</th>
-                    <th rowspan="2">Sever</th>
-                    <th rowspan="2">Tuskizi</th>
-                    <th rowspan="2">Sakha</th>
-                    <th rowspan="2">Sihir</th>
-                    <th rowspan="2">Steinn</th>
-                    <th rowspan="2">Chono</th>
-                    <th rowspan="2">Kanta</th>
-                    <th rowspan="2">Mushuk</th>
-                    <th colspan="3">Sarpa</th>
-                    <th rowspan="2">Tori</th>
-                </tr>
-                <tr>
-                    <th>Crocodile</th>
-                    <th>Lézard</th>
-                    <th>Serpent</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>Force</th>
-                    <td>40+2d10</td>
-                    <td class="bonus">50+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="malus">35+2d10</td>
-                    <td class="bonus">50+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td class="bonus">55+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">55+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="malus">30+2d10</td>
-                    <td>40+2d10</td>
-                </tr>
-                <tr>
-                    <th>Dextérité</th>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">50+2d10</td>
-                    <td class="bonus">55+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="malus">30+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="malus">35+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                </tr>
-                <tr>
-                    <th>Agilité</th>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td class="bonus">50+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="malus">25+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td class="malus">30+2d10</td>
-                    <td class="bonus">50+2d10</td>
-                    <td class="malus">35+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                </tr>
-                <tr>
-                    <th>Vigueur</th>
-                    <td>40+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="malus">30+2d10</td>
-                    <td class="bonus">50+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td class="bonus">60+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">50+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                </tr>
-                <tr>
-                    <th>Intelligence</th>
-                    <td class="bonus">50+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">55+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="malus">25+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="malus">35+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td class="bonus">50+2d10</td>
-                    <td>40+2d10</td>
-                </tr>
-                <tr>
-                    <th>Volonté</th>
-                    <td class="bonus">45+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">55+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="malus">35+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td class="bonus">55+2d10</td>
-                    <td>40+2d10</td>
-                </tr>
-                <tr>
-                    <th>Perception</th>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">55+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                </tr>
-                <tr>
-                    <th>Éloquence</th>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="malus">30+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">50+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">45+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td>40+2d10</td>
-                    <td class="bonus">50+2d10</td>
-                </tr>
-                </tbody>
-            </table>
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <table id="table_carac_origine">
+                        <thead>
+                        <tr>
+                            <th rowspan="3"/>
+                            <th colspan="3">Races Humaines</th>
+                            <th colspan="3">Races Magiques</th>
+                            <th colspan="7">Races Bestiales</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Azuma</th>
+                            <th rowspan="2">Sever</th>
+                            <th rowspan="2">Tuskizi</th>
+                            <th rowspan="2">Sakha</th>
+                            <th rowspan="2">Sihir</th>
+                            <th rowspan="2">Steinn</th>
+                            <th rowspan="2">Chono</th>
+                            <th rowspan="2">Kanta</th>
+                            <th rowspan="2">Mushuk</th>
+                            <th colspan="3">Sarpa</th>
+                            <th rowspan="2">Tori</th>
+                        </tr>
+                        <tr>
+                            <th>Crocodile</th>
+                            <th>Lézard</th>
+                            <th>Serpent</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>Force</th>
+                            <td>40</td>
+                            <td class="bonus">50</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="malus">35</td>
+                            <td class="bonus">50</td>
+                            <td class="bonus">45</td>
+                            <td class="bonus">55</td>
+                            <td>40</td>
+                            <td class="bonus">55</td>
+                            <td>40</td>
+                            <td class="malus">30</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <th>Dextérité</th>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="bonus">50</td>
+                            <td class="bonus">55</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="malus">30</td>
+                            <td>40</td>
+                            <td class="malus">35</td>
+                            <td class="bonus">45</td>
+                            <td>40</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <th>Agilité</th>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="bonus">45</td>
+                            <td class="bonus">50</td>
+                            <td>40</td>
+                            <td class="malus">25</td>
+                            <td class="bonus">45</td>
+                            <td class="malus">30</td>
+                            <td class="bonus">50</td>
+                            <td class="malus">35</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="bonus">45</td>
+                        </tr>
+                        <tr>
+                            <th>Vigueur</th>
+                            <td>40</td>
+                            <td class="bonus">45</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="malus">30</td>
+                            <td class="bonus">50</td>
+                            <td class="bonus">45</td>
+                            <td class="bonus">60</td>
+                            <td>40</td>
+                            <td class="bonus">50</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <th>Intelligence</th>
+                            <td class="bonus">50</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="bonus">55</td>
+                            <td>40</td>
+                            <td class="malus">25</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="malus">35</td>
+                            <td class="bonus">45</td>
+                            <td class="bonus">50</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <th>Volonté</th>
+                            <td class="bonus">45</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="bonus">55</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="malus">35</td>
+                            <td class="bonus">45</td>
+                            <td class="bonus">45</td>
+                            <td class="bonus">55</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <th>Perception</th>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="bonus">55</td>
+                            <td>40</td>
+                            <td class="bonus">45</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <th>Éloquence</th>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="malus">30</td>
+                            <td>40</td>
+                            <td class="bonus">50</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="bonus">45</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td class="bonus">50</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bestiary_entity_part">
+                    <table id="table_carac_dice" class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Expérience du personnage</th>
+                            <th>Débutant</th>
+                            <th>Aventurier</th>
+                            <th>Vétéran</th>
+                            <th>Héros</th>
+                        </tr>
+                        <tr>
+                            <th>Dés de caractéristique de départ</th>
+                            <th>3d8</th>
+                            <th>4d8</th>
+                            <th>5d8</th>
+                            <th>6d8</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             <p>Ces caractéristiques pourront progresser en cours de campagnes si votre personnage s'entraîne intensément ou accomplit des actions épiques. Lorsque cela se produit, il obtiendra un certain nombre de marques de progression dans la caractéristique relative.</p>
             <p>Le nombre de marques de progression nécessaires à l'amélioration d'une caractéristique équivaut au chiffre des dizaines de la caractéristique (sans prise en compte des modificateurs).</p>
         </div>
@@ -1696,10 +1722,10 @@
                     </tr>
                     <tr>
                         <td>Novice : AGI +5</td>
-                        <td>Apprenti : AGI +8, Atq +3</td>
-                        <td>Adepte : AGI +12, Atq +6, Prd +3</td>
-                        <td>Expert : AGI +15, DEX +5 Atq +9, Prd +6</td>
-                        <td>Maître : AGI +20, DEX +10, Atq +12, Prd +9</td>
+                        <td>Apprenti : AGI +10, Atq +3</td>
+                        <td>Adepte : AGI +15, Atq +6, Prd +3</td>
+                        <td>Expert : AGI +20, DEX +5 Atq +9, Prd +6</td>
+                        <td>Maître : AGI +25, DEX +10, Atq +12, Prd +9</td>
                     </tr>
                     <tr id="rechargement_rapide">
                         <th>Rechargement rapide</th>
@@ -1893,7 +1919,7 @@
                         </tr>
                         <tr id="mule">
                             <th>Mule</th>
-                            <td colspan="5">Le personnage est entraîné à porter des charges lourdes, sa capacité de port passe de ((CON+FOR)/2)*3,5 à ((CON+FOR)/2)*4</td>
+                            <td colspan="5">Le personnage est entraîné à porter des charges lourdes, sa capacité de port augmente de 20%</td>
                         </tr>
                         <tr id="natation">
                             <th>Natation (AGI)</th>
@@ -2073,7 +2099,7 @@
             <p>Les joueurs peuvent demander au MJ de créer des traits particulier pour leur personnage pour coller au maximum avec leurs attentes. Ces traits reflètent une partie de la personnalité, du passé ou des objectifs du personnage.</p>
             <p>Les traits de personnages sont un genre de sous-compétence permettant d'affiner la personalisation et le style de jeu du personnage selon les désirs du joueurs</p>
             <p>Pour éviter que les traits ne soient trop puissants, il faut, comparativement à une compétence, soit que son champ d'application soit plus restraint c'est à dire qu'il est utilisé moins souvent qu'une compétence; soit que sa puissance soit moindre ou compensée par un malus.</p>
-            <p>Les traits de personnages peuvent apporter un bonus et/ou un malus lors de certaines situations, par exemple, un personnage mal-à-l'aise avec des humains de part sa nature bestiale, peut avoir un malus de 2 en éloquence lors d'interactions sociales avec des Severs, Azumas ou Tuskizis mais un bonus de 2 avec les races bestiales.</p>
+            <p>Les traits de personnages peuvent apporter un bonus et/ou un malus lors de certaines situations, par exemple, un personnage mal-à-l'aise avec des humains de part sa nature bestiale, peut avoir un malus de 2 en éloquence lors d'interactions sociales avec des Severs, Azumas ou Tuskizis mais un bonus de 2 avec les origines bestiales.</p>
             <p class="caption" onclick="hideContent(this)">Liste non exhaustive de traits de personnage</p>
             <div class="hidden">
                 <table class="table_compact">
@@ -2270,7 +2296,7 @@
             <h3 id="histoire_perso" onclick="hideContent(this)">Histoire du personnage</h3>
             <div class="hidden">
                 <h4>Quel est votre nom ?</h4>
-                <p>Le nom est le plus important, impossible de partir à l'aventure sans en possédez un à moins d'être anonyme. Chaque race possède un style de nom différent que vous pouvez voir sur leur pages respectives.</p>
+                <p>Le nom est le plus important, impossible de partir à l'aventure sans en possédez un à moins d'être anonyme. Chaque origine possède un style de nom différent que vous pouvez voir sur leur pages respectives.</p>
                 <h4>Avez vous de la famille ?</h4>
                 <p>Que ce soit des parents, des frères, des sœurs ou bien même un conjoint ou encore des enfants avoir des relations familiales permet d'avoir une attache plus solide dans le monde pour votre alter ego et quelque chose à chérir et à protéger.</p>
                 <h4>D'où venez vous ?</h4>
@@ -2292,7 +2318,7 @@
                     <li>Signes de naissance</li>
                     <li>Cicatrices</li>
                 </ul>
-                <p>Toutes ces précisions sont optionnelles dans la description de votre personnage, mais peuvent renforcer l'implication que vous avez vis-à-vis de lui. Il vous faudra tout de même rester cohérent avec la race que vous avez choisi, un Steinn mesurant 1m80 ou un Sakha de 120kg ont assez peu de chance d'exister.</p>
+                <p>Toutes ces précisions sont optionnelles dans la description de votre personnage, mais peuvent renforcer l'implication que vous avez vis-à-vis de lui. Il vous faudra tout de même rester cohérent avec l'origine que vous avez choisi, un Steinn mesurant 1m80 ou un Sakha de 120kg ont assez peu de chance d'exister.</p>
             </div>
         </div>
     </div>
@@ -2306,9 +2332,9 @@
 
             <h2 id="rupture" onclick="hideContent(this)">Rupture</h2>
             <div>
-                <p>Les armes et armures possèdent une statistique appelée Rupture qui correspond à la solidité de l'objet, plus cette statistique est grande, plus l'objet est solide. L'amulette anti-magie des Chonos par exemple possède une rupture de 5.</p>
-                <p>La Rupture entre en compte uniquement lors d'un coup critique étant donné que l'armure est ignorée. On lance alors un D6 et si le chiffre est inférieur à la rupture, l'objet ne se brise pas et protège son porteur des effets secondaires du critique s'il s'agit d'une armure </p>
-                <p>Exemple : Un personnage portant un casque en acier Steinn de rupture 5, il subit une attaque critique à la tête, il obtient 4 à son jet de rupture, le casque n'est pas brisé, le personnage ne subit pas de traumatisme crânien, mais il subit tout le même les dégâts du coup critique.</p>
+                <p>Les armes et armures possèdent une statistique appelée Rupture qui correspond à la solidité de l'objet, plus cette statistique est grande, plus l'objet est solide.</p>
+                <p>La Rupture entre en compte uniquement lors d'un coup critique étant donné que l'armure est ignorée. On lance alors un D100 et si le chiffre est inférieur à la rupture, l'objet ne se brise pas et protège son porteur des effets secondaires du critique s'il s'agit d'une armure </p>
+                <p>Exemple : Un personnage portant un casque en acier Steinn de rupture 75, il subit une attaque critique à la tête, il obtient 43 à son jet de rupture, le casque n'est pas brisé, le personnage ne subit pas de traumatisme crânien, mais il subit tout le même les dégâts du coup critique.</p>
                 <p>La rupture étant une statistique variant d'un équipement à un autre, on ne peut que l'estimer globalement selon le matériau de l'objet, le choix précis revient donc au MJ qui décidera au cas-par-cas.</p>
             </div>
 
@@ -2334,7 +2360,7 @@
                 </div>
                 <div>
                     <p class="caption" onclick="hideContent(this)" id="table_armes_cac">Armes de corps-à-corps</p>
-                    <table width="90%" class="hidden">
+                    <table width="95%" class="hidden">
                         <thead>
                         <tr>
                             <th colspan="2">Catégorie</th>
@@ -2546,14 +2572,14 @@
                             <td>60</td>
                             <td>55</td>
                             <td>1d8</td>
-                            <td>1</td>
+                            <td>1-5</td>
                             <td>Allonge, À deux mains</td>
                         </tr>
                         </tbody>
                     </table>
 
                     <p class="caption" onclick="hideContent(this)" id="table_armes_lancer">Armes de lancer</p>
-                    <table width="90%" class="hidden">
+                    <table width="95%" class="hidden">
                         <thead>
                         <tr>
                             <th>Catégorie</th>
@@ -2567,7 +2593,7 @@
                         <tbody>
                         <tr>
                             <td>Couteaux</td>
-                            <td>Tranchants, Perforants</td>
+                            <td>Tranchants et Perforants</td>
                             <td>65</td>
                             <td>1d6</td>
                             <td>10m/20m</td>
@@ -2601,7 +2627,7 @@
                     </table>
 
                     <p class="caption" onclick="hideContent(this)" id="table_armes_distance">Armes à distance</p>
-                    <table width="90%" class="hidden">
+                    <table width="95%" class="hidden">
                         <thead>
                         <tr>
                             <th>Catégorie</th>
@@ -2732,7 +2758,7 @@
                     </table>
 
                     <p class="caption" onclick="hideContent(this)" id="table_arme_feu">Armes à feu</p>
-                    <table width="90%" class="hidden">
+                    <table width="95%" class="hidden">
                         <thead>
                         <tr>
                             <th>Catégorie</th>
@@ -2872,13 +2898,13 @@
                             <td>4 tours de rechargement</td>
                         </tr>
                         <tr>
-                            <td colspan="7">Les armes à feu infligent des dégâts contondants et perforants. Elles requièrent de la poudre noire pour fonctionner (une dose par canon, dix pour l'artillerie). Une dose correspond à 10g de poudre noire. Les armes à dispersion utilisent des plombs, les autres des balles en métal. Toutes les armes à feu possèdent le trait Chargement, les armes à une main nécessitent une action simple par canon, les armes à deux mains une action complexe par canon.</td>
+                            <td colspan="7">Les armes à feu infligent des dégâts contondants et perforants. Elles requièrent de la poudre noire pour fonctionner (une dose par canon, dix pour l'artillerie). Une dose correspond à 10g de poudre noire. Les armes à dispersion utilisent des plombs, les autres des balles en métal. Toutes les armes à feu possèdent le trait Chargement, les armes à une main nécessitent une action simple par canon, les armes à deux mains une action complexe par canon. Sur un échec critique, l'arme s'enraye et doit être réparée pour pouvoir tirer à nouveau.</td>
                         </tr>
                         </tbody>
                     </table>
 
                     <p class="caption" onclick="hideContent(this)" id="table_boucliers">Boucliers</p>
-                    <table width="90%" class="hidden">
+                    <table width="95%" class="hidden">
                         <thead>
                         <tr>
                             <th>Catégorie</th>
@@ -2969,6 +2995,115 @@
                         <p><span class="big_underline">Perce-armure</span>Cette catégorie d'arme ignore une partie de la protection procurée par les pièce d'armures d'un montant équivalent au chiffre entre parenthèses.</p>
                         <p><span class="big_underline">Polyvalente</span>Cette arme peut être tenue à une ou deux mains. Le chiffre indiqué entre parenthèses correspond aux dégâts si l'arme est tenue à deux mains lors d'une attaque au corps à corps.</p>
                     </div>
+
+
+                </div>
+                <div>
+                    <h3 onclick="hideContent(this)" id="mod_armes">Personalisation des armes</h3>
+                    <div class="hidden">
+                        <p>Il est possible de modifier une arme pour qu'elle s'adapte au mieux possible à son utilisateur. Ces modifications peuvent être faite à la main si l'on s'y connaît un peu, mais le résultat risque d'être de piètre qualité, il vaut mieux se referer à un véritable artisan pour ce genre de travaux.</p>
+                        <table width="95%">
+                            <thead>
+                            <tr>
+                                <th>Modification</th>
+                                <th>Description</th>
+                                <th>Effet(s)</th>
+                                <th>Coût</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr><th colspan="4">Modification des parties tranchantes</th></tr>
+                            <tr>
+                                <td>Lame dentelée</td>
+                                <td>En ajoutant un motif de vagues courant sur toute la lame, les blessures infligées peuvent être dévastatrices si le coup est bien placé.</td>
+                                <td>Si une attaque infligeant des dégâts tranchants inflige sont maximum de dégâts, l'attaque inflige 1d4 de dégâts supplémentaire perce-armure.</td>
+                                <td>80 pa</td>
+                            </tr>
+                            <tr>
+                                <td>Tranchant éternel</td>
+                                <td>Le travail acharné d'un forgeron peut rendre le tranchant d'une lame incroyablement fin et solide.</td>
+                                <td>Le taux de critique augmente de 3, si l'arme vient à être endommagé, ses dégâts ne sont pas réduits.</td>
+                                <td>15 po</td>
+                            </tr>
+                            <tr>
+                                <td>Lame géante</td>
+                                <td>Pour certains aventuriers éprouvant le besoin de compenser quelque chose, il est possible d'augmenter la taille de la lame jusqu'à la rendre ridiculement longue.</td>
+                                <td>L'arme gagne les propriétés "Lourde" et "Allonge" si elle ne les possèdent pas déjà, le dé de dégâts monte d'un cran, le poids de l'arme triple.</td>
+                                <td>300% du prix de l'arme</td>
+                            </tr>
+                            <tr><th colspan="4">Modification des parties contondantes</th></tr>
+                            <tr>
+                                <td>Alourdie</td>
+                                <td>En densifiant la partie contondante d'une arme, sa force d'impact peut surprendre plus d'un adversaire.</td>
+                                <td>Si l'attaque inflige des dégâts maximum, l'ennemi est projeté <a href="Glossaire.xhtml#a_terre">à terre</a>. Les ennemis <a href="Glossaire.xhtml#a_terre">à terre</a> subissent 1d4 dégâts supplémentaires. Le poids de l'arme augmente selon le type d'arme (500 g pour les armes à une main, 1 kg pour les armes à deux mains). L'arme obtient la propriété "Lourde" si elle ne la possède pas déjà.</td>
+                                <td>60 pa</td>
+                            </tr>
+                            <tr>
+                                <td>Destructrice</td>
+                                <td>Si l'on modifie la façon dont l'arme frappe sa cible, il devient possible de détruire plus facilement les armures de ses adversaires.</td>
+                                <td>Si l'attaque inflige des dégâts maximum, la protection de la pièce d'armure touché diminue de 1. L'effet est cumulable.</td>
+                                <td>80 pa</td>
+                            </tr>
+                            <tr>
+                                <td>Brise-os</td>
+                                <td>Quelques pointes judicieusement placées augmentent les chance de briser les os de ses cibles.</td>
+                                <td>Sur un coup critique, la cible est <a href="Glossaire.xhtml#etourdi">étourdie</a> par la douleur causée par le coup.</td>
+                                <td>50 pa</td>
+                            </tr>
+                            <tr><th colspan="4">Modification des armes à feu</th></tr>
+                            <tr>
+                                <td>Baïonnette</td>
+                                <td>L'installation d'une lame en dessous du canon permet de se servir de son arme à feu comme d'une arme d'estoc.</td>
+                                <td>Possibilité d'effectuer une attaque de mêlée avec son arme à feu. (Atq 55 Prd 30 Dgt 1d6 à une main 1d8 à deux mains).</td>
+                                <td>35 pa</td>
+                            </tr>
+                            <tr>
+                                <td>Gros calibre</td>
+                                <td>En installant un canon plus gros, il est possible d'utiliser des munitions plus grosses.</td>
+                                <td>Le dé de dégâts augmente d'un cran, augmente les risques d'échec critique de 5, si l'arme s'enraye suite à un échec critique de tir, l'arme doit passer un test de rupture, si elle échoue, l'arme explose.</td>
+                                <td>15 po</td>
+                            </tr>
+                            <tr>
+                                <td>Petit calibre</td>
+                                <td>En installant un canon plus petit, on diminue le risque que l'arme s'enraye.</td>
+                                <td>Le dé de dégâts diminue d'un cran, les risques d'échec critique diminuent de 5, si l'arme s'enraye, il suffit d'une action complexe pour pouvoir tirer à nouveau.</td>
+                                <td>10 po</td>
+                            </tr>
+                            <tr><th colspan="4">Amélioration de la garde et de la poignée</th></tr>
+                            <tr>
+                                <td>Garde adaptée</td>
+                                <td>Modification de la garde pour coller au mieux au style de combat de l'utilisateur</td>
+                                <td>Augmente la parade d'un montant équivalent au talent de l'artisan et de l'utilisateur (max : +15)</td>
+                                <td>30 pa</td>
+                            </tr>
+                            <tr>
+                                <td>Poignée personnalisée</td>
+                                <td>Modification de la poignée pour coller au mieux au style de combat de l'utilisateur</td>
+                                <td>Augmente l'attaque d'un montant équivalent au talent de l'artisan et de l'utilisateur (max : +15)</td>
+                                <td>30 pa</td>
+                            </tr>
+                            <tr><th>Amélioration globales</th></tr>
+                            <tr>
+                                <td>Enchantement</td>
+                                <td>Il est possible de rendre une arme magique en l'infusant de Karnyx. L'arme devient alors capable de toucher des cibles immunisées aux armes classiques. Il est possible de faire d'une arme un catalyseur, permettant d'avoir recours à un ou plusieurs sorts sans en avoir forcément les capacités psychiques.</td>
+                                <td>L'arme peut infliger des dégâts magiques. L'utilisateur peut utiliser un ou plusieurs sorts contenus dans l'arme. Les sorts utilisés de cette manière requiert de la psyché.</td>
+                                <td>150 po</td>
+                            </tr>
+                            <tr>
+                                <td>Renforcement</td>
+                                <td>La structure de l'arme est renforcé pour mieux résister aux chocs</td>
+                                <td>Augmente la rupture de l'arme d'un montant équivalent au talent de l'utilisateur (max : +20)</td>
+                                <td>50 pa</td>
+                            </tr>
+                            <tr>
+                                <td>Revêtement en argent</td>
+                                <td>Appliquer une fine couche d'argent sur l'arme lui permet d'infliger de plus lourd dégâts aux cibles qui y sont vulnérables</td>
+                                <td>L'arme inflige des dégâts supplémentaires aux cibles souffrant d'une vulnérabilité à l'argent</td>
+                                <td>15 po</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -3043,7 +3178,7 @@
                             <td>Plastron de cuir</td>
                             <td>2</td>
                             <td>/</td>
-                            <td>2</td>
+                            <td>35</td>
                         </tr>
                         <tr>
                             <th rowspan="4">Intermédiaire</th>
@@ -3052,19 +3187,19 @@
                             <td>Plastron de cuir renforcé de métal</td>
                             <td>3</td>
                             <td>AGI -5</td>
-                            <td>3</td>
+                            <td>40</td>
                         </tr>
                         <tr>
                             <td>Plastron d'écailles</td>
                             <td>3</td>
                             <td>AGI -8</td>
-                            <td>3</td>
+                            <td>50</td>
                         </tr>
                         <tr>
                             <td>Plastron de bois</td>
                             <td>3</td>
                             <td>AGI -15</td>
-                            <td>3</td>
+                            <td>40</td>
                         </tr>
                         <tr>
                             <th rowspan="3">Lourd</th>
@@ -3073,13 +3208,13 @@
                             <td>Plastron lamellaire</td>
                             <td>4</td>
                             <td>AGI -10</td>
-                            <td>3</td>
+                            <td>55</td>
                         </tr>
                         <tr>
                             <td>Plastron de métal</td>
                             <td>5</td>
                             <td>AGI -15</td>
-                            <td>4</td>
+                            <td>65</td>
                         </tr>
                         <tr>
                             <th rowspan="6">Vestes (torse, bras)</th>
@@ -3091,13 +3226,13 @@
                             <td>Veste en toile renforcée</td>
                             <td>1</td>
                             <td>/</td>
-                            <td>1</td>
+                            <td>15</td>
                         </tr>
                         <tr>
                             <td>Veste en peaux</td>
                             <td>2</td>
                             <td>/</td>
-                            <td>1</td>
+                            <td>20</td>
                         </tr>
                         <tr>
                             <th rowspan="2">Intermédiaire</th>
@@ -3106,7 +3241,7 @@
                             <td>Gambison rembourré</td>
                             <td>3</td>
                             <td>AGI -5</td>
-                            <td>3</td>
+                            <td>30</td>
                         </tr>
                         <tr>
                             <th rowspan="6">Cottes (torse, jambes, bras)</th>
@@ -3118,7 +3253,7 @@
                             <td>Cotte de mailles sans manches</td>
                             <td>3</td>
                             <td>AGI -15</td>
-                            <td>3</td>
+                            <td>55</td>
                         </tr>
                         <tr>
                             <th rowspan="3">Lourde</th>
@@ -3127,13 +3262,13 @@
                             <td>Cotte de mailles avec manches</td>
                             <td>4</td>
                             <td>AGI -15 DEX -8</td>
-                            <td>3</td>
+                            <td>55</td>
                         </tr>
                         <tr>
                             <td>Cotte de mailles de qualité</td>
                             <td>5</td>
                             <td>AGI -10 DEX -4</td>
-                            <td>4</td>
+                            <td>60</td>
                         </tr>
                         <tr>
                             <th rowspan="8">Casques (tête)</th>
@@ -3145,7 +3280,7 @@
                             <td>Casque de cuir</td>
                             <td>2</td>
                             <td>/</td>
-                            <td>2</td>
+                            <td>35</td>
                         </tr>
                         <tr>
                             <th rowspan="2">Intermédiaire</th>
@@ -3154,7 +3289,7 @@
                             <td>Casque de cuir renforcé de métal</td>
                             <td>3</td>
                             <td>/</td>
-                            <td>2</td>
+                            <td>45</td>
                         </tr>
                         <tr>
                             <th rowspan="3">Lourd</th>
@@ -3163,13 +3298,13 @@
                             <td>Casque de métal</td>
                             <td>4</td>
                             <td>PRÉ -5</td>
-                            <td>3</td>
+                            <td>65</td>
                         </tr>
                         <tr>
                             <td>Heaume de métal</td>
                             <td>5</td>
                             <td>PRÉ - 10</td>
-                            <td>4</td>
+                            <td>70</td>
                         </tr>
                         <tr>
                             <th rowspan="9">Jambières (jambes)</th>
@@ -3181,7 +3316,7 @@
                             <td>Jambières de cuir</td>
                             <td>2</td>
                             <td>/</td>
-                            <td>2</td>
+                            <td>35</td>
                         </tr>
                         <tr>
                             <th rowspan="3">Intermédiaire</th>
@@ -3190,13 +3325,13 @@
                             <td>Jambières de cuir renforcé de métal</td>
                             <td>3</td>
                             <td>AGI -5</td>
-                            <td>2</td>
+                            <td>40</td>
                         </tr>
                         <tr>
                             <td>Jambières d'écailles</td>
                             <td>3</td>
                             <td>AGI -5</td>
-                            <td>3</td>
+                            <td>50</td>
                         </tr>
                         <tr>
                             <th rowspan="3">Lourd</th>
@@ -3205,13 +3340,13 @@
                             <td>Jambières lamellaires</td>
                             <td>4</td>
                             <td>AGI - 8</td>
-                            <td>3</td>
+                            <td>55</td>
                         </tr>
                         <tr>
                             <td>Jambières de métal</td>
                             <td>5</td>
                             <td>AGI - 10</td>
-                            <td>3</td>
+                            <td>65</td>
                         </tr>
                         <tr>
                             <th rowspan="13">Brassards et Spallières (Bras)</th>
@@ -3223,13 +3358,13 @@
                             <td>Brassards de cuir</td>
                             <td>1</td>
                             <td>/</td>
-                            <td>2</td>
+                            <td>35</td>
                         </tr>
                         <tr>
                             <td>Spallières de cuir</td>
                             <td>1</td>
                             <td>/</td>
-                            <td>2</td>
+                            <td>35</td>
                         </tr>
                         <tr>
                             <th rowspan="5">Intermédiaire</th>
@@ -3238,25 +3373,25 @@
                             <td>Brassards de cuir renforcé de métal</td>
                             <td>2</td>
                             <td>DEX -4</td>
-                            <td>3</td>
+                            <td>40</td>
                         </tr>
                         <tr>
                             <td>Spallières de cuir renforcé de métal</td>
                             <td>2</td>
                             <td>DEX -4</td>
-                            <td>3</td>
+                            <td>40</td>
                         </tr>
                         <tr>
                             <td>Brassards d'écailles</td>
                             <td>2</td>
                             <td>DEX -4</td>
-                            <td>3</td>
+                            <td>50</td>
                         </tr>
                         <tr>
                             <td>Spallières d'écailles</td>
                             <td>2</td>
                             <td>DEX -4</td>
-                            <td>3</td>
+                            <td>50</td>
                         </tr>
                         <tr>
                             <th rowspan="4">Lourd</th>
@@ -3265,19 +3400,19 @@
                             <td>Brassards de métal</td>
                             <td>3</td>
                             <td>DEX -6</td>
-                            <td>4</td>
+                            <td>60</td>
                         </tr>
                         <tr>
                             <td>Spallières de métal</td>
                             <td>3</td>
                             <td>DEX -6 Prd -2</td>
-                            <td>4</td>
+                            <td>60</td>
                         </tr>
                         <tr>
                             <td>Brassards, cubitières et spallières de métal</td>
                             <td>5</td>
                             <td>DEX -8 Prd -4</td>
-                            <td>4</td>
+                            <td>65</td>
                         </tr>
                         <tr>
                             <th rowspan="8">Gantelets (mains)</th>
@@ -3289,7 +3424,7 @@
                             <td>Gants de cuir</td>
                             <td>2</td>
                             <td>/</td>
-                            <td>2</td>
+                            <td>35</td>
                         </tr>
                         <tr>
                             <th rowspan="3">Intermédiaire</th>
@@ -3298,13 +3433,13 @@
                             <td>Gantelets de cuir renforcé de métal</td>
                             <td>3</td>
                             <td>DEX -4</td>
-                            <td>3</td>
+                            <td>40</td>
                         </tr>
                         <tr>
                             <td>Gantelets d'écailles</td>
                             <td>3</td>
                             <td>DEX -4</td>
-                            <td>3</td>
+                            <td>50</td>
                         </tr>
                         <tr>
                             <th rowspan="2">Lourd</th>
@@ -3313,7 +3448,7 @@
                             <td>Gantelets complet de métal</td>
                             <td>5</td>
                             <td>DEX -8 Atq -4</td>
-                            <td>4</td>
+                            <td>65</td>
                         </tr>
                         <tr>
                             <th rowspan="7">Bottes (pieds)</th>
@@ -3325,7 +3460,7 @@
                             <td>Bottes de cuir</td>
                             <td>2</td>
                             <td>/</td>
-                            <td>2</td>
+                            <td>35</td>
                         </tr>
                         <tr>
                             <th rowspan="2">Intermédiaire</th>
@@ -3334,7 +3469,7 @@
                             <td>Bottes de cuir renforcées</td>
                             <td>3</td>
                             <td>/</td>
-                            <td>2</td>
+                            <td>40</td>
                         </tr>
                         <tr>
                             <th rowspan="2">Lourd</th>
@@ -3343,7 +3478,65 @@
                             <td>Solerets de métal</td>
                             <td>5</td>
                             <td>AGI -8</td>
-                            <td>3</td>
+                            <td>60</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 onclick="hideContent(this)" id="mod_armures">Personalisation des armures</h3>
+                <div class="hidden">
+                    <p>Il est possible de modifier une armure pour qu'elle s'adapte au mieux possible à son utilisateur. Ces modifications peuvent être faite à la main si l'on s'y connaît un peu, mais le résultat risque d'être de piètre qualité, il vaut mieux se referer à un véritable artisan pour ce genre de travaux.</p>
+                    <table width="95%">
+                        <thead>
+                        <tr>
+                            <th>Modification</th>
+                            <th>Description</th>
+                            <th>Effet(s)</th>
+                            <th>Coût</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Armure renforcée</td>
+                            <td>Une deuxième épaisseur du matériau utilisé permet de mieux protéger le porteur, mais cela augmente considérablement le poids de l'armure.</td>
+                            <td>La PR de l'armure augmente de 1, la Rupture de l'armure augmente de 5, les malus éventuels d'agilité augmentent de 50% (si l'armure ne possède pas de malus d'agilité, elle obtient un malus de 3), son poids double et la catégorie de poids de l'armure monte d'un cran.</td>
+                            <td>50% du prix de l'armure</td>
+                        </tr>
+                        <tr>
+                            <td>Armure allégée</td>
+                            <td>La épaisseur de la protection est réduite, le porteur est moins protégé mais plus habile</td>
+                            <td>La PR de l'armure diminue de 1, la Rupture de l'armure diminue de 5, les malus éventuel d'agilité sont divisés par 2, son poids est divisé par 2 et la catégorie de poids de l'armure descend d'un cran.</td>
+                            <td>100 pa</td>
+                        </tr>
+                        <tr>
+                            <td>Armure polie</td>
+                            <td>Un traitement spécial à base d'aluminium permet de donner un aspect très brillant à l'armure.</td>
+                            <td>Dans un environnement très lumineux, le porteur de l'armure peut tenter d'éblouir ses adversaires (la cible doit réussir un jet de PER ou être <a href="Glossaire.xhtml#ebloui">éblouie</a> pendant un round. En revanche, la lumière réfléchie par l'armure empêche de passer inaperçu.</td>
+                            <td>50 pa</td>
+                        </tr>
+                        <tr>
+                            <td>Armure assombrie</td>
+                            <td>Un traitement à base d'hématite (pour les armures de métal) ou de teinture (pour celles en cuir/tissu) permet d'assombrir l'armure pour être plus discret dans les zones peu éclairés. L'armure peut attirer l'attention des forces de l'ordre.</td>
+                            <td>Dans un environnement sombre, le porteur bénéficie d'un bonus à ses jets de furtivité (+2 pour le plastron, +1 pour le reste).</td>
+                            <td>35 pa</td>
+                        </tr>
+                        <tr>
+                            <td>Armure de pointes/à lames</td>
+                            <td>L'ajout de pointes ou de lames sur la pièce d'armure peut blesser les adversaires s'approchant trop du porteur, mais ce genre de modification peut en impressionner plus d'un.</td>
+                            <td>Toute entité faisant contact avec l'armure avec force subit 1d4 de dégâts.</td>
+                            <td>50 pa</td>
+                        </tr>
+                        <tr>
+                            <td>Armure confortable</td>
+                            <td>L'intérieur du plastron est légèrement rembourré pour permettre à son porteur de dormir dormir avec sans être trop dérangé.</td>
+                            <td>Pas de malus lorsque le porteur dort sans enlever son plastron. +5 pour résister au effets du climat liés aux températures basses.</td>
+                            <td>20 pa</td>
+                        </tr>
+                        <tr>
+                            <td>Protection vitale</td>
+                            <td>L'armure protège une zone légèrement plus étendue que la normale pour éviter que son porteur ne se blesse gravement s'il subit une attaque bien placée</td>
+                            <td>Avantage au jet de rupture si l'effet du critique cible cette pièce d'armure, le poids de l'armure augmente de 20%.</td>
+                            <td>10% du prix de l'armure</td>
                         </tr>
                         </tbody>
                     </table>

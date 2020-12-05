@@ -19,7 +19,7 @@
                 <li><span class="medium"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
                 <li><span class="medium"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
                 <li><span class="medium"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
-                <li><span class="dossier" onclick="hideContent(this)">Races/Factions</span>
+                <li><span class="dossier" onclick="hideContent(this)">Origines</span>
                     <ul class="hidden">
                         <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
                             <ul class="hidden">
@@ -60,7 +60,7 @@
 
                 <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
                     <ul class="hidden">
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#table_race">Race</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#table_origine">Race</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Jauges">Jauges</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Competences">Compétences</a></span></li>
@@ -137,9 +137,10 @@
                     </tbody>
                 </table>
                 <hr/>
-                <p><strong>Points de vie : </strong></p>
+                <p><strong>Vitalité : </strong></p>
+                <p><strong>Endurance : </strong></p>
                 <p><strong>Protection : </strong><br/><i></i></p>
-                <p><strong>Immunitée(s) : </strong></p>
+                <p><strong>Immunité(s) : </strong></p>
                 <p><strong>Résistance(s) : </strong></p>
                 <p><strong>Vulnérabilité(s) : </strong></p>
                 <p><strong>Vitesse : </strong></p>
@@ -166,9 +167,52 @@
     <h1>Bestiaire</h1>
     <p>Ici sont recensés la plupart des créatures d'Ogma selon différentes catégories.</p>
 
+    <h1 id="aquatiques" onclick="hideContent(this)">Aquatiques</h1>
+    <div>
+        <p>Les aquatiques sont des créatures évoluant la majorité du temps dans l'eau, qu'elle soit douce ou salée. Cette catégorie regroupe aussi bien les amphibiens que les monstres marins</p>
+
+        <h3 id="koibra" onclick="hideContent(this)">Koïbra</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Résidant dans les étangs et les rivières calmes, le koïbra est un prédateur mortel. Les neurotoxines qu'il injecte par sa morsure affecte le système nerveux de sa victime, causant une paralysie et de terribles douleures.</p>
+                    <p>Cette salamandre se nourrit principalement de poissons, grenouilles et petits serpents. Le koïbra préfère fuir sous la surface lorsqu'on le dérange et ne se bat qu'en dernier recours.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>33</td> <td>54</td> <td>61</td> <td>32</td> <td>8</td> <td>12</td> <td>64</td> <td>/</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Vitalité : </strong>5</p>
+                    <p><strong>Endurance : </strong>10</p>
+                    <p><strong>Protection : </strong>1<br/><i>Sa peau écailleuse fait glisser les lames et les flèches.</i></p>
+                    <p><strong>Vitesse : </strong>au sol 12m, dans l'eau 20m</p>
+                    <p><strong>Taille : </strong>Petite</p>
+                    <p><strong>Langages : </strong>Aucun</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Morsure</td> <td>64</td> <td>/</td> <td>1d6 P</td></tr>
+                        <tr><td>Griffes</td> <td>58</td> <td>/</td> <td>2d4 T</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Poison : </strong>Si une créature est mordu par le koïbra, elle doit réussir un jet de Vigueur avec un malus de 18 ou être empoisonnée. Les effets du poison sont : 1d6 de dégâts par tour et paralysie totale. Si la cible rate son jet de Vigueur, elle peut le relancer une fois par tour, sur une réussite les effets du poison se dissipent.</p>
+                    <p><strong>Amphibien : </strong>Le koïbra peut respirer à la fois dans l'air et sous l'eau.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../Images/Bestiary/Koibra.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    </div>
     <h1 id="betes" onclick="hideContent(this)">Bêtes</h1>
     <div>
-        <p>Les bêtes sont des créatures non-humanoïdes dénués de véritable langage.</p>
+        <p>Les bêtes sont des créatures primitives, certaines d'entre elles peuvent êtres élevées voire même dressées.</p>
 
         <h3 id="bulvak" onclick="hideContent(this)">Bulvak</h3>
         <div class="hidden">
@@ -179,11 +223,12 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>15</td> <td>6</td> <td>12</td> <td>15</td> <td>1</td> <td>1</td> <td>10</td> <td>3</td></tr>
+                        <tr><td>78</td> <td>22</td> <td>47</td> <td>69</td> <td>6</td> <td>16</td> <td>42</td> <td>/</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>40</p>
+                    <p><strong>Vitalité : </strong>15</p>
+                    <p><strong>Endurance : </strong>30</p>
                     <p><strong>Protection : </strong>1<br/><i>Une épaisse couche de poils et de graisse protèges les organes vitaux du bulvak</i></p>
                     <p><strong>Résistance(s) : </strong>Froid</p>
                     <p><strong>Vitesse : </strong>12m</p>
@@ -193,7 +238,7 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Bois</td> <td>12</td> <td>10</td> <td>1d6 C</td></tr>
+                        <tr><td>Bois</td> <td>52</td> <td>36</td> <td>1d6 C</td></tr>
                         </tbody>
                     </table>
                     <hr/>
@@ -216,11 +261,12 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>16</td> <td>8</td> <td>14</td> <td>15</td> <td>4</td> <td>8</td> <td>8</td> <td>6</td></tr>
+                        <tr><td>72</td> <td>34</td> <td>53</td> <td>67</td> <td>23</td> <td>34</td> <td>42</td> <td>/</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>45</p>
+                    <p><strong>Vitalité : </strong>15</p>
+                    <p><strong>Endurance : </strong>30</p>
                     <p><strong>Protection : </strong>1<br/><i>Le cuir et les muscles des demigriffons les rendent robustes.</i></p>
                     <p><strong>Vitesse : </strong>20m</p>
                     <p><strong>Taille : </strong>Grande</p>
@@ -229,12 +275,12 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Bec</td> <td>14</td> <td>/</td> <td>1d8+2 P</td></tr>
-                        <tr><td>Griffes</td> <td>12</td> <td>/</td> <td>2d6 T</td></tr>
+                        <tr><td>Bec</td> <td>56</td> <td>/</td> <td>1d8+2 P</td></tr>
+                        <tr><td>Griffes</td> <td>48</td> <td>/</td> <td>2d6 T</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Charge : </strong>Si le demigriffon parcourt plus de 10m en ligne droite et frappe un adversaire avec ses griffes, l'attaque est considéré comme une charge et la cible doit réussir un jet de Vigueur ou d'Agilité avec un malus de 3 ou être mise à terre.</p>
+                    <p><strong>Charge : </strong>Si le demigriffon parcourt plus de 10m en ligne droite et frappe un adversaire avec ses griffes, l'attaque est considéré comme une charge et la cible doit réussir un jet de Vigueur ou d'Agilité avec un malus de 20 ou être mise à terre.</p>
                 </div>
                 <div class="bestiary_entity_part">
                     <img alt="" src="../../Images/Bestiary/Demigriffon.png"/>
@@ -253,11 +299,12 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>14</td> <td>16</td> <td>18</td> <td>12</td> <td>3</td> <td>5</td> <td>17</td> <td>6</td></tr>
+                        <tr><td>61</td> <td>72</td> <td>89</td> <td>43</td> <td>23</td> <td>21</td> <td>82</td> <td>/</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>35</p>
+                    <p><strong>Vitalité : </strong>12</p>
+                    <p><strong>Endurance : </strong>25</p>
                     <p><strong>Protection : </strong>0</p>
                     <p><strong>Taille : </strong>Grande</p>
                     <p><strong>Vitesse: </strong>au sol 15m, en vol 30m</p>
@@ -266,8 +313,8 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Serres</td> <td>14</td> <td>/</td> <td>2d6+2 P et T</td></tr>
-                        <tr><td>Bois</td> <td>15</td> <td>8</td> <td>1d10+2 C</td></tr>
+                        <tr><td>Serres</td> <td>59</td> <td>/</td> <td>2d6+2 P et T</td></tr>
+                        <tr><td>Bois</td> <td>54</td> <td>32</td> <td>1d10+2 C</td></tr>
                         </tbody>
                     </table>
                     <hr/>
@@ -281,43 +328,6 @@
             <hr/>
         </div>
 
-        <h3 id="koibra" onclick="hideContent(this)">Koïbra</h3>
-        <div class="hidden">
-            <div class="bestiary_entity">
-                <div class="bestiary_entity_part">
-                    <p>Résidant dans les étangs et les rivières calmes, le koïbra est un prédateur mortel. Les neurotoxines qu'il injecte par sa morsure affecte le système nerveux de sa victime, causant une paralysie et de terribles douleures.</p>
-                    <p>Cette salamandre se nourrit principalement de poissons, grenouilles et petits serpents. Le koïbra préfère fuir sous la surface lorsqu'on le dérange et ne se bat qu'en dernier recours.</p>
-                    <hr/>
-                    <table class="table_bestiary">
-                        <tbody>
-                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>11</td> <td>15</td> <td>13</td> <td>8</td> <td>2</td> <td>3</td> <td>11</td> <td>3</td></tr>
-                        </tbody>
-                    </table>
-                    <hr/>
-                    <p><strong>Points de vie : </strong>15</p>
-                    <p><strong>Protection : </strong>1<br/><i>Sa peau écailleuse fait glisser les lames et les flèches.</i></p>
-                    <p><strong>Vitesse : </strong>au sol 12m, dans l'eau 25m</p>
-                    <p><strong>Taille : </strong>Moyenne</p>
-                    <p><strong>Langages : </strong>Aucun</p>
-                    <hr/>
-                    <table class="table_bestiary">
-                        <tbody>
-                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Morsure</td> <td>14</td> <td>/</td> <td>1d6+2 P</td></tr>
-                        <tr><td>Griffes</td> <td>12</td> <td>/</td> <td>2d4+1 T</td></tr>
-                        </tbody>
-                    </table>
-                    <hr/>
-                    <p><strong>Poison : </strong>Si une créature est mordu par le koïbra, elle doit réussir un jet de Vigueur avec un malus de 4 ou être empoisonnée. Les effets du poison sont : 1d6 de dégâts par tour et paralysie totale. Si la cible rate son jet de Vigueur, elle peut le relancer une fois par tour, sur une réussite les effets du poison se dissipent.</p>
-                    <p><strong>Amphibien : </strong>Le koïbra peut respirer à la fois dans l'air et sous l'eau.</p>
-                </div>
-                <div class="bestiary_entity_part">
-                    <img alt="" src="../../Images/Bestiary/Koibra.png"/>
-                </div>
-            </div>
-            <hr/>
-        </div>
 
         <h3 id="spitfire" onclick="hideContent(this)">Spitfire</h3>
         <div class="hidden">
@@ -328,11 +338,12 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>8</td> <td>8</td> <td>13</td> <td>10</td> <td>2</td> <td>2</td> <td>8</td> <td>3</td></tr>
+                        <tr><td>36</td> <td>21</td> <td>52</td> <td>33</td> <td>8</td> <td>6</td> <td>36</td> <td>/</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>8</p>
+                    <p><strong>Vitalité : </strong>3</p>
+                    <p><strong>Endurance : </strong>6</p>
                     <p><strong>Protection : </strong>2<br/><i>Ses écailles sont dures comme la pierre et difficiles à pénétrer.</i></p>
                     <p><strong>Résistance : </strong>Feu (Majeure)</p>
                     <p><strong>Vitesse : </strong>12m</p>
@@ -342,11 +353,12 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Morsure</td> <td>11</td> <td>/</td> <td>1d6 P</td></tr>
+                        <tr><td>Morsure</td> <td>45</td> <td>/</td> <td>1d6 P</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Crâchat brûlant : </strong> Le spitfire crache un mélange de bave et de roche brûlante, infligeant 1d6+2 de dégâts de feu à une seule cible. Précision 12, portée 10m/30m.</p>
+                    <p><strong>Crachât brûlant : </strong> Le spitfire crache un mélange de bave et de roche brûlante, infligeant 1d6 de dégâts de feu à une seule cible. Précision 50, portée 10m/30m.</p>
+                    <p><strong>Escalade rapide : </strong> Cette créature peut se déplacer à vitesse normale sur n'importe quelle surface rocheuse qu'importe son inclinaison.</p>
                 </div>
                 <div class="bestiary_entity_part">
                     <img alt="" src="../../Images/Bestiary/Spitfire.png"/>
@@ -369,11 +381,12 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>18</td> <td>6</td> <td>8</td> <td>18</td> <td>5</td> <td>15</td> <td>8</td> <td>1</td></tr>
+                        <tr><td>92</td> <td>36</td> <td>32</td> <td>78</td> <td>23</td> <td>67</td> <td>38</td> <td>/</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>80</p>
+                    <p><strong>Vitalité : </strong>35</p>
+                    <p><strong>Endurance : </strong>70</p>
                     <p><strong>Protection : </strong>2<br/><i>L'écorce magique de Kormo les rend résistant.</i></p>
                     <p><strong>Vulnérabilité(s) : </strong>Feu (Majeure)</p>
                     <p><strong>Vitesse : </strong>6m</p>
@@ -383,11 +396,11 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Poings</td> <td>13</td> <td>8</td> <td>2d8 C</td></tr>
+                        <tr><td>Poings</td> <td>58</td> <td>/</td> <td>2d8 C</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Fouet végétal : </strong>L'arbre golem peut agripper une créature située à moins de 10m de lui et l'amener à son contact grâce à un fouet de lianes ou de racines. La cible peut esquiver avec un malus de 3, en cas d'échec elle subit 3d6-2 de dégâts tranchants et doit réussir un jet de Force (opposée à celui du golem) pour résister au déplacement.</p>
+                    <p><strong>Fouet végétal : </strong>L'arbre golem peut agripper une créature située à moins de 10m de lui et l'amener à son contact grâce à un fouet de lianes ou de racines. La cible peut esquiver avec un malus de 15, en cas d'échec elle subit 2d6 de dégâts tranchants et doit réussir un jet de Force (opposée à celui du golem) pour résister au déplacement.</p>
                     <p><strong>Racines : </strong>Le golem peut fusionner ses pieds avec le sol s'il se trouve sur de la terre, tant qu'il est enraciné, il regagne 2d6 points de vie par tour, et ne peut pas être déplacé ni mis à terre.</p>
                 </div>
                 <div class="bestiary_entity_part">
@@ -400,8 +413,46 @@
 
     <h1 id="creatures_magiques" onclick="hideContent(this)">Créatures magiques</h1>
     <div>
-        <p>Les créatures magiques sont des créatures non-humanoïdes intelligentes, comprenant au moins une langue, certains peuvent même s'exprimer dans une ou plusieurs langues.</p>
+        <p>Les créatures magiques, anciennement des monstres et des bêtes primaux, ont évolué depuis l'apparition de la magie jusqu'à devenir des êtres d'une intelligence rare pour des être non civilisés la plupart comprennent au moins une langue, certains d'entre eux peuvent même s'exprimer dans une ou plusieurs langues.</p>
 
+        <h3 id="geant_foret" onclick="hideContent(this)">Géant des forêts</h3>
+        <div class="hidden">
+            <div class="bestiary_entity">
+                <div class="bestiary_entity_part">
+                    <p>Les géants des forêts sont des créatures lentes et silencieuses arpentant les bois les plus profonds au sommet des plus hautes montagnes. Vivants au plus loin de la civilisation, il est bien rare d'en rencontrer un.</p>
+                    <p>La plupart des géants des forêt possèdent plus de deux yeux, une longue barbe infesté de lichen, mousses et branchages. Ils sont passifs à moins qu'on ne leur montre du feu.</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                        <tr><td>128</td> <td>42</td> <td>53</td> <td>112</td> <td>46</td> <td>56</td> <td>45</td> <td>36</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Vitalité : </strong>50</p>
+                    <p><strong>Endurance : </strong>100</p>
+                    <p><strong>Protection : </strong>3<br/><i>Le cuir d'un géant est difficile à percer</i></p>
+                    <p><strong>Résistances : </strong>Magie (Mineure)</p>
+                    <p><strong>Vulnérabilités : </strong>Feu</p>
+                    <p><strong>Vitesse : </strong>12m</p>
+                    <p><strong>Taille : </strong>Gigantesque</p>
+                    <p><strong>Langages : </strong>Géant</p>
+                    <hr/>
+                    <table class="table_bestiary">
+                        <tbody>
+                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                        <tr><td>Poings</td> <td>46</td> <td>/</td> <td>2d8 C</td></tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <p><strong>Éruption : </strong>Le géant enfonce ses deux poings dans le sol, causant une éruption florale. Les créatures se trouvant dans un rayon de 5m de l'impact qui ne parviennent pas à esquiver (avec un malus de 15) subissent 3d6 de dégâts contondants et le sol autour de l'impact devient un terrain difficile jusqu'a ce qu'on coupe les plantes ce qui prend environ une minute.</p>
+                </div>
+                <div class="bestiary_entity_part">
+                    <img alt="" src="../../Images/Bestiary/Geant_foret.png"/>
+                </div>
+            </div>
+            <hr/>
+        </div>
 
         <h3 id="griffon" onclick="hideContent(this)">Griffon</h3>
         <div class="hidden">
@@ -413,26 +464,27 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>18</td> <td>14</td> <td>18</td> <td>14</td> <td>6</td> <td>12</td> <td>12</td> <td>8</td></tr>
+                        <tr><td>78</td> <td>56</td> <td>84</td> <td>54</td> <td>35</td> <td>46</td> <td>68</td> <td>/</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>65</p>
+                    <p><strong>Vitalité : </strong>20</p>
+                    <p><strong>Endurance : </strong>40</p>
                     <p><strong>Protection : </strong>1<br/><i>Les griffons sont protégés par un cuir épais.</i></p>
-                    <p><strong>Vitesse : </strong>au sol 12m, en vol 30m</p>
+                    <p><strong>Vitesse : </strong>au sol 12m, en vol 25m</p>
                     <p><strong>Taille : </strong>Très grande</p>
-                    <p><strong>Langages : </strong>Commun (ne sait pas parler)</p>
+                    <p><strong>Langages : </strong>/</p>
                     <hr/>
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Bec</td> <td>15</td> <td>/</td> <td>1d10+4 P</td></tr>
-                        <tr><td>Griffes</td> <td>14</td> <td>/</td> <td>2d8+2 T</td></tr>
+                        <tr><td>Bec</td> <td>58</td> <td>/</td> <td>1d10+3 P</td></tr>
+                        <tr><td>Griffes</td> <td>52</td> <td>/</td> <td>2d8 T</td></tr>
                         </tbody>
                     </table>
                     <hr/>
                     <p><strong>Saisie : </strong>Le griffon peut survoler à toute vitesse un opposant et le saisir avec ses serres, si la cible ne parvient pas à se défendre (via une esquive ou autre chose), elle subit 2d6 de dégâts perforants et est prisonnière des serres du griffon mais peut essayer de défendre pour le faire lâcher prise.</p>
-                    <p><strong>Cri perçant : </strong>Le griffon pousse un hurlement puissant, chaque créature dans un rayon de 10m autour de sa tête et qui peuvent l'entendre doivent réussir un jet de Vigueur ou de Volonté avec un malus de 4 sous peine d'être étourdi jusqu'à la fin du prochain tour du griffon et assourdi pendant 10 tours. 6 tours de recharge.</p>
+                    <p><strong>Cri perçant : </strong>Le griffon pousse un hurlement puissant, chaque créature dans un rayon de 10m autour de sa tête et qui peuvent l'entendre doivent réussir un jet de Vigueur ou de Volonté avec un malus de 20 sous peine d'être étourdi jusqu'à la fin du prochain tour du griffon et assourdi pendant 10 tours.</p>
                 </div>
                 <div class="bestiary_entity_part">
                     <img alt="" src="../../Images/Bestiary/Griffon.png"/>
@@ -452,13 +504,14 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>24</td> <td>14</td> <td>12</td> <td>16</td> <td>14</td> <td>20</td> <td>16</td> <td>14</td></tr>
+                        <tr><td>75</td> <td>67</td> <td>54</td> <td>63</td> <td>72</td> <td>84</td> <td>51</td> <td>64</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>60</p>
+                    <p><strong>Vitalité : </strong>30</p>
+                    <p><strong>Endurance : </strong>60</p>
                     <p><strong>Protection : </strong>4<br/><i>Son écorce est renforcée par magie.</i></p>
-                    <p><strong>Immunitée(s) : </strong>Poison</p>
+                    <p><strong>Immunité(s) : </strong>Poison</p>
                     <p><strong>Résistance(s) : </strong>Contondants</p>
                     <p><strong>Vulnérabilité(s) : </strong>Feu (Majeure)</p>
                     <p><strong>Vitesse : </strong>12m</p>
@@ -468,13 +521,13 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Griffes</td> <td>15</td> <td>10</td> <td>2d6+2</td></tr>
+                        <tr><td>Griffes</td> <td>63</td> <td>42</td> <td>2d6+2</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Régénération : </strong>Le leshen récupère 15 points de vie par tour tant qu'il lui reste un totem, il ne se régénère pas s'il a subi des dégâts de feu ce tour.</p>
+                    <p><strong>Régénération : </strong>Le leshen récupère 15 points d'endurance par tour tant qu'il lui reste un totem, il ne se régénère pas s'il a subi des dégâts de feu ce tour.</p>
                     <p><strong>Pas totémique : </strong>Le leshen peut, par une action complexe, se téléporter vers un de ses totems s'il se trouve sur son domaine.</p>
-                    <p><strong>Assault végétal : </strong>S'il le souhaite, le leshen peut frapper deux cibles situées à moins de 30m de lui avec des racines surgissants du sol. Les cibles doivent réussir une esquive avec un malus de 4 ou subir 3d6 de dommages contondants et être agrippées. Les créatures aggrippées peuvent se libérer en réussissant un jet de Force, d'Agilité, de Vigueur ou en tranchant les racines. Chaque tour passés en étant aggrpiés par les racines fait subir 2d6 de dégâts contondants car les racines resserent leur prise. 5 tours de recharge.</p>
+                    <p><strong>Assault végétal : </strong>S'il le souhaite, le leshen peut frapper deux cibles situées à moins de 30m de lui avec des racines qui surgissent du sol. Les cibles doivent réussir une esquive avec un malus de 15 ou subir 3d6 de dommages contondants et être agrippées. Les créatures agrippées peuvent se libérer en réussissant un jet de Force, d'Agilité, de Vigueur ou en tranchant les racines. Chaque tour passé en étant agrippé par les racines fait subir 1d6 de dégâts contondants car les racines resserrent leur prise.</p>
                     <p><strong>Appel bestial : </strong>Le leshen peut appeler 2d4 corbeaux (PV 2, Atq 8, Dgt 1d4 P), 1d4 loups (PV 15, Atq 12, Dgt 1d6 P), ou un ours (PV 50, Atq 14, Dgt 1d10 T) pour lui venir en aide. Les créatures sont controlées par le leshen et ne fuient pas le combat sauf s'il les laisse partir.</p>
                 </div>
                 <div class="bestiary_entity_part">
@@ -488,17 +541,18 @@
         <div class="hidden">
             <div class="bestiary_entity">
                 <div class="bestiary_entity_part">
-                    <p>Le zheng est un grand léopard à cinq queue vivant dans les régions montagneuses. Souvent appellés le léopard licorne à cause des cornes qu'il possède sur son visage.</p>
+                    <p>Le zheng est un grand léopard à cinq queue vivant dans les régions montagneuses. Souvent appelés le léopard licorne à cause des cornes qu'il possède sur son visage.</p>
                     <p>Il est chassé pour sa fourrure et ses cornes, malgré cela il aide les voyageurs paisibles traversant son territoire. Ils communiquent par télépathie.</p>
                     <hr/>
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>14</td> <td>16</td> <td>18</td> <td>12</td> <td>12</td> <td>12</td> <td>14</td> <td>15</td></tr>
+                        <tr><td>68</td> <td>56</td> <td>89</td> <td>48</td> <td>54</td> <td>48</td> <td>72</td> <td>42</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>40</p>
+                    <p><strong>Vitalité : </strong>15</p>
+                    <p><strong>Endurance : </strong>30</p>
                     <p><strong>Protection : </strong>0</p>
                     <p><strong>Vitesse : </strong>16m</p>
                     <p><strong>Taille : </strong>Grande</p>
@@ -507,59 +561,16 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Crocs</td> <td>14</td> <td>/</td> <td>1d10+2 P</td></tr>
-                        <tr><td>Griffes</td> <td>13</td> <td>/</td> <td>2d6 T</td></tr>
-                        <tr><td>Queues</td> <td>12</td> <td>/</td> <td>3d4 C</td></tr>
+                        <tr><td>Crocs</td> <td>64</td> <td>/</td> <td>1d10 P</td></tr>
+                        <tr><td>Griffes</td> <td>61</td> <td>/</td> <td>2d6 T</td></tr>
+                        <tr><td>Queues</td> <td>58</td> <td>/</td> <td>3d4 C</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Bond : </strong>Si le zheng parcourt plus de 10m en ligne droite, il peut bondir sur un adversaire. La cible peut esquiver (avec un malus de 3), si elle échoue, elle doit réussir un jet de Vigueur avec un malus de 4 ou être mise au sol. Le zheng peut porter une attaque de crocs en action bonus à la cible.</p>
+                    <p><strong>Bond : </strong>Si le zheng parcourt plus de 10m en ligne droite, il peut bondir sur un adversaire. La cible peut esquiver, si elle échoue, elle doit réussir un jet de Vigueur avec un malus de 20 ou être mise au sol. Le zheng peut porter une attaque de crocs en action bonus à la cible.</p>
                 </div>
                 <div class="bestiary_entity_part">
                     <img alt="" src="../../Images/Bestiary/Zheng.png"/>
-                </div>
-            </div>
-            <hr/>
-        </div>
-    </div>
-
-    <h1 id="geants" onclick="hideContent(this)">Géants</h1>
-    <div>
-        <p>Les géants sont plus grands que les humains. Ils ont pour la plupart une forme humanoïde. Les ogres et les trolles sont également des géants.</p>
-
-        <h3 id="geant_foret" onclick="hideContent(this)">Géant des forêts</h3>
-        <div class="hidden">
-            <div class="bestiary_entity">
-                <div class="bestiary_entity_part">
-                    <p>Les géants des forêts sont des créatures lentes et silencieurs arpentant les bois les plus profonds au sommet des plus hautes montagnes. Vivants au plus loin de la civilisation, il est bien rare d'en rencontrer un.</p>
-                    <p>La plupart des géants des forêt possèdent plus de deux yeux, une longue barbe infesté de lichen, mousses et branchages. Ils sont passifs à moins qu'on ne leur montre du feu.</p>
-                    <hr/>
-                    <table class="table_bestiary">
-                        <tbody>
-                        <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>25</td> <td>6</td> <td>12</td> <td>20</td> <td>10</td> <td>13</td> <td>14</td> <td>7</td></tr>
-                        </tbody>
-                    </table>
-                    <hr/>
-                    <p><strong>Points de vie : </strong>120</p>
-                    <p><strong>Protection : </strong>3<br/><i>Le cuir d'un géant est difficile à perçer</i></p>
-                    <p><strong>Résistances : </strong>Magie (Mineure)</p>
-                    <p><strong>Vulnérabilités : </strong>Feu</p>
-                    <p><strong>Vitesse : </strong>12m</p>
-                    <p><strong>Taille : </strong>Gigantesque</p>
-                    <p><strong>Langages : </strong>Géant</p>
-                    <hr/>
-                    <table class="table_bestiary">
-                        <tbody>
-                        <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Poings</td> <td>12</td> <td>/</td> <td>2d6+5 C</td></tr>
-                        </tbody>
-                    </table>
-                    <hr/>
-                    <p><strong>Éruption : </strong>Le géant enfonce ses deux poings dans le sol, causant une éruption florale. Les créatures se trouvant dans un rayon de 5m de l'impact qui ne parviennent pas à esquiver (avec un malus de 3) subissent 3d6 de dégâts contondants et le sol autour de l'impact devient un terrain difficile jusqu'a ce qu'on coupe les plantes ce qui prend environ une minute.</p>
-                </div>
-                <div class="bestiary_entity_part">
-                    <img alt="" src="../../Images/Bestiary/Geant_foret.png"/>
                 </div>
             </div>
             <hr/>
@@ -580,12 +591,13 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>17</td> <td>8</td> <td>12</td> <td>15</td> <td>6</td> <td>10</td> <td>14</td> <td>10</td></tr>
+                        <tr><td>82</td> <td>43</td> <td>52</td> <td>74</td> <td>37</td> <td>46</td> <td>51</td> <td>42</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>45</p>
-                    <p><strong>Protection : </strong>2<br/><i>Le cuir épais du minotaure le protège des coups les plus faibles.</i></p>
+                    <p><strong>Vitalité : </strong>20</p>
+                    <p><strong>Endurance : </strong>40</p>
+                    <p><strong>Protection : </strong>1<br/><i>Le cuir épais du minotaure le protège des coups les plus faibles.</i></p>
                     <p><strong>Vitesse : </strong>9m</p>
                     <p><strong>Taille : </strong>Grande</p>
                     <p><strong>Langages : </strong>Géant</p>
@@ -593,12 +605,12 @@
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Hache à deux mains</td> <td>10</td> <td>10</td> <td>1d10+3 T</td></tr>
-                        <tr><td>Cornes</td> <td>12</td> <td>/</td> <td>1d8+3 P</td></tr>
+                        <tr><td>Hache à deux mains</td> <td>55</td> <td>50</td> <td>1d10 T</td></tr>
+                        <tr><td>Cornes</td> <td>60</td> <td>/</td> <td>1d8 P</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Charge : </strong>Si le minotaure se déplace d'au moins 10 mètres en ligne droite vers une cible, puis la touche lors d'une attaque avec sa corne dans le même tour, l'attaque est considéré comme une charge et la cible doit réussir un jet de Vigueur ou d'Agilité avec un malus de 2 ou être mise à terre.</p>
+                    <p><strong>Charge : </strong>Si le minotaure se déplace d'au moins 10 mètres en ligne droite vers une cible, puis la touche lors d'une attaque avec sa corne dans le même tour, l'attaque est considéré comme une charge et la cible doit réussir un jet de Vigueur ou d'Agilité avec un malus de 15 ou être mise à terre.</p>
                 </div>
                 <div class="bestiary_entity_part">
                     <img alt="minotaure" src="../../Images/Bestiary/Minotaure.png"/>
@@ -607,9 +619,236 @@
             <hr/>
         </div>
 
+        <h2 id="rodraki" onclick="hideContent(this)">Rodraki</h2>
+        <div class="hidden">
+            <p>Les Rodraki sont une création de Kuga, l'inkarnaï des maladies et de l'alchimie. Amusé par les créations sihirälls, il fut tenté d'ajouter une nouvelle origine bestiale dans le plan matériel mais ne souhaitant pas quitter son domaine, il s'y pris d'une tout autre manière. Kuga injecta une substance mutagène dont il a le secret dans de nombreuses colonies de rats, cette substance eu pour effet d'augmenter considérablement les facultés cognitives des rats jusqu'à les rendre semi-intelligents et leur à donné une apparence humanoïde.</p>
+            <p>Un rodrak est aussi haut qu'un Steinn mais d'une constitution bien plus frêle. Seuls, il ne représente pas une grande menace, mais lorsqu'ils se rassemblent, ils peuvent former un véritable raz-de-marée. Ce sont des êtres lâches et perfides, prêt à trahir leurs pairs pour survivre quelques instants de plus, ils se cachent dans des galeries souterraines creusées au plus près de la civilisation, vivants de rapines. Une cité peut en être infestée sans que ses habitants ne se doutent de leur présence.</p>
+
+            <h3 id="assassin_rodraki" onclick="hideContent(this)">Assassin Rodraki</h3>
+            <div class="hidden">
+                <div class="bestiary_entity">
+                    <div class="bestiary_entity_part">
+                        <p>Agissant depuis les ombres, un assassin rodrak est chargé d'éliminer les cibles pouvant nuire à la colonie rodraki dans la plus grande discrétion. Souvent chargé de surveiller les tunnels reliant leur territoire à la surface, il s'occupe des gardes des cités trop imprudents s'y aventurant.</p>
+                        <p>Un assassin fait aussi office d'espion à la solde de ses supérieurs, rapportant des informations sur les patrouilles des gardes de la surface, sur les lieux les plus propices à un assaut surprise ou même sur d'autres colonies rodraki.</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                            <tr><td>46</td> <td>74</td> <td>78</td> <td>38</td> <td>42</td> <td>36</td> <td>72</td> <td>33</td></tr>
+                            </tbody>
+                        </table>
+                        <hr/>
+                        <p><strong>Vitalité : </strong>6</p>
+                        <p><strong>Endurance : </strong>12</p>
+                        <p><strong>Protection : </strong>0</p>
+                        <p><strong>Vitesse : </strong>12m</p>
+                        <p><strong>Taille : </strong>Petite</p>
+                        <p><strong>Langages : </strong>Kugarite</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                            <tr><td>Épée courte</td> <td>58</td> <td>53</td> <td>1d6+1 P ou T</td></tr>
+                            <tr><td>Dague</td> <td>70</td> <td>26</td> <td>1d4+1 P ou T</td></tr>
+                            </tbody>
+                        </table>
+                        <hr/>
+                        <p><strong>Lames suintantes : </strong>Un assassin rodraki utilise divers poison pour rendre ses assaut plus mortels encore, une cible touchée par un assassin doit réussir un jet de Vigueur ou subir 1d4 de dégâts supplémentaires de poison.</p>
+                    </div>
+                    <div class="bestiary_entity_part">
+                        <img alt="" src="../../Images/Bestiary/Rodrak_assassin.png"/>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+
+            <h3 id="rodrak_esclave" onclick="hideContent(this)">Esclave Rodraki</h3>
+            <div class="hidden">
+                <div class="bestiary_entity">
+                    <div class="bestiary_entity_part">
+                        <p>La société rodraki ne fait preuve d'aucun scrupules ni de pitié, les individus les moins importants sont méprisés et maltraités. Ils sont alors considérés comme des esclaves, leurs vies ne valent rien, ils forment souvent la première ligne d'une invasion rodraki.</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                            <tr><td>40</td> <td>65</td> <td>65</td> <td>40</td> <td>35</td> <td>25</td> <td>70</td> <td>30</td></tr>
+                            </tbody>
+                        </table>
+                        <hr/>
+                        <p><strong>Vitalité : </strong>3</p>
+                        <p><strong>Endurance : </strong>6</p>
+                        <p><strong>Protection : </strong>0</p>
+                        <p><strong>Vitesse : </strong>10m</p>
+                        <p><strong>Taille : </strong>Petite</p>
+                        <p><strong>Langages : </strong>Kugarite</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                            <tr><td>Couteau</td> <td>50</td> <td>30</td> <td>1d4 T</td></tr>
+                            <tr><td>Griffes/Crocs</td> <td>55</td> <td>/</td> <td>1d4 P</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bestiary_entity_part">
+                        <img alt="Esclave Rodraki" src="../../Images/Bestiary/Rodrak_esclave.png"/>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+
+            <h3 id="rodrak_geant" onclick="hideContent(this)">Rodrak géant</h3>
+            <div class="hidden">
+                <div class="bestiary_entity">
+                    <div class="bestiary_entity_part">
+                        <p>Ces monstres de puissance sont le résultat d'expérimentations atroces sur le corps des rodraki. L'injection de Karnyx de Kuga dans un rodrak encore jeune provoque d'intense mutations corporelles développant considérablement sa taille et sa force physique au détriment de son intellect.</p>
+                        <p>Un Rodrak géant est plus grand qu'un homme lorsqu'il se tient debout, mais ces bêtes préfèrent se déplacer en s'appuyant sur leurs bras immenses. Les plus gros spécimens peuvent atteindre une masse de 850 kg.</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                            <tr><td>82</td> <td>34</td> <td>51</td> <td>62</td> <td>12</td> <td>18</td> <td>38</td> <td>/</td></tr>
+                            </tbody>
+                        </table>
+                        <hr/>
+                        <p><strong>Vitalité : </strong>25</p>
+                        <p><strong>Endurance : </strong>50</p>
+                        <p><strong>Protection : </strong>1<br/><i>Les rodraks géants ont une peau particulièrement épaisse</i></p>
+                        <p><strong>Vitesse : </strong>9m</p>
+                        <p><strong>Taille : </strong>Grande</p>
+                        <p><strong>Langages : </strong>Kugarite (ne peut pas parler)</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                            <tr><td>Poings</td> <td>58</td> <td>/</td> <td>1d8 C</td></tr>
+                            <tr><td>Crocs</td> <td>53</td> <td>/</td> <td>1d8 P</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bestiary_entity_part">
+                        <img alt="" src="../../Images/Bestiary/Rodrak_geant.png"/>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+
+            <h3 id="rodrak_guerrier" onclick="hideContent(this)">Guerrier Rodraki</h3>
+            <div class="hidden">
+                <div class="bestiary_entity">
+                    <div class="bestiary_entity_part">
+                        <p>Certains rodraki parviennent à prouver leur valeur au combat et deviennent des guerriers. Ils sont mieux équipés et mieux traités que les esclaves et n'hésitent pas à rappeler à ces derniers qu'ils sont désormais leurs supérieurs.</p>
+                        <p>Ce sont eux qui se chargent de maintenir l'ordre dans les colonies et de la protection des rodraki de rand plus élevés que le leur.</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                            <tr><td>52</td> <td>64</td> <td>62</td> <td>46</td> <td>35</td> <td>32</td> <td>70</td> <td>42</td></tr>
+                            </tbody>
+                        </table>
+                        <hr/>
+                        <p><strong>Vitalité : </strong>8</p>
+                        <p><strong>Endurance : </strong>15</p>
+                        <p><strong>Protection : </strong>2<br/><i>Leur armure est un assemblage de pièces assez efficace pour protéger son porteur</i></p>
+                        <p><strong>Vitesse : </strong>8m</p>
+                        <p><strong>Taille : </strong>Petite</p>
+                        <p><strong>Langages : </strong>Kugarite</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                            <tr><td>Fauchard</td> <td>59</td> <td>48</td> <td>1d8</td></tr>
+                            <tr><td>Épée courte</td> <td>55</td> <td>52</td> <td>1d6</td></tr>
+                            <tr><td>Rondache</td> <td>53</td> <td>64</td> <td>1d4</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bestiary_entity_part">
+                        <img alt="" src="../../Images/Bestiary/Rodrak_guerrier.png"/>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+
+            <h3 id="rodrak_ingenieur" onclick="hideContent(this)">Ingénieur Rodraki</h3>
+            <div class="hidden">
+                <div class="bestiary_entity">
+                    <div class="bestiary_entity_part">
+                        <p>Plus savants fous qu'ingénieurs, ils manient l'alchimie et la magie pour modifier tout un arsenal de machines meurtrières et en équiper ses troupes. Ils sont très friands des machines fabriquées par les Steinns, ils les étudient sous tout les angles pour en tirer des leçons et les appliquer sur leur propres créations.</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                            <tr><td>55</td> <td>73</td> <td>68</td> <td>56</td> <td>67</td> <td>52</td> <td>71</td> <td>56</td></tr>
+                            </tbody>
+                        </table>
+                        <hr/>
+                        <p><strong>Vitalité : </strong>10</p>
+                        <p><strong>Endurance : </strong>20</p>
+                        <p><strong>Protection : </strong>4<br/><i>Leur exosquelette accroit leur force physique et les protègent de tout assaut</i></p>
+                        <p><strong>Résistance(s) : </strong>Poison</p>
+                        <p><strong>Vitesse : </strong>9m</p>
+                        <p><strong>Taille : </strong>Petite</p>
+                        <p><strong>Langages : </strong>Kugarite</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                            <tr><td>Lance de Karnyx</td> <td>62</td> <td>53</td> <td>1d6+2</td></tr>
+                            </tbody>
+                        </table>
+                        <hr/>
+                        <p><strong>Éclair de Karnyx : </strong>Un puissant arc d'énergie magique corrosive projeté depuis un cristal logé dans l'armure de l'ingénieur infligeant 1d10 de dégâts d'acide à une cible. (Précision 55, portée 10/20m)</p>
+                        <p><strong>Gaz toxique : </strong>Contenu dans une petite fiole, ce gaz inflige 1d6 de dégâts par round à toute personne se trouvant dans un rayon de 3m de l'explosion de la fiole. le nuage de poison se dissipe dans l'air après une minute environ.</p>
+                    </div>
+                    <div class="bestiary_entity_part">
+                        <img alt="" src="../../Images/Bestiary/Rodrak_ingenieur.png"/>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+
+            <h3 id="rodrak_seigneur" onclick="hideContent(this)">Seigneur Rodraki</h3>
+            <div class="hidden">
+                <div class="bestiary_entity">
+                    <div class="bestiary_entity_part">
+                        <p>Ces chefs de guerre ont obtenu leur droit à régner en trahissant sans vergogne leur pairs, s'accaparant la gloire là où ils ont fuit comme des lâches. Ils sont la représentation parfaite de la société Rodraki : injuste et répugnante.</p>
+                        <p>Ils dirigent les colonies pendants de courte périodes étant donnés la fréquence à laquelle ils se font poignardés par un lieutenant venus prendre leur place. Ce sont eux qui décident où et quand sont menées les invasions sur la surface. Il arrive parfois que plusieurs seigneurs s'allient pour tenter une invasion sur une cité d'importance, bien que ces projets échouent souvent dans l'œuf pour cause de luttes internes.</p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
+                            <tr><td>62</td> <td>65</td> <td>48</td> <td>53</td> <td>45</td> <td>52</td> <td>70</td> <td>65</td></tr>
+                            </tbody>
+                        </table>
+                        <hr/>
+                        <p><strong>Vitalité : </strong>12</p>
+                        <p><strong>Endurance : </strong>25</p>
+                        <p><strong>Protection : </strong>4<br/><i>Ils sont les seuls à posséder une armure digne de ce nom dans les rangs rodraki</i></p>
+                        <p><strong>Vitesse : </strong>8m</p>
+                        <p><strong>Taille : </strong>Petite</p>
+                        <p><strong>Langages : </strong></p>
+                        <hr/>
+                        <table class="table_bestiary">
+                            <tbody>
+                            <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
+                            <tr><td>Hallebarde</td> <td>63</td> <td>52</td> <td>1d8+1</td></tr>
+                            <tr><td>Épée courte</td> <td>58</td> <td>54</td> <td>1d6+1</td></tr>
+                            <tr><td>Rondache</td> <td>55</td> <td>68</td> <td>1d4</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bestiary_entity_part">
+                        <img alt="" src="../../Images/Bestiary/Rodrak_seigneur.png"/>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+        </div>
+
         <h2 id="soldats" onclick="hideContent(this)">Soldats</h2>
         <div class="hidden">
-            <p>Les personnages présentés ci-dessous sont des archétypes pour de multiples races ou factions, il convient de leur ajouter leur bonus et traits raciaux. Il est également possible de modifier leur équipement.</p>
+            <p>Les personnages présentés ci-dessous sont des archétypes pour de multiples origines ou factions, il convient de leur ajouter leur bonus et traits raciaux. Il est également possible de modifier leur équipement.</p>
             <ul type="square">
 
                 <li><h3 id="cavalier" onclick="hideContent(this)">Cavalier</h3>
@@ -621,27 +860,28 @@
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                                    <tr><td>12</td> <td>12</td> <td>10</td> <td>10</td> <td>10</td> <td>10</td> <td>10</td> <td>12</td></tr>
+                                    <tr><td>60</td> <td>60</td> <td>50</td> <td>50</td> <td>50</td> <td>50</td> <td>50</td> <td>55</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
-                                <p><strong>Points de vie : </strong>20</p>
+                                <p><strong>Vitalité : </strong>10</p>
+                                <p><strong>Endurance : </strong>20</p>
                                 <p><strong>Protection : </strong>4<br/><i>Armure lourde composée d'une cotte de mailles, d'un casque, de jambières et solerets de métal.</i></p>
-                                <p><strong>Vitesse : </strong>20m</p>
+                                <p><strong>Vitesse : </strong>20m à cheval, 7m à pied</p>
                                 <p><strong>Taille : </strong>Grande</p>
-                                <p><strong>Langages : </strong>Selon race</p>
-                                <p><strong>Races applicables : </strong>Toutes (monture différente selon race)</p>
+                                <p><strong>Langages : </strong>Selon origine</p>
+                                <p><strong>Origines applicables : </strong>Toutes (monture différente selon origine)</p>
                                 <hr/>
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                                    <tr><td>Pique</td> <td>13</td> <td>/</td> <td>1d8+1 P</td></tr>
-                                    <tr><td>Épée longue</td> <td>13</td> <td>11</td> <td>1d6+1 P ou T</td></tr>
-                                    <tr><td>Bouclier</td> <td>10</td> <td>14</td> <td>1d6 NL</td></tr>
+                                    <tr><td>Pique</td> <td>60</td> <td>/</td> <td>1d8+1 P</td></tr>
+                                    <tr><td>Épée longue</td> <td>55</td> <td>55</td> <td>1d6+1 P ou T</td></tr>
+                                    <tr><td>Bouclier</td> <td>50</td> <td>70</td> <td>1d4 C</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
-                                <p><strong>Charge : </strong>Si le cavalier parcourt plus de 10m en ligne droite et frappe un adversaire avec sa pique, l'attaque est considéré comme une charge montée et la cible doit réussir un jet de Vigueur ou d'Agilité avec un malus de 2 ou être mise à terre.</p>
+                                <p><strong>Charge : </strong>Si le cavalier parcourt plus de 20m en ligne droite et frappe un adversaire avec sa pique, l'attaque est considéré comme une charge montée et la cible doit réussir un jet de Vigueur ou d'Agilité avec un malus de 10 ou être mise à terre.</p>
                             </div>
                             <div class="bestiary_entity_part">
                                 <img alt="" src="../../Images/Bestiary/Soldat_cavalier.png"/>
@@ -659,22 +899,23 @@
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                                    <tr><td>12</td> <td>12</td> <td>10</td> <td>12</td> <td>10</td> <td>10</td> <td>10</td> <td>10</td></tr>
+                                    <tr><td>60</td> <td>60</td> <td>50</td> <td>60</td> <td>50</td> <td>50</td> <td>50</td> <td>50</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
-                                <p><strong>Points de vie : </strong>25</p>
+                                <p><strong>Vitalité : </strong>12</p>
+                                <p><strong>Endurance : </strong>25</p>
                                 <p><strong>Protection : </strong>3<br/><i>Armure intermédiaire de cuir renforcé</i></p>
                                 <p><strong>Vitesse : </strong>8m</p>
                                 <p><strong>Taille : </strong>Moyenne</p>
-                                <p><strong>Langages : </strong>Selon la race</p>
-                                <p><strong>Races applicables : </strong>Toutes</p>
+                                <p><strong>Langages : </strong>Selon l'origine</p>
+                                <p><strong>Origines applicables : </strong>Toutes</p>
                                 <hr/>
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                                    <tr><td>Épée courte</td> <td>13</td> <td>11</td> <td>1d6+1 P ou T</td></tr>
-                                    <tr><td>Bouclier</td> <td>10</td> <td>15</td> <td>1d6 NL</td></tr>
+                                    <tr><td>Épée courte</td> <td>55</td> <td>55</td> <td>1d6+1 P ou T</td></tr>
+                                    <tr><td>Bouclier</td> <td>50</td> <td>70</td> <td>1d4 C</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
@@ -690,28 +931,29 @@
                     <div class="hidden">
                         <div class="bestiary_entity">
                             <div class="bestiary_entity_part">
-                                <p>Envoyés en avant pour sécuriser le passage du corps principal et recueillir des inforamtions, les éclaireurs sont aussi silencieux que mortels.</p>
+                                <p>Envoyés en avant pour sécuriser le passage du corps principal et recueillir des informations, les éclaireurs sont aussi silencieux que mortels.</p>
                                 <hr/>
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                                    <tr><td>10</td> <td>14</td> <td>12</td> <td>10</td> <td>10</td> <td>10</td> <td>12</td> <td>8</td></tr>
+                                    <tr><td>50</td> <td>70</td> <td>60</td> <td>50</td> <td>50</td> <td>50</td> <td>60</td> <td>40</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
-                                <p><strong>Points de vie : </strong>20</p>
+                                <p><strong>Vitalité : </strong>10</p>
+                                <p><strong>Endurance : </strong>20</p>
                                 <p><strong>Protection : </strong>1<br/><i>Armure légère de cuir</i></p>
                                 <p><strong>Vitesse : </strong>10m</p>
                                 <p><strong>Taille : </strong>Moyenne</p>
-                                <p><strong>Langages : </strong>Selon race</p>
-                                <p><strong>Races applicables : </strong>Toutes</p>
+                                <p><strong>Langages : </strong>Selon origine</p>
+                                <p><strong>Origines applicables : </strong>Toutes</p>
                                 <hr/>
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                                    <tr><td>Arc court</td> <td>16</td> <td>/</td> <td>1d8+1 P</td></tr>
-                                    <tr><td>Arbalète</td> <td>16</td> <td>/</td> <td>1d10</td></tr>
-                                    <tr><td>Épée courte</td> <td>12</td> <td>13</td> <td>1d6</td></tr>
+                                    <tr><td>Arc court</td> <td>65</td> <td>/</td> <td>1d8+1 P</td></tr>
+                                    <tr><td>Arbalète</td> <td>65</td> <td>/</td> <td>1d10+1</td></tr>
+                                    <tr><td>Épée courte</td> <td>55</td> <td>55</td> <td>1d6</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
@@ -732,23 +974,24 @@
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                                    <tr><td>12</td> <td>12</td> <td>10</td> <td>12</td> <td>10</td> <td>10</td> <td>10</td> <td>10</td></tr>
+                                    <tr><td>60</td> <td>60</td> <td>50</td> <td>60</td> <td>50</td> <td>50</td> <td>50</td> <td>50</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
-                                <p><strong>Points de vie : </strong>25</p>
+                                <p><strong>Vitalité : </strong>12</p>
+                                <p><strong>Endurance : </strong>25</p>
                                 <p><strong>Protection : </strong>3<br/><i>Armure intermédiaire de cuir renforcé</i></p>
                                 <p><strong>Vitesse : </strong>8m</p>
                                 <p><strong>Taille : </strong>Moyenne</p>
-                                <p><strong>Langages : </strong>Selon race</p>
-                                <p><strong>Races applicables : </strong>Toutes</p>
+                                <p><strong>Langages : </strong>Selon origine</p>
+                                <p><strong>Origines applicables : </strong>Toutes</p>
                                 <hr/>
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                                    <tr><td>Lance</td> <td>13</td> <td>11</td> <td>1d6 P</td></tr>
-                                    <tr><td>Pique</td> <td>12</td> <td>10</td> <td>1d8 P</td></tr>
-                                    <tr><td>Bouclier</td> <td>10</td> <td>15</td> <td>1d4 NL</td></tr>
+                                    <tr><td>Lance</td> <td>60</td> <td>50</td> <td>1d6 P</td></tr>
+                                    <tr><td>Bouclier</td> <td>10</td> <td>15</td> <td>1d4 C</td></tr>
+                                    <tr><td>Pique</td> <td>60</td> <td>50</td> <td>1d8 P</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
@@ -769,22 +1012,22 @@
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                                    <tr><td>10</td> <td>13</td> <td>10</td> <td>10</td> <td>15</td> <td>15</td> <td>10</td> <td>12</td></tr>
+                                    <tr><td>50</td> <td>65</td> <td>50</td> <td>50</td> <td>75</td> <td>75</td> <td>50</td> <td>60</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
-                                <p><strong>Points de vie : </strong>20</p>
+                                <p><strong>Vitalité : </strong>10</p>
+                                <p><strong>Endurance : </strong>20</p>
                                 <p><strong>Protection : </strong>3<br/><i>Leur tunique semble légère, mais elle est renforcée par magie.</i></p>
                                 <p><strong>Vitesse : </strong>9m</p>
                                 <p><strong>Taille : </strong>Moyenne</p>
-                                <p><strong>Langages : </strong>Selon race (2 langues)</p>
-                                <p><strong>Races applicables : </strong>Toutes (sauf Chonos)</p>
+                                <p><strong>Langages : </strong>Selon origine (2 langues)</p>
+                                <p><strong>Origines applicables : </strong>Toutes (sauf Chonos)</p>
                                 <hr/>
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                                    <tr><td>Épée longue</td> <td>14</td> <td>13</td> <td>1d6+2 P ou T</td></tr>
-                                    <tr><td>Rapière</td> <td>15</td> <td>12</td> <td>1d6+3 P</td></tr>
+                                    <tr><td>Rapière</td> <td>65</td> <td>50</td> <td>1d6+2 P</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
@@ -806,22 +1049,23 @@
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                                    <tr><td>14</td> <td>14</td> <td>10</td> <td>14</td> <td>10</td> <td>10</td> <td>10</td> <td>15</td></tr>
+                                    <tr><td>70</td> <td>70</td> <td>50</td> <td>70</td> <td>50</td> <td>50</td> <td>50</td> <td>75</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
-                                <p><strong>Points de vie : </strong>35</p>
+                                <p><strong>Vitalité : </strong>15</p>
+                                <p><strong>Endurance : </strong>30</p>
                                 <p><strong>Protection : </strong>5<br/><i>Armure lourde de métal</i></p>
                                 <p><strong>Vitesse : </strong>7m</p>
                                 <p><strong>Taille : </strong>Moyenne</p>
-                                <p><strong>Langages : </strong>Selon race</p>
-                                <p><strong>Races applicables : </strong>Toutes</p>
+                                <p><strong>Langages : </strong>Selon origine</p>
+                                <p><strong>Origines applicables : </strong>Toutes</p>
                                 <hr/>
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                                    <tr><td>Épée longue</td> <td>15</td> <td>14</td> <td>1d6+3 P ou T</td></tr>
-                                    <tr><td>Bouclier</td> <td>11</td> <td>16</td> <td>1d6 NL</td></tr>
+                                    <tr><td>Épée longue</td> <td>63</td> <td>58</td> <td>1d6+2 P ou T</td></tr>
+                                    <tr><td>Bouclier</td> <td>55</td> <td>75</td> <td>1d4 C</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
@@ -843,22 +1087,23 @@
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                                    <tr><td>15</td> <td>15</td> <td>12</td> <td>13</td> <td>14</td> <td>14</td> <td>13</td> <td>16</td></tr>
+                                    <tr><td>75</td> <td>75</td> <td>65</td> <td>65</td> <td>70</td> <td>70</td> <td>65</td> <td>80</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
-                                <p><strong>Points de vie : </strong>30</p>
+                                <p><strong>Vitalité : </strong>13</p>
+                                <p><strong>Endurance : </strong>26</p>
                                 <p><strong>Protection : </strong>6<br/><i>Armure lourde faite sur mesure pour chaque soldat</i></p>
                                 <p><strong>Vitesse : </strong>9m</p>
                                 <p><strong>Taille : </strong>Moyenne</p>
                                 <p><strong>Langages : </strong>Commun + 2 autres</p>
-                                <p><strong>Races applicables : </strong>Azumas</p>
+                                <p><strong>Origines applicables : </strong>Azumas</p>
                                 <hr/>
                                 <table class="table_bestiary">
                                     <tbody>
                                     <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                                    <tr><td>Katana</td> <td>16</td> <td>15</td> <td>1d6+3 P ou T</td></tr>
-                                    <tr><td>Wakizashi</td> <td>17</td> <td>12</td> <td>1d4+3 P ou T</td></tr>
+                                    <tr><td>Katana</td> <td>75</td> <td>70</td> <td>1d6+3 P ou T</td></tr>
+                                    <tr><td>Wakizashi</td> <td>85</td> <td>50</td> <td>1d4+3 P ou T</td></tr>
                                     </tbody>
                                 </table>
                                 <hr/>
@@ -884,9 +1129,9 @@
         <p>Les morts-vivants sont des créatures qui ont cessé de vivre et ont été animées par des forces spirituelles ou surnaturelles.</p>
     </div>
 
-    <h1 id="plantes" onclick="hideContent(this)">Plantes</h1>
+    <h1 id="plantoides" onclick="hideContent(this)">Plantoïdes</h1>
     <div>
-        <p>Les plantes ne sont pas de la flore ordinaire, ce sont des créatures végétales. La plupart d'entre elles peuvent se mouvoir et certaines sont carnivores.</p>
+        <p>Les plantoïdes ne sont pas de la flore ordinaire, ce sont des créatures végétales sentientes. La plupart d'entre elles peuvent se mouvoir et certaines sont carnivores.</p>
     </div>
 
     <h1 id="vermine" onclick="hideContent(this)">Vermine</h1>
@@ -897,33 +1142,35 @@
         <div class="hidden">
             <div class="bestiary_entity">
                 <div class="bestiary_entity_part">
-                    <p>Ces scarabés géants vivent dans des cavernes souterraines infestées de champignons toxiques. Leur carapace et leurs cornes sont recouverte de spores.</p>
-                    <p>Ce sont des animaux passifs tant qu'on ne vient pas les chercher dans leur tanière, ils se nourisent de petits mamifères et de racines.</p>
+                    <p>Ces scarabées géants vivent dans des cavernes souterraines infestées de champignons toxiques. Leur carapace et leurs cornes sont recouverte de spores.</p>
+                    <p>Ce sont des animaux passifs tant qu'on ne vient pas les chercher dans leur tanière, ils se nourrissent de petits mammifères et de racines.</p>
                     <hr/>
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>FOR</th><th>DEX</th><th>AGI</th><th>VIG</th><th>INT</th><th>VOL</th><th>PER</th><th>ELO</th></tr>
-                        <tr><td>17</td> <td>12</td> <td>10</td> <td>14</td> <td>2</td> <td>3</td> <td>7</td> <td>4</td></tr>
+                        <tr><td>74</td> <td>32</td> <td>43</td> <td>64</td> <td>12</td> <td>16</td> <td>38</td> <td>/</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Points de vie : </strong>30</p>
-                    <p><strong>Protection : </strong>5<br/><i>La carapace su skaratrok est aussi solide que le métal.</i></p>
-                    <p><strong>Résistances : </strong>Acide (Majeure)</p>
-                    <p><strong>Immunitées : </strong>Poison</p>
-                    <p><strong>Vitesse : </strong>9m qu'importe la surface</p>
+                    <p><strong>Vitalité : </strong>15</p>
+                    <p><strong>Endurance : </strong>30</p>
+                    <p><strong>Protection : </strong>5<br/><i>La carapace du scaratrok est aussi solide que le métal.</i></p>
+                    <p><strong>Résistances : </strong>Acide (Majeure), Poison</p>
+                    <p><strong>Immunités : </strong>Poison</p>
+                    <p><strong>Vitesse : </strong>9m</p>
                     <p><strong>Taille : </strong>Grande</p>
                     <p><strong>Langages : </strong>Aucun</p>
                     <hr/>
                     <table class="table_bestiary">
                         <tbody>
                         <tr><th>Arme</th><th>Attaque</th><th>Parade</th><th>Dégâts</th></tr>
-                        <tr><td>Cornes</td> <td>14</td> <td>8</td> <td>1d6+4</td></tr>
+                        <tr><td>Cornes</td> <td>62</td> <td>34</td> <td>1d6+3</td></tr>
                         </tbody>
                     </table>
                     <hr/>
-                    <p><strong>Poison : </strong>Une créature touchée par une des cornes du scaratrok doit réussir un jet de Vigueur (avec un malus de 4) ou subir 1d6 de dégâts de poison par tour pendant 5 tours. Une épreuve ratée peut être retentée tout les tours au prix d'une action simple.</p>
-                    <p><strong>Spores incapacitants : </strong>Un fois par jour, le scaratrok peut relâcher une nuée de spore sur toutes les créatures situées à moins de 5m de lui. Les créatures dans la zone doivent réussir un jet de Volonté (avec un malus de 4) ou être étourdies. Une épreuve ratée peut être retentée tout les tours au prix d'une action simple, le malus diminue de 1 à chaque tentative ratée.</p>
+                    <p><strong>Poison : </strong>Une créature touchée par une des cornes du scaratrok doit réussir un jet de Vigueur (avec un malus de 20) ou subir 1d6 de dégâts de poison par tour pendant 5 tours. Une épreuve ratée peut être retentée tout les tours au prix d'une action simple.</p>
+                    <p><strong>Spores incapacitants : </strong>Un fois par jour, le scaratrok peut relâcher une nuée de spore sur toutes les créatures situées à moins de 5m de lui. Les créatures dans la zone doivent réussir un jet de Volonté (avec un malus de 20) ou être étourdies. Une épreuve ratée peut être retentée tout les tours au prix d'une action simple, le malus diminue de 5 à chaque tentative ratée.</p>
+                    <p><strong>Escalade : </strong> Cette créature peut se déplacer à la moitié de sa vitesse sur n'importe quelle surface rocheuse qu'importe son inclinaison.</p>
                 </div>
                 <div class="bestiary_entity_part">
                     <img alt="" src="../../Images/Bestiary/Scaratrok.png"/>
