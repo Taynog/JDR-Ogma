@@ -120,12 +120,12 @@ caption{/*Affecte la classe caption*/
 }
 
 a {
-    color: darkblue;
+    color: mediumblue;
     text-decoration: none;
 }
 
 a:hover {
-    color: rebeccapurple; !important;
+    color: mediumpurple; !important;
 }
 
 .space_list>li {

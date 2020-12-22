@@ -22,6 +22,7 @@
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +59,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Data/Content/Collection" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -186,6 +187,14 @@
       <workItem from="1605714865863" duration="7330000" />
       <workItem from="1607096921286" duration="7970000" />
       <workItem from="1607165207916" duration="29196000" />
+      <workItem from="1607272434903" duration="657000" />
+      <workItem from="1607348645084" duration="598000" />
+      <workItem from="1607632508119" duration="1728000" />
+      <workItem from="1607717060983" duration="20000" />
+      <workItem from="1608148716587" duration="492000" />
+      <workItem from="1608304561470" duration="66723000" />
+      <workItem from="1608546976065" duration="32526000" />
+      <workItem from="1608626110433" duration="10430000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
@@ -205,15 +214,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="maj armures" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="256" y="97" key="SettingsEditor" timestamp="1607182817373">
+    <state x="256" y="97" key="SettingsEditor" timestamp="1608467528311">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="190" y="81" key="SettingsEditor/-1280.0.1218.1024/0.0.1378.900@0.0.1378.900" timestamp="1599828599792" />
-    <state x="256" y="97" key="SettingsEditor/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1607182817373" />
-    <state x="636" y="96" width="706" height="888" key="find.popup" timestamp="1607179664081">
+    <state x="256" y="97" key="SettingsEditor/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1608467528311" />
+    <state x="636" y="96" width="706" height="888" key="find.popup" timestamp="1607272665485">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="636" y="96" width="706" height="888" key="find.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1607179664081" />
+    <state x="636" y="96" width="706" height="888" key="find.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1607272665485" />
     <state x="592" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1607205337311">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
