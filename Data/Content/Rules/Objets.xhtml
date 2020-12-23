@@ -50,28 +50,26 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#resolution_action">Résolution des actions</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Combat">Combat</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Magie">Magie</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Survie">Survie</a></span></li>
-                    </ul></li>
-
+                <li><span class="little"><a href="../Rules/Rules.xhtml#resolution_action">Résolution des actions</a></span></li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Rules.xhtml#table_origine">Origine</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Jauges">Jauges</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Attributs">Attributs</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Competences">Compétences</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#traits_perso">Traits de personnage</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#faveur_tychi">Faveurs de Tychi</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#richesse_depart">Richesse de départ</a></span></li>
                     </ul></li>
+                <li><span class="little"><a href="../Rules/Rules.xhtml#Magie">Magie</a></span></li>
+                <li><span class="little"><a href="../Rules/Rules.xhtml#Combat">Combat</a></span></li>
+                <li><span class="little"><a href="../Rules/Rules.xhtml#Survie">Survie</a></span></li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Rules.xhtml#rupture">Rupture</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Armes">Armes</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Armures">Armures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#boucliers">Boucliers</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#materiel">Matériel</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
@@ -91,9 +89,8 @@
                                 <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
                             </ul></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#arts_du_combat">Arts du combat</a></span> </li>
-
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -106,8 +103,6 @@
                         <li><span class="little"><a href="../Rules/Objets.xhtml#monnaie">Monnaie et conversions</a></span></li>
                         <li><span class="sous-dossier" onclick="hideContent(this)">Objets</span>
                             <ul class="hidden">
-                                <li><span class="little"><a href="../Rules/Objets.xhtml#armes">Armes</a></span></li>
-                                <li><span class="little"><a href="../Rules/Objets.xhtml#armures">Armures</a></span></li>
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#contenants">Contenants</a></span></li>
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#materiel_aventurier">Matériel</a></span></li>
                             </ul></li>
@@ -115,6 +110,7 @@
                             <ul class="hidden">
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#taverne">Taverne</a></span></li>
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#transports">Transports</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#montures">Montures</a></span></li>
                             </ul></li>
                     </ul></li>
             </ul>
@@ -123,8 +119,8 @@
     </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
-    <h1>Listes d'objets</h1>
-    <h2 id="monnaie" onclick="hideContent(this)">Monnaie et conversions</h2>
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
+    <h1 id="monnaie" onclick="hideContent(this)">Monnaie et conversions</h1>
     <div>
         <table class="table_horizontal">
             <tbody>
@@ -167,407 +163,11 @@
             </tbody>
         </table>
     </div>
-    <h2 id="armes" onclick="hideContent(this)">Armes</h2>
-    <div>
-        <table width="95%">
-            <thead>
-            <tr>
-                <th>Catégorie</th>
-                <th>Arme</th>
-                <th>Valeur</th>
-                <th>Poids</th>
-                <th>Arme</th>
-                <th>Valeur</th>
-                <th>Poids</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th rowspan="7">Armes à une main</th>
-            </tr>
-            <tr>
-                <td>Dague</td>
-                <td>20 pa</td>
-                <td>500 g</td>
-                <td>Épée courte</td>
-                <td>50 pa</td>
-                <td>1 kg</td>
-            </tr>
-            <tr>
-                <td>Épée courbe</td>
-                <td>65 pa</td>
-                <td>1 kg</td>
-                <td>Épée longue</td>
-                <td>75 pa</td>
-                <td>1,5 kg</td>
-            </tr>
-            <tr>
-                <td>Rapière</td>
-                <td>70 pa</td>
-                <td>1 kg</td>
-                <td>Katanas</td>
-                <td>75 pa</td>
-                <td>1,2 kg</td>
-            </tr>
-            <tr>
-                <td>Hache</td>
-                <td>30 pa</td>
-                <td>1,5 kg</td>
-                <td>Masse</td>
-                <td>35 pa</td>
-                <td>2 kg</td>
-            </tr>
-            <tr>
-                <td>Lance</td>
-                <td>30 pa</td>
-                <td>2 kg</td>
-                <td>Faucille</td>
-                <td>30 pa</td>
-                <td>500 g</td>
-            </tr>
-            <tr>
-                <td>Pic de guerre</td>
-                <td>45 pa</td>
-                <td>1 kg</td>
-                <td>Fouet</td>
-                <td>20 pa</td>
-                <td>500 g</td>
-            </tr>
-            <tr>
-                <th rowspan="4">Armes à deux mains</th>
-            </tr>
-            <tr>
-                <td>Grande épée droite</td>
-                <td>15 po</td>
-                <td>3 kg</td>
-                <td>Grande épée courbe</td>
-                <td>18 po</td>
-                <td>3 kg</td>
-            </tr>
-            <tr>
-                <td>Grande hache</td>
-                <td>12 po</td>
-                <td>2,5 kg</td>
-                <td>Grand marteau</td>
-                <td>12 po</td>
-                <td>5 kg</td>
-            </tr>
-            <tr>
-                <td>Bâton</td>
-                <td>5 pc</td>
-                <td>1 kg</td>
-                <td>Faux</td>
-                <td>50 pa</td>
-                <td>2 kg</td>
-            </tr>
-            <tr>
-                <th rowspan="3">Armes d'hast</th>
-            </tr>
-            <tr>
-                <td>Pique</td>
-                <td>50 pa</td>
-                <td>2 kg</td>
-                <td>Hallebarde</td>
-                <td>15 po</td>
-                <td>3 kg</td>
-            </tr>
-            <tr>
-                <td>Fauchard</td>
-                <td>12 po</td>
-                <td>2,5 kg</td>
-                <td colspan="3"/>
-            </tr>
-            <tr>
-                <th rowspan="3">Armes de lancer</th>
-            </tr>
-            <tr>
-                <td>Couteaux</td>
-                <td>5 pa</td>
-                <td>250 g</td>
-                <td>Hachette</td>
-                <td>8 pa</td>
-                <td>500 g</td>
-            </tr>
-            <tr>
-                <td>Javelot</td>
-                <td>8 pa</td>
-                <td>500 g</td>
-                <td>Fléchette</td>
-                <td>5 pc</td>
-                <td>100 g</td>
-            </tr>
-            <tr>
-                <th rowspan="4">Armes à distance</th>
-            </tr>
-            <tr>
-                <td>Fronde</td>
-                <td>1 pa</td>
-                <td>250 g</td>
-                <td>Arc court</td>
-                <td>35 pa</td>
-                <td>1 kg</td>
-            </tr>
-            <tr>
-                <td>Arc long</td>
-                <td>75 pa</td>
-                <td>1,5 kg</td>
-                <td>Arbalète</td>
-                <td>50 pa</td>
-                <td>2 kg</td>
-            </tr>
-            <tr>
-                <td>Arbalète lourde</td>
-                <td>15 po</td>
-                <td>6 kg</td>
-                <td>Arbalète à main</td>
-                <td>80 pa</td>
-                <td>1 kg</td>
-            </tr>
-            <tr>
-                <th rowspan="6">Armes à feu</th>
-            </tr>
-            <tr>
-                <td>Pistolet de poche</td>
-                <td>20 po</td>
-                <td>500 g</td>
-                <td>Pistolet à silex</td>
-                <td>25 po</td>
-                <td>1,5 kg</td>
-            </tr>
-            <tr>
-                <td>Pistolet à double canon</td>
-                <td>30 po</td>
-                <td>2 kg</td>
-                <td>Poivrière</td>
-                <td>40 po</td>
-                <td>3 kg</td>
-            </tr>
-            <tr>
-                <td>Pétoire</td>
-                <td>25 po</td>
-                <td>1,5 kg</td>
-                <td>Targe pistolet</td>
-                <td>25 po</td>
-                <td>3 kg</td>
-            </tr>
-            <tr>
-                <td>Mousquet</td>
-                <td>50 po</td>
-                <td>3 kg</td>
-                <td>Mousquet à double canon</td>
-                <td>60 po</td>
-                <td>4 kg</td>
-            </tr>
-            <tr>
-                <td>Tromblon</td>
-                <td>40 po</td>
-                <td>3 kg</td>
-                <td colspan="3"/>
-            </tr>
-            <tr>
-                <th rowspan="6">Boucliers</th>
-            </tr>
-            <tr>
-                <td>Bocle</td>
-                <td>10 pa</td>
-                <td>500 g</td>
-                <td>Rondache</td>
-                <td>5 pa</td>
-                <td>1 kg</td>
-            </tr>
-            <tr>
-                <td>Targe</td>
-                <td>10 pa</td>
-                <td>500g</td>
-                <td colspan="3"/>
-            </tr>
-            <tr>
-                <td>Écu</td>
-                <td>20 pa</td>
-                <td>3 kg</td>
-                <td>Parma</td>
-                <td>15 pa</td>
-                <td>2 kg</td>
-            </tr>
-            <tr>
-                <td>Bouclier Viking</td>
-                <td>25 pa</td>
-                <td>5 kg</td>
-                <td>Bouclier en amande</td>
-                <td>20 pa</td>
-                <td>2,5 kg</td>
-            </tr>
-            <tr>
-                <td>Pavois</td>
-                <td>25 pa</td>
-                <td>8 kg</td>
-                <td>Égide</td>
-                <td>30 pa</td>
-                <td>10 kg</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
 
-    <h2 id="armures" onclick="hideContent(this)">Armures</h2>
+    <h1 id="contenants"  onclick="hideContent(this)">Contenants</h1>
     <div>
-        <table width="95%">
-            <thead>
-            <tr>
-                <th>Catégorie</th>
-                <th>Armure</th>
-                <th>Valeur</th>
-                <th>Poids</th>
-                <th>Armure</th>
-                <th>Valeur</th>
-                <th>Poids</th>
-            </tr>
-            </thead>
+        <table class="table_horizontal">
             <tbody>
-            <tr>
-                <th rowspan="4">Plastron</th>
-            </tr>
-            <tr>
-                <td>Plastron de cuir</td>
-                <td>50 pa</td>
-                <td>3 kg</td>
-                <td>Plastron de cuir renforcé de métal</td>
-                <td>10 po</td>
-                <td>3,5 kg</td>
-            </tr>
-            <tr>
-                <td>Plastron d'écailles</td>
-                <td>30 po</td>
-                <td>5 kg</td>
-                <td>Plastron de bois</td>
-                <td>45 pa</td>
-                <td>5 kg</td>
-            </tr>
-            <tr>
-                <td>Plastron lamellaire</td>
-                <td>40 po</td>
-                <td>6 kg</td>
-                <td>Plastron de métal</td>
-                <td>50 po</td>
-                <td>8 kg</td>
-            </tr>
-            <tr>
-                <th rowspan="3">Vestes</th>
-            </tr>
-            <tr>
-                <td>Veste en toile renforcé</td>
-                <td>35 pa</td>
-                <td>2 kg</td>
-                <td>Veste en peaux</td>
-                <td>40 pa</td>
-                <td>2,5 kg</td>
-            </tr>
-            <tr>
-                <td>Gambison rembourré</td>
-                <td>50 pa</td>
-                <td>3 kg</td>
-                <td colspan="3"/>
-            </tr>
-            <tr>
-                <th rowspan="3">Cottes de mailles</th>
-            </tr>
-            <tr>
-                <td>Cotte de mailles sans manches</td>
-                <td>30 po</td>
-                <td>8 kg</td>
-                <td>Cotte de mailles avec manches</td>
-                <td>35 po</td>
-                <td>10 kg</td>
-            </tr>
-            <tr>
-                <td>Cotte de mailles de qualité</td>
-                <td>50 po</td>
-                <td>10 kg</td>
-                <td colspan="3"/>
-            </tr>
-            <tr>
-                <th rowspan="3">Casques</th>
-            </tr>
-            <tr>
-                <td>Casque de cuir</td>
-                <td>30 pa</td>
-                <td>1 kg</td>
-                <td>Casque de métal</td>
-                <td>10 po</td>
-                <td>1,5 kg</td>
-            </tr>
-            <tr>
-                <td>Heaume de métal</td>
-                <td>25 po</td>
-                <td>2,5 kg</td>
-                <td colspan="3"/>
-            </tr>
-            <tr>
-                <th rowspan="2">Jambières</th>
-            </tr>
-            <tr>
-                <td>Jambières de cuir</td>
-                <td>35 pa</td>
-                <td>2 kg</td>
-                <td>Jambières de métal</td>
-                <td>85 pa</td>
-                <td>2,5 kg</td>
-            </tr>
-            <tr>
-                <th rowspan="3">Brassards et spallières</th>
-            </tr>
-            <tr>
-                <td>Brassards de cuir</td>
-                <td>15 pa</td>
-                <td>500 g</td>
-                <td>Spallières de cuir</td>
-                <td>20 pa</td>
-                <td>500 g</td>
-            </tr>
-            <tr>
-                <td>Spallières de métal</td>
-                <td>80 pa</td>
-                <td>1 kg</td>
-                <td>Brassards et cubitières de métal</td>
-                <td>70 pa</td>
-                <td>1,5 kg</td>
-            </tr>
-            <tr>
-                <th rowspan="3">Gantelets</th>
-            </tr>
-            <tr>
-                <td>Gants de cuir</td>
-                <td>20 pa</td>
-                <td>500 g</td>
-                <td>Gantelets de cuir renforcé de métal</td>
-                <td>50 pa</td>
-                <td>750 g</td>
-            </tr>
-            <tr>
-                <td>Gantelets complets de métal</td>
-                <td>12 po</td>
-                <td>1 kg</td>
-                <td colspan="3"/>
-            </tr>
-            <tr>
-                <th rowspan="2">Bottes</th>
-            </tr>
-            <tr>
-                <td>Bottes de cuir renforcées</td>
-                <td>50 pa</td>
-                <td>1 kg</td>
-                <td>Solerets de métal</td>
-                <td>10 po</td>
-                <td>1 kg</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <h2 id="contenants"  onclick="hideContent(this)">Contenants</h2>
-    <div>
-        <table width="95%">
-            <thead>
             <tr>
                 <th>Contenant</th>
                 <th>Poids (vide)</th>
@@ -576,8 +176,6 @@
                 <th>Poids (vide)</th>
                 <th>Capacité</th>
             </tr>
-            </thead>
-            <tbody>
             <tr>
                 <td>Bouteille</td>
                 <td>250 g</td>
@@ -665,12 +263,10 @@
         </table>
     </div>
 
-
-
-    <h2 id="materiel_aventurier" onclick="hideContent(this)">Équipement d'aventurier</h2>
+    <h1 id="materiel_aventurier" onclick="hideContent(this)">Équipement d'aventurier</h1>
     <div>
-        <table width="95%">
-            <thead>
+        <table class="table_horizontal">
+            <tbody>
             <tr>
                 <th>Catégorie</th>
                 <th>Objet</th>
@@ -680,8 +276,6 @@
                 <th>Prix</th>
                 <th>Poids</th>
             </tr>
-            </thead>
-            <tbody>
             <tr>
                 <th rowspan="4">Campement</th>
             </tr>
@@ -989,7 +583,7 @@
         </table>
         <h3 onclick="hideContent(this)">Description et règles spéciales des objets</h3>
         <div class="hidden">
-            <p><strong>Acide</strong>. Au prix d'une action, vous pouvez lancer le contenu de ce flacon sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, le brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet. En cas de succès, la cible reçoit 2d6 dégâts d'acide.</p>
+            <p><strong>Acide</strong>. Au prix d'une action, vous pouvez verser le contenu de ce flacon sur une créature à 1 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, le brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet. En cas de succès, la cible reçoit 2d6 dégâts d'acide.</p>
             <p><strong>Antidote</strong>. Une créature qui boit cette fiole gagne un bonus de 5 aux jets de sauvegarde contre le poison pendant 1 heure. Il ne confère aucun avantage aux morts-vivants et aux créatures artificielles.</p>
             <p><strong>Balance de marchand</strong>. Cela comprend une petite balance, des plateaux et un assortiment de poids approprié jusqu'à 1 kg. Avec, vous pouvez mesurer le poids exact de petits objets, tels que des métaux précieux ou des biens commerciaux, pour aider à déterminer leur valeur.</p>
             <p><strong>Bélier portatif</strong>. Vous pouvez utiliser un bélier portatif pour enfoncer des portes. Ce faisant, vous gagnez un bonus de +4 au jet de Force. Un autre personnage peut vous aider à utiliser le bélier, ce qui vous donne un avantage à ce jet.</p>
@@ -1023,11 +617,10 @@
         </div>
     </div>
 
-    <h1>Listes de services</h1>
-    <h2 id="taverne" onclick="hideContent(this)">Taverne</h2>
+    <h1 id="taverne" onclick="hideContent(this)">Taverne</h1>
     <div>
-        <table width="95%">
-            <thead>
+        <table class="table_horizontal">
+            <tbody>
             <tr>
                 <th>Catégorie</th>
                 <th>Service</th>
@@ -1035,8 +628,6 @@
                 <th>Service</th>
                 <th>Prix</th>
             </tr>
-            </thead>
-            <tbody>
             <tr>
                 <th colspan="5">Repas</th>
             </tr>
@@ -1235,46 +826,17 @@
         </table>
     </div>
 
-    <h2 id="transports" onclick="hideContent(this)">Transports</h2>
+    <h1 id="transports" onclick="hideContent(this)">Transports</h1>
     <div>
-        <table width="95%">
-            <thead>
-            <tr>
-                <th>Type</th>
-                <th>Prix</th>
-                <th>Distance/jour</th>
-                <th>Type</th>
-                <th>Prix</th>
-                <th>Distance/jour</th>
-            </tr>
-            </thead>
+        <table class="table_horizontal">
             <tbody>
             <tr>
-                <th colspan="6">Montures</th>
-            </tr>
-            <tr>
-                <td>Cheval de trait</td>
-                <td>50 po</td>
-                <td>50 km</td>
-                <td>Cheval de course</td>
-                <td>80 po</td>
-                <td>60 km</td>
-            </tr>
-            <tr>
-                <td>Cheval de guerre</td>
-                <td>120 po</td>
-                <td>60 km</td>
-                <td>Dromadaire</td>
-                <td>35 po</td>
-                <td>50 km</td>
-            </tr>
-            <tr>
-                <td>Chameau</td>
-                <td>35 po</td>
-                <td>50 km</td>
-                <td>Âne</td>
-                <td>25 po</td>
-                <td>40 km</td>
+                <th>Type</th>
+                <th>Prix</th>
+                <th>Distance/jour</th>
+                <th>Type</th>
+                <th>Prix</th>
+                <th>Distance/jour</th>
             </tr>
             <tr>
                 <th colspan="6">Voyage terrestre</th>
@@ -1330,6 +892,63 @@
                 <td>1 pa/personne/jour</td>
                 <td>120 km</td>
                 <td colspan="3"/>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h1 id="montures" onclick="hideContent(this)">Montures</h1>
+    <div>
+        <table class="table_horizontal">
+            <tbody>
+            <tr>
+                <th>Type</th>
+                <th>Vitesse</th>
+                <th>Distance maximale parcourue par jour</th>
+                <th>Capacité de port</th>
+                <th>Prix</th>
+            </tr>
+            <tr>
+                <td>Cheval de trait</td>
+                <td>12</td>
+                <td>50 km</td>
+                <td>50</td>
+                <td>50 po</td>
+            </tr>
+            <tr>
+                <td>Cheval de course</td>
+                <td>18</td>
+                <td>60 km</td>
+                <td>30</td>
+                <td>80 po</td>
+            </tr>
+            <tr>
+                <td>Cheval de guerre</td>
+                <td>18</td>
+                <td>80 km</td>
+                <td>40</td>
+                <td>120 po</td>
+            </tr>
+            <tr>
+                <td>Dromadaire</td>
+                <td>12</td>
+                <td>60 km</td>
+                <td>40</td>
+                <td>35 po</td>
+            </tr>
+            <tr>
+                <td>Chameau</td>
+                <td>12</td>
+                <td>50 km</td>
+                <td>35</td>
+                <td>35 po</td>
+            </tr>
+            <tr>
+                <td>Âne</td>
+                <td>10</td>
+                <td>40 km</td>
+                <td>20</td>
+                <td>25 po</td>
             </tr>
             </tbody>
         </table>

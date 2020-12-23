@@ -50,28 +50,26 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#resolution_action">Résolution des actions</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Combat">Combat</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Magie">Magie</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Survie">Survie</a></span></li>
-                    </ul></li>
-
+                <li><span class="little"><a href="../Rules/Rules.xhtml#resolution_action">Résolution des actions</a></span></li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Rules.xhtml#table_origine">Origine</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Jauges">Jauges</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Attributs">Attributs</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Competences">Compétences</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#traits_perso">Traits de personnage</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#faveur_tychi">Faveurs de Tychi</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#richesse_depart">Richesse de départ</a></span></li>
                     </ul></li>
+                <li><span class="little"><a href="../Rules/Rules.xhtml#Magie">Magie</a></span></li>
+                <li><span class="little"><a href="../Rules/Rules.xhtml#Combat">Combat</a></span></li>
+                <li><span class="little"><a href="../Rules/Rules.xhtml#Survie">Survie</a></span></li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Rules.xhtml#rupture">Rupture</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Armes">Armes</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Armures">Armures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#boucliers">Boucliers</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#materiel">Matériel</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
@@ -91,9 +89,8 @@
                                 <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
                             </ul></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#arts_du_combat">Arts du combat</a></span> </li>
-
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -106,8 +103,6 @@
                         <li><span class="little"><a href="../Rules/Objets.xhtml#monnaie">Monnaie et conversions</a></span></li>
                         <li><span class="sous-dossier" onclick="hideContent(this)">Objets</span>
                             <ul class="hidden">
-                                <li><span class="little"><a href="../Rules/Objets.xhtml#armes">Armes</a></span></li>
-                                <li><span class="little"><a href="../Rules/Objets.xhtml#armures">Armures</a></span></li>
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#contenants">Contenants</a></span></li>
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#materiel_aventurier">Matériel</a></span></li>
                             </ul></li>
@@ -115,6 +110,7 @@
                             <ul class="hidden">
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#taverne">Taverne</a></span></li>
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#transports">Transports</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#montures">Montures</a></span></li>
                             </ul></li>
                     </ul></li>
             </ul>
@@ -123,6 +119,7 @@
     </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1 id="etats_prejudiciables" onclick="hideContent(this)">États préjudiciables</h1>
     <div>
         <p>Si plus d’un état préjudiciable affecte le personnage, appliquez-en tous les effets. Si les effets ne peuvent se combiner, appliquez les plus handicapants.</p>
@@ -131,6 +128,7 @@
         <div>
             <p>Le personnage se trouve étendu sur le sol. Il subit un malus de -20 à tous ses jets de combat et se déplacer coûte le double de mouvement.</p>
             <p>Se coucher au sol ne coûte rien mais se relever coûte la moitié de la vitesse du personnage et provoque une attaque d’opportunité.</p>
+            <p>L'armure des personnages dans cette position est réduite d'un cran : les zones protégées par de l'armure intégrale comptent comme protégées par de l'armure partielle et celle protégées par de l'armure partielle compte comme non-protégées.</p>
         </div>
 
         <h3 id="assourdi" onclick="hideContent(this)">Assourdi</h3>
@@ -172,12 +170,12 @@
 
         <h3 id="etourdi" onclick="hideContent(this)">Étourdi</h3>
         <div>
-            <p>Un personnage étourdi laisse tomber ce qu’il avait en main, ne peut intenter aucune action, subit un malus de -2 à l'esquive et à la parade. Les attaquants reçoivent un bonus à l'attaque de +4 lorsqu'ils tentent une manoeuvre de combat contre un ennemi étourdi.</p>
+            <p>Un personnage étourdi laisse tomber ce qu’il avait en main, ne peut intenter aucune action, il est sans défense durant tout cette pédiode.</p>
         </div>
 
         <h3 id="fascine" onclick="hideContent(this)">Fasciné</h3>
         <div>
-            <p>Une créature est fascinée par un sort ou un effet surnaturel. Tant que l’effet reste en place, une créature fascinée reste assise ou debout, dans l’incapacité d’effectuer d’autre action que se concentrer sur l’effet en question. Elle reçoit un malus de -4 sur tout les jets. L’arrivée d’une menace potentielle (comme une créature hostile) donne droit à un nouveau jet de sauvegarde contre l’effet de fascination. Toute menace évidente, comme dégainer une arme, lancer un sort ou tirer sur la créature, rompt immédiatement l’effet de fascination. Pour 1 PA, il est possible de secouer une créature fascinée pour lui faire reprendre ses esprits.</p>
+            <p>Une créature est fascinée par un sort ou un effet surnaturel. Tant que l’effet reste en place, une créature fascinée reste assise ou debout, dans l’incapacité d’effectuer d’autre action que se concentrer sur l’effet en question. Elle reçoit un malus de -20 sur tout les jets. L’arrivée d’une menace potentielle (comme une créature hostile) donne droit à un nouveau jet pour contrer l’effet de fascination. Toute menace évidente, comme dégainer une arme, lancer un sort ou tirer sur la créature, rompt immédiatement l’effet de fascination. Pour 1 PA, il est possible de secouer une créature fascinée pour lui faire reprendre ses esprits.</p>
         </div>
 
         <h3 id="fatigue" onclick="hideContent(this)">Fatigué</h3>

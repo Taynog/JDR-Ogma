@@ -22,7 +22,6 @@
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,6 +194,8 @@
       <workItem from="1608304561470" duration="66723000" />
       <workItem from="1608546976065" duration="32526000" />
       <workItem from="1608626110433" duration="10430000" />
+      <workItem from="1608647671670" duration="19499000" />
+      <workItem from="1608716031222" duration="16860000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
@@ -217,12 +218,11 @@
     <state x="256" y="97" key="SettingsEditor" timestamp="1608467528311">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="190" y="81" key="SettingsEditor/-1280.0.1218.1024/0.0.1378.900@0.0.1378.900" timestamp="1599828599792" />
     <state x="256" y="97" key="SettingsEditor/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1608467528311" />
-    <state x="636" y="96" width="706" height="888" key="find.popup" timestamp="1607272665485">
+    <state x="636" y="96" width="706" height="888" key="find.popup" timestamp="1608746376109">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="636" y="96" width="706" height="888" key="find.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1607272665485" />
+    <state x="636" y="96" width="706" height="888" key="find.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1608746376109" />
     <state x="592" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1607205337311">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>

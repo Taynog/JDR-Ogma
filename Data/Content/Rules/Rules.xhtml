@@ -50,28 +50,26 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="sous-dossier" onclick="hideContent(this)">Règles</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#resolution_action">Résolution des actions</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Combat">Combat</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Magie">Magie</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Survie">Survie</a></span></li>
-                    </ul></li>
-
+                <li><span class="little"><a href="../Rules/Rules.xhtml#resolution_action">Résolution des actions</a></span></li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Personnage</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Rules.xhtml#table_origine">Origine</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Caracteristiques">Caractéristiques</a></span></li>
-                        <li><span class="little"><a href="../Rules/Rules.xhtml#Jauges">Jauges</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#Attributs">Attributs</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Competences">Compétences</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#traits_perso">Traits de personnage</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#faveur_tychi">Faveurs de Tychi</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#richesse_depart">Richesse de départ</a></span></li>
                     </ul></li>
+                <li><span class="little"><a href="../Rules/Rules.xhtml#Magie">Magie</a></span></li>
+                <li><span class="little"><a href="../Rules/Rules.xhtml#Combat">Combat</a></span></li>
+                <li><span class="little"><a href="../Rules/Rules.xhtml#Survie">Survie</a></span></li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Rules.xhtml#rupture">Rupture</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Armes">Armes</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#Armures">Armures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#boucliers">Boucliers</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#materiel">Matériel</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
@@ -91,9 +89,8 @@
                                 <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
                             </ul></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#arts_du_combat">Arts du combat</a></span> </li>
-
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -106,8 +103,6 @@
                         <li><span class="little"><a href="../Rules/Objets.xhtml#monnaie">Monnaie et conversions</a></span></li>
                         <li><span class="sous-dossier" onclick="hideContent(this)">Objets</span>
                             <ul class="hidden">
-                                <li><span class="little"><a href="../Rules/Objets.xhtml#armes">Armes</a></span></li>
-                                <li><span class="little"><a href="../Rules/Objets.xhtml#armures">Armures</a></span></li>
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#contenants">Contenants</a></span></li>
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#materiel_aventurier">Matériel</a></span></li>
                             </ul></li>
@@ -115,6 +110,7 @@
                             <ul class="hidden">
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#taverne">Taverne</a></span></li>
                                 <li><span class="little"><a href="../Rules/Objets.xhtml#transports">Transports</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#montures">Montures</a></span></li>
                             </ul></li>
                     </ul></li>
             </ul>
@@ -217,7 +213,6 @@
         <h1 id="creation_perso" onclick="hideContent(this)">Création de Personnage</h1>
         <div>
             <p>La création d'un avatar est la première étape à franchir avant de se lancer dans une aventure, et peut être la plus importante. À moins que l'aventure que vous vous apprêtez à vivre n'impose des personnages pré-tirés, il est fortement conseillé de personnaliser au mieux son avatar en suivant ce guide afin de l'incarner au mieux.</p>
-            <p>Vous pouvez disposez d'un fiche de personnage en version <a href="../../Downloads/Fiche%20Perso%20Ogma%20imprimable.pdf">imprimable</a> à remplir à la main ou <a href="../../Downloads/Fiche%20perso%20Ogma%20numérique.pdf">numérique</a> à remplir sur ordinateur.</p>
             <h2 id="table_origine" onclick="hideContent(this)">Origine</h2>
             <div>
                 <p>Première étape de la création de son personnage : Choisir son origine. Il existe de nombreuses origines possibles dans le monde d'Ogma, si vous ne les connaissez pas encore retournez à l'<a href="../../../index.xhtml">accueil</a> pour les découvrir.</p>
@@ -225,65 +220,65 @@
                     <tbody>
                     <tr>
                         <th colspan="2">Origine</th>
-                        <th>Traits raciaux</th>
+                        <th>Traits d'origine</th>
                     </tr>
                     <tr>
                         <th colspan="2">Azuma</th>
-                        <td><span class="big_underline">Diplômé de l'Académie :</span> INT + 10 aux épreuves de connaissances<br/><span class="big_underline">Aisance avec la magie :</span> Peut relancer un jet raté pour un sort une fois par jour</td>
+                        <td><strong>Diplômé de l'Académie :</strong> INT + 10 aux épreuves de connaissances<br/><strong>Aisance avec la magie :</strong> Peut relancer un jet raté pour un sort une fois par jour</td>
                     </tr>
                     <tr>
                         <th colspan="2">Chono</th>
-                        <td><span class="big_underline">Rage Primordiale :</span> Jet de sauvegarde (VOL) si touché par un effet magique</td>
+                        <td><strong>Rage Primordiale :</strong> Jet de sauvegarde (VOL) si touché par un effet magique</td>
                     </tr>
                     <tr>
                         <th colspan="2">Kanta</th>
-                        <td><span class="big_underline">Fourrure épaisse :</span> résistance au froid<br/><span class="big_underline">Sagesse :</span> Compétence Diplomatie (Apprenti)<br/><span class="big_underline">Imposante stature :</span>Taille G, Compétence Intimidation</td>
+                        <td><strong>Fourrure épaisse :</strong> résistance au froid<br/><strong>Sagesse :</strong> Compétence Diplomatie (Apprenti)<br/><strong>Imposante stature :</strong>Taille G, Compétence Intimidation</td>
                     </tr>
                     <tr>
                         <th colspan="2">Mushuk</th>
-                        <td><span class="big_underline">Vision féline :</span> Vision nocturne<br/><span class="big_underline">Marchand né :</span> Compétence Marchandage (Apprenti)</td>
+                        <td><strong>Vision féline :</strong> Vision nocturne<br/><strong>Marchand né :</strong> Compétence Marchandage (Apprenti)</td>
                     </tr>
                     <tr>
                         <th colspan="2">Sakha</th>
-                        <td><span class="big_underline">Peuple sylvestre :</span> En forêt : compétences Survie (Adepte), Acrobaties (Apprenti) et Discrétion (Apprenti), +20 aux épreuves de lancer de sorts</td>
+                        <td><strong>Peuple sylvestre :</strong> En forêt : compétences Survie (Adepte), Acrobaties (Apprenti) et Discrétion (Apprenti), +20 aux épreuves de lancer de sorts</td>
                     </tr>
                     <tr>
                         <th rowspan="3">Sarpa</th>
                         <th>Lézards</th>
-                        <td><span class="big_underline">Sang-froid :</span> Vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="big_underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="big_underline">Régénération :</span> Régénère les membres perdus</td>
+                        <td><strong>Sang-froid :</strong> Vulnérabilité au froid, besoin quotidien de chaleur<br/><strong>Peau écailleuse :</strong> +1 d'armure naturelle<br/><strong>Régénération :</strong> Régénère les membres perdus</td>
                     </tr>
                     <tr>
                         <th>Serpents</th>
-                        <td><span class="big_underline">Sang-froid :</span> Vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="big_underline">Peau écailleuse :</span> +1 d'armure naturelle<br/><span class="big_underline">Vision serpentine :</span>Peut voir la signature thermique des êtres vivants</td>
+                        <td><strong>Sang-froid :</strong> Vulnérabilité au froid, besoin quotidien de chaleur<br/><strong>Peau écailleuse :</strong> +1 d'armure naturelle<br/><strong>Vision serpentine :</strong>Peut voir la signature thermique des êtres vivants</td>
                     </tr>
                     <tr>
                         <th>Crocodiles</th>
-                        <td><span class="big_underline">Sang-froid :</span> Vulnérabilité au froid, besoin quotidien de chaleur<br/><span class="big_underline">Écailles solides :</span> +2 d'armure naturelle</td>
+                        <td><strong>Sang-froid :</strong> Vulnérabilité au froid, besoin quotidien de chaleur<br/><strong>Écailles solides :</strong> +2 d'armure naturelle</td>
                     </tr>
                     <tr>
                         <th colspan="2">Sever</th>
-                        <td><span class="big_underline">Endurance Nordique :</span> + 10 % de PV <br/><span class="big_underline">Honneur du guerrier :</span> +2 au jets de dégâts quand Endurance&lt;0 pendant 3 rounds une fois par jour.</td>
+                        <td><strong>Endurance Nordique :</strong> + 10 % de PV <br/><strong>Honneur du guerrier :</strong> +2 au jets de dégâts quand Endurance&lt;0 pendant 3 rounds une fois par jour.</td>
                     </tr>
                     <tr>
                         <th colspan="2">Sihir</th>
-                        <td><span class="big_underline">Fait de magie :</span> +20% de Psyché, compétence Arts de la Magie<br/><span class="big_underline">Sensibilité magique :</span> Vulnérabilité à la magie, jet de VOL à -20 pour absorber la psyché d'un sort.</td>
+                        <td><strong>Fait de magie :</strong> +20% de Psyché, compétence Arts de la Magie<br/><strong>Sensibilité magique :</strong> Vulnérabilité à la magie, jet de VOL à -20 pour absorber la psyché d'un sort.</td>
                     </tr>
                     <tr>
                         <th rowspan="2">Steinn</th>
                         <th>Rakaj</th>
-                        <td><span class="big_underline">Vision souterraine :</span> Vision nocturne<br/><span class="big_underline">Froideur d'Hortak :</span> Résistance au froid</td>
+                        <td><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Froideur d'Hortak :</strong> Résistance au froid</td>
                     </tr>
                     <tr>
                         <th>Khazun</th>
-                        <td><span class="big_underline">Vision souterraine :</span> Vision nocturne<br/><span class="big_underline">Chaleur des Monts Ardents :</span> Résistance au feu</td>
+                        <td><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Chaleur des Monts Ardents :</strong> Résistance au feu</td>
                     </tr>
                     <tr>
                         <th colspan="2">Tori</th>
-                        <td><span class="big_underline">Ailes :</span> Peut voler à volonté</td>
+                        <td><strong>Ailes :</strong> Peut voler à volonté</td>
                     </tr>
                     <tr>
                         <th colspan="2">Tuskizi</th>
-                        <td><span class="big_underline">Adaptation climatique:</span> Résistance au poison, effet du climat divisé par 2<br/><span class="big_underline">Nomade :</span> Toute pénalité de mouvement est divisée par 2</td>
+                        <td><strong>Adaptation climatique:</strong> Résistance au poison, effet du climat divisé par 2<br/><strong>Nomade :</strong> Toute pénalité de mouvement est divisée par 2</td>
                     </tr>
                     </tbody>
                 </table>
@@ -377,7 +372,7 @@
                         <td class="bonus">30</td>
                         <td class="bonus">35</td>
                         <td>25</td>
-                        <td class="malus">25</td>
+                        <td class="malus">15</td>
                         <td class="bonus">30</td>
                         <td class="malus">15</td>
                         <td class="bonus">35</td>
@@ -486,10 +481,9 @@
                     </tr>
                     </tbody>
                 </table>
+                <p>Ces caractéristiques pourront progresser en cours de campagnes si votre personnage s'entraîne intensément ou accomplit des actions épiques. Lorsque cela se produit, il obtiendra un certain nombre de marques de progression dans la caractéristique relative.</p>
+                <p>Le nombre de marques de progression nécessaires à l'amélioration d'une caractéristique équivaut au chiffre des dizaines de la caractéristique (sans prise en compte des modificateurs).</p>
             </div>
-            <p>Ces caractéristiques pourront progresser en cours de campagnes si votre personnage s'entraîne intensément ou accomplit des actions épiques. Lorsque cela se produit, il obtiendra un certain nombre de marques de progression dans la caractéristique relative.</p>
-            <p>Le nombre de marques de progression nécessaires à l'amélioration d'une caractéristique équivaut au chiffre des dizaines de la caractéristique (sans prise en compte des modificateurs).</p>
-
 
             <h2 id="Attributs" onclick="hideContent(this)">Attributs</h2>
             <div>
@@ -505,7 +499,8 @@
                     <ul>
                         <li><span class="big_underline">Exploit physique (2 PE dépensés avant le test) :</span>Avantage pour la prochaine épreuve physique (1/round max)</li>
                         <li><span class="big_underline">Sprint (2 PE dépensé avant le mouvement) :</span>Double la vitesse de déplacement du personnage pour ce tour (1/round max)</li>
-                        <li><span class="big_underline">Rechargement rapide (1 PE) :</span>Diminue de 1 le coût en PA du rechargement de l'arme, le coût peut être réduit à 0 si l'arme le permet, dans ce cas l'action ne coûte aucun PA. (3/round max)</li>
+                        <li><span class="big_underline">Rechargement rapide (1 PE) :</span>Diminue de 1 le coût en PA du rechargement de l'arme, le coût peut être réduit à 0 si l'arme le permet, dans ce cas l'action ne coûte aucun PA (3/round max)</li>
+                        <li><span class="big_underline">Blocage total (2 PE dépensé avant un blocage incomplet) :</span>Permet d'absorber toute la puissance d'un coup dépassant la RB de son bouclier (1/round max)</li>
                         <li><span class="big_underline">Attaque puissante (2 PE dépensés avant le jet de dégâts) :</span>Ajoute le BdFor au jet de dégâts d'une attaque de mêlée (2/round max)</li>
                     </ul>
                     <p>L'endurance se régénère complètement après quelques minutes passées au calme (BdVig/minute).</p>
@@ -743,7 +738,7 @@
                     <tr id="ame">
                         <th>Âme</th>
                         <td>Volonté</td>
-                        <td><a href="../World/Histoire_Ogma.xhtml#inkarnai">Domaine de Karnaï</a></td>
+                        <td>Aucune spécialisation possible dans cette compétence</td>
                         <td>L'Âme d'un personnage mesure la persistance de ses créations magiques dans le monde réel.</td>
                         <td>Créer un mur de pierre<br/>Invoquer/infuser une arme<br/>Renforcer son corps par magie</td>
                     </tr>
@@ -799,7 +794,7 @@
                     <tr id="grace">
                         <th>Grâce</th>
                         <td>Intelligence</td>
-                        <td><a href="../World/Histoire_Ogma.xhtml#inkarnai">Domaine de Karnaï</a></td>
+                        <td>Aucune spécialisation possible dans cette compétence</td>
                         <td>La grâce d'un personnage mesure la complexité de ses créations magiques.</td>
                         <td>Invoquer un fouet d'éclairs<br/>Créer une illusion<br/>Faire apparaitre une multitude de billes métalliques</td>
                     </tr>
@@ -862,7 +857,7 @@
                     <tr id="pouvoir">
                         <th>Pouvoir</th>
                         <td>Intelligence<br/>Volonté</td>
-                        <td><a href="../World/Histoire_Ogma.xhtml#inkarnai">Domaine de Karnaï</a></td>
+                        <td>Aucune spécialisation possible dans cette compétence</td>
                         <td>Le Pouvoir d'un personnage mesure l'ampleur et la puissance de ses créations magiques.</td>
                         <td>Lancer une boule de feu<br/>Faire apparaître de l'eau en quantité</td>
                     </tr>
@@ -1142,7 +1137,6 @@
                     <p>Toutes ces précisions sont optionnelles dans la description de votre personnage, mais peuvent renforcer l'implication que vous avez vis-à-vis de lui. Il vous faudra tout de même rester cohérent avec l'origine que vous avez choisi, un Steinn mesurant 1m80 ou un Sakha de 120kg ont assez peu de chance d'exister.</p>
                 </div>
             </div>
-
         </div>
 
         <h1 id="Magie" onclick="hideContent(this)">Magie</h1>
@@ -1344,7 +1338,7 @@
                             <td>Attaque élémentaire (Foudre)</td>
                             <td>Pouvoir</td>
                             <td>Surcharge(+BdVol aux dégâts)</td>
-                            <td>1*NC</td>
+                            <td>2*NC</td>
                             <td>Inflige (dé) de dégâts de foudre<br/>Dé(s) selon NC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
                         </tr>
                         <tr>
@@ -1445,6 +1439,13 @@
                             <td>Invoque une arme de mêlée éthérée infligeant des dégâts magiques pendant une minute. Les dégâts de l'arme augmente tout les deux NC : NC1 1d4, NC3 1d6, NC5 1d8, NC7 1d10, NC9 1d12</td>
                         </tr>
                         <tr>
+                            <td>Force</td>
+                            <td>Pouvoir</td>
+                            <td/>
+                            <td>NC*2</td>
+                            <td>Repousse les cibles affectée. Chaque cible peut résister si elle souhaite en passer un test d'Athlétisme(Vigueur) ou d'Âme.</td>
+                        </tr>
+                        <tr>
                             <th colspan="5" id="sort_anathos">Anathos</th>
                         </tr>
                         <tr>
@@ -1537,7 +1538,7 @@
                             <td>Attaque élémentaire (Feu)</td>
                             <td>Pouvoir</td>
                             <td>Surcharge(+BdVol aux dégâts)</td>
-                            <td>1*NC</td>
+                            <td>2*NC</td>
                             <td>Inflige (dé) de dégâts de feu<br/>Dé(s) selon NC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
                         </tr>
                         <tr>
@@ -1582,7 +1583,7 @@
                             <td>Attaque élémentaire ([élément])</td>
                             <td>Pouvoir</td>
                             <td>[Terre, Sable], Surcharge(+BdVol aux dégâts)</td>
-                            <td>1*NC</td>
+                            <td>2*NC</td>
                             <td>Inflige (dé) de dégâts physique<br/>Dé(s) selon NC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
                         </tr>
                         <tr>
@@ -1613,7 +1614,7 @@
                             <td>Attaque élémentaire ([élément])</td>
                             <td>Pouvoir</td>
                             <td>[Poison, Acide], Surcharge(+BdVol aux dégâts)</td>
-                            <td>1*NC</td>
+                            <td>2*NC</td>
                             <td>Inflige (dé) de dégâts d'[élément]<br/>Dé(s) selon NC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
                         </tr>
                         <tr>
@@ -1689,7 +1690,7 @@
                             <td>Attaque élémentaire ([élément])</td>
                             <td>Pouvoir</td>
                             <td>[Eau, Glace], Surcharge(+BdVol aux dégâts)</td>
-                            <td>1*NC</td>
+                            <td>2*NC</td>
                             <td>Inflige (dé) de dégâts d'[élément]<br/>Dé(s) selon NC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
                         </tr>
                         <tr>
@@ -1772,7 +1773,7 @@
                             <td>Attaque élémentaire ([élément])</td>
                             <td>Pouvoir</td>
                             <td>[Métal, Pierre], Surcharge(+BdVol aux dégâts)</td>
-                            <td>1*NC</td>
+                            <td>2*NC</td>
                             <td>Inflige (dé) de dégâts physique<br/>Dé(s) selon NC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
                         </tr>
                         <tr>
@@ -1813,7 +1814,7 @@
                             <td>Attaque élémentaire (Lumière)</td>
                             <td>Pouvoir</td>
                             <td>Surcharge(+BdVol aux dégâts)</td>
-                            <td>1*NC</td>
+                            <td>2*NC</td>
                             <td>Inflige (dé) de dégâts de Lumière<br/>Dé(s) selon NC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
                         </tr>
                         <tr>
@@ -1956,12 +1957,13 @@
                     <li><span class="big_underline">Esquive</span>Le défenseur passe une épreuve d'Esquive(Agilité)</li>
                     <li><span class="big_underline">Parade</span>Le défenseur passe une épreuve de Style de combat(Force ou Dextérité) s'il possède une arme capable de parer l'arme de l'assaillant.</li>
                     <li><span class="big_underline">Blocage</span>Le défenseur passe une épreuve de Style de combat(Force) s'il possède un bouclier.</li>
-                    <li><span class="big_underline">Contre-attaque</span>Le défenseur utilise un méthode de défense ci-dessus puis fais une attaque de mêlée comme décrit à l'étape 1. Le défenseur comptera alors comme un attaquant lors de la phase 3.</li>
+                    <li><span class="big_underline">Contre-attaque</span>Le défenseur utilise un méthode de défense ci-dessus puis fais une attaque de mêlée comme décrit à l'étape 1. Le défenseur comptera alors comme un assaillant lors de la phase 3.</li>
                 </ul>
                 <p>Les actions défensives coûtent 2 points d'endurance si elles sont réussies. Dans le cas où le défenseur se fait toucher, il ne perds pas d'endurance.</p>
                 <p>Il n'est possible de se défendre des attaques à distance que via l'action d'esquive ou de blocage.</p>
                 <h4>Étape 3 : Lancer les dés et déterminer le résultat</h4>
                 <p>Plusieurs cas sont possibles suivants les résultats des dés, notez que si le défendeur choisi de ne pas se défendre ou s'il est incapable de le faire, on considère qu'il échoue automatiquement.</p>
+                <p>Si le degré de réussite(DR) d'un des combattants dépasse de 2 celui de son adversaire, il prend le dessus pour cette passe d'arme et pourra choisir un effet lors de l'étape 4 :</p>
                 <ul>
                     <li><span class="big_underline">Les deux personnages échouent :</span>Rien ne se passe et l'action est terminée.</li>
                     <li><span class="big_underline">Un personnage rate son jet :</span>
@@ -1971,9 +1973,9 @@
                     </ul></li>
                     <li><span class="big_underline">Les deux personnages réussissent :</span>
                     <ul>
-                        <li><span class="big_underline">Attaque contre Blocage :</span>Le défenseur bloque l'attaque sauf si le DR de l'assaillant est de +2 supérieur à celui du défenseur.</li>
+                        <li><span class="big_underline">Attaque contre Blocage :</span>L'attaque porte mais le défenseur la bloque. Traiter l'étape 4 comme si le défenseur avait gagné.</li>
                         <li><span class="big_underline">Attaque contre Parade ou Esquive :</span>Le défenseur pare l'attaque si son DR est strictement supérieur à celui de l'assaillant.</li>
-                        <li><span class="big_underline">Contre-attaque :</span>Le personnage possédant le plus de DR frappe l'autre (sur une égalité rien ne se passe).</li>
+                        <li><span class="big_underline">Contre-attaque :</span>Le personnage possédant le plus grand DR frappe l'autre (sur une égalité rien ne se passe).</li>
                     </ul></li>
                     <li><span class="big_underline">Succès/Échec critique :</span>Si un personnage fait un succès critique, il réussit automatiquement son action sauf si son adversaire à aussi fait un succès critique auquel cas on considère les deux succès comme d'habitude en comptant le plus haut DR.<br/>Si un des deux fait un échec critiques et que l'autre réussit son action, elle compte comme un succès critique, s'il rate, comme un succès normal.</li>
                 </ul>
@@ -2011,7 +2013,20 @@
                     </tr>
                     </tbody>
                 </table>
-                <p>L'assaillant lance le(s) dé(s) de dégâts de son arme, on réduit ces dégâts par la PR protégeant la zone touchée si le défenseur porte une pièce d'armure à cet endroit. Si les dégâts infligés sont inférieurs ou égaux à 0, le défenseur perd un point d'endurance, s'il sont positifs, il perd autant de vitalité qu'il subis de dégâts.</p>
+                <p>L'assaillant lance le(s) dé(s) de dégâts de son arme, si l'attaque est critique, il inflige le maximum de dégâts. On réduit ces dégâts par la PR protégeant la zone touchée si le défenseur porte une pièce d'armure à cet endroit. Si les dégâts infligés sont inférieurs ou égaux à 0, le défenseur perd un point d'endurance, s'il sont positifs, il perd autant de vitalité qu'il subis de dégâts.</p>
+                <p>Dans le cas où le défenseur gagne la passe d'arme :</p>
+                <ul>
+                    <li><span class="big_underline">Dans le cas d'une esquive :</span>Le défenseur ne subit aucun dégâts et peut se déplacer d'un mètre dans un direction sans puiser dans son déplacement pour ce tour.</li>
+                    <li><span class="big_underline">Dans le cas d'une parade :</span>Le défenseur ne subit aucun dégâts. </li>
+                    <li><span class="big_underline">Dans le cas d'un blocage :</span>Si les dégâts de l'assaillant surpassent la résistance du bouclier (RB), le défenseur subit l'intégralité des dégâts sur le bras qui tient le bouclier. Si la RB est supérieur ou égale aux dégâts reçus il ne subit aucun dégâts. Les dégâts magiques ne prennent en compte que la moitié de la RB (arrondie à l'entier supérieur) sauf si le bouclier possède une RB magique spécifiée.</li>
+                </ul>
+                <p>Si un des combattant à le dessus sur l'autre, il peut choisir un des effets suivants :</p>
+                <ul>
+                    <li><span class="big_underline">Frappe de précision :</span>Permet de choisir la localisation du coup</li>
+                    <li><span class="big_underline">Pénétration d'armure :</span>Si la zone touchée est protégées par de l'armure intégrale elle compte comme protégée par de l'armure partielle, si elle est protégée par de l'armure partielle elle compte comme non-protégée (la PR de l'armure ne diminue pas).</li>
+                    <li><span class="big_underline">Pousser l'avantage (sur une attaque uniquement) :</span>La prochaine attaque réalisée contre cet adversaire sera Simple(+10) pour ce round.</li>
+                    <li><span class="big_underline">Pousser à la faute (sur une parade/esquive uniquement) :</span>La prochaine attaque de l'adversaire sera Ardue(-10) pour ce round.</li>
+                </ul>
                 <p>Exemple : Géradin subit une attaque et rate sa parade, le coup arrive sur le torse et inflige 3 poins de dégâts mais Géradin porte une armure solide procurant 4 PR sur son torse, les dégâts qu'ils subis sont de 3-4=-1 Géradin ne perds qu'un point d'endurance. L'assaillant réitère l'attaque et Géradin ne peut plus se défendre, l'attaque inflige 6 points de dégâts et frappe à la jambe droite, Géradin ne possède qu'un de PR à cet endroit sa vitalité diminue de 6-1=5.</p>
             </div>
 
@@ -2116,23 +2131,58 @@
                         <li><strong>Attaquer :</strong>Le personnage frappe la cible qu'il maîtrise. Il doit utiliser une arme avec une portée de 1m ou moins. La cible ne peut pas se défendre d'une telle attaque. Si la cible est à la fois <a href="Glossaire.xhtml#a_terre">à terre</a> et <a href="Glossaire.xhtml#maitrise">maîtrisée</a>, l'attaque peut être un <a href="Types_actions.xhtml#coup_de_grace">coup de grâce</a>. Si le personnage ne possède pas d'arme, il peut infliger une perte d'1d4 points d'Endurance.</li>
                     </ul>
                 </div>
-
+                <h4 id="conditions_particulieres_combat">Conditions particulières de combat</h4>
+                <p>Il arrive parfois qu'un combat ait lieu dans des circonstances peu habituelles, auquel cas, des règles spécifiques s'appliquent.</p>
+                <ul>
+                    <li><span class="big_underline">Escalade :</span>Un personnage en train de grimper est limité dans ses jets de Style de Combat par sa compétence en Athlétisme (dans le cas où son Style de Combat est d'un plus haut rang que celui d'Athlétisme). Le personnage ne peut utilisé qu'un seul membre pour se battre, à moins d'en avoir plus. </li>
+                    <li><span class="big_underline">Surfaces glissantes :</span>Un personnage se battant sur une surface glissante ou peu pratique pour un combat est limité dans ses jets de Style de Combat par sa compétence en Acrobaties (dans le cas où son Style de Combat est d'un plus haut rang que celui d'Acrobaties). Si le personnage rate un jet de combat dans ces conditions, il doit passer un test d'Acrobaties ou tomber <a href="Glossaire.xhtml#a_terre">à terre</a>.</li>
+                    <li><span class="big_underline">Combat aquatique</span>Un personnage se battant dans l'eau est limité dans ses jets de Style de Combat par sa compétence en Athlétisme (dans le cas où son Style de Combat est d'un plus haut rang que celui d'Athlétisme). Ses attaques infligent la moitié des dégâts seulement.</li>
+                    <li><span class="big_underline">Zone instable :</span>Un personnage se battant en équilibre sur une poutre ou en sautant de toits en toits est limité dans ses jets de Style de Combat par sa compétence en Acrobaties (dans le cas où son Style de Combat est d'un plus haut rang que celui d'Acrobaties). Si le personnage rate un jet de combat dans ces conditions, il doit passer un test d'Acrobaties ou tomber <a href="Glossaire.xhtml#a_terre">à terre</a> et subir des dégâts de chute appropriés.</li>
+                </ul>
             </div>
             <h3 id="combat_distance">Combat à distance</h3>
             <div>
+                <p>Les attaques à distance sont résolues de la même façon que les attaques en mêlée à ceci près qu'elle ne peuvent être que bloquées ou esquivées.</p>
+                <p>Les armes à distance possède plusieurs propriétés les différenciant des armes de mêlée :</p>
+                <ul>
+                    <li><span class="big_underline">Portée :</span>Définie par deux nombres indiquant respectivement la portée effective et la portée maximale. Atteindre une cible située dans la portée effective d'un arme se fait sans pénalités mais une cible située entre la portée effective et la portée maximale est Difficile(-20).</li>
+                    <li><span class="big_underline">Rechargement :</span>Représente le nombre de fois qu'on doit entreprendre l'action <a href="Types_actions.xhtml#preparer_objet_arme">Préparer une arme</a> pour pouvoir tirer à nouveau avec cette arme.</li>
+                </ul>
+                <p>Comme toutes les autres épreuves, le combat à distance doit se faire en fonction de l'environnement et des circonstances entourant le combat. Ces modificateurs sont déterminés par le MJ et ne devrait pas être pire que Très Difficile(-30) sauf dans des cas très particuliers. Le tableau ci-dessous montre quel genre d'évènements peut affecter le combat et à quel point.</p>
+                <table id="table_modificateur_combat_distance" class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>Modificateur</th>
+                        <th>Exemples</th>
+                    </tr>
+                    <tr>
+                        <td>Ardue(-10)</td>
+                        <td>Tirer avec un vent léger, par temps de pluie</td>
+                    </tr>
+                    <tr>
+                        <td>Difficile(-20)</td>
+                        <td>Tirer sur une cible allongée sur le sol</td>
+                    </tr>
+                    <tr>
+                        <td>Très Difficile(-30)</td>
+                        <td>Tirer avec un vent fort, par temps de brouillard</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h4 id="tirer_depuis_monture">Tirer depuis une monture</h4>
+                <p>Un personnage peut tirer depuis sa monture, il est cependant limité par la compétence d'Équitation de la personne dirigeant la monture (dans le cas où son Style de Combat est d'un rang plus élevé que celui d'Équitation du pilote).</p>
+                <h4 id="attaque_zone">Attaque de Zone</h4>
+                <p>Certaines attaques à distance, majoritairement des sorts, infligent des dégâts sur une certaine zone. On ne peut se défendre contre ce type d'attaque qu'en bloquant avec un bouclier ou en esquivant seulement si on est conscient de l'attaque de zone.</p>
+                <p>Si la défense est un succès, on ne subit que la moitié des dégâts(arrondis à l'entier supérieur). Les attaques de zone comptent comme touchant au torse.</p>
                 <h4 id="abri">Abri</h4>
+                <p>Un personnage peut se mettre à l'abri pour éviter de se faire toucher par un adversaire, que ce soit en mêlée ou à distance.</p>
+                <p>Si un personnage est incapable de toucher une cible qu'il n'est pas capable de voir, mais si il sait où elle se trouve et qu'il possède une arme capable de transpercer ce derrière quoi ce cache sa cible. Le MJ décide de la difficulté de la tâche en fonction de la situation.</p>
             </div>
+
             <h3 id="blessures_mort" onclick="hideContent(this)">Blessures et mort</h3>
             <div>
-                <p>Les dégâts subis font diminuer la jauge d'endurance et n'influent pas sur l'état du personnage tant que son endurance est positive, si la jauge d'endurance est vide, tout dégâts supplémentaires feront diminuer sa jauge de vitalité.</p>
+                <p>Comme vu précédemment, il est possible d'utiliser son endurance pour se prémunir des dégâts mais toute attaque qui touche un personnage ne parvenant pas à se défendre efficacement fait diminuer la jauge de vitalité.  </p>
                 <p>Si la vitalité d'une entité atteint 0 ou une valeur négative, elle doit réussir un jet de Vigueur avec un malus éventuels équivalent à son total de points de vitalité négatifs, si elle réussit son jet, elle reste consciente et est <a href="Glossaire.xhtml#porte_mort">aux portes de la mort</a>. Si elle échoue, elle devient <a href="Glossaire.xhtml#inconscient">inconsciente</a> et <a href="Glossaire.xhtml#mourant">mourante</a>.</p>
-            </div>
-            <h3 onclick="hideContent(this)">Attaquer un adversaire(Exemple)</h3>
-            <div>
-                <p>Prenons Edwin, un officier de l'Empire Azuma, qui souhaite attaquer un bandit situé à 5 mètres. Edwin possède un score de 66 en AGI, 72 en FOR et 78 en DEX, son arme est une épée longue impériale (Attaque 65 Parade 50 Dégâts 1d6+2 (la force d'Edwin apporte un bonus de 1 aux dégâts, la qualité de l'arme ajoute 1 aussi).</p>
-                <p>Le tour d'Edwin vient avant celui du bandit, il peut donc s'avancer pour parcourir la distance les séparant, il peut parcourir 9m (+1 de par son AGI élevée, mais -1 à cause de son armure intermédiaire) par round, il effectue une action de mouvement et se retrouve face au brigand, il peut désormais lancer une attaque de corps à corps via une action simple, il lance son jet d'attaque et fait un 40 !</p>
-                <p>Le brigand essaie de parer l'attaque avec son épée courte rouillée (Attaque 50 Parade 55 Dégâts 1d6-1), il lance son jet de parade et fait un 50, le jet est insuffisant, l'attaque porte !</p>
-                <p>Edwin lance son jet de dégâts (1d6+2), il obtient 5(3+2) le brigand est déjà mal en point, il ne possède plus que 3 point de vitalité,il tombe à -2, rate son jet de vigueur, il perd connaissance et est mourant.</p>
             </div>
         </div>
 
@@ -2146,7 +2196,7 @@
                 <p>Un personnage peut survivre sans nourriture pendant 3 jour. À la fin de chaque jour au-delà de cette limite, un personnage souffre automatiquement d'un niveau d'épuisement. Un jour passé en ayant mangé normalement remet le compteur de jours sans nourriture à zéro.</p>
 
                 <h3 id="boire">Boire</h3>
-                <p>Un personnage a besoin de 1,5 litres d'eau par jour par température normale, de 3 litres s'il fait chaud ou de 5 si il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de Vigueur ou devient <a href="Glossaire.xhtml#fatigue">fatigué</a>. Un personnage qui boit encore moins d'eau que cela devient automatiquement <a href="Glossaire.xhtml#fatigue">fatigué</a>. Si un personnage est déjà <a href="Glossaire.xhtml#fatigue">fatigué</a>, il devient alors <a href="Glossaire.xhtml#epuise">épuisé</a>.</p>
+                <p>Un personnage a besoin de 1,5 litres d'eau par jour par température normale, de 3 litres s'il fait chaud ou de 5 si il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de Vigueur ou gagner un niveau de <a href="Glossaire.xhtml#fatigue">fatigue</a>. Un personnage qui boit encore moins d'eau que cela gagne automatiquement un niveau de <a href="Glossaire.xhtml#fatigue">fatigue</a>.</p>
 
                 <h3 id="dormir">Dormir</h3>
                 <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent se reposer au milieu d'une journée d'aventure et établir un camp pour dormir en fin de journée.</p>
@@ -2281,7 +2331,7 @@
                     <p>Il arrive que le temps joue un rôle important dans une aventure. La table ci-dessous tient lieu des aléas du temps. Le sens des termes employés dans ce tableau est expliqué plus bas.</p>
                     <p class="caption" onclick="hideContent(this)">Climats</p>
                     <div id="table_climat" class="hidden">
-                        <table width="90%" class="table_compact">
+                        <table class="table_compact">
                             <thead>
                             <tr>
                                 <th>d100</th>
@@ -2354,7 +2404,7 @@
 
                     <p class="caption" onclick="hideContent(this)">Effets du vent</p>
                     <div id="table_vents"  class="hidden">
-                        <table width="90%" class="table_compact">
+                        <table class="table_compact">
                             <thead>
                             <tr>
                                 <th>Force du Vent</th>
@@ -2463,10 +2513,10 @@
 
                     <h4>Les chutes</h4>
                     <p>Une chute inflige 1d6 points de dégâts par tranche de trois mètres, jusqu’à un maximum de 20d6. Les créatures subissant des dégâts à cause d’une chute sont <a href="Glossaire.xhtml#a_terre">à terre</a>.</p>
-                    <p>Si, au lieu de tomber ou de glisser, un aventurier saute délibérément, les 1d6 premiers points de dégâts reçus sont divisés par 2. Si le test de Saut est un succès (jet d'Agilité), les dégâts infligés par les trois premiers mètres de chute sont annulés et ceux dus aux trois mètres suivants divisés par 2. Ainsi, un personnage tombant d’une corniche haute de neuf mètres de haut subit 3d6 points de dégâts. S’il avait volontairement sauté, il aurait seulement reçu 2d6 points de dégâts et 1d6 divisés par deux. Enfin, s’il avait volontairement sauté en réussissant son test de Saut, les dégâts reçus auraient été plus réduits encore : 1d6 points de dégâts et 1d6 divisés par deux.</p>
+                    <p>Si, au lieu de tomber ou de glisser, un aventurier saute délibérément, les 1d6 premiers points de dégâts reçus sont divisés par 2. Si le test d'Acrobaties est un succès, les dégâts infligés par les trois premiers mètres de chute sont annulés et ceux dus aux trois mètres suivants divisés par 2. Ainsi, un personnage tombant d’une corniche haute de neuf mètres de haut subit 3d6 points de dégâts. S’il avait volontairement sauté, il aurait seulement reçu 2d6 points de dégâts et 1d6 divisés par deux. Enfin, s’il avait volontairement sauté en réussissant son test de Saut, les dégâts reçus auraient été plus réduits encore : 1d6 points de dégâts et 1d6 divisés par deux.</p>
                     <p>Si l’aventurier atterrit sur une surface meuble (sable, boue, etc.), les 1d6 premiers points de dégâts sont, là encore, transformés en points de dégâts non-létaux. Cette réduction s’ajoute aux précédentes, le cas échéant.</p>
                     <p><span class="underline">Chute dans l'eau :</span> Les dégâts donnés par les chutes s’achevant dans l’eau sont déterminés différemment. Du moment que l’eau fait au moins trois mètres de profondeur, les six premiers mètres de chute n’administrent pas le moindre dégât. Pour les six mètres suivants, les dégâts sont équivalent à 1d3 points tous les trois mètres. Passée cette limite, ils passent à 1d6 points tous les trois mètres supplémentaires.</p>
-                    <p>Un personnage plongeant volontairement ne subit pas le moindre dégât du moment qu’il réussit un test d’Acrobaties ou de Natation (Agilité dans les deux cas) et que la profondeur de l’eau est au moins égale au tiers de la hauteur de chute (trois mètres ou plus s’il plonge d’une hauteur de neuf mètres, etc.). Le malus du test d’Acrobaties ou de Natation augmente de 1 tous les 2 mètres de hauteur de chute.</p>
+                    <p>Un personnage plongeant volontairement ne subit pas le moindre dégât du moment qu’il réussit un test d’Acrobaties ou d'Athlétisme et que la profondeur de l’eau est au moins égale au tiers de la hauteur de chute (trois mètres ou plus s’il plonge d’une hauteur de neuf mètres, etc.). Le malus du test d’Acrobaties ou de Natation augmente de 1 tous les 2 mètres de hauteur de chute.</p>
 
                     <h4>Les chutes d'objets</h4>
                     <table style="float: right" class="table_compact">
@@ -2641,714 +2691,549 @@
     <div id="objets">
         <h1 id="equipement" onclick="hideContent(this)">Équipement</h1>
         <div>
-            <p>L'équipement joue un grand rôle dans la puissance du personnage, surtout si il n'a que peu recours à la magie. Une arme forgée par un grand maître infligera plus de dégâts et sera plus solide qu'une vieille lame décrépite.</p>
-            <p>Les armes et les armures nécessitent un entraînement pour être utilisés convenablement. Un personnage utilisant une arme qu'il ne maitrise pas ou porte une armure sans y être habitué subit des malus adéquats choisis par le MJ.</p>
+            <p>L'équipement joue un grand rôle dans la puissance du personnage, surtout si il n'a que peu recours à la magie. Une arme forgée par un grand maître sera bien plus efficace qu'une vieille lame décrépite.</p>
+            <p>Les armes et les armures nécessitent d'être maîtrisée par le personnage (incluses dans un de ses styles de combat) pour être utilisées convenablement. Un personnage utilisant une arme qu'il ne maitrise pas subit un malus de -20. S'il porte une armure sans y être habitué les malus dûs au poids de l'armure son doublés.</p>
 
             <h2 id="rupture" onclick="hideContent(this)">Rupture</h2>
             <div>
                 <p>Les armes et armures possèdent une statistique appelée Rupture qui correspond à la solidité de l'objet, plus cette statistique est grande, plus l'objet est solide.</p>
-                <p>La Rupture entre en compte uniquement lors d'un coup critique étant donné que l'armure est ignorée. On lance alors un D100 et si le chiffre est inférieur à la rupture, l'objet ne se brise pas et protège son porteur des effets secondaires du critique s'il s'agit d'une armure </p>
+                <p>La Rupture entre en compte lors d'un coup critique ou si l'équipement subit un choc important. On lance alors un D100 et si le chiffre est inférieur à la rupture, l'objet ne s'<a href="Tableaux.xhtml#rupture_equipement">abime</a> pas plus et protège son porteur des effets secondaires du critique s'il s'agit d'une armure.</p>
                 <p>Exemple : Un personnage portant un casque en acier Steinn de rupture 75, il subit une attaque critique à la tête, il obtient 43 à son jet de rupture, le casque n'est pas brisé, le personnage ne subit pas de traumatisme crânien, mais il subit tout le même les dégâts du coup critique.</p>
-                <p>La rupture étant une statistique variant d'un équipement à un autre, on ne peut que l'estimer globalement selon le matériau de l'objet, le choix précis revient donc au MJ qui décidera au cas-par-cas.</p>
+                <p>La rupture étant une statistique variant d'un équipement à un autre, on ne peut que l'estimer globalement selon le matériau de l'objet, le choix précis revient donc au cas-par-cas.</p>
             </div>
 
             <h2 id="Armes" onclick="hideContent(this)">Armes</h2>
             <div>
                 <div>
-                    <h3 onclick="hideContent(this)">Type de dégâts</h3>
+                    <h3 id="type_degats" onclick="hideContent(this)">Type de dégâts</h3>
                     <div>
-                        <p>Les armes peuvent infliger différents types de dégâts selon la façon dont on les utilise : une épée longue peut servir pour un coup de taille ou un estoc, une étoile du matin inflige à la fois des dégâts perforants et contondant.</p>
+                        <p>Les armes peuvent infliger différents types de dégâts selon la façon dont on les utilise :</p>
+                        <ul>
+                            <li><span class="big_underline">Écrasant :</span>Les armes infligeant des dégâts écrasants brisent les os comme les armures. Les dégâts de ce type ignore une partie de la PR de sa cible à hauteur de son BdFor-3 (Si le BdFor du personnage vaut 4, il ignore 1 de PR, un BdFor de 5 ignore 2 de PR et ainsi de suite).</li>
+                            <li><span class="big_underline">Fendant :</span>Les armes infligeant des dégâts fendant causent de graves blessures si maniées par un monstre de puissance. Les dégâts de ce type permettent à l'utilisateur d'infliger son BdFor-2 en plus si son attaque fait perdre au moins 1 point de vitalité à sa cible.</li>
+                            <li><span class="big_underline">Perforant :</span>Les armes infligeant des dégâts perforants s'infiltrent dans les points faibles des armures les plus épaisses. Les dégâts de ce type ignore une partie de la PR de sa cible à hauteur de son BdDex-3 (Si le BdDex du personnage vaut 4, il ignore 1 de PR, un BdFDex de 5 ignore 2 de PR et ainsi de suite).</li>
+                            <li><span class="big_underline">Tranchant :</span>Les armes infligeant des dégâts tranchant inflige de lours dégâts aux adversaires sans armure. Les dégâts de ce type inflige des dégâts permettent à l'utilisateur d'infliger son BdFor-2 ou son BdDex-2 en plus de son jet de dégâts si sa cible ne porte pas d'armure. </li>
+                        </ul>
                         <p>Certaines créatures peuvent êtres résistantes ou vulnérables à un ou plusieurs types de dégâts. Les squelettes par exemple résistent au dégâts perforants mais sont vulnérables aux dégâts contondants. Voir <a href="Glossaire.xhtml#vulnerabilites_resisances">Vulnérabilités et résistances</a> et le <a href="../World/Bestiaire.xhtml">Bestiaire</a>.</p>
                     </div>
 
-                    <p>Les armes appartiennent à des catégories (dagues/poignards, épées courtes, longues ou même courbes, haches, marteaux, etc...), elles possèdent des caractéristiques spéciales comme un taux de critique supérieur, la possibilité de les manier à deux mains, etc...</p>
-                    <p>La statistique d'attaque ou de précision détermine les chances de toucher, la statistique de parade détermine les chances de bloquer une attaque.</p>
-                    <p>Les dégâts d'une armes sont équivalents à un (ou plusieurs) dé(s) et sont généralement accompagné d'un bonus selon la qualité de l'arme (ex : une dague en bronze → 1d4 une dague en acier 1d4+1). La rupture est majoritairement influencée par le matériau de l'arme mais peut varier selon l'artisan, ou certaines modifications telles qu'un renfort métallique sur la poignée.</p>
-                    <p>La portée d'une arme à distance ou de lancer est indiqué de cette façon : XXm/YYm, XX représente la portée normale à laquelle l'arme peut toucher sans malus, YY représente la portée maximale à laquelle l'arme peut espérer toucher, plus on s'approche de la portée maximale, plus le malus de dextérité est grand.</p>
-                    <p>Les caractéristiques ont également un impact sur les statistiques d'une arme de corps-à-corps :</p>
+                    <h3 id="proprietes_armes" onclick="hideContent(this)">Propriété des armes</h3>
+                    <div>
+                        <p><span class="big_underline">Brise-bouclier :</span>Cette arme est très efficace contre les boucliers. Les tentatives de blocages de cette arme sont Difficile(-20) </p>
+                        <p><span class="big_underline">Dard :</span>Cette arme est capable de trouver des faille dans l'armure de sa cible. Les attaques de cette arme traite les zone protégées par des pièces d'armures intégrales comme protégées par des pièces partielles et parties protégées par des pièces partielles comme non protégées (mais ne réduit pas la PR de la zone). Cela peut être utilisé pour déclencher certains effets qui interagissent avec l'armure portée.</p>
+                        <p><span class="big_underline">Duel :</span>Cette armes est faite pour le duel. L'action <a href="Types_actions.xhtml#contre_attaquer">contre-attaque</a> devient Simple(+10).</p>
+                        <p><span class="big_underline">Empalement :</span>Cette arme interrompt le déplacement de quiconque perd de la vitalité suite à une attaque d'opportunité.</p>
+                        <p><span class="big_underline">Excellence :</span>Cette arme est d'excellente facture. Le jet de dégâts se fait avec avantage. </p>
+                        <p><span class="big_underline">Fléau :</span>Cette arme frappe de façon imprévisible. Elle ne peut ni être parer ni contrée mais ne peut pas non plus être utilisée pour parer ou contre-attaquer. En cas de match nul avec le défenseur lors d'un blocage, l'utilisateur du fléau gagne et l'attaque porte. Si l'utilisateur fait un échec critique, il se frappe lui-même.</p>
+                        <p><span class="big_underline">Lancer(Y/Z) :</span>Cette arme est suffisamment équilibrée pour être lancée. Y représente la portée effective et Z la portée maximale. Un lancer d'arme est traité comme uen attaque à distance normale (mais la force peut être utilisée pour le test de Style de Combat).</p>
+                        <p><span class="big_underline">Lourde :</span>Cette arme possède un fort pouvoir d'arrêt et peut envoyer valser ses cibles. l'action <a href="Types_actions.xhtml#repousser">repousser</a>devient Facile(+20).</p>
+                        <p><span class="big_underline">Magique :</span>Cette arme est capable de blesser toutes créatures normalement résistantes ou immunisées aux dégâts normaux.</p>
+                        <p><span class="big_underline">Montée :</span>Cette arme n'est utilisable que depuis une monture pour des raisons de poids et de maniabilité. L'attaque se fait lors d'une charge.</p>
+                        <p><span class="big_underline">Perce-Armure(X) :</span>Cette arme est d'une telle puissance qu'elle ignore X PR de la cible qu'importe les conditions. </p>
+                        <p><span class="big_underline">Petite :</span>Cette arme est relativement petite. Elle ne peut être utilisée pour parer les coups des armes maniées à deux mains, mais la dégainer ne coûte pas de PA. L'utilisateur peut passer un test de Roublardise pour dissimuler l'arme.</p>
+                        <p><span class="big_underline">Peu maniable :</span>Cette arme n'est pas facile à manier, il est Difficile(-20) de parer ou contre-attaquer avec. </p>
+                        <p><span class="big_underline">Primitive :</span>Cette arme est d'une qualité pitoyable. Le jet de dégâts de fait avec désavantage.</p>
+                        <p><span class="big_underline">Rechargement(X)</span>Cette arme doit être rechargée avant d'être utilisée, le nombre de points d'actions nécessaire pour recharger l'arme est indiqué entre parenthèse.</p>
+                    </div>
+
+                    <h3 id="attributs_arme" onclick="hideContent(this)">Attributs des armes</h3>
+                    <p>La plupart des armes possèdent les attributs suivant :</p>
                     <ul>
-                        <li><span class="big_underline">Force :</span>tous les 10 points de force supérieur à 55 :  +1 point de dégât (65 FOR → +1; 75 FOR → +2). Si la force est inférieure à 30, les dégâts sont diminués d'un point.</li>
-                        <li><span class="big_underline">Dextérité :</span>tous les 2 points de dextérité supérieur à 60 augmente l'attaque ou la parade de 1  (57 DEX → +1; 59 DEX → +1/+1 ou +2/0 ou 0/+2). Un malus s'applique si la dextérité est inférieure à 30, l'attaque ou la parade diminue de 1 par points en dessous de 30.</li>
+                        <li><span class="big_underline">Dégâts(Dgt)</span> </li>
+                        <li><span class="big_underline">Maniabilité</span>
+                            <ul>
+                                <li><span class="big_underline">Une main :</span>L'arme s'utilise à une main seulement ce qui la rend utilisable pour le <a href="Rules.xhtml#combat_deux_armes">combat à deux armes</a>.</li>
+                                <li><span class="big_underline">Une main et demi :</span>L'arme s'utilise aussi bien à une ou qu'à deux mains. Lorsqu'utilisée à deux mains, elle inflige les dégâts indiqués entre parenthèses.</li>
+                                <li><span class="big_underline">Deux mains :</span>L'arme requiert l'usage des deux mains.</li>
+                            </ul>
+                        </li>
+                        <li><span class="big_underline">Portée :</span>La portée d'une arme en mètres. Pour les armes de mêlée, cela ne représenta pas la longueur de l'arme mais plutôt la distance ou elle est menaçante. Les armes avec une portée minimale (2-3m par exemple) ne peuvent pas toucher une cible trop proche.. Pour les armes à distance, cela indique la portée effective et la portée maximale (les tirs entre la portée effective et maximale se font avec un malus de -20).</li>
+                        <li><span class="big_underline">Propriétés :</span>Les propriétés de l'arme.</li>
+                        <li><span class="big_underline">Encombrement (ENC) :</span>L'encombrement d'une arme, c'est la combinaison entre la taille et le poids de l'arme. </li>
+                        <li><span class="big_underline">Prix :</span>Le prix de base de l'arme en pièce d'argent (pa). </li>
                     </ul>
-                    <p>Les caractéristiques ont un impact différent sur les armes de lancer et à distance :</p>
-                    <ul>
-                        <li><span class="big_underline">Force :</span>tous les 10 points de force supérieur à 55 :  +1 point de dégât (65 FOR → +1; 75 FOR → +2). Si la force est inférieure à 30, les dégâts sont diminués d'un point. Ne concerne que les armes de lancer, les arcs et les frondes.</li>
-                        <li><span class="big_underline">Dextérité :</span>tous les 2 points de dextérité supérieur à 60 augmente la précision de 1 (62 DEX → +1; 64 DEX → +2). Un malus s'applique si la dextérité est inférieure à 30, la précision diminue de 1 par points en dessous de 30.</li>
-                    </ul>
-                    <p>Lors d'un coup critique, on peut se référer au <a href="Tableaux.xhtml#table_critiques">tableau des critiques</a> équivalent au type de dégâts infligés par le coup ou décider de ce qu'il se passe selon la situation.</p>
-                    <p>La liste d'armes ci dessous n'est pas exhaustive, il revient au MJ de décider des statistiques d'une arme. Pour voir le poids et la valeur de base des armes : <a href="Objets.xhtml#armes">Listes des armes</a>.</p>
+                    <p>La liste d'armes ci dessous n'est pas exhaustive, il revient au MJ de décider des attributs d'une arme ajoutée par un joueur ou par lui-même.</p>
                 </div>
                 <div>
-                    <p class="caption" onclick="hideContent(this)" id="table_armes_cac">Armes de corps-à-corps</p>
-                    <table width="95%" class="hidden">
-                        <thead>
-                        <tr>
-                            <th colspan="2">Catégorie</th>
-                            <th>Type de Dégâts</th>
-                            <th>Attaque</th>
-                            <th>Parade</th>
-                            <th>Dégâts</th>
-                            <th>Seuil<br/>Critique</th>
-                            <th>Spécial</th>
-                        </tr>
-                        </thead>
+                    <p class="caption" id="table_armes_cac">Armes de corps-à-corps</p>
+                    <table class="table_horizontal">
                         <tbody>
                         <tr>
-                            <th colspan="8">Armes à une main</th>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Dagues</td>
-                            <td>Perforants ou Tranchants</td>
-                            <td>66</td>
-                            <td>32</td>
-                            <td>1d4</td>
-                            <td>1-15</td>
-                            <td>Légère</td>
-                        </tr>
-                        <tr><td rowspan="4">Épées</td></tr>
-                        <tr>
-                            <td>Courtes</td>
-                            <td>Tranchants ou Perforants</td>
-                            <td>55</td>
-                            <td>55</td>
-                            <td>1d6</td>
-                            <td>1-8</td>
-                            <td>Légère</td>
-                        </tr>
-                        <tr>
-                            <td>Courbes</td>
-                            <td>Tranchants</td>
-                            <td>60</td>
-                            <td>50</td>
-                            <td>1d6</td>
-                            <td>1-8</td>
-                            <td>Légère</td>
-                        </tr>
-                        <tr>
-                            <td>Longues</td>
-                            <td>Tranchants ou Perforants</td>
-                            <td>55</td>
-                            <td>55</td>
-                            <td>1d6</td>
-                            <td>1-5</td>
-                            <td>Polyvalente(1d8)</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Rapières</td>
-                            <td>Perforants</td>
-                            <td>60</td>
-                            <td>50</td>
-                            <td>1d6</td>
-                            <td>1-8</td>
-                            <td>Légère</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Katanas</td>
-                            <td>Tranchants ou Perforants</td>
-                            <td>55</td>
-                            <td>55</td>
-                            <td>1d6</td>
-                            <td>1-5</td>
-                            <td>Polyvalente(1d8)</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Haches</td>
-                            <td>Tranchants</td>
-                            <td>55</td>
-                            <td>45</td>
-                            <td>1d6</td>
-                            <td>1-5</td>
-                            <td>Polyvalente(1d8)</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Masses</td>
-                            <td>Contondants</td>
-                            <td>50</td>
-                            <td>45</td>
-                            <td>1d6</td>
-                            <td>1-5</td>
-                            <td>Polyvalente(1d8), Perce-armure(2)</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Lance</td>
-                            <td>Perforants</td>
-                            <td>60</td>
-                            <td>50</td>
-                            <td>1d6</td>
-                            <td>1-5</td>
-                            <td>Polyvalente(1d8), Charge</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Faucilles</td>
-                            <td>Tranchants</td>
-                            <td>60</td>
-                            <td>45</td>
-                            <td>1d6</td>
-                            <td>1-8</td>
-                            <td>Légère</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Pics de guerre</td>
-                            <td>Perforants</td>
-                            <td>55</td>
-                            <td>45</td>
-                            <td>1d6</td>
-                            <td>1-5</td>
-                            <td>Légère, Perce-armure(1)</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Fouet</td>
-                            <td>Tranchants</td>
-                            <td>70</td>
-                            <td>/</td>
-                            <td>1d4</td>
-                            <td>1-8</td>
-                            <td>Légère, Allonge</td>
-                        </tr>
-                        <tr>
-                            <th colspan="8">Armes à deux mains</th>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">Grandes Épées</td>
-                        </tr>
-                        <tr>
-                            <td>Droites</td>
-                            <td>Tranchants ou Perforants</td>
-                            <td>55</td>
-                            <td>55</td>
-                            <td>1d10</td>
-                            <td>1-5</td>
-                            <td>À deux mains, Lourde</td>
-                        </tr>
-                        <tr>
-                            <td>Courbes</td>
-                            <td>Tranchants</td>
-                            <td>60</td>
-                            <td>50</td>
-                            <td>1d10</td>
-                            <td>1-5</td>
-                            <td>À deux mains, Lourde</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Grandes haches</td>
-                            <td>Tranchants</td>
-                            <td>50</td>
-                            <td>50</td>
-                            <td>1d10</td>
-                            <td>1-5</td>
-                            <td>À deux mains, Lourde</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Grands marteaux</td>
-                            <td>Contondants</td>
-                            <td>40</td>
-                            <td>45</td>
-                            <td>1d10</td>
-                            <td>1-5</td>
-                            <td>À deux mains, Lourde, Perce-Armure(3)</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Bâtons</td>
-                            <td>Contondants</td>
-                            <td>55</td>
-                            <td>55</td>
-                            <td>1d6</td>
-                            <td>1-5</td>
-                            <td>À deux mains</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Faux</td>
-                            <td>Tranchants</td>
-                            <td>55</td>
-                            <td>50</td>
-                            <td>1d8</td>
-                            <td>1-8</td>
-                            <td>Allonge, À deux mains</td>
-                        </tr>
-                        <tr>
-                            <th colspan="8">Armes d'hast</th>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Piques</td>
-                            <td>Perforants</td>
-                            <td>60</td>
-                            <td>50</td>
-                            <td>1d8</td>
-                            <td>1-5</td>
-                            <td>Allonge, Charge</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Hallebardes</td>
-                            <td>Tranchants ou Perforants</td>
-                            <td>55</td>
-                            <td>55</td>
-                            <td>1d8</td>
-                            <td>1-5</td>
-                            <td>Allonge, À deux mains</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Fauchard</td>
-                            <td>Tranchants</td>
-                            <td>60</td>
-                            <td>55</td>
-                            <td>1d8</td>
-                            <td>1-5</td>
-                            <td>Allonge, À deux mains</td>
-                        </tr>
-                        </tbody>
-                    </table>
-
-                    <p class="caption" onclick="hideContent(this)" id="table_armes_lancer">Armes de lancer</p>
-                    <table width="95%" class="hidden">
-                        <thead>
-                        <tr>
-                            <th>Catégorie</th>
+                            <th>Type</th>
                             <th>Type de Dégâts</th>
-                            <th>Précision</th>
                             <th>Dégâts</th>
+                            <th>Maniabilité</th>
                             <th>Portée</th>
-                            <th>Seuil<br/>Critique</th>
+                            <th>Propriétés</th>
+                            <th>ENC</th>
+                            <th>Prix</th>
                         </tr>
-                        </thead>
-                        <tbody>
+                        <tr><th colspan="8">Lames</th></tr>
                         <tr>
-                            <td>Couteaux</td>
-                            <td>Tranchants et Perforants</td>
-                            <td>65</td>
-                            <td>1d6</td>
-                            <td>10m/20m</td>
-                            <td>1-5</td>
+                            <td>Dague</td>
+                            <td>Perforants ou Tranchants</td>
+                            <td>1d4</td>
+                            <td>1M</td>
+                            <td>1m</td>
+                            <td>Dard, Lancer(10/15), Petite</td>
+                            <td>1</td>
+                            <td>20</td>
                         </tr>
+                        <tr>
+                            <td>Dague de parade</td>
+                            <td>Perforants</td>
+                            <td>1d4</td>
+                            <td>1M</td>
+                            <td>1m</td>
+                            <td>Dard, Duel, Petite</td>
+                            <td>1</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Épée Courte</td>
+                            <td>Tranchants ou Perforants</td>
+                            <td>1d6</td>
+                            <td>1M</td>
+                            <td>1m</td>
+                            <td>Dard</td>
+                            <td>1</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Épée Courbe</td>
+                            <td>Tranchants</td>
+                            <td>1d6</td>
+                            <td>1M</td>
+                            <td>2m</td>
+                            <td>Duel</td>
+                            <td>1</td>
+                            <td>65</td>
+                        </tr>
+                        <tr>
+                            <td>Rapières</td>
+                            <td>Perforants</td>
+                            <td>1d6</td>
+                            <td>1M</td>
+                            <td>2m</td>
+                            <td>Duel</td>
+                            <td>1</td>
+                            <td>70</td>
+                        </tr>
+                        <tr>
+                            <td>Épée Longue</td>
+                            <td>Tranchants ou Perforants</td>
+                            <td>1d6(1d8)</td>
+                            <td>1,5M</td>
+                            <td>2m</td>
+                            <td/>
+                            <td>2</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td>Grande épée</td>
+                            <td>Tranchants ou Perforants</td>
+                            <td>1d10</td>
+                            <td>2M</td>
+                            <td>3m</td>
+                            <td>Lourde, Peu maniable</td>
+                            <td>4</td>
+                            <td>150</td>
+                        </tr>
+                        <tr><th colspan="8">Haches</th></tr>
                         <tr>
                             <td>Hachette</td>
-                            <td>Tranchants</td>
-                            <td>60</td>
-                            <td>1d8</td>
-                            <td>10m/18m</td>
-                            <td>1-5</td>
+                            <td>Fendant</td>
+                            <td>1d6</td>
+                            <td>1M</td>
+                            <td>1m</td>
+                            <td>Lancer(10/15), Petite</td>
+                            <td>1</td>
+                            <td>15</td>
                         </tr>
                         <tr>
-                            <td>Javelots</td>
-                            <td>Perforants</td>
+                            <td>Hache de guerre</td>
+                            <td>Fendant</td>
+                            <td>1d6(1d8)</td>
+                            <td>1,5M</td>
+                            <td>2m</td>
+                            <td>Peu maniable</td>
+                            <td>2</td>
                             <td>60</td>
-                            <td>1d8</td>
-                            <td>15m/35m</td>
-                            <td>1-5</td>
                         </tr>
                         <tr>
-                            <td>Fléchettes</td>
-                            <td>Perforants</td>
+                            <td>Grande hache</td>
+                            <td>Fendant</td>
+                            <td>1d10</td>
+                            <td>2M</td>
+                            <td>3m</td>
+                            <td>Brise-bouclier, Lourde, Peu maniable</td>
+                            <td>4</td>
+                            <td>120</td>
+                        </tr>
+                        <tr><th colspan="8">Masses, marteaux et fléaux</th></tr>
+                        <tr>
+                            <td>Masse</td>
+                            <td>Écrasants</td>
+                            <td>1d6</td>
+                            <td>1M</td>
+                            <td>2m</td>
+                            <td>Peu maniable</td>
+                            <td>1</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Fléau</td>
+                            <td>Écrasants</td>
+                            <td>1d6</td>
+                            <td>1M</td>
+                            <td>2m</td>
+                            <td>Fléau</td>
+                            <td>1</td>
+                            <td>70</td>
+                        </tr>
+                        <tr>
+                            <td>Marteau de guerre</td>
+                            <td>Écrasants</td>
+                            <td>1d6(1d8)</td>
+                            <td>1,5M</td>
+                            <td>2m</td>
+                            <td>Peu maniable</td>
+                            <td>2</td>
                             <td>65</td>
+                        </tr>
+                        <tr>
+                            <td>Grand fléau</td>
+                            <td>Écrasants</td>
+                            <td>1d10</td>
+                            <td>2M</td>
+                            <td>3m</td>
+                            <td>Brise-bouclier, Fléau, Lourde</td>
+                            <td>3</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>Grand marteau</td>
+                            <td>Écrasants</td>
+                            <td>1d10</td>
+                            <td>2M</td>
+                            <td>2m</td>
+                            <td>Brise-bouclier, Peu maniable, Lourde</td>
+                            <td>4</td>
+                            <td>140</td>
+                        </tr>
+                        <tr><th colspan="8">Armes d'hast</th></tr>
+                        <tr>
+                            <td>Javelot</td>
+                            <td>Perforants</td>
+                            <td>1d8</td>
+                            <td>1M</td>
+                            <td>2m</td>
+                            <td>Lancer(15/25)</td>
+                            <td>2</td>
+                            <td>35</td>
+                        </tr>
+                        <tr>
+                            <td>Lance</td>
+                            <td>Perforants</td>
+                            <td>1d6(1d8)</td>
+                            <td>1,5M</td>
+                            <td>2-3m</td>
+                            <td>Empalement</td>
+                            <td>2</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Pique</td>
+                            <td>Perforants</td>
+                            <td>1d10</td>
+                            <td>2M</td>
+                            <td>2-4m</td>
+                            <td>Empalement, Peu maniable</td>
+                            <td>4</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>Hallebarde</td>
+                            <td>Fendants ou Perforants</td>
+                            <td>1d10</td>
+                            <td>2M</td>
+                            <td>2-3m</td>
+                            <td>Empalement</td>
+                            <td>3</td>
+                            <td>160</td>
+                        </tr>
+                        <tr>
+                            <td>Lance d'arçon</td>
+                            <td>Fendants et Écrasants</td>
+                            <td>1d12</td>
+                            <td>1M</td>
+                            <td>2-3m</td>
+                            <td>Montée, Peu maniable, Perce-armure(5)</td>
+                            <td>5</td>
+                            <td>140</td>
+                        </tr>
+                        <tr><th colspan="8">Divers</th></tr>
+                        <tr>
+                            <td>Fouet</td>
+                            <td>Tranchants</td>
                             <td>1d4</td>
-                            <td>10m/25m</td>
-                            <td>1-5</td>
+                            <td>1M</td>
+                            <td>3-5m</td>
+                            <td>Fléau</td>
+                            <td>1</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Bâton</td>
+                            <td>Contondants</td>
+                            <td>2d4</td>
+                            <td>2M</td>
+                            <td>2m</td>
+                            <td>Lourd</td>
+                            <td>2</td>
+                            <td>15</td>
                         </tr>
                         </tbody>
                     </table>
 
-                    <p class="caption" onclick="hideContent(this)" id="table_armes_distance">Armes à distance</p>
-                    <table width="95%" class="hidden">
-                        <thead>
-                        <tr>
-                            <th>Catégorie</th>
-                            <th>Type de Dégâts</th>
-                            <th>Précision</th>
-                            <th>Dégâts</th>
-                            <th>Portée</th>
-                            <th>Munitions</th>
-                            <th>Seuil<br/>Critique</th>
-                            <th>Spécial</th>
-                        </tr>
-                        </thead>
+                    <p class="caption" id="table_armes_distance">Armes à distance</p>
+                    <table class="table_horizontal">
                         <tbody>
+                        <tr>
+                            <th>Type</th>
+                            <th>Type de Dégâts</th>
+                            <th>Dégâts</th>
+                            <th>Maniabilité</th>
+                            <th>Portée</th>
+                            <th>Propriétés</th>
+                            <th>ENC</th>
+                            <th>Prix</th>
+                        </tr>
                         <tr>
                             <td>Fronde</td>
                             <td>Contondants</td>
-                            <td>55</td>
-                            <td>1d4 non-létaux</td>
-                            <td>25m/75m</td>
-                            <td>Pierres</td>
-                            <td>1-5</td>
-                            <td>/</td>
+                            <td>1d4</td>
+                            <td>1M</td>
+                            <td>50/100m</td>
+                            <td/>
+                            <td>1</td>
+                            <td>15</td>
                         </tr>
                         <tr>
                             <td>Sarbacane</td>
                             <td>Perforants</td>
-                            <td>60</td>
                             <td>1d4</td>
-                            <td>10m/20m</td>
-                            <td>Aiguilles</td>
-                            <td>1-5</td>
-                            <td>/</td>
+                            <td>1M</td>
+                            <td>25/50m</td>
+                            <td/>
+                            <td>1</td>
+                            <td>15</td>
                         </tr>
                         <tr>
                             <td>Arc Court</td>
                             <td>Perforants</td>
-                            <td>65</td>
-                            <td>1d8</td>
-                            <td>25m/75m</td>
-                            <td>Flèches</td>
-                            <td>1-5</td>
-                            <td>À deux mains</td>
+                            <td>1d6</td>
+                            <td>2M</td>
+                            <td>100/200m</td>
+                            <td/>
+                            <td>1</td>
+                            <td>75</td>
                         </tr>
                         <tr>
                             <td>Arc Long</td>
                             <td>Perforants</td>
-                            <td>60</td>
-                            <td>1d10</td>
-                            <td>50m/120m</td>
-                            <td>Flèches</td>
-                            <td>1-5</td>
-                            <td>À deux mains, Lourde</td>
+                            <td>1d8</td>
+                            <td>2M</td>
+                            <td>150/300m</td>
+                            <td>Rechargement(1), Peu maniable</td>
+                            <td>2</td>
+                            <td>100</td>
                         </tr>
                         <tr>
                             <td>Arbalète</td>
                             <td>Perforants</td>
-                            <td>65</td>
                             <td>1d10</td>
-                            <td>30m/100m</td>
-                            <td>Carreaux</td>
-                            <td>1-5</td>
-                            <td>À deux mains, Chargement (simple)</td>
+                            <td>2M</td>
+                            <td>150/250m</td>
+                            <td>Rechargement(2 min 1), Peu maniable, Perce-armure(2)</td>
+                            <td>2</td>
+                            <td>175</td>
                         </tr>
                         <tr>
                             <td>Arbalète lourde</td>
                             <td>Perforants</td>
-                            <td>60</td>
                             <td>1d12</td>
-                            <td>75m/150m</td>
-                            <td>Carreaux</td>
-                            <td>1-5</td>
-                            <td>À deux mains, Lourde, Chargement (complexe)</td>
+                            <td>2M</td>
+                            <td>200/300m</td>
+                            <td>Rechargement(3 min 1), Peu maniable, Perce-armure(4)</td>
+                            <td>4</td>
+                            <td>250</td>
                         </tr>
                         <tr>
                             <td>Arbalète à main</td>
                             <td>Perforants</td>
-                            <td>60</td>
                             <td>1d6</td>
-                            <td>20m/40m</td>
-                            <td>Carreaux</td>
-                            <td>1-5</td>
-                            <td>Chargement (mouvement)</td>
+                            <td>1M</td>
+                            <td>50/100m</td>
+                            <td>Rechargement(1), Peu maniable</td>
+                            <td>1</td>
+                            <td>200</td>
                         </tr>
                         <tr>
-                            <th colspan="8">Artillerie</th>
+                            <td>Étoiles de lancer</td>
+                            <td>Tranchants</td>
+                            <td>1d4</td>
+                            <td>1M</td>
+                            <td>10/25m</td>
+                            <td>Lancer, Petite</td>
+                            <td>0</td>
+                            <td>5</td>
                         </tr>
                         <tr>
-                            <td>Baliste légère</td>
+                            <td>Fléchettes de lancer</td>
                             <td>Perforants</td>
-                            <td>55</td>
-                            <td>3d8</td>
-                            <td>125m</td>
-                            <td>Grands carreaux</td>
-                            <td>1-5</td>
-                            <td>1 tours de rechargement</td>
-                        </tr>
-                        <tr>
-                            <td>Baliste lourde</td>
-                            <td>Perforants</td>
-                            <td>50</td>
-                            <td>4d8</td>
-                            <td>200m</td>
-                            <td>Grands carreaux</td>
-                            <td>/</td>
-                            <td>2 tours de rechargement</td>
-                        </tr>
-                        <tr>
-                            <td>Catapulte</td>
-                            <td>Contondants</td>
-                            <td>40</td>
-                            <td>6d8</td>
-                            <td>350m</td>
-                            <td>Boulet</td>
-                            <td>/</td>
-                            <td>3 tours de rechargement</td>
-                        </tr>
-                        <tr>
-                            <td>Trébuchet</td>
-                            <td>Contondants</td>
-                            <td>40</td>
-                            <td>7d8</td>
-                            <td>450m</td>
-                            <td>Boulet</td>
-                            <td>/</td>
-                            <td>3 tours de rechargement</td>
+                            <td>1d4</td>
+                            <td>1M</td>
+                            <td>10/25m</td>
+                            <td>Lancer, Petite</td>
+                            <td>0</td>
+                            <td>5</td>
                         </tr>
                         </tbody>
                     </table>
 
-                    <p class="caption" onclick="hideContent(this)" id="table_arme_feu">Armes à feu</p>
-                    <table width="95%" class="hidden">
-                        <thead>
-                        <tr>
-                            <th>Catégorie</th>
-                            <th>Précision</th>
-                            <th>Dégâts</th>
-                            <th>Portée</th>
-                            <th>Seuil<br/>Critique</th>
-                            <th>Capacité en munitions</th>
-                            <th>Spécial</th>
-                        </tr>
-                        </thead>
+                    <p class="caption" id="table_arme_feu">Armes à feu</p>
+                    <table class="table_horizontal">
                         <tbody>
                         <tr>
-                            <th colspan="7">Armes à une main</th>
+                            <th>Type</th>
+                            <th>Dégâts</th>
+                            <th>Maniabilité</th>
+                            <th>Portée</th>
+                            <th>Chargeur</th>
+                            <th>Propriétés</th>
+                            <th>ENC</th>
+                            <th>Prix</th>
+                        </tr>
+                        <tr>
+                            <th colspan="8">Armes de poing</th>
                         </tr>
                         <tr>
                             <td>Pistolet de poche</td>
-                            <td>65</td>
-                            <td>1d8</td>
-                            <td>10m/25m</td>
-                            <td>1-5</td>
+                            <td>1d6</td>
+                            <td>1M</td>
+                            <td>50/100m</td>
                             <td>1</td>
-                            <td>/</td>
+                            <td>Rechargement(2 min 1), Peu maniable, Perce-armure(1), Petite</td>
+                            <td>1</td>
+                            <td>150</td>
                         </tr>
                         <tr>
                             <td>Pistolet à silex</td>
-                            <td>65</td>
-                            <td>1d10</td>
-                            <td>20m/50m</td>
-                            <td>1-5</td>
+                            <td>1d8</td>
+                            <td>1M</td>
+                            <td>100/200m</td>
                             <td>1</td>
-                            <td>/</td>
+                            <td>Rechargement(2 min 1), Peu maniable, Perce-armure(2)</td>
+                            <td>2</td>
+                            <td>175</td>
                         </tr>
                         <tr>
                             <td>Pistolet à double canon</td>
-                            <td>60</td>
-                            <td>1d10</td>
-                            <td>20m/50m</td>
-                            <td>1-5</td>
+                            <td>1d8</td>
+                            <td>1M</td>
+                            <td>100/200m</td>
                             <td>2</td>
-                            <td>Peut tirer deux balles en même temps</td>
-                        </tr>
-                        <tr>
-                            <td>Poivrière</td>
-                            <td>60</td>
-                            <td>1d10</td>
-                            <td>10m/20m</td>
-                            <td>1-5</td>
-                            <td>6</td>
-                            <td>/</td>
+                            <td>Rechargement(2 min 1), Peu maniable, Perce-armure(2)</td>
+                            <td>2</td>
+                            <td>200</td>
                         </tr>
                         <tr>
                             <td>Pétoire</td>
-                            <td>55</td>
                             <td>2d6</td>
-                            <td>6m/12m</td>
-                            <td>1-5</td>
+                            <td>1M</td>
+                            <td>15/30m</td>
                             <td>1</td>
-                            <td>Dispersion</td>
+                            <td>Rechargement(3 min 1), Peu maniable, Perce-armure(1)</td>
+                            <td>3</td>
+                            <td>160</td>
                         </tr>
                         <tr>
-                            <td>Targe pistolet</td>
-                            <td>55</td>
-                            <td>1d6</td>
-                            <td>6m/15m</td>
-                            <td>1-5</td>
-                            <td>2</td>
-                            <td>Se fixe à l'avant bras et n'occupe pas de main</td>
+                            <td>Poivrière</td>
+                            <td>1d8</td>
+                            <td>1M</td>
+                            <td>100/200m</td>
+                            <td>6</td>
+                            <td>Rechargement(2 min 1), Peu maniable, Perce-armure(2)</td>
+                            <td>4</td>
+                            <td>225</td>
                         </tr>
                         <tr>
-                            <th colspan="7">Armes à deux mains</th>
+                            <th colspan="8">Armes d'épaule</th>
                         </tr>
                         <tr>
                             <td>Mousquet</td>
-                            <td>70</td>
                             <td>1d12</td>
-                            <td>50m/100m</td>
-                            <td>1-5</td>
+                            <td>2M</td>
+                            <td>200/400m</td>
                             <td>1</td>
-                            <td>À deux mains</td>
+                            <td>Rechargement(3 min 1), Peu maniable, Perce-armure(4)</td>
+                            <td>4</td>
+                            <td>250</td>
                         </tr>
                         <tr>
                             <td>Mousquet à double canon</td>
-                            <td>65</td>
                             <td>1d12</td>
-                            <td>50m/100m</td>
-                            <td>1-5</td>
+                            <td>2M</td>
+                            <td>200/400m</td>
                             <td>2</td>
-                            <td>À deux mains, peut tirer deux balles en même temps</td>
+                            <td>Rechargement(3 min 1), Peu maniable, Perce-armure(4)</td>
+                            <td>4</td>
+                            <td>250</td>
                         </tr>
                         <tr>
                             <td>Tromblon</td>
-                            <td>60</td>
-                            <td>3d4</td>
-                            <td>10m/20m</td>
-                            <td>1-5</td>
+                            <td>2d6</td>
+                            <td>2M</td>
+                            <td>20/40m</td>
                             <td>1</td>
-                            <td>À deux mains, Dispersion</td>
-                        </tr>
-                        <tr>
-                            <th colspan="7">Artillerie</th>
-                        </tr>
-                        <tr>
-                            <td>Canon</td>
-                            <td>55</td>
-                            <td>6d10</td>
-                            <td>450m</td>
-                            <td>/</td>
-                            <td>1</td>
-                            <td>3 round de rechargement</td>
-                        </tr>
-                        <tr>
-                            <td>Canon orgue</td>
-                            <td>50</td>
-                            <td>4d10</td>
-                            <td>200m</td>
-                            <td>/</td>
+                            <td>Rechargement(3 min 1), Peu maniable, Perce-armure(2)</td>
                             <td>4</td>
-                            <td>5 tours de rechargement</td>
+                            <td>250</td>
                         </tr>
-                        <tr>
-                            <td>Mortier</td>
-                            <td>50</td>
-                            <td>6d10</td>
-                            <td>350m</td>
-                            <td>/</td>
-                            <td>1</td>
-                            <td>3 tours de rechargement</td>
-                        </tr>
-                        <tr>
-                            <td>Canon à flammes</td>
-                            <td>45</td>
-                            <td>6d8 + 1d6/tour pdt 5 tours</td>
-                            <td>250m</td>
-                            <td>/</td>
-                            <td>1</td>
-                            <td>4 tours de rechargement</td>
-                        </tr>
-                        <tr>
-                            <td colspan="7">Les armes à feu infligent des dégâts contondants et perforants. Elles requièrent de la poudre noire pour fonctionner (une dose par canon, dix pour l'artillerie). Une dose correspond à 10g de poudre noire. Les armes à dispersion utilisent des plombs, les autres des balles en métal. Toutes les armes à feu possèdent le trait Chargement, les armes à une main nécessitent une action simple par canon, les armes à deux mains une action complexe par canon. Sur un échec critique, l'arme s'enraye et doit être réparée pour pouvoir tirer à nouveau.</td>
-                        </tr>
+                        <tr><td colspan="8">Toutes les armes à feu infligent des dégâts perforants et nécessitent de la poudre pour fonctionner.</td> </tr>
                         </tbody>
                     </table>
-
-                    <p class="caption" onclick="hideContent(this)" id="table_boucliers">Boucliers</p>
-                    <table width="95%" class="hidden">
-                        <thead>
-                        <tr>
-                            <th>Catégorie</th>
-                            <th>Attaque</th>
-                            <th>Parade</th>
-                            <th>Dégâts</th>
-                            <th>Spécial</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td colspan="5">Petits boucliers : ne permettent pas de bloquer les projectiles hors armes de lancer.</td>
-                        </tr>
-                        <tr>
-                            <td>Bocle</td>
-                            <td>60</td>
-                            <td>60</td>
-                            <td rowspan="3">1d4</td>
-                            <td>/</td>
-                        </tr>
-                        <tr>
-                            <td>Rondache</td>
-                            <td>55</td>
-                            <td>65</td>
-                            <td>Atq -5</td>
-                        </tr>
-                        <tr>
-                            <td>Targe</td>
-                            <td>55</td>
-                            <td>60</td>
-                            <td>Se fixe à l'avant bras et n'occupe pas de main</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5">Boucliers moyens : procurent un abri partiel contre les projectiles dans une direction (chance de toucher -4).</td>
-                        </tr>
-                        <tr>
-                            <td>Écu</td>
-                            <td>50</td>
-                            <td>70</td>
-                            <td rowspan="4">1d4</td>
-                            <td>Atq -8</td>
-                        </tr>
-                        <tr>
-                            <td>Parma</td>
-                            <td>55</td>
-                            <td>65</td>
-                            <td>Atq -7</td>
-                        </tr>
-                        <tr>
-                            <td>Bouclier Viking</td>
-                            <td>55</td>
-                            <td>70</td>
-                            <td>Atq -8</td>
-                        </tr>
-                        <tr>
-                            <td>Bouclier en amande</td>
-                            <td>50</td>
-                            <td>70</td>
-                            <td>Atq -8</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5">Grands boucliers : procurent un abri important contre les projectiles dans une direction (chance de toucher -8).</td>
-                        </tr>
-                        <tr>
-                            <td>Pavois</td>
-                            <td>40</td>
-                            <td>80</td>
-                            <td rowspan="2">1d6</td>
-                            <td>Atq -15</td>
-                        </tr>
-                        <tr>
-                            <td>Égide</td>
-                            <td>40</td>
-                            <td>80</td>
-                            <td>Atq -15</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <h3 onclick="hideContent(this)">Propriétés spéciales des armes</h3>
-                    <div class="hidden">
-                        <p><span class="big_underline">À deux mains</span>Cette arme nécessite les deux mains lorsque vous attaquez avec.</p>
-                        <p><span class="big_underline">Allonge</span>Ce type d'arme ajoute un mètre à votre allonge lorsque vous attaquez avec, ou pour déterminer votre allonge lorsque vous effectuez une attaque d'opportunité avec. </p>
-                        <p><span class="big_underline">Artillerie</span>Ce genre d'arme nécessite une connaissance pointue en balistique et mécanique. Elles sont généralement trop lourde pour être déplacée sans aide et il faut une équipe pour la manier.</p>
-                        <p><span class="big_underline">Chargement</span>Cette arme doit être rechargée avant d'être utilisée, le type d'action nécessaire pour recharger l'arme est indiqué entre parenthèse.</p>
-                        <p><span class="big_underline">Charge</span>Une charge effectuée avec cette arme inflige le double de dégâts, le triple si la charge est faite depuis une monture.</p>
-                        <p><span class="big_underline">Légère</span>Une arme légère est petite et facile à manier, ce qui la rend idéale pour les combats à deux armes.</p>
-                        <p><span class="big_underline">Lourde</span>Une arme lourde est difficilement utilisable par les petites créatures(&lt;1m20), de plus il faut posséder une caractéristique de Force d'au moins 12 pour les utiliser convenablement.</p>
-                        <p><span class="big_underline">Perce-armure</span>Cette catégorie d'arme ignore une partie de la protection procurée par les pièce d'armures d'un montant équivalent au chiffre entre parenthèses.</p>
-                        <p><span class="big_underline">Polyvalente</span>Cette arme peut être tenue à une ou deux mains. Le chiffre indiqué entre parenthèses correspond aux dégâts si l'arme est tenue à deux mains lors d'une attaque au corps à corps.</p>
-                    </div>
-
-
                 </div>
                 <div>
                     <h3 onclick="hideContent(this)" id="mod_armes">Personalisation des armes</h3>
                     <div class="hidden">
                         <p>Il est possible de modifier une arme pour qu'elle s'adapte au mieux possible à son utilisateur. Ces modifications peuvent être faite à la main si l'on s'y connaît un peu, mais le résultat risque d'être de piètre qualité, il vaut mieux se referer à un véritable artisan pour ce genre de travaux.</p>
-                        <table width="95%">
-                            <thead>
+                        <table class="table_horizontal">
+                            <tbody>
                             <tr>
                                 <th>Modification</th>
                                 <th>Description</th>
                                 <th>Effet(s)</th>
                                 <th>Coût</th>
                             </tr>
-                            </thead>
-                            <tbody>
                             <tr><th colspan="4">Modification des parties tranchantes</th></tr>
                             <tr>
                                 <td>Lame dentelée</td>
                                 <td>En ajoutant un motif de vagues courant sur toute la lame, les blessures infligées peuvent être dévastatrices si le coup est bien placé.</td>
-                                <td>Si une attaque infligeant des dégâts tranchants inflige sont maximum de dégâts, l'attaque inflige 1d4 de dégâts supplémentaire perce-armure.</td>
+                                <td>Si une attaque infligeant des dégâts tranchants inflige son maximum de dégâts, l'attaque inflige 1d4 de dégâts supplémentaire perce-armure.</td>
                                 <td>80 pa</td>
                             </tr>
                             <tr>
                                 <td>Tranchant éternel</td>
                                 <td>Le travail acharné d'un forgeron peut rendre le tranchant d'une lame incroyablement fin et solide.</td>
-                                <td>Le taux de critique augmente de 3, si l'arme vient à être endommagé, ses dégâts ne sont pas réduits.</td>
+                                <td>L'arme fait un coup critique entre 1 et 8, si l'arme vient à être endommagé, ses dégâts ne sont pas réduits.</td>
                                 <td>15 po</td>
                             </tr>
                             <tr>
                                 <td>Lame géante</td>
                                 <td>Pour certains aventuriers éprouvant le besoin de compenser quelque chose, il est possible d'augmenter la taille de la lame jusqu'à la rendre ridiculement longue.</td>
-                                <td>L'arme gagne les propriétés "Lourde" et "Allonge" si elle ne les possèdent pas déjà, le dé de dégâts monte d'un cran, le poids de l'arme triple.</td>
+                                <td>L'arme gagne les propriétés "Lourde", "Brise-bouclier" et "Peu maniable" si elle ne les possèdent pas déjà, le dé de dégâts monte d'un cran, l'encombrement de l'arme triple.</td>
                                 <td>300% du prix de l'arme</td>
                             </tr>
                             <tr><th colspan="4">Modification des parties contondantes</th></tr>
@@ -3367,7 +3252,7 @@
                             <tr>
                                 <td>Brise-os</td>
                                 <td>Quelques pointes judicieusement placées augmentent les chance de briser les os de ses cibles.</td>
-                                <td>Sur un coup critique, la cible est <a href="Glossaire.xhtml#etourdi">étourdie</a> par la douleur causée par le coup.</td>
+                                <td>Sur un coup critique, la cible est <a href="Glossaire.xhtml#etourdi">étourdie</a> pendant 1 round par la douleur causée par le coup.</td>
                                 <td>50 pa</td>
                             </tr>
                             <tr><th colspan="4">Modification des armes à feu</th></tr>
@@ -3386,21 +3271,8 @@
                             <tr>
                                 <td>Petit calibre</td>
                                 <td>En installant un canon plus petit, on diminue le risque que l'arme s'enraye.</td>
-                                <td>Le dé de dégâts diminue d'un cran, les risques d'échec critique diminuent de 5, si l'arme s'enraye, il suffit d'une action complexe pour pouvoir tirer à nouveau.</td>
+                                <td>Le dé de dégâts diminue d'un cran, les risques d'échec critique diminuent de 5, si l'arme s'enraye, il suffit de la recharger pour pouvoir tirer à nouveau.</td>
                                 <td>10 po</td>
-                            </tr>
-                            <tr><th colspan="4">Amélioration de la garde et de la poignée</th></tr>
-                            <tr>
-                                <td>Garde adaptée</td>
-                                <td>Modification de la garde pour coller au mieux au style de combat de l'utilisateur</td>
-                                <td>Augmente la parade d'un montant équivalent au talent de l'artisan et de l'utilisateur (max : +15)</td>
-                                <td>30 pa</td>
-                            </tr>
-                            <tr>
-                                <td>Poignée personnalisée</td>
-                                <td>Modification de la poignée pour coller au mieux au style de combat de l'utilisateur</td>
-                                <td>Augmente l'attaque d'un montant équivalent au talent de l'artisan et de l'utilisateur (max : +15)</td>
-                                <td>30 pa</td>
                             </tr>
                             <tr><th>Amélioration globales</th></tr>
                             <tr>
@@ -3415,12 +3287,6 @@
                                 <td>Augmente la rupture de l'arme d'un montant équivalent au talent de l'utilisateur (max : +20)</td>
                                 <td>50 pa</td>
                             </tr>
-                            <tr>
-                                <td>Revêtement en argent</td>
-                                <td>Appliquer une fine couche d'argent sur l'arme lui permet d'infliger de plus lourd dégâts aux cibles qui y sont vulnérables</td>
-                                <td>L'arme inflige des dégâts supplémentaires aux cibles souffrant d'une vulnérabilité à l'argent</td>
-                                <td>15 po</td>
-                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -3429,409 +3295,291 @@
 
             <h2 id="Armures" onclick="hideContent(this)">Armures</h2>
             <div>
-                <p>L'armure est très importante pour éviter de subir trop de dégâts lors d'une passe d'armes. Il est possible de négliger totalement une attaque si l'armure est suffisamment efficace, cependant, plus une armure protège, plus elle rend la vie difficile.</p>
-                <p>Les pièces d'armure couvrent une ou plusieurs localisation(s) (tête, torse, bras, mains, jambes et pieds). Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation, d'un point de vue réaliste, on est sensé porté une cotte de maille sous une armure de plate, et un gambison rembourré sous cette cotte de maille, mais pour simplifier tout ça on part du principe que c'est inclus dans la protection offerte par l'armure de plate.</p>
-                <p>Les armures peuvent également être modifiés pour mieux correspondre à leur porteur. On peut imaginer une armure lourde mais ajustée ce qui réduirait les malus de dextérité et/ou d'atq/prd; une armure allégée protégeant moins mais ralentissant moins son porteur ou au contraire renforcée. Une armure peut également être teinte en noir pour apporter des bonus de furtivité ou alors décorée pour augmenter l'éloquence.</p>
-                <p>L'armure naturelle et la protection magique s'appliquent à toutes les localisations (sauf précisé autrement).</p>
-                <p>La catégorie d'armure d'un personnage est déterminé par les deux pièces d'armure de la catégorie la plus lourde qu'il porte. Un plastron compte comme deux pièces, et les pièces allant par paires ne comptent pour un que si elles sont de la même catégorie, autrement elle compte pour un demi.</p>
-                <table class="table_compact" width="50%">
+                <p>Les armures sont un élément très important dans l'équipement d'un personnage, surtout si c'est un combattant de mêlée. L'armure permet de réduire les dégâts subis, mais impose parfois des pénalités.</p>
+                <p>La plupart des armures possèdent une catégorie de poids représentant à quel point l'armure est lourde et gênante pour son porteur. Si un personnage porte plusieurs types d'armure, il subit les pénalités relatives à la pièce de plus lourde catégorie qu'il porte.</p>
+                <p><span class="big_underline">Légère :</span>l'armure légère ne gêne que très peu la mobilité du personnage, il subit un malus de -10 à ses tests d'Acrobaties.</p>
+                <p><span class="big_underline">Intermédiaire :</span>L'armure intermédiaire impose une pénalité moyenne sur la mobilité du personnage, il subit un malus de -10 sur ses tests d'Agilité et sa vitesse diminue de 1m.</p>
+                <p><span class="big_underline">Lourde :</span>L'armure lourde impose une grande pénalité sur la mobilité du personnage, il subit un malus de -20 sur ses tests d'Agilité et sa vitesse diminue de 2m.  </p>
+                <p><span class="big_underline">Super-lourde :</span>L'armure super-lourde impose une pénalité énorme sur la mobilité du personnage, il subit un malus de -30 sur ses tests d'Agilité et sa vitesse diminue de 3m.  </p>
+                <p>Les pièces d'armure couvrent le torse ou un membre (tête, bras G, bras D, jambes D, jambes G). Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation, d'un point de vue réaliste, on est sensé porté une cotte de maille sous une armure de plate, et un gambison rembourré sous cette cotte de maille, mais pour simplifier tout ça on part du principe que c'est inclus dans la protection offerte par l'armure de plate.</p>
+                <p>Chaque pièce d'armure possède une certaine valeur de protection (PR) qui réduit tout dégâts subit sur la zone qu'elle protège. Certaines armures possèdent une PR magique face à un type de dégâts (PR froid par exemple).</p>
+                <p>Il existe deux types d'armure :</p>
+                <ul>
+                    <li><span class="big_underline">Armure partielle :</span>Les armures de ce type ne couvrent pas totalement la zone qu'elle protège, elle possède une PR moindre mais sont moins encombrante que leur version complète et souvent plus légères. </li>
+                    <li><span class="big_underline">Armure intégrale :</span>Les armures de ce type offre un meilleure PR mais sont plus lourde et encombrante. </li>
+                </ul>
+                <p>Un armure possède els attribut suivants :</p>
+                <ul>
+                    <li><span class="big_underline">Protection (PR) :</span> La valeur de protection fournie par l'armure</li>
+                    <li><span class="big_underline">Catégorie :</span>La catégorie de pois de l'armure.  </li>
+                    <li><span class="big_underline">Encombrement :</span>L'encombrement de la pièce d'armure. L'encombrement est divisé par deux lorsque l'armure est équipée.</li>
+                    <li><span class="big_underline">Prix :</span>Le prix en pièces d'argent d'une pièce d'armure. </li>
+                </ul>
+                <p class="caption" id="table_armure_partielles">Armures partielles</p>
+                <table class="table_horizontal">
                     <tbody>
                     <tr>
+                        <th>Matériau</th>
+                        <th>PR</th>
+                        <th>PR magique</th>
+                        <th>Catégorie</th>
+                        <th>ENC/pièce<br/>(armure complète)</th>
+                        <th>Prix</th>
+                    </tr>
+                    <tr>
+                        <td>Peau</td>
+                        <td>1</td>
+                        <td>1 glace</td>
+                        <td>Légère</td>
+                        <td>2(12)</td>
+                        <td>20 membre/40 torse (140)</td>
+                    </tr>
+                    <tr>
+                        <td>Cuir</td>
+                        <td>1</td>
+                        <td>1 feu</td>
+                        <td>Légère</td>
+                        <td>2(12)</td>
+                        <td>25 membre/50 torse (175)</td>
+                    </tr>
+                    <tr>
+                        <td>Chitine</td>
+                        <td>1</td>
+                        <td>1 foudre</td>
+                        <td>Légère</td>
+                        <td>2(12)</td>
+                        <td>30 membre/60 torse (210)</td>
+                    </tr>
+                    <tr>
+                        <td>Bois</td>
+                        <td>1</td>
                         <td/>
+                        <td>Légère</td>
+                        <td>2(12)</td>
+                        <td>15 membre/30 torse (105)</td>
+                    </tr>
+                    <tr>
+                        <td>Os</td>
+                        <td>2</td>
                         <td/>
-                        <th colspan="3">Catégorie de la plus lourde pièce</th>
+                        <td>Légère</td>
+                        <td>3(18)</td>
+                        <td>35 membre/60 torse (235)</td>
                     </tr>
                     <tr>
-                        <th/>
-                        <th/>
-                        <th>Léger</th>
-                        <th>Intermédiaire</th>
-                        <th>Lourd</th>
+                        <td>Fer</td>
+                        <td>3</td>
+                        <td/>
+                        <td>Intermédiaire</td>
+                        <td>3(18)</td>
+                        <td>50 membre/100 torse (350)</td>
                     </tr>
                     <tr>
-                        <th rowspan="4" width="20%">Catégorie de la 2ème plus lourde pièce</th>
+                        <td>Nilaroy</td>
+                        <td>3</td>
+                        <td>1 magique</td>
+                        <td>Légère</td>
+                        <td>2(12)</td>
+                        <td>90 membre/180 torse (630)</td>
                     </tr>
                     <tr>
-                        <th>Léger</th>
-                        <td>Léger</td>
-                        <td>Léger</td>
-                        <td>Intermédiaire</td>
+                        <td>Kusni</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>Vêtement</td>
+                        <td>1(6)</td>
+                        <td>500 membre/ 1000 torse(3500)</td>
                     </tr>
                     <tr>
-                        <th>Intermédiaire</th>
-                        <td>Léger</td>
+                        <td>Acier</td>
+                        <td>4</td>
+                        <td/>
                         <td>Intermédiaire</td>
-                        <td>Intermédiaire</td>
+                        <td>3(18)</td>
+                        <td>75 membre/250 torse (525)</td>
                     </tr>
                     <tr>
-                        <th>Lourd</th>
+                        <td>Shoren</td>
+                        <td>4</td>
+                        <td>3 froid</td>
                         <td>Intermédiaire</td>
-                        <td>Intermédiaire</td>
-                        <td>Lourd</td>
+                        <td>3(18)</td>
+                        <td>150 membre/300 torse (1050)</td>
+                    </tr>
+                    <tr>
+                        <td>Gnistar</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>Légère</td>
+                        <td>1(6)</td>
+                        <td>300 membre/600 torse (2100)</td>
+                    </tr>
+                    <tr>
+                        <td>Lakma</td>
+                        <td>5</td>
+                        <td>3 foudre</td>
+                        <td>Légère</td>
+                        <td>1(6)</td>
+                        <td>500 membre/ 1000 torse(3500)</td>
+                    </tr>
+                    <tr>
+                        <td>Virgonium</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>Lourde</td>
+                        <td>5(30)</td>
+                        <td>600 membre/ 1200 torse(4200)</td>
+                    </tr>
+                    <tr>
+                        <td>Skymma</td>
+                        <td>6</td>
+                        <td>3 feu</td>
+                        <td>Lourde</td>
+                        <td>5(30)</td>
+                        <td>500 membre/ 1000 torse(3500)</td>
                     </tr>
                     </tbody>
                 </table>
-                <p>Par exemple, un personnage portant un plastron intermédiaire avec le reste de son armure de catégorie légère et un autre personnage portant le même plastron(intermédiaire) avec des jambières et un casque lourds accompagnés d'autres pièces légères. Le premier personnage sera de catégorie intermédiaire, le second de catégorie lourde.</p>
-                <p>Une armure légère n'impose aucun malus à son porteur, une armure intermédiaire diminue la vitesse de son porteur d'un mètre et impose un désavantage aux épreuves de nage, une armure lourde diminue la vitesse de son porteur de deux mètres et l'empêche de nager. De plus, plus une armure est lourde, plus elle fatigue son porteur.</p>
-                <p>Les listes d'armures ne sont pas exhaustives, il revient au MJ de décides des statistiques d'une armure.  Pour voir le poids et la valeur de base des armures : <a href="Objets.xhtml#armures">Listes des armures</a>.</p>
-                <div>
-                    <p class="caption" onclick="hideContent(this)">Pièces d'armures</p>
-                    <table width="90%" class="hidden">
-                        <thead>
-                        <tr>
-                            <th>Type d'armure (Localisation)</th>
-                            <th>Catégorie</th>
-                            <th>Type</th>
-                            <th>Protection</th>
-                            <th>Malus</th>
-                            <th>Rupture</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th rowspan="10">Plastrons (torse)</th>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Léger</th>
-                        </tr>
-                        <tr>
-                            <td>Plastron de cuir</td>
-                            <td>2</td>
-                            <td>/</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="4">Intermédiaire</th>
-                        </tr>
-                        <tr>
-                            <td>Plastron de cuir renforcé de métal</td>
-                            <td>3</td>
-                            <td>AGI -5</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>Plastron d'écailles</td>
-                            <td>3</td>
-                            <td>AGI -8</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <td>Plastron de bois</td>
-                            <td>3</td>
-                            <td>AGI -15</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">Lourd</th>
-                        </tr>
-                        <tr>
-                            <td>Plastron lamellaire</td>
-                            <td>4</td>
-                            <td>AGI -10</td>
-                            <td>55</td>
-                        </tr>
-                        <tr>
-                            <td>Plastron de métal</td>
-                            <td>5</td>
-                            <td>AGI -15</td>
-                            <td>65</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="6">Vestes (torse, bras)</th>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">Légère</th>
-                        </tr>
-                        <tr>
-                            <td>Veste en toile renforcée</td>
-                            <td>1</td>
-                            <td>/</td>
-                            <td>15</td>
-                        </tr>
-                        <tr>
-                            <td>Veste en peaux</td>
-                            <td>2</td>
-                            <td>/</td>
-                            <td>20</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Intermédiaire</th>
-                        </tr>
-                        <tr>
-                            <td>Gambison rembourré</td>
-                            <td>3</td>
-                            <td>AGI -5</td>
-                            <td>30</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="6">Cottes (torse, jambes, bras)</th>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Intermédiaire</th>
-                        </tr>
-                        <tr>
-                            <td>Cotte de mailles sans manches</td>
-                            <td>3</td>
-                            <td>AGI -15</td>
-                            <td>55</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">Lourde</th>
-                        </tr>
-                        <tr>
-                            <td>Cotte de mailles avec manches</td>
-                            <td>4</td>
-                            <td>AGI -15 DEX -8</td>
-                            <td>55</td>
-                        </tr>
-                        <tr>
-                            <td>Cotte de mailles de qualité</td>
-                            <td>5</td>
-                            <td>AGI -10 DEX -4</td>
-                            <td>60</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="8">Casques (tête)</th>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Léger</th>
-                        </tr>
-                        <tr>
-                            <td>Casque de cuir</td>
-                            <td>2</td>
-                            <td>/</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Intermédiaire</th>
-                        </tr>
-                        <tr>
-                            <td>Casque de cuir renforcé de métal</td>
-                            <td>3</td>
-                            <td>/</td>
-                            <td>45</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">Lourd</th>
-                        </tr>
-                        <tr>
-                            <td>Casque de métal</td>
-                            <td>4</td>
-                            <td>PRÉ -5</td>
-                            <td>65</td>
-                        </tr>
-                        <tr>
-                            <td>Heaume de métal</td>
-                            <td>5</td>
-                            <td>PRÉ - 10</td>
-                            <td>70</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="9">Jambières (jambes)</th>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Léger</th>
-                        </tr>
-                        <tr>
-                            <td>Jambières de cuir</td>
-                            <td>2</td>
-                            <td>/</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">Intermédiaire</th>
-                        </tr>
-                        <tr>
-                            <td>Jambières de cuir renforcé de métal</td>
-                            <td>3</td>
-                            <td>AGI -5</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>Jambières d'écailles</td>
-                            <td>3</td>
-                            <td>AGI -5</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">Lourd</th>
-                        </tr>
-                        <tr>
-                            <td>Jambières lamellaires</td>
-                            <td>4</td>
-                            <td>AGI - 8</td>
-                            <td>55</td>
-                        </tr>
-                        <tr>
-                            <td>Jambières de métal</td>
-                            <td>5</td>
-                            <td>AGI - 10</td>
-                            <td>65</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="13">Brassards et Spallières (Bras)</th>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">Léger</th>
-                        </tr>
-                        <tr>
-                            <td>Brassards de cuir</td>
-                            <td>1</td>
-                            <td>/</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <td>Spallières de cuir</td>
-                            <td>1</td>
-                            <td>/</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="5">Intermédiaire</th>
-                        </tr>
-                        <tr>
-                            <td>Brassards de cuir renforcé de métal</td>
-                            <td>2</td>
-                            <td>DEX -4</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>Spallières de cuir renforcé de métal</td>
-                            <td>2</td>
-                            <td>DEX -4</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>Brassards d'écailles</td>
-                            <td>2</td>
-                            <td>DEX -4</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <td>Spallières d'écailles</td>
-                            <td>2</td>
-                            <td>DEX -4</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="4">Lourd</th>
-                        </tr>
-                        <tr>
-                            <td>Brassards de métal</td>
-                            <td>3</td>
-                            <td>DEX -6</td>
-                            <td>60</td>
-                        </tr>
-                        <tr>
-                            <td>Spallières de métal</td>
-                            <td>3</td>
-                            <td>DEX -6 Prd -2</td>
-                            <td>60</td>
-                        </tr>
-                        <tr>
-                            <td>Brassards, cubitières et spallières de métal</td>
-                            <td>5</td>
-                            <td>DEX -8 Prd -4</td>
-                            <td>65</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="8">Gantelets (mains)</th>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Léger</th>
-                        </tr>
-                        <tr>
-                            <td>Gants de cuir</td>
-                            <td>2</td>
-                            <td>/</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">Intermédiaire</th>
-                        </tr>
-                        <tr>
-                            <td>Gantelets de cuir renforcé de métal</td>
-                            <td>3</td>
-                            <td>DEX -4</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>Gantelets d'écailles</td>
-                            <td>3</td>
-                            <td>DEX -4</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Lourd</th>
-                        </tr>
-                        <tr>
-                            <td>Gantelets complet de métal</td>
-                            <td>5</td>
-                            <td>DEX -8 Atq -4</td>
-                            <td>65</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="7">Bottes (pieds)</th>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Légère</th>
-                        </tr>
-                        <tr>
-                            <td>Bottes de cuir</td>
-                            <td>2</td>
-                            <td>/</td>
-                            <td>35</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Intermédiaire</th>
-                        </tr>
-                        <tr>
-                            <td>Bottes de cuir renforcées</td>
-                            <td>3</td>
-                            <td>/</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="2">Lourd</th>
-                        </tr>
-                        <tr>
-                            <td>Solerets de métal</td>
-                            <td>5</td>
-                            <td>AGI -8</td>
-                            <td>60</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <p class="caption" id="table_armure_intégrale">Armures intégrales</p>
+                <table class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>Matériau</th>
+                        <th>PR</th>
+                        <th>PR magique</th>
+                        <th>Catégorie</th>
+                        <th>ENC/pièce<br/>(armure complète)</th>
+                        <th>Prix</th>
+                    </tr>
+                    <tr>
+                        <td>Peau</td>
+                        <td>2</td>
+                        <td>2 glace</td>
+                        <td>Intermédiaire</td>
+                        <td>3(18)</td>
+                        <td>30 membre/60 torse (210)</td>
+                    </tr>
+                    <tr>
+                        <td>Bois</td>
+                        <td>2</td>
+                        <td/>
+                        <td>Intermédiaire</td>
+                        <td>4(24)</td>
+                        <td>20 membre/40 torse (140)</td>
+                    </tr>
+                    <tr>
+                        <td>Cuir</td>
+                        <td>3</td>
+                        <td>1 feu</td>
+                        <td>Intermédiaire</td>
+                        <td>3(18)</td>
+                        <td>50 membre/100 torse (350)</td>
+                    </tr>
+                    <tr>
+                        <td>Chitine</td>
+                        <td>3</td>
+                        <td>1 foudre</td>
+                        <td>Légère</td>
+                        <td>2(12)</td>
+                        <td>60 membre/120 torse (420)</td>
+                    </tr>
+                    <tr>
+                        <td>Os</td>
+                        <td>3</td>
+                        <td/>
+                        <td>Intermédiaire</td>
+                        <td>4(24)</td>
+                        <td>50 membre/100 torse (350)</td>
+                    </tr>
+                    <tr>
+                        <td>Fer</td>
+                        <td>4</td>
+                        <td/>
+                        <td>Lourde</td>
+                        <td>4(24)</td>
+                        <td>100 membre/200 torse (700)</td>
+                    </tr>
+                    <tr>
+                        <td>Nilaroy</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>Intermédiaire</td>
+                        <td>3(18)</td>
+                        <td>180 membre/360 torse (1260)</td>
+                    </tr>
+                    <tr>
+                        <td>Kusni</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>Légère</td>
+                        <td>2(12)</td>
+                        <td>750 membre/ 1500 torse(5250)</td>
+                    </tr>
+                    <tr>
+                        <td>Acier</td>
+                        <td>5</td>
+                        <td/>
+                        <td>Lourde</td>
+                        <td>4(24)</td>
+                        <td>150 membre/300 torse (1050)</td>
+                    </tr>
+                    <tr>
+                        <td>Shoren</td>
+                        <td>5</td>
+                        <td>4 froid</td>
+                        <td>Lourde</td>
+                        <td>4(24)</td>
+                        <td>250 membre/500 torse (1750)</td>
+                    </tr>
+                    <tr>
+                        <td>Gnistar</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>Intermédiaire</td>
+                        <td>2(12)</td>
+                        <td>500 membre/1000 torse (3500)</td>
+                    </tr>
+                    <tr>
+                        <td>Lakma</td>
+                        <td>6</td>
+                        <td>4 foudre</td>
+                        <td>Intermédiaire</td>
+                        <td>2(12)</td>
+                        <td>750 membre/ 1800 torse(5250)</td>
+                    </tr>
+                    <tr>
+                        <td>Virgonium</td>
+                        <td>6</td>
+                        <td>6 </td>
+                        <td>Super-Lourde</td>
+                        <td>6(36)</td>
+                        <td>900 membre/ 1800 torse(6300)</td>
+                    </tr>
+                    <tr>
+                        <td>Skymma</td>
+                        <td>8</td>
+                        <td>4 feu</td>
+                        <td>Super-Lourde</td>
+                        <td>6(36)</td>
+                        <td>750 membre/ 1800 torse(5250)</td>
+                    </tr>
+                    </tbody>
+                </table>
                 <h3 onclick="hideContent(this)" id="mod_armures">Personalisation des armures</h3>
-                <div class="hidden">
+                <div>
                     <p>Il est possible de modifier une armure pour qu'elle s'adapte au mieux possible à son utilisateur. Ces modifications peuvent être faite à la main si l'on s'y connaît un peu, mais le résultat risque d'être de piètre qualité, il vaut mieux se referer à un véritable artisan pour ce genre de travaux.</p>
-                    <table width="95%">
-                        <thead>
+                    <table class="table_horizontal">
+                        <tbody>
                         <tr>
                             <th>Modification</th>
                             <th>Description</th>
                             <th>Effet(s)</th>
                             <th>Coût</th>
                         </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Armure renforcée</td>
-                            <td>Une deuxième épaisseur du matériau utilisé permet de mieux protéger le porteur, mais cela augmente considérablement le poids de l'armure.</td>
-                            <td>La PR de l'armure augmente de 1, la Rupture de l'armure augmente de 5, les malus éventuels d'agilité augmentent de 50% (si l'armure ne possède pas de malus d'agilité, elle obtient un malus de 3), son poids double et la catégorie de poids de l'armure monte d'un cran.</td>
-                            <td>50% du prix de l'armure</td>
-                        </tr>
-                        <tr>
-                            <td>Armure allégée</td>
-                            <td>La épaisseur de la protection est réduite, le porteur est moins protégé mais plus habile</td>
-                            <td>La PR de l'armure diminue de 1, la Rupture de l'armure diminue de 5, les malus éventuel d'agilité sont divisés par 2, son poids est divisé par 2 et la catégorie de poids de l'armure descend d'un cran.</td>
-                            <td>100 pa</td>
-                        </tr>
                         <tr>
                             <td>Armure polie</td>
                             <td>Un traitement spécial à base d'aluminium permet de donner un aspect très brillant à l'armure.</td>
-                            <td>Dans un environnement très lumineux, le porteur de l'armure peut tenter d'éblouir ses adversaires (la cible doit réussir un jet de PER ou être <a href="Glossaire.xhtml#ebloui">éblouie</a> pendant un round. En revanche, la lumière réfléchie par l'armure empêche de passer inaperçu.</td>
+                            <td>Dans un environnement très lumineux, le porteur de l'armure peut tenter d'éblouir ses adversaires (la cible doit réussir un jet de PER ou être <a href="Glossaire.xhtml#aveugle">aveuglée</a> pendant un round. En revanche, la lumière réfléchie par l'armure empêche de passer inaperçu.</td>
                             <td>50 pa</td>
                         </tr>
                         <tr>
@@ -3855,11 +3603,143 @@
                         <tr>
                             <td>Protection vitale</td>
                             <td>L'armure protège une zone légèrement plus étendue que la normale pour éviter que son porteur ne se blesse gravement s'il subit une attaque bien placée</td>
-                            <td>Avantage au jet de rupture si l'effet du critique cible cette pièce d'armure, le poids de l'armure augmente de 20%.</td>
+                            <td>Avantage au jet de rupture si l'effet du critique cible cette pièce d'armure.</td>
                             <td>10% du prix de l'armure</td>
                         </tr>
                         </tbody>
                     </table>
+                </div>
+                <h3 id="boucliers" onclick="hideContent(this)">Boucliers</h3>
+                <div>
+                    <p>Les boucliers sont utilisées pour se prémunir de toute sorte d'attaques. Pusqu'ils sont à mi-chemin entre les armes et les armures, ils suivent des règles spéciales.</p>
+                    <p><span class="big_underline">Résistance de Bouclier :</span>Au lieu de posséder une valeur de Protection, les boucliers possède une résistance notée RB, qui prend en compte la solidité du bouclier et la surface qu'il couvre.</p>
+                    <p>Si lors d'un blocage réussit, les dégâts subis excèdent la RB, le défenseur subit l'intégralité des dégâts sur le bras qui tient le bouclier sauf s'il choisit de dépenser 2 PE pour bloquer l'attaque dans sa totalité. Le porteur de bouclier est ainsi capable de protéger son intégrité physique mais se fatiguer rapidement s'il ne fait que des blocages totaux.</p>
+                    <p>Les bouclier ci-dessous possèdent une variante nommée Grands Bouclier. Faire un blocage avec un grand bouclier devient une tâche Simple(+10) mais un tel bouclier est d'une catégorie de poids supérieure, ralenti son porteur d'un mètre, possède un encombrement d'un point supérieur et coûte 25% plus cher.</p>
+                    <p class="caption" id="table_bouclier">Bouclier</p>
+                    <table class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>Matériau</th>
+                        <th>PR</th>
+                        <th>PR magique</th>
+                        <th>Catégorie</th>
+                        <th>ENC</th>
+                        <th>Prix</th>
+                    </tr>
+                    <tr>
+                        <td>Peau</td>
+                        <td>5</td>
+                        <td>3 (4 glace)</td>
+                        <td>Léger</td>
+                        <td>2</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Bois</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>Léger</td>
+                        <td>2</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Os</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>Léger</td>
+                        <td>2</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Cuir</td>
+                        <td>6</td>
+                        <td>3 (4 feu)</td>
+                        <td>Léger</td>
+                        <td>2</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>Chitine</td>
+                        <td>6</td>
+                        <td>3 (4 foudre)</td>
+                        <td>Léger</td>
+                        <td>1</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td>Nilaroy</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>Léger</td>
+                        <td>1</td>
+                        <td>130</td>
+                    </tr>
+                    <tr>
+                        <td>Fer</td>
+                        <td>7</td>
+                        <td>4</td>
+                        <td>Intermédiaire</td>
+                        <td>3</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Kusni</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>Léger</td>
+                        <td>1</td>
+                        <td>600</td>
+                    </tr>
+                    <tr>
+                        <td>Acier</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>Intermédiaire</td>
+                        <td>3</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>Gnistar</td>
+                        <td>8</td>
+                        <td>5</td>
+                        <td>Léger</td>
+                        <td>1</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>Lakma</td>
+                        <td>8</td>
+                        <td>4 (6 foudre)</td>
+                        <td>Léger</td>
+                        <td>1</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>Shoren</td>
+                        <td>8</td>
+                        <td>4 (6 froid)</td>
+                        <td>Intermédiaire</td>
+                        <td>3</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>Virgonium</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>Lourde</td>
+                        <td>4</td>
+                        <td>800</td>
+                    </tr>
+                    <tr>
+                        <td>Skymma</td>
+                        <td>10</td>
+                        <td>5 (8 feu)</td>
+                        <td>Lourde</td>
+                        <td>4</td>
+                        <td>700</td>
+                    </tr>
+                    </tbody>
+                </table>
                 </div>
             </div>
         </div>
