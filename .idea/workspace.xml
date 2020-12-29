@@ -4,6 +4,8 @@
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Rules.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +45,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content\Collection" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -178,6 +180,10 @@
       <workItem from="1608647671670" duration="19499000" />
       <workItem from="1608716031222" duration="16860000" />
       <workItem from="1608827435704" duration="7699000" />
+      <workItem from="1608988863682" duration="8761000" />
+      <workItem from="1609072066664" duration="10452000" />
+      <workItem from="1609176068304" duration="5302000" />
+      <workItem from="1609258640942" duration="10102000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
@@ -205,9 +211,9 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="636" y="96" width="706" height="888" key="find.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1608746376109" />
-    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1607205337311">
+    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1609275700233">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1607205337311" />
+    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1609275700233" />
   </component>
 </project>

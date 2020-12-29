@@ -62,12 +62,14 @@ table.table_horizontal tbody td{
     border-bottom: 1px solid black;
     padding: 1px 8px 1px 8px;
     margin: 5px;
+    background-color: navajowhite;
 }
 table.table_horizontal tbody th{
     border-style: none;
     border-bottom: 1px solid black;
     padding: 1px 8px 1px 8px;
     margin: 5px;
+    background-color: burlywood;
 }
 table.table_bestiary{
     border-style: none;
@@ -87,12 +89,12 @@ table.table_bestiary tbody td{
     margin: 2px;
 }
 
-td.bonus{
-    background-color: sandybrown;
+#table_carac_origine td.bonus{
+    background-color: #f0ec77;
 }
 
-td.malus{
-    background-color: firebrick;
+#table_carac_origine td.malus{
+    background-color: lightsalmon;
 }
 
 th,td{/*Affecte les cases d'en-tête et celle de corps*/
