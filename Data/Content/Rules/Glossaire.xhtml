@@ -95,7 +95,7 @@
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
-                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#vulnerabilites_resisances">Vulnérabilités &amp; Résistances</a></span></li>
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#vulnerabilites_resistances">Vulnérabilités &amp; Résistances</a></span></li>
                         <li><span class="little"><a href="../Rules/Glossaire.xhtml#capacite_speciales">Capacités spéciales</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
@@ -269,26 +269,16 @@
         </div>
     </div>
 
-    <h1 id="vulnerabilites_resisances" onclick="hideContent(this)">Vulnérabilités et résistances</h1>
+    <h1 id="vulnerabilites_resistances" onclick="hideContent(this)">Vulnérabilités et résistances</h1>
     <div>
         <h2>Vulnérabilités</h2>
         <div>
-            <p>Une créature peut être vulnérable à un type de dégâts, ce qui signifie qu'elle subira des dommages accrus face à ce genre de dégâts. Il existe 3 niveaux de vulnérabilités :</p>
-            <ul>
-                <li id="vulnerabilite_mineure">Vulnérabilité mineure : les dégâts subis augmentent d'un tiers (+33%)</li>
-                <li id="vulnerabilite_moyenne">Vulnérabilité : les dégâts subis augmentent de moitié (+50%)</li>
-                <li  id="vulnerabilite_majeure">Vulnérabilité majeure : les dégâts subis doublent (+100%)</li>
-            </ul>
+            <p>Une créature peut être vulnérable à un type de dégâts, ce qui signifie qu'elle subira des dommages accrus face à ce genre de dégâts. On note ainsi la vulnérabilité d'une créature : Vulnérabilité à X(Z) où X est l'élément infligeant Z points de dégâts supplémentaires si la créature est touché par cet élément.</p>
         </div>
         <h2>Résistances</h2>
         <div>
-            <p>Une créature peut être résitante à un type de dégâts, ce qui signifie qu'elle subira des dommages réduits face à ce genre de dégâts. Il existe 4 niveaux de résistances :</p>
-            <ul>
-                <li id="resistance_mineure">Résistance mineure : les dégâts subis diminuent d'un tiers (-33%)</li>
-                <li id="resistance_moyenne">Résistance : les dégâts subis sont divisés par deux (-50%)</li>
-                <li id="resistance_majeure">Résistance majeure : les dégâts subis sont divisés par quatre (-75%)</li>
-                <li id="immunite">Immunité : les dégâts subis sont nullifiés</li>
-            </ul>
+            <p>Une créature peut être résistante à un type de dégâts, ce qui signifie qu'elle subira des dommages réduits face à ce genre de dégâts. On note ainsi la résistance d'une créature : Résistance à X(Z) où X est l'élément infligeant Z points de dégâts en moins si la créature est touchée par cet élément.</p>
+            <p id="immunite">Une créature peut posséder le trait "Immunité à X" auquel cas, tous les dégâts subis par cet élément sont nullifiés</p>
         </div>
         <p>Les résistances et les vulnérabilités sont appliqués en dernier, après toutes les autres réductions/augmentations de dégâts et ne se cumulent pas. Si une créature a une résistance au feu ainsi qu'une résistance à tous les dégâts non magiques, les dégâts non magiques de feu subis par la créature sont réduits de moitié et non de trois-quarts.</p>
     </div>

@@ -95,7 +95,7 @@
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
-                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#vulnerabilites_resisances">Vulnérabilités &amp; Résistances</a></span></li>
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#vulnerabilites_resistances">Vulnérabilités &amp; Résistances</a></span></li>
                         <li><span class="little"><a href="../Rules/Glossaire.xhtml#capacite_speciales">Capacités spéciales</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
@@ -171,7 +171,7 @@
             <h3 id="cran_des" onclick="hideContent(this)">Cran des dés</h3>
             <div>
                 <p>Parfois, les conditions sont si bonnes que le MJ peut vous permettre d'augmenter votre dé d'un cran ou parfois si mauvaise qu'il diminue d'un cran. Cela concerne seulement les jets de dégâts ou d'initiative.</p>
-                <p>Les crans de dés sont ainsi représenté : 1d4->1d6->1d8->1d10->2d6->2d8->2d10->3d8->3d10</p>
+                <p>Les crans de dés sont ainsi représenté : 1d2 &#8594; 1d4 &#8594; 1d6 &#8594; 1d8 &#8594; 1d10 &#8594; 1d12 &#8594; 1d8+1d6 &#8594; 2d8 &#8594; 1d10+1d8 &#8594; 2d10 &#8594; 1d12+1d10 &#8594; 2d12 &#8594; 2d8+1d10 &#8594; 3d10 &#8594; 2d10+1d12 &#8594; 2d12+1d10 &#8594; 3d12 &#8594; 4d10 &#8594; 2d12+2d10 &#8594; 4d12</p>
             </div>
 
             <h3 id="modificateur_jets" onclick="hideContent(this)">Modificateurs de difficultés</h3>
@@ -480,10 +480,10 @@
                     </tr>
                     <tr>
                         <th>Dés de caractéristique de départ</th>
+                        <th>2d8</th>
+                        <th>2d10</th>
                         <th>3d8</th>
-                        <th>4d8</th>
-                        <th>5d8</th>
-                        <th>6d8</th>
+                        <th>3d10</th>
                     </tr>
                     </tbody>
                 </table>
@@ -546,8 +546,8 @@
                 </div>
                 <h3 id="vitalite" onclick="hideContent(this)">Vitalité (PV)</h3>
                 <div>
-                    <p>La vitalité représente l'intégrité physique du personnage. C'est la caractéristique de Vigueur qui détermine la vitalité d'un personnage : Vitalité = Vig/3</p>
-                    <p>La jauge de vitalité se vide quand le personnage subit des dégâts lorsqu'il n'a plus d'endurance ou si l'attaque est critique. D'autres évènements peuvent la faire diminuer comme les dégâts de chute ou d'un piège.</p>
+                    <p>La vitalité représente l'intégrité physique du personnage. C'est la caractéristique de Vigueur qui détermine la vitalité d'un personnage : Vitalité = Vig/2,5</p>
+                    <p>La jauge de vitalité se vide quand le personnage subit des dégâts, que ce soit suite à un coup contre lequel il n'a pas sû se défendre, une chute, un piège, un sort, etc...</p>
                     <p>Si la vitalité d'une créature atteint 0, elle sombre dans l'inconscience et ce même si il lui reste de l'endurance. Pour de plus amples détails, se référer à la section <a href="Rules.xhtml#blessures_mort">Blessures et mort</a> dans la partie <a href="Rules.xhtml#Combat">Combat</a>.</p>
                     <p>La vitalité se régénère avec du repos, une entité récupère 1 point de vitalité par jour mais cela peut varier selon les conditions dans lesquelles on se repose, si l'on est sous la surveillance d'un médecin, etc...</p>
                     <p>Il est possible de soigner ses blessures plus rapidement grâce à des sorts ou des potions de soin. Les sorts guérisseurs ont les mêmes propriétés que les sorts de dégâts mais utilisent des dés d'un cran inférieurs.</p>
@@ -656,7 +656,6 @@
                         <th colspan="6">Paliers de compétences de départ</th>
                     </tr>
                     <tr>
-                        <th>Initié</th>
                         <th>Novice</th>
                         <th>Apprenti</th>
                         <th>Adepte</th>
@@ -670,14 +669,12 @@
                         <td> </td>
                         <td> </td>
                         <td> </td>
-                        <td> </td>
                     </tr>
                     <tr>
                         <th>Aventurier</th>
                         <td>2</td>
                         <td>2</td>
                         <td>1</td>
-                        <td> </td>
                         <td> </td>
                         <td> </td>
                     </tr>
@@ -688,7 +685,6 @@
                         <td>2</td>
                         <td>1</td>
                         <td> </td>
-                        <td> </td>
                     </tr>
                     <tr>
                         <th>Héros</th>
@@ -697,7 +693,6 @@
                         <td>2</td>
                         <td>2</td>
                         <td>1</td>
-                        <td> </td>
                     </tr>
                     <tr>
                         <td colspan="7">Les compétences d'origines ne comptent pas dans le nombre de compétences de départ</td>
@@ -706,14 +701,13 @@
                 </table>
                 <p>Pour devenir Initié dans une nouvelle compétence il sera nécessaire de s’entraîner, que ce soit auprès d’une personne compétente ou alors en pratiquant le domaine régi par la compétence.</p>
                 <p>La caractéristique indiquée sur la compétence est celle utilisée pour les tests liés à cette compétence. Si plusieurs caractéristiques sont indiqués, vous êtes libres de choisir laquelle utiliser pour maximiser vos chances de réussite. Il est toutefois possible que le MJ vous impose la caractéristique à utiliser si les conditions du test s'y prêtent.</p>
-                <p>Les compétences possèdent plusieurs paliers de maîtrise, chaque palier représentant l'expérience que possède votre personnage dans cette compétence. Un personnage ne possédant aucun palier d'expérience dans une compétence peut tenter de l'utiliser mais ce sera une tâche Difficile(-20) pour lui.</p>
-                <p>Un personnage peut se spécialiser dans un domaine particulier d'une compétence et ainsi effectuer les épreuves de ce domaine avec un bonus de +10. Un personnage ne peut bénéficier de plus d'une spécialisation à la fois lors d'une épreuve mais peut posséder plusieurs spécialisation dans une même compétence. Un spécialisation coûte 5 points de compétence et nécessite d'avoir atteint le palier d'Apprenti. Des exemples de spécialisations sont donnés dans la liste ci-dessous mais les joueurs peuvent tout à fait choisir leur propre spécialisation et en discuter avec le MJ.</p>
+                <p>Les compétences possèdent plusieurs paliers de maîtrise, chaque palier représentant l'expérience que possède votre personnage dans cette compétence. Un personnage ne possédant d'expérience dans une compétence peut tenter d'effectuer des actions relatives à la compétences mais il peut subir des malus selon la compétence concernée.</p>
+                <p>Un personnage peut se spécialiser dans un domaine particulier d'une compétence et ainsi effectuer les épreuves de ce domaine avec <a href="Rules.xhtml#avantage">avantage</a>. Un personnage ne peut bénéficier de plus d'une spécialisation à la fois lors d'une épreuve mais peut posséder plusieurs spécialisation dans une même compétence. Un spécialisation coûte 5 points de compétence et nécessite d'avoir atteint le palier d'Apprenti. Des exemples de spécialisations sont donnés dans la liste ci-dessous mais les joueurs peuvent tout à fait choisir leur propre spécialisation et en discuter avec le MJ.</p>
                 <p>Les paliers sont :</p>
                 <ul>
-                    <li><span class="big_underline">Initié :</span>Le personnage s’est familiarisé avec les bases, il n'est pour l'instant qu'un débutant mais il ne peut que progresser.</li>
-                    <li><span class="big_underline">Novice :</span>Le personnage commence à saisir l'ampleur des choses qu'il lui reste à apprendre, mais à déjà du potentiel. (+10)</li>
+                    <li><span class="big_underline">Novice :</span>Le personnage commence à saisir l'ampleur des choses qu'il lui reste à apprendre dans ce domaine, mais à déjà les bases. (+10)</li>
                     <li><span class="big_underline">Apprenti :</span>L’entraînement rigoureux a porté ses fruits, la maîtrise du personnage commence à le distinguer du reste du monde. (+20)</li>
-                    <li><span class="big_underline">Adepte :</span>Les capacités du personnages se sont encore renforcées, si bien qu'il est à l'aise dans la plupart des situations. (+30)</li>
+                    <li><span class="big_underline">Adepte :</span>Les capacités du personnages se sont encore renforcées, si bien qu'il est désormais capable de donner des leçons aux débutants. (+30)</li>
                     <li><span class="big_underline">Expert :</span>L'aptitude du personnage surpasse la grande majorité du commun des mortels.(+40)</li>
                     <li><span class="big_underline">Maître :</span>Le personnage est devenu un maître de son art, il est perçu comme une légende parmi ses pairs. (+50)</li>
                 </ul>
@@ -1055,13 +1049,13 @@
             <p>L'usage de la magie requiert de la force mentale, représentée par des points de <a href="Rules.xhtml#psy">Psy</a>. Quiconque a recours à la magie sans suffisamment de Psyché ou s'essaye à des créations trop imposantes pour son esprit s'expose à des risques pour son enveloppe physique.</p>
             <p>La caractéristique utilisée pour lancer des sorts est la Volonté, selon l'effet ou le domaine du sort, des bonus liés aux compétences et/ou aux spécialisations peuvent s'appliquer.</p>
             <p>La magie est par nature instable, tout lanceur de sort se doit de maîtriser ses sorts pour ne pas perdre le contrôle. Un sort non contenu est considéré comme surchargé et peut avoir des effets supplémentaires non désirés.</p>
-            <p>Contenir un sort permet de réduire la quantité de psy nécessaire par le BdVol du lanceur et de limiter les effets secondaires.</p>
+            <p>Contenir un sort permet de réduire la quantité de psy nécessaire par le BdInt du lanceur et de limiter les effets secondaires. Le coût d'un sort ne peut pas être inférieur à son cercle (un sort de cercle 4 coûtant 8 points de psy coutera 4 points de psy au minimum même si le lanceur possède un BdInt supérieur à 4). </p>
             <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
             <p>Les utilisateurs plus confirmés peuvent également transmettre des messages via la magie, ainsi la transmission de messages en Ogma est très rapide. Il est même possible de recevoir un message sans avoir aucune formation avec la magie, il suffit à l'expéditeur de connaître un tant soit peu le destinataire.</p>
             <p>Les Sarpas par exemple utilisent constamment la magie pour produire de la chaleur si ils ne peuvent pas profiter de celle des astres. On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
             <p>Pour utiliser la magie durant un combat, il faut avoir suffisamment de temps pour se concentrer. Si le lanceur est perturbé lors de la concentration du sort, il doit réussir un jet de Volonté basé sur la difficulté du sort pour le maintenir si il échoue, il perd son sort. La psyché est perdue lors de l'incantation du sort et non lors du lancement.</p>
-            <p>Un sort peut être lancer en une version plus durable si incanté lors d'un rituel. L'incantation d'un rituel dure 10 minutes et multiplie la durée d'un sort par 10 et son coût par 4.</p>
-            <p>Résister aux effets d'un sort peut nécessiter un jet de compétence ou de caractéristique. Si le test est réussi, alors on ne subit que la moitié des effets du sorts (dégâts ou durée divisée par deux)</p>
+            <p>Un sort peut être travaillé pendant de longues minutes pour produire des effets plus durables et puissants, un tel sort est appelé un rituel. Plus un rituel est long, plus les effets du sorts seront marquants et plus il nécessitera de psy et de force mentale pour être mené à bien. Un rituel possède des effets et un coût non-gérés par des règles strictes, c'est le MJ qui décide de l'impact en psy et sur le monde d'un rituel selon qui le lance et la durée d'incantation.</p>
+            <p>Résister ou éviter aux effets d'un sort peut nécessiter un jet de compétence ou de caractéristique. Si le test est réussi, alors le sort n'a aucun effet. Si on subit les effets d'un sort sur une certaine période, il est possible d'effectuer à nouveau le test requis pour s'en libérer en dépensant 1 PA lors de son tour, le modificateur reste le même pour chaque réitération du test.</p>
             <h3 onclick="hideContent(this)">Règles de créations des sorts</h3>
             <div>
                 <p>Un sort est défini par une forme et un effet choisis par le lanceur, c'est la forme, l'effet et la puissance qui déterminent le coût en psy du sort.</p>
@@ -1095,37 +1089,37 @@
                         <tr>
                             <td>Contact</td>
                             <td>Attaque de Mêlée (1m)</td>
-                            <td>0</td>
+                            <td>1</td>
                             <td>Affecte une seule cible situé à 1 mètre ou moins du lanceur</td>
                         </tr>
                         <tr>
                             <td>Flèche</td>
                             <td>Attaque à Distance (100m)</td>
-                            <td>2</td>
+                            <td>3</td>
                             <td>Affecte une seule cible situé à 100 mètres ou moins du lanceur</td>
                         </tr>
                         <tr>
                             <td>Cible</td>
                             <td>Direct</td>
-                            <td>3</td>
+                            <td>4</td>
                             <td>Affecte une seule cible situé à 50 mètres ou moins du lanceur</td>
                         </tr>
                         <tr>
                             <td>Orbe</td>
                             <td>Attaque à Distance (100m), Zde(1+Zm, sphère)</td>
-                            <td>5+Z*3</td>
+                            <td>6+Z*2</td>
                             <td>Affecte toutes les cibles situées dans les 1+Z mètres du point d'impact situé à 100m ou moins du lanceur.</td>
                         </tr>
                         <tr>
                             <td>Rayon</td>
                             <td>Attaque à Distance (100), Zde(10+10*Zm, ligne droite)</td>
-                            <td>5+Z*3</td>
+                            <td>8+Z*3</td>
                             <td>Affecte toutes les cibles situées sur une ligne d'un mètre de large et de 10+10*Z mètres partant du lanceur</td>
                         </tr>
                         <tr>
                             <td>Chaîne</td>
                             <td>Direct</td>
-                            <td>5+Z*3</td>
+                            <td>7+Z*3</td>
                             <td>Affecte une seule cible situé à 50 mètres ou moins du lanceur. Affecte ensuite Z autres cibles, toutes situées à moins de 10m de la précédente.</td>
                         </tr>
                         <tr>
@@ -1137,32 +1131,32 @@
                         <tr>
                             <td>Cône</td>
                             <td>Attaque à Distance, Zde(3+Zm, triangle)</td>
-                            <td>5+Z*2</td>
+                            <td>6+Z*3</td>
                             <td>Affecte toutes les cibles situées dans un cône de 3+Z mètres de largeur finale (le cône s'élargit d'un mètre par mètres le séparant du lanceur et possède une longueur finale de 3+Z mètres)</td>
                         </tr>
                         <tr>
                             <td>Onde de Choc</td>
                             <td>Attaque à distance, ZdE(1+Zm, sphère)</td>
-                            <td>5+Z*3</td>
+                            <td>6+Z*3</td>
                             <td>Affecte toutes les cibles situées à 1+Z mètres ou moins du lanceur.</td>
                         </tr>
                         <tr>
                             <td>Rune</td>
                             <td/>
-                            <td>5+Z</td>
+                            <td>5+Z*2</td>
                             <td>Le sort se place sur une surface située à moins de 5 mètres du lanceur. Après un round la rune devient Difficile(-20) à voir. Le lanceur choisi les conditions d'activation de la rune (proximité, temps, contrôle manuel). La rune persiste indéfiniment jusqu'à son déclenchement ou sa désactivation. Lorsque la rune explose, elle affecte toutes les cibles situées à 1+Z mètres ou moins d'elle.</td>
                         </tr>
                         <tr>
                             <td>Tempête</td>
                             <td>Maintien, Attaque à Distance, ZdE(1+3*Zm, sphère), fais perdre la propriété Surcharge</td>
-                            <td>5+Z*3</td>
+                            <td>8+Z*3</td>
                             <td>Affecte toutes les cibles situées dans les 1+Z mètres du point d'impact situé à 100m ou moins du lanceur. Les effets du sort persistent pendant 1 round et affecte les cibles la traversant. Maintenir ce sort ne permet pas de déplacer la tempête.</td>
                         </tr>
                         <tr>
                             <td>Mur</td>
                             <td>Maintien, Attaque à Distance, ZdE(1+2*Zm, ligne)</td>
-                            <td>5+Z</td>
-                            <td>Crée un mur d'un mètre de large et de 1+Z*2 mètres de long. Le mur persiste pendant 1 round et affecte toute les cibles dans cette zone. Maintenir ce sort ne permet pas de déplacer le mur.</td>
+                            <td>4+Z</td>
+                            <td>Crée un mur d'un mètre de large et de 1+Z*2 mètres de long à moins de 50m du lanceur. Le mur persiste pendant 1 round et affecte toute les cibles dans cette zone. Maintenir ce sort ne permet pas de déplacer le mur.</td>
                         </tr>
                         </tbody>
                     </table>
@@ -1171,539 +1165,11 @@
                 <h4 id="effet_sort" onclick="hideContent(this)">Effet des sorts</h4>
                 <div>
                     <p>L'effet d'un sort détermine le contenu d'un sort, quel va être son impact dans le monde, un effet de feu brûlera ses cibles tandis qu'un effet de soin guérira les blessures.</p>
-                    <p>Un sort possède une magnitude équivalente au nombre de cercles franchis pour sa création, on parle alors d'un sort de cercle X (SC) où X est le dernier cercle franchi. Plus on franchi de cercle, plus le sort est puissant et couteux en psy. Le nombre de cercle franchissables sans risques pour un mage dépend de son expérience dans une école de magie. Il est toutefois possible de se rendre dans des cercles de puissance au delà de ses limites à ses risques et périls.</p>
-                    <p>Incanter un sort d'un cercle trop élevé se fait avec un malus de -10 par cercle excédant votre limite et en cas d'échec le sort est un échec critique. Une spécialisation dans un domaine permet de se rendre un cercle plus loin pour les sorts de ce domaine.</p>
-                    <table class="table_horizontal" id="table_nc_max">
-                        <tbody>
-                        <tr>
-                            <th>Nombre de cercle franchissable sans risques pour le lanceur</th>
-                            <th>Expérience dans l'école de magie</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Aucun</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Initié</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Novice</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Apprenti</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Adepte</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Expert</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Maître</td>
-                        </tr>
-                        <tr><td colspan="2">Il existe d'autres cercles au-delà du 7ème mais la magie y est incontrôlable sauf pour les meilleurs mages du monde.</td></tr>
-                        </tbody>
-                    </table>
+                    <p>Un sort possède une magnitude équivalente au nombre de cercles franchis pour sa création, on parle alors d'un sort de cercle X (SCX) où X est le dernier cercle franchi. Plus on franchi de cercle, plus le sort est puissant et couteux en psy.</p>
+                    <p>Le nombre de cercle franchissables sans risques pour un mage dépend de sa volonté et de son expérience dans une école de magie. Le SC maximal atteignable équivaut au BdVol du lanceur, si l'effet du sort fait partie d'une école dans laquelle le lanceur possède des paliers d'expériences, son SC maximal augmente de 1 par palier (Novice +1, Apprenti +2,...,Maître +5).</p>
+                    <p>Il est toutefois possible de se rendre dans des cercles de puissance au delà de ses limites à ses risques et périls. Incanter un sort d'un cercle trop élevé se fait avec un malus de -5 pour le premier cercle excédant votre limite de -10 pour le deuxième et de -15 pour le troisième. Ces malus sont cumulatifs et augmente des mêmes valeurs les risques d'échec critique. Il est impossible de franchir plus de 3 cercles au delà de votre limite.</p>
+
                     <p>La liste ci-dessous n'est pas exhaustive des pouvoirs conférés par les <a href="../World/Histoire_Ogma.xhtml#inkarnai">Inkarnaïs</a>.</p>
-                    <table class="table_horizontal hidden">
-                        <tbody>
-                        <tr>
-                            <th>Effet</th>
-                            <th>Composante</th>
-                            <th>Propriété(s)</th>
-                            <th>Coût</th>
-                            <th>Description</th>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_aigida">Aïgida</th>
-                        </tr>
-                        <tr>
-                            <td>Création élémentaire (Foudre)</td>
-                            <td>Grâce</td>
-                            <td>Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>5*SC</td>
-                            <td>Modèle la foudre en une forme particulière et la maintient dans le monde réel pendant SC minutes.</td>
-                        </tr>
-                        <tr>
-                            <td>Faiblesse élémentaire (Foudre)</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>2*SC</td>
-                            <td>Inflige une vulnérabilité <a href="Glossaire.xhtml#vulnerabilite_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#vulnerabilite_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#vulnerabilite_majeure">majeure</a>(SC7) à la foudre pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Résistance élémentaire (Foudre)</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>2*SC</td>
-                            <td>Procure une résistance <a href="Glossaire.xhtml#resistance_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#resistance_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#resistance_majeure">majeure</a>(SC7) à la foudre pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Infusion élémentaire (Foudre)</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>3*SC</td>
-                            <td>Infuse la cible de foudre pendant une minutes. Dans le cas d'une arme, les dégâts augmente de 1 par SC</td>
-                        </tr>
-                        <tr>
-                            <td>Bourrasque</td>
-                            <td>Pouvoir</td>
-                            <td>Maintien</td>
-                            <td>1*SC</td>
-                            <td>Invoque du vent se déplaçant à N*20km/h pendant 1 round. Cf <a href="Rules.xhtml#table_vents">Effets du vent</a> </td>
-                        </tr>
-                        <tr>
-                            <td>Impulsion</td>
-                            <td>Grâce</td>
-                            <td/>
-                            <td>SC*2</td>
-                            <td>Le prochain saut de la cible permettra de sauter SC mètres plus loin dans la minute qui suit le lancement </td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_agapi">Agapi</th>
-                        </tr>
-                        <tr>
-                            <td>Soin</td>
-                            <td>Grâce</td>
-                            <td/>
-                            <td>SC*5</td>
-                            <td>Restaure SC*2 points de vitalité</td>
-                        </tr>
-                        <tr>
-                            <td>Fléau de la non-vie</td>
-                            <td>Pouvoir</td>
-                            <td/>
-                            <td>SC*3</td>
-                            <td>Les morts-vivants affectés par le sort doivent passer un test de Volonté avec un malus de SC*10. Si ils ratent ce test, ils fuient le lanceur pendant une minute</td>
-                        </tr>
-                        <tr>
-                            <td>Récupération</td>
-                            <td>Âme</td>
-                            <td/>
-                            <td>SC*3</td>
-                            <td>Restaure SC*2 points d'endurance</td>
-                        </tr>
-                        <tr>
-                            <td>Renouveau</td>
-                            <td>Âme</td>
-                            <td/>
-                            <td>SC*2</td>
-                            <td>Restaure SC points d'endurance max</td>
-                        </tr>
-                        <tr>
-                            <td>Stabilisation</td>
-                            <td>Grâce</td>
-                            <td/>
-                            <td>SC*5</td>
-                            <td>Stabiliser une cible mourante. La cible doit passer un jet de Vigueur (avec un bonus de SC*5) pour être stabilisée</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_agones">Agones</th>
-                        </tr>
-                        <tr>
-                            <td>Renforcement physique ([caractéristique])</td>
-                            <td>Âme</td>
-                            <td>[Force, Agilité, Vigueur], Maintien</td>
-                            <td>SC*8</td>
-                            <td>Renforce la caractéristique de SC*5 points pendant une minute</td>
-                        </tr>
-                        <tr>
-                            <td>Arme éthérée</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>SC*6</td>
-                            <td>Invoque une arme de mêlée éthérée infligeant des dégâts magiques pendant une minute. Les dégâts de l'arme augmente tout les deux SC : SC1 1d4, SC3 1d6, SC5 1d8, SC7 1d10, SC9 1d12</td>
-                        </tr>
-                        <tr>
-                            <td>Force</td>
-                            <td>Pouvoir</td>
-                            <td/>
-                            <td>SC*2</td>
-                            <td>Repousse les cibles affectée. Chaque cible peut résister si elle souhaite en passer un test d'Athlétisme(Vigueur) ou d'Âme.</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_anathos">Anathos</th>
-                        </tr>
-                        <tr>
-                            <td>Réanimation</td>
-                            <td>Pouvoir</td>
-                            <td>Maintien</td>
-                            <td>SC*5</td>
-                            <td>Réanime et permet de contrôler un cadavre pendant une minute. L'entité décédée doit rater un test de Volonté (avec un malus de SC*10) pour être réanimée.</td>
-                        </tr>
-                        <tr>
-                            <td>Résurrection</td>
-                            <td>Âme</td>
-                            <td/>
-                            <td>SC*10</td>
-                            <td>Ressuscite un mort et lui rend sa pleine conscience. L'entité décédée doit passer un test de Volonté (avec un bonus de SC*5) pour être ressuscité. Si la cible ne souhaitent pas être ressuscité, elle doit rater ce test</td>
-                        </tr>
-                        <tr>
-                            <td>Offrande</td>
-                            <td>Grâce</td>
-                            <td/>
-                            <td>SC*3</td>
-                            <td>Transfert SC*2 points de psy du lanceur à la cible.</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_dikai">Dikaï</th>
-                        </tr>
-                        <tr>
-                            <td>Protection physique</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>SC*4</td>
-                            <td>Augmente la PR globale de la cible de SC pendant 1 round</td>
-                        </tr>
-                        <tr>
-                            <td>Protection magique</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>SC*5</td>
-                            <td>Augmente la PR magique globale de la cible de SC pendant 1 round</td>
-                        </tr>
-                        <tr>
-                            <td>Bouclier</td>
-                            <td>Pouvoir</td>
-                            <td/>
-                            <td>SC*7</td>
-                            <td>Dévie les attaques infligeant moins de SC*2 dégâts</td>
-                        </tr>
-                        <tr>
-                            <td>Entrave</td>
-                            <td>Grâce</td>
-                            <td>Maintien</td>
-                            <td>SC*5</td>
-                            <td>Immobilise la cible pendant un round. La cible doit rater un jet de Volonté (avec un malus de SC*5) pour éviter cet effet</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_eftis">Eftis</th>
-                        </tr>
-                        <tr>
-                            <td>Ombre</td>
-                            <td>Pouvoir</td>
-                            <td>Maintien</td>
-                            <td>SC*3</td>
-                            <td>Neutralise toute source de lumière ciblée pendant 1 round</td>
-                        </tr>
-                        <tr>
-                            <td>Pas de l'ombre</td>
-                            <td>Grâce</td>
-                            <td/>
-                            <td>SC*5</td>
-                            <td>Téléporte la cible dans une ombre située à SC*2 mètres d'elle. La cible doit être située dans une ombre.</td>
-                        </tr>
-                        <tr>
-                            <td>Disparition</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>SC*5</td>
-                            <td>Rend la cible invisible pendant SC rounds</td>
-                        </tr>
-                        <tr>
-                            <td>Doigts des ombres</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>SC*8</td>
-                            <td>Renforce la Dextérité de SC*5 points pendant une minute</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_horoï">Horoï</th>
-                        </tr>
-                        <tr>
-                            <td>Attaque élémentaire (Feu)</td>
-                            <td>Pouvoir</td>
-                            <td>Surcharge(+BdVol aux dégâts)</td>
-                            <td>2*SC</td>
-                            <td>Inflige (dé) de dégâts de feu<br/>Dé(s) selon SC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
-                        </tr>
-                        <tr>
-                            <td>Création élémentaire (Feu)</td>
-                            <td>Grâce</td>
-                            <td>Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>5*SC</td>
-                            <td>Modèle le feu en une forme particulière et la maintient dans le monde réel pendant SC minutes.</td>
-                        </tr>
-                        <tr>
-                            <td>Faiblesse élémentaire (Feu)</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>2*SC</td>
-                            <td>Inflige une vulnérabilité <a href="Glossaire.xhtml#vulnerabilite_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#vulnerabilite_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#vulnerabilite_majeure">majeure</a>(SC7) au feu pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Résistance élémentaire (Feu)</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>2*SC</td>
-                            <td>Procure une résistance <a href="Glossaire.xhtml#resistance_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#resistance_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#resistance_majeure">majeure</a>(SC7) au feu pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Infusion élémentaire (Feu)</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>3*SC</td>
-                            <td>Infuse la cible de feu pendant une minutes. Dans le cas d'une arme, les dégâts augmente de 1 par SC</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_kormo">Kormo</th>
-                        </tr>
-                        <tr>
-                            <td>Attaque élémentaire ([élément])</td>
-                            <td>Pouvoir</td>
-                            <td>[Terre, Sable], Surcharge(+BdVol aux dégâts)</td>
-                            <td>2*SC</td>
-                            <td>Inflige (dé) de dégâts physique<br/>Dé(s) selon SC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
-                        </tr>
-                        <tr>
-                            <td>Création élémentaire ([élément])</td>
-                            <td>Grâce</td>
-                            <td>[Terre, Sable], Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>5*SC</td>
-                            <td>Modèle l'élément en une forme particulière et la maintient dans le monde réel pendant SC minutes.</td>
-                        </tr>
-                        <tr>
-                            <td>Manipulation florale</td>
-                            <td>Âme</td>
-                            <td/>
-                            <td>5*SC</td>
-                            <td>Les végétaux ciblés par le sort sont contrôlables par le lanceur pendant une minute. Les plantes ciblées doivent passer un test de Volonté avec un malus de SC*5 si elles souhaitent résister.</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_kuga">Kuga</th>
-                        </tr>
-                        <tr>
-                            <td>Attaque élémentaire ([élément])</td>
-                            <td>Pouvoir</td>
-                            <td>[Poison, Acide], Surcharge(+BdVol aux dégâts)</td>
-                            <td>2*SC</td>
-                            <td>Inflige (dé) de dégâts d'[élément]<br/>Dé(s) selon SC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
-                        </tr>
-                        <tr>
-                            <td>Création élémentaire ([élément])</td>
-                            <td>Grâce</td>
-                            <td>[Poison, Acide], Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>5*SC</td>
-                            <td>Modèle l'[élément] en une forme particulière et la maintient dans le monde réel pendant SC minutes.</td>
-                        </tr>
-                        <tr>
-                            <td>Faiblesse élémentaire ([élément])</td>
-                            <td>Âme</td>
-                            <td>[Poison, Acide], Maintien</td>
-                            <td>2*SC</td>
-                            <td>Inflige une vulnérabilité <a href="Glossaire.xhtml#vulnerabilite_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#vulnerabilite_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#vulnerabilite_majeure">majeure</a>(SC7) à l'[élément] pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Résistance élémentaire ([élément])</td>
-                            <td>Âme</td>
-                            <td>[Poison, Acide], Maintien</td>
-                            <td>2*SC</td>
-                            <td>Procure une résistance <a href="Glossaire.xhtml#resistance_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#resistance_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#resistance_majeure">majeure</a>(SC7) à l'[élément] pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Infusion élémentaire ([élément])</td>
-                            <td>Âme</td>
-                            <td>[Poison, Acide], Maintien</td>
-                            <td>3*SC</td>
-                            <td>Infuse la cible d'[élément] pendant une minutes. Dans le cas d'une arme, les dégâts augmente de 1 par SC</td>
-                        </tr>
-                        <tr>
-                            <td>Rouille</td>
-                            <td>Pouvoir</td>
-                            <td/>
-                            <td>5*SC</td>
-                            <td>Le métal ciblé doit passer un test de rupture avec un malus de SC*5 ou subir un niveau supplémentaire de <a href="Tableaux.xhtml#table_rupture">rupture</a>.</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_kynigi">Kynigi</th>
-                        </tr>
-                        <tr>
-                            <td>Renforcement sensoriel</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>SC*8</td>
-                            <td>Renforce la Perception de SC*5 points pendant une minute</td>
-                        </tr>
-                        <tr>
-                            <td>Aspect bestial [bête]</td>
-                            <td>Grâce</td>
-                            <td>[aigle, loup, ours,...], Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>SC*5</td>
-                            <td>Les cibles obtiennent un aspect de la [bête] pendant SC rounds</td>
-                        </tr>
-                        <tr>
-                            <td>Manipulation bestiale</td>
-                            <td>Âme</td>
-                            <td/>
-                            <td>5*SC</td>
-                            <td>Les animaux ciblés par le sort sont contrôlables par le lanceur pendant une minute. Les animaux ciblés doivent passer un test de Volonté avec un malus de SC*5 si elles souhaitent résister.</td>
-                        </tr>
-                        <tr>
-                            <td>Arme éthérée</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>SC*6</td>
-                            <td>Invoque une arme à distance éthérée infligeant des dégâts magiques pendant une minute. Les dégâts de l'arme augmente tout les deux SC : SC1 1d4, SC3 1d6, SC5 1d8, SC7 1d10, SC9 1d12</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_nero">Nero</th>
-                        </tr>
-                        <tr>
-                            <td>Attaque élémentaire ([élément])</td>
-                            <td>Pouvoir</td>
-                            <td>[Eau, Glace], Surcharge(+BdVol aux dégâts)</td>
-                            <td>2*SC</td>
-                            <td>Inflige (dé) de dégâts d'[élément]<br/>Dé(s) selon SC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
-                        </tr>
-                        <tr>
-                            <td>Création élémentaire ([élément])</td>
-                            <td>Grâce</td>
-                            <td>[Eau, Glace], Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>5*SC</td>
-                            <td>Modèle l'[élément] en une forme particulière et la maintient dans le monde réel pendant SC minutes.</td>
-                        </tr>
-                        <tr>
-                            <td>Faiblesse élémentaire ([élément])</td>
-                            <td>Âme</td>
-                            <td>[Eau, Glace], Maintien</td>
-                            <td>2*SC</td>
-                            <td>Inflige une vulnérabilité <a href="Glossaire.xhtml#vulnerabilite_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#vulnerabilite_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#vulnerabilite_majeure">majeure</a>(SC7) à l'[élément] pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Résistance élémentaire ([élément])</td>
-                            <td>Âme</td>
-                            <td>[Eau, Glace], Maintien</td>
-                            <td>2*SC</td>
-                            <td>Procure une résistance <a href="Glossaire.xhtml#resistance_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#resistance_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#resistance_majeure">majeure</a>(SC7) à l'[élément] pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Infusion élémentaire ([élément])</td>
-                            <td>Âme</td>
-                            <td>[Eau, Glace], Maintien</td>
-                            <td>3*SC</td>
-                            <td>Infuse la cible d'[élément] pendant une minutes. Dans le cas d'une arme, les dégâts augmente de 1 par SC</td>
-                        </tr>
-                        <tr>
-                            <td>Aisance aquatique</td>
-                            <td>Grâce</td>
-                            <td>Maintien</td>
-                            <td>5*SC</td>
-                            <td>Les cibles peuvent se déplacer dans l'eau à vitesse normale (au lieu de vitesse/2) et obtiennent un bonus de SC*5 aux épreuves de natation pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Respiration aquatique</td>
-                            <td>Âme</td>
-                            <td>Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>10*SC</td>
-                            <td>Les cibles peuvent respirer sous l'eau pendant SC minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Marche sur l'eau</td>
-                            <td>Pouvoir</td>
-                            <td>Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>10*SC</td>
-                            <td>Les cibles peuvent marcher sur l'eau pendant SC minutes</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_orizo">Orizo</th>
-                        </tr>
-                        <tr>
-                            <td>Renforcement mental ([caractéristique])</td>
-                            <td>Âme</td>
-                            <td>[Intelligence, Volonté], Maintien</td>
-                            <td>SC*8</td>
-                            <td>Renforce la caractéristique de SC*5 points pendant une minute</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_ourgal">Ourgal</th>
-                        </tr>
-                        <tr>
-                            <td>Attaque élémentaire ([élément])</td>
-                            <td>Pouvoir</td>
-                            <td>[Métal, Pierre], Surcharge(+BdVol aux dégâts)</td>
-                            <td>2*SC</td>
-                            <td>Inflige (dé) de dégâts physique<br/>Dé(s) selon SC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
-                        </tr>
-                        <tr>
-                            <td>Création élémentaire ([élément])</td>
-                            <td>Grâce</td>
-                            <td>[Métal, Pierre], Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>5*SC</td>
-                            <td>Modèle l'élément en une forme particulière et la maintient dans le monde réel pendant SC minutes.</td>
-                        </tr>
-                        <tr>
-                            <td>Transmutation</td>
-                            <td>Âme</td>
-                            <td/>
-                            <td>SC*8</td>
-                            <td>Transforme la cible en métal pendant une minute. La cible doit passer une test de Vigueur ou de Volonté avec un malus de SC*5 pour résister à l'effet.</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_psema">Psema</th>
-                        </tr>
-                        <tr>
-                            <td>Renforcement verbal</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>SC*8</td>
-                            <td>Renforce l'éloquence de SC*5 points pendant une minute</td>
-                        </tr>
-                        <tr>
-                            <td>Illusion [type]</td>
-                            <td>Pouvoir</td>
-                            <td>[peur, charme, furie, sommeil,...]</td>
-                            <td>SC*5</td>
-                            <td>Les cibles subissent les effets de l'illusion. Elle doivent réussir un jet de Volonté ou de Perception avec un malus de SC*5 pour résister à l'effet.</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_safi">Safi</th>
-                        </tr>
-                        <tr>
-                            <td>Attaque élémentaire (Lumière)</td>
-                            <td>Pouvoir</td>
-                            <td>Surcharge(+BdVol aux dégâts)</td>
-                            <td>2*SC</td>
-                            <td>Inflige (dé) de dégâts de Lumière<br/>Dé(s) selon SC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
-                        </tr>
-                        <tr>
-                            <td>Création élémentaire (Lumière)</td>
-                            <td>Grâce</td>
-                            <td>Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>5*SC</td>
-                            <td>Modèle la Lumière en une forme particulière et la maintient dans le monde réel pendant SC minutes.</td>
-                        </tr>
-                        <tr>
-                            <td>Faiblesse élémentaire (Lumière)</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>2*SC</td>
-                            <td>Inflige une vulnérabilité <a href="Glossaire.xhtml#vulnerabilite_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#vulnerabilite_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#vulnerabilite_majeure">majeure</a>(SC7) à la Lumière pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Résistance élémentaire (Lumière)</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>2*SC</td>
-                            <td>Procure une résistance <a href="Glossaire.xhtml#resistance_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#resistance_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#resistance_majeure">majeure</a>(SC7) à la Lumière pendant une minute.</td>
-                        </tr>
-                        <tr>
-                            <td>Infusion élémentaire (Lumière)</td>
-                            <td>Âme</td>
-                            <td>Maintien</td>
-                            <td>3*SC</td>
-                            <td>Infuse la cible de Lumière pendant une minutes. Dans le cas d'une arme, les dégâts augmente de 1 par SC</td>
-                        </tr>
-                        <tr>
-                            <th colspan="5" id="sort_tychi">Tychi</th>
-                        </tr>
-                        </tbody>
-                    </table>
                     <table id="table_effet_sort" class="table_horizontal">
                         <tbody>
                         <tr>
@@ -1718,22 +1184,22 @@
                         <tr>
                             <td>Aspect de l'aigle</td>
                             <td> Maintien</td>
-                            <td>SC*5</td>
+                            <td>5*SC</td>
                             <td>La cibles obtiennent les capacités d'un aigle pendant 1 minute. Vitesse de déplacement en vol : SC*2m. Armes naturelles : 1d4+SC perforants.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Aspect du loup</td>
                             <td> Maintien</td>
-                            <td>SC*5</td>
-                            <td>La cibles obtiennent les capacités d'un loup pendant 1 minute. Vitesse de déplacement au sol bonus : SC mètres. Armes naturelles : 1d4+SC perforants.</td>
+                            <td>5*SC</td>
+                            <td>La cibles obtiennent les capacités d'un loup pendant 1 minute. Vitesse de déplacement au sol bonus : SC mètres. Armes naturelles : 1d4+SC tranchants.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Aspect de l'ours</td>
                             <td> Maintien</td>
-                            <td>SC*5</td>
-                            <td>La cibles obtiennent les capacités d'un ours pendant 1 minute. PVs temporaires : SC*2. Armes naturelles : 1d4+SC perforants.</td>
+                            <td>5*SC</td>
+                            <td>La cibles obtiennent les capacités d'un ours pendant 1 minute. PVs temporaires : 2*SC. Armes naturelles : 1d4+SC fendants.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
@@ -1768,7 +1234,7 @@
                             <td>Lévitation</td>
                             <td>Maintien, Réaction</td>
                             <td>3*SC</td>
-                            <td>La cible obtient une vitesse de déplacement en vol de SC*3 mètres pendant 1 round</td>
+                            <td>La cible obtient une vitesse de déplacement en vol de 3*SC mètres pendant 1 round</td>
                             <td>Aïgida</td>
                         </tr>
                         <tr>
@@ -1781,63 +1247,63 @@
                         <tr>
                             <td>Verrouillage</td>
                             <td>-</td>
-                            <td>SC*3</td>
+                            <td>3*SC</td>
                             <td>La serrure ciblé devient verrouillée. Ouvrir cette serrure nécessite un test étendu de crochetage avec un DR total de 2*SC.</td>
                             <td>Ourgal</td>
                         </tr>
                         <tr>
                             <td>Déverrouillage</td>
                             <td>-</td>
-                            <td>SC*3</td>
-                            <td>La serrure ciblé se déverrouille si le DR du test étendu de crochetage est inférieur ou égal à SC*2.</td>
+                            <td>3*SC</td>
+                            <td>La serrure ciblé se déverrouille si le DR du test étendu de crochetage est inférieur ou égal à 2*SC.</td>
                             <td>Ourgal</td>
                         </tr>
                         <tr>
                             <td>Réparation</td>
                             <td>-</td>
-                            <td>SC*5</td>
+                            <td>5*SC</td>
                             <td>L'objet ciblé remonte de SC <a href="Tableaux.xhtml#table_rupture">niveau de rupture</a> jusqu'au niveau Entretenu au maximum.</td>
                             <td>Ourgal (Pierres et métaux), Kormo(Bois)</td>
                         </tr>
                         <tr>
                             <td>Transmutation</td>
                             <td>Maintien</td>
-                            <td>SC*5</td>
-                            <td>La cible devient métallique pendant 1 minute. Si la cible souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +30-(10*SC). Une cible métamorphosée en pierre ou en métal est invulnérable aux dégâts du temps</td>
+                            <td>5*SC</td>
+                            <td>La cible devient métallique ou minérale pendant 1 minute. Si la cible souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC). Une cible métamorphosée en pierre ou en métal est invulnérable aux dégâts du temps</td>
                             <td>Ourgal</td>
                         </tr>
                         <tr>
                             <td>Renforcement physique ([caractéristique])</td>
                             <td>[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
-                            <td>SC*8</td>
-                            <td>Renforce la caractéristique de la cible de SC*5 points pendant une minute</td>
+                            <td>7*SC</td>
+                            <td>Renforce la caractéristique de la cible de 5*SC points pendant une minute</td>
                             <td>Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)</td>
                         </tr>
                         <tr>
                             <td>Affaiblissement [Caractéristique]</td>
                             <td>[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
-                            <td>SC*10</td>
-                            <td>Affaibli la caractéristique de la cible de SC*5 points pendant une minute. La cible doit passer un test de Vigueur dans le cas d'une caractéristique physique ou un test de Volonté pour les caractéristiques mentale avec un modificateur de +30-(10*SC).</td>
+                            <td>7*SC</td>
+                            <td>Affaibli la caractéristique de la cible de 5*SC points pendant une minute. La cible doit passer un test de Vigueur dans le cas d'une caractéristique physique ou un test de Volonté pour les caractéristiques mentale avec un modificateur de +20-(5*SC).</td>
                             <td>Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)</td>
                         </tr>
                         <tr>
                             <td>Résistance [Élément]</td>
                             <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]</td>
-                            <td>SC*3</td>
-                            <td>Procure une résistance <a href="Glossaire.xhtml#resistance_mineure">mineure</a>(SC2), <a href="Glossaire.xhtml#resistance_moyenne">moyenne</a>(SC4) ou <a href="Glossaire.xhtml#resistance_majeure">majeure</a>(SC6) ou même une <a href="Glossaire.xhtml#immunite">immunité</a>(SC8)à l'[Élément] pendant une minute.</td>
+                            <td>3*SC</td>
+                            <td>Procure à la cible une résistance à l'[élément] (SC) pendant une minute.</td>
                             <td>Aïgida, Anathos, Horoï, Kuga, Nero, Safi</td>
                         </tr>
                         <tr>
                             <td>Vulnérabilité [Élément]</td>
                             <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]</td>
-                            <td>SC*3</td>
-                            <td>Inflige à la cible une vulnérabilité <a href="Glossaire.xhtml#vulnerabilite_mineure">mineure</a>(SC3), <a href="Glossaire.xhtml#vulnerabilite_moyenne">moyenne</a>(SC5) ou <a href="Glossaire.xhtml#vulnerabilite_majeure">majeure</a>(SC7) à l'[Élément] pendant une minute. La cible doit passer un test de Vigueur dans le cas d'une caractéristique physique ou un test de Volonté pour les caractéristiques mentale avec un modificateur de +30-(10*SC).</td>
+                            <td>3*SC</td>
+                            <td>Inflige à la cible une vulnérabilité à l'[élément] (SC) pendant une minute.</td>
                             <td>Aïgida, Anathos, Horoï, Kuga, Nero, Safi</td>
                         </tr>
                         <tr>
                             <td>Guérison</td>
                             <td>-</td>
-                            <td>SC*2</td>
+                            <td>2*SC</td>
                             <td>Restaure SC points de vitalité</td>
                             <td>Agapi</td>
                         </tr>
@@ -1902,8 +1368,8 @@
                         <tr>
                             <td>Entrave</td>
                             <td>Maintien</td>
-                            <td>SC*3</td>
-                            <td>La cible doit passer un test de Force ou de Volonté avec un modificateur de +30-(10*SC) ou être immobilisée pendant un round.</td>
+                            <td>3*SC</td>
+                            <td>La cible doit passer un test de Force ou de Volonté avec un modificateur de +20-(5*SC) ou être immobilisée pendant un round.</td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
@@ -1916,52 +1382,101 @@
                         <tr>
                             <td>Invocation d'Arme</td>
                             <td>Maintien</td>
-                            <td>SC*3</td>
+                            <td>3*SC</td>
                             <td>Invoque une arme à l'endroit ciblé. Le SC détermine l'arme invoquée. SC1 arme à 1d4, SC2 arme à 1d6, SC3 arme à 1d8, chaque SC supplémentaire ajoute un +1 aux dégâts.</td>
-                            <td>Ourgal</td>
+                            <td>Anathos</td>
+                        </tr>
+                        <tr>
+                            <td>Transfert de psy</td>
+                            <td>-</td>
+                            <td>3*SC</td>
+                            <td>Transfert 2*SC points de psy du lanceur à la cible.</td>
+                            <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Offrande</td>
                             <td>-</td>
-                            <td>SC*3</td>
-                            <td>Transfert SC*2 points de psy du lanceur à la cible.</td>
+                            <td>SC</td>
+                            <td>Offre 2*SC points de psy de la cible à Anathos. La cible doit passer un test de Volonté avec un modificateur de +20-(5*SC) si elle souhaite résister.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Récupération</td>
                             <td>-</td>
-                            <td>SC*3</td>
-                            <td>Restaure SC*2 points d'endurance</td>
+                            <td>3*SC</td>
+                            <td>Restaure 2*SC points d'endurance</td>
                             <td>Agapi</td>
                         </tr>
                         <tr>
                             <td>Fatigue</td>
                             <td>-</td>
-                            <td>SC*3</td>
-                            <td>La cible perd SC*2 points d'endurance. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +30-(SC*10).</td>
+                            <td>3*SC</td>
+                            <td>La cible perd 2*SC points d'endurance. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC) si elle souhaite résister.</td>
                             <td>Anathos</td>
+                        </tr>
+                        <tr>
+                            <td>Toile d'araignée</td>
+                            <td>-</td>
+                            <td>2*SC</td>
+                            <td>L'endroit ciblé par le lanceur devient un terrain difficile pendant SC rounds.</td>
+                            <td>Kynigi</td>
+                        </tr>
+                        <tr>
+                            <td>Télékinésie</td>
+                            <td>-</td>
+                            <td>3*SC</td>
+                            <td>Le lanceur invoque une main éthérée capable d'interagir avec le monde pendant SC rounds.</td>
+                            <td>Agones</td>
+                        </tr>
+                        <tr>
+                            <td>Projection psychique</td>
+                            <td>-</td>
+                            <td>6*SC</td>
+                            <td>L'esprit de cible est envoyé dans la dimension de Karnaï pendant une minute ce qui équivaut à 6 heures là-bas. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC) si elle souhaite résister. Sans esprit pour le contrôler, le corps de la cible est inanimé pendant cette période.</td>
+                            <td>Anathos</td>
+                        </tr>
+                        <tr>
+                            <td>Bannissement</td>
+                            <td>-</td>
+                            <td>4*SC</td>
+                            <td>La cible est renvoyé dans la dimension de Karnaï. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC) si elle souhaite résister.</td>
+                            <td>Dikaï</td>
                         </tr>
                         <tr>
                             <td>Pas de l'ombre</td>
                             <td>-</td>
-                            <td>SC*5</td>
-                            <td>La cible doit se tenir dans une ombre. Elle se téléporte dans une autre ombres située à moins de SC*3 mètres. Si elle souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +30-(SC*10).</td>
+                            <td>5*SC</td>
+                            <td>La cible doit se tenir dans une ombre. Elle se téléporte dans une autre ombres située à moins de 3*SC mètres. Si elle souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
                             <td>Eftis</td>
+                        </tr>
+                        <tr>
+                            <td>Téléportation</td>
+                            <td>-</td>
+                            <td>5*SC</td>
+                            <td>La cible se téléporte sur une distance de 2*SC mètres dans un éclair de lumière. Si elle souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
+                            <td>Safi</td>
+                        </tr>
+                        <tr>
+                            <td>Racines du monde</td>
+                            <td>-</td>
+                            <td>5*SC</td>
+                            <td>La cible se téléporte via les racines d'un arbre sur une distance de 5*SC mètres, elle doit être en contact avec un arbre en vie et réapparaître sur une autre arbre en vie. Si elle souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
+                            <td>Kormo</td>
                         </tr>
                         <tr><th colspan="5">Divination</th></tr>
                         <tr><td colspan="5">Cette école permet de révéler l'inconnu, de jouer avec le destin.</td></tr>
                         <tr>
                             <td>Télépathie</td>
                             <td>Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>SC*3</td>
+                            <td>3*SC</td>
                             <td>La cible peut communiquer par télépathie avec le lanceur pendant SC minutes</td>
                             <td>Orizo</td>
                         </tr>
                         <tr>
                             <td>Archives d'Orizo</td>
                             <td>-</td>
-                            <td>SC*2</td>
-                            <td>Le prochain test de Savoir ou de Linguistique de la cible se fera avec un bonus de SC*5 dans la minute qui suit le lancement</td>
+                            <td>2*SC</td>
+                            <td>Le prochain test de Savoir ou de Linguistique de la cible se fera avec un bonus de 5*SC dans la minute qui suit le lancement</td>
                             <td>Orizo</td>
                         </tr>
                         <tr>
@@ -1982,21 +1497,21 @@
                             <td>Détection de la vie</td>
                             <td>-</td>
                             <td>5*SC</td>
-                            <td>Détecte les être vivants dans un rayon de SC*15 mètres du point d'impact du sort.</td>
+                            <td>Détecte les être vivants dans un rayon de 15*SC mètres du point d'impact du sort.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Détection des morts</td>
                             <td>-</td>
                             <td>6*SC</td>
-                            <td>Détecte les morts dans un rayon de SC*15 mètres du point d'impact du sort.</td>
+                            <td>Détecte les morts dans un rayon de 15*SC mètres du point d'impact du sort.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Détection de la magie</td>
                             <td>-</td>
                             <td>5*SC</td>
-                            <td>Détecte la magie dans un rayon de SC*15 mètres du point d'impact du sort.</td>
+                            <td>Détecte la magie dans un rayon de 15*SC mètres du point d'impact du sort.</td>
                             <td>Orizo</td>
                         </tr>
                         <tr>
@@ -2025,53 +1540,89 @@
                         <tr>
                             <td>Réanimation</td>
                             <td>-</td>
-                            <td>15</td>
-                            <td>Réanime un cadavre pendant une minute. <i>Cet effet est toujours de SC5</i></td>
+                            <td>5*SC</td>
+                            <td>Réanime un cadavre pendant une minute. <a href="Tableaux.xhtml#taille_creatures">Taille</a> du cadavre selon SC : I, Min, TP, P, M, G, TG, Gig, C </td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Manipulation bestiale</td>
                             <td>-</td>
                             <td>5*SC</td>
-                            <td>Les animaux ciblés par le sort sont contrôlables par le lanceur pendant une minute. Les animaux ciblés doivent passer un test de Volonté avec un modificateur de +30-(SC*10) pour résister.</td>
+                            <td>Les animaux ciblés par le sort sont contrôlables par le lanceur pendant une minute. Les animaux ciblés doivent passer un test de Volonté avec un modificateur de +20-(5*SC) pour résister.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Manipulation florale</td>
                             <td/>
                             <td>4*SC</td>
-                            <td>Les végétaux ciblés par le sort sont contrôlables par le lanceur pendant une minute. Les plantes ciblées doivent passer un test de Volonté avec un modificateur de +30-(SC*10) pour résister.</td>
+                            <td>Les végétaux ciblés par le sort sont contrôlables par le lanceur pendant une minute. Les plantes ciblées doivent passer un test de Volonté avec un modificateur de +20-(5*SC) pour résister.</td>
                             <td>Kormo</td>
                         </tr>
                         <tr>
                             <td>Contrôle des morts</td>
                             <td>-</td>
                             <td>8*SC</td>
-                            <td>Permet de contrôler un cadavre pendant une minute. L'entité décédée doit passer un test de Volonté avec un modificateur de +30-(SC*10) pour résister.</td>
+                            <td>Permet de contrôler un cadavre pendant une minute. L'entité décédée doit passer un test de Volonté avec un modificateur de +20-(5*SC) pour résister.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Contrôle des vivants</td>
                             <td>-</td>
                             <td>8*SC</td>
-                            <td>Permet de contrôler un être vivant pendant une minute. La cible doit passer un test de Volonté avec un modificateur de +30-(SC*10) pour résister.</td>
+                            <td>Permet de contrôler un être vivant pendant une minute. La cible doit passer un test de Volonté avec un modificateur de +20-(5*SC) pour résister.</td>
                             <td>Psema</td>
                         </tr>
+                        <tr>
+                            <td>Fléau de la non-vie</td>
+                            <td>-</td>
+                            <td>3*SC</td>
+                            <td>Les morts-vivants touchés par ce sort doivent passer un test de Volonté avec un modificateur de +20-(5*SC) ou fuir le lanceur pendant une minute.</td>
+                            <td>Anathos</td>
+                        </tr>
+                        <tr>
+                            <td>Réécriture mémorielle</td>
+                            <td>-</td>
+                            <td>3*SC</td>
+                            <td>La cible doit passer un test de Volonté avec un modificateur de +20-(5*SC) ou voir sa mémoire modifiée par le lanceur. Les modifications possibles dépendent du SC du sort.</td>
+                            <td>Psema</td>
+                        </tr>
+                        <tr>
+                            <td>Mot de pouvoir : Douleur</td>
+                            <td>-</td>
+                            <td>4*SC</td>
+                            <td>La cible voit sa sa vitesse réduire de 3m et effectue toute action avec désavantage pendant 1 minute. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
+                            <td>Psema</td>
+                        </tr>
+                        <tr>
+                            <td>Mot de pouvoir : Mort</td>
+                            <td>-</td>
+                            <td>10*SC</td>
+                            <td>La cible meurt instantanément. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
+                            <td>Anathos</td>
+                        </tr>
+
                         <tr><th colspan="5">Élémentalisme</th></tr>
                         <tr><td colspan="5">Cette école se concentre sur les pouvoirs élémentaires de Karnaï.</td></tr>
                         <tr>
                             <td>Assaut minéral</td>
-                            <td>[Métal, Pierre, Terre, Sable], Surcharge(+BdVol aux dégâts)</td>
+                            <td>[Métal, Pierre, Terre, Sable], Surcharge(+BdInt aux dégâts)</td>
                             <td>2*SC</td>
-                            <td>Inflige (dé) de dégâts physiques<br/>Dé(s) selon SC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
+                            <td>Inflige (dé) de dégâts physiques<br/>Dé(s) selon SC : 1 &#8594; 1d2 &#8594; 1d4 &#8594; 1d6 &#8594; 1d8 &#8594; 1d10 &#8594; 1d12 &#8594; 1d8+1d6 &#8594; 2d8 &#8594; 1d10+1d8 &#8594; 2d10 &#8594; 1d12+1d10 &#8594; 2d12 &#8594; 2d8+1d10 &#8594; 3d10 &#8594; 2d10+1d12 &#8594; 2d12+1d10 &#8594; 3d12 &#8594; 4d10 &#8594; 2d12+2d10 &#8594; 4d12</td>
                             <td>Kormo, Ourgal</td>
                         </tr>
                         <tr>
                             <td>Assaut élémentaire</td>
-                            <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison], Surcharge(+BdVol aux dégâts)</td>
+                            <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison], Surcharge(+BdInt aux dégâts)</td>
                             <td>2*SC</td>
-                            <td>Inflige (dé) de dégâts d'[Élément]<br/>Dé(s) selon SC 1d4,1d6,1d8,1d10,2d6,2d8,2d10</td>
+                            <td>Inflige (dé) de dégâts d'[Élément]<br/>Dé(s) selon SC : 1 &#8594; 1d2 &#8594; 1d4 &#8594; 1d6 &#8594; 1d8 &#8594; 1d10 &#8594; 1d12 &#8594; 1d8+1d6 &#8594; 2d8 &#8594; 1d10+1d8 &#8594; 2d10 &#8594; 1d12+1d10 &#8594; 2d12 &#8594; 2d8+1d10 &#8594; 3d10 &#8594; 2d10+1d12 &#8594; 2d12+1d10 &#8594; 3d12 &#8594; 4d10 &#8594; 2d12+2d10 &#8594; 4d12</td>
                             <td>Aïgida, Anathos, Horoï, Kuga, Nero, Safi</td>
+                        </tr>
+                        <tr>
+                            <td>Création élémentaire</td>
+                            <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Métal, Nécrotique, Pierre, Poison, Sable, Terre]</td>
+                            <td>2*SC</td>
+                            <td>L'[élément] apparaît à l'endroit ciblé et y reste pendant SC rounds.</td>
+                            <td>Aïgida, Anathos, Horoï, Kormo, Kuga, Nero, Ourgal, Safi</td>
                         </tr>
                         <tr>
                             <td>Bourrasque</td>
@@ -2083,29 +1634,29 @@
                         <tr>
                             <td>Rouille</td>
                             <td>-</td>
-                            <td>5*SC</td>
-                            <td>L'objet ciblé doit passer un test de rupture avec un malus de SC*5 ou subir un niveau supplémentaire de <a href="Tableaux.xhtml#table_rupture">rupture</a>.</td>
+                            <td>3*SC</td>
+                            <td>L'objet ciblé doit passer un test de rupture avec un modificateur de +20-(5*SC) ou subir un niveau supplémentaire de <a href="Tableaux.xhtml#table_rupture">rupture</a>.</td>
                             <td>Kuga</td>
                         </tr>
                         <tr>
                             <td>Spores [type]</td>
                             <td>[paralysie, sommeil, poison,...]</td>
                             <td>5*SC</td>
-                            <td>Invoque des spores infligeant l'effet [type]. La cible doit réussir un jet de Vigueur ou de Volonté selon le spore avec un malus de SC*5.</td>
+                            <td>Invoque des spores infligeant l'effet [type]. La cible doit réussir un jet de Vigueur ou de Volonté selon le spore avec un malus de 5*SC.</td>
                             <td>Kormo</td>
                         </tr>
                         <tr>
                             <td>Chaleur</td>
                             <td>Maintien</td>
                             <td>SC</td>
-                            <td>Augmente la température ambiante de la cible de SC*5 C°.</td>
+                            <td>Augmente la température ambiante de la cible de 5*SC C°.</td>
                             <td>Horoï</td>
                         </tr>
                         <tr>
                             <td>Fraîcheur</td>
                             <td>Maintien</td>
                             <td>SC</td>
-                            <td>Diminue la température ambiante de la cible de SC*5 C°.</td>
+                            <td>Diminue la température ambiante de la cible de 5*SC C°.</td>
                             <td>Nero</td>
                         </tr>
                         <tr><th colspan="5">Illusion</th></tr>
@@ -2113,63 +1664,63 @@
                         <tr>
                             <td>Création illusoire</td>
                             <td>Maintien</td>
-                            <td>SC*4</td>
+                            <td>4*SC</td>
                             <td>Façonne une création intangible de la forme souhaitée avec sons et odeurs sur une surface de SC*0,5 mètres cubes. Un test de Perception ou d'Intelligence est nécessaire pour se rendre compte de l'illusion.</td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Peur</td>
                             <td>-</td>
-                            <td>SC*4</td>
-                            <td>La cible doit passer un test de peur avec un modificateur de +30-(SC*10). Cf <a href="Tableaux.xhtml#stress">Stress</a> </td>
+                            <td>4*SC</td>
+                            <td>La cible doit passer un test de peur avec un modificateur de +20-(5*SC). Cf <a href="Tableaux.xhtml#stress">Stress</a> </td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Horreur</td>
                             <td>-</td>
-                            <td>SC*6</td>
-                            <td>La cible doit passer un test de peur avec un modificateur de +30-(SC*10). Cf <a href="Tableaux.xhtml#stress">Stress</a> </td>
+                            <td>6*SC</td>
+                            <td>La cible doit passer un test de peur avec un modificateur de +20-(5*SC). Cf <a href="Tableaux.xhtml#stress">Stress</a> </td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Calme</td>
                             <td>-</td>
-                            <td>SC*3</td>
-                            <td>La cible doit passer un test de Volonté avec un modificateur de +30-(SC*10) ou être forcée de se calmer pendant 1 minute. </td>
-                            <td>Psema</td>
+                            <td>3*SC</td>
+                            <td>La cible doit passer un test de Volonté avec un modificateur de +20-(5*SC) ou être forcée de se calmer pendant 1 minute. </td>
+                            <td>Agapi</td>
                         </tr>
                         <tr>
                             <td>Rage</td>
                             <td>-</td>
-                            <td>SC*4</td>
-                            <td>La cible doit passer un test de Volonté avec un modificateur de +30-(SC*10) ou considéré tout le monde comme un adversaire pendant 1 minute. </td>
-                            <td>Psema</td>
+                            <td>4*SC</td>
+                            <td>La cible doit passer un test de Volonté avec un modificateur de +20-(5*SC) ou considéré tout le monde comme un adversaire pendant 1 minute. </td>
+                            <td>Agones</td>
                         </tr>
                         <tr>
                             <td>Courage</td>
                             <td>-</td>
-                            <td>SC*3</td>
-                            <td>La cible obtient un bonus de SC*5 aux tests de peur et d'horreur pendant 1 minute. </td>
-                            <td>Psema</td>
+                            <td>3*SC</td>
+                            <td>La cible obtient un bonus de 5*SC aux tests de peur et d'horreur pendant 1 minute. </td>
+                            <td>Dikaï</td>
                         </tr>
                         <tr>
                             <td>Silence</td>
                             <td>Maintien</td>
-                            <td>SC*6</td>
-                            <td>Tous les sons sont bloqués dans un rayon de SC*3 mètres autour du point d'impact pendant 1 minute.</td>
+                            <td>6*SC</td>
+                            <td>Tous les sons sont bloqués dans un rayon de 3*SC mètres autour du point d'impact pendant 1 minute.</td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Invisibilité</td>
                             <td>-</td>
-                            <td>SC*6</td>
+                            <td>6*SC</td>
                             <td>La cible devient invisible pendant SC rounds.</td>
-                            <td>Psema</td>
+                            <td>Safi</td>
                         </tr>
                         <tr>
                             <td>Apparence trompeuse</td>
                             <td>-</td>
-                            <td>SC*2</td>
+                            <td>2*SC</td>
                             <td>Les entités présentes dans un rayon de SC*5m de la cible la voit comme quelqu'un d'autre pendant 1 minute.</td>
                             <td>Psema</td>
                         </tr>
@@ -2209,7 +1760,7 @@
             <h3 id="types_actions" onclick="hideContent(this)">Types d'actions</h3>
             <div>
                 <p>Les actions sont séparés en plusieurs catégories, chacune obéissant à des conditions différentes. Un personnage peut entreprendre autant d'actions par tour qu'il le souhaite tant qu'il possède les PA pour le faire. Chaque action coûte 1 PA à moins que ce ne soit préciser autrement.</p>
-                <p>Les <span class="big_underline"><a href="Types_actions.xhtml#actions_principales">Actions principales</a></span>ne peuvent être effectuées que lors de son propre tour de jeu. Ce sont des actions dont le personnage est le principal instigateur..</p>
+                <p>Les <span class="big_underline"><a href="Types_actions.xhtml#actions_principales">Actions principales</a></span>ne peuvent être effectuées que lors de son propre tour de jeu. Ce sont des actions dont le personnage est le principal instigateur.</p>
                 <p>Les <span class="big_underline"><a href="Types_actions.xhtml#actions_secondaires">Actions secondaires</a></span>peuvent être effectués durant son propre tour ou pendant celui des autres en tant que reactions. Ce sont des actions pouvant être prise en réaction à ce qui se passe sur le champ de bataille. </p>
                 <p>Les <span class="big_underline"><a href="Types_actions.xhtml#reactions">Réactions</a></span>sont des actions utilisés pour contrecarrer les actions de ses adversaires lors de leur tour.</p>
                 <p>Les <span class="big_underline"><a href="Types_actions.xhtml#actions_libres">Actions libres</a></span>prennent un temps négligeable et ne demandent presque aucun effort. Le personnage peut en effectuer plusieurs actions libres au cours d’un même round que ce soit pendant son tour ou celui des autres, dans les limites du raisonnable et avec l’accord du MJ.</p>
@@ -2381,7 +1932,7 @@
                 <div>
                     <p>Le combat à mains nues peut se faire avec les armes naturelles du personnage (poings, griffes,...) mais aussi avec certains équipements comme des cestes. Tout les personnages peuvent avoir recours au combat à mains nues même si il ne fait partie de leur style de combat, auquel cas il subissent un malus de -20.</p>
                     <p>Le type de dégâts et la quantité de dégâts infligées dépendent des armes naturelles du personnage :</p>
-                    <table class="table_horizontal" id="table_armes_naurelles">
+                    <table class="table_horizontal" id="table_armes_naturelles">
                         <tbody>
                         <tr>
                             <th>Origine(s)</th>
@@ -2519,14 +2070,12 @@
                 <h3 id="alcool">Alcool</h3>
                 <p>La consommation d'alcool est quelque chose à surveiller, si un peu de boisson peu faciliter les relations sociales, à de trop fortes doses, il peut nuire au consommateur abusif. Un aventurier tolère l'alcool comme tout un chacun, au delà d'une certaine limite, ses capacités cognitives commencent à faiblir jusqu'au point où le corps lui même s'effondre. Les doses d'alcool sont perdues au rythme d'une par heure.</p>
                 <div style="display: flex">
-                    <table class="table_compact" style="flex: 1; padding: 3px; margin: 10px; max-width: 60%;" width="60%">
-                        <thead>
+                    <table class="table_horizontal" style="flex: 1; padding: 3px; margin: 10px; max-width: 60%;" width="60%">
+                        <tbody>
                         <tr>
                             <th width="30%">Doses d'alcool ingérées</th>
                             <th>Effet sur le personnage (cumulatifs)</th>
                         </tr>
-                        </thead>
-                        <tbody>
                         <tr>
                             <td>Échauffé : 1 à 2</td>
                             <td>ELO +1</td>
@@ -2545,14 +2094,12 @@
                         </tr>
                         </tbody>
                     </table>
-                    <table class="table_compact" style="flex: 1; padding: 3px; margin: 10px; max-width: 40%;" width="40%">
-                        <thead>
+                    <table class="table_horizontal" style="flex: 1; padding: 3px; margin: 10px; max-width: 40%;" width="40%">
+                        <tbody>
                         <tr>
                             <th>Type de boisson</th>
                             <th>Dose d'alcool</th>
                         </tr>
-                        </thead>
-                        <tbody>
                         <tr>
                             <td>Verre de bière</td>
                             <td>1</td>
@@ -2642,8 +2189,8 @@
                     <p>Il arrive que le temps joue un rôle important dans une aventure. La table ci-dessous tient lieu des aléas du temps. Le sens des termes employés dans ce tableau est expliqué plus bas.</p>
                     <p class="caption" onclick="hideContent(this)">Climats</p>
                     <div id="table_climat" class="hidden">
-                        <table class="table_compact">
-                            <thead>
+                        <table class="table_horizontal">
+                            <tbody>
                             <tr>
                                 <th>d100</th>
                                 <th>Temps</th>
@@ -2651,8 +2198,6 @@
                                 <th>Région tempérée*</th>
                                 <th>Désert</th>
                             </tr>
-                            </thead>
-                            <tbody>
                             <tr>
                                 <td>01–70</td>
                                 <td>Normal</td>
@@ -2715,8 +2260,8 @@
 
                     <p class="caption" onclick="hideContent(this)">Effets du vent</p>
                     <div id="table_vents"  class="hidden">
-                        <table class="table_compact">
-                            <thead>
+                        <table class="table_horizontal">
+                            <tbody>
                             <tr>
                                 <th>Force du Vent</th>
                                 <th>Vitesse du Vent (km/h)</th>
@@ -2725,8 +2270,6 @@
                                 <th>Taille des créatures emportées**</th>
                                 <th>Malus de vol</th>
                             </tr>
-                            </thead>
-                            <tbody>
                             <tr>
                                 <td>Léger</td>
                                 <td>0-15</td>
@@ -2830,14 +2373,12 @@
                     <p>Un personnage plongeant volontairement ne subit pas le moindre dégât du moment qu’il réussit un test d’Acrobaties ou d'Athlétisme et que la profondeur de l’eau est au moins égale au tiers de la hauteur de chute (trois mètres ou plus s’il plonge d’une hauteur de neuf mètres, etc.). Le malus du test d’Acrobaties ou de Natation augmente de 1 tous les 2 mètres de hauteur de chute.</p>
 
                     <h4>Les chutes d'objets</h4>
-                    <table style="float: right" class="table_compact">
-                        <thead>
+                    <table style="float: right" class="table_horizontal">
+                        <tbody>
                         <tr>
                             <th>Taille de l’objet</th>
                             <th>Dégâts</th>
                         </tr>
-                        </thead>
-                        <tbody>
                         <tr>
                             <td>Très petit et moins</td>
                             <td>1d6</td>
@@ -2917,7 +2458,7 @@
             <div>
                 <p>Pour contrecarrer les ténèbres, il est possible de s'armer de différentes sources de lumière allant de la simple bougie à l'incantation de Safi. Toute les sources lumineuses n'éclairent pas de la même façon : la lumière vive permet de voir distinctement, au delà du rayon de lumière vive et jusqu'à celui de lumière faible, on ne peut distinguer que les structures et les objets les plus volumineux.</p>
                 <table class="table_horizontal">
-                    <thead>
+                    <tbody>
                     <tr>
                         <th rowspan="2">Source de lumière</th>
                         <th rowspan="2">Zone d'éclairage</th>
@@ -2928,8 +2469,6 @@
                         <th>Lumière vive</th>
                         <th>Lumière faible</th>
                     </tr>
-                    </thead>
-                    <tbody>
                     <tr>
                         <td>Allumette</td>
                         <td>Circulaire</td>
@@ -3022,10 +2561,10 @@
                         <ul>
                             <li><span class="big_underline">Écrasant :</span>Les armes infligeant des dégâts écrasants brisent les os comme les armures. Les dégâts de ce type ignore une partie de la PR de sa cible à hauteur de son BdFor-3 (Si le BdFor du personnage vaut 4, il ignore 1 de PR, un BdFor de 5 ignore 2 de PR et ainsi de suite).</li>
                             <li><span class="big_underline">Fendant :</span>Les armes infligeant des dégâts fendant causent de graves blessures si maniées par un monstre de puissance. Les dégâts de ce type permettent à l'utilisateur d'infliger son BdFor-2 en plus si son attaque fait perdre au moins 1 point de vitalité à sa cible.</li>
-                            <li><span class="big_underline">Perforant :</span>Les armes infligeant des dégâts perforants s'infiltrent dans les points faibles des armures les plus épaisses. Les dégâts de ce type ignore une partie de la PR de sa cible à hauteur de son BdDex-3 (Si le BdDex du personnage vaut 4, il ignore 1 de PR, un BdFDex de 5 ignore 2 de PR et ainsi de suite).</li>
-                            <li><span class="big_underline">Tranchant :</span>Les armes infligeant des dégâts tranchant inflige de lours dégâts aux adversaires sans armure. Les dégâts de ce type inflige des dégâts permettent à l'utilisateur d'infliger son BdFor-2 ou son BdDex-2 en plus de son jet de dégâts si sa cible ne porte pas d'armure. </li>
+                            <li><span class="big_underline">Perforant :</span>Les armes infligeant des dégâts perforants s'infiltrent dans les points faibles des armures les plus épaisses. Les dégâts de ce type ignore une partie de la PR de sa cible à hauteur de son BdDex-3 (Si le BdDex du personnage vaut 4, il ignore 1 de PR, un BdDex de 5 ignore 2 de PR et ainsi de suite).</li>
+                            <li><span class="big_underline">Tranchant :</span>Les armes infligeant des dégâts tranchant inflige de lours dégâts aux adversaires sans armure. Les dégâts de ce type permettent à l'utilisateur d'infliger son BdFor-2 ou son BdDex-2 en plus de son jet de dégâts si sa cible ne porte pas d'armure. </li>
                         </ul>
-                        <p>Certaines créatures peuvent êtres résistantes ou vulnérables à un ou plusieurs types de dégâts. Les squelettes par exemple résistent au dégâts perforants mais sont vulnérables aux dégâts contondants. Voir <a href="Glossaire.xhtml#vulnerabilites_resisances">Vulnérabilités et résistances</a> et le <a href="../World/Bestiaire.xhtml">Bestiaire</a>.</p>
+                        <p>Certaines créatures peuvent êtres résistantes ou vulnérables à un ou plusieurs types de dégâts. Les squelettes par exemple résistent au dégâts perforants mais sont vulnérables aux dégâts contondants. Voir <a href="Glossaire.xhtml#vulnerabilites_resistances">Vulnérabilités et résistances</a> et le <a href="../World/Bestiaire.xhtml">Bestiaire</a>.</p>
                     </div>
 
                     <h3 id="proprietes_armes" onclick="hideContent(this)">Propriété des armes</h3>
@@ -3037,7 +2576,7 @@
                         <p><span class="big_underline">Excellence :</span>Cette arme est d'excellente facture. Le jet de dégâts se fait avec avantage. </p>
                         <p><span class="big_underline">Fléau :</span>Cette arme frappe de façon imprévisible. Elle ne peut ni être parer ni contrée mais ne peut pas non plus être utilisée pour parer ou contre-attaquer. En cas de match nul avec le défenseur lors d'un blocage, l'utilisateur du fléau gagne et l'attaque porte. Si l'utilisateur fait un échec critique, il se frappe lui-même.</p>
                         <p><span class="big_underline">Lancer(Y/Z) :</span>Cette arme est suffisamment équilibrée pour être lancée. Y représente la portée effective et Z la portée maximale. Un lancer d'arme est traité comme uen attaque à distance normale (mais la force peut être utilisée pour le test de Style de Combat).</p>
-                        <p><span class="big_underline">Lourde :</span>Cette arme possède un fort pouvoir d'arrêt et peut envoyer valser ses cibles. l'action <a href="Types_actions.xhtml#repousser">repousser</a>devient Facile(+20).</p>
+                        <p><span class="big_underline">Lourde :</span>Cette arme possède un fort pouvoir d'arrêt et peut envoyer valser ses cibles. l'action <a href="Types_actions.xhtml#repousser">repousser</a> devient Facile(+20).</p>
                         <p><span class="big_underline">Magique :</span>Cette arme est capable de blesser toutes créatures normalement résistantes ou immunisées aux dégâts normaux.</p>
                         <p><span class="big_underline">Montée :</span>Cette arme n'est utilisable que depuis une monture pour des raisons de poids et de maniabilité. L'attaque se fait lors d'une charge.</p>
                         <p><span class="big_underline">Perce-Armure(X) :</span>Cette arme est d'une telle puissance qu'elle ignore X PR de la cible qu'importe les conditions. </p>
@@ -3059,7 +2598,7 @@
                                 <li>Une arme maniée à deux mains augmente de 50% le BdFor de son utilisateur.</li>
                             </ul>
                         </li>
-                        <li><span class="big_underline">Portée :</span>La portée d'une arme en mètres. Pour les armes de mêlée, cela ne représenta pas la longueur de l'arme mais plutôt la distance ou elle est menaçante. Les armes avec une portée minimale (2-3m par exemple) ne peuvent pas toucher une cible trop proche.. Pour les armes à distance, cela indique la portée effective et la portée maximale (les tirs entre la portée effective et maximale se font avec un malus de -20).</li>
+                        <li><span class="big_underline">Portée :</span>La portée d'une arme en mètres. Pour les armes de mêlée, cela ne représenta pas la longueur de l'arme mais plutôt la distance ou elle est menaçante. Les armes avec une portée minimale (2-3m par exemple) ne peuvent pas toucher une cible trop proche. Pour les armes à distance, cela indique la portée effective et la portée maximale (les tirs entre la portée effective et maximale se font avec un malus de -20).</li>
                         <li><span class="big_underline">Propriétés :</span>Les propriétés de l'arme.</li>
                         <li><span class="big_underline">Encombrement (ENC) :</span>L'encombrement d'une arme, c'est la combinaison entre la taille et le poids de l'arme. </li>
                         <li><span class="big_underline">Prix :</span>Le prix de base de l'arme en pièce d'argent (pa). </li>
@@ -3397,6 +2936,14 @@
                             <td>1,5*Prix</td>
                         </tr>
                         <tr>
+                            <td>Orichalque</td>
+                            <td>65</td>
+                            <td>-</td>
+                            <td>+1</td>
+                            <td>-</td>
+                            <td>2*Prix</td>
+                        </tr>
+                        <tr>
                             <td>Nilaroy</td>
                             <td>65</td>
                             <td>-</td>
@@ -3571,6 +3118,14 @@
                         </tr>
                         <tr>
                             <td>Shoren</td>
+                            <td>65</td>
+                            <td>+1</td>
+                            <td>+10m</td>
+                            <td>+1</td>
+                            <td>3*Prix</td>
+                        </tr>
+                        <tr>
+                            <td>Orichalque</td>
                             <td>65</td>
                             <td>+1</td>
                             <td>+10m</td>
@@ -3971,6 +3526,7 @@
                         <th>PR</th>
                         <th>PR magique</th>
                         <th>Catégorie</th>
+                        <th>Rupture</th>
                         <th>ENC/pièce<br/>(armure complète)</th>
                         <th>Prix</th>
                     </tr>
@@ -3979,6 +3535,7 @@
                         <td>1</td>
                         <td>1 glace</td>
                         <td>Légère</td>
+                        <td>25</td>
                         <td>2(12)</td>
                         <td>20 membre/40 torse (140)</td>
                     </tr>
@@ -3987,6 +3544,7 @@
                         <td>1</td>
                         <td>1 feu</td>
                         <td>Légère</td>
+                        <td>35</td>
                         <td>2(12)</td>
                         <td>25 membre/50 torse (175)</td>
                     </tr>
@@ -3995,6 +3553,7 @@
                         <td>1</td>
                         <td>1 foudre</td>
                         <td>Légère</td>
+                        <td>40</td>
                         <td>2(12)</td>
                         <td>30 membre/60 torse (210)</td>
                     </tr>
@@ -4003,6 +3562,7 @@
                         <td>1</td>
                         <td/>
                         <td>Légère</td>
+                        <td>30</td>
                         <td>2(12)</td>
                         <td>15 membre/30 torse (105)</td>
                     </tr>
@@ -4011,6 +3571,7 @@
                         <td>2</td>
                         <td/>
                         <td>Légère</td>
+                        <td>35</td>
                         <td>3(18)</td>
                         <td>35 membre/60 torse (235)</td>
                     </tr>
@@ -4019,6 +3580,7 @@
                         <td>3</td>
                         <td/>
                         <td>Intermédiaire</td>
+                        <td>50</td>
                         <td>3(18)</td>
                         <td>50 membre/100 torse (350)</td>
                     </tr>
@@ -4027,6 +3589,7 @@
                         <td>3</td>
                         <td>1 magique</td>
                         <td>Légère</td>
+                        <td>55</td>
                         <td>2(12)</td>
                         <td>90 membre/180 torse (630)</td>
                     </tr>
@@ -4035,6 +3598,7 @@
                         <td>3</td>
                         <td>2</td>
                         <td>Vêtement</td>
+                        <td>60</td>
                         <td>1(6)</td>
                         <td>500 membre/ 1000 torse(3500)</td>
                     </tr>
@@ -4043,6 +3607,7 @@
                         <td>4</td>
                         <td/>
                         <td>Intermédiaire</td>
+                        <td>60</td>
                         <td>3(18)</td>
                         <td>75 membre/250 torse (525)</td>
                     </tr>
@@ -4051,14 +3616,25 @@
                         <td>4</td>
                         <td>3 froid</td>
                         <td>Intermédiaire</td>
+                        <td>65</td>
                         <td>3(18)</td>
                         <td>150 membre/300 torse (1050)</td>
+                    </tr>
+                    <tr>
+                        <td>Orichalque</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>Intermédiaire</td>
+                        <td>65</td>
+                        <td>3(18)</td>
+                        <td>250 membre/500 torse (1750)</td>
                     </tr>
                     <tr>
                         <td>Gnistar</td>
                         <td>4</td>
                         <td>1</td>
                         <td>Légère</td>
+                        <td>70</td>
                         <td>1(6)</td>
                         <td>300 membre/600 torse (2100)</td>
                     </tr>
@@ -4067,6 +3643,7 @@
                         <td>5</td>
                         <td>3 foudre</td>
                         <td>Légère</td>
+                        <td>75</td>
                         <td>1(6)</td>
                         <td>500 membre/ 1000 torse(3500)</td>
                     </tr>
@@ -4075,6 +3652,7 @@
                         <td>5</td>
                         <td>5</td>
                         <td>Lourde</td>
+                        <td>80</td>
                         <td>5(30)</td>
                         <td>600 membre/ 1200 torse(4200)</td>
                     </tr>
@@ -4083,6 +3661,7 @@
                         <td>6</td>
                         <td>3 feu</td>
                         <td>Lourde</td>
+                        <td>85</td>
                         <td>5(30)</td>
                         <td>500 membre/ 1000 torse(3500)</td>
                     </tr>
@@ -4096,6 +3675,7 @@
                         <th>PR</th>
                         <th>PR magique</th>
                         <th>Catégorie</th>
+                        <th>Rupture</th>
                         <th>ENC/pièce<br/>(armure complète)</th>
                         <th>Prix</th>
                     </tr>
@@ -4104,6 +3684,7 @@
                         <td>2</td>
                         <td>2 glace</td>
                         <td>Intermédiaire</td>
+                        <td>30</td>
                         <td>3(18)</td>
                         <td>30 membre/60 torse (210)</td>
                     </tr>
@@ -4112,6 +3693,7 @@
                         <td>2</td>
                         <td/>
                         <td>Intermédiaire</td>
+                        <td>35</td>
                         <td>4(24)</td>
                         <td>20 membre/40 torse (140)</td>
                     </tr>
@@ -4120,6 +3702,7 @@
                         <td>3</td>
                         <td>1 feu</td>
                         <td>Intermédiaire</td>
+                        <td>40</td>
                         <td>3(18)</td>
                         <td>50 membre/100 torse (350)</td>
                     </tr>
@@ -4128,6 +3711,7 @@
                         <td>3</td>
                         <td>1 foudre</td>
                         <td>Légère</td>
+                        <td>45</td>
                         <td>2(12)</td>
                         <td>60 membre/120 torse (420)</td>
                     </tr>
@@ -4136,6 +3720,7 @@
                         <td>3</td>
                         <td/>
                         <td>Intermédiaire</td>
+                        <td>40</td>
                         <td>4(24)</td>
                         <td>50 membre/100 torse (350)</td>
                     </tr>
@@ -4144,6 +3729,7 @@
                         <td>4</td>
                         <td/>
                         <td>Lourde</td>
+                        <td>55</td>
                         <td>4(24)</td>
                         <td>100 membre/200 torse (700)</td>
                     </tr>
@@ -4152,6 +3738,7 @@
                         <td>4</td>
                         <td>2</td>
                         <td>Intermédiaire</td>
+                        <td>60</td>
                         <td>3(18)</td>
                         <td>180 membre/360 torse (1260)</td>
                     </tr>
@@ -4160,6 +3747,7 @@
                         <td>4</td>
                         <td>3</td>
                         <td>Légère</td>
+                        <td>65</td>
                         <td>2(12)</td>
                         <td>750 membre/ 1500 torse(5250)</td>
                     </tr>
@@ -4168,6 +3756,7 @@
                         <td>5</td>
                         <td/>
                         <td>Lourde</td>
+                        <td>65</td>
                         <td>4(24)</td>
                         <td>150 membre/300 torse (1050)</td>
                     </tr>
@@ -4176,14 +3765,25 @@
                         <td>5</td>
                         <td>4 froid</td>
                         <td>Lourde</td>
+                        <td>70</td>
                         <td>4(24)</td>
                         <td>250 membre/500 torse (1750)</td>
+                    </tr>
+                    <tr>
+                        <td>Orichalque</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>Lourde</td>
+                        <td>70</td>
+                        <td>4(24)</td>
+                        <td>400 membre/800 torse (2800)</td>
                     </tr>
                     <tr>
                         <td>Gnistar</td>
                         <td>5</td>
                         <td>2</td>
                         <td>Intermédiaire</td>
+                        <td>75</td>
                         <td>2(12)</td>
                         <td>500 membre/1000 torse (3500)</td>
                     </tr>
@@ -4192,6 +3792,7 @@
                         <td>6</td>
                         <td>4 foudre</td>
                         <td>Intermédiaire</td>
+                        <td>80</td>
                         <td>2(12)</td>
                         <td>750 membre/ 1800 torse(5250)</td>
                     </tr>
@@ -4200,6 +3801,7 @@
                         <td>6</td>
                         <td>6 </td>
                         <td>Super-Lourde</td>
+                        <td>85</td>
                         <td>6(36)</td>
                         <td>900 membre/ 1800 torse(6300)</td>
                     </tr>
@@ -4208,6 +3810,7 @@
                         <td>8</td>
                         <td>4 feu</td>
                         <td>Super-Lourde</td>
+                        <td>90</td>
                         <td>6(36)</td>
                         <td>750 membre/ 1800 torse(5250)</td>
                     </tr>

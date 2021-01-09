@@ -26,31 +26,6 @@ table{/*Affecte tout les tableaux*/
     margin: auto;  /*Centre le tableau*/
 }
 
-table.table_compact{
-    border-style: none;
-    border-collapse: collapse;
-    text-align: center;
-}
-
-table.table_compact tbody td{
-    border-style: none;
-    border-bottom: 1px solid black;
-    padding: 2px;
-    margin: 2px;
-}
-table.table_compact tbody th{
-    border-style: none;
-    border-bottom: 2px solid black;
-    padding: 2px;
-    margin: 2px;
-}
-
-table.table_compact thead th{
-    border-style: none;
-    border-bottom: 2px solid black;
-    padding: 2px;
-    margin: 2px;
-}
 table.table_horizontal{
     border-style: none;
     border-collapse: collapse;
