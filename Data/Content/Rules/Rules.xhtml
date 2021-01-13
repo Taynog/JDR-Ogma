@@ -164,14 +164,13 @@
             <h3 id="jet_critique" onclick="hideContent(this)">Jet critique</h3>
             <div>
                 <p>Un résultat exceptionnellement haut ou bas est considéré comme critique. Une réussite critique permet souvent d'accomplir plus que la tâche prévue ou de l'accomplir de façon remarquable. Un échec critique au contraire apporte souvent des complications.</p>
-                <p>Un degré de réussite supérieur ou égale à 4 est une réussite critique, un DR inférieur ou égal à -4 est un échec critique. Certaines situations, compétences ou postures peuvent faire varier ces seuils.</p>
-                <p>Un résultat entre 1 et 5 est toujours un succès critique tout comme un résultat entre 96 et 100 est un échec critique.</p>
+                <p>Un résultat entre 1 et 5 est toujours un succès critique tout comme un résultat entre 96 et 100 est toujours un échec critique.</p>
             </div>
 
             <h3 id="cran_des" onclick="hideContent(this)">Cran des dés</h3>
             <div>
                 <p>Parfois, les conditions sont si bonnes que le MJ peut vous permettre d'augmenter votre dé d'un cran ou parfois si mauvaise qu'il diminue d'un cran. Cela concerne seulement les jets de dégâts ou d'initiative.</p>
-                <p>Les crans de dés sont ainsi représenté : 1d2 &#8594; 1d4 &#8594; 1d6 &#8594; 1d8 &#8594; 1d10 &#8594; 1d12 &#8594; 1d8+1d6 &#8594; 2d8 &#8594; 1d10+1d8 &#8594; 2d10 &#8594; 1d12+1d10 &#8594; 2d12 &#8594; 2d8+1d10 &#8594; 3d10 &#8594; 2d10+1d12 &#8594; 2d12+1d10 &#8594; 3d12 &#8594; 4d10 &#8594; 2d12+2d10 &#8594; 4d12</p>
+                <p>Les crans de dés sont ainsi représenté : 1d2 &#8594; 1d4 &#8594; 1d6 &#8594; 1d8 &#8594; 1d10 &#8594; 1d12 &#8594; 1d12+1d2 &#8594; 1d12+1d4 &#8594; 1d12+1d6 &#8594; 1d12+1d8 &#8594; 1d12+1d10 &#8594; 2d12 &#8594; 2d12+1d2 et ainsi de suite</p>
             </div>
 
             <h3 id="modificateur_jets" onclick="hideContent(this)">Modificateurs de difficultés</h3>
@@ -544,18 +543,20 @@
                         </tbody>
                     </table>
                 </div>
+
                 <h3 id="vitalite" onclick="hideContent(this)">Vitalité (PV)</h3>
                 <div>
-                    <p>La vitalité représente l'intégrité physique du personnage. C'est la caractéristique de Vigueur qui détermine la vitalité d'un personnage : Vitalité = Vig/2,5</p>
+                    <p>La vitalité représente l'intégrité physique du personnage. C'est la caractéristique de Vigueur qui détermine la vitalité d'un personnage : Vitalité = Vig/2</p>
                     <p>La jauge de vitalité se vide quand le personnage subit des dégâts, que ce soit suite à un coup contre lequel il n'a pas sû se défendre, une chute, un piège, un sort, etc...</p>
                     <p>Si la vitalité d'une créature atteint 0, elle sombre dans l'inconscience et ce même si il lui reste de l'endurance. Pour de plus amples détails, se référer à la section <a href="Rules.xhtml#blessures_mort">Blessures et mort</a> dans la partie <a href="Rules.xhtml#Combat">Combat</a>.</p>
-                    <p>La vitalité se régénère avec du repos, une entité récupère 1 point de vitalité par jour mais cela peut varier selon les conditions dans lesquelles on se repose, si l'on est sous la surveillance d'un médecin, etc...</p>
+                    <p>La vitalité se régénère avec du repos, une entité récupère son BdVig en vitalité par jour mais cela peut varier selon les conditions dans lesquelles on se repose, si l'on est sous la surveillance d'un médecin, etc...</p>
                     <p>Il est possible de soigner ses blessures plus rapidement grâce à des sorts ou des potions de soin. Les sorts guérisseurs ont les mêmes propriétés que les sorts de dégâts mais utilisent des dés d'un cran inférieurs.</p>
                 </div>
+
                 <h3 id="psy" onclick="hideContent(this)">Psy</h3>
                 <div>
                     <p>La psy est une ressource mentale utilisée pour lancer des sorts, ce sont la caractéristique d'Intelligence qui déterminent la psy maximale d'un personnage : Psy = Int</p>
-                    <p>On récupère de la psy naturellement lors des périodes de calme, une quantité équivalente à BdVol par heure qui passe. Cette quantité peut varier selon l'environnement du personnage, si il médite ou prie.</p>
+                    <p>On récupère de la psy naturellement lors des périodes de calme, une quantité équivalente à BdInt+BdVol par heure qui passe. Cette quantité peut varier selon l'environnement du personnage, si il médite ou prie.</p>
                 </div>
 
                 <h3 id="capacite_port" onclick="hideContent(this)">Capacité de port</h3>
@@ -610,11 +611,11 @@
 
                 <h3 id="points_actions" onclick="hideContent(this)">Points d'action (PA)</h3>
                 <div>
-                    <p>Les points d'actions détermine la quantité d'actions que peut effectuer une personnage en un round de combat. Le nombre de PA disponible d'un personnage change en fonction de ses bonus d'Agilité, de Dextérité et de Perception.</p>
+                    <p>Les points d'actions détermine la quantité d'actions que peut effectuer une personnage en un round de combat. Le nombre de PA disponible d'un personnage change en fonction de ses bonus d'Agilité, d'Intelligence et de Perception.</p>
                     <table class="table_horizontal" id="table_pa">
                         <tbody>
                         <tr>
-                            <th>BdAgi+BdDex+BdPer</th>
+                            <th>BdAgi+BdInt+BdPer</th>
                             <th>PA</th>
                         </tr>
                         <tr>
@@ -648,60 +649,37 @@
 
             <h2 id="Competences" onclick="hideContent(this)">Compétences</h2>
             <div>
-                <p>Maintenant qu'on connaît les aptitudes physiques et mentales de votre personnage, attaquons nous à ce qu'il sait faire, c'est à dire quelles sont ses compétences ? Un personnage commence un certain nombre de compétences selon son niveau d'expérience, mais votre MJ peut très bien décider d'en attribuer plus ou moins si son scénario l'exige.</p>
+                <p>Maintenant qu'on connaît les aptitudes physiques et mentales de votre personnage, attaquons nous à ce qu'il sait faire, c'est à dire quelles sont ses compétences ? Un personnage commence un certain nombre de points de compétences selon son niveau d'expérience, mais votre MJ peut très bien décider d'en attribuer plus ou moins si son scénario l'exige. Il revient à vous de choisir dans quelle compétence dépenser ces PC, sachant qu'un palier coûte 10PC et qu'une spécialisation en coûte 5. <i>Note aux MJs : Aucune limite n'est imposé sur le palier maximal de départ mais soyez attentifs à ne pas laisser un joueur sensé incarné un personnage débutant commencer l'aventure avec un compétence au palier d'Expert sans une bonne explication.</i></p>
                 <table class="table_horizontal">
                     <tbody>
                     <tr>
-                        <th rowspan="2">Expérience du personnage</th>
-                        <th colspan="6">Paliers de compétences de départ</th>
-                    </tr>
-                    <tr>
-                        <th>Novice</th>
-                        <th>Apprenti</th>
-                        <th>Adepte</th>
-                        <th>Expert</th>
-                        <th>Maître</th>
+                        <th>Expérience du personnage</th>
+                        <th>Points de compétences de départ</th>
                     </tr>
                     <tr>
                         <th>Débutant</th>
-                        <td>2</td>
-                        <td>1</td>
-                        <td> </td>
-                        <td> </td>
-                        <td> </td>
+                        <td>35</td>
                     </tr>
                     <tr>
                         <th>Aventurier</th>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td> </td>
-                        <td> </td>
+                        <td>75</td>
                     </tr>
                     <tr>
                         <th>Vétéran</th>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td> </td>
+                        <td>125</td>
                     </tr>
                     <tr>
                         <th>Héros</th>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>1</td>
+                        <td>175</td>
                     </tr>
                     <tr>
-                        <td colspan="7">Les compétences d'origines ne comptent pas dans le nombre de compétences de départ</td>
+                        <td colspan="3">Les compétences d'origines ne puisent pas dans cette réserve de PC mais il est possible d'en dépenser pour atteindre un meilleur palier.</td>
                     </tr>
                     </tbody>
                 </table>
-                <p>Pour devenir Initié dans une nouvelle compétence il sera nécessaire de s’entraîner, que ce soit auprès d’une personne compétente ou alors en pratiquant le domaine régi par la compétence.</p>
                 <p>La caractéristique indiquée sur la compétence est celle utilisée pour les tests liés à cette compétence. Si plusieurs caractéristiques sont indiqués, vous êtes libres de choisir laquelle utiliser pour maximiser vos chances de réussite. Il est toutefois possible que le MJ vous impose la caractéristique à utiliser si les conditions du test s'y prêtent.</p>
                 <p>Les compétences possèdent plusieurs paliers de maîtrise, chaque palier représentant l'expérience que possède votre personnage dans cette compétence. Un personnage ne possédant d'expérience dans une compétence peut tenter d'effectuer des actions relatives à la compétences mais il peut subir des malus selon la compétence concernée.</p>
+                <p>Pour devenir Novice dans une nouvelle compétence il sera nécessaire de s’entraîner, que ce soit auprès d’une personne compétente ou alors en pratiquant le domaine régi par la compétence jusqu'à obtenir au moins 10 PC.</p>
                 <p>Un personnage peut se spécialiser dans un domaine particulier d'une compétence et ainsi effectuer les épreuves de ce domaine avec <a href="Rules.xhtml#avantage">avantage</a>. Un personnage ne peut bénéficier de plus d'une spécialisation à la fois lors d'une épreuve mais peut posséder plusieurs spécialisation dans une même compétence. Un spécialisation coûte 5 points de compétence et nécessite d'avoir atteint le palier d'Apprenti. Des exemples de spécialisations sont donnés dans la liste ci-dessous mais les joueurs peuvent tout à fait choisir leur propre spécialisation et en discuter avec le MJ.</p>
                 <p>Les paliers sont :</p>
                 <ul>
@@ -927,7 +905,7 @@
                     </tbody>
                 </table>
                 <p>La progression des compétences se fait d'une manière similaire à celle des caractéristiques : lorsque le personnage utilise sa compétence, il peut obtenir des points de compétence(PC) pour cette compétence. L'obtention de PC se fait en fonction de la tâche accomplie et si elle est en accord avec le niveau d'expertise du personnage, un expert ne progresse pas en effectuant des tâches simples, tout comme un novice ne peut s'améliorer s'il ne tente que des actions impossibles.</p>
-                <p>Lors d'un <a href="Rules.xhtml#repos_long">repos long</a>, si le personnage possède 10 points de compétence, il peut les utiliser pour passer au palier suivant. Les PC sont exclusifs à la compétence ayant permis leurs acquisition, ils ne peuvent être dépensés pour une autre compétence.</p>
+                <p>Lors d'un <a href="Rules.xhtml#repos_long">repos long</a>, si le personnage possède 10 points de compétence, il peut les "consommer" pour passer au palier suivant. Les PC sont exclusifs à la compétence ayant permis leurs acquisition, ils ne peuvent être dépensés pour une autre compétence.</p>
             </div>
 
             <h2 id="traits_perso" onclick="hideContent(this)">Traits</h2>
@@ -1055,14 +1033,13 @@
             <p>Les Sarpas par exemple utilisent constamment la magie pour produire de la chaleur si ils ne peuvent pas profiter de celle des astres. On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
             <p>Pour utiliser la magie durant un combat, il faut avoir suffisamment de temps pour se concentrer. Si le lanceur est perturbé lors de la concentration du sort, il doit réussir un jet de Volonté basé sur la difficulté du sort pour le maintenir si il échoue, il perd son sort. La psyché est perdue lors de l'incantation du sort et non lors du lancement.</p>
             <p>Un sort peut être travaillé pendant de longues minutes pour produire des effets plus durables et puissants, un tel sort est appelé un rituel. Plus un rituel est long, plus les effets du sorts seront marquants et plus il nécessitera de psy et de force mentale pour être mené à bien. Un rituel possède des effets et un coût non-gérés par des règles strictes, c'est le MJ qui décide de l'impact en psy et sur le monde d'un rituel selon qui le lance et la durée d'incantation.</p>
-            <p>Résister ou éviter aux effets d'un sort peut nécessiter un jet de compétence ou de caractéristique. Si le test est réussi, alors le sort n'a aucun effet. Si on subit les effets d'un sort sur une certaine période, il est possible d'effectuer à nouveau le test requis pour s'en libérer en dépensant 1 PA lors de son tour, le modificateur reste le même pour chaque réitération du test.</p>
+            <p>Résister ou éviter aux effets d'un sort peut nécessiter un jet de compétence ou de caractéristique. Les effets d'un test réussi varient en fonction des effets du sorts : le sort peut n'infliger que la moitié des dégâts, voir sa durée divisée par deux ou même n'avoir aucun effet. Si on subit les effets d'un sort sur une certaine période, il est possible d'effectuer à nouveau le test requis pour s'en libérer en dépensant 1 PA lors de son tour, le modificateur reste le même pour chaque réitération du test.</p>
             <h3 onclick="hideContent(this)">Règles de créations des sorts</h3>
             <div>
                 <p>Un sort est défini par une forme et un effet choisis par le lanceur, c'est la forme, l'effet et la puissance qui déterminent le coût en psy du sort.</p>
                 <p>Un sort peut posséder plusieurs propriétés :</p>
                 <ul>
                     <li><span class="big_underline">Maintien :</span>Le lanceur peut dépenser à nouveau la même quantité de psy utilisée pour le sort pour maintenir son effet.</li>
-                    <li><span class="big_underline">Surcharge :</span>Le sort possède des effets supplémentaire si le lanceur ne contient pas son sort.</li>
                     <li><span class="big_underline">Attaque de Mêlée/ à Distance (portée) :</span>Le sort appartient à cette catégorie d'attaque.</li>
                     <li><span class="big_underline">Zone (portée, forme) :</span>Le sort possède une zone d'effet.</li>
                     <li><span class="big_underline">Direct :</span>Le sort matérialise instantanément sur la/les cible(s), il est normalement impossible de s'en protéger.</li>
@@ -1083,73 +1060,73 @@
                         <tr>
                             <td>Soi</td>
                             <td/>
-                            <td>2</td>
+                            <td>1</td>
                             <td>Affecte le lanceur</td>
                         </tr>
                         <tr>
                             <td>Contact</td>
                             <td>Attaque de Mêlée (1m)</td>
-                            <td>1</td>
+                            <td>0</td>
                             <td>Affecte une seule cible situé à 1 mètre ou moins du lanceur</td>
                         </tr>
                         <tr>
                             <td>Flèche</td>
                             <td>Attaque à Distance (100m)</td>
-                            <td>3</td>
+                            <td>2</td>
                             <td>Affecte une seule cible situé à 100 mètres ou moins du lanceur</td>
                         </tr>
                         <tr>
                             <td>Cible</td>
                             <td>Direct</td>
-                            <td>4</td>
+                            <td>3</td>
                             <td>Affecte une seule cible situé à 50 mètres ou moins du lanceur</td>
                         </tr>
                         <tr>
                             <td>Orbe</td>
                             <td>Attaque à Distance (100m), Zde(1+Zm, sphère)</td>
-                            <td>6+Z*2</td>
+                            <td>4+Z*2</td>
                             <td>Affecte toutes les cibles situées dans les 1+Z mètres du point d'impact situé à 100m ou moins du lanceur.</td>
                         </tr>
                         <tr>
                             <td>Rayon</td>
                             <td>Attaque à Distance (100), Zde(10+10*Zm, ligne droite)</td>
-                            <td>8+Z*3</td>
+                            <td>5+Z*3</td>
                             <td>Affecte toutes les cibles situées sur une ligne d'un mètre de large et de 10+10*Z mètres partant du lanceur</td>
                         </tr>
                         <tr>
                             <td>Chaîne</td>
                             <td>Direct</td>
-                            <td>7+Z*3</td>
+                            <td>4+Z*2</td>
                             <td>Affecte une seule cible situé à 50 mètres ou moins du lanceur. Affecte ensuite Z autres cibles, toutes situées à moins de 10m de la précédente.</td>
                         </tr>
                         <tr>
                             <td>Aura</td>
                             <td>Maintien</td>
-                            <td>5</td>
+                            <td>3</td>
                             <td>Affecte toute les cibles situées à 1 mètres ou moins du lanceur à la fin de chaque round.</td>
                         </tr>
                         <tr>
                             <td>Cône</td>
                             <td>Attaque à Distance, Zde(3+Zm, triangle)</td>
-                            <td>6+Z*3</td>
+                            <td>4+Z*2</td>
                             <td>Affecte toutes les cibles situées dans un cône de 3+Z mètres de largeur finale (le cône s'élargit d'un mètre par mètres le séparant du lanceur et possède une longueur finale de 3+Z mètres)</td>
                         </tr>
                         <tr>
                             <td>Onde de Choc</td>
                             <td>Attaque à distance, ZdE(1+Zm, sphère)</td>
-                            <td>6+Z*3</td>
+                            <td>4+Z*2</td>
                             <td>Affecte toutes les cibles situées à 1+Z mètres ou moins du lanceur.</td>
                         </tr>
                         <tr>
                             <td>Rune</td>
                             <td/>
-                            <td>5+Z*2</td>
+                            <td>4+Z</td>
                             <td>Le sort se place sur une surface située à moins de 5 mètres du lanceur. Après un round la rune devient Difficile(-20) à voir. Le lanceur choisi les conditions d'activation de la rune (proximité, temps, contrôle manuel). La rune persiste indéfiniment jusqu'à son déclenchement ou sa désactivation. Lorsque la rune explose, elle affecte toutes les cibles situées à 1+Z mètres ou moins d'elle.</td>
                         </tr>
                         <tr>
                             <td>Tempête</td>
                             <td>Maintien, Attaque à Distance, ZdE(1+3*Zm, sphère), fais perdre la propriété Surcharge</td>
-                            <td>8+Z*3</td>
+                            <td>4+Z*2</td>
                             <td>Affecte toutes les cibles situées dans les 1+Z mètres du point d'impact situé à 100m ou moins du lanceur. Les effets du sort persistent pendant 1 round et affecte les cibles la traversant. Maintenir ce sort ne permet pas de déplacer la tempête.</td>
                         </tr>
                         <tr>
@@ -1183,57 +1160,57 @@
                         <tr><td colspan="5">Cette école permet de modeler la réalité comme on l'entend en transformant ou réparant des éléments existants.</td></tr>
                         <tr>
                             <td>Aspect de l'aigle</td>
-                            <td> Maintien</td>
-                            <td>5*SC</td>
+                            <td>Maintien</td>
+                            <td>3*SC</td>
                             <td>La cibles obtiennent les capacités d'un aigle pendant 1 minute. Vitesse de déplacement en vol : SC*2m. Armes naturelles : 1d4+SC perforants.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Aspect du loup</td>
-                            <td> Maintien</td>
-                            <td>5*SC</td>
+                            <td>Maintien</td>
+                            <td>3*SC</td>
                             <td>La cibles obtiennent les capacités d'un loup pendant 1 minute. Vitesse de déplacement au sol bonus : SC mètres. Armes naturelles : 1d4+SC tranchants.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Aspect de l'ours</td>
-                            <td> Maintien</td>
-                            <td>5*SC</td>
+                            <td>Maintien</td>
+                            <td>3*SC</td>
                             <td>La cibles obtiennent les capacités d'un ours pendant 1 minute. PVs temporaires : 2*SC. Armes naturelles : 1d4+SC fendants.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Respiration aquatique</td>
                             <td>-</td>
-                            <td>1*SC</td>
+                            <td>SC</td>
                             <td>La cible peut respirer l'eau comme si c'était de l'air pendant SC minutes.</td>
                             <td>Nero</td>
                         </tr>
                         <tr>
                             <td>Aisance aquatique</td>
                             <td>-</td>
-                            <td>1*SC</td>
+                            <td>SC</td>
                             <td>La cible se déplace à sa vitesse normale dans l'eau pendant SC minutes.</td>
                             <td>Nero</td>
                         </tr>
                         <tr>
                             <td>Marche aquatique</td>
                             <td>-</td>
-                            <td>1*SC</td>
+                            <td>SC</td>
                             <td>La cible peut marcher sur l'eau comme s'il marchait sur la terre ferme pendant SC minutes.</td>
                             <td>Nero</td>
                         </tr>
                         <tr>
                             <td>Chute ralentie</td>
                             <td>Réaction</td>
-                            <td>1*SC</td>
+                            <td>SC</td>
                             <td>La cible ignore les 3*SC premiers mètres de sa prochaine chute lors du <a href="Rules.xhtml#chutes">calcul des dégâts</a>.</td>
                             <td>Aïgida</td>
                         </tr>
                         <tr>
                             <td>Lévitation</td>
                             <td>Maintien, Réaction</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>La cible obtient une vitesse de déplacement en vol de 3*SC mètres pendant 1 round</td>
                             <td>Aïgida</td>
                         </tr>
@@ -1247,56 +1224,56 @@
                         <tr>
                             <td>Verrouillage</td>
                             <td>-</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>La serrure ciblé devient verrouillée. Ouvrir cette serrure nécessite un test étendu de crochetage avec un DR total de 2*SC.</td>
                             <td>Ourgal</td>
                         </tr>
                         <tr>
                             <td>Déverrouillage</td>
                             <td>-</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>La serrure ciblé se déverrouille si le DR du test étendu de crochetage est inférieur ou égal à 2*SC.</td>
                             <td>Ourgal</td>
                         </tr>
                         <tr>
                             <td>Réparation</td>
                             <td>-</td>
-                            <td>5*SC</td>
+                            <td>4*SC</td>
                             <td>L'objet ciblé remonte de SC <a href="Tableaux.xhtml#table_rupture">niveau de rupture</a> jusqu'au niveau Entretenu au maximum.</td>
                             <td>Ourgal (Pierres et métaux), Kormo(Bois)</td>
                         </tr>
                         <tr>
                             <td>Transmutation</td>
                             <td>Maintien</td>
-                            <td>5*SC</td>
+                            <td>3*SC</td>
                             <td>La cible devient métallique ou minérale pendant 1 minute. Si la cible souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC). Une cible métamorphosée en pierre ou en métal est invulnérable aux dégâts du temps</td>
                             <td>Ourgal</td>
                         </tr>
                         <tr>
                             <td>Renforcement physique ([caractéristique])</td>
                             <td>[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
-                            <td>7*SC</td>
+                            <td>4*SC</td>
                             <td>Renforce la caractéristique de la cible de 5*SC points pendant une minute</td>
                             <td>Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)</td>
                         </tr>
                         <tr>
                             <td>Affaiblissement [Caractéristique]</td>
                             <td>[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
-                            <td>7*SC</td>
+                            <td>4*SC</td>
                             <td>Affaibli la caractéristique de la cible de 5*SC points pendant une minute. La cible doit passer un test de Vigueur dans le cas d'une caractéristique physique ou un test de Volonté pour les caractéristiques mentale avec un modificateur de +20-(5*SC).</td>
                             <td>Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)</td>
                         </tr>
                         <tr>
                             <td>Résistance [Élément]</td>
                             <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>Procure à la cible une résistance à l'[élément] (SC) pendant une minute.</td>
                             <td>Aïgida, Anathos, Horoï, Kuga, Nero, Safi</td>
                         </tr>
                         <tr>
                             <td>Vulnérabilité [Élément]</td>
                             <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>Inflige à la cible une vulnérabilité à l'[élément] (SC) pendant une minute.</td>
                             <td>Aïgida, Anathos, Horoï, Kuga, Nero, Safi</td>
                         </tr>
@@ -1319,42 +1296,42 @@
                         <tr>
                             <td>Armure Physique</td>
                             <td>Maintien</td>
-                            <td>4*SC</td>
+                            <td>3*SC</td>
                             <td>La cible obtient SC PR pendant 1 minute.</td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
                             <td>Armure Magique</td>
                             <td>Maintien</td>
-                            <td>5*SC</td>
+                            <td>3*SC</td>
                             <td>La cible obtient SC PR magique pendant 1 minute.</td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
                             <td>Armure Élémentaire</td>
                             <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison], Maintien</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>La cible obtient SC PR [Élément] pendant 1 minute.</td>
                             <td>Aïgida, Anathos, Horoï, Kuga, Nero, Safi</td>
                         </tr>
                         <tr>
                             <td>Bouclier Physique</td>
                             <td>Maintien</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>La cible obtient SC PV temporaires pour résister aux dégâts physiques pendant 1 round.<br/>Si la cible possède toujours au moins 1 PV temporaire à la fin du round, le sort peut être relancé gratuitement sans test et les PV temporaires sont restaurés à leur valeur initiale. Si tous les PV temporaires ont été perdus, le sort ne peut être maintenu.</td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
                             <td>Bouclier Magique</td>
                             <td>Maintien</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>La cible obtient SC PV temporaires pour résister à la magie pendant 1 round.<br/>Si la cible possède toujours au moins 1 PV temporaire à la fin du round, le sort peut être relancé gratuitement sans test et les PV temporaires sont restaurés à leur valeur initiale. Si tous les PV temporaires ont été perdus, le sort ne peut être maintenu.</td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
                             <td>Bouclier Élémentaire</td>
                             <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison], Maintien</td>
-                            <td>2*SC</td>
+                            <td>SC</td>
                             <td>La cible obtient SC PV temporaires pour résister à l'[Élément] pendant 1 round.<br/>Si la cible possède toujours au moins 1 PV temporaire à la fin du round, le sort peut être relancé gratuitement sans test et les PV temporaires sont restaurés à leur valeur initiale. Si tous les PV temporaires ont été perdus, le sort ne peut être maintenu.</td>
                             <td>Aïgida, Anathos, Horoï, Kuga, Nero, Safi</td>
                         </tr>
@@ -1362,13 +1339,13 @@
                             <td>Protection</td>
                             <td>Réaction</td>
                             <td>2*SC</td>
-                            <td>Réduis les dégâts subis par la cible de 5+SC pour une seule attaque.</td>
+                            <td>Réduis les dégâts subis par la cible de SC*2 pour une seule attaque.</td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
                             <td>Entrave</td>
                             <td>Maintien</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>La cible doit passer un test de Force ou de Volonté avec un modificateur de +20-(5*SC) ou être immobilisée pendant un round.</td>
                             <td>Dikaï</td>
                         </tr>
@@ -1383,7 +1360,7 @@
                             <td>Invocation d'Arme</td>
                             <td>Maintien</td>
                             <td>3*SC</td>
-                            <td>Invoque une arme à l'endroit ciblé. Le SC détermine l'arme invoquée. SC1 arme à 1d4, SC2 arme à 1d6, SC3 arme à 1d8, chaque SC supplémentaire ajoute un +1 aux dégâts.</td>
+                            <td>Invoque une arme à l'endroit ciblé pendant une minute. Le SC détermine l'arme invoquée : SC1 arme à 1d4, SC2 arme à 1d6, SC3 arme à 1d8, chaque SC excédant celui de l'arme souhaitée ajoute +1 aux dégâts.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
@@ -1411,7 +1388,7 @@
                             <td>Fatigue</td>
                             <td>-</td>
                             <td>3*SC</td>
-                            <td>La cible perd 2*SC points d'endurance. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC) si elle souhaite résister.</td>
+                            <td>La cible perd un nombre de points d'endurance équivalent au BdVol du lanceur. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC) si elle souhaite résister.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
@@ -1424,14 +1401,14 @@
                         <tr>
                             <td>Télékinésie</td>
                             <td>-</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>Le lanceur invoque une main éthérée capable d'interagir avec le monde pendant SC rounds.</td>
                             <td>Agones</td>
                         </tr>
                         <tr>
                             <td>Projection psychique</td>
                             <td>-</td>
-                            <td>6*SC</td>
+                            <td>4*SC</td>
                             <td>L'esprit de cible est envoyé dans la dimension de Karnaï pendant une minute ce qui équivaut à 6 heures là-bas. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC) si elle souhaite résister. Sans esprit pour le contrôler, le corps de la cible est inanimé pendant cette période.</td>
                             <td>Anathos</td>
                         </tr>
@@ -1445,79 +1422,79 @@
                         <tr>
                             <td>Pas de l'ombre</td>
                             <td>-</td>
-                            <td>5*SC</td>
+                            <td>3*SC</td>
                             <td>La cible doit se tenir dans une ombre. Elle se téléporte dans une autre ombres située à moins de 3*SC mètres. Si elle souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
                             <td>Eftis</td>
                         </tr>
                         <tr>
                             <td>Téléportation</td>
                             <td>-</td>
-                            <td>5*SC</td>
+                            <td>3*SC</td>
                             <td>La cible se téléporte sur une distance de 2*SC mètres dans un éclair de lumière. Si elle souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
                             <td>Safi</td>
                         </tr>
                         <tr>
                             <td>Racines du monde</td>
                             <td>-</td>
-                            <td>5*SC</td>
-                            <td>La cible se téléporte via les racines d'un arbre sur une distance de 5*SC mètres, elle doit être en contact avec un arbre en vie et réapparaître sur une autre arbre en vie. Si elle souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
+                            <td>3*SC</td>
+                            <td>La cible se téléporte via les racines d'un arbre sur une distance de 5*SC mètres, elle doit être en contact avec un arbre en vie et réapparaître sur un autre arbre en vie. Si elle souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
                             <td>Kormo</td>
                         </tr>
                         <tr><th colspan="5">Divination</th></tr>
                         <tr><td colspan="5">Cette école permet de révéler l'inconnu, de jouer avec le destin.</td></tr>
                         <tr>
                             <td>Télépathie</td>
-                            <td>Maintien, Surcharge(+BdVol à la durée)</td>
-                            <td>3*SC</td>
-                            <td>La cible peut communiquer par télépathie avec le lanceur pendant SC minutes</td>
+                            <td>Maintien</td>
+                            <td>2*SC</td>
+                            <td>La cible peut communiquer par télépathie avec le lanceur pendant une minute. Les éléments communicables de la sorte dépendent du SC : SC1 mot à mot, SC2 phrases courtes, SC3 aucune limite de mots, SC4 images, SC5 sentiments et concepts.</td>
                             <td>Orizo</td>
                         </tr>
                         <tr>
                             <td>Archives d'Orizo</td>
                             <td>-</td>
-                            <td>2*SC</td>
+                            <td>3*SC</td>
                             <td>Le prochain test de Savoir ou de Linguistique de la cible se fera avec un bonus de 5*SC dans la minute qui suit le lancement</td>
                             <td>Orizo</td>
                         </tr>
                         <tr>
                             <td>Destinée</td>
                             <td>-</td>
-                            <td>6*SC</td>
-                            <td>Permet de lancer SC d100. La cible peut utiliser un des résultats obtenus pour passer n'importe quel test dans les prochaines 24h. (Le bénéficiaire de l'état doit annoncer l'utilisation d'un dé pré-tiré avant de passer le test).</td>
+                            <td>4*SC</td>
+                            <td>Permet de lancer SC d100. La cible peut utiliser un des résultats obtenus pour passer n'importe quel test dans les prochaines 24h. (Le bénéficiaire de l'état doit annoncer l'utilisation d'un dé pré-tiré avant que le dé ne soit lancé).</td>
                             <td>Tychi</td>
                         </tr>
                         <tr>
                             <td>Fatalité</td>
                             <td>-</td>
-                            <td>8*SC</td>
-                            <td>Permet de lancer SC d100. Le lanceur peut forcer une cible à utiliser un des résultats obtenus pour passer n'importe quel test dans les prochaines 24h. (Le lanceur doit annoncer l'utilisation d'un dé pré-tiré avant de passer le test).</td>
+                            <td>4*SC</td>
+                            <td>Permet de lancer SC d100. Le lanceur peut forcer une cible à utiliser un des résultats obtenus pour passer n'importe quel test dans les prochaines 24h. (Le lanceur doit annoncer l'utilisation d'un dé pré-tiré avant que le dé ne soit lancé).</td>
                             <td>Tychi</td>
                         </tr>
                         <tr>
                             <td>Détection de la vie</td>
                             <td>-</td>
-                            <td>5*SC</td>
+                            <td>3*SC</td>
                             <td>Détecte les être vivants dans un rayon de 15*SC mètres du point d'impact du sort.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Détection des morts</td>
                             <td>-</td>
-                            <td>6*SC</td>
+                            <td>3*SC</td>
                             <td>Détecte les morts dans un rayon de 15*SC mètres du point d'impact du sort.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Détection de la magie</td>
                             <td>-</td>
-                            <td>5*SC</td>
+                            <td>3*SC</td>
                             <td>Détecte la magie dans un rayon de 15*SC mètres du point d'impact du sort.</td>
                             <td>Orizo</td>
                         </tr>
                         <tr>
                             <td>Vision véritable</td>
                             <td>-</td>
-                            <td>5*SC</td>
+                            <td>2*SC</td>
                             <td>Le personnage voit tout, même les entités invisibles, pendant SC minutes.</td>
                             <td>Orizo</td>
                         </tr>
@@ -1540,42 +1517,42 @@
                         <tr>
                             <td>Réanimation</td>
                             <td>-</td>
-                            <td>5*SC</td>
+                            <td>2*SC</td>
                             <td>Réanime un cadavre pendant une minute. <a href="Tableaux.xhtml#taille_creatures">Taille</a> du cadavre selon SC : I, Min, TP, P, M, G, TG, Gig, C </td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Manipulation bestiale</td>
                             <td>-</td>
-                            <td>5*SC</td>
+                            <td>2*SC</td>
                             <td>Les animaux ciblés par le sort sont contrôlables par le lanceur pendant une minute. Les animaux ciblés doivent passer un test de Volonté avec un modificateur de +20-(5*SC) pour résister.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Manipulation florale</td>
                             <td/>
-                            <td>4*SC</td>
+                            <td>2*SC</td>
                             <td>Les végétaux ciblés par le sort sont contrôlables par le lanceur pendant une minute. Les plantes ciblées doivent passer un test de Volonté avec un modificateur de +20-(5*SC) pour résister.</td>
                             <td>Kormo</td>
                         </tr>
                         <tr>
                             <td>Contrôle des morts</td>
                             <td>-</td>
-                            <td>8*SC</td>
+                            <td>3*SC</td>
                             <td>Permet de contrôler un cadavre pendant une minute. L'entité décédée doit passer un test de Volonté avec un modificateur de +20-(5*SC) pour résister.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Contrôle des vivants</td>
                             <td>-</td>
-                            <td>8*SC</td>
+                            <td>3*SC</td>
                             <td>Permet de contrôler un être vivant pendant une minute. La cible doit passer un test de Volonté avec un modificateur de +20-(5*SC) pour résister.</td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Fléau de la non-vie</td>
                             <td>-</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>Les morts-vivants touchés par ce sort doivent passer un test de Volonté avec un modificateur de +20-(5*SC) ou fuir le lanceur pendant une minute.</td>
                             <td>Anathos</td>
                         </tr>
@@ -1589,14 +1566,14 @@
                         <tr>
                             <td>Mot de pouvoir : Douleur</td>
                             <td>-</td>
-                            <td>4*SC</td>
+                            <td>3*SC</td>
                             <td>La cible voit sa sa vitesse réduire de 3m et effectue toute action avec désavantage pendant 1 minute. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Mot de pouvoir : Mort</td>
                             <td>-</td>
-                            <td>10*SC</td>
+                            <td>5*SC</td>
                             <td>La cible meurt instantanément. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
                             <td>Anathos</td>
                         </tr>
@@ -1605,58 +1582,58 @@
                         <tr><td colspan="5">Cette école se concentre sur les pouvoirs élémentaires de Karnaï.</td></tr>
                         <tr>
                             <td>Assaut minéral</td>
-                            <td>[Métal, Pierre, Terre, Sable], Surcharge(+BdInt aux dégâts)</td>
+                            <td>[Métal, Pierre, Terre, Sable]</td>
                             <td>2*SC</td>
-                            <td>Inflige (dé) de dégâts physiques<br/>Dé(s) selon SC : 1 &#8594; 1d2 &#8594; 1d4 &#8594; 1d6 &#8594; 1d8 &#8594; 1d10 &#8594; 1d12 &#8594; 1d8+1d6 &#8594; 2d8 &#8594; 1d10+1d8 &#8594; 2d10 &#8594; 1d12+1d10 &#8594; 2d12 &#8594; 2d8+1d10 &#8594; 3d10 &#8594; 2d10+1d12 &#8594; 2d12+1d10 &#8594; 3d12 &#8594; 4d10 &#8594; 2d12+2d10 &#8594; 4d12</td>
+                            <td>Inflige SCd4 de dégâts physiques</td>
                             <td>Kormo, Ourgal</td>
                         </tr>
                         <tr>
                             <td>Assaut élémentaire</td>
-                            <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison], Surcharge(+BdInt aux dégâts)</td>
+                            <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]</td>
                             <td>2*SC</td>
-                            <td>Inflige (dé) de dégâts d'[Élément]<br/>Dé(s) selon SC : 1 &#8594; 1d2 &#8594; 1d4 &#8594; 1d6 &#8594; 1d8 &#8594; 1d10 &#8594; 1d12 &#8594; 1d8+1d6 &#8594; 2d8 &#8594; 1d10+1d8 &#8594; 2d10 &#8594; 1d12+1d10 &#8594; 2d12 &#8594; 2d8+1d10 &#8594; 3d10 &#8594; 2d10+1d12 &#8594; 2d12+1d10 &#8594; 3d12 &#8594; 4d10 &#8594; 2d12+2d10 &#8594; 4d12</td>
+                            <td>Inflige SCd4 de dégâts d'[Élément]</td>
                             <td>Aïgida, Anathos, Horoï, Kuga, Nero, Safi</td>
                         </tr>
                         <tr>
                             <td>Création élémentaire</td>
                             <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Métal, Nécrotique, Pierre, Poison, Sable, Terre]</td>
-                            <td>2*SC</td>
-                            <td>L'[élément] apparaît à l'endroit ciblé et y reste pendant SC rounds.</td>
+                            <td>3*SC</td>
+                            <td>L'[élément] apparaît à l'endroit ciblé pendant une minute. Les effets varient selon l'élément et la forme choisie.</td>
                             <td>Aïgida, Anathos, Horoï, Kormo, Kuga, Nero, Ourgal, Safi</td>
                         </tr>
                         <tr>
                             <td>Bourrasque</td>
                             <td>Maintien</td>
-                            <td>1*SC</td>
+                            <td>SC</td>
                             <td>Invoque du vent se déplaçant à SC*20km/h pendant 1 round. Cf <a href="Rules.xhtml#table_vents">Effets du vent</a> </td>
                             <td>Aïgida</td>
                         </tr>
                         <tr>
                             <td>Rouille</td>
                             <td>-</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>L'objet ciblé doit passer un test de rupture avec un modificateur de +20-(5*SC) ou subir un niveau supplémentaire de <a href="Tableaux.xhtml#table_rupture">rupture</a>.</td>
                             <td>Kuga</td>
                         </tr>
                         <tr>
                             <td>Spores [type]</td>
                             <td>[paralysie, sommeil, poison,...]</td>
-                            <td>5*SC</td>
-                            <td>Invoque des spores infligeant l'effet [type]. La cible doit réussir un jet de Vigueur ou de Volonté selon le spore avec un malus de 5*SC.</td>
+                            <td>2*SC</td>
+                            <td>Invoque des spores infligeant l'effet [type]. La cible doit réussir un jet de Vigueur ou de Volonté selon le spore avec un modificateur de +20-(5*SC).</td>
                             <td>Kormo</td>
                         </tr>
                         <tr>
                             <td>Chaleur</td>
                             <td>Maintien</td>
-                            <td>SC</td>
-                            <td>Augmente la température ambiante de la cible de 5*SC C°.</td>
+                            <td>2*SC</td>
+                            <td>Augmente la température ambiante de la cible de 5*SC C° pendant une heure.</td>
                             <td>Horoï</td>
                         </tr>
                         <tr>
                             <td>Fraîcheur</td>
                             <td>Maintien</td>
-                            <td>SC</td>
-                            <td>Diminue la température ambiante de la cible de 5*SC C°.</td>
+                            <td>2*SC</td>
+                            <td>Diminue la température ambiante de la cible de 5*SC C° pendant une heure.</td>
                             <td>Nero</td>
                         </tr>
                         <tr><th colspan="5">Illusion</th></tr>
@@ -1664,22 +1641,22 @@
                         <tr>
                             <td>Création illusoire</td>
                             <td>Maintien</td>
-                            <td>4*SC</td>
-                            <td>Façonne une création intangible de la forme souhaitée avec sons et odeurs sur une surface de SC*0,5 mètres cubes. Un test de Perception ou d'Intelligence est nécessaire pour se rendre compte de l'illusion.</td>
+                            <td>3*SC</td>
+                            <td>Façonne une création intangible de la forme souhaitée avec sons et odeurs sur une surface de SC*0,5 mètres cubes. Un test d'Observation ou d'Investigation est nécessaire pour se rendre compte de l'illusion. L'illusion persiste pendant une minute</td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Peur</td>
                             <td>-</td>
-                            <td>4*SC</td>
-                            <td>La cible doit passer un test de peur avec un modificateur de +20-(5*SC). Cf <a href="Tableaux.xhtml#stress">Stress</a> </td>
+                            <td>2*SC</td>
+                            <td>La cible doit passer un test de Peur(+20-(5*SC)). Cf <a href="Tableaux.xhtml#stress">Stress</a> </td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Horreur</td>
                             <td>-</td>
-                            <td>6*SC</td>
-                            <td>La cible doit passer un test de peur avec un modificateur de +20-(5*SC). Cf <a href="Tableaux.xhtml#stress">Stress</a> </td>
+                            <td>4*SC</td>
+                            <td>La cible doit passer un test d'Horreur(+20-(5*SC)). Cf <a href="Tableaux.xhtml#stress">Stress</a> </td>
                             <td>Psema</td>
                         </tr>
                         <tr>
@@ -1692,36 +1669,36 @@
                         <tr>
                             <td>Rage</td>
                             <td>-</td>
-                            <td>4*SC</td>
-                            <td>La cible doit passer un test de Volonté avec un modificateur de +20-(5*SC) ou considéré tout le monde comme un adversaire pendant 1 minute. </td>
+                            <td>3*SC</td>
+                            <td>La cible doit passer un test de Volonté avec un modificateur de +20-(5*SC) ou considérer tout le monde comme un adversaire pendant 1 minute. </td>
                             <td>Agones</td>
                         </tr>
                         <tr>
                             <td>Courage</td>
                             <td>-</td>
-                            <td>3*SC</td>
+                            <td>2*SC</td>
                             <td>La cible obtient un bonus de 5*SC aux tests de peur et d'horreur pendant 1 minute. </td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
                             <td>Silence</td>
                             <td>Maintien</td>
-                            <td>6*SC</td>
+                            <td>2*SC</td>
                             <td>Tous les sons sont bloqués dans un rayon de 3*SC mètres autour du point d'impact pendant 1 minute.</td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Invisibilité</td>
                             <td>-</td>
-                            <td>6*SC</td>
+                            <td>4*SC</td>
                             <td>La cible devient invisible pendant SC rounds.</td>
                             <td>Safi</td>
                         </tr>
                         <tr>
                             <td>Apparence trompeuse</td>
                             <td>-</td>
-                            <td>2*SC</td>
-                            <td>Les entités présentes dans un rayon de SC*5m de la cible la voit comme quelqu'un d'autre pendant 1 minute.</td>
+                            <td>3*SC</td>
+                            <td>La cible est perçue comme quelqu'un d'autre par les personnes non-consciente du sort pendant 1 minute. La cible impose un malus de SC*5 à toute entité tentant de la démasquer.</td>
                             <td>Psema</td>
                         </tr>
                         </tbody>
