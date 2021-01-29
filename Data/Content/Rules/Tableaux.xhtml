@@ -95,8 +95,7 @@
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
-                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#vulnerabilites_resistances">Vulnérabilités &amp; Résistances</a></span></li>
-                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#capacite_speciales">Capacités spéciales</a></span></li>
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#traits">Traits</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
                     <ul class="hidden">
@@ -952,9 +951,9 @@
 
     <h1 id="stress" onclick="hideContent(this)">Stress</h1>
     <div>
-        <p>Si un personnage est confronté à un évènement difficile à supporter ou à quelque chose de terrifiant il doit passer un test de stress. Il y a deux type de test de stress : les tests de Peur et les test d'Horreur.</p>
-        <p>Les tests de stress sont des épreuves de Volonté qui utilise la notation Peur(+/-X) ou Horreur(+/-X), où X est le modificateur appliqué au test. Si le personnage rate ce test, il succombe aux effets du stress.</p>
-        <p>Le MJ peut vous demander de passer un test de Peur si vous êtes confronté à des évènement choquant comme la découverte d'un pendu ou d'un cadavre sanguinolent. Les tests d'Horreur sont réservés aux évènements les plus terribles que l'on puisse imaginer.</p>
+        <p>Si un personnage est confronté à un évènement difficile à supporter ou à quelque chose de terrifiant il doit passer un test de stress. Il y a deux type de test de stress : les tests de Peur et les test de Terreur.</p>
+        <p>Les tests de stress sont des épreuves de Volonté qui utilise la notation Peur(+/-X) ou Terreur(+/-X), où X est le modificateur appliqué au test. Si le personnage rate ce test, il succombe aux effets du stress.</p>
+        <p>Le MJ peut vous demander de passer un test de Peur si vous êtes confronté à des évènement choquant comme la découverte d'un pendu ou d'un cadavre sanguinolent. Les tests de Terreur sont réservés aux évènements les plus horrifiques que l'on puisse imaginer.</p>
         <h2>Effets du stress</h2>
         <p>Si un personnage rate un test de stress en combat, il doit immédiatement lancer un d100 et le reporté sur le tableau correspondant. Les effets listés dans le tableau s'appliquent immédiatement.</p>
         <p>Si le test est raté en dehors d'un combat, le personnage est secoué, il souffre d'un malus de -20 à tout les tests nécessitant de se concentrer. Le personnage retrouve son état normal après une heure passée loin de ce qui l'a affligé.</p>
@@ -991,7 +990,7 @@
                 </tbody>
             </table>
         </div>
-        <p id="table_horreur" onclick="hideContent(this)">Effets de l'horreur en combat</p>
+        <p id="table_terreur" onclick="hideContent(this)">Effets de la terreur en combat</p>
         <div>
             <table class="table_horizontal">
                 <tbody>
@@ -1005,11 +1004,11 @@
                 </tr>
                 <tr>
                     <th>41-60</th>
-                    <td><span class="big_underline">Vomissement incontrôlable</span>Des hauts-le-cœur impossible à réprimer font se pencher le personnage en avant. Il crache de la bile et est considéré sans défenses pendant 1 round après quoi il perd 2d4 d'endurance. Le personnage subit un malus de -10 à tous les tests jusqu'à la fin du combat.</td>
+                    <td><span class="big_underline">Vomissement incontrôlable</span>Des hauts-le-cœur impossible à réprimer font se pencher le personnage en avant. Il crache de la bile et est considéré sans défenses pendant 1 round après quoi il perd 1 point d'endurance. Le personnage subit un malus de -10 à tous les tests jusqu'à la fin du combat.</td>
                 </tr>
                 <tr>
                     <th>61-80</th>
-                    <td><span class="big_underline">Crise de panique</span>L'horreur vécue fait perdre l'esprit au personnage, il se met à rire de façon incontrôlable et attaque l'entité la plus proche de lui avec quoi que ce soit qui passe à sa portée. Le personnage doit se ressaisir ou être étourdi pour regagner le contrôle de son corps. Il perds 3d4 d'endurance après coup et subit un malus de -10 à tous les tests jusqu'à la fin du combat.</td>
+                    <td><span class="big_underline">Crise de panique</span>L'horreur vécue fait perdre l'esprit au personnage, il se met à rire de façon incontrôlable et attaque l'entité la plus proche de lui avec quoi que ce soit qui passe à sa portée. Le personnage doit se ressaisir ou être étourdi pour regagner le contrôle de son corps. Il perds 2d2-1 points d'endurance après coup et subit un malus de -10 à tous les tests jusqu'à la fin du combat.</td>
                 </tr>
                 <tr>
                     <th>81-90</th>

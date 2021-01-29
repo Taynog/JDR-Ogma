@@ -95,8 +95,7 @@
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
-                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#vulnerabilites_resistances">Vulnérabilités &amp; Résistances</a></span></li>
-                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#capacite_speciales">Capacités spéciales</a></span></li>
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#traits">Traits</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
                     <ul class="hidden">
@@ -133,9 +132,9 @@
 
         <h3 id="assourdi" onclick="hideContent(this)">Assourdi</h3>
         <div>
-            <p>Le personnage perd l'usage de l'ouïe et subit les malus suivants :</p>
+            <p>L'entité' perd l'usage de l'ouïe et subit les malus suivants :</p>
             <ul>
-                <li>Le personnage n'entend plus rien</li>
+                <li>L'entité n'entend plus rien</li>
                 <li>-30 aux épreuves bénéficiant de l'ouïe</li>
                 <li>Rate automatiquement toutes les épreuves se basant uniquement sur l'ouïe</li>
             </ul>
@@ -149,17 +148,27 @@
 
         <h3 id="aveugle" onclick="hideContent(this)">Aveuglé</h3>
         <div>
-            <p>Le personnage perd l'usage de la vison et subit les malus suivants :</p>
+            <p>L'entité perd l'usage de la vison et subit les malus suivants :</p>
             <ul>
-                <li>Le personnage ne voit plus rien</li>
+                <li>L'entité ne voit plus rien</li>
                 <li>-30 aux épreuves bénéficiant de la vision</li>
                 <li>Rate automatiquement toutes les épreuves se basant uniquement sur la vision</li>
             </ul>
         </div>
 
+        <h3 id="brulure" onclick="hideContent(this)">Brûlure(X)</h3>
+        <div>
+            <p>L'entité est en feu, l'intensité des flammes est déterminé par un nombre X. Un entité souffrant de l'état brûlure :</p>
+            <ul>
+                <li>subit X points de dégâts de feu sur la partie de son corps en train de brûler. Cette quantité de dégâts augmente de 1 par round. Si le personnage subit deux source de brûlure en même temps, les deux X se cumulent.</li>
+                <li>doit passer un test de Volonté avec un malus de 20 pour entreprendre une action autre que tente d'éteindre le feu.</li>
+                <li>peut tenter d'éteindre les flammes en se roulant au sol. Cette action coûte 1 PA et nécessite de passer un test d'Agilité avec un bonus de 20 et un malus de -10 par X au delà de 1. L'entité passe <a href="Glossaire.xhtml#a_terre">à terre</a> et perds l'état brûlure si le test est une réussite.</li>
+            </ul>
+        </div>
+
         <h3 id="cache" onclick="hideContent(this)">Caché</h3>
         <div>
-            <p>Le personnage est dissimulé dans son environnement et échappe à la vue de ses ennemis. Le personnage doit dépenser le double de mouvement pour se déplacer en restant caché et ne peut entreprendre l'action <a href="Types_actions.xhtml#courir">courir</a>. Les cibles qui subissent une attaque d'une entité caché ne peuvent se défendre mais l'entité perd alors sont état caché.</p>
+            <p>Le personnage est dissimulé dans son environnement et échappe à la vue de ses ennemis. Le personnage doit dépenser le double de mouvement pour se déplacer en restant caché et ne peut entreprendre l'action <a href="Types_actions.xhtml#course">course</a>. Les cibles qui subissent une attaque d'une entité caché ne peuvent se défendre mais l'entité perd alors sont état caché.</p>
             <p>Si le personnage entre dans la ligne de vue d'une entité il doit passer un test de Furtivité opposé à un test d'Observation de l'entité. S'il réussit il reste caché, sinon il perd cet état.</p>
         </div>
 
@@ -175,7 +184,7 @@
 
         <h3 id="fascine" onclick="hideContent(this)">Fasciné</h3>
         <div>
-            <p>Une créature est fascinée par un sort ou un effet surnaturel. Tant que l’effet reste en place, une créature fascinée reste assise ou debout, dans l’incapacité d’effectuer d’autre action que se concentrer sur l’effet en question. Elle reçoit un malus de -20 sur tout les jets. L’arrivée d’une menace potentielle (comme une créature hostile) donne droit à un nouveau jet pour contrer l’effet de fascination. Toute menace évidente, comme dégainer une arme, lancer un sort ou tirer sur la créature, rompt immédiatement l’effet de fascination. Pour 1 PA, il est possible de secouer une créature fascinée pour lui faire reprendre ses esprits.</p>
+            <p>Une créature est fascinée par un sort ou un effet surnaturel. Tant que l’effet persiste, une créature fascinée reste assise ou debout, dans l’incapacité d’effectuer d’autre action que se concentrer sur l’effet en question. Elle reçoit un malus de -20 sur tout les jets. L’arrivée d’une menace potentielle (comme une créature hostile) donne droit à un nouveau jet pour contrer l’effet de fascination. Toute menace évidente, comme dégainer une arme, lancer un sort ou tirer sur la créature, rompt immédiatement l’effet de fascination. Pour 1 PA, il est possible de secouer une créature fascinée pour lui faire reprendre ses esprits.</p>
         </div>
 
         <h3 id="fatigue" onclick="hideContent(this)">Fatigué</h3>
@@ -242,7 +251,7 @@
 
         <h3 id="mourant" onclick="hideContent(this)">Mourant</h3>
         <div>
-            <p>Le personnage est inconscient et en train de mourir. Une créature qui a un nombre de points de vitalité négatif et qui n’est pas stabilisée agonise. Une créature agonisante ne peut pas entreprendre la moindre action. À son tour à chaque round (en commençant par celui où il est tombé en dessous de 0 point de vitalité) et jusqu’à ce que sont état soit stable ou qu’il meure, le personnage doit faire un test de Vigueur. Il subit un malus égal à son nombre de points de vie négatifs fois 3. S’il le rate, il perd 1 point de vitalité. Une créature mourante meurt si elle rate 3 jet de stabilisation.</p>
+            <p>Le personnage est inconscient et en train de mourir. Une créature qui a un nombre de points de vitalité négatif et qui n’est pas stabilisée agonise. Une créature agonisante ne peut pas entreprendre la moindre action. À son tour à chaque round (en commençant par celui où il est tombé en dessous de 0 point de vitalité) et jusqu’à ce que sont état soit stable ou qu’il meure, le personnage doit faire un test de Vigueur. Il subit un malus égal au triple de ses points de vie négatifs. S’il le rate, il perd 1 point de vitalité. Une créature mourante meurt si elle rate 3 jet de stabilisation.</p>
             <p>Un personnage mourant peut être stabilisé par l'intervention d'une personne extérieure, ou s'il réussit 3 jet de stabilisation.</p>
         </div>
 
@@ -256,10 +265,10 @@
             <p>Une créature ralentie se déplace à la moitié de sa vitesse.</p>
         </div>
 
-        <h3 id="saignement" onclick="hideContent(this)">Saignement</h3>
+        <h3 id="saignement" onclick="hideContent(this)">Saignement(X)</h3>
         <div>
-            <p>La créature se met à saigner et subit des dommages au début de chaque round.</p>
-            <p>Il est possible d’arrêter l’hémorragie en passant un test de Medicine (malus en fonction de la gravité de la blessure) ou en utilisant un sort curatif. Il arrive parfois que le personnage subisse un saignement qui lui inflige des affaiblissements temporaires ou des diminutions permanentes de caractéristique. Ces dégâts ne se cumulent pas, sauf s’ils sont de nature différente. Lorsque deux sources infligent des hémorragies de même nature, appliquez le résultat le plus handicapant.</p>
+            <p>La créature saigne abondamment et subit X points de dégâts non-réductibles au début de chacun de ses tour. Les dégâts du Saignement diminuent de 1 à la fin du tour de l'entité.</p>
+            <p>Il est possible d’arrêter le Saignement plus tôt en passant un test de Medicine (malus en fonction de la gravité de la blessure) ou en utilisant un sort curatif. Lorsque deux sources infligent des saignement, appliquez seulement celui infligeant le plus de dégâts.</p>
         </div>
 
         <h3 id="stable" onclick="hideContent(this)">Stable</h3>
@@ -269,22 +278,181 @@
         </div>
     </div>
 
-    <h1 id="vulnerabilites_resistances" onclick="hideContent(this)">Vulnérabilités et résistances</h1>
+    <h1 id="traits" onclick="hideContent(this)">Traits</h1>
     <div>
-        <h2>Vulnérabilités</h2>
-        <div>
-            <p>Une créature peut être vulnérable à un type de dégâts, ce qui signifie qu'elle subira des dommages accrus face à ce genre de dégâts. On note ainsi la vulnérabilité d'une créature : Vulnérabilité à X(Z) où X est l'élément infligeant Z points de dégâts supplémentaires si la créature est touché par cet élément.</p>
-        </div>
-        <h2>Résistances</h2>
-        <div>
-            <p>Une créature peut être résistante à un type de dégâts, ce qui signifie qu'elle subira des dommages réduits face à ce genre de dégâts. On note ainsi la résistance d'une créature : Résistance à X(Z) où X est l'élément infligeant Z points de dégâts en moins si la créature est touchée par cet élément.</p>
-            <p id="immunite">Une créature peut posséder le trait "Immunité à X" auquel cas, tous les dégâts subis par cet élément sont nullifiés</p>
-        </div>
-        <p>Les résistances et les vulnérabilités sont appliqués en dernier, après toutes les autres réductions/augmentations de dégâts et ne se cumulent pas. Si une créature a une résistance au feu ainsi qu'une résistance à tous les dégâts non magiques, les dégâts non magiques de feu subis par la créature sont réduits de moitié et non de trois-quarts.</p>
-    </div>
 
-    <h1 id="capacite_speciales" onclick="hideContent(this)">Capacités spéciales</h1>
-    <div>
+        <h3 id="absorption_magique" onclick="hideContent(this)">Absorption magique(X)</h3>
+        <div>
+            <p>Cette entité peut absorber la psy d'un sort dont elle est la cible. Si cette entité vient à être touchée par un sort lancez un d10, si le résultat est inférieur ou égale à X le sort n'a aucun effet et elle récupère une quantité de point de psy équivalente au coût du sort.</p>
+        </div>
+
+        <h3 id="amphibien" onclick="hideContent(this)">Amphibien</h3>
+        <div>
+            <p>Cette entité se déplace à vitesse normale dans l'eau et n'est pas limité par sa compétence d'Athlétisme lorsqu'elle se bat dans l'eau.</p>
+        </div>
+
+        <h3 id="arme_naturelle" onclick="hideContent(this)">Arme naturelle(Z, X)</h3>
+        <div>
+            <p>Une partie du corps Z de cette entité peut être utilisé comme une arme infligeant X dégâts. L'entité ne perd l'usage de cette arme que si elle perd cette partie de son corps.</p>
+        </div>
+
+        <h3 id="debilitant" onclick="hideContent(this)">Débilitant(+/-X)</h3>
+        <div>
+            <p>Cette entité peut transmettre des maladies si elle inflige une blessure avec ses armes naturelles. L'entité touchée doit passer un test d'Endurance +/-X ou contracter une maladie commune.</p>
+        </div>
+
+        <h3 id="estomac_solide" onclick="hideContent(this)">Estomac solide</h3>
+        <div>
+            <p>Cette entité possède un estomac particulièrement tolérant vis-à-vis des aliments ingérés. Cette entité peut consommer de la viande crue et de l'eau non purifiée sans craindre les maladies.</p>
+        </div>
+
+        <h3 id="etheree" onclick="hideContent(this)">Éthérée</h3>
+        <div>
+            <p>Cette entité est immatérielle, capable de passer au travers des objets et d'apparence translucide. Elle obtiennent le trait Volant(Vitesse) et peuvent se déplacer librement dans l'espace même à travers des objets solides. Elles peuvent êtres ciblées par des attaques mais ne subissent des dégâts que des armes possédant la propriété "Magique" ou des sorts d'attaque.</p>
+            <p>Les entités éthérées ne peuvent normalement pas intergair avec le monde matériel mais elle peuvent utiliser la magie et faire des attaques capables d'infliger des dégâts aux êtres matériels. Ces attaques ignorent la PR des armures ne possédant pas la propriété "Magique" et ne peuvent être bloqués ou parés par des boucliers et des armes sans cette propriété.</p>
+        </div>
+
+        <h3 id="extraplanaire" onclick="hideContent(this)">Extraplanaire(Z)</h3>
+        <div>
+            <p>Cette entité provient d'un autre plan d'existence noté Z. Si elle meurt, est détruite ou bannie, elle retourne dans son plan d'origine.</p>
+        </div>
+
+        <h3 id="immortel" onclick="hideContent(this)">Immortel</h3>
+        <div>
+            <p>Cette entité ne subit pas les effets du vieillissement et peut vivre éternellement en bonne santé.</p>
+        </div>
+
+        <h3 id="immunite" onclick="hideContent(this)">Immunité(X)</h3>
+        <div>
+            <p>Cette entité est immunisé à un type de dégâts, tous les dégâts subis par cet élément sont nullifiés.</p>
+        </div>
+
+        <h3 id="lien" onclick="hideContent(this)">Lien</h3>
+        <div>
+            <p>Cette entité est liée par magie à son monde ou à quelqu'un.</p>
+            <p>Elle doit obéir aux ordres de son maître sauf s'il s'agit de sa défense personnelle. Les entités liés utilisent la Volonté de leur créateur pour effectuer n'importe quel test (sauf Style de Combat). Elles ne pèsent pratiquement rien et l'on considère leur encombrement comme nul (ENC0).</p>
+        </div>
+
+        <h3 id="mort_vivant" onclick="hideContent(this)">Mort-vivant</h3>
+        <div>
+            <p>Cette entité est un cadavre ambulant. Elle n'a besoin ni de respirer, ni d'organes fonctionnels. Elle est immunisés aux effets tels que les maladies, les poisons, les blessures, le vieillissement et la fatigue. Ces immunités ne sont pas systématiques et dépendent du type de mort-vivant, faites preuve de bon sens pour décider de ce qui les affectent.</p>
+        </div>
+
+        <h3 id="photosensibilité" onclick="hideContent(this)">Photosensibilité(X)</h3>
+        <div>
+            <p>Cette entité ne supporte pas la lumière, que ce soit celle du Soleil ou de Safi. En plus de posséder une Vulnérabilité(lumière, X), cette entité perds un points d'endurance par heure d'exposition à la lumière du soleil. Les nuages et autres évènements météorologiques du même genre divise par deux la pert d'endurance. Cette entité doit passer au moins une heure dans un espace sombre avant de pouvoir récupérer de l'endurance en se reposant.</p>
+        </div>
+
+        <h3 id="puit_psy" onclick="hideContent(this)">Puit de psy(X)</h3>
+        <div>
+            <p>Cette entité possède des réserves de psy plus importante que la normale. Sa psy maximale augmente de X. Si l'entité reçoit deux fois ce trait, combinez les deux valeurs.</p>
+        </div>
+
+        <h3 id="psy_inhibee" onclick="hideContent(this)">Psy inhibée</h3>
+        <div>
+            <p>Cette entité ne peut pas récupérer naturellement de la psy en se reposant.</p>
+        </div>
+
+        <h3 id="rampant" onclick="hideContent(this)">Rampant</h3>
+        <div>
+            <p>Cette créature se déplace en rampant plutôt qu'en marchant. Sa vitesse est divisée par deux(arrondi au supérieur) mais elle pas ralentie pas les terrains difficiles.</p>
+        </div>
+
+        <h3 id="regeneration" onclick="hideContent(this)">Régénération(X)</h3>
+        <div>
+            <p>Cette entité cicatrise à une vitesse incroyable. à chaque début de round, elle passe un test de Vigueur pour récupérer X points de vitalité</p>
+        </div>
+
+        <h3 id="resistance" onclick="hideContent(this)">Résistance(Z, X)</h3>
+        <div>
+            <p>Cette entité est résistante à un type de dégâts, ce qui signifie qu'elle subira des dommages réduits face à ce genre de dégâts. On note ainsi la résistance d'une créature : Résistance(Z, X) où Z est l'élément infligeant X points de dégâts en moins si la créature est touchée par cet élément.</p>
+            <p>Ce trait accorde un bonus de +Z*10 aux tests réalisés pour résister à un effet de l'élément X n'infligeant pas de dégâts.</p>
+            <p>Le trait Résistance s'applique après toutes les autres sources de réductions de dégâts.</p>
+        </div>
+
+        <h3 id="resistance_armes_normales" onclick="hideContent(this)">Résistance aux armes normales(X)</h3>
+        <div>
+            <p>Cette entité résiste aux dégâts provenant des armes classiques. Si cette entité subit une attaque d'une arme ne possédant pas la propriété "Magique", les dégâts sont réduits de X après toute les autres sources de réductions de dégâts.</p>
+        </div>
+
+        <h3 id="resistance_maladie" onclick="hideContent(this)">Résistance aux maladies (X%)</h3>
+        <div>
+            <p>Cette créature à une chance de résister aux maladies. Si elle devrait être infecté par une maladie commune, lancer un d100. Si le résultat est inférieur ou égal à X, l'entité ne contracte pas la maladie.</p>
+        </div>
+
+        <h3 id="robustesse" onclick="hideContent(this)">Robustesse(X)</h3>
+        <div>
+            <p>Cette entité est naturellement résistante aux coups, et réduit de X tout les dégâts physiques subis. La robustesse fonctionne comme la PR mais ne compte pas comme de l'armure </p>
+        </div>
+
+        <h3 id="sauvage" onclick="hideContent(this)">Sauvage</h3>
+        <div>
+            <p>Cette entité n'a pas besoin de faire des épreuves de Survie dans son habitat naturel mais doit passer une épreuve de Volonté pour ne pas fuir le combat si le MJ trouve la situation appropriée (par exemple si l'entité est impressionné par ses adversaires). Cette entité obtient automatiquement le trait <a href="Glossaire.xhtml#estomac_solide">Estomac Solide</a>.</p>
+        </div>
+
+        <h3 id="squelettique" onclick="hideContent(this)">Squelettique</h3>
+        <div>
+            <p>Cette entité possède une forme squelettique. Cibler cette entité avec une attaque à distance est une action Difficile(-20). Cette entité obtients automatiquement le trait "<a href="Glossaire.xhtml#mort_vivant">Mort-vivant</a>" et est immunisée à l'état "<a href="Glossaire.xhtml#brulure">Brûlure(X)</a>".</p>
+        </div>
+
+        <h3 id="telepathe" onclick="hideContent(this)">Télépathe(X)</h3>
+        <div>
+            <p>Cette entité peut communiquer par la pensée. Les entité recevant un message télépathiques peuvent passer un test de Perception opposé à un test d'Intelligence pour localiser le télépathe à l'origine du message. La magnitude X du trait détermine la quantité d'informations transmissible.</p>
+            <table id="table_telepathie" class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th>X</th>
+                    <th>Complexité du message</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Mot à mot</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Phrases courtes</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Aucune limite de mots</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Images</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Sentiments et concepts</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 id="telekinesiste" onclick="hideContent(this)">Télékinésiste(X)</h3>
+        <div>
+            <p>Cette entité peut manipuler des objets situées à moins de 10*X mètres par la pensée. Les objets déplaçables de cette manières sont au maximum aussi gros qu'un tonneau et se déplacent à environ un mètre par seconde.</p>
+            <p>Cette entité peut également lancer des objets à ses adversaires. Cette action compte comme une attaque à distance utilisant la compétence Domination(Volonté) pour le test. Les objets utilisés de cette manières comptent comme des <a href="Rules.xhtml#armes_improvisees">armes improvisées</a> et peuvent êtres lancés à 5*BdVol mètres.</p>
+        </div>
+
+        <h3 id="terrifiant" onclick="hideContent(this)">Terrifiant(X)</h3>
+        <div>
+            <p>Cette entité est terrifiante, toute entité ne possédant pas ce trait doit passer un test de Terreur(X) si elle la rencontre.</p>
+        </div>
+
+        <h3 id="vulnerabilite" onclick="hideContent(this)">Vulnérabilité(Z, X)</h3>
+        <div>
+            <p>Cette entité est vulnérable à un type de dégâts, ce qui signifie qu'elle subira des dommages accrus face à ce genre de dégâts. On note ainsi la vulnérabilité d'une créature : Vulnérabilité(Z, X) où Z est l'élément infligeant X points de dégâts supplémentaires si la créature est touché par cet élément.</p>
+            <p>Ce trait accorde un malus de -Z*10 aux tests réalisés pour résister à un effet de l'élément X n'infligeant pas de dégâts.</p>
+            <p>Le trait Vulnérabilité s'applique après toute les autres sources de réduction de dégâts.</p>
+        </div>
+
+        <h3 id="vision_dans_le_noir" onclick="hideContent(this)">Vision dans le noir</h3>
+        <div>
+            <p>La vision dans le noir permet de voir en l’absence de source de lumière. Certaines créatures possèdent cette vision à cause de leurs sens développés spécialement pour une vie sans lumière, d'autre la possède par magie.</p>
+            <p>La vision dans le noir se fait uniquement en noir et blanc (elle ne permet pas de distinguer les couleurs)</p>
+            <p>La présence de lumière n’entrave pas la vision dans le noir.</p>
+        </div>
+
         <h3 id="vision_nocturne" onclick="hideContent(this)">Vision nocturne</h3>
         <div>
             <p>Les personnages dotés de vision nocturne ont une rétine tellement sensible que leur acuité visuelle exacerbée leur permet de voir plus distinctement que la normale dans des conditions de faible éclairage (clarté de la lune ou des étoiles, torche, etc.).</p>
@@ -293,14 +461,17 @@
             <p>En extérieur, les personnages pourvus de vision nocturne voient aussi bien à la clarté de la lune qu’en plein jour.</p>
         </div>
 
-        <h3 id="vision_dans_le_noir">Vision dans le noir</h3>
+        <h3 id="vision_veritable" onclick="hideContent(this)">Vision véritable</h3>
         <div>
-            <p>La vision dans le noir permet de voir en l’absence de source de lumière. Certaines créatures possèdent cette vision à cause de leurs sens développés spécialement pour une vie sans lumière, d'autre la possède par magie.</p>
-            <p>La vision dans le noir se fait uniquement en noir et blanc (elle ne permet pas de distinguer les couleurs)</p>
-            <p>La présence de lumière n’entrave pas la vision dans le noir.</p>
+            <p>La vision véritable permet de voir des choses invisibles à l'œil nu. Ce type de vision n'est accessible que par magie et permet de voir la psy émaner des entités d'Ogma.</p>
+            <p>La vision véritable fait percevoir le monde dans une teinte bleutée voire violacée et permet de voir dans le noir.</p>
+        </div>
+
+        <h3 id="volant" onclick="hideContent(this)">Volant(X)</h3>
+        <div>
+            <p>Cette entité peut se déplacer en volant. Elle possède une vitesse en vol de X mètres.</p>
         </div>
     </div>
-
 </div>
 </body>
 </html>

@@ -95,8 +95,7 @@
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
-                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#vulnerabilites_resistances">Vulnérabilités &amp; Résistances</a></span></li>
-                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#capacite_speciales">Capacités spéciales</a></span></li>
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#traits">Traits</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
                     <ul class="hidden">
@@ -183,6 +182,10 @@
                         <th>Modificateur</th>
                     </tr>
                     <tr>
+                        <td>Insurmontable</td>
+                        <td>-40</td>
+                    </tr>
+                    <tr>
                         <td>Très difficile</td>
                         <td>-30</td>
                     </tr>
@@ -209,6 +212,10 @@
                     <tr>
                         <td>Très facile</td>
                         <td>+30</td>
+                    </tr>
+                    <tr>
+                        <td>Routinier</td>
+                        <td>+40</td>
                     </tr>
                     </tbody>
                 </table>
@@ -237,7 +244,7 @@
                     </tr>
                     <tr>
                         <th colspan="2">Kanta</th>
-                        <td><strong>Fourrure épaisse :</strong> Résistance au froid<br/><strong>Imposante stature :</strong> Taille G, Compétence Présence(Novice)</td>
+                        <td><strong>Fourrure épaisse :</strong> Robustesse(2), Résistance(Froid, 3)<br/><strong>Imposante stature :</strong> Taille G, Compétence Présence(Novice)</td>
                     </tr>
                     <tr>
                         <th colspan="2">Mushuk</th>
@@ -245,37 +252,37 @@
                     </tr>
                     <tr>
                         <th colspan="2">Sakha</th>
-                        <td><strong>Peuple sylvestre :</strong> En forêt : compétences Survie (Adepte), Acrobaties (Apprenti) et Discrétion (Apprenti), +10 aux épreuves de lancer de sorts</td>
+                        <td><strong>Peuple sylvestre :</strong> En forêt : compétences Survie (Adepte), Acrobaties (Apprenti) et Discrétion (Apprenti), VOL+10 lors de l'incantation d'un sort</td>
                     </tr>
                     <tr>
                         <th rowspan="3">Sarpa</th>
                         <th>Lézards</th>
-                        <td><strong>Sang-froid :</strong> Vulnérabilité au froid, besoin quotidien de chaleur<br/><strong>Peau écailleuse :</strong> +1 d'armure naturelle<br/><strong>Régénération :</strong> Régénère les membres perdus</td>
+                        <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur<br/><strong>Peau écailleuse :</strong> Robustesse(2)<br/><strong>Régénération :</strong> Régénère les membres perdus</td>
                     </tr>
                     <tr>
                         <th>Serpents</th>
-                        <td><strong>Sang-froid :</strong> Vulnérabilité au froid, besoin quotidien de chaleur<br/><strong>Peau écailleuse :</strong> +1 d'armure naturelle<br/><strong>Vision serpentine :</strong>Peut voir la signature thermique des êtres vivants</td>
+                        <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur<br/><strong>Peau écailleuse :</strong> Robustesse(2)<br/><strong>Vision serpentine :</strong>Peut voir la signature thermique des êtres vivants</td>
                     </tr>
                     <tr>
                         <th>Crocodiles</th>
-                        <td><strong>Sang-froid :</strong> Vulnérabilité au froid, besoin quotidien de chaleur<br/><strong>Écailles solides :</strong> +2 d'armure naturelle</td>
+                        <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur<br/><strong>Écailles solides :</strong> Robustesse(3)</td>
                     </tr>
                     <tr>
                         <th colspan="2">Sever</th>
-                        <td><strong>Endurance Nordique :</strong> + 10 % d'Endurance <br/><strong>Honneur du guerrier :</strong> +2 au jets de dégâts si Vitalité&lt;50% pendant 3 rounds une fois par jour.</td>
+                        <td><strong>Endurance Nordique :</strong> Endurance Max +1 <br/><strong>Honneur du guerrier :</strong> +2 au jets de dégâts si Vitalité&lt;50% pendant 3 rounds une fois par jour.</td>
                     </tr>
                     <tr>
                         <th colspan="2">Sihir</th>
-                        <td><strong>Fait de magie :</strong> +20% de Psy<br/><strong>Sensibilité magique :</strong> Vulnérabilité à la magie.</td>
+                        <td><strong>Fait de magie :</strong> +20% de Psy<br/><strong>Sensibilité magique :</strong> Vulnérabilité(Magie, 3)</td>
                     </tr>
                     <tr>
                         <th rowspan="2">Steinn</th>
                         <th>Rakaj</th>
-                        <td><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Froideur d'Hortak :</strong> Résistance au froid</td>
+                        <td><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Froideur d'Hortak :</strong> Résistance(Froid, 2)</td>
                     </tr>
                     <tr>
                         <th>Khazun</th>
-                        <td><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Chaleur des Monts Ardents :</strong> Résistance au feu</td>
+                        <td><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Chaleur des Monts Ardents :</strong> Résistance(Feu, 2)</td>
                     </tr>
                     <tr>
                         <th colspan="2">Tori</th>
@@ -495,47 +502,59 @@
                 <p>Une fois les caractéristiques déterminées, il faut se pencher sur les attribut qui en sont dérivés :</p>
                 <h3 id="bonus_carac" onclick="hideContent(this)">Bonus de caractéristique</h3>
                 <div>
-                    <p>Le bonus de caractéristique est utilisé dans certaines situations où le score total de la caractéristique est trop grand. Il équivaut au chiffre des dizaines de la caractéristique. On y fait référence ainsi : un "B" majuscule suivi d'un "d" minuscule suivi du diminutif de la caractéristique . BdFor pour la Force, BdDex pour la Dextérité, BdAgi pour l'Agilité, BdVig pour la Vigueur, BdInt pour l'Intelligence, BdVol pour la Volonté, BdPer pour la Perception et BdElo pour l'éloquence. </p>
+                    <p>Le bonus de caractéristique est utilisé dans certaines situations où le score total de la caractéristique est trop grand. Il équivaut au chiffre des dizaines de la caractéristique. On y fait référence ainsi : un "B" majuscule suivi d'un "d" minuscule suivi du diminutif de la caractéristique . BdFor pour la Force, BdDex pour la Dextérité, BdAgi pour l'Agilité, BdVig pour la Vigueur, BdInt pour l'Intelligence, BdVol pour la Volonté, BdPer pour la Perception et BdElo pour l'éloquence.</p>
+                    <p>La liste ci-dessous n'est pas exhaustive mais donne des exemples des utilisations des bonus de caractéristiques.</p>
+                    <ul>
+                        <li><span class="big_underline">Effets du BdFor :</span>Augmente les dégâts Écrasants et Fendants, détermine la capacité de port.</li>
+                        <li><span class="big_underline">Effets du BdDex :</span>Augmente les dégâts Perforants, augmente la portée des armes à distance de (BdDex*10)%.</li>
+                        <li><span class="big_underline">Effets du BdAgi :</span>Détermine le bonus à l'initiative.</li>
+                        <li><span class="big_underline">Effets du BdVig :</span>Détermine l'endurance max et la capacité de port.</li>
+                        <li><span class="big_underline">Effets du BdInt :</span>Détermine la réduction du coût des sorts.</li>
+                        <li><span class="big_underline">Effets du BdVol :</span>Détermine le cercle maximal atteignable (SCMax).</li>
+                        <li><span class="big_underline">Effets du BdPer :</span>Détermine le bonus à l'initiative.</li>
+                        <li><span class="big_underline">Effets du BdElo :</span>Réduit le prix des objets à hauteur de (BdElo*5)%.</li>
+                    </ul>
                 </div>
                 <h3 id="endurance" onclick="hideContent(this)">Endurance (PE)</h3>
                 <div>
-                    <p>L'endurance indique l'état d'épuisement d'un personnage. Elle est déterminé par toute les caractéristiques physiques : Endurance = BdFor+BdDex+BdAgi+BdVig*2</p>
-                    <p>La jauge d'endurance se vide lorsque le personnage se défend en combat ou qu'il entreprend certaines actions éreintantes :</p>
+                    <p>L'endurance indique la capacité d'un personnage à pousser son corps jusqu'à ses limites. Elle est déterminé par le bonus de Vigueur : Endurance = BdVig</p>
+                    <p>La jauge d'endurance permet au personnage d'entreprendre certaines actions :</p>
                     <ul>
-                        <li><span class="big_underline">Exploit physique (2 PE dépensés avant le test) :</span>Avantage pour la prochaine épreuve physique (1/round max)</li>
-                        <li><span class="big_underline">Sprint (2 PE dépensé avant le mouvement) :</span>Double la vitesse de déplacement du personnage pour ce tour (1/round max)</li>
-                        <li><span class="big_underline">Rechargement rapide (1 PE) :</span>Diminue de 1 le coût en PA du rechargement de l'arme, le coût peut être réduit à 0 si l'arme le permet, dans ce cas l'action ne coûte aucun PA (3/round max)</li>
-                        <li><span class="big_underline">Blocage total (2 PE dépensé avant un blocage incomplet) :</span>Permet d'absorber toute la puissance d'un coup dépassant la RB de son bouclier (1/round max)</li>
-                        <li><span class="big_underline">Attaque puissante (2 PE dépensés avant le jet de dégâts) :</span>Ajoute le BdFor au jet de dégâts d'une attaque de mêlée (2/round max)</li>
+                        <li><span class="big_underline">Exploit physique (1 PE dépensé avant le test) :</span>Avantage pour la prochaine épreuve physique (sauf Style de Combat).</li>
+                        <li><span class="big_underline">Sprint (1 PE dépensé avant le mouvement) :</span>Double la vitesse de déplacement du personnage pour ce tour.</li>
+                        <li><span class="big_underline">Rechargement rapide (1 PE) :</span>Diminue de 1 le coût en PA du rechargement de l'arme, le coût peut être réduit à 0 si l'arme le permet, dans ce cas l'action ne coûte aucun PA.</li>
+                        <li><span class="big_underline">Blocage total (1 PE dépensé après un blocage incomplet) :</span>Permet d'annuler les dégâts d'un coup dépassant la RB de son bouclier.</li>
+                        <li><span class="big_underline">Attaque puissante (1-3 PE dépensé(s) avant le jet de dégâts) :</span>Ajoute le double du nombre de PE dépensés au jet de dégâts d'une attaque de mêlée.</li>
+                        <li><span class="big_underline">Tir parfait (1-3 PE dépensé(s) avant le jet de dégâts) :</span>Ajoute le double du nombre de PE dépensés au jet de dégâts d'une attaque à distance.</li>
+                        <li><span class="big_underline">Action héroïque (1 PE) :</span>Récupère un PA pour ce tour</li>
                     </ul>
-                    <p>L'endurance se régénère complètement après quelques minutes passées au calme (BdVig/minute).</p>
-                    <p>Si le personnage ne possède plus d'endurance et qu'il subit des dégâts, la jauge de vitalité encaissera les dégâts. Tout effet faisant perdre de l'endurance alors que la jauge d'endurance est vide fait perdre une quantité équivalente en endurance max. Si l'endurance max atteint certaines valeurs, le personnage subira les effets de la fatigue sur plusieurs stade avant de perdre connaissance.</p>
+                    <p>L'endurance se régénère complètement après un repos long. Si le personnage effectue un repos court, il récupère 1 PE ou supprime un niveau de fatigue.</p>
+                    <p>Un personnage peut dépenser ou perdre des PE même si il ne lui en reste aucun, à chaque fois que cela arrive il subit un niveau de fatigue. Le personnage peut encaisser plusieurs niveaux de fatigue avec différents effets avant de perdre connaissance.</p>
                     <table class="table_horizontal" id="table_fatigue">
                         <tbody>
                         <tr>
-                            <th>Endurance Max</th>
                             <th>Niveau de fatigue</th>
                             <th>Effets</th>
                         </tr>
                         <tr>
-                            <td>&le;9</td>
-                            <td>Fatigué</td>
+                            <td>Fatigué (1)</td>
                             <td>-5 à tout les tests, vitesse -1m</td>
                         </tr>
                         <tr>
-                            <td>&le;6</td>
-                            <td>Épuisé</td>
+                            <td>Épuisé (2)</td>
                             <td>-10 à tout les tests, vitesse -2m</td>
                         </tr>
                         <tr>
-                            <td>&le;3</td>
-                            <td>Exténué</td>
+                            <td>Exténué (3)</td>
                             <td>désavantage à tout les tests, vitesse/2</td>
                         </tr>
                         <tr>
-                            <td>&le;0</td>
-                            <td>Inconscient</td>
+                            <td>Inconscient (4)</td>
                             <td>Le personnage pert connaissance</td>
+                        </tr>
+                        <tr>
+                            <td>Mort (5+)</td>
+                            <td>Le personnage meurt</td>
                         </tr>
                         <tr>
                             <td colspan="3">Les effets de la fatigue sont cumulatifs, un personnage épuisé subit les malus de la fatigue en plus de ceux de l'épuisement.</td>
@@ -546,9 +565,9 @@
 
                 <h3 id="vitalite" onclick="hideContent(this)">Vitalité (PV)</h3>
                 <div>
-                    <p>La vitalité représente l'intégrité physique du personnage. C'est la caractéristique de Vigueur qui détermine la vitalité d'un personnage : Vitalité = Vig/2</p>
+                    <p>La vitalité représente l'intégrité physique du personnage. C'est la caractéristique de Vigueur qui détermine la vitalité d'un personnage : Vitalité = Vig/2 (arrondi au supérieur)</p>
                     <p>La jauge de vitalité se vide quand le personnage subit des dégâts, que ce soit suite à un coup contre lequel il n'a pas sû se défendre, une chute, un piège, un sort, etc...</p>
-                    <p>Si la vitalité d'une créature atteint 0, elle sombre dans l'inconscience et ce même si il lui reste de l'endurance. Pour de plus amples détails, se référer à la section <a href="Rules.xhtml#blessures_mort">Blessures et mort</a> dans la partie <a href="Rules.xhtml#Combat">Combat</a>.</p>
+                    <p>Si la vitalité d'une créature atteint 0, elle sombre dans l'inconscience. Pour de plus amples détails, se référer à la section <a href="Rules.xhtml#blessures_mort">Blessures et mort</a> dans la partie <a href="Rules.xhtml#Combat">Combat</a>.</p>
                     <p>La vitalité se régénère avec du repos, une entité récupère son BdVig en vitalité par jour mais cela peut varier selon les conditions dans lesquelles on se repose, si l'on est sous la surveillance d'un médecin, etc...</p>
                     <p>Il est possible de soigner ses blessures plus rapidement grâce à des sorts ou des potions de soin. Les sorts guérisseurs ont les mêmes propriétés que les sorts de dégâts mais utilisent des dés d'un cran inférieurs.</p>
                 </div>
@@ -561,7 +580,7 @@
 
                 <h3 id="capacite_port" onclick="hideContent(this)">Capacité de port</h3>
                 <div>
-                    <p>Un personnage peut porter une charge équivalente à : BdFor*4+BdVig*2. Cette charge détermine la quantité maximale d'équipement et de matériel qu'il peut transporter sans effort, il est possible d'excéder cette limite mais des pénalités s'appliqueront alors.</p>
+                    <p>Un personnage peut porter une charge équivalente à : BdFor*4+BdVig*2. Cette charge détermine la quantité maximale d'équipement et de matériel qu'il peut transporter sans effort, il est possible d'excéder cette limite mais des pénalités s'appliqueront. Toute pénalité réduisant l'endurance en dessous de 0 inflige un niveau de fatigue par PE négatif.</p>
                     <table class="table_horizontal" id="table_capacite_port">
                         <tbody>
                         <tr>
@@ -583,21 +602,21 @@
                             <td>&gt;Capacité de port</td>
                             <td>-10</td>
                             <td>-1 mètre</td>
-                            <td>-4</td>
+                            <td>-1</td>
                         </tr>
                         <tr>
                             <td>Lourde</td>
                             <td>&gt;2*Capacité de port</td>
                             <td>-20</td>
                             <td>Vitesse divisée par 2</td>
-                            <td>-8</td>
+                            <td>-3</td>
                         </tr>
                         <tr>
                             <td>Écrasante</td>
                             <td>&gt;3*Capacité de port</td>
                             <td>-40</td>
                             <td>Immobilisé</td>
-                            <td>-12</td>
+                            <td>-5</td>
                         </tr>
                         </tbody>
                     </table>
@@ -605,34 +624,18 @@
 
                 <h3 id="vitesse" onclick="hideContent(this)">Vitesse</h3>
                 <div>
-                    <p>La vitesse de déplacement d'un personnage détermine la distance maximale qu'il peut parcourir pendant un round de combat. La vitesse de déplacement d'un personnage équivaut à : Agi/5 en mètres.</p>
+                    <p>La vitesse de déplacement d'un personnage détermine la distance maximale qu'il peut parcourir pendant un round de combat. La vitesse de déplacement d'un personnage équivaut à : BdFor+Agi/5 en mètres.</p>
                     <p>Cette vitesse peut être réduite par de nombreux effets comme la <a href="Rules.xhtml#table_fatigue">fatigue</a> ou le port d'une <a href="Rules.xhtml#table_capacite_port">charge trop lourde</a>.</p>
                 </div>
 
                 <h3 id="points_actions" onclick="hideContent(this)">Points d'action (PA)</h3>
                 <div>
-                    <p>Les points d'actions détermine la quantité d'actions que peut effectuer une personnage en un round de combat. Le nombre de PA disponible d'un personnage change en fonction de ses bonus d'Agilité, d'Intelligence et de Perception.</p>
-                    <table class="table_horizontal" id="table_pa">
-                        <tbody>
-                        <tr>
-                            <th>BdAgi+BdInt+BdPer</th>
-                            <th>PA</th>
-                        </tr>
-                        <tr>
-                            <td>&le;16</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>17+</td>
-                            <td>4</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <p>Les points d'actions détermine la quantité d'actions que peut effectuer une personnage en un round de combat. Un personnage possède par défaut 3 PA.</p>
                 </div>
 
                 <h3 id="bonus_initiative" onclick="hideContent(this)">Bonus à l'initiative (BdIni)</h3>
                 <div>
-                    <p>Le Bonus à l'Initiative est utilisé lors du jet d'initiative au début d'un combat, il est équivalent à : BdIni = BdAgi+BdPer.</p>
+                    <p>Le Bonus à l'Initiative est utilisé lors du jet d'initiative au début d'un combat, il est équivalent à : BdIni = BdAgi+BdInt+BdPer.</p>
                 </div>
 
                 <h3 id="taille" onclick="hideContent(this)">Taille</h3>
@@ -644,6 +647,12 @@
                         <li><span class="big_underline">Origine de taille Grande(G) :</span>Kanta, Sarpa Crocodile </li>
                     </ul>
                     <p>Pour plus de détails sur l'influence qu'à la taille sur votre personnage Cf <a href="Tableaux.xhtml#taille_creatures">Taille des créatures</a>.</p>
+                </div>
+
+                <h3 id="langages" onclick="hideContent(this)">Langages</h3>
+                <div>
+                    <p>Votre personnage sait parler sa langue d'origine et l'attribut Langages détermine le nombre de langue qu'il peut maîtriser. Cet attribut équivaut à son BdInt et la langue d'origine ne compte pas dans ce total. Votre personnage ne commencent pas forcément la partie avec le nombre maximal de langages qu'il peut maîtriser, cela dépend de son origine et des lieux où il a vécu.</p>
+                    <p>Certaines langues peu communes sont considérés comme exotiques, parmi elle le Kugarite, le Karnarak et le Sihiräll. Les langues exotiques comptent comme deux langages connus. Cf <a href="../World/Histoire_Ogma.xhtml#langages">Langages</a></p>
                 </div>
             </div>
 
@@ -816,7 +825,7 @@
                         <td>Intelligence</td>
                         <td>Langage crypté<br/><a href="../World/Histoire_Ogma.xhtml#langages">Langages</a><br/>Dialecte</td>
                         <td>La linguistique est la science des écrits et des langues, elle permet de comprendre les manuscrits complexes et les langues inconnues</td>
-                        <td>Déchiffrer un parchemin<br/>Comprendre un dialecte</td>
+                        <td>Déchiffrer/Créer un parchemin<br/>Comprendre un dialecte</td>
                     </tr>
                     <tr id="logique">
                         <th>Logique</th>
@@ -1026,8 +1035,7 @@
             <p>Utiliser la magie revient à se rendre mentalement dans le domaine d'un Inkarnaï, d'y façonner sa création puis de la ramener dans le plan d'Ogma via sa force psychique. Le type de sort dépend du domaine d'où l'on puise sa création.</p>
             <p>L'usage de la magie requiert de la force mentale, représentée par des points de <a href="Rules.xhtml#psy">Psy</a>. Quiconque a recours à la magie sans suffisamment de Psyché ou s'essaye à des créations trop imposantes pour son esprit s'expose à des risques pour son enveloppe physique.</p>
             <p>La caractéristique utilisée pour lancer des sorts est la Volonté, selon l'effet ou le domaine du sort, des bonus liés aux compétences et/ou aux spécialisations peuvent s'appliquer.</p>
-            <p>La magie est par nature instable, tout lanceur de sort se doit de maîtriser ses sorts pour ne pas perdre le contrôle. Un sort non contenu est considéré comme surchargé et peut avoir des effets supplémentaires non désirés.</p>
-            <p>Contenir un sort permet de réduire la quantité de psy nécessaire par le BdInt du lanceur et de limiter les effets secondaires. Le coût d'un sort ne peut pas être inférieur à son cercle (un sort de cercle 4 coûtant 8 points de psy coutera 4 points de psy au minimum même si le lanceur possède un BdInt supérieur à 4). </p>
+            <p><span id="reduction_cout_sort" class="big_underline">Réduction du coût des sorts :</span>La magie est par nature instable, tout lanceur de sort se doit de maîtriser ses sorts pour ne pas perdre le contrôle. Contenir un sort permet de réduire la quantité de psy nécessaire par le BdInt du lanceur et de limiter les effets secondaires. Le coût d'un sort ne peut pas être inférieur à son cercle (un sort de cercle 4 coûtant 8 points de psy coutera 4 points de psy au minimum même si le lanceur possède un BdInt supérieur à 4). </p>
             <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
             <p>Les utilisateurs plus confirmés peuvent également transmettre des messages via la magie, ainsi la transmission de messages en Ogma est très rapide. Il est même possible de recevoir un message sans avoir aucune formation avec la magie, il suffit à l'expéditeur de connaître un tant soit peu le destinataire.</p>
             <p>Les Sarpas par exemple utilisent constamment la magie pour produire de la chaleur si ils ne peuvent pas profiter de celle des astres. On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
@@ -1125,15 +1133,15 @@
                         </tr>
                         <tr>
                             <td>Tempête</td>
-                            <td>Maintien, Attaque à Distance, ZdE(1+3*Zm, sphère), fais perdre la propriété Surcharge</td>
+                            <td>Maintien, Attaque à Distance, ZdE(1+3*Zm, sphère)</td>
                             <td>4+Z*2</td>
-                            <td>Affecte toutes les cibles situées dans les 1+Z mètres du point d'impact situé à 100m ou moins du lanceur. Les effets du sort persistent pendant 1 round et affecte les cibles la traversant. Maintenir ce sort ne permet pas de déplacer la tempête.</td>
+                            <td>Affecte toutes les cibles situées dans les 1+Z mètres du point d'impact situé à 100m ou moins du lanceur. La tempête affecte les cibles qui la traverse. Maintenir permet de déplacer la tempête sur une distance équivalente au BdVol du lanceur en mètres par round.</td>
                         </tr>
                         <tr>
                             <td>Mur</td>
                             <td>Maintien, Attaque à Distance, ZdE(1+2*Zm, ligne)</td>
-                            <td>4+Z</td>
-                            <td>Crée un mur d'un mètre de large et de 1+Z*2 mètres de long à moins de 50m du lanceur. Le mur persiste pendant 1 round et affecte toute les cibles dans cette zone. Maintenir ce sort ne permet pas de déplacer le mur.</td>
+                            <td>3+Z</td>
+                            <td>Crée un mur d'un mètre de large et de 1+Z*2 mètres de long à moins de 50m du lanceur. Le mur affecte toute les cibles dans cette zone. Maintenir ce sort ne permet pas de déplacer le mur.</td>
                         </tr>
                         </tbody>
                     </table>
@@ -1143,11 +1151,16 @@
                 <div>
                     <p>L'effet d'un sort détermine le contenu d'un sort, quel va être son impact dans le monde, un effet de feu brûlera ses cibles tandis qu'un effet de soin guérira les blessures.</p>
                     <p>Un sort possède une magnitude équivalente au nombre de cercles franchis pour sa création, on parle alors d'un sort de cercle X (SCX) où X est le dernier cercle franchi. Plus on franchi de cercle, plus le sort est puissant et couteux en psy.</p>
-                    <p>Le nombre de cercle franchissables sans risques pour un mage dépend de sa volonté et de son expérience dans une école de magie. Le SC maximal atteignable équivaut au BdVol du lanceur, si l'effet du sort fait partie d'une école dans laquelle le lanceur possède des paliers d'expériences, son SC maximal augmente de 1 par palier (Novice +1, Apprenti +2,...,Maître +5).</p>
+
+                    <p><span id="SCMax" class="big_underline">Détermination du Cercle Maximal (SCMax) :</span>Le nombre de cercle franchissables sans risques pour un mage dépend de sa volonté et de son expérience dans une école de magie. Le SC maximal atteignable équivaut au BdVol du lanceur, si l'effet du sort fait partie d'une école dans laquelle le lanceur possède des paliers d'expériences, son SC maximal augmente de 1 par palier (Novice +1, Apprenti +2,...,Maître +5).</p>
                     <p>Il est toutefois possible de se rendre dans des cercles de puissance au delà de ses limites à ses risques et périls. Incanter un sort d'un cercle trop élevé se fait avec un malus de -5 pour le premier cercle excédant votre limite de -10 pour le deuxième et de -15 pour le troisième. Ces malus sont cumulatifs et augmente des mêmes valeurs les risques d'échec critique. Il est impossible de franchir plus de 3 cercles au delà de votre limite.</p>
 
                     <p>La liste ci-dessous n'est pas exhaustive des pouvoirs conférés par les <a href="../World/Histoire_Ogma.xhtml#inkarnai">Inkarnaïs</a>.</p>
-                    <table id="table_effet_sort" class="table_horizontal">
+
+                    <p id="table_alteration" class="caption" onclick="hideContent(this)">École d'Altération</p>
+                    <div class="hidden">
+                        <p>Cette école permet de modeler la réalité comme on l'entend en transformant ou réparant des éléments existants.</p>
+                    <table class="table_horizontal">
                         <tbody>
                         <tr>
                             <th>Effet</th>
@@ -1156,35 +1169,26 @@
                             <th>Description</th>
                             <th>Inkarnaï</th>
                         </tr>
-                        <tr><th colspan="5">Altération</th></tr>
-                        <tr><td colspan="5">Cette école permet de modeler la réalité comme on l'entend en transformant ou réparant des éléments existants.</td></tr>
                         <tr>
                             <td>Aspect de l'aigle</td>
                             <td>Maintien</td>
                             <td>3*SC</td>
-                            <td>La cibles obtiennent les capacités d'un aigle pendant 1 minute. Vitesse de déplacement en vol : SC*2m. Armes naturelles : 1d4+SC perforants.</td>
+                            <td>La cibles obtiennent les capacités d'un aigle pendant 1 minute. Vitesse de déplacement en vol : (2*SC) mètres. Armes naturelles : 1d4+SC perforants. Test pour attaquer en mêlée : DEX+5*SC.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Aspect du loup</td>
                             <td>Maintien</td>
                             <td>3*SC</td>
-                            <td>La cibles obtiennent les capacités d'un loup pendant 1 minute. Vitesse de déplacement au sol bonus : SC mètres. Armes naturelles : 1d4+SC tranchants.</td>
+                            <td>La cibles obtiennent les capacités d'un loup pendant 1 minute. Vitesse de déplacement au sol bonus : SC mètres. Armes naturelles : 1d4+SC tranchants. Test pour attaquer en mêlée : DEX+5*SC ou FOR+5*SC.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Aspect de l'ours</td>
                             <td>Maintien</td>
                             <td>3*SC</td>
-                            <td>La cibles obtiennent les capacités d'un ours pendant 1 minute. PVs temporaires : 2*SC. Armes naturelles : 1d4+SC fendants.</td>
+                            <td>La cibles obtiennent les capacités d'un ours pendant 1 minute. PVs temporaires : 2*SC. Armes naturelles : 1d4+SC fendants. Test pour attaquer en mêlée : FOR+5*SC.</td>
                             <td>Kynigi</td>
-                        </tr>
-                        <tr>
-                            <td>Respiration aquatique</td>
-                            <td>-</td>
-                            <td>SC</td>
-                            <td>La cible peut respirer l'eau comme si c'était de l'air pendant SC minutes.</td>
-                            <td>Nero</td>
                         </tr>
                         <tr>
                             <td>Aisance aquatique</td>
@@ -1198,6 +1202,13 @@
                             <td>-</td>
                             <td>SC</td>
                             <td>La cible peut marcher sur l'eau comme s'il marchait sur la terre ferme pendant SC minutes.</td>
+                            <td>Nero</td>
+                        </tr>
+                        <tr>
+                            <td>Respiration aquatique</td>
+                            <td>-</td>
+                            <td>SC</td>
+                            <td>La cible peut respirer l'eau comme si c'était de l'air pendant SC minutes.</td>
                             <td>Nero</td>
                         </tr>
                         <tr>
@@ -1250,17 +1261,17 @@
                             <td>Ourgal</td>
                         </tr>
                         <tr>
-                            <td>Renforcement physique ([caractéristique])</td>
-                            <td>[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
-                            <td>4*SC</td>
-                            <td>Renforce la caractéristique de la cible de 5*SC points pendant une minute</td>
-                            <td>Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)</td>
-                        </tr>
-                        <tr>
                             <td>Affaiblissement [Caractéristique]</td>
                             <td>[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
                             <td>4*SC</td>
                             <td>Affaibli la caractéristique de la cible de 5*SC points pendant une minute. La cible doit passer un test de Vigueur dans le cas d'une caractéristique physique ou un test de Volonté pour les caractéristiques mentale avec un modificateur de +20-(5*SC).</td>
+                            <td>Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)</td>
+                        </tr>
+                        <tr>
+                            <td>Renforcement [caractéristique]</td>
+                            <td>[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
+                            <td>4*SC</td>
+                            <td>Renforce la caractéristique de la cible de 5*SC points pendant une minute</td>
                             <td>Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)</td>
                         </tr>
                         <tr>
@@ -1291,8 +1302,22 @@
                             <td>Stabilise une cible mourante. <i>Cet effet est toujours de SC3</i></td>
                             <td>Agapi</td>
                         </tr>
-                        <tr><th colspan="5">Conjuration</th></tr>
-                        <tr><td colspan="5">Cette école se concentre sur les déplacement d'entités entre le plan matériel et le plan psychique que ce soit des objets ou des êtres vivants.</td></tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <p id="table_conjuration" class="caption" onclick="hideContent(this)">École de Conjuration</p>
+                    <div class="hidden">
+                        <p>Cette école se concentre sur les déplacement d'entités entre le plan matériel et le plan psychique que ce soit des objets ou des êtres vivants.</p>
+                    <table class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Effet</th>
+                            <th>Propriété</th>
+                            <th>Coût</th>
+                            <th>Description</th>
+                            <th>Inkarnaï</th>
+                        </tr>
                         <tr>
                             <td>Armure Physique</td>
                             <td>Maintien</td>
@@ -1339,7 +1364,7 @@
                             <td>Protection</td>
                             <td>Réaction</td>
                             <td>2*SC</td>
-                            <td>Réduis les dégâts subis par la cible de SC*2 pour une seule attaque.</td>
+                            <td>Réduis les dégâts subis par la cible de 2*SC pour une seule attaque.</td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
@@ -1380,15 +1405,15 @@
                         <tr>
                             <td>Récupération</td>
                             <td>-</td>
-                            <td>3*SC</td>
-                            <td>Restaure 2*SC points d'endurance</td>
+                            <td>8</td>
+                            <td>La cible supprime un niveau de fatigue <i>Cet effet est toujours de SC3</i></td>
                             <td>Agapi</td>
                         </tr>
                         <tr>
                             <td>Fatigue</td>
                             <td>-</td>
                             <td>3*SC</td>
-                            <td>La cible perd un nombre de points d'endurance équivalent au BdVol du lanceur. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC) si elle souhaite résister.</td>
+                            <td>La cible doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC) ou subir un niveau de fatigue.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
@@ -1397,13 +1422,6 @@
                             <td>2*SC</td>
                             <td>L'endroit ciblé par le lanceur devient un terrain difficile pendant SC rounds.</td>
                             <td>Kynigi</td>
-                        </tr>
-                        <tr>
-                            <td>Télékinésie</td>
-                            <td>-</td>
-                            <td>2*SC</td>
-                            <td>Le lanceur invoque une main éthérée capable d'interagir avec le monde pendant SC rounds.</td>
-                            <td>Agones</td>
                         </tr>
                         <tr>
                             <td>Projection psychique</td>
@@ -1440,13 +1458,27 @@
                             <td>La cible se téléporte via les racines d'un arbre sur une distance de 5*SC mètres, elle doit être en contact avec un arbre en vie et réapparaître sur un autre arbre en vie. Si elle souhaite résister, elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
                             <td>Kormo</td>
                         </tr>
-                        <tr><th colspan="5">Divination</th></tr>
-                        <tr><td colspan="5">Cette école permet de révéler l'inconnu, de jouer avec le destin.</td></tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <p id="table_divination" class="caption" onclick="hideContent(this)">École de Divination</p>
+                    <div class="hidden">
+                        <p>Cette école permet de révéler l'inconnu, de jouer avec le destin.</p>
+                        <table class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Effet</th>
+                            <th>Propriété</th>
+                            <th>Coût</th>
+                            <th>Description</th>
+                            <th>Inkarnaï</th>
+                        </tr>
                         <tr>
                             <td>Télépathie</td>
                             <td>Maintien</td>
                             <td>2*SC</td>
-                            <td>La cible peut communiquer par télépathie avec le lanceur pendant une minute. Les éléments communicables de la sorte dépendent du SC : SC1 mot à mot, SC2 phrases courtes, SC3 aucune limite de mots, SC4 images, SC5 sentiments et concepts.</td>
+                            <td>La cible obtient le trait <a href="Glossaire.xhtml#telepathe">Télépathe(SC)</a> pendant une minute.</td>
                             <td>Orizo</td>
                         </tr>
                         <tr>
@@ -1455,20 +1487,6 @@
                             <td>3*SC</td>
                             <td>Le prochain test de Savoir ou de Linguistique de la cible se fera avec un bonus de 5*SC dans la minute qui suit le lancement</td>
                             <td>Orizo</td>
-                        </tr>
-                        <tr>
-                            <td>Destinée</td>
-                            <td>-</td>
-                            <td>4*SC</td>
-                            <td>Permet de lancer SC d100. La cible peut utiliser un des résultats obtenus pour passer n'importe quel test dans les prochaines 24h. (Le bénéficiaire de l'état doit annoncer l'utilisation d'un dé pré-tiré avant que le dé ne soit lancé).</td>
-                            <td>Tychi</td>
-                        </tr>
-                        <tr>
-                            <td>Fatalité</td>
-                            <td>-</td>
-                            <td>4*SC</td>
-                            <td>Permet de lancer SC d100. Le lanceur peut forcer une cible à utiliser un des résultats obtenus pour passer n'importe quel test dans les prochaines 24h. (Le lanceur doit annoncer l'utilisation d'un dé pré-tiré avant que le dé ne soit lancé).</td>
-                            <td>Tychi</td>
                         </tr>
                         <tr>
                             <td>Détection de la vie</td>
@@ -1499,6 +1517,20 @@
                             <td>Orizo</td>
                         </tr>
                         <tr>
+                            <td>Destinée</td>
+                            <td>-</td>
+                            <td>4*SC</td>
+                            <td>Permet de lancer SC d100. La cible peut utiliser un des résultats obtenus pour passer n'importe quel test dans les prochaines 24h. (Le bénéficiaire de l'état doit annoncer l'utilisation d'un dé pré-tiré avant que le dé ne soit lancé).</td>
+                            <td>Tychi</td>
+                        </tr>
+                        <tr>
+                            <td>Fatalité</td>
+                            <td>-</td>
+                            <td>4*SC</td>
+                            <td>Permet de lancer SC d100. Le lanceur peut forcer une cible à utiliser un des résultats obtenus pour passer n'importe quel test dans les prochaines 24h. (Le lanceur doit annoncer l'utilisation d'un dé pré-tiré avant que le dé ne soit lancé).</td>
+                            <td>Tychi</td>
+                        </tr>
+                        <tr>
                             <td>Augure</td>
                             <td>-</td>
                             <td>5</td>
@@ -1512,8 +1544,22 @@
                             <td>La cible obtient une réponse fiable sur un évènement à venir dans les 7 jours. (avoir recours à cet effet sans 7 jours d'intervalles augmente de 25% les chances de réponse aléatoires).<i>Cet effet est toujours de SC5</i></td>
                             <td>Tychi</td>
                         </tr>
-                        <tr><th colspan="5">Domination</th></tr>
-                        <tr><td colspan="5">Cette école permet de contrôler les vivants comme les morts.</td></tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <p id="table_domination" class="caption" onclick="hideContent(this)">École de Domination</p>
+                    <div class="hidden">
+                        <p>Cette école permet de contrôler les vivants comme les morts.</p>
+                        <table class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Effet</th>
+                            <th>Propriété</th>
+                            <th>Coût</th>
+                            <th>Description</th>
+                            <th>Inkarnaï</th>
+                        </tr>
                         <tr>
                             <td>Réanimation</td>
                             <td>-</td>
@@ -1577,9 +1623,29 @@
                             <td>La cible meurt instantanément. Elle doit passer un test de Vigueur ou de Volonté avec un modificateur de +20-(5*SC).</td>
                             <td>Anathos</td>
                         </tr>
+                        <tr>
+                            <td>Télékinésie</td>
+                            <td>-</td>
+                            <td>3*SC</td>
+                            <td>Le lanceur obtient le trait <a href="Glossaire.xhtml#telekinesiste">Télékinésiste(SC)</a> pendant une minute.</td>
+                            <td>Agones</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
 
-                        <tr><th colspan="5">Élémentalisme</th></tr>
-                        <tr><td colspan="5">Cette école se concentre sur les pouvoirs élémentaires de Karnaï.</td></tr>
+                    <p id="table_elementalisme" class="caption" onclick="hideContent(this)">École d'Élémentalisme</p>
+                    <div class="hidden">
+                        <p>Cette école se concentre sur les pouvoirs élémentaires de Karnaï.</p>
+                        <table class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Effet</th>
+                            <th>Propriété</th>
+                            <th>Coût</th>
+                            <th>Description</th>
+                            <th>Inkarnaï</th>
+                        </tr>
                         <tr>
                             <td>Assaut minéral</td>
                             <td>[Métal, Pierre, Terre, Sable]</td>
@@ -1605,7 +1671,7 @@
                             <td>Bourrasque</td>
                             <td>Maintien</td>
                             <td>SC</td>
-                            <td>Invoque du vent se déplaçant à SC*20km/h pendant 1 round. Cf <a href="Rules.xhtml#table_vents">Effets du vent</a> </td>
+                            <td>Invoque du vent se déplaçant à (20*SC)km/h pendant 1 round. Cf <a href="Rules.xhtml#table_vents">Effets du vent</a> </td>
                             <td>Aïgida</td>
                         </tr>
                         <tr>
@@ -1636,13 +1702,27 @@
                             <td>Diminue la température ambiante de la cible de 5*SC C° pendant une heure.</td>
                             <td>Nero</td>
                         </tr>
-                        <tr><th colspan="5">Illusion</th></tr>
-                        <tr><td colspan="5">Cette école se concentre sur la perception de la réalité et permet de jouer avec l'ombre et la lumière.</td></tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <p id="table_illusion" class="caption" onclick="hideContent(this)">École d'Illusion</p>
+                    <div class="hidden">
+                        <p>Cette école se concentre sur la perception de la réalité et permet de jouer avec l'ombre et la lumière.</p>
+                        <table class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Effet</th>
+                            <th>Propriété</th>
+                            <th>Coût</th>
+                            <th>Description</th>
+                            <th>Inkarnaï</th>
+                        </tr>
                         <tr>
                             <td>Création illusoire</td>
                             <td>Maintien</td>
                             <td>3*SC</td>
-                            <td>Façonne une création intangible de la forme souhaitée avec sons et odeurs sur une surface de SC*0,5 mètres cubes. Un test d'Observation ou d'Investigation est nécessaire pour se rendre compte de l'illusion. L'illusion persiste pendant une minute</td>
+                            <td>Façonne une création intangible de la forme souhaitée avec sons et odeurs sur une surface de (0,5*SC) mètres cubes. Un test d'Observation ou d'Investigation est nécessaire pour se rendre compte de l'illusion. L'illusion persiste pendant une minute</td>
                             <td>Psema</td>
                         </tr>
                         <tr>
@@ -1698,11 +1778,12 @@
                             <td>Apparence trompeuse</td>
                             <td>-</td>
                             <td>3*SC</td>
-                            <td>La cible est perçue comme quelqu'un d'autre par les personnes non-consciente du sort pendant 1 minute. La cible impose un malus de SC*5 à toute entité tentant de la démasquer.</td>
+                            <td>La cible est perçue comme quelqu'un d'autre par les personnes non-consciente du sort pendant 1 minute. La cible impose un malus de 5*SC à toute entité tentant de la démasquer.</td>
                             <td>Psema</td>
                         </tr>
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1758,9 +1839,9 @@
             <div>
                 <p>La posture de combat détermine l'attitude du personnage au milieu de la bataille, on ne peut changer de posture qu'au début de son tour. Les différentes postures sont :</p>
                 <ul>
-                    <li><span class="big_underline">Posture agressive :</span>le personnage peut effectuer une attaque supplémentaire par round. (Fonctionne aussi bien avec les armes qu'avec la magie. Un personnage attaquant avec une arme infligeant 1d10+5 dégâts infligera au minimum 10 points de dégâts).</li>
+                    <li><span class="big_underline">Posture agressive :</span>le personnage peut effectuer une attaque supplémentaire par round et inflige au moins la moitié de son/ses dé(s) de dégâts lors de ses attaques. (Fonctionne aussi bien avec les armes qu'avec la magie. Un personnage attaquant avec une arme infligeant 1d8+1 dégâts infligera au minimum 5 points de dégâts).</li>
                     <li><span class="big_underline">Posture défensive :</span>les actions défensives coutent 1 PE en moins.</li>
-                    <li><span class="big_underline">Posture vigilante :</span>le personnage peut effectuer une attaque d'opportunité à distance sur un ennemi qu'il ne <a href="Types_actions.xhtml#viser">vise</a> pas. Bonus de +4 lors du jet d'initiative.</li>
+                    <li><span class="big_underline">Posture vigilante :</span>le personnage peut effectuer une attaque d'opportunité à distance sur un ennemi qu'il ne <a href="Types_actions.xhtml#viser">vise</a> pas. Bonus à l'Initiative (BdIni) doublé lors du jet d'initiative.</li>
                 </ul>
                 <p>Une posture peut justifier un bonus lors de certaines actions. Si un personnage passe en posture vigilante et précise qu'il recherche des opposants cachés, le MJ peut lui accorder un avantage pour son épreuve de perception.</p>
                 <p>Les ennemis n'utilisent pas les postures à moins d'être des personnages très important dans le récit.</p>
@@ -1772,7 +1853,7 @@
                 <p>Les style de combat sont représentés par la compétence : <a href="Rules.xhtml#style_combat_competence">Style de Combat [type]</a>, où le type est le nom du style de combat. Cette compétence est utilisée avec la caractéristique de Force ou de Dextérité pour effectuer des attaques ou se défendre en mêlée mais doit être utilisée avec la caractéristique de Dextérité pour effectuer des attaques à distance.</p>
                 <p>Chaque style de combat est associé à un certain nombre d'armes et de types d'armure avec lesquels le personnage est entraîné et apte à utiliser. Au niveau d'initié, un art du combat ne peut contenir que quatre types d'équipement différents, chaque palier d'expérience permet d'en ajouter un jusqu'à un maximum de 9 au rang de Maître.</p>
                 <p>Le combat à mains nues peut rentrer dans un style de combat. Les armures sont divisées en quatre catégorie : légère, intermédiaire, lourde et super-lourde. Les armes sont divisés en de multiples catégories Cf <a href="Rules.xhtml#table_armes_cac">Armes</a>. Les boucliers ne forment qu'une seule et même catégorie malgré les différences de taille.</p>
-                <p>Utiliser de l'équipement avec lequel on manque d'entraînement est Difficile(-20). De même que se battre dans une situation inhabituelle peut être une tâche Ardue(-10) : Un soldat habitué à se battre sur son cheval sera mal-à-l'aise s'il doit défendre sa vie face à un assassin dans sa propre maison; un noble combattant se retrouvant malgré dans une baston de bar aura du mal à trouver ses repère malgré son habileté à l'épée.</p>
+                <p>Utiliser de l'équipement avec lequel on manque d'entraînement ne permet pas de bénéficier de sa maîtrise de Style de Combat. Se battre dans une situation inhabituelle peut être une tâche Ardue(-10) voire Difficile(-20) : Un soldat habitué à se battre sur son cheval sera mal-à-l'aise s'il doit défendre sa vie face à un assassin dans sa propre maison; un noble combattant se retrouvant malgré dans une baston de bar aura du mal à trouver ses repère malgré son habileté à l'épée.</p>
                 <p>Voici quelques exemple de Style de combat :</p>
                 <ul>
                     <li><span class="big_underline">Style de Combat [Lame de l'ombre]</span><i>Les lames courtes sont les meilleurs outils d'un assassin</i> Équipement utilisé : Dague, Épée courte, Couteau de lancer, Mains nues, Armure légère</li>
@@ -1785,7 +1866,7 @@
             <div>
                 <p>Le combat est un échange de coups entre l'assaillant et le défenseur, l'assaillant étant bien souvent le personnage actif du round et le défenseur sa victime.</p>
                 <h4>Étape 1 : Attaquer</h4>
-                <p>L'assaillant choisi sa cible, son style de combat et son arme avant de faire son jet d'attaque. Si l'arme choisie ne fait pas partie du style de combat choisi, un malus de -20 s'impose.</p>
+                <p>L'assaillant choisi sa cible, son style de combat et son arme avant de faire son jet d'attaque. Si l'arme choisie ne fait pas partie du style de combat choisi, le jet se base sur la Caractéristique de Force ou de Dextérité pure.</p>
                 <ul>
                     <li><span class="big_underline">Attaque de mêlée :</span>L'assaillant fait un test de Style de combat en utilisant la Force ou la Dextérité contre une cible à la portée de son arme.</li>
                     <li><span class="big_underline">Attaque à distance :</span>L'assaillant fait un test de Style de combat en utilisant la Dextérité contre une cible à la portée de son arme.</li>
@@ -1798,17 +1879,16 @@
                     <li><span class="big_underline">Blocage</span>Le défenseur passe une épreuve de Style de combat(Force) s'il possède un bouclier.</li>
                     <li><span class="big_underline">Contre-attaque</span>Le défenseur utilise un méthode de défense ci-dessus puis fais une attaque de mêlée comme décrit à l'étape 1. Le défenseur comptera alors comme un assaillant lors de la phase 3.</li>
                 </ul>
-                <p>Les actions défensives coûtent 2 points d'endurance si elles sont réussies. Dans le cas où le défenseur se fait toucher, il ne perds pas d'endurance.</p>
                 <p>Il n'est possible de se défendre des attaques à distance que via l'action d'esquive ou de blocage.</p>
                 <h4>Étape 3 : Lancer les dés et déterminer le résultat</h4>
                 <p>Plusieurs cas sont possibles suivants les résultats des dés, notez que si le défendeur choisi de ne pas se défendre ou s'il est incapable de le faire, on considère qu'il échoue automatiquement.</p>
-                <p>Si le degré de réussite(DR) d'un des combattants dépasse de 2 celui de son adversaire, il prend le dessus pour cette passe d'arme et pourra choisir un effet lors de l'étape 4 :</p>
+                <p>Si le degré de réussite(DR) d'un des combattants dépasse de 2 celui de son adversaire, il <b>prend le dessus</b> pour cette passe d'arme et pourra choisir un effet lors de l'étape 4 :</p>
                 <ul>
                     <li><span class="big_underline">Les deux personnages échouent :</span>Rien ne se passe et l'action est terminée.</li>
                     <li><span class="big_underline">Un personnage rate son jet :</span>
                     <ul>
                         <li><span class="big_underline">L'assaillant échoue :</span>L'attaque ne porte pas et l'action est terminée.</li>
-                        <li><span class="big_underline">Le défenseur échoue :</span>L'attaque porte, le défenseur ne perds pas d'endurance, voir étape 4.</li>
+                        <li><span class="big_underline">Le défenseur échoue :</span>L'attaque porte, voir étape 4.</li>
                     </ul></li>
                     <li><span class="big_underline">Les deux personnages réussissent :</span>
                     <ul>
@@ -1852,12 +1932,12 @@
                     </tr>
                     </tbody>
                 </table>
-                <p>L'assaillant lance le(s) dé(s) de dégâts de son arme, si l'attaque est critique, il inflige le maximum de dégâts. On réduit ces dégâts par la PR protégeant la zone touchée si le défenseur porte une pièce d'armure à cet endroit. Si les dégâts infligés sont inférieurs ou égaux à 0, le défenseur perd un point d'endurance, s'il sont positifs, il perd autant de vitalité qu'il subis de dégâts.</p>
+                <p>L'assaillant lance le(s) dé(s) de dégâts de son arme, si l'attaque est critique, il inflige le maximum de dégâts. On réduit ces dégâts par la PR protégeant la zone touchée si le défenseur porte une pièce d'armure à cet endroit. Si les dégâts infligés sont inférieurs ou égaux à 0 le défenseur perd tout de même un point de vitalité car l'attaque le touche, s'il sont positifs il perd autant de vitalité qu'il subis de dégâts.</p>
                 <p>Dans le cas où le défenseur gagne la passe d'arme :</p>
                 <ul>
                     <li><span class="big_underline">Dans le cas d'une esquive :</span>Le défenseur ne subit aucun dégâts et peut se déplacer d'un mètre dans un direction sans puiser dans son déplacement pour ce tour.</li>
                     <li><span class="big_underline">Dans le cas d'une parade :</span>Le défenseur ne subit aucun dégâts. </li>
-                    <li><span class="big_underline">Dans le cas d'un blocage :</span>Si les dégâts de l'assaillant surpassent la résistance du bouclier (RB), le défenseur subit l'intégralité des dégâts sur le bras qui tient le bouclier. Si la RB est supérieur ou égale aux dégâts reçus il ne subit aucun dégâts. Les dégâts magiques ne prennent en compte que la moitié de la RB (arrondie à l'entier supérieur) sauf si le bouclier possède une RB magique spécifiée.</li>
+                    <li><span class="big_underline">Dans le cas d'un blocage :</span>Si les dégâts de l'assaillant surpassent la résistance du bouclier (RB), le défenseur subit l'intégralité des dégâts sur le bras qui tient le bouclier. Si la RB est supérieure ou égale aux dégâts reçus il ne subit aucun dégâts. Les dégâts magiques ne prennent en compte que la moitié de la RB (arrondie à l'entier supérieur) sauf si le bouclier possède une RB magique spécifiée.</li>
                 </ul>
                 <p>Si un des combattant à le dessus sur l'autre, il peut choisir un des effets suivants :</p>
                 <ul>
@@ -1866,7 +1946,7 @@
                     <li><span class="big_underline">Pousser l'avantage (sur une attaque uniquement) :</span>La prochaine attaque réalisée contre cet adversaire sera Simple(+10) pour ce round.</li>
                     <li><span class="big_underline">Pousser à la faute (sur une parade/esquive uniquement) :</span>La prochaine attaque de l'adversaire sera Ardue(-10) pour ce round.</li>
                 </ul>
-                <p>Exemple : Géradin subit une attaque et rate sa parade, le coup arrive sur le torse et inflige 3 poins de dégâts mais Géradin porte une armure solide procurant 4 PR sur son torse, les dégâts qu'ils subis sont de 3-4=-1 Géradin ne perds qu'un point d'endurance. L'assaillant réitère l'attaque et Géradin ne peut plus se défendre, l'attaque inflige 6 points de dégâts et frappe à la jambe droite, Géradin ne possède qu'un de PR à cet endroit sa vitalité diminue de 6-1=5.</p>
+                <p>Exemple : Géradin subit une attaque et rate sa parade, le coup arrive sur le torse et inflige 3 poins de dégâts mais Géradin porte une armure solide procurant 4 PR sur son torse, les dégâts qu'ils subis sont de 3-4=-1 Géradin ne perds qu'un point de vitalite. L'assaillant réitère l'attaque et Géradin ne peut plus se défendre, l'attaque inflige 6 points de dégâts et frappe à la jambe droite, Géradin ne possède qu'un de PR à cet endroit sa vitalité diminue de 6-1=5.</p>
             </div>
 
             <h3 id="combat_cac" onclick="hideContent(this)">Combat en mêlée</h3>
@@ -1970,6 +2050,50 @@
                         <li><strong>Attaquer :</strong>Le personnage frappe la cible qu'il maîtrise. Il doit utiliser une arme avec une portée de 1m ou moins. La cible ne peut pas se défendre d'une telle attaque. Si la cible est à la fois <a href="Glossaire.xhtml#a_terre">à terre</a> et <a href="Glossaire.xhtml#maitrise">maîtrisée</a>, l'attaque peut être un <a href="Types_actions.xhtml#coup_de_grace">coup de grâce</a>. Si le personnage ne possède pas d'arme, il peut infliger une perte d'1d4 points d'Endurance.</li>
                     </ul>
                 </div>
+                <h4 id="armes_improvisees">Armes improvisées</h4>
+                <div>
+                    <p>Certains combats se déroulent sans que les personnages n'aient accès à leurs armes, ils peuvent alors se battre à mains nues ou en utilisant des objets environnants comme des armes improvisées.</p>
+                    <table class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Taille de l'arme</th>
+                            <th>Dégâts</th>
+                            <th>Portée</th>
+                            <th>Exemples</th>
+                        </tr>
+                        <tr>
+                            <td>Très petite</td>
+                            <td>1d4</td>
+                            <td>1m</td>
+                            <td>Chope, Silex</td>
+                        </tr>
+                        <tr>
+                            <td>Petite</td>
+                            <td>1d6</td>
+                            <td>1m</td>
+                            <td>Tabouret, Grosse pierre</td>
+                        </tr>
+                        <tr>
+                            <td>Moyenne</td>
+                            <td>1d8</td>
+                            <td>2m</td>
+                            <td>Banc, Grosse branche</td>
+                        </tr>
+                        <tr>
+                            <td>Grande</td>
+                            <td>1d10</td>
+                            <td>3m</td>
+                            <td>Porte, Table</td>
+                        </tr>
+                        <tr>
+                            <td>Très Grande</td>
+                            <td>1d12</td>
+                            <td>4m</td>
+                            <td>Poutre, Tronc</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <h4 id="conditions_particulieres_combat">Conditions particulières de combat</h4>
                 <p>Il arrive parfois qu'un combat ait lieu dans des circonstances peu habituelles, auquel cas, des règles spécifiques s'appliquent.</p>
                 <ul>
@@ -2020,7 +2144,7 @@
 
             <h3 id="blessures_mort" onclick="hideContent(this)">Blessures et mort</h3>
             <div>
-                <p>Comme vu précédemment, il est possible d'utiliser son endurance pour se prémunir des dégâts mais toute attaque qui touche un personnage ne parvenant pas à se défendre efficacement fait diminuer la jauge de vitalité.  </p>
+                <p>Toute attaque qui touche un personnage ne parvenant pas à se défendre efficacement fait diminuer la jauge de vitalité.  </p>
                 <p>Si la vitalité d'une entité atteint 0 ou une valeur négative, elle doit réussir un jet de Vigueur avec un malus éventuels équivalent à son total de points de vitalité négatifs, si elle réussit son jet, elle reste consciente et est <a href="Glossaire.xhtml#porte_mort">aux portes de la mort</a>. Si elle échoue, elle devient <a href="Glossaire.xhtml#inconscient">inconsciente</a> et <a href="Glossaire.xhtml#mourant">mourante</a>.</p>
             </div>
         </div>
@@ -2039,10 +2163,12 @@
 
                 <h3 id="dormir">Dormir</h3>
                 <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent se reposer au milieu d'une journée d'aventure et établir un camp pour dormir en fin de journée.</p>
-                <h4 id="repos">Repos</h4>
-                <p>Un repos est une période de temps mort qui dure au moins 1 heure, et durant laquelle un personnage ne fait rien de plus demandant que manger, boire, lire ou panser ses plaies. Un personnage récupère naturellement 10% d'endurance et de psy par heure de repos et un point de vitalité toute les 8 heures de repos consécutives, il est possible d'en récupérer plus via des sorts du domaine d'Agapi ou des remèdes alchimiques entres autres.</p>
+                <h4 id="repos_court">Repos court</h4>
+                <p>Un repos court est une période de temps mort qui dure au moins 1 heure, et durant laquelle un personnage ne fait rien de plus demandant que manger, boire, lire ou panser ses plaies. Au terme d'un repos court, un personnage récupère naturellement BdVol+BdInt points de psy et peut choisir de récupérer un point d'endurance ou de supprimer un niveau de fatigue. Ces quantités peuvent varier selon les conditions du repos, si l'on utilise des sorts ou si l'on consomme certains aliments ou potions.</p>
                 <h4 id="repos_long">Repos long</h4>
-                <p>Entre deux aventures, il est normal que des aventuriers souhaitent se reposer pendant plusieurs jours pour évacuer le stress et la pression accumulés lors de leurs péripéties. Un repos long dure au moins 3 jours, et doit se dérouler dans un environnement calme et sécurisé comme un camp fortifié, un village ou une cité. Un repos long permet aux personnages de récupérer l'intégralité de leur points d'endurance et de psy, 3 point de vitalité par jour et de progresser dans leurs caractéristiques et compétences.</p>
+                <p> Un repos long est un période d'au moins 8 heures se déroulant dans un environnement calme et relativement sécurisé comme un campement. Au terme d'un repos long, un personnage récupère l'intégralité de sa psy et de son endurance ainsi que BdVig points de vitalité. La quantité de vitalité récupérée peut varier selon les conditions du repos, si l'on utilise des sorts ou si l'on consomme certains aliments ou potions.</p>
+                <h4 id="interlude_aventures">Interlude entre aventures</h4>
+                <p>Entre deux aventures, il est normal que des aventuriers souhaitent se reposer pendant plusieurs jours pour évacuer le stress et la pression accumulés lors de leurs péripéties. Un interlude se déroule la plupart du temps dans un lieu civilisé mais peut tout à fait prendre place ailleurs, sa durée varie en fonction des besoins narratifs du MJ et des envies des joueurs. C'est pendant cette période que les personnages peuvent s'entraîner pour acquérir de nouvelles compétences ou améliorer leur caractéristiques. On considère qu'au terme d'un interlude, un personnage récupère l'intégralité de son endurance, psy et vitalité.</p>
 
                 <h3 id="alcool">Alcool</h3>
                 <p>La consommation d'alcool est quelque chose à surveiller, si un peu de boisson peu faciliter les relations sociales, à de trop fortes doses, il peut nuire au consommateur abusif. Un aventurier tolère l'alcool comme tout un chacun, au delà d'une certaine limite, ses capacités cognitives commencent à faiblir jusqu'au point où le corps lui même s'effondre. Les doses d'alcool sont perdues au rythme d'une par heure.</p>
@@ -2536,17 +2662,17 @@
                     <div>
                         <p>Les armes peuvent infliger différents types de dégâts selon la façon dont on les utilise :</p>
                         <ul>
-                            <li><span class="big_underline">Écrasant :</span>Les armes infligeant des dégâts écrasants brisent les os comme les armures. Les dégâts de ce type ignore une partie de la PR de sa cible à hauteur de son BdFor-3 (Si le BdFor du personnage vaut 4, il ignore 1 de PR, un BdFor de 5 ignore 2 de PR et ainsi de suite).</li>
-                            <li><span class="big_underline">Fendant :</span>Les armes infligeant des dégâts fendant causent de graves blessures si maniées par un monstre de puissance. Les dégâts de ce type permettent à l'utilisateur d'infliger son BdFor-2 en plus si son attaque fait perdre au moins 1 point de vitalité à sa cible.</li>
-                            <li><span class="big_underline">Perforant :</span>Les armes infligeant des dégâts perforants s'infiltrent dans les points faibles des armures les plus épaisses. Les dégâts de ce type ignore une partie de la PR de sa cible à hauteur de son BdDex-3 (Si le BdDex du personnage vaut 4, il ignore 1 de PR, un BdDex de 5 ignore 2 de PR et ainsi de suite).</li>
-                            <li><span class="big_underline">Tranchant :</span>Les armes infligeant des dégâts tranchant inflige de lours dégâts aux adversaires sans armure. Les dégâts de ce type permettent à l'utilisateur d'infliger son BdFor-2 ou son BdDex-2 en plus de son jet de dégâts si sa cible ne porte pas d'armure. </li>
+                            <li><span class="big_underline">Écrasant :</span>Les armes infligeant des dégâts écrasants brisent les os comme les armures. Les dégâts de ce type ignore la PR de sa cible à hauteur de son BdFor. Un personnage avec un BdFor de 4 frappant un adversaire possédant une armure procurant une PR de 5 verra ses dégâts réduit d'un seul point au lieu de 5.</li>
+                            <li><span class="big_underline">Fendant :</span>Les armes infligeant des dégâts fendant causent de graves blessures si maniées par un monstre de puissance. Les dégâts de ce type permettent à l'utilisateur d'infliger son BdFor en plus de son jet de dégâts si son attaque fait perdre au moins 1 point de vitalité à sa cible. Un ours avec un BdFor de 6 frappe un aventurier en armure (PR4), le coup de griffe lui inflige 6 point de dégâts, après réduction des dégâts grâce à la PR, l'aventurier subit (6-4)=2 points de dégâts auxquels on rajoute le BdFor de l'ours 2+6=8. L'aventurier perds 8 points de vie.</li>
+                            <li><span class="big_underline">Perforant :</span>Les armes infligeant des dégâts perforants s'infiltrent dans les points faibles des armures les plus épaisses. Les dégâts de ce type ignore une partie de la PR de sa cible à hauteur de son BdDex. Un duelliste avec un BdDex de 5 ne voit pas ses dégâts réduit tant que ses cibles ont moins de 5 de PR.</li>
+                            <li><span class="big_underline">Tranchant :</span>Les armes infligeant des dégâts tranchant inflige de lours dégâts aux adversaires sans armure. Les dégâts de ce type permettent à l'utilisateur d'infliger son BdFor ou son BdDex en plus de son jet de dégâts si la zone ciblée est considéré comme non protégée par de l'armure. Un assassin utilisant une arme possédant la propriété "Dard" sur une cible ne possédant que de l'armure partielle ou pas d'armure peut ajouter son BdEX ou son BdFor à son jet de dégâts.</li>
                         </ul>
-                        <p>Certaines créatures peuvent êtres résistantes ou vulnérables à un ou plusieurs types de dégâts. Les squelettes par exemple résistent au dégâts perforants mais sont vulnérables aux dégâts contondants. Voir <a href="Glossaire.xhtml#vulnerabilites_resistances">Vulnérabilités et résistances</a> et le <a href="../World/Bestiaire.xhtml">Bestiaire</a>.</p>
+                        <p>Certaines créatures peuvent êtres résistantes ou vulnérables à un ou plusieurs types de dégâts. Les squelettes par exemple résistent au dégâts perforants mais sont vulnérables aux dégâts contondants. Voir les traits <a href="Glossaire.xhtml#vulnerabilite">vulnérabilité</a> et <a href="Glossaire.xhtml#resistance">résistance</a> ainsi que le <a href="../World/Bestiaire.xhtml">Bestiaire</a>.</p>
                     </div>
 
                     <h3 id="proprietes_armes" onclick="hideContent(this)">Propriété des armes</h3>
                     <div>
-                        <p><span class="big_underline">Brise-bouclier :</span>Cette arme est très efficace contre les boucliers. Les tentatives de blocages de cette arme sont Difficile(-20) </p>
+                        <p><span class="big_underline">Brise-bouclier :</span>Cette arme est très efficace contre les boucliers. Les boucliers bloquant une attaque d'une arme possédant cette propriété voient leur RB divisée par 2 lors du blocage.</p>
                         <p><span class="big_underline">Dard :</span>Cette arme est capable de trouver des faille dans l'armure de sa cible. Les attaques de cette arme traite les zone protégées par des pièces d'armures intégrales comme protégées par des pièces partielles et parties protégées par des pièces partielles comme non protégées (mais ne réduit pas la PR de la zone). Cela peut être utilisé pour déclencher certains effets qui interagissent avec l'armure portée.</p>
                         <p><span class="big_underline">Duel :</span>Cette armes est faite pour le duel. L'action <a href="Types_actions.xhtml#contre_attaquer">contre-attaque</a> devient Simple(+10).</p>
                         <p><span class="big_underline">Empalement :</span>Cette arme interrompt le déplacement de quiconque perd de la vitalité suite à une attaque d'opportunité.</p>
@@ -2580,6 +2706,35 @@
                         <li><span class="big_underline">Encombrement (ENC) :</span>L'encombrement d'une arme, c'est la combinaison entre la taille et le poids de l'arme. </li>
                         <li><span class="big_underline">Prix :</span>Le prix de base de l'arme en pièce d'argent (pa). </li>
                     </ul>
+
+                    <h3 id="qualite_arme" onclick="hideContent(this)">Qualité des armes</h3>
+                    <div>
+                        <p>La qualité d'une arme peut avoir un impact sur son efficacité. La qualité varie en fonction de l'artisan à l'origine de l'arme :</p>
+                        <table class="table_horizontal">
+                            <tbody>
+                            <tr>
+                                <th>Qualité de l'arme</th>
+                                <th>Effets sur l'arme</th>
+                                <th>Modificateur de prix</th>
+                            </tr>
+                            <tr>
+                                <td>Médiocre</td>
+                                <td>L'arme obtient la propriété "Primitive"<br/>La rupture diminue de 10</td>
+                                <td>-50%</td>
+                            </tr>
+                            <tr>
+                                <td>Ordinaire</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Supérieure</td>
+                                <td>L'arme obtient la propriété "Excellence"<br/>La rupture augmente de 10</td>
+                                <td>+200%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <p>La liste d'armes ci dessous n'est pas exhaustive, il revient au MJ de décider des attributs d'une arme ajoutée par un joueur ou par lui-même.</p>
                 </div>
                 <div>
@@ -2859,15 +3014,15 @@
                         <tr>
                             <td>Bois</td>
                             <td>25</td>
-                            <td>Primitive</td>
-                            <td>-</td>
+                            <td>Primitive (sauf Masses et Bâtons)</td>
+                            <td>-1</td>
                             <td>-</td>
                             <td>0,2*Prix</td>
                         </tr>
                         <tr>
                             <td>Os</td>
                             <td>30</td>
-                            <td>Primitive</td>
+                            <td>Primitive (sauf Masses et Bâtons)</td>
                             <td>-</td>
                             <td>-</td>
                             <td>0,5*Prix</td>
@@ -2875,7 +3030,7 @@
                         <tr>
                             <td>Pierre</td>
                             <td>35</td>
-                            <td>Primitive</td>
+                            <td>Primitive (sauf Masses et Bâtons)</td>
                             <td>-</td>
                             <td>+1</td>
                             <td>0,5*Prix</td>
@@ -3174,7 +3329,7 @@
                             <td>Bois</td>
                             <td>25</td>
                             <td>Primitive</td>
-                            <td>-</td>
+                            <td>-1</td>
                             <td>10</td>
                         </tr>
                         <tr>
@@ -3446,25 +3601,25 @@
                             <tr>
                                 <td>Enchantement</td>
                                 <td>Il est possible de rendre une arme magique en l'infusant de Karnyx. L'arme devient alors capable de toucher des cibles immunisées aux armes classiques. Il est possible de faire d'une arme un catalyseur, permettant d'avoir recours à un ou plusieurs sorts sans en avoir forcément les capacités psychiques.</td>
-                                <td>L'arme peut infliger des dégâts magiques. L'utilisateur peut utiliser un ou plusieurs sorts contenus dans l'arme. Les sorts utilisés de cette manière requiert de la psyché.</td>
+                                <td>L'arme obtient la propriété "Magique". L'utilisateur peut utiliser un ou plusieurs sorts contenus dans l'arme. Les sorts utilisés de cette manière requiert de la psyché.</td>
                                 <td>150 po</td>
                             </tr>
                             <tr>
                                 <td>Renforcement</td>
                                 <td>La structure de l'arme est renforcé pour mieux résister aux chocs</td>
-                                <td>Augmente la rupture de l'arme d'un montant équivalent au talent de l'utilisateur (max : +20)</td>
+                                <td>Augmente la rupture de l'arme d'un montant équivalent au talent de l'artisan (max : +20)</td>
                                 <td>10 % du prix de l'arme</td>
                             </tr>
                             <tr>
                                 <td>Revêtement en argent</td>
                                 <td>L'arme est recouverte d'une fine couche d'argent, lui permettant de toucher les cibles y étant vulnérables.</td>
-                                <td>Inflige des dégâts supplémentaires aux cibles souffrant d'une vulnérabilité à l'argent</td>
+                                <td>L'arme obtient la propriété "Magique" et inflige des dégâts supplémentaires aux cibles souffrant d'une vulnérabilité à l'argent</td>
                                 <td>50 pa pour une arme à une main, 150 pa pour une arme à deux mains</td>
                             </tr>
                             <tr>
                                 <td>Revêtement en virgonium</td>
-                                <td>L'arme est recouverte d'une fine couche d'argent, lui permettant de toucher les cibles y étant vulnérables.</td>
-                                <td>Inflige des dégâts supplémentaires aux cibles souffrant d'une vulnérabilité à l'argent</td>
+                                <td>L'arme est recouverte d'une fine couche de virgonium, lui permettant d'infliger des dégâts dévastateurs aux êtres éthérés.</td>
+                                <td>L'arme obtient la propriété "Magique" et inflige des dégâts supplémentaires aux cibles éthérés</td>
                                 <td>50 po pour une arme à une main, 150 po pour une arme à deux mains</td>
                             </tr>
                             </tbody>
@@ -3483,18 +3638,170 @@
                 <p><span class="big_underline">Super-lourde :</span>L'armure super-lourde impose une pénalité énorme sur la mobilité du personnage, il subit un malus de -30 sur ses tests d'Agilité et sa vitesse diminue de 3m.  </p>
                 <p>Les pièces d'armure couvrent le torse ou un membre (tête, bras G, bras D, jambes D, jambes G). Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation, d'un point de vue réaliste, on est sensé porté une cotte de maille sous une armure de plate, et un gambison rembourré sous cette cotte de maille, mais pour simplifier tout ça on part du principe que c'est inclus dans la protection offerte par l'armure de plate.</p>
                 <p>Chaque pièce d'armure possède une certaine valeur de protection (PR) qui réduit tout dégâts subit sur la zone qu'elle protège. Certaines armures possèdent une PR magique face à un type de dégâts (PR froid par exemple).</p>
-                <p>Il existe deux types d'armure :</p>
+                <p>Il existe trois types d'armure :</p>
                 <ul>
-                    <li><span class="big_underline">Armure partielle :</span>Les armures de ce type ne couvrent pas totalement la zone qu'elle protège, elle possède une PR moindre mais sont moins encombrante que leur version complète et souvent plus légères. </li>
-                    <li><span class="big_underline">Armure intégrale :</span>Les armures de ce type offre un meilleure PR mais sont plus lourde et encombrante. </li>
+                    <li><span class="big_underline">Tuniques renforcées :</span>Les protections de ce type sont plus proches des vêtements que des armures, ce sont de simples vêtements en tissu possédants ça et là des parties renforcées, elles offrent une protection minime mais ne gêne pas le porteur.</li>
+                    <li><span class="big_underline">Armure partielle :</span>Les armures de ce type ne couvrent pas totalement la zone qu'elle protège, elle possède une protection moindre mais sont moins encombrante que leur version complète et souvent plus légères.</li>
+                    <li><span class="big_underline">Armure intégrale :</span>Les armures de ce type offre une meilleure protection mais sont plus lourde et encombrante. </li>
                 </ul>
-                <p>Un armure possède els attribut suivants :</p>
+                <p>Un armure possède les attribut suivants :</p>
                 <ul>
                     <li><span class="big_underline">Protection (PR) :</span> La valeur de protection fournie par l'armure</li>
-                    <li><span class="big_underline">Catégorie :</span>La catégorie de pois de l'armure.  </li>
+                    <li><span class="big_underline">Catégorie :</span>La catégorie de pois de l'armure. Certaines armures et bouclier possèdent la propriétés "Magique", ce qui leur permet de protéger leur porteur des attaques provenant d'êtres éthérés.</li>
                     <li><span class="big_underline">Encombrement :</span>L'encombrement de la pièce d'armure. L'encombrement est divisé par deux lorsque l'armure est équipée.</li>
                     <li><span class="big_underline">Prix :</span>Le prix en pièces d'argent d'une pièce d'armure. </li>
                 </ul>
+
+                <h3 id="qualite_armure_bouclier" onclick="hideContent(this)">Qualité des armure et des boucliers</h3>
+                <div>
+                    <p>La qualité d'une armure peut avoir un impact sur son efficacité. La qualité varie en fonction de l'artisan qui a créer la pièce :</p>
+                    <table class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Qualité de la pièce</th>
+                            <th>Effets sur les propriétés</th>
+                            <th>Modificateur de prix</th>
+                        </tr>
+                        <tr>
+                            <td>Médiocre</td>
+                            <td>La catégorie de poids augmente d'un cran<br/>La rupture diminue de 10</td>
+                            <td>-25%</td>
+                        </tr>
+                        <tr>
+                            <td>Ordinaire</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Supérieure</td>
+                            <td>La catégorie de poids diminue d'un cran<br/>La rupture augmente de 10</td>
+                            <td>+100%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="caption" id="table_tuniques_renforcees">Tuniques renforcées</p>
+                <table class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>Matériau</th>
+                        <th>PR</th>
+                        <th>PR magique</th>
+                        <th>Catégorie et Propriétés</th>
+                        <th>Rupture</th>
+                        <th>ENC/pièce<br/>(armure complète)</th>
+                        <th>Prix</th>
+                    </tr>
+                    <tr>
+                        <td>Peau</td>
+                        <td>0</td>
+                        <td>1 glace</td>
+                        <td>Légère</td>
+                        <td>20</td>
+                        <td>1(6)</td>
+                        <td>20 membre/40 torse (140)</td>
+                    </tr>
+                    <tr>
+                        <td>Cuir</td>
+                        <td>0</td>
+                        <td>1 feu</td>
+                        <td>Légère</td>
+                        <td>30</td>
+                        <td>1(6)</td>
+                        <td>25 membre/50 torse (175)</td>
+                    </tr>
+                    <tr>
+                        <td>Chitine</td>
+                        <td>0</td>
+                        <td>1 foudre</td>
+                        <td>-</td>
+                        <td>35</td>
+                        <td>1(6)</td>
+                        <td>30 membre/60 torse (210)</td>
+                    </tr>
+                    <tr>
+                        <td>Acier</td>
+                        <td>1</td>
+                        <td>-</td>
+                        <td>Magique</td>
+                        <td>55</td>
+                        <td>2(12)</td>
+                        <td>90 membre/180 torse (630)</td>
+                    </tr>
+                    <tr>
+                        <td>Nilaroy</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>Magique</td>
+                        <td>50</td>
+                        <td>1(6)</td>
+                        <td>90 membre/180 torse (630)</td>
+                    </tr>
+                    <tr>
+                        <td>Gnistar</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>Magique</td>
+                        <td>65</td>
+                        <td>1(6)</td>
+                        <td>300 membre/600 torse (2100)</td>
+                    </tr>
+                    <tr>
+                        <td>Kusni</td>
+                        <td>2</td>
+                        <td>6</td>
+                        <td>Magique</td>
+                        <td>55</td>
+                        <td>1(6)</td>
+                        <td>500 membre/ 1000 torse(3500)</td>
+                    </tr>
+                    <tr>
+                        <td>Shoren</td>
+                        <td>2</td>
+                        <td>5 froid</td>
+                        <td>Magique</td>
+                        <td>60</td>
+                        <td>2(12)</td>
+                        <td>150 membre/300 torse (1050)</td>
+                    </tr>
+                    <tr>
+                        <td>Orichalque</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>Magique</td>
+                        <td>60</td>
+                        <td>2(12)</td>
+                        <td>250 membre/500 torse (1750)</td>
+                    </tr>
+                    <tr>
+                        <td>Lakma</td>
+                        <td>3</td>
+                        <td>5 foudre</td>
+                        <td>Magique</td>
+                        <td>65</td>
+                        <td>1(6)</td>
+                        <td>500 membre/ 1000 torse(3500)</td>
+                    </tr>
+                    <tr>
+                        <td>Virgonium</td>
+                        <td>3</td>
+                        <td>6</td>
+                        <td>Magique</td>
+                        <td>70</td>
+                        <td>2(12)</td>
+                        <td>600 membre/ 1200 torse(4200)</td>
+                    </tr>
+                    <tr>
+                        <td>Skymma</td>
+                        <td>3</td>
+                        <td>7 feu</td>
+                        <td>Magique</td>
+                        <td>75</td>
+                        <td>3(12)</td>
+                        <td>500 membre/ 1000 torse(3500)</td>
+                    </tr>
+                    </tbody>
+                </table>
                 <p class="caption" id="table_armure_partielles">Armures partielles</p>
                 <table class="table_horizontal">
                     <tbody>
@@ -3502,7 +3809,7 @@
                         <th>Matériau</th>
                         <th>PR</th>
                         <th>PR magique</th>
-                        <th>Catégorie</th>
+                        <th>Catégorie et Propriétés</th>
                         <th>Rupture</th>
                         <th>ENC/pièce<br/>(armure complète)</th>
                         <th>Prix</th>
@@ -3529,7 +3836,7 @@
                         <td>Chitine</td>
                         <td>1</td>
                         <td>1 foudre</td>
-                        <td>Légère</td>
+                        <td>-</td>
                         <td>40</td>
                         <td>2(12)</td>
                         <td>30 membre/60 torse (210)</td>
@@ -3537,7 +3844,7 @@
                     <tr>
                         <td>Bois</td>
                         <td>1</td>
-                        <td/>
+                        <td>-</td>
                         <td>Légère</td>
                         <td>30</td>
                         <td>2(12)</td>
@@ -3546,7 +3853,7 @@
                     <tr>
                         <td>Os</td>
                         <td>2</td>
-                        <td/>
+                        <td>-</td>
                         <td>Légère</td>
                         <td>35</td>
                         <td>3(18)</td>
@@ -3555,7 +3862,7 @@
                     <tr>
                         <td>Fer</td>
                         <td>3</td>
-                        <td/>
+                        <td>-</td>
                         <td>Intermédiaire</td>
                         <td>50</td>
                         <td>3(18)</td>
@@ -3564,81 +3871,81 @@
                     <tr>
                         <td>Nilaroy</td>
                         <td>3</td>
-                        <td>1 magique</td>
-                        <td>Légère</td>
+                        <td>1</td>
+                        <td>Légère, Magique</td>
                         <td>55</td>
                         <td>2(12)</td>
                         <td>90 membre/180 torse (630)</td>
                     </tr>
                     <tr>
-                        <td>Kusni</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>Vêtement</td>
-                        <td>60</td>
-                        <td>1(6)</td>
-                        <td>500 membre/ 1000 torse(3500)</td>
-                    </tr>
-                    <tr>
                         <td>Acier</td>
                         <td>4</td>
-                        <td/>
+                        <td>-</td>
                         <td>Intermédiaire</td>
                         <td>60</td>
                         <td>3(18)</td>
                         <td>75 membre/250 torse (525)</td>
                     </tr>
                     <tr>
-                        <td>Shoren</td>
+                        <td>Gnistar</td>
                         <td>4</td>
-                        <td>3 froid</td>
-                        <td>Intermédiaire</td>
+                        <td>1</td>
+                        <td>Légère, Magique</td>
+                        <td>65</td>
+                        <td>1(6)</td>
+                        <td>300 membre/600 torse (2100)</td>
+                    </tr>
+                    <tr>
+                        <td>Kusni</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>Légère, Magique</td>
+                        <td>60</td>
+                        <td>1(6)</td>
+                        <td>500 membre/ 1000 torse(3500)</td>
+                    </tr>
+                    <tr>
+                        <td>Shoren</td>
+                        <td>5</td>
+                        <td>5 froid</td>
+                        <td>Intermédiaire, Magique</td>
                         <td>65</td>
                         <td>3(18)</td>
                         <td>150 membre/300 torse (1050)</td>
                     </tr>
                     <tr>
                         <td>Orichalque</td>
-                        <td>4</td>
+                        <td>5</td>
                         <td>2</td>
-                        <td>Intermédiaire</td>
+                        <td>Intermédiaire, Magique</td>
                         <td>65</td>
                         <td>3(18)</td>
                         <td>250 membre/500 torse (1750)</td>
                     </tr>
                     <tr>
-                        <td>Gnistar</td>
-                        <td>4</td>
-                        <td>1</td>
-                        <td>Légère</td>
-                        <td>70</td>
-                        <td>1(6)</td>
-                        <td>300 membre/600 torse (2100)</td>
-                    </tr>
-                    <tr>
                         <td>Lakma</td>
                         <td>5</td>
-                        <td>3 foudre</td>
-                        <td>Légère</td>
-                        <td>75</td>
+                        <td>5 foudre</td>
+                        <td>Légère, Magique</td>
+                        <td>70</td>
                         <td>1(6)</td>
                         <td>500 membre/ 1000 torse(3500)</td>
                     </tr>
                     <tr>
                         <td>Virgonium</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td>Lourde</td>
-                        <td>80</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>Lourde, Magique</td>
+                        <td>75</td>
                         <td>5(30)</td>
                         <td>600 membre/ 1200 torse(4200)</td>
                     </tr>
                     <tr>
                         <td>Skymma</td>
-                        <td>6</td>
-                        <td>3 feu</td>
-                        <td>Lourde</td>
-                        <td>85</td>
+                        <td>7</td>
+                        <td>7 feu</td>
+                        <td>Lourde, Magique</td>
+                        <td>80</td>
                         <td>5(30)</td>
                         <td>500 membre/ 1000 torse(3500)</td>
                     </tr>
@@ -3651,7 +3958,7 @@
                         <th>Matériau</th>
                         <th>PR</th>
                         <th>PR magique</th>
-                        <th>Catégorie</th>
+                        <th>Catégorie et Propriétés</th>
                         <th>Rupture</th>
                         <th>ENC/pièce<br/>(armure complète)</th>
                         <th>Prix</th>
@@ -3667,8 +3974,8 @@
                     </tr>
                     <tr>
                         <td>Bois</td>
-                        <td>2</td>
-                        <td/>
+                        <td>3</td>
+                        <td>-</td>
                         <td>Intermédiaire</td>
                         <td>35</td>
                         <td>4(24)</td>
@@ -3694,8 +4001,8 @@
                     </tr>
                     <tr>
                         <td>Os</td>
-                        <td>3</td>
-                        <td/>
+                        <td>4</td>
+                        <td>-</td>
                         <td>Intermédiaire</td>
                         <td>40</td>
                         <td>4(24)</td>
@@ -3703,8 +4010,8 @@
                     </tr>
                     <tr>
                         <td>Fer</td>
-                        <td>4</td>
-                        <td/>
+                        <td>5</td>
+                        <td>-</td>
                         <td>Lourde</td>
                         <td>55</td>
                         <td>4(24)</td>
@@ -3712,88 +4019,88 @@
                     </tr>
                     <tr>
                         <td>Nilaroy</td>
-                        <td>4</td>
+                        <td>5</td>
                         <td>2</td>
-                        <td>Intermédiaire</td>
+                        <td>Intermédiaire, Magique</td>
                         <td>60</td>
                         <td>3(18)</td>
                         <td>180 membre/360 torse (1260)</td>
                     </tr>
                     <tr>
                         <td>Kusni</td>
-                        <td>4</td>
-                        <td>3</td>
-                        <td>Légère</td>
+                        <td>5</td>
+                        <td>8</td>
+                        <td>Intermédiaire, Magique</td>
                         <td>65</td>
                         <td>2(12)</td>
                         <td>750 membre/ 1500 torse(5250)</td>
                     </tr>
                     <tr>
                         <td>Acier</td>
-                        <td>5</td>
-                        <td/>
+                        <td>6</td>
+                        <td>-</td>
                         <td>Lourde</td>
                         <td>65</td>
                         <td>4(24)</td>
                         <td>150 membre/300 torse (1050)</td>
                     </tr>
                     <tr>
+                        <td>Gnistar</td>
+                        <td>6</td>
+                        <td>2</td>
+                        <td>Intermédiaire, Magique</td>
+                        <td>70</td>
+                        <td>2(12)</td>
+                        <td>500 membre/1000 torse (3500)</td>
+                    </tr>
+                    <tr>
                         <td>Shoren</td>
-                        <td>5</td>
-                        <td>4 froid</td>
-                        <td>Lourde</td>
+                        <td>7</td>
+                        <td>7 froid</td>
+                        <td>Lourde, Magique</td>
                         <td>70</td>
                         <td>4(24)</td>
                         <td>250 membre/500 torse (1750)</td>
                     </tr>
                     <tr>
                         <td>Orichalque</td>
-                        <td>5</td>
+                        <td>7</td>
                         <td>3</td>
-                        <td>Lourde</td>
+                        <td>Lourde, Magique</td>
                         <td>70</td>
                         <td>4(24)</td>
                         <td>400 membre/800 torse (2800)</td>
                     </tr>
                     <tr>
-                        <td>Gnistar</td>
-                        <td>5</td>
-                        <td>2</td>
-                        <td>Intermédiaire</td>
-                        <td>75</td>
-                        <td>2(12)</td>
-                        <td>500 membre/1000 torse (3500)</td>
-                    </tr>
-                    <tr>
                         <td>Lakma</td>
-                        <td>6</td>
-                        <td>4 foudre</td>
-                        <td>Intermédiaire</td>
-                        <td>80</td>
+                        <td>7</td>
+                        <td>7 foudre</td>
+                        <td>Intermédiaire, Magique</td>
+                        <td>75</td>
                         <td>2(12)</td>
                         <td>750 membre/ 1800 torse(5250)</td>
                     </tr>
                     <tr>
                         <td>Virgonium</td>
-                        <td>6</td>
-                        <td>6 </td>
-                        <td>Super-Lourde</td>
-                        <td>85</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>Super-Lourde, Magique</td>
+                        <td>80</td>
                         <td>6(36)</td>
                         <td>900 membre/ 1800 torse(6300)</td>
                     </tr>
                     <tr>
                         <td>Skymma</td>
-                        <td>8</td>
-                        <td>4 feu</td>
-                        <td>Super-Lourde</td>
-                        <td>90</td>
+                        <td>9</td>
+                        <td>9 feu</td>
+                        <td>Super-Lourde, Magique</td>
+                        <td>85</td>
                         <td>6(36)</td>
                         <td>750 membre/ 1800 torse(5250)</td>
                     </tr>
                     </tbody>
                 </table>
-                <h3 onclick="hideContent(this)" id="mod_armures">Personalisation des armures</h3>
+                <h3 onclick="hideContent(this)" id="mod_armures_boucliers">Personalisation des armures et des boucliers</h3>
                 <div>
                     <p>Il est possible de modifier une armure pour qu'elle s'adapte au mieux possible à son utilisateur. Ces modifications peuvent être faite à la main si l'on s'y connaît un peu, mais le résultat risque d'être de piètre qualité, il vaut mieux se referer à un véritable artisan pour ce genre de travaux.</p>
                     <table class="table_horizontal">
@@ -3837,7 +4144,7 @@
                         <tr>
                             <td>Sertissage de runes</td>
                             <td>L'armure est sertie de runes de karnyx, cela procure des capacités magiques à l'armure.</td>
-                            <td>L'armure obtient 1 de PR magique et protège désormais des attaques des êtres éthérés.</td>
+                            <td>L'armure obtient 1 de PR magique et obtient la propriété "Magique".</td>
                             <td>25% du prix de l'armure</td>
                         </tr>
                         </tbody>
@@ -3845,10 +4152,10 @@
                 </div>
                 <h3 id="boucliers" onclick="hideContent(this)">Boucliers</h3>
                 <div>
-                    <p>Les boucliers sont utilisées pour se prémunir de toute sorte d'attaques. Pusqu'ils sont à mi-chemin entre les armes et les armures, ils suivent des règles spéciales.</p>
+                    <p>Les boucliers sont utilisées pour se prémunir de toute sorte d'attaques. Puisqu'ils sont à mi-chemin entre les armes et les armures, ils suivent des règles spéciales.</p>
                     <p><span class="big_underline">Résistance de Bouclier :</span>Au lieu de posséder une valeur de Protection, les boucliers possède une résistance notée RB, qui prend en compte la solidité du bouclier et la surface qu'il couvre.</p>
                     <p>Si lors d'un blocage réussit, les dégâts subis excèdent la RB, le défenseur subit l'intégralité des dégâts sur le bras qui tient le bouclier sauf s'il choisit de dépenser 2 PE pour bloquer l'attaque dans sa totalité. Le porteur de bouclier est ainsi capable de protéger son intégrité physique mais se fatiguer rapidement s'il ne fait que des blocages totaux.</p>
-                    <p>Les bouclier ci-dessous possèdent une variante nommée Grands Bouclier. Faire un blocage avec un grand bouclier devient une tâche Simple(+10) mais un tel bouclier est d'une catégorie de poids supérieure, ralenti son porteur d'un mètre, possède un encombrement d'un point supérieur et coûte 25% plus cher.</p>
+                    <p>Les bouclier ci-dessous possèdent une variante nommée Grands Bouclier. Faire un blocage avec un grand bouclier devient une tâche Simple(+10) mais un tel bouclier est d'une catégorie de poids supérieure, possède un encombrement d'un point supérieur et coûte 25% plus cher.</p>
                     <p class="caption" id="table_bouclier">Bouclier</p>
                     <table class="table_horizontal">
                     <tbody>
@@ -3862,7 +4169,7 @@
                     </tr>
                     <tr>
                         <td>Peau</td>
-                        <td>5</td>
+                        <td>6</td>
                         <td>3 (4 glace)</td>
                         <td>Léger</td>
                         <td>2</td>
@@ -3870,7 +4177,7 @@
                     </tr>
                     <tr>
                         <td>Bois</td>
-                        <td>5</td>
+                        <td>6</td>
                         <td>3</td>
                         <td>Léger</td>
                         <td>2</td>
@@ -3878,97 +4185,97 @@
                     </tr>
                     <tr>
                         <td>Os</td>
-                        <td>5</td>
-                        <td>3</td>
+                        <td>7</td>
+                        <td>4</td>
                         <td>Léger</td>
                         <td>2</td>
                         <td>30</td>
                     </tr>
                     <tr>
+                        <td>Chitine</td>
+                        <td>7</td>
+                        <td>4 (5 foudre)</td>
+                        <td>-</td>
+                        <td>1</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
                         <td>Cuir</td>
-                        <td>6</td>
-                        <td>3 (4 feu)</td>
+                        <td>8</td>
+                        <td>4 (5 feu)</td>
                         <td>Léger</td>
                         <td>2</td>
                         <td>45</td>
                     </tr>
                     <tr>
-                        <td>Chitine</td>
-                        <td>6</td>
-                        <td>3 (4 foudre)</td>
-                        <td>Léger</td>
-                        <td>1</td>
-                        <td>60</td>
-                    </tr>
-                    <tr>
-                        <td>Nilaroy</td>
-                        <td>6</td>
-                        <td>5</td>
-                        <td>Léger</td>
-                        <td>1</td>
-                        <td>130</td>
-                    </tr>
-                    <tr>
                         <td>Fer</td>
-                        <td>7</td>
-                        <td>4</td>
+                        <td>9</td>
+                        <td>5</td>
                         <td>Intermédiaire</td>
                         <td>3</td>
                         <td>100</td>
                     </tr>
                     <tr>
-                        <td>Kusni</td>
-                        <td>7</td>
+                        <td>Nilaroy</td>
+                        <td>9</td>
                         <td>6</td>
-                        <td>Léger</td>
+                        <td>Léger, Magique</td>
                         <td>1</td>
-                        <td>600</td>
+                        <td>130</td>
                     </tr>
                     <tr>
                         <td>Acier</td>
-                        <td>8</td>
-                        <td>4</td>
+                        <td>10</td>
+                        <td>5</td>
                         <td>Intermédiaire</td>
                         <td>3</td>
                         <td>150</td>
                     </tr>
                     <tr>
                         <td>Gnistar</td>
-                        <td>8</td>
-                        <td>5</td>
-                        <td>Léger</td>
+                        <td>10</td>
+                        <td>6</td>
+                        <td>Léger, Magique</td>
                         <td>1</td>
                         <td>400</td>
                     </tr>
                     <tr>
+                        <td>Shoren</td>
+                        <td>11</td>
+                        <td>6 (11 froid)</td>
+                        <td>Intermédiaire, Magique</td>
+                        <td>3</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>Orichalque</td>
+                        <td>11</td>
+                        <td>7</td>
+                        <td>Intermédiaire, Magique</td>
+                        <td>3</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
                         <td>Lakma</td>
-                        <td>8</td>
-                        <td>4 (6 foudre)</td>
+                        <td>11</td>
+                        <td>8 (11 foudre)</td>
                         <td>Léger</td>
                         <td>1</td>
                         <td>700</td>
                     </tr>
                     <tr>
-                        <td>Shoren</td>
-                        <td>8</td>
-                        <td>4 (6 froid)</td>
-                        <td>Intermédiaire</td>
-                        <td>3</td>
-                        <td>250</td>
-                    </tr>
-                    <tr>
                         <td>Virgonium</td>
-                        <td>9</td>
-                        <td>9</td>
-                        <td>Lourde</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>Lourde, Magique</td>
                         <td>4</td>
                         <td>800</td>
                     </tr>
                     <tr>
                         <td>Skymma</td>
-                        <td>10</td>
-                        <td>5 (8 feu)</td>
-                        <td>Lourde</td>
+                        <td>13</td>
+                        <td>9 (13 feu)</td>
+                        <td>Lourde, Magique</td>
                         <td>4</td>
                         <td>700</td>
                     </tr>
