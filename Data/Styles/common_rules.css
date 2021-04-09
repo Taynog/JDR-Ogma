@@ -146,6 +146,10 @@ a:hover {
     alignment: center;
 }
 
+.boxed {
+    border: 1px dashed black ;
+}
+
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* 100% Full-height */

@@ -143,18 +143,28 @@
     </div>
     <hr/>
     <div align="center">
-        <h3>Quoi de neuf dans la version 2.1 ?</h3>
+        <h3>Quoi de neuf dans la version 2.2 ?</h3>
         <ul style="list-style: none">
-            <li>Corrections de quelques problèmes dans toutes les catégories dans la <a href="Data/Content/Rules/Rules.xhtml#creation_perso">création de personnage</a>, la <a href="Data/Content/Rules/Rules.xhtml#Magie">magie</a>, le <a href="Data/Content/Rules/Rules.xhtml#Combat">combat</a> et l'<a href="Data/Content/Rules/Rules.xhtml#equipement">équipement</a>.</li>
+            <li>Allègement de certaines règles, suppression des points d'actions(PA), prix de l'équipement revisité</li>
+            <li>Rework du système de capacité de port notamment au niveau des contenants et du poids des objets</li>
+            <li>Ajout de la mécanique de points d'expérience dans la partie <a href="Data/Content/Rules/Rules.xhtml#progression_perso">Progression</a>.</li>
         </ul>
+        <h3 onclick="hideContent(this)">Anciens changelogs</h3>
+        <div class="hidden">
+            <h3 onclick="hideContent(this)">Version 2.1</h3>
+            <ul style="list-style: none">
+                <li>Corrections de quelques problèmes dans toutes les catégories dans la <a href="Data/Content/Rules/Rules.xhtml#creation_perso">création de personnage</a>, la <a href="Data/Content/Rules/Rules.xhtml#Magie">magie</a>, le <a href="Data/Content/Rules/Rules.xhtml#Combat">combat</a> et l'<a href="Data/Content/Rules/Rules.xhtml#equipement">équipement</a>.</li>
+            </ul>
+        </div>
     </div>
+
     <hr/>
     <div align="right">
         <h3>Merci aux collaborateurs et aux testeurs : Ollierovsky, Tabernak, Okami, Tsuyuky et Crodragon</h3>
         <h2>Création Originale par Taynog</h2>
         <p>
             <a href="" id="mail">
-                <button onclick="sendMail()">Me contacter</button>
+                <button id="contact" onclick="sendMail()">Me contacter</button>
             </a>
         </p>
     </div>

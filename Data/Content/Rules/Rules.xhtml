@@ -121,6 +121,9 @@
     <button onclick="toggleNav()" class="openbtn">MENU</button>
 
     <div id="rules">
+        <p>Bienvenue sur la page des règles du jeu de rôle Ogma. Ce projet est encore en cours de construction et de nombreuses choses peuvent encore subir des modifications ou tout simplement disparaître.</p>
+        <p>Les règles présentées ci-dessous ne sont pas la loi absolue, si il vous prend l'envie de les modifier pour qu'elle vous corresponde mieux à vous et votre table, faites donc. Si vous avez des propositions ou des retours à faire, n'hésitez pas à <a href="../../../index.xhtml#contact">me contacter</a>.</p>
+        <p>Certaines règles sont volontairement indiquées comme optionnelles et sont représentées ainsi : <span class="boxed">Règle optionnelle</span> </p>
         <h1 id="resolution_action" onclick="hideContent(this)">Résolution des actions</h1>
         <div>
             <h3 id="des_utilises" onclick="hideContent(this)">Dés utilisés</h3>
@@ -160,15 +163,9 @@
                 <p>Exemple : Sur un test réussi à 63 ou moins, on obtient 45, le degré de réussite est égal à 6-4=2. Sur un autre test réussi à 57 ou moins, on obtient 53, le degré de réussite vaut 0, on calcule donc la marge de réussite 7-3=4.</p>
             </div>
 
-            <h3 id="jet_critique" onclick="hideContent(this)">Jet critique</h3>
-            <div>
-                <p>Un résultat exceptionnellement haut ou bas est considéré comme critique. Une réussite critique permet souvent d'accomplir plus que la tâche prévue ou de l'accomplir de façon remarquable. Un échec critique au contraire apporte souvent des complications.</p>
-                <p>Un résultat entre 1 et 5 est toujours un succès critique tout comme un résultat entre 96 et 100 est toujours un échec critique.</p>
-            </div>
-
             <h3 id="cran_des" onclick="hideContent(this)">Cran des dés</h3>
             <div>
-                <p>Parfois, les conditions sont si bonnes que le MJ peut vous permettre d'augmenter votre dé d'un cran ou parfois si mauvaise qu'il diminue d'un cran. Cela concerne seulement les jets de dégâts ou d'initiative.</p>
+                <p>Parfois, les conditions sont si bonnes que le MJ peut vous permettre d'augmenter votre dé d'un cran ou parfois si mauvaises qu'il diminue d'un cran. Cela concerne seulement les jets de dégâts ou d'initiative.</p>
                 <p>Les crans de dés sont ainsi représenté : 1d2 &#8594; 1d4 &#8594; 1d6 &#8594; 1d8 &#8594; 1d10 &#8594; 1d12 &#8594; 1d12+1d2 &#8594; 1d12+1d4 &#8594; 1d12+1d6 &#8594; 1d12+1d8 &#8594; 1d12+1d10 &#8594; 2d12 &#8594; 2d12+1d2 et ainsi de suite</p>
             </div>
 
@@ -298,7 +295,7 @@
 
             <h2 id="Caracteristiques" onclick="hideContent(this)">Caractéristiques</h2>
             <div>
-                <p>Après avoir choisi une origine pour votre personnage, il est temps de définir définir ses caractéristiques de départ. Pour ce faire, suivez la colonne correspondante à votre origine et ajoutez les dés équivalent au niveau d'expérience de votre personnage. Si jamais les dés ne vous sont pas favorables, vous avez la possibilité de votre résultat par la valeur moyenne du lancer de dés : pour 2d10, la valeur moyenne est de 11. Votre MJ peut vous accordez cette action une ou plusieurs fois si vous êtes vraiment maudits par Tychi. Vous devez lancer 8 fois les dés indiqués dans votre niveau d'expérience et vous ajoutez chacun des résultats dans la caractéristique de votre choix.</p>
+                <p>Après avoir choisi une origine pour votre personnage, il est temps de définir définir ses caractéristiques de départ. Pour ce faire, suivez la colonne correspondante à votre origine et ajoutez les dés équivalent au niveau d'expérience de votre personnage. Si jamais les dés ne vous sont pas favorables, vous avez la possibilité de votre résultat par la valeur moyenne du lancer de dés. Votre MJ peut vous accordez cette action une ou plusieurs fois si vous êtes vraiment maudits par Tychi. Vous devez lancer 8 fois les dés indiqués dans votre niveau d'expérience et vous ajoutez chacun des résultats dans la caractéristique de votre choix.</p>
                 <p>Voici une description des différentes caractéristiques, vous permettant de mieux appréhendez le tableau ci dessous :</p>
                 <ol type="I" >
                     <li>Physiques
@@ -417,7 +414,7 @@
                         <td>25</td>
                         <td class="bonus">40</td>
                         <td>25</td>
-                        <td class="malus">25</td>
+                        <td class="malus">15</td>
                         <td>25</td>
                         <td>25</td>
                         <td>25</td>
@@ -449,7 +446,7 @@
                         <td>25</td>
                         <td>25</td>
                         <td>25</td>
-                        <td class="bonus">40</td>
+                        <td class="bonus">35</td>
                         <td>25</td>
                         <td class="bonus">30</td>
                         <td class="malus">20</td>
@@ -491,10 +488,15 @@
                         <th>3d8</th>
                         <th>3d10</th>
                     </tr>
+                    <tr>
+                        <th>Résultat moyen</th>
+                        <th>9</th>
+                        <th>11</th>
+                        <th>13</th>
+                        <th>16</th>
+                    </tr>
                     </tbody>
                 </table>
-                <p>Ces caractéristiques pourront progresser en cours de campagnes si votre personnage s'entraîne intensément ou accomplit des actions épiques. Lorsque cela se produit, il obtiendra un certain nombre de marques de progression dans la caractéristique relative.</p>
-                <p>Le nombre de marques de progression nécessaires à l'amélioration d'une caractéristique équivaut au chiffre des dizaines de la caractéristique (sans prise en compte des modificateurs).</p>
             </div>
 
             <h2 id="Attributs" onclick="hideContent(this)">Attributs</h2>
@@ -505,8 +507,8 @@
                     <p>Le bonus de caractéristique est utilisé dans certaines situations où le score total de la caractéristique est trop grand. Il équivaut au chiffre des dizaines de la caractéristique. On y fait référence ainsi : un "B" majuscule suivi d'un "d" minuscule suivi du diminutif de la caractéristique . BdFor pour la Force, BdDex pour la Dextérité, BdAgi pour l'Agilité, BdVig pour la Vigueur, BdInt pour l'Intelligence, BdVol pour la Volonté, BdPer pour la Perception et BdElo pour l'éloquence.</p>
                     <p>La liste ci-dessous n'est pas exhaustive mais donne des exemples des utilisations des bonus de caractéristiques.</p>
                     <ul>
-                        <li><span class="big_underline">Effets du BdFor :</span>Augmente les dégâts Écrasants et Fendants, détermine la capacité de port.</li>
-                        <li><span class="big_underline">Effets du BdDex :</span>Augmente les dégâts Perforants, augmente la portée des armes à distance de (BdDex*10)%.</li>
+                        <li><span class="big_underline">Effets du BdFor :</span>Détermine la capacité de port et la résistance à la douleur.</li>
+                        <li><span class="big_underline">Effets du BdDex :</span>Augmente la portée des armes à distance de (BdDex*10)%.</li>
                         <li><span class="big_underline">Effets du BdAgi :</span>Détermine le bonus à l'initiative.</li>
                         <li><span class="big_underline">Effets du BdVig :</span>Détermine l'endurance max et la capacité de port.</li>
                         <li><span class="big_underline">Effets du BdInt :</span>Détermine la réduction du coût des sorts.</li>
@@ -522,11 +524,10 @@
                     <ul>
                         <li><span class="big_underline">Exploit physique (1 PE dépensé avant le test) :</span>Avantage pour la prochaine épreuve physique (sauf Style de Combat).</li>
                         <li><span class="big_underline">Sprint (1 PE dépensé avant le mouvement) :</span>Double la vitesse de déplacement du personnage pour ce tour.</li>
-                        <li><span class="big_underline">Rechargement rapide (1 PE) :</span>Diminue de 1 le coût en PA du rechargement de l'arme, le coût peut être réduit à 0 si l'arme le permet, dans ce cas l'action ne coûte aucun PA.</li>
+                        <li><span class="big_underline">Rechargement rapide (1 PE) :</span>Diminue de 1 le nombre d'action nécessaire au rechargement de l'arme, le coût peut être réduit à 0 si l'arme le permet.</li>
                         <li><span class="big_underline">Blocage total (1 PE dépensé après un blocage incomplet) :</span>Permet d'annuler les dégâts d'un coup dépassant la RB de son bouclier.</li>
-                        <li><span class="big_underline">Attaque puissante (1-3 PE dépensé(s) avant le jet de dégâts) :</span>Ajoute le double du nombre de PE dépensés au jet de dégâts d'une attaque de mêlée.</li>
-                        <li><span class="big_underline">Tir parfait (1-3 PE dépensé(s) avant le jet de dégâts) :</span>Ajoute le double du nombre de PE dépensés au jet de dégâts d'une attaque à distance.</li>
-                        <li><span class="big_underline">Action héroïque (1 PE) :</span>Récupère un PA pour ce tour</li>
+                        <li><span class="big_underline">Attaque puissante/en finesse (1 PE dépensé avant le jet de dégâts) :</span>Ajoute le BdFor/BdDex de l'utilisateur au jet de dégâts d'une attaque de mêlée.</li>
+                        <li><span class="big_underline">Tir parfait (1 PE dépensé avant le jet de dégâts) :</span>Ajoute le BdDex de l'utilisateur au jet de dégâts d'une attaque à distance.</li>
                     </ul>
                     <p>L'endurance se régénère complètement après un repos long. Si le personnage effectue un repos court, il récupère 1 PE ou supprime un niveau de fatigue.</p>
                     <p>Un personnage peut dépenser ou perdre des PE même si il ne lui en reste aucun, à chaque fois que cela arrive il subit un niveau de fatigue. Le personnage peut encaisser plusieurs niveaux de fatigue avec différents effets avant de perdre connaissance.</p>
@@ -638,6 +639,13 @@
                     <p>Le Bonus à l'Initiative est utilisé lors du jet d'initiative au début d'un combat, il est équivalent à : BdIni = BdAgi+BdInt+BdPer.</p>
                 </div>
 
+                <div class="boxed">
+                    <h3 id="resistance_douleur" onclick="hideContent(this)">Résistance à la douleur (RD)</h3>
+                    <div>
+                        <p>La résistance à la douleur est le seuil de dégâts à partir duquel le personnage reçoit des blessures durables (Cf <a href="Rules.xhtml#blessures">Blessures</a>), il est équivalent à : RD = BdFor+BdVig+BdVol..</p>
+                    </div>
+                </div>
+
                 <h3 id="taille" onclick="hideContent(this)">Taille</h3>
                 <div>
                     <p>La catégorie de taille de votre personnage dépend de son origine :</p>
@@ -658,38 +666,57 @@
 
             <h2 id="Competences" onclick="hideContent(this)">Compétences</h2>
             <div>
-                <p>Maintenant qu'on connaît les aptitudes physiques et mentales de votre personnage, attaquons nous à ce qu'il sait faire, c'est à dire quelles sont ses compétences ? Un personnage commence un certain nombre de points de compétences selon son niveau d'expérience, mais votre MJ peut très bien décider d'en attribuer plus ou moins si son scénario l'exige. Il revient à vous de choisir dans quelle compétence dépenser ces PC, sachant qu'un palier coûte 10PC et qu'une spécialisation en coûte 5. <i>Note aux MJs : Aucune limite n'est imposé sur le palier maximal de départ mais soyez attentifs à ne pas laisser un joueur sensé incarné un personnage débutant commencer l'aventure avec un compétence au palier d'Expert sans une bonne explication.</i></p>
+                <p>Maintenant qu'on connaît les aptitudes physiques et mentales de votre personnage, attaquons nous à ce qu'il sait faire, c'est à dire quelles sont ses compétences ? Un personnage commence un certain nombre de compétences selon son niveau d'expérience, mais votre MJ peut très bien décider d'en attribuer plus ou moins si son scénario l'exige.</p>
                 <table class="table_horizontal">
                     <tbody>
                     <tr>
-                        <th>Expérience du personnage</th>
-                        <th>Points de compétences de départ</th>
+                        <th rowspan="2">Expérience du personnage</th>
+                        <th colspan="6">Paliers de compétence de départ</th>
+                    </tr>
+                    <tr>
+                        <th>Novice</th>
+                        <th>Apprenti</th>
+                        <th>Adepte</th>
+                        <th>Expert</th>
+                        <th>Maître</th>
                     </tr>
                     <tr>
                         <th>Débutant</th>
-                        <td>35</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <th>Aventurier</th>
-                        <td>75</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>-</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <th>Vétéran</th>
-                        <td>125</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <th>Héros</th>
-                        <td>175</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">Les compétences d'origines ne puisent pas dans cette réserve de PC mais il est possible d'en dépenser pour atteindre un meilleur palier.</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>1</td>
                     </tr>
                     </tbody>
                 </table>
                 <p>La caractéristique indiquée sur la compétence est celle utilisée pour les tests liés à cette compétence. Si plusieurs caractéristiques sont indiqués, vous êtes libres de choisir laquelle utiliser pour maximiser vos chances de réussite. Il est toutefois possible que le MJ vous impose la caractéristique à utiliser si les conditions du test s'y prêtent.</p>
                 <p>Les compétences possèdent plusieurs paliers de maîtrise, chaque palier représentant l'expérience que possède votre personnage dans cette compétence. Un personnage ne possédant d'expérience dans une compétence peut tenter d'effectuer des actions relatives à la compétences mais il peut subir des malus selon la compétence concernée.</p>
-                <p>Pour devenir Novice dans une nouvelle compétence il sera nécessaire de s’entraîner, que ce soit auprès d’une personne compétente ou alors en pratiquant le domaine régi par la compétence jusqu'à obtenir au moins 10 PC.</p>
-                <p>Un personnage peut se spécialiser dans un domaine particulier d'une compétence et ainsi effectuer les épreuves de ce domaine avec <a href="Rules.xhtml#avantage">avantage</a>. Un personnage ne peut bénéficier de plus d'une spécialisation à la fois lors d'une épreuve mais peut posséder plusieurs spécialisation dans une même compétence. Un spécialisation coûte 5 points de compétence et nécessite d'avoir atteint le palier d'Apprenti. Des exemples de spécialisations sont donnés dans la liste ci-dessous mais les joueurs peuvent tout à fait choisir leur propre spécialisation et en discuter avec le MJ.</p>
+                <p>Un personnage peut se spécialiser dans un domaine particulier d'une compétence et ainsi inverser le résultat de son jet de dé si cela lui permet de réussir. Un personnage ne peut bénéficier de plus d'une spécialisation à la fois lors d'une épreuve mais peut posséder plusieurs spécialisation dans une même compétence. Un spécialisation coûte 200 points d'expérience et nécessite d'avoir atteint le palier d'Apprenti. Des exemples de spécialisations sont donnés dans la liste ci-dessous mais les joueurs peuvent tout à fait choisir leur propre spécialisation et en discuter avec le MJ.</p>
                 <p>Les paliers sont :</p>
                 <ul>
                     <li><span class="big_underline">Novice :</span>Le personnage commence à saisir l'ampleur des choses qu'il lui reste à apprendre dans ce domaine, mais à déjà les bases. (+10)</li>
@@ -749,6 +776,13 @@
                         <td>Imitation<br/>Baratin</td>
                         <td>La compétence bluff mesure l'habilité et la crédibilité du personnage lors d'un mensonge.</td>
                         <td>Se faire passer pour quelqu'un d'autre<br/>Mentir à quelqu'un</td>
+                    </tr>
+                    <tr id="calme">
+                        <th>Calme</th>
+                        <td>Volonté</td>
+                        <td>Intrépide<br/>Force Mentale</td>
+                        <td>La compétence calme permet de conserver ses capacités dans des situations stressantes</td>
+                        <td>Ne pas fuir de terreur<br/>Contrecarrer un attaque mentale</td>
                     </tr>
                     <tr id="conjuration">
                         <th>Conjuration</th>
@@ -813,6 +847,13 @@
                         <td>Cette école de magie se concentre sur la perception de la réalité et permet de jouer avec l'ombre et la lumière.</td>
                         <td>Calmer une cible<br/>Créer un mirage<br/>Devenir invisible</td>
                     </tr>
+                    <tr id="ingenierie">
+                        <th>Ingénierie</th>
+                        <td>Dextérité<br/>Intelligence</td>
+                        <td>Analyse<br/>Fabrication<br/>Siège</td>
+                        <td>La compétence d'ingénierie mesure l'aptitude du personnage à utiliser, créer et modifier divers machines et mécanismes.</td>
+                        <td>Utiliser un engin de siège<br/>Construire une machine<br/>Étudier le fonctionnement d'un mécanisme</td>
+                    </tr>
                     <tr id="investigation">
                         <th>Investigation</th>
                         <td>Intelligence<br/>Perception</td>
@@ -833,13 +874,6 @@
                         <td>Mathématiques<br/>Jeu<br/>Énigme</td>
                         <td>La logique détermine la capacité qu'à un personnage à résoudre des problèmes, analyser rapidement des données de façon rationnelle.</td>
                         <td>Faire des calculs mathématiques<br/>Trouver la solution d'une énigme<br/>Améliorer ses chances au jeu</td>
-                    </tr>
-                    <tr id="ingenierie">
-                        <th>Ingénierie</th>
-                        <td>Dextérité<br/>Intelligence</td>
-                        <td>Analyse<br/>Fabrication<br/>Siège</td>
-                        <td>La compétence d'ingénierie mesure l'aptitude du personnage à utiliser, créer et modifier divers machines et mécanismes.</td>
-                        <td>Utiliser un engin de siège<br/>Construire une machine<br/>Étudier le fonctionnement d'un mécanisme</td>
                     </tr>
                     <tr id="medecine">
                         <th>Médecine</th>
@@ -875,6 +909,13 @@
                         <td>Intimidation<br/>Commandement<br/>Inspiration</td>
                         <td>La présence détermine à quel point vous pouvez être impressionnant si vous le souhaitez.</td>
                         <td>Rallier une foule pendant un discours<br/>Faire tenir une ligne de front en beuglant<br/>Intimider quelqu'un</td>
+                    </tr>
+                    <tr id="resistance">
+                        <th>Résistance</th>
+                        <td>Vigueur</td>
+                        <td>Anticorps<br/>Anti-poison</td>
+                        <td>La résistance détermine à quel point vous est endurant face aux assauts que subissent votre corps.</td>
+                        <td>Résister au poison<br/>Rester conscient après un coup dur</td>
                     </tr>
                     <tr id="roublardise">
                         <th>Roublardise</th>
@@ -913,9 +954,7 @@
                     </tr>
                     </tbody>
                 </table>
-                <p>La progression des compétences se fait d'une manière similaire à celle des caractéristiques : lorsque le personnage utilise sa compétence, il peut obtenir des points de compétence(PC) pour cette compétence. L'obtention de PC se fait en fonction de la tâche accomplie et si elle est en accord avec le niveau d'expertise du personnage, un expert ne progresse pas en effectuant des tâches simples, tout comme un novice ne peut s'améliorer s'il ne tente que des actions impossibles.</p>
-                <p>Lors d'un <a href="Rules.xhtml#repos_long">repos long</a>, si le personnage possède 10 points de compétence, il peut les "consommer" pour passer au palier suivant. Les PC sont exclusifs à la compétence ayant permis leurs acquisition, ils ne peuvent être dépensés pour une autre compétence.</p>
-            </div>
+             </div>
 
             <h2 id="traits_perso" onclick="hideContent(this)">Traits</h2>
             <div>
@@ -924,14 +963,19 @@
                 <p>Les traits de personnages sont un genre de sous-compétence permettant d'affiner la personalisation et le style de jeu du personnage selon les désirs du joueurs</p>
                 <p>Pour éviter que les traits ne soient trop puissants, il faut, comparativement à une compétence, soit que son champ d'application soit plus restraint c'est à dire qu'il est utilisé moins souvent qu'une compétence; soit que sa puissance soit moindre ou compensée par un malus.</p>
                 <p>Les traits de personnages peuvent apporter un bonus et/ou un malus lors de certaines situations, par exemple, un personnage mal-à-l'aise avec des humains de part sa nature bestiale, peut avoir un malus de 2 en éloquence lors d'interactions sociales avec des Severs, Azumas ou Tuskizis mais un bonus de 2 avec les origines bestiales.</p>
-                <p>Un personnage commence en général la partie avec 3 traits mais pourra en obtenir d'autres en cours de campagne si une action particulièrement épique ou notable est accompli par un personnage. Une héroïne survivant une aventure se déroulant dans une grotte infestée de scaratrok sans jamais se faire empoisonnée peut gagner le trait "Anticorps efficace" accordant une résistance mineure au dégâts de poison.</p>
+                <p>Un personnage commence en général la partie avec 3 traits au maximum mais pourra en obtenir d'autres en cours de campagne si une action particulièrement épique ou notable est accompli par un personnage. Une héroïne survivant une aventure se déroulant dans une grotte infestée de scaratrok sans jamais se faire empoisonnée peut gagner le trait "Anticorps efficace" accordant une résistance mineure au dégâts de poison.</p>
             </div>
 
             <h2 id="faveur_tychi" onclick="hideContent(this)">Faveurs de Tychi</h2>
             <div>
-                <p>Les faveurs de Tychi relatent à quel point votre personnage est chanceux et possède un destin particulier. Elles permettent d'éviter les blessures graves et de danser avec la mort.</p>
-                <p>Un personnage commence avec 1d4 faveurs de Tychi et ne peut en obtenir d'autres que s'il prouve qu'il est vraiment destinée à de grands projets en accomplissant des gestes épiques.</p>
-                <p>Comme expliqué plus tôt, les faveurs de Tychi permettent d'éviter la mort prématurée d'un personnage dans une certaine mesure. Si un personnage vient à se faire couper un membre suite à un jet de rupture raté ou autre, il peut utiliser une faveur pour ne pas perdre cette partie chérie de leur corps. Si un personnage atteint un nombre de points de vie négatif équivalent à sa valeur de vigueur, il peut se réveiller plusieurs jours plus tard, secouru par des autochtones l'ayant trouvé mourant au bord de la route s'il lui reste une faveur.</p>
+                <p>Les faveurs de Tychi relatent à quel point votre personnage est chanceux et possède un destin particulier. Elles permettent de jouer avec le destin, d'éviter les blessures graves et de danser avec la mort.</p>
+                <p>Un personnage commence avec 1d4 faveurs de Tychi et ne peut en obtenir d'autres que s'il prouve qu'il est vraiment destiné à de grands projets en accomplissant des gestes épiques.</p>
+                <p>Ces faveurs peuvent être utilisées de 2 façons différentes :</p>
+                <ul>
+                    <li>Éviter des conséquences dramatiques : si le personnage se retrouve dans une situation catastrophique dans laquelle il a de grandes chances de mourir, il peut dépenser une faveur pour s'en sortir d'une façon ou d'une autre.</li>
+                    <li>Choisir le résultat d'un lancer de dé : à n'importe quel moment, un joueur peut décider que ce jet de dé est d'une importance capitale pour son personnage, auquel cas il peut dépenser une faveur pour choisir le résultat de son jet.</li>
+                </ul>
+                <p>Comme annoncé plus tôt, les faveurs de Tychi permettent d'éviter la mort prématurée d'un personnage dans une certaine mesure. Si un personnage vient à se faire couper un membre suite à un jet de rupture raté ou autre, il peut utiliser une faveur pour ne pas perdre cette partie chérie de leur corps. Si un personnage atteint un nombre de points de vie négatif équivalent à sa valeur de vigueur, il peut se réveiller plusieurs jours plus tard, secouru par des autochtones l'ayant trouvé mourant au bord de la route s'il lui reste une faveur.</p>
                 <p>Ces faveurs ont leur limites et il revient au MJ de décider du sort des personnages y ayant recours, que ce soit sous la forme d'un sauvetage in extremis par un groupe tiers, par un réveil douloureux dans un petit village. Chaque situation peut faire varier le résultat de l'utilisation d'une faveur.</p>
             </div>
 
@@ -939,7 +983,7 @@
             <div>
                 <p>Le patrimoine monétaire d'un personnage au début de l'aventure est également tiré au dés selon son origine sociale.</p>
                 <p> Cet argent n'est pas utilisé pour acheter l'équipement de départ d'un personnage déjà expérimenté, on considère qu'un aventurier possède déjà un certain équipement d'un qualité équivalente à son niveau social.</p>
-                <p>Un personnage noble décidant le jour de ses 20 à l'aventure pourra s'offrir une bel arme et une armure, un pauvre partira avec un couteau de cuisine ou un bâton.</p>
+                <p>Un personnage noble décidant le jour de ses 20 à l'aventure pourra s'offrir une bel arme et une armure, un paysan partira avec un couteau de cuisine ou un bâton.</p>
                 <table class="table_horizontal">
                     <tbody>
                     <tr>
@@ -952,43 +996,96 @@
                         <th>Pièces de cuivre</th>
                     </tr>
                     <tr>
-                        <td>Noble/Riche</td>
+                        <td>Noble</td>
                         <td>5d8</td>
                         <td>3d10</td>
                         <td>1d10</td>
                     </tr>
                     <tr>
-                        <td>Bourgeois/Artisan</td>
+                        <td>Marchand</td>
                         <td>4d6</td>
                         <td>3d10</td>
                         <td>1d10</td>
                     </tr>
                     <tr>
-                        <td>Marchand</td>
+                        <td>Artisan</td>
                         <td>3d6</td>
                         <td>3d10</td>
                         <td>1d10</td>
                     </tr>
                     <tr>
-                        <td>Roturier</td>
+                        <td>Tenancier</td>
+                        <td>2d6</td>
+                        <td>3d10</td>
+                        <td>1d10</td>
+                    </tr>
+                    <tr>
+                        <td>Ouvrier</td>
                         <td>1d6</td>
                         <td>3d10</td>
                         <td>1d10</td>
                     </tr>
                     <tr>
-                        <td>Pauvre</td>
+                        <td>Paysan/Mineur</td>
                         <td/>
                         <td>3d10</td>
                         <td>1d10</td>
                     </tr>
                     <tr>
-                        <td>Sans-le-sou</td>
+                        <td>Mendiant</td>
                         <td/>
                         <td/>
                         <td>1d10</td>
                     </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <h2 id="progression_perso" onclick="hideContent(this)">Progression du personnage</h2>
+            <div>
+                <p>Votre personnage pourra progresser au fil de ses aventures si vous jouez sur une longue période avec lui. Votre MJ vous récompensera avec des points d'expérience(XP) pour les actions que vous avez menées. Vous pourrez dépenser ces points lors des pauses entres vos aventures pour améliorer vos caractéristiques et vos compétences.</p>
+                <table class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>Progression</th>
+                        <th>Coût en points d'XP</th>
+                    </tr>
+                    <tr>
+                        <td>Augmentation d'un point de Caractéristique</td>
+                        <td>Bonus de Caractéristique</td>
+                    </tr>
+                    <tr>
+                        <td>Rang Novice</td>
+                        <td>10 XP</td>
+                    </tr>
+                    <tr>
+                        <td>Rang Apprenti</td>
+                        <td>20 XP</td>
+                    </tr>
+                    <tr>
+                        <td>Rang Adepte</td>
+                        <td>30 XP</td>
+                    </tr>
+                    <tr>
+                        <td>Rang Expert</td>
+                        <td>40 XP</td>
+                    </tr>
+                    <tr>
+                        <td>Rang Maître</td>
+                        <td>50 XP</td>
+                    </tr>
+                    <tr>
+                        <td>Spécialisation de compétence</td>
+                        <td>15 XP</td>
+                    </tr>
+                    <tr>
+                        <td>Nouvel équipement pour Style de Combat</td>
+                        <td>5 XP</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>La façon dont vous dépensez ces points d'XP dépend de votre façon de faire dans votre table, vous pouvez vous restreindre à les dépenser entre chaque aventure ou choisir de les dépenser dès que vous en avez la possibilité. Il est également possible d'intégrer cette progression dans la narration en expliquant à votre table comment et grâce à quoi(ou qui) vous avez pu progresser de la sorte.</p>
+                <i>Note aux MJs : C'est à vous que revient la lourde de tâche de récompenser vos joueurs, vous pouvez distribuer les points d'XP de façon globale à tout le groupe à la fin de vos arcs narratifs ou de chaque session de jeu, de façon individuelle en fonction des exploits de vos joueurs voire un mélange de tout ça.<br/>En guise d'aide, comptez environ 10 points d'XP pour une session de 4 heures de jeu si vous aimez récompenser individuellement vos joueurs pour leur RP exemplaire par exemple. Cette quantité varie selon le contenu de la session bien entendu.</i>
             </div>
 
             <h2 id="rendre_vivant" onclick="hideContent(this)">Rendre votre personnage vivant</h2>
@@ -1016,8 +1113,7 @@
                         <li>Cheveux</li>
                         <li>Couleur des yeux</li>
                         <li>Forme du visage</li>
-                        <li>Signes de naissance</li>
-                        <li>Cicatrices</li>
+                        <li>Cicatrices, tatouages ou autres signes particuliers</li>
                     </ul>
                     <p>Toutes ces précisions sont optionnelles dans la description de votre personnage, mais peuvent renforcer l'implication que vous avez vis-à-vis de lui. Il vous faudra tout de même rester cohérent avec l'origine que vous avez choisi, un Steinn mesurant 1m80 ou un Sakha de 120kg ont assez peu de chance d'exister.</p>
                 </div>
@@ -1187,7 +1283,7 @@
                             <td>Aspect de l'ours</td>
                             <td>Maintien</td>
                             <td>3*SC</td>
-                            <td>La cibles obtiennent les capacités d'un ours pendant 1 minute. PVs temporaires : 2*SC. Armes naturelles : 1d4+SC fendants. Test pour attaquer en mêlée : FOR+5*SC.</td>
+                            <td>La cibles obtiennent les capacités d'un ours pendant 1 minute. PVs temporaires : 2*SC. Armes naturelles : 1d4+SC tranchants. Test pour attaquer en mêlée : FOR+5*SC.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
@@ -1808,43 +1904,42 @@
                 <p>Pour éviter de perdre du temps et d'interrompre l'action juste avant un combat avec de pénibles calculs d'initiative et d'écriture pour déterminer l'ordre de jeu, on peut déterminer l'initiative au début de la session et à la fin de chaque combat pour fluidifier l'entrée en mode tour par tour. Les groupes d'entités similaires peuvent posséder le même score d'initiative et agir en même temps.</p>
                 <p><i>Note aux MJs : L'initiative n'est pas une composante obligatoire du combat, elle peut être utile pour être sûr que tout le monde joue sans omettre personne mais si le combat est sans importance ou que vous préférez faire sans, vous pouvez simplement ignorer l'ordre d'initiative et jouer de façon plus narrative.</i></p>
                 <h4>Étape 3 : Début du round</h4>
-                <p>Chaque combattant va maintenant entreprendre son tour de jeu, au début de son tour, on récupère ses PA, il est nécessaire d'en posséder au moins un pour pouvoir agir car certains effets peuvent limiter le nombre de PA récupérés. Le personnage actif décide de quand son tour est terminé sauf s'il n'a plus de PA auquel cas son tour se termine automatiquement.</p>
+                <p>Chaque combattant va maintenant entreprendre son tour de jeu. Le personnage actif décide de quand son tour se termine, s'il ne peut plus rien faire son tour se termine automatiqement.</p>
                 <h4>Étape 4 : Fin du round</h4>
                 <p>Lorsque tout les combattant ont joué leur tour, le round se termine et un autre commence.</p>
                 <h4>Étape 5 : Fin du combat</h4>
-                <p>Les étapes 4 et 5 se répètent jusqu'à ce que le combat se termine ou que l'évènement qui a causé le passage au temps structuré prend fin.</p>
+                <p>Les étapes 3 et 4 se répètent jusqu'à ce que le combat se termine ou que l'évènement qui a causé le passage au temps structuré prend fin.</p>
             </div>
 
-            <h3 id="types_actions" onclick="hideContent(this)">Types d'actions</h3>
+            <h3 onclick="hideContent(this)">Votre tour de jeu</h3>
             <div>
-                <p>Les actions sont séparés en plusieurs catégories, chacune obéissant à des conditions différentes. Un personnage peut entreprendre autant d'actions par tour qu'il le souhaite tant qu'il possède les PA pour le faire. Chaque action coûte 1 PA à moins que ce ne soit préciser autrement.</p>
-                <p>Les <span class="big_underline"><a href="Types_actions.xhtml#actions_principales">Actions principales</a></span>ne peuvent être effectuées que lors de son propre tour de jeu. Ce sont des actions dont le personnage est le principal instigateur.</p>
-                <p>Les <span class="big_underline"><a href="Types_actions.xhtml#actions_secondaires">Actions secondaires</a></span>peuvent être effectués durant son propre tour ou pendant celui des autres en tant que reactions. Ce sont des actions pouvant être prise en réaction à ce qui se passe sur le champ de bataille. </p>
-                <p>Les <span class="big_underline"><a href="Types_actions.xhtml#reactions">Réactions</a></span>sont des actions utilisés pour contrecarrer les actions de ses adversaires lors de leur tour.</p>
-                <p>Les <span class="big_underline"><a href="Types_actions.xhtml#actions_libres">Actions libres</a></span>prennent un temps négligeable et ne demandent presque aucun effort. Le personnage peut en effectuer plusieurs actions libres au cours d’un même round que ce soit pendant son tour ou celui des autres, dans les limites du raisonnable et avec l’accord du MJ.</p>
+                <p>Quand c'est à votre tour de jouer, vous avez droit à un mouvement et une action. Vous pouvez aussi effectuer des actions libres dans la limite du raisonnable</p>
+                <ul>
+                    <li><strong>Mouvement :</strong>Chaque entité possède une <a href="Rules.xhtml#vitesse">vitesse de déplacement</a> qui lui est propre. Cette vitesse diffère principalement selon la caractéristique d'Agilité, le type d'armure portée et le poids du matériel transporté. Pour traverser un terrain difficile votre personnage doit aussi utiliser son Action de ce tour en passant une épreuve approprié au type de terrain à traverser.<br/><i>Si vous utilisez une carte tactique pour vos combat, la vitesse détermine le nombre de cases que peut parcourir votre personnage, sinon, la vitesse n'est qu'une indication générale des capacités de mouvement de votre personnage.</i></li>
+                    <li><strong>Action :</strong>Que ce soit pour attaquer votre adversaire, avoir recours à la magie ou escalader une paroi rocheuse, l'action de votre personnage requiert la plupart du temps d'effectuer un jet de dé. Les possibilités d'actions ne sont limitées que par votre imagination et le bon-vouloir de votre MJ.</li>
+                    <li><strong>Actions libres:</strong>Certaines actions s'effectuent rapidement ou sans effort, ce sont les actions libres. Vous pouvez crier quelque chose à vos alliés, boire une potion ou dégainez votre arme par exemple.</li>
+                </ul>
             </div>
 
-            <h3 onclick="hideContent(this)">Mouvement en combat</h3>
+            <h3 id="reactions" onclick="hideContent(this)">Réactions</h3>
             <div>
-                <p>Chaque entité possède une <a href="Rules.xhtml#vitesse">vitesse de déplacement</a> qui lui est propre. Cette vitesse diffère principalement selon la caractéristique d'Agilité, le type d'armure portée et le poids du matériel transporté.</p>
-                <p>Le déplacement en combat ne coûte pas de PA, la vitesse représente la limite de distance que peut parcourir l'entité entre chacune de ses actions. Se déplacer dans un terrain difficile coûte le double de mouvement sauf si le personnage passe une épreuve d'Acrobaties ou d'Athlétisme selon la situation.</p>
-            </div>
-
-            <h3 onclick="hideContent(this)">Zones de contrôle</h3>
-            <div>
-                <p>Chaque entité contrôle une zone autour d'elle équivalente à la portée de son arme de mêlée. Se déplacer dans cet espace sans faire attention peut déclencher une <a href="Types_actions.xhtml#attaque_opportunite">attaque d'opportunité</a> de la part de l'entité contrôlant cette zone.</p>
+                <p>Au cours d'un combat, votre personnage peut agir même lorsqu'il n'est pas le personnage actif, ces actions réalisés hors de votre tour de jeu sont appelées réactions.</p>
+                <ul>
+                    <li><b>Attaque d'opportunité :</b>Si un adversaire passe à portée de votre arme et que vous n'êtes pas déjà engagé en mêlée, vous pouvez l'attaquer. Si vous remportez la passe d'arme, vous et votre cible êtes désormais engagés.</li>
+                    <li><b>Défense :</b>Si vous subissez une attaque, vous pouvez vous défendre si vous en avez les capacités en vous opposant au jet d'attaque de votre adversaire, c'est une <a href="Rules.xhtml#passe_armes">passe d'armes</a>. Vous pouvez vous défendre autant de fois que possible lors du même round, mais vous subissez un malus de -10 par défense déjà effectuée. Si vous êtes plus grand que votre assaillant, vous pouvez vous défendre une fois de plus sans malus pour chaque catégorie de taille au dessus de votre assaillant.</li>
+                </ul>
             </div>
 
             <h3 onclick="hideContent(this)" id="postures_combat">Postures de combat</h3>
             <div>
                 <p>La posture de combat détermine l'attitude du personnage au milieu de la bataille, on ne peut changer de posture qu'au début de son tour. Les différentes postures sont :</p>
                 <ul>
-                    <li><span class="big_underline">Posture agressive :</span>le personnage peut effectuer une attaque supplémentaire par round et inflige au moins la moitié de son/ses dé(s) de dégâts lors de ses attaques. (Fonctionne aussi bien avec les armes qu'avec la magie. Un personnage attaquant avec une arme infligeant 1d8+1 dégâts infligera au minimum 5 points de dégâts).</li>
-                    <li><span class="big_underline">Posture défensive :</span>les actions défensives coutent 1 PE en moins.</li>
-                    <li><span class="big_underline">Posture vigilante :</span>le personnage peut effectuer une attaque d'opportunité à distance sur un ennemi qu'il ne <a href="Types_actions.xhtml#viser">vise</a> pas. Bonus à l'Initiative (BdIni) doublé lors du jet d'initiative.</li>
+                    <li><strong>Posture agressive :</strong>le personnage inflige au moins la moitié de son/ses dé(s) de dégâts lors de ses attaques. (Fonctionne aussi bien avec les armes qu'avec la magie. Un personnage attaquant avec une arme infligeant 1d8+1 dégâts infligera au minimum 5 points de dégâts).</li>
+                    <li><strong>Posture défensive :</strong>+10 aux actions défensives.</li>
+                    <li><strong>Posture vigilante :</strong>le personnage a droit à un jet d'Observation(Perception) pour éviter la surprise en début de combat et effectue son jet d'initiative avec avantage.</li>
                 </ul>
                 <p>Une posture peut justifier un bonus lors de certaines actions. Si un personnage passe en posture vigilante et précise qu'il recherche des opposants cachés, le MJ peut lui accorder un avantage pour son épreuve de perception.</p>
-                <p>Les ennemis n'utilisent pas les postures à moins d'être des personnages très important dans le récit.</p>
+                <p>Les ennemis n'utilisent pas les postures à moins d'être des personnages importants dans le récit.</p>
             </div>
 
             <h3 id="style_combat" onclick="hideContent(this)">Style de combat</h3>
@@ -1852,51 +1947,55 @@
                 <p>Les compétences de combat sont rassemblées dans les styles de combat qui représente la façon de combattre de chaque combattant, ses armes de prédilection, ses tactiques et son expérience du combat. Les styles de combat peuvent être associés à une culture, une carrière ou même une école.</p>
                 <p>Les style de combat sont représentés par la compétence : <a href="Rules.xhtml#style_combat_competence">Style de Combat [type]</a>, où le type est le nom du style de combat. Cette compétence est utilisée avec la caractéristique de Force ou de Dextérité pour effectuer des attaques ou se défendre en mêlée mais doit être utilisée avec la caractéristique de Dextérité pour effectuer des attaques à distance.</p>
                 <p>Chaque style de combat est associé à un certain nombre d'armes et de types d'armure avec lesquels le personnage est entraîné et apte à utiliser. Au niveau d'initié, un art du combat ne peut contenir que quatre types d'équipement différents, chaque palier d'expérience permet d'en ajouter un jusqu'à un maximum de 9 au rang de Maître.</p>
-                <p>Le combat à mains nues peut rentrer dans un style de combat. Les armures sont divisées en quatre catégorie : légère, intermédiaire, lourde et super-lourde. Les armes sont divisés en de multiples catégories Cf <a href="Rules.xhtml#table_armes_cac">Armes</a>. Les boucliers ne forment qu'une seule et même catégorie malgré les différences de taille.</p>
+                <p>Le combat à mains nues peut rentrer dans un style de combat sous le terme "Bagarre". Les armures sont divisées en quatre catégorie : légère, intermédiaire, lourde et super-lourde. Les armes sont divisés en de multiples catégories Cf <a href="Rules.xhtml#table_armes_cac">Armes</a>. Les boucliers ne forment qu'une seule et même catégorie malgré les différences de taille.</p>
                 <p>Utiliser de l'équipement avec lequel on manque d'entraînement ne permet pas de bénéficier de sa maîtrise de Style de Combat. Se battre dans une situation inhabituelle peut être une tâche Ardue(-10) voire Difficile(-20) : Un soldat habitué à se battre sur son cheval sera mal-à-l'aise s'il doit défendre sa vie face à un assassin dans sa propre maison; un noble combattant se retrouvant malgré dans une baston de bar aura du mal à trouver ses repère malgré son habileté à l'épée.</p>
                 <p>Voici quelques exemple de Style de combat :</p>
                 <ul>
-                    <li><span class="big_underline">Style de Combat [Lame de l'ombre]</span><i>Les lames courtes sont les meilleurs outils d'un assassin</i> Équipement utilisé : Dague, Épée courte, Couteau de lancer, Mains nues, Armure légère</li>
-                    <li><span class="big_underline">Style de Combat [Barbare d'Urdus]</span><i>La vie dans les marais n'est pas de tout repos, il faut savoir se battre pour survivre</i> Équipement utilisé : Grande Hache, Hache, Hache de jet, Mains nues Armure intermédiaire</li>
+                    <li><span class="big_underline">Style de Combat [Lame de l'ombre]</span><i>Les lames courtes sont les meilleurs outils d'un assassin</i> Équipement utilisé : Dague, Épée courte, Couteau de lancer, Bagarre, Armure légère</li>
+                    <li><span class="big_underline">Style de Combat [Barbare d'Urdus]</span><i>La vie dans les marais n'est pas de tout repos, il faut savoir se battre pour survivre</i> Équipement utilisé : Grande Hache, Hache, Hache de jet, Bagarre, Armure intermédiaire</li>
                     <li><span class="big_underline">Style de Combat [Soldat impérial]</span><i>Les soldats des sections impériales se battent en formation pour protéger l'empire</i> Équipement utilisé : Bouclier, Lance, Épée longue, Masse, Armure lourde</li>
                 </ul>
             </div>
 
-            <h3 id="attaquer_defendre" onclick="hideContent(this)">Attaquer et se défendre</h3>
+            <h3 id="atouts_combat" onclick="hideContent(this)">Atouts</h3>
+            <div>
+                <p>Lors d'un affrontement, les combattant qui remportent les épreuves opposées obtiennent des <b>atouts</b> représentant à quel point ils ont le dessus sur leur adversaire. Chaque atout procure un bonus de +10 à tous les jets relatifs au combat.</p>
+                <p>Un personnage perd tous ses atouts s'il perd un test opposé ou s'il subit des dégâts. Si le round se termine et que le personnage n'a pas gagné d'atout ou est en infériorité numérique, il perd un atout.</p>
+                <p>Le nombre maximal d'atouts cumulables équivaut au plus haut bonus de caractéristique du personnage.</p>
+            </div>
+
+            <h3 id="engagement" onclick="hideContent(this)">Engagement en mêlée</h3>
+            <div>
+                <p>Quand deux opposants ou plus se battent en mêlée, on dit qu'ils sont <b>engagés</b>. Un personnage n'est plus engagé en mêlée si il ne fait aucune passe d'armes avec les opposants avec lesquels il est engagé ou s'il se désengage.</p>
+                <p>Un combattant qui souhaite se désengager peut le faire sans test si il a le dessus sur le combat (si il possède plus d'atouts que les autres opposants), il peut alors se déplacer sans problème mais perd tout ses atouts. Si il n'a pas le dessus ou s'il veut conserver ses atouts, il doit d'abord remporter une passe d'armes. Si il gagne, il obtient un avantage et peut se déplacer comme il le souhaite; si il échoue, son adversaire gagne un atout et empêche le personnage de fuir.</p>
+                <p>Si un personnage engagé en mêlée se désengage sans remporter une passe d'armes, son adversaire peut tenter une attaque gratuite Facile(+20) avant qu'il ne quitte sa portée.</p>
+            </div>
+
+
+            <h3 id="passe_armes" onclick="hideContent(this)">Attaquer et se défendre : les Passes d'Armes</h3>
             <div>
                 <p>Le combat est un échange de coups entre l'assaillant et le défenseur, l'assaillant étant bien souvent le personnage actif du round et le défenseur sa victime.</p>
                 <h4>Étape 1 : Attaquer</h4>
                 <p>L'assaillant choisi sa cible, son style de combat et son arme avant de faire son jet d'attaque. Si l'arme choisie ne fait pas partie du style de combat choisi, le jet se base sur la Caractéristique de Force ou de Dextérité pure.</p>
                 <ul>
-                    <li><span class="big_underline">Attaque de mêlée :</span>L'assaillant fait un test de Style de combat en utilisant la Force ou la Dextérité contre une cible à la portée de son arme.</li>
-                    <li><span class="big_underline">Attaque à distance :</span>L'assaillant fait un test de Style de combat en utilisant la Dextérité contre une cible à la portée de son arme.</li>
+                    <li><b>Attaque de mêlée :</b> L'assaillant fait un test de Style de combat en utilisant la Force ou la Dextérité contre une cible à la portée de son arme.</li>
+                    <li><b>Attaque à distance :</b> L'assaillant fait un test de Style de combat en utilisant la Dextérité contre une cible à la portée de son arme.</li>
                 </ul>
                 <h4>Étape 2 : Se défendre</h4>
-                <p>Le défenseur choisit la façon dont il va se défendre et le style de combat utilisé avant de faire son jet. Un personnage doit être conscient qu'il va subir une attaque pour pouvoir se défendre et doit annoncer qu'il va se défendre avant que l'attaquant ne jette son dé.</p>
+                <p>Le défenseur choisit la façon dont il va se défendre et le style de combat utilisé avant de faire son jet. Un personnage doit être conscient qu'il va subir une attaque et être en mesure d'agir pour pouvoir se défendre via une réaction. Il doit annoncer qu'il va se défendre avant que l'attaquant ne jette son dé.</p>
                 <ul>
-                    <li><span class="big_underline">Esquive</span>Le défenseur passe une épreuve d'Esquive(Agilité)</li>
-                    <li><span class="big_underline">Parade</span>Le défenseur passe une épreuve de Style de combat(Force ou Dextérité) s'il possède une arme capable de parer l'arme de l'assaillant.</li>
-                    <li><span class="big_underline">Blocage</span>Le défenseur passe une épreuve de Style de combat(Force) s'il possède un bouclier.</li>
-                    <li><span class="big_underline">Contre-attaque</span>Le défenseur utilise un méthode de défense ci-dessus puis fais une attaque de mêlée comme décrit à l'étape 1. Le défenseur comptera alors comme un assaillant lors de la phase 3.</li>
+                    <li><b>Esquive :</b> Le défenseur passe une épreuve d'Esquive(Agilité)</li>
+                    <li><b>Parade :</b> Le défenseur passe une épreuve de Style de combat(Force ou Dextérité) s'il possède une arme capable de parer l'arme de l'assaillant. Voir <a href="Rules.xhtml#table_armes_cac">Armes de mêlée</a> pour plus de détails sur les différentes armes.</li>
+                    <li><b>Blocage :</b> Le défenseur passe une épreuve de Style de combat(Force) s'il possède un bouclier. Voir <a href="Rules.xhtml#boucliers">Boucliers</a> pour plus de détails sur les différents boucliers.</li>
                 </ul>
-                <p>Il n'est possible de se défendre des attaques à distance que via l'action d'esquive ou de blocage.</p>
+                <p>Il n'est possible de se défendre des attaques à distance que via l'action de blocage.</p>
                 <h4>Étape 3 : Lancer les dés et déterminer le résultat</h4>
-                <p>Plusieurs cas sont possibles suivants les résultats des dés, notez que si le défendeur choisi de ne pas se défendre ou s'il est incapable de le faire, on considère qu'il échoue automatiquement.</p>
-                <p>Si le degré de réussite(DR) d'un des combattants dépasse de 2 celui de son adversaire, il <b>prend le dessus</b> pour cette passe d'arme et pourra choisir un effet lors de l'étape 4 :</p>
+                <p>L'assaillant et le défenseur passent chacun une épreuve selon la méthode qu'ils ont choisi pour la passe d'armes. On soustrait le degré de réussite(DR) du défenseur à celui de l'assaillant pour savoir qui l'emporte. Le degré de réussites comparées(DRC) = DR assaillant - DR défenseur.</p>
+                <p>Plusieurs cas sont possibles suivants les résultats des dés, notez que si le défendeur est incapable de le faire, on considère que l'assaillant gagne automatiquement la passe d'armes.</p>
                 <ul>
-                    <li><span class="big_underline">Les deux personnages échouent :</span>Rien ne se passe et l'action est terminée.</li>
-                    <li><span class="big_underline">Un personnage rate son jet :</span>
-                    <ul>
-                        <li><span class="big_underline">L'assaillant échoue :</span>L'attaque ne porte pas et l'action est terminée.</li>
-                        <li><span class="big_underline">Le défenseur échoue :</span>L'attaque porte, voir étape 4.</li>
-                    </ul></li>
-                    <li><span class="big_underline">Les deux personnages réussissent :</span>
-                    <ul>
-                        <li><span class="big_underline">Attaque contre Blocage :</span>L'attaque porte mais le défenseur la bloque. Traiter l'étape 4 comme si le défenseur avait gagné.</li>
-                        <li><span class="big_underline">Attaque contre Parade ou Esquive :</span>Le défenseur pare l'attaque si son DR est strictement supérieur à celui de l'assaillant.</li>
-                        <li><span class="big_underline">Contre-attaque :</span>Le personnage possédant le plus grand DR frappe l'autre (sur une égalité rien ne se passe).</li>
-                    </ul></li>
-                    <li><span class="big_underline">Succès/Échec critique :</span>Si un personnage fait un succès critique, il réussit automatiquement son action sauf si son adversaire à aussi fait un succès critique auquel cas on considère les deux succès comme d'habitude en comptant le plus haut DR.<br/>Si un des deux fait un échec critiques et que l'autre réussit son action, elle compte comme un succès critique, s'il rate, comme un succès normal.</li>
+                    <li><b>Le DRC est positif :</b> L'assaillant remporte la passe d'arme, il gagne +1 atout et son attaque porte, passez à l'étape 4. Le défenseur perd tout ses atouts.</li>
+                    <li><b>Le DRC est négatif :</b> Le défenseur remporte la passe d'arme, il gagne +1 atout, la passe d'arme est terminée. L'assaillant perd tout ses atouts.</li>
+                    <li><b>Le DRC est nul :</b> On calcule la marge de réussites comparées(MRC) et on vérifie à nouveau qui l'emporte. Si la MRC est aussi nulle, rien ne se passe, la passe d'armes est une égalité parfaite.</li>
                 </ul>
                 <h4>Étape 4 : Résoudre l'attaque</h4>
                 <p>Si l'attaque porte, il faut désormais la résoudre. La table ci-dessous est optionnelle dans la résolution de l'attaque, elle indique la localisation du coup en fonction du chiffre des unités du jet de l'attaque.</p>
@@ -1932,21 +2031,11 @@
                     </tr>
                     </tbody>
                 </table>
-                <p>L'assaillant lance le(s) dé(s) de dégâts de son arme, si l'attaque est critique, il inflige le maximum de dégâts. On réduit ces dégâts par la PR protégeant la zone touchée si le défenseur porte une pièce d'armure à cet endroit. Si les dégâts infligés sont inférieurs ou égaux à 0 le défenseur perd tout de même un point de vitalité car l'attaque le touche, s'il sont positifs il perd autant de vitalité qu'il subis de dégâts.</p>
-                <p>Dans le cas où le défenseur gagne la passe d'arme :</p>
-                <ul>
-                    <li><span class="big_underline">Dans le cas d'une esquive :</span>Le défenseur ne subit aucun dégâts et peut se déplacer d'un mètre dans un direction sans puiser dans son déplacement pour ce tour.</li>
-                    <li><span class="big_underline">Dans le cas d'une parade :</span>Le défenseur ne subit aucun dégâts. </li>
-                    <li><span class="big_underline">Dans le cas d'un blocage :</span>Si les dégâts de l'assaillant surpassent la résistance du bouclier (RB), le défenseur subit l'intégralité des dégâts sur le bras qui tient le bouclier. Si la RB est supérieure ou égale aux dégâts reçus il ne subit aucun dégâts. Les dégâts magiques ne prennent en compte que la moitié de la RB (arrondie à l'entier supérieur) sauf si le bouclier possède une RB magique spécifiée.</li>
-                </ul>
-                <p>Si un des combattant à le dessus sur l'autre, il peut choisir un des effets suivants :</p>
-                <ul>
-                    <li><span class="big_underline">Frappe de précision :</span>Permet de choisir la localisation du coup</li>
-                    <li><span class="big_underline">Pénétration d'armure :</span>Si la zone touchée est protégées par de l'armure intégrale elle compte comme protégée par de l'armure partielle, si elle est protégée par de l'armure partielle elle compte comme non-protégée (la PR de l'armure ne diminue pas).</li>
-                    <li><span class="big_underline">Pousser l'avantage (sur une attaque uniquement) :</span>La prochaine attaque réalisée contre cet adversaire sera Simple(+10) pour ce round.</li>
-                    <li><span class="big_underline">Pousser à la faute (sur une parade/esquive uniquement) :</span>La prochaine attaque de l'adversaire sera Ardue(-10) pour ce round.</li>
-                </ul>
-                <p>Exemple : Géradin subit une attaque et rate sa parade, le coup arrive sur le torse et inflige 3 poins de dégâts mais Géradin porte une armure solide procurant 4 PR sur son torse, les dégâts qu'ils subis sont de 3-4=-1 Géradin ne perds qu'un point de vitalite. L'assaillant réitère l'attaque et Géradin ne peut plus se défendre, l'attaque inflige 6 points de dégâts et frappe à la jambe droite, Géradin ne possède qu'un de PR à cet endroit sa vitalité diminue de 6-1=5.</p>
+                <p>L'assaillant lance le(s) dé(s) de dégâts de son arme et ajoute au résultat le DRC. On réduit ces dégâts par la PR protégeant la zone touchée si le défenseur en possède. Si les dégâts infligés sont inférieurs ou égaux à 0 le défenseur perd tout de même un point de vitalité car l'attaque le touche, sinon il perd autant de vitalité qu'il subis de dégâts.</p>
+
+                <p>Exemple : Géradin est attaqué par deux brigands, le jet d'attaque du premier est un 36 (réussi sur un 44 ou moins donc DR de 1), le jet de défense de Géradin est un 23 (réussi sur un 52 ou moins donc DR de 3). Le DRC vaut donc 3-1=2, Géradin se défend avec succès et gagne un atout.
+                    <br/>L'autre brigand lance à son tour une attaque, il fait un 14 (réussi sur un 46 ou moins donc DR de 3), Géradin se défend un peu maladroitement avec un jet de 61 (réussi sur 52 ou moins car il possède un atou mais c'est la deuxième fois que Géradin se défend dans ce round donc DR de -1), le DRC est donc de 3-(-1)=4, l'attaque est donc réussie.Le brigand fait son jet de dégâts et fait 3, on y ajoute le DRC, Géradin subit donc 3+4=7 poins de dégâts mais Géradin porte une armure intégrale procurant 4 PR sur son torse, les dégâts qu'ils subis sont de 7-4=3 Géradin grimace de douleur et perds 3 point de vitalite.
+                    <br/>Viens enfin le tour de Géradin, il va pouvoir contre-attaquer. Il décide frapper celui qui l'a touché, il obtient un 23 pour son attaque et donc un DR de 3, son adversaire fait un 47 (réussi sur 56 ou moins grâce à l'atout donc un DR de 1). Le DRC est donc de 3-1=2, l'attaque porte. Géradin obtient 5 à son jet de dégâts, il ajoute le DRC et le brigand subit donc 7 points de dégâts, son armure partielle ne procure que 2 de PR, il perd donc 5 points de vitalité. Géradin obtient un atout et le brigand perds le sien. Le round est terminé, Géradin est en infériorité numérique puisqu'il est seul face aux deux bandits, il perd un atout.</p>
             </div>
 
             <h3 id="combat_cac" onclick="hideContent(this)">Combat en mêlée</h3>
@@ -1960,14 +2049,20 @@
                         <th>Exemples</th>
                     </tr>
                     <tr>
+                        <td>Simple(+10)</td>
+                        <td>Attaquer un adversaire plus grand que soi d'une catégorie</td>
                         <td>Ardue(-10)</td>
                         <td>Combattre alors que la visibilité est faible ou sur un sol boueux</td>
                     </tr>
                     <tr>
+                        <td>Facile(+20)</td>
+                        <td>Attaquer un adversaire à 1 contre 3</td>
                         <td>Difficile(-20)</td>
                         <td>Combattre en étant allongé sur le sol ou depuis une position plus basse que son opposant</td>
                     </tr>
                     <tr>
+                        <td>Très Facile(+30)</td>
+                        <td>Attaquer un adversaire de dos</td>
                         <td>Très Difficile(-30)</td>
                         <td>Combattre en étant aveugle</td>
                     </tr>
@@ -1982,12 +2077,15 @@
                     <li>Une attaque qui manque de peu (DR&le;-1) le personnage monté ou sa monture touche l'autre cible.</li>
                 </ul>
                 <h4 id="adversaire_multiples">Adversaires multiples</h4>
-                <p>Se battre contre plusieurs adversaires à la fois peut être dangereux bien qu'un personnage ne subissent pas de pénalités directes en le faisant. Le nombre d'attaques qu'il peut subir le rendra rapidement à court de PA. Un personnage sans PA est incapable de se défendre contre toute attaque et est donc très vulnérable.</p>
+                <p>Être engagé en mêlée contre plusieurs adversaires à la fois peut être dangereux bien qu'un personnage ne subissent pas de pénalités directes en le faisant. Chaque ennemi en surnombre accorde un bonus de +10 aux attaques visant les personnages en sous-nombre. De plus, les personnages en sous-nombre perdent un atout par round passé en infériorité numérique.
+                    <br/>Par exemple, 2 gardes sont engagés contre 3 ivrognes, les attaques des ivrognes bénéficient d'un bonus de +10. Si jamais un des ivrogne se retrouve hors combat ou fuit, ce bonus disparaitra puisque le combat se déroulera à 2 contre 2.</p>
                 <h4 id="combat_deux_armes">Combat à deux armes</h4>
-                <p>Un personnage peut se battre avec une arme dans chaque main à condition que ces armes ne nécessitent qu'une seul main pour être maniée et qu'elle font partie du style de combat du personnage. Un personnage se battant ainsi peut choisir d'attaquer, de parer ou de contre-attaquer avec l'une ou l'autre selon la situation.</p>
+                <p>Un personnage peut se battre avec une arme dans chaque main à condition que ces armes ne nécessitent qu'une seul main pour être maniée et qu'elle font partie du style de combat du personnage. Un personnage se battant ainsi possède une arme principale et une arme secondaire (le personnage étant ambidextre, il décide laquelle est la principale quand il souhaite attaquer).
+                    <br/>Lorsque qu'il attaque, il lance un jet d'attaque pour son arme principale, si l'attaque est réussie il peut inverser le résultat de son jet et l'utiliser pour son attaque avec son arme secondaire. Si vous décidez d'attaquer avec deux armes lors de la même action, tout vos jets défensifs subissent un malus de -20 jusqu'à votre prochain tour de jeu.
+                    <br/>Vous ne pouvez gagner qu'un seul atout même si les deux attaques touchent.</p>
                 <h4 id="combat_mains_nues">Combat à mains nues</h4>
                 <div>
-                    <p>Le combat à mains nues peut se faire avec les armes naturelles du personnage (poings, griffes,...) mais aussi avec certains équipements comme des cestes. Tout les personnages peuvent avoir recours au combat à mains nues même si il ne fait partie de leur style de combat, auquel cas il subissent un malus de -20.</p>
+                    <p>Le combat à mains nues peut se faire avec les armes naturelles du personnage (poings, griffes,...) mais aussi avec certains équipements comme des cestes. Tout les personnages peuvent avoir recours au combat à mains nues même si il ne fait partie de leur style de combat.</p>
                     <p>Le type de dégâts et la quantité de dégâts infligées dépendent des armes naturelles du personnage :</p>
                     <table class="table_horizontal" id="table_armes_naturelles">
                         <tbody>
@@ -2041,8 +2139,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <p><strong>Parer/Contre-attaquer sans armes :</strong> Il est possible de se défendre ainsi même sans armes mais plusieurs conditions sont requise : l'assaillant possède une arme d'une allonge supérieure à celle du défenseur et il se trouve dans la zone de contrôle du défenseur. Sinon les attaques de mêlée ne peuvent être parées à la main.</p>
-                    <p><strong>Lutte :</strong> Au lieu de faire une attaque classique, un personnage possédant le combat à mains nues dans son style de combat peut lutter avec son adversaire pur essayer de le maîtrisé. Cela demande au personnage de passer un test de Style de Combat (mains nues) opposée au jet de son adversaire qui peut être un jet de Style de Combat (mains nues), d'Athlétisme, d'Acrobaties ou d'Esquive. S'il réussit, sa cible obtient l'état <a href="Glossaire.xhtml#maitrise">maîtrisé</a>. L'entité maîtrisé peut entreprendre l'action <a href="Types_actions.xhtml#resister">résister</a> pour se libérer.</p>
+                    <p><b>Lutte :</b> Au lieu de faire une attaque classique, un personnage possédant la bagarre dans son style de combat peut lutter avec son adversaire pur essayer de le maîtrisé. Cela demande au personnage de passer un test de Style de Combat (mains nues) opposée au jet de son adversaire qui peut être un jet de Style de Combat (mains nues), d'Athlétisme, d'Acrobaties ou d'Esquive. S'il réussit, sa cible obtient l'état <a href="Glossaire.xhtml#maitrise">maîtrisé</a>. L'entité maîtrisé peut entreprendre l'action <a href="Types_actions.xhtml#resister">résister</a> pour se libérer.</p>
                     <p>Lutter avec un adversaire plus grand que soi est une tâche Très Difficile(-30) et il est impossible de lutter avec une entité de deux tailles supérieures à la nôtre. tant que l'adversaire est maîtrisé, le personnage ne peut pas se déplacer mais peut intenter les actions suivantes (ce sont des actions principales coûtant chacune 1 PA) :</p>
                     <ul>
                         <li><strong>Plaquer au sol :</strong> Le personnage et sa cible tombent <a href="Glossaire.xhtml#a_terre">à terre</a>. Il ne subit pas les malus bien qu'il soit à terre pour frapper sa cible.</li>
@@ -2105,11 +2202,11 @@
             </div>
             <h3 id="combat_distance">Combat à distance</h3>
             <div>
-                <p>Les attaques à distance sont résolues de la même façon que les attaques en mêlée à ceci près qu'elle ne peuvent être que bloquées ou esquivées.</p>
+                <p>Les attaques à distance sont résolues de la même façon que les attaques en mêlée à ceci près qu'elle ne peuvent être que bloquées grâce à un bouclier ou esquivées si un couvert est proche.</p>
                 <p>Les armes à distance possède plusieurs propriétés les différenciant des armes de mêlée :</p>
                 <ul>
-                    <li><span class="big_underline">Portée :</span>Définie par deux nombres indiquant respectivement la portée effective et la portée maximale. Atteindre une cible située dans la portée effective d'un arme se fait sans pénalités mais une cible située entre la portée effective et la portée maximale est Difficile(-20).</li>
-                    <li><span class="big_underline">Rechargement :</span>Représente le nombre de fois qu'on doit entreprendre l'action <a href="Types_actions.xhtml#preparer_objet_arme">Préparer une arme</a> pour pouvoir tirer à nouveau avec cette arme.</li>
+                    <li><span class="big_underline">Portée :</span>Définie par deux nombres indiquant respectivement la portée effective et la portée maximale. Atteindre une cible située dans la portée effective d'un arme se fait sans pénalités mais une cible située entre la portée effective et la portée maximale est Difficile(-20). Le BdDex de l'utilisateur augmente de BdDex*10% la portée des armes</li>
+                    <li><span class="big_underline">Rechargement :</span>Représente le nombre de DR à obtenir lors du test étendu de rechargement pour pouvoir tirer à nouveau avec cette arme.</li>
                 </ul>
                 <p>Comme toutes les autres épreuves, le combat à distance doit se faire en fonction de l'environnement et des circonstances entourant le combat. Ces modificateurs sont déterminés par le MJ et ne devrait pas être pire que Très Difficile(-30) sauf dans des cas très particuliers. Le tableau ci-dessous montre quel genre d'évènements peut affecter le combat et à quel point.</p>
                 <table id="table_modificateur_combat_distance" class="table_horizontal">
@@ -2119,14 +2216,20 @@
                         <th>Exemples</th>
                     </tr>
                     <tr>
+                        <td>Simple(+10)</td>
+                        <td>Tirer dans un petit groupe (5 ou moins)</td>
                         <td>Ardue(-10)</td>
                         <td>Tirer avec un vent léger, par temps de pluie</td>
                     </tr>
                     <tr>
+                        <td>Facile(+20)</td>
+                        <td>Tirer sur une cible de très grande taille ou un grand groupe (10 ou moins)</td>
                         <td>Difficile(-20)</td>
                         <td>Tirer sur une cible allongée sur le sol</td>
                     </tr>
                     <tr>
+                        <td>Très Facile(+30)</td>
+                        <td>Tirer à bout portant ou dans une foule(+ de 10)</td>
                         <td>Très Difficile(-30)</td>
                         <td>Tirer avec un vent fort, par temps de brouillard</td>
                     </tr>
@@ -2144,8 +2247,13 @@
 
             <h3 id="blessures_mort" onclick="hideContent(this)">Blessures et mort</h3>
             <div>
-                <p>Toute attaque qui touche un personnage ne parvenant pas à se défendre efficacement fait diminuer la jauge de vitalité.  </p>
-                <p>Si la vitalité d'une entité atteint 0 ou une valeur négative, elle doit réussir un jet de Vigueur avec un malus éventuels équivalent à son total de points de vitalité négatifs, si elle réussit son jet, elle reste consciente et est <a href="Glossaire.xhtml#porte_mort">aux portes de la mort</a>. Si elle échoue, elle devient <a href="Glossaire.xhtml#inconscient">inconsciente</a> et <a href="Glossaire.xhtml#mourant">mourante</a>.</p>
+                <p>La vitalité d'une entité diminue lorsqu'elle subit des dégâts, que ce soit dû à un coup, un piège ou une chute. Ces dégâts n'ont pas d'impact autre que mener progressivement vers une perte de connaissance, on peut les traiter comme des blessures insignifiantes qui guériront en quelques jours.</p>
+                <div class="boxed">
+                    <h4 id="blessures" onclick="hideContent(this)">Règle Optionnelle : Blessures &amp; Cicatrices</h4>
+                    <p>Si les dégâts subis excèdent la <a href="Rules.xhtml#resistance_douleur">résistance à la douleur</a> d'une entité, elle subit une <a href="Tableaux.xhtml#blessures">blessure</a> en fonction de la zone touchée et de l'origine des dégâts. Cette blessure impose divers malus pouvant être réduits via un traitement en attendant la guérison complète de la blessure. Certaines blessures ne peuvent être guéries naturellement et toutes les blessures laissent une cicatrice.</p>
+                    <p>Cette règle ne s'applique que pour les personnages et autres entités importantes, si une entité mineure subit des dégâts excédant sa résistance à la douleur, elle décède sur le coup.</p>
+                </div>
+                <p>Lorsque la vitalité d'une entité atteint 0 ou une valeur négative, elle doit réussir un jet de Vigueur avec un malus éventuels équivalent à son total de points de vitalité négatifs, si elle réussit son jet, elle reste consciente et est <a href="Glossaire.xhtml#porte_mort">aux portes de la mort</a>. Si elle échoue, elle devient <a href="Glossaire.xhtml#inconscient">inconsciente</a> et <a href="Glossaire.xhtml#mourant">mourante</a>.</p>
             </div>
         </div>
 
@@ -2647,12 +2755,15 @@
             <p>L'équipement joue un grand rôle dans la puissance du personnage, surtout si il n'a que peu recours à la magie. Une arme forgée par un grand maître sera bien plus efficace qu'une vieille lame décrépite.</p>
             <p>Les armes et les armures nécessitent d'être maîtrisée par le personnage (incluses dans un de ses styles de combat) pour être utilisées convenablement. Un personnage utilisant une arme qu'il ne maitrise pas subit un malus de -20. S'il porte une armure sans y être habitué les malus dûs au poids de l'armure son doublés.</p>
 
-            <h2 id="rupture" onclick="hideContent(this)">Rupture</h2>
-            <div>
-                <p>Les armes et armures possèdent une statistique appelée Rupture qui correspond à la solidité de l'objet, plus cette statistique est grande, plus l'objet est solide.</p>
-                <p>La Rupture entre en compte lors d'un coup critique ou si l'équipement subit un choc important. On lance alors un D100 et si le chiffre est inférieur à la rupture, l'objet ne s'<a href="Tableaux.xhtml#rupture_equipement">abime</a> pas plus et protège son porteur des effets secondaires du critique s'il s'agit d'une armure.</p>
-                <p>Exemple : Un personnage portant un casque en acier Steinn de rupture 75, il subit une attaque critique à la tête, il obtient 43 à son jet de rupture, le casque n'est pas brisé, le personnage ne subit pas de traumatisme crânien, mais il subit tout le même les dégâts du coup critique.</p>
-                <p>La rupture étant une statistique variant d'un équipement à un autre, on ne peut que l'estimer globalement selon le matériau de l'objet, le choix précis revient donc au cas-par-cas.</p>
+            <div class="boxed">
+                <h2 id="rupture" onclick="hideContent(this)">Rupture</h2>
+                <div>
+                    <p>Les armes et armures possèdent une statistique appelée Rupture qui correspond à la solidité de l'objet, plus cette statistique est grande, plus l'objet est solide.</p>
+                    <p>La Rupture entre en compte si l'équipement subit un choc important. On lance alors un D100 et si le chiffre est inférieur à la rupture, l'objet ne s'<a href="Tableaux.xhtml#rupture_equipement">abime</a> pas.</p>
+                    <p>Exemple : Un personnage portant un casque en acier Steinn de rupture 75, il subit 10 points de dégâts à la tête (avant réduction des dégâts), c'est un sacré coup, le casque doit passer un test de Rupture. Le personnage obtient 43 à son jet de rupture, le casque n'est pas abîmé, mais le personnage subit tout de même les dégâts de l'attaque.</p>
+                    <p>La rupture étant une statistique variant d'un équipement à un autre, on ne peut que l'estimer globalement selon le matériau de l'objet, le choix précis revient donc au cas-par-cas.</p>
+                    <i>La Rupture est une règle optionnelle, les circonstances dans lesquels on doit passer un test de rupture sont laissées à la discrétion du MJ. Vous pouvez ignorez toutes les règles concernant la rupture.</i>
+                </div>
             </div>
 
             <h2 id="Armes" onclick="hideContent(this)">Armes</h2>
@@ -2660,12 +2771,11 @@
                 <div>
                     <h3 id="type_degats" onclick="hideContent(this)">Type de dégâts</h3>
                     <div>
-                        <p>Les armes peuvent infliger différents types de dégâts selon la façon dont on les utilise :</p>
+                        <p>Les armes peuvent infliger différents types de dégâts selon la façon dont on les utilise, ces types de dégâts n'ont que peu d'impact statistique mais peuvent renforcer la narration :</p>
                         <ul>
-                            <li><span class="big_underline">Écrasant :</span>Les armes infligeant des dégâts écrasants brisent les os comme les armures. Les dégâts de ce type ignore la PR de sa cible à hauteur de son BdFor. Un personnage avec un BdFor de 4 frappant un adversaire possédant une armure procurant une PR de 5 verra ses dégâts réduit d'un seul point au lieu de 5.</li>
-                            <li><span class="big_underline">Fendant :</span>Les armes infligeant des dégâts fendant causent de graves blessures si maniées par un monstre de puissance. Les dégâts de ce type permettent à l'utilisateur d'infliger son BdFor en plus de son jet de dégâts si son attaque fait perdre au moins 1 point de vitalité à sa cible. Un ours avec un BdFor de 6 frappe un aventurier en armure (PR4), le coup de griffe lui inflige 6 point de dégâts, après réduction des dégâts grâce à la PR, l'aventurier subit (6-4)=2 points de dégâts auxquels on rajoute le BdFor de l'ours 2+6=8. L'aventurier perds 8 points de vie.</li>
-                            <li><span class="big_underline">Perforant :</span>Les armes infligeant des dégâts perforants s'infiltrent dans les points faibles des armures les plus épaisses. Les dégâts de ce type ignore une partie de la PR de sa cible à hauteur de son BdDex. Un duelliste avec un BdDex de 5 ne voit pas ses dégâts réduit tant que ses cibles ont moins de 5 de PR.</li>
-                            <li><span class="big_underline">Tranchant :</span>Les armes infligeant des dégâts tranchant inflige de lours dégâts aux adversaires sans armure. Les dégâts de ce type permettent à l'utilisateur d'infliger son BdFor ou son BdDex en plus de son jet de dégâts si la zone ciblée est considéré comme non protégée par de l'armure. Un assassin utilisant une arme possédant la propriété "Dard" sur une cible ne possédant que de l'armure partielle ou pas d'armure peut ajouter son BdEX ou son BdFor à son jet de dégâts.</li>
+                            <li><span class="big_underline">Écrasant :</span>Les armes infligeant des dégâts écrasants brisent les os comme les armures. Ce sont généralement des armes lourdes telles que les masses et les marteaux.</li>
+                            <li><span class="big_underline">Perforant :</span>Les armes infligeant des dégâts perforants s'infiltrent dans les points faibles des armures les plus épaisses. Les dagues, les lances ainsi que la plupart des armes à distance infligent ce type de dégâts.</li>
+                            <li><span class="big_underline">Tranchant :</span>Les armes infligeant des dégâts tranchants causent de profondes entailles dans la chair de leurs victimes. Les haches et les épées en font partie.</li>
                         </ul>
                         <p>Certaines créatures peuvent êtres résistantes ou vulnérables à un ou plusieurs types de dégâts. Les squelettes par exemple résistent au dégâts perforants mais sont vulnérables aux dégâts contondants. Voir les traits <a href="Glossaire.xhtml#vulnerabilite">vulnérabilité</a> et <a href="Glossaire.xhtml#resistance">résistance</a> ainsi que le <a href="../World/Bestiaire.xhtml">Bestiaire</a>.</p>
                     </div>
@@ -2673,19 +2783,20 @@
                     <h3 id="proprietes_armes" onclick="hideContent(this)">Propriété des armes</h3>
                     <div>
                         <p><span class="big_underline">Brise-bouclier :</span>Cette arme est très efficace contre les boucliers. Les boucliers bloquant une attaque d'une arme possédant cette propriété voient leur RB divisée par 2 lors du blocage.</p>
-                        <p><span class="big_underline">Dard :</span>Cette arme est capable de trouver des faille dans l'armure de sa cible. Les attaques de cette arme traite les zone protégées par des pièces d'armures intégrales comme protégées par des pièces partielles et parties protégées par des pièces partielles comme non protégées (mais ne réduit pas la PR de la zone). Cela peut être utilisé pour déclencher certains effets qui interagissent avec l'armure portée.</p>
-                        <p><span class="big_underline">Duel :</span>Cette armes est faite pour le duel. L'action <a href="Types_actions.xhtml#contre_attaquer">contre-attaque</a> devient Simple(+10).</p>
+                        <p><span class="big_underline">Contondante :</span>Cette arme est très efficace quand elle touche le crâne. Si vous réussissez un coup à la tête, votre cible doit passer une épreuve de Résistance opposée à votre Force ou être <a href="Glossaire.xhtml#etourdi">étourdie</a> pendant un round.</p>
+                        <p><span class="big_underline">Dard :</span>Cette arme est capable de trouver des faille dans l'armure de sa cible. Les jets d'attaque  obtenant un double (11, 22, etc...) ignore l'armure de la cible.</p>
+                        <p><span class="big_underline">Duel :</span>Cette armes est faite pour le duel. Si vous remporter un test opposé de défense, vous infligez des dégâts à votre assaillant.</p>
                         <p><span class="big_underline">Empalement :</span>Cette arme interrompt le déplacement de quiconque perd de la vitalité suite à une attaque d'opportunité.</p>
                         <p><span class="big_underline">Excellence :</span>Cette arme est d'excellente facture. Le jet de dégâts se fait avec avantage. </p>
-                        <p><span class="big_underline">Fléau :</span>Cette arme frappe de façon imprévisible. Elle ne peut ni être parer ni contrée mais ne peut pas non plus être utilisée pour parer ou contre-attaquer. En cas de match nul avec le défenseur lors d'un blocage, l'utilisateur du fléau gagne et l'attaque porte. Si l'utilisateur fait un échec critique, il se frappe lui-même.</p>
-                        <p><span class="big_underline">Lancer(Y/Z) :</span>Cette arme est suffisamment équilibrée pour être lancée. Y représente la portée effective et Z la portée maximale. Un lancer d'arme est traité comme uen attaque à distance normale (mais la force peut être utilisée pour le test de Style de Combat).</p>
-                        <p><span class="big_underline">Lourde :</span>Cette arme possède un fort pouvoir d'arrêt et peut envoyer valser ses cibles. l'action <a href="Types_actions.xhtml#repousser">repousser</a> devient Facile(+20).</p>
-                        <p><span class="big_underline">Magique :</span>Cette arme est capable de blesser toutes créatures normalement résistantes ou immunisées aux dégâts normaux.</p>
+                        <p><span class="big_underline">Fléau :</span>Cette arme frappe de façon imprévisible. Elle ne peut pas être utilisé pour se défendre mais il est impossible de s'en protéger sauf en bloquant avec un bouclier ou en parant.</p>
+                        <p><span class="big_underline">Lancer(Y/Z) :</span>Cette arme est suffisamment équilibrée pour être lancée. Y représente la portée effective et Z la portée maximale. Un lancer d'arme est traité comme uen attaque à distance normale (mais la force peut être utilisée pour le test de Style de Combat). Le dé de dégâts de l'arme augmente d'un <a href="Rules.xhtml#cran_des">cran</a> si elle est lancée</p>
+                        <p><span class="big_underline">Lourde :</span>Cette arme possède un fort pouvoir d'arrêt et peut envoyer valser ses cibles. Si vous réussissez un coup à la tête, votre cible doit passer une épreuve de Résistance opposée à votre Force ou être repoussé de DRC mètres.</p>
+                        <p><span class="big_underline">Magique :</span>Cette arme est capable de blesser toutes créatures normalement résistantes ou immunisées aux dégâts normaux. Une arme en Virgonium inflige des dégâts doublés aux entités éthérées.</p>
                         <p><span class="big_underline">Montée :</span>Cette arme n'est utilisable que depuis une monture pour des raisons de poids et de maniabilité. L'attaque se fait lors d'une charge.</p>
                         <p><span class="big_underline">Perce-Armure(X) :</span>Cette arme est d'une telle puissance qu'elle ignore X PR de la cible qu'importe les conditions. </p>
                         <p><span class="big_underline">Petite :</span>Cette arme est relativement petite. Elle ne peut être utilisée pour parer les coups des armes maniées à deux mains, mais la dégainer ne coûte pas de PA. L'utilisateur peut passer un test de Roublardise pour dissimuler l'arme.</p>
-                        <p><span class="big_underline">Peu maniable :</span>Cette arme n'est pas facile à manier, il est Difficile(-20) de parer ou contre-attaquer avec. </p>
-                        <p><span class="big_underline">Primitive :</span>Cette arme est d'une qualité pitoyable. Le jet de dégâts de fait avec désavantage.</p>
+                        <p><span class="big_underline">Peu maniable :</span>Cette arme n'est pas facile à manier, il est Difficile(-20) de se défendre avec. </p>
+                        <p><span class="big_underline">Primitive :</span>Cette arme est d'une qualité pitoyable. Le jet de dégâts se fait avec désavantage.</p>
                         <p><span class="big_underline">Rechargement(X)</span>Cette arme doit être rechargée avant d'être utilisée, le nombre de points d'actions nécessaire pour recharger l'arme est indiqué entre parenthèse.</p>
                     </div>
 
@@ -2730,7 +2841,7 @@
                             <tr>
                                 <td>Supérieure</td>
                                 <td>L'arme obtient la propriété "Excellence"<br/>La rupture augmente de 10</td>
-                                <td>+200%</td>
+                                <td>+100%</td>
                             </tr>
                             </tbody>
                         </table>
@@ -2808,7 +2919,7 @@
                             <td>1d6</td>
                             <td>1,5M</td>
                             <td>2m</td>
-                            <td/>
+                            <td>-</td>
                             <td>2</td>
                             <td>75</td>
                         </tr>
@@ -2825,7 +2936,7 @@
                         <tr><th colspan="8">Haches</th></tr>
                         <tr>
                             <td>Hachette</td>
-                            <td>Fendant</td>
+                            <td>Tranchant</td>
                             <td>1d6</td>
                             <td>1M</td>
                             <td>1m</td>
@@ -2835,7 +2946,7 @@
                         </tr>
                         <tr>
                             <td>Hache de guerre</td>
-                            <td>Fendant</td>
+                            <td>Tranchant</td>
                             <td>1d6</td>
                             <td>1,5M</td>
                             <td>2m</td>
@@ -2845,7 +2956,7 @@
                         </tr>
                         <tr>
                             <td>Grande hache</td>
-                            <td>Fendant</td>
+                            <td>Tranchant</td>
                             <td>1d8</td>
                             <td>2M</td>
                             <td>3m</td>
@@ -2908,7 +3019,7 @@
                         <tr>
                             <td>Javelot</td>
                             <td>Perforants</td>
-                            <td>1d8</td>
+                            <td>1d6</td>
                             <td>1M</td>
                             <td>2m</td>
                             <td>Lancer(15/25)</td>
@@ -2937,7 +3048,7 @@
                         </tr>
                         <tr>
                             <td>Hallebarde</td>
-                            <td>Fendants ou Perforants</td>
+                            <td>Tranchants ou Perforants</td>
                             <td>1d8</td>
                             <td>2M</td>
                             <td>2-3m</td>
@@ -2972,7 +3083,7 @@
                             <td>1d6</td>
                             <td>2M</td>
                             <td>2m</td>
-                            <td>Lourd</td>
+                            <td>-</td>
                             <td>2</td>
                             <td>15</td>
                         </tr>
@@ -3049,7 +3160,7 @@
                             <td>-</td>
                             <td>-</td>
                             <td>-</td>
-                            <td>0,8*Prix</td>
+                            <td>1*Prix</td>
                         </tr>
                         <tr>
                             <td>Acier</td>
@@ -3057,12 +3168,12 @@
                             <td>-</td>
                             <td>+1</td>
                             <td>-</td>
-                            <td>1*Prix</td>
+                            <td>1,2*Prix</td>
                         </tr>
                         <tr>
                             <td>Shoren</td>
                             <td>65</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+1</td>
                             <td>-</td>
                             <td>1,5*Prix</td>
@@ -3070,34 +3181,34 @@
                         <tr>
                             <td>Orichalque</td>
                             <td>65</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+1</td>
                             <td>-</td>
-                            <td>2*Prix</td>
+                            <td>1,5*Prix</td>
                         </tr>
                         <tr>
                             <td>Nilaroy</td>
                             <td>65</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+2</td>
                             <td>-</td>
-                            <td>3*Prix</td>
+                            <td>2*Prix</td>
                         </tr>
                         <tr>
                             <td>Gnistar</td>
                             <td>70</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+2</td>
                             <td>-1</td>
-                            <td>6*Prix</td>
+                            <td>3*Prix</td>
                         </tr>
                         <tr>
                             <td>Lakma</td>
                             <td>80</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+3</td>
                             <td>-1</td>
-                            <td>10*Prix</td>
+                            <td>4*Prix</td>
                         </tr>
                         <tr>
                             <td>Virgonium</td>
@@ -3105,15 +3216,15 @@
                             <td>Magique</td>
                             <td>+3</td>
                             <td>+1</td>
-                            <td>12*Prix</td>
+                            <td>5*Prix</td>
                         </tr>
                         <tr>
                             <td>Skymma</td>
                             <td>90</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+3</td>
                             <td>+1</td>
-                            <td>10*Prix</td>
+                            <td>4*Prix</td>
                         </tr>
                         </tbody>
                     </table>
@@ -3162,7 +3273,7 @@
                             <td>1d8</td>
                             <td>2M</td>
                             <td>150/300m</td>
-                            <td>Rechargement(1), Peu maniable</td>
+                            <td>Peu maniable</td>
                             <td>2</td>
                             <td>100</td>
                         </tr>
@@ -3171,27 +3282,27 @@
                             <td>1d10</td>
                             <td>2M</td>
                             <td>150/250m</td>
-                            <td>Rechargement(2 min 1), Peu maniable, Perce-armure(2)</td>
+                            <td>Rechargement(2), Peu maniable, Perce-armure(2)</td>
                             <td>2</td>
-                            <td>175</td>
+                            <td>120</td>
                         </tr>
                         <tr>
                             <td>Arbalète lourde</td>
                             <td>1d12</td>
                             <td>2M</td>
                             <td>200/300m</td>
-                            <td>Rechargement(3 min 1), Peu maniable, Perce-armure(4)</td>
+                            <td>Rechargement(4), Peu maniable, Perce-armure(4)</td>
                             <td>4</td>
-                            <td>250</td>
+                            <td>220</td>
                         </tr>
                         <tr>
                             <td>Arbalète à main</td>
                             <td>1d6</td>
                             <td>1M</td>
                             <td>50/100m</td>
-                            <td>Rechargement(1), Peu maniable</td>
+                            <td>Rechargement(1), Pistolet</td>
                             <td>1</td>
-                            <td>200</td>
+                            <td>150</td>
                         </tr>
                         </tbody>
                     </table>
@@ -3220,7 +3331,7 @@
                             <td>Os</td>
                             <td>30</td>
                             <td>-</td>
-                            <td>+5m</td>
+                            <td>+10%</td>
                             <td>-</td>
                             <td>1,25*Prix</td>
                         </tr>
@@ -3228,7 +3339,7 @@
                             <td>Chitine</td>
                             <td>40</td>
                             <td>-</td>
-                            <td>+5m</td>
+                            <td>+10%</td>
                             <td>-</td>
                             <td>1,5*Prix</td>
                         </tr>
@@ -3236,7 +3347,7 @@
                             <td>Fer</td>
                             <td>50</td>
                             <td>+1</td>
-                            <td>+10m</td>
+                            <td>+20%</td>
                             <td>+1</td>
                             <td>2*Prix</td>
                         </tr>
@@ -3244,7 +3355,7 @@
                             <td>Acier</td>
                             <td>60</td>
                             <td>+1</td>
-                            <td>+10m</td>
+                            <td>+20%</td>
                             <td>+1</td>
                             <td>2,5*Prix</td>
                         </tr>
@@ -3252,7 +3363,7 @@
                             <td>Shoren</td>
                             <td>65</td>
                             <td>+1</td>
-                            <td>+10m</td>
+                            <td>+20%</td>
                             <td>+1</td>
                             <td>3*Prix</td>
                         </tr>
@@ -3260,7 +3371,7 @@
                             <td>Orichalque</td>
                             <td>65</td>
                             <td>+1</td>
-                            <td>+10m</td>
+                            <td>+20%</td>
                             <td>+1</td>
                             <td>3*Prix</td>
                         </tr>
@@ -3268,7 +3379,7 @@
                             <td>Nilaroy</td>
                             <td>65</td>
                             <td>+2</td>
-                            <td>+15m</td>
+                            <td>+30%</td>
                             <td>-</td>
                             <td>4*Prix</td>
                         </tr>
@@ -3276,44 +3387,43 @@
                             <td>Gnistar</td>
                             <td>70</td>
                             <td>+2</td>
-                            <td>+15m</td>
+                            <td>+30%</td>
                             <td>-</td>
-                            <td>6*Prix</td>
+                            <td>4,5*Prix</td>
                         </tr>
                         <tr>
                             <td>Lakma</td>
                             <td>80</td>
                             <td>+3</td>
-                            <td>+20m</td>
+                            <td>+40%</td>
                             <td>-</td>
-                            <td>8*Prix</td>
+                            <td>5*Prix</td>
                         </tr>
                         <tr>
                             <td>Virgonium</td>
                             <td>85</td>
                             <td>+3</td>
-                            <td>+20m</td>
+                            <td>+40%</td>
                             <td>+1</td>
-                            <td>10*Prix</td>
+                            <td>6*Prix</td>
                         </tr>
                         <tr>
                             <td>Skymma</td>
                             <td>90</td>
                             <td>+3</td>
-                            <td>+20m</td>
+                            <td>+40%</td>
                             <td>+1</td>
-                            <td>8*Prix</td>
+                            <td>5*Prix</td>
                         </tr>
                         </tbody>
                     </table>
 
-                    <p class="caption" id="materiau_fleches_carreaux">Matériau des flèches et carreaux</p>
+                    <p class="caption" id="materiau_fleches_carreaux">Matériau des munitions</p>
                     <p>Les armes à distance utilisent des munitions avec des pointes de différents matériaux. L'encombrement des munitions est à prendre en compte, une munition possède un ENC de 0 donc 10 munitions représente 1 d'ENC.</p>
-                    <p>Les munitions peuvent posséder une pointe spécifique pour infliger un type de dégâts. Ces pointes spéciales coûtent deux fois plus cher qu'une pointe classique. Les pointes peuvent aussi être revêtues d'argent pour touche les adversaires vulnérables pour la somme d'un pa par pointe.</p>
+                    <p>Les flèches et les carreaux peuvent posséder une pointe spécifique pour infliger un type de dégâts. Ces pointes spéciales coûtent deux fois plus cher qu'une pointe classique. Les pointes peuvent aussi être revêtues d'argent pour touche les adversaires vulnérables pour la somme d'un pa par pointe.</p>
                     <ul>
                         <li><span class="big_underline">Pointe bodkin :</span>Cette pointe de section carrée est particulièrement pointue. Elle inflige des dégâts perforants.</li>
-                        <li><span class="big_underline">Pointe demi-lune :</span>Cette pointe semblable à un fer de hache emmanchée au bout d'un fût de flèche inflige des dégâts fendants.</li>
-                        <li><span class="big_underline">Pointe hirondelle :</span>Cette pointe ressemble à la queue d'une hirondelle, d'où son nom. Elle inflige des dégâts tranchants.</li>
+                        <li><span class="big_underline">Pointe demi-lune :</span>Cette pointe semblable à un fer de hache emmanchée au bout d'un fût de flèche inflige des dégâts tranchants.</li>
                         <li><span class="big_underline">Pointe matras :</span>Cette pointe aplatie mise sur la puissance d'impact pour assommer sa cible. Elle inflige des dégâts contondants. </li>
                     </ul>
                     <table class="table_horizontal">
@@ -3330,84 +3440,84 @@
                             <td>25</td>
                             <td>Primitive</td>
                             <td>-1</td>
-                            <td>10</td>
+                            <td>5</td>
                         </tr>
                         <tr>
                             <td>Os</td>
                             <td>30</td>
                             <td>Primitive</td>
                             <td>-</td>
-                            <td>12</td>
+                            <td>6</td>
                         </tr>
                         <tr>
                             <td>Pierre</td>
                             <td>35</td>
                             <td>Primitive</td>
                             <td>-</td>
-                            <td>14</td>
+                            <td>6</td>
                         </tr>
                         <tr>
                             <td>Chitine</td>
                             <td>40</td>
                             <td>-</td>
                             <td>-</td>
-                            <td>16</td>
+                            <td>6</td>
                         </tr>
                         <tr>
                             <td>Fer</td>
                             <td>50</td>
                             <td>-</td>
                             <td>-</td>
-                            <td>18</td>
+                            <td>10</td>
                         </tr>
                         <tr>
                             <td>Acier</td>
                             <td>60</td>
                             <td>-</td>
                             <td>+1</td>
-                            <td>25</td>
+                            <td>12</td>
                         </tr>
                         <tr>
                             <td>Shoren</td>
                             <td>65</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+1</td>
-                            <td>28</td>
+                            <td>15</td>
                         </tr>
                         <tr>
                             <td>Nilaroy</td>
                             <td>65</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+2</td>
-                            <td>35</td>
+                            <td>20</td>
                         </tr>
                         <tr>
                             <td>Gnistar</td>
                             <td>70</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+2</td>
-                            <td>60</td>
+                            <td>20</td>
                         </tr>
                         <tr>
                             <td>Lakma</td>
                             <td>80</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+3</td>
-                            <td>80</td>
+                            <td>30</td>
                         </tr>
                         <tr>
                             <td>Virgonium</td>
                             <td>85</td>
                             <td>Magique</td>
                             <td>+3</td>
-                            <td>100</td>
+                            <td>40</td>
                         </tr>
                         <tr>
                             <td>Skymma</td>
                             <td>90</td>
-                            <td>-</td>
+                            <td>Magique</td>
                             <td>+3</td>
-                            <td>80</td>
+                            <td>30</td>
                         </tr>
                         </tbody>
                     </table>
@@ -3550,7 +3660,7 @@
                             <tr>
                                 <td>Alourdie</td>
                                 <td>En densifiant la partie contondante d'une arme, sa force d'impact peut surprendre plus d'un adversaire.</td>
-                                <td>Si l'attaque inflige des dégâts maximum, l'ennemi est projeté <a href="Glossaire.xhtml#a_terre">à terre</a>. Les ennemis <a href="Glossaire.xhtml#a_terre">à terre</a> subissent 1d4 dégâts supplémentaires. Le poids de l'arme augmente selon le type d'arme (500 g pour les armes à une main, 1 kg pour les armes à deux mains). L'arme obtient la propriété "Lourde" si elle ne la possède pas déjà.</td>
+                                <td>Si l'attaque inflige des dégâts maximum, l'ennemi est projeté <a href="Glossaire.xhtml#a_terre">à terre</a>. Les ennemis <a href="Glossaire.xhtml#a_terre">à terre</a> subissent 1d4 dégâts supplémentaires. L'encombrement de l'arme augmente de 1. L'arme obtient la propriété "Lourde" si elle ne la possède pas déjà.</td>
                                 <td>20 % du prix de l'arme</td>
                             </tr>
                             <tr>
@@ -3675,7 +3785,7 @@
                         <tr>
                             <td>Supérieure</td>
                             <td>La catégorie de poids diminue d'un cran<br/>La rupture augmente de 10</td>
-                            <td>+100%</td>
+                            <td>+50%</td>
                         </tr>
                         </tbody>
                     </table>
@@ -3687,7 +3797,7 @@
                         <th>Matériau</th>
                         <th>PR</th>
                         <th>PR magique</th>
-                        <th>Catégorie et Propriétés</th>
+                        <th>Propriétés</th>
                         <th>Rupture</th>
                         <th>ENC/pièce<br/>(armure complète)</th>
                         <th>Prix</th>
@@ -3696,7 +3806,7 @@
                         <td>Peau</td>
                         <td>0</td>
                         <td>1 glace</td>
-                        <td>Légère</td>
+                        <td>-</td>
                         <td>20</td>
                         <td>1(6)</td>
                         <td>20 membre/40 torse (140)</td>
@@ -3705,7 +3815,7 @@
                         <td>Cuir</td>
                         <td>0</td>
                         <td>1 feu</td>
-                        <td>Légère</td>
+                        <td>-</td>
                         <td>30</td>
                         <td>1(6)</td>
                         <td>25 membre/50 torse (175)</td>
@@ -3723,10 +3833,10 @@
                         <td>Acier</td>
                         <td>1</td>
                         <td>-</td>
-                        <td>Magique</td>
+                        <td>-</td>
                         <td>55</td>
                         <td>2(12)</td>
-                        <td>90 membre/180 torse (630)</td>
+                        <td>65 membre/130 torse (455)</td>
                     </tr>
                     <tr>
                         <td>Nilaroy</td>
@@ -3744,7 +3854,7 @@
                         <td>Magique</td>
                         <td>65</td>
                         <td>1(6)</td>
-                        <td>300 membre/600 torse (2100)</td>
+                        <td>120 membre/240 torse (840)</td>
                     </tr>
                     <tr>
                         <td>Kusni</td>
@@ -3753,7 +3863,7 @@
                         <td>Magique</td>
                         <td>55</td>
                         <td>1(6)</td>
-                        <td>500 membre/ 1000 torse(3500)</td>
+                        <td>150 membre/ 300 torse(1050)</td>
                     </tr>
                     <tr>
                         <td>Shoren</td>
@@ -3762,7 +3872,7 @@
                         <td>Magique</td>
                         <td>60</td>
                         <td>2(12)</td>
-                        <td>150 membre/300 torse (1050)</td>
+                        <td>120 membre/240 torse (840)</td>
                     </tr>
                     <tr>
                         <td>Orichalque</td>
@@ -3771,7 +3881,7 @@
                         <td>Magique</td>
                         <td>60</td>
                         <td>2(12)</td>
-                        <td>250 membre/500 torse (1750)</td>
+                        <td>120 membre/240 torse (840)</td>
                     </tr>
                     <tr>
                         <td>Lakma</td>
@@ -3780,7 +3890,7 @@
                         <td>Magique</td>
                         <td>65</td>
                         <td>1(6)</td>
-                        <td>500 membre/ 1000 torse(3500)</td>
+                        <td>150 membre/ 300 torse(1050)</td>
                     </tr>
                     <tr>
                         <td>Virgonium</td>
@@ -3789,7 +3899,7 @@
                         <td>Magique</td>
                         <td>70</td>
                         <td>2(12)</td>
-                        <td>600 membre/ 1200 torse(4200)</td>
+                        <td>200 membre/ 400 torse(1400)</td>
                     </tr>
                     <tr>
                         <td>Skymma</td>
@@ -3798,7 +3908,7 @@
                         <td>Magique</td>
                         <td>75</td>
                         <td>3(12)</td>
-                        <td>500 membre/ 1000 torse(3500)</td>
+                        <td>175 membre/ 350 torse(1225)</td>
                     </tr>
                     </tbody>
                 </table>
@@ -3806,32 +3916,16 @@
                 <table class="table_horizontal">
                     <tbody>
                     <tr>
+                        <th>Catégorie</th>
                         <th>Matériau</th>
                         <th>PR</th>
                         <th>PR magique</th>
-                        <th>Catégorie et Propriétés</th>
+                        <th>Propriétés</th>
                         <th>Rupture</th>
                         <th>ENC/pièce<br/>(armure complète)</th>
                         <th>Prix</th>
                     </tr>
-                    <tr>
-                        <td>Peau</td>
-                        <td>1</td>
-                        <td>1 glace</td>
-                        <td>Légère</td>
-                        <td>25</td>
-                        <td>2(12)</td>
-                        <td>20 membre/40 torse (140)</td>
-                    </tr>
-                    <tr>
-                        <td>Cuir</td>
-                        <td>1</td>
-                        <td>1 feu</td>
-                        <td>Légère</td>
-                        <td>35</td>
-                        <td>2(12)</td>
-                        <td>25 membre/50 torse (175)</td>
-                    </tr>
+                    <tr><th rowspan="3">Vêtements</th></tr>
                     <tr>
                         <td>Chitine</td>
                         <td>1</td>
@@ -3842,112 +3936,133 @@
                         <td>30 membre/60 torse (210)</td>
                     </tr>
                     <tr>
+                        <td>Kusni</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>Magique</td>
+                        <td>60</td>
+                        <td>1(6)</td>
+                        <td>150 membre/ 300 torse(1050)</td>
+                    </tr>
+                    <tr><th rowspan="8">Légère</th></tr>
+                    <tr>
+                        <td>Peau</td>
+                        <td>1</td>
+                        <td>1 glace</td>
+                        <td>-</td>
+                        <td>25</td>
+                        <td>2(12)</td>
+                        <td>20 membre/40 torse (140)</td>
+                    </tr>
+                    <tr>
                         <td>Bois</td>
                         <td>1</td>
                         <td>-</td>
-                        <td>Légère</td>
+                        <td>-</td>
                         <td>30</td>
                         <td>2(12)</td>
                         <td>15 membre/30 torse (105)</td>
                     </tr>
                     <tr>
+                        <td>Cuir</td>
+                        <td>1</td>
+                        <td>1 feu</td>
+                        <td>-</td>
+                        <td>35</td>
+                        <td>2(12)</td>
+                        <td>25 membre/50 torse (175)</td>
+                    </tr>
+                    <tr>
                         <td>Os</td>
                         <td>2</td>
                         <td>-</td>
-                        <td>Légère</td>
+                        <td>-</td>
                         <td>35</td>
                         <td>3(18)</td>
-                        <td>35 membre/60 torse (235)</td>
-                    </tr>
-                    <tr>
-                        <td>Fer</td>
-                        <td>3</td>
-                        <td>-</td>
-                        <td>Intermédiaire</td>
-                        <td>50</td>
-                        <td>3(18)</td>
-                        <td>50 membre/100 torse (350)</td>
+                        <td>30 membre/60 torse (210)</td>
                     </tr>
                     <tr>
                         <td>Nilaroy</td>
                         <td>3</td>
                         <td>1</td>
-                        <td>Légère, Magique</td>
+                        <td>Magique</td>
                         <td>55</td>
                         <td>2(12)</td>
                         <td>90 membre/180 torse (630)</td>
                     </tr>
                     <tr>
-                        <td>Acier</td>
-                        <td>4</td>
-                        <td>-</td>
-                        <td>Intermédiaire</td>
-                        <td>60</td>
-                        <td>3(18)</td>
-                        <td>75 membre/250 torse (525)</td>
-                    </tr>
-                    <tr>
                         <td>Gnistar</td>
                         <td>4</td>
                         <td>1</td>
-                        <td>Légère, Magique</td>
+                        <td>Magique</td>
                         <td>65</td>
                         <td>1(6)</td>
-                        <td>300 membre/600 torse (2100)</td>
-                    </tr>
-                    <tr>
-                        <td>Kusni</td>
-                        <td>4</td>
-                        <td>6</td>
-                        <td>Légère, Magique</td>
-                        <td>60</td>
-                        <td>1(6)</td>
-                        <td>500 membre/ 1000 torse(3500)</td>
-                    </tr>
-                    <tr>
-                        <td>Shoren</td>
-                        <td>5</td>
-                        <td>5 froid</td>
-                        <td>Intermédiaire, Magique</td>
-                        <td>65</td>
-                        <td>3(18)</td>
-                        <td>150 membre/300 torse (1050)</td>
-                    </tr>
-                    <tr>
-                        <td>Orichalque</td>
-                        <td>5</td>
-                        <td>2</td>
-                        <td>Intermédiaire, Magique</td>
-                        <td>65</td>
-                        <td>3(18)</td>
-                        <td>250 membre/500 torse (1750)</td>
+                        <td>120 membre/240 torse (840)</td>
                     </tr>
                     <tr>
                         <td>Lakma</td>
                         <td>5</td>
                         <td>5 foudre</td>
-                        <td>Légère, Magique</td>
+                        <td>Magique</td>
                         <td>70</td>
                         <td>1(6)</td>
-                        <td>500 membre/ 1000 torse(3500)</td>
+                        <td>150 membre/ 300 torse(1050)</td>
                     </tr>
+                    <tr><th rowspan="5">Intermédiaire</th></tr>
+                    <tr>
+                        <td>Fer</td>
+                        <td>3</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>50</td>
+                        <td>3(18)</td>
+                        <td>50 membre/100 torse (350)</td>
+                    </tr>
+                    <tr>
+                        <td>Acier</td>
+                        <td>4</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>60</td>
+                        <td>3(18)</td>
+                        <td>65 membre/130 torse (455)</td>
+                    </tr>
+                    <tr>
+                        <td>Shoren</td>
+                        <td>5</td>
+                        <td>5 froid</td>
+                        <td>Magique</td>
+                        <td>65</td>
+                        <td>3(18)</td>
+                        <td>120 membre/240 torse (840)</td>
+                    </tr>
+                    <tr>
+                        <td>Orichalque</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>Magique</td>
+                        <td>65</td>
+                        <td>3(18)</td>
+                        <td>120 membre/240 torse (840)</td>
+                    </tr>
+                    <tr><th rowspan="3">Lourde</th></tr>
                     <tr>
                         <td>Virgonium</td>
                         <td>6</td>
                         <td>6</td>
-                        <td>Lourde, Magique</td>
+                        <td>Magique</td>
                         <td>75</td>
-                        <td>5(30)</td>
-                        <td>600 membre/ 1200 torse(4200)</td>
+                        <td>4(24)</td>
+                        <td>200 membre/ 400 torse(1400)</td>
                     </tr>
                     <tr>
                         <td>Skymma</td>
                         <td>7</td>
                         <td>7 feu</td>
-                        <td>Lourde, Magique</td>
+                        <td>Magique</td>
                         <td>80</td>
-                        <td>5(30)</td>
-                        <td>500 membre/ 1000 torse(3500)</td>
+                        <td>4(24)</td>
+                        <td>175 membre/ 350 torse(1225)</td>
                     </tr>
                     </tbody>
                 </table>
@@ -3955,19 +4070,40 @@
                 <table class="table_horizontal">
                     <tbody>
                     <tr>
+                        <th>Catégorie</th>
                         <th>Matériau</th>
                         <th>PR</th>
                         <th>PR magique</th>
-                        <th>Catégorie et Propriétés</th>
+                        <th>Propriétés</th>
                         <th>Rupture</th>
                         <th>ENC/pièce<br/>(armure complète)</th>
                         <th>Prix</th>
                     </tr>
+                    <tr><th rowspan="3">Légère</th></tr>
+                    <tr>
+                        <td>Chitine</td>
+                        <td>3</td>
+                        <td>1 foudre</td>
+                        <td>-</td>
+                        <td>45</td>
+                        <td>2(12)</td>
+                        <td>40 membre/80 torse (280)</td>
+                    </tr>
+                    <tr>
+                        <td>Kusni</td>
+                        <td>5</td>
+                        <td>8</td>
+                        <td>Magique</td>
+                        <td>65</td>
+                        <td>2(12)</td>
+                        <td>200 membre/ 400 torse(1400)</td>
+                    </tr>
+                    <tr><th rowspan="8">Intermédiaire</th></tr>
                     <tr>
                         <td>Peau</td>
                         <td>2</td>
                         <td>2 glace</td>
-                        <td>Intermédiaire</td>
+                        <td>-</td>
                         <td>30</td>
                         <td>3(18)</td>
                         <td>30 membre/60 torse (210)</td>
@@ -3976,7 +4112,7 @@
                         <td>Bois</td>
                         <td>3</td>
                         <td>-</td>
-                        <td>Intermédiaire</td>
+                        <td>-</td>
                         <td>35</td>
                         <td>4(24)</td>
                         <td>20 membre/40 torse (140)</td>
@@ -3985,118 +4121,102 @@
                         <td>Cuir</td>
                         <td>3</td>
                         <td>1 feu</td>
-                        <td>Intermédiaire</td>
+                        <td>-</td>
                         <td>40</td>
                         <td>3(18)</td>
-                        <td>50 membre/100 torse (350)</td>
-                    </tr>
-                    <tr>
-                        <td>Chitine</td>
-                        <td>3</td>
-                        <td>1 foudre</td>
-                        <td>Légère</td>
-                        <td>45</td>
-                        <td>2(12)</td>
-                        <td>60 membre/120 torse (420)</td>
+                        <td>35 membre/70 torse (245)</td>
                     </tr>
                     <tr>
                         <td>Os</td>
                         <td>4</td>
                         <td>-</td>
-                        <td>Intermédiaire</td>
+                        <td>-</td>
                         <td>40</td>
                         <td>4(24)</td>
-                        <td>50 membre/100 torse (350)</td>
-                    </tr>
-                    <tr>
-                        <td>Fer</td>
-                        <td>5</td>
-                        <td>-</td>
-                        <td>Lourde</td>
-                        <td>55</td>
-                        <td>4(24)</td>
-                        <td>100 membre/200 torse (700)</td>
+                        <td>40 membre/80 torse (350)</td>
                     </tr>
                     <tr>
                         <td>Nilaroy</td>
                         <td>5</td>
                         <td>2</td>
-                        <td>Intermédiaire, Magique</td>
+                        <td>Magique</td>
                         <td>60</td>
                         <td>3(18)</td>
-                        <td>180 membre/360 torse (1260)</td>
-                    </tr>
-                    <tr>
-                        <td>Kusni</td>
-                        <td>5</td>
-                        <td>8</td>
-                        <td>Intermédiaire, Magique</td>
-                        <td>65</td>
-                        <td>2(12)</td>
-                        <td>750 membre/ 1500 torse(5250)</td>
-                    </tr>
-                    <tr>
-                        <td>Acier</td>
-                        <td>6</td>
-                        <td>-</td>
-                        <td>Lourde</td>
-                        <td>65</td>
-                        <td>4(24)</td>
-                        <td>150 membre/300 torse (1050)</td>
+                        <td>110 membre/220 torse (770)</td>
                     </tr>
                     <tr>
                         <td>Gnistar</td>
                         <td>6</td>
                         <td>2</td>
-                        <td>Intermédiaire, Magique</td>
+                        <td>Magique</td>
                         <td>70</td>
                         <td>2(12)</td>
-                        <td>500 membre/1000 torse (3500)</td>
-                    </tr>
-                    <tr>
-                        <td>Shoren</td>
-                        <td>7</td>
-                        <td>7 froid</td>
-                        <td>Lourde, Magique</td>
-                        <td>70</td>
-                        <td>4(24)</td>
-                        <td>250 membre/500 torse (1750)</td>
-                    </tr>
-                    <tr>
-                        <td>Orichalque</td>
-                        <td>7</td>
-                        <td>3</td>
-                        <td>Lourde, Magique</td>
-                        <td>70</td>
-                        <td>4(24)</td>
-                        <td>400 membre/800 torse (2800)</td>
+                        <td>150 membre/300 torse (1050)</td>
                     </tr>
                     <tr>
                         <td>Lakma</td>
                         <td>7</td>
                         <td>7 foudre</td>
-                        <td>Intermédiaire, Magique</td>
+                        <td>Magique</td>
                         <td>75</td>
                         <td>2(12)</td>
-                        <td>750 membre/ 1800 torse(5250)</td>
+                        <td>200 membre/ 400 torse(1400)</td>
                     </tr>
+                    <tr><th rowspan="5">Lourde</th></tr>
+                    <tr>
+                        <td>Fer</td>
+                        <td>5</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>55</td>
+                        <td>4(24)</td>
+                        <td>65 membre/130 torse (455)</td>
+                    </tr>
+                    <tr>
+                        <td>Acier</td>
+                        <td>6</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>65</td>
+                        <td>4(24)</td>
+                        <td>80 membre/160 torse (560)</td>
+                    </tr>
+                    <tr>
+                        <td>Shoren</td>
+                        <td>7</td>
+                        <td>7 froid</td>
+                        <td>Magique</td>
+                        <td>70</td>
+                        <td>4(24)</td>
+                        <td>150 membre/300 torse (1050)</td>
+                    </tr>
+                    <tr>
+                        <td>Orichalque</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>Magique</td>
+                        <td>70</td>
+                        <td>4(24)</td>
+                        <td>150 membre/300 torse (1050)</td>
+                    </tr>
+                    <tr><th rowspan="3">Super-Lourde</th></tr>
                     <tr>
                         <td>Virgonium</td>
                         <td>8</td>
                         <td>8</td>
-                        <td>Super-Lourde, Magique</td>
+                        <td>Magique</td>
                         <td>80</td>
-                        <td>6(36)</td>
-                        <td>900 membre/ 1800 torse(6300)</td>
+                        <td>5(30)</td>
+                        <td>250 membre/ 500 torse(1750)</td>
                     </tr>
                     <tr>
                         <td>Skymma</td>
                         <td>9</td>
                         <td>9 feu</td>
-                        <td>Super-Lourde, Magique</td>
+                        <td>Magique</td>
                         <td>85</td>
-                        <td>6(36)</td>
-                        <td>750 membre/ 1800 torse(5250)</td>
+                        <td>5(30)</td>
+                        <td>225 membre/ 450 torse(1575)</td>
                     </tr>
                     </tbody>
                 </table>
@@ -4154,130 +4274,139 @@
                 <div>
                     <p>Les boucliers sont utilisées pour se prémunir de toute sorte d'attaques. Puisqu'ils sont à mi-chemin entre les armes et les armures, ils suivent des règles spéciales.</p>
                     <p><span class="big_underline">Résistance de Bouclier :</span>Au lieu de posséder une valeur de Protection, les boucliers possède une résistance notée RB, qui prend en compte la solidité du bouclier et la surface qu'il couvre.</p>
-                    <p>Si lors d'un blocage réussit, les dégâts subis excèdent la RB, le défenseur subit l'intégralité des dégâts sur le bras qui tient le bouclier sauf s'il choisit de dépenser 2 PE pour bloquer l'attaque dans sa totalité. Le porteur de bouclier est ainsi capable de protéger son intégrité physique mais se fatiguer rapidement s'il ne fait que des blocages totaux.</p>
-                    <p>Les bouclier ci-dessous possèdent une variante nommée Grands Bouclier. Faire un blocage avec un grand bouclier devient une tâche Simple(+10) mais un tel bouclier est d'une catégorie de poids supérieure, possède un encombrement d'un point supérieur et coûte 25% plus cher.</p>
+                    <p>Si un bouclier est utilisé pour bloquer une attaque, que ce soit une attaque de mêlée, un projectile ou une explosion magique, il est nécessaire de tester sa RB face au dégâts subis par son propriétaire.
+                        <br/>Si les dégâts bloqués par le bouclier dépassent sa RB deux choix pour son utilisateur :</p>
+                    <ul>
+                        <li>Il peut dépenser un point d'endurance pour bloquer les dégâts en totalité.</li>
+                        <li>Il encaisse les dégâts restants sur la localisation de l'attaque.</li>
+                    </ul>
+                    <p>Les bouclier ci-dessous possèdent deux variantes :</p>
+                    <ul>
+                        <li><b>Grand Bouclier :</b> Faire un blocage avec un grand bouclier devient une tâche Simple(+10). Un tel bouclier possède une RB supérieure d'un point, est d'une catégorie de poids supérieure, possède un encombrement d'un point supérieur et coûte 25% plus cher.</li>
+                        <li><b>Petit Bouclier :</b> Un petit bouclier permet de se défendre via une parade avec un bonus de +10 mais ne permet pas de bloquer les projectiles. Un tel bouclier possède une RB inférieure d'un point, est d'une catégorie de poids inférieure et possède un encombrement d'un point inférieur.</li>
+                    </ul>
                     <p class="caption" id="table_bouclier">Bouclier</p>
                     <table class="table_horizontal">
                     <tbody>
                     <tr>
                         <th>Matériau</th>
-                        <th>PR</th>
-                        <th>PR magique</th>
+                        <th>RB</th>
                         <th>Catégorie</th>
+                        <th>Rupture</th>
                         <th>ENC</th>
                         <th>Prix</th>
                     </tr>
                     <tr>
                         <td>Peau</td>
-                        <td>6</td>
-                        <td>3 (4 glace)</td>
+                        <td>1</td>
                         <td>Léger</td>
+                        <td>30</td>
                         <td>2</td>
                         <td>30</td>
                     </tr>
                     <tr>
                         <td>Bois</td>
-                        <td>6</td>
-                        <td>3</td>
+                        <td>1</td>
                         <td>Léger</td>
+                        <td>35</td>
                         <td>2</td>
                         <td>20</td>
                     </tr>
                     <tr>
-                        <td>Os</td>
-                        <td>7</td>
-                        <td>4</td>
-                        <td>Léger</td>
-                        <td>2</td>
-                        <td>30</td>
-                    </tr>
-                    <tr>
                         <td>Chitine</td>
-                        <td>7</td>
-                        <td>4 (5 foudre)</td>
+                        <td>1</td>
                         <td>-</td>
+                        <td>45</td>
                         <td>1</td>
                         <td>60</td>
                     </tr>
                     <tr>
-                        <td>Cuir</td>
-                        <td>8</td>
-                        <td>4 (5 feu)</td>
+                        <td>Os</td>
+                        <td>1</td>
                         <td>Léger</td>
+                        <td>40</td>
+                        <td>2</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Cuir</td>
+                        <td>1</td>
+                        <td>Léger</td>
+                        <td>40</td>
                         <td>2</td>
                         <td>45</td>
                     </tr>
                     <tr>
                         <td>Fer</td>
-                        <td>9</td>
-                        <td>5</td>
+                        <td>2</td>
                         <td>Intermédiaire</td>
+                        <td>55</td>
                         <td>3</td>
                         <td>100</td>
                     </tr>
                     <tr>
                         <td>Nilaroy</td>
-                        <td>9</td>
-                        <td>6</td>
+                        <td>2</td>
                         <td>Léger, Magique</td>
+                        <td>60</td>
                         <td>1</td>
                         <td>130</td>
                     </tr>
                     <tr>
                         <td>Acier</td>
-                        <td>10</td>
-                        <td>5</td>
+                        <td>3</td>
                         <td>Intermédiaire</td>
+                        <td>65</td>
                         <td>3</td>
                         <td>150</td>
                     </tr>
                     <tr>
                         <td>Gnistar</td>
-                        <td>10</td>
-                        <td>6</td>
+                        <td>3</td>
                         <td>Léger, Magique</td>
+                        <td>70</td>
                         <td>1</td>
                         <td>400</td>
                     </tr>
                     <tr>
                         <td>Shoren</td>
-                        <td>11</td>
-                        <td>6 (11 froid)</td>
+                        <td>4</td>
                         <td>Intermédiaire, Magique</td>
+                        <td>70</td>
                         <td>3</td>
                         <td>300</td>
                     </tr>
                     <tr>
                         <td>Orichalque</td>
-                        <td>11</td>
-                        <td>7</td>
+                        <td>4</td>
                         <td>Intermédiaire, Magique</td>
+                        <td>70</td>
                         <td>3</td>
                         <td>400</td>
                     </tr>
                     <tr>
                         <td>Lakma</td>
-                        <td>11</td>
-                        <td>8 (11 foudre)</td>
-                        <td>Léger</td>
+                        <td>4</td>
+                        <td>Léger, Magique</td>
+                        <td>75</td>
                         <td>1</td>
-                        <td>700</td>
+                        <td>500</td>
                     </tr>
                     <tr>
                         <td>Virgonium</td>
-                        <td>12</td>
-                        <td>12</td>
+                        <td>6</td>
                         <td>Lourde, Magique</td>
+                        <td>80</td>
                         <td>4</td>
-                        <td>800</td>
+                        <td>650</td>
                     </tr>
                     <tr>
                         <td>Skymma</td>
-                        <td>13</td>
-                        <td>9 (13 feu)</td>
+                        <td>7</td>
                         <td>Lourde, Magique</td>
+                        <td>85</td>
                         <td>4</td>
-                        <td>700</td>
+                        <td>600</td>
                     </tr>
                     </tbody>
                 </table>

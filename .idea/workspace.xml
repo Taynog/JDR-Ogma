@@ -3,25 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sarpa.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sarpa.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sever.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sever.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sihir.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sihir.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Rules.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Rules.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
@@ -213,6 +197,16 @@
       <workItem from="1610718477773" duration="5926000" />
       <workItem from="1611559312167" duration="9236000" />
       <workItem from="1611936379011" duration="2064000" />
+      <workItem from="1612193249394" duration="201000" />
+      <workItem from="1614445384680" duration="91000" />
+      <workItem from="1614448382687" duration="318000" />
+      <workItem from="1614449765253" duration="226000" />
+      <workItem from="1614461978496" duration="2983000" />
+      <workItem from="1614509239014" duration="2955000" />
+      <workItem from="1614711147632" duration="23000" />
+      <workItem from="1615409017177" duration="30381000" />
+      <workItem from="1615564908011" duration="3946000" />
+      <workItem from="1617968040649" duration="11103000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
