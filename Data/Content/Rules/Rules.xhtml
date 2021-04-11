@@ -60,6 +60,7 @@
                         <li><span class="little"><a href="../Rules/Rules.xhtml#traits_perso">Traits de personnage</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#faveur_tychi">Faveurs de Tychi</a></span></li>
                         <li><span class="little"><a href="../Rules/Rules.xhtml#richesse_depart">Richesse de départ</a></span></li>
+                        <li><span class="little"><a href="../Rules/Rules.xhtml#progression_perso">Progression</a></span></li>
                     </ul></li>
                 <li><span class="little"><a href="../Rules/Rules.xhtml#Magie">Magie</a></span></li>
                 <li><span class="little"><a href="../Rules/Rules.xhtml#Combat">Combat</a></span></li>
@@ -316,6 +317,7 @@
                     </li>
                 </ol>
                 <p>La valeur moyenne d'une caractéristique varie entre 35 et 45. Plus la valeur est grande, plus la caractéristique est développée.</p>
+                <p>Les Origines humaines ne possèdes pas de bonus aux caractéristiques, en effet leur population est très variée et ils représentent en quelque sorte la norme de ce monde. Les Azumas, Severs et Tuskizis reçoivent 15 points de caractéristiques à investir par tranche de 5. Ces bonus représentent le development du personnage lors de son passé.</p>
                 <table id="table_carac_origine" class="table_horizontal">
                     <tbody>
                     <tr>
@@ -345,10 +347,10 @@
                     <tr>
                         <th>Force</th>
                         <td>25</td>
-                        <td class="bonus">35</td>
                         <td>25</td>
                         <td>25</td>
-                        <td class="malus">20</td>
+                        <td>25</td>
+                        <td class="malus">15</td>
                         <td class="bonus">35</td>
                         <td class="bonus">30</td>
                         <td class="bonus">40</td>
@@ -362,10 +364,10 @@
                         <th>Dextérité</th>
                         <td>25</td>
                         <td>25</td>
-                        <td class="bonus">35</td>
+                        <td>25</td>
                         <td class="bonus">40</td>
                         <td>25</td>
-                        <td>25</td>
+                        <td class="bonus">30</td>
                         <td>25</td>
                         <td class="malus">15</td>
                         <td>25</td>
@@ -378,7 +380,7 @@
                         <th>Agilité</th>
                         <td>25</td>
                         <td>25</td>
-                        <td class="bonus">30</td>
+                        <td>25</td>
                         <td class="bonus">35</td>
                         <td>25</td>
                         <td class="malus">15</td>
@@ -393,7 +395,7 @@
                     <tr>
                         <th>Vigueur</th>
                         <td>25</td>
-                        <td class="bonus">30</td>
+                        <td>25</td>
                         <td>25</td>
                         <td>25</td>
                         <td class="malus">15</td>
@@ -408,7 +410,7 @@
                     </tr>
                     <tr>
                         <th>Intelligence</th>
-                        <td class="bonus">35</td>
+                        <td>25</td>
                         <td>25</td>
                         <td>25</td>
                         <td>25</td>
@@ -424,7 +426,7 @@
                     </tr>
                     <tr>
                         <th>Volonté</th>
-                        <td class="bonus">30</td>
+                        <td>25</td>
                         <td>25</td>
                         <td>25</td>
                         <td>25</td>
@@ -460,10 +462,10 @@
                         <td>25</td>
                         <td>25</td>
                         <td class="malus">15</td>
+                        <td class="bonus">30</td>
                         <td>25</td>
-                        <td class="bonus">35</td>
                         <td>25</td>
-                        <td>25</td>
+                        <td class="bonus">30</td>
                         <td class="bonus">30</td>
                         <td>25</td>
                         <td>25</td>
@@ -629,11 +631,6 @@
                     <p>Cette vitesse peut être réduite par de nombreux effets comme la <a href="Rules.xhtml#table_fatigue">fatigue</a> ou le port d'une <a href="Rules.xhtml#table_capacite_port">charge trop lourde</a>.</p>
                 </div>
 
-                <h3 id="points_actions" onclick="hideContent(this)">Points d'action (PA)</h3>
-                <div>
-                    <p>Les points d'actions détermine la quantité d'actions que peut effectuer une personnage en un round de combat. Un personnage possède par défaut 3 PA.</p>
-                </div>
-
                 <h3 id="bonus_initiative" onclick="hideContent(this)">Bonus à l'initiative (BdIni)</h3>
                 <div>
                     <p>Le Bonus à l'Initiative est utilisé lors du jet d'initiative au début d'un combat, il est équivalent à : BdIni = BdAgi+BdInt+BdPer.</p>
@@ -660,7 +657,7 @@
                 <h3 id="langages" onclick="hideContent(this)">Langages</h3>
                 <div>
                     <p>Votre personnage sait parler sa langue d'origine et l'attribut Langages détermine le nombre de langue qu'il peut maîtriser. Cet attribut équivaut à son BdInt et la langue d'origine ne compte pas dans ce total. Votre personnage ne commencent pas forcément la partie avec le nombre maximal de langages qu'il peut maîtriser, cela dépend de son origine et des lieux où il a vécu.</p>
-                    <p>Certaines langues peu communes sont considérés comme exotiques, parmi elle le Kugarite, le Karnarak et le Sihiräll. Les langues exotiques comptent comme deux langages connus. Cf <a href="../World/Histoire_Ogma.xhtml#langages">Langages</a></p>
+                    <p>Certains langages possèdent des racines communes, permettant à ses pratiquants de communiquer même s'il n'ont aucune langues en commun. D'autres peu communes sont considérés comme exotiques, parmi elle le Kugarite, le Karnarak et le Sihiräll. Les langues exotiques comptent comme deux langages connus. Cf <a href="../World/Histoire_Ogma.xhtml#langages">Langages</a></p>
                 </div>
             </div>
 
@@ -1137,7 +1134,7 @@
             <p>Les Sarpas par exemple utilisent constamment la magie pour produire de la chaleur si ils ne peuvent pas profiter de celle des astres. On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
             <p>Pour utiliser la magie durant un combat, il faut avoir suffisamment de temps pour se concentrer. Si le lanceur est perturbé lors de la concentration du sort, il doit réussir un jet de Volonté basé sur la difficulté du sort pour le maintenir si il échoue, il perd son sort. La psyché est perdue lors de l'incantation du sort et non lors du lancement.</p>
             <p>Un sort peut être travaillé pendant de longues minutes pour produire des effets plus durables et puissants, un tel sort est appelé un rituel. Plus un rituel est long, plus les effets du sorts seront marquants et plus il nécessitera de psy et de force mentale pour être mené à bien. Un rituel possède des effets et un coût non-gérés par des règles strictes, c'est le MJ qui décide de l'impact en psy et sur le monde d'un rituel selon qui le lance et la durée d'incantation.</p>
-            <p>Résister ou éviter aux effets d'un sort peut nécessiter un jet de compétence ou de caractéristique. Les effets d'un test réussi varient en fonction des effets du sorts : le sort peut n'infliger que la moitié des dégâts, voir sa durée divisée par deux ou même n'avoir aucun effet. Si on subit les effets d'un sort sur une certaine période, il est possible d'effectuer à nouveau le test requis pour s'en libérer en dépensant 1 PA lors de son tour, le modificateur reste le même pour chaque réitération du test.</p>
+            <p>Résister ou éviter aux effets d'un sort peut nécessiter un jet de compétence ou de caractéristique. Les effets d'un test réussi varient en fonction des effets du sorts : le sort peut n'infliger que la moitié des dégâts, voir sa durée divisée par deux ou même n'avoir aucun effet. Si on subit les effets d'un sort sur une certaine période, il est possible d'effectuer à nouveau le test requis pour s'en libérer en dépensant son action lors de son tour, le modificateur reste le même pour chaque réitération du test.</p>
             <h3 onclick="hideContent(this)">Règles de créations des sorts</h3>
             <div>
                 <p>Un sort est défini par une forme et un effet choisis par le lanceur, c'est la forme, l'effet et la puissance qui déterminent le coût en psy du sort.</p>
@@ -1892,7 +1889,6 @@
                 <li><span class="big_underline">Temps structuré :</span>Cette échelle de temps est utilisée lorsque chaque seconde compte, en combat par exemple. Il est bien sûr possible d'effectuer un combat en temps narratif mais si c'est un moment important pour le groupe, le mieux est de le faire en temps structuré. La durée des effets de la magie est donnée en temps structurés, mais il est possible de passer en temps narratif pour allonger la durée de ces sorts.</li>
             </ul>
             <p>Les combats se déroulent selon des rounds d'une durée de 6 secondes. Les actions effectuées par les participants du combat se déroulent au même moment, mais il faut les résoudre chacune à la fois c'est pour cela que chacun agit lors de son tour de jeu.</p>
-            <p>Les combattants possèdent un certain nombre de <a href="Rules.xhtml#points_actions">Points d'Action (PA)</a> qu'ils récupèrent au début de leur tour de jeu et peuvent dépenser pour effectuer <a href="Rules.xhtml#types_actions">diverses actions</a> pendant leur tour ou celui des autres combattants.</p>
             <p>La durée des effets en combat est donnée en round. Si un personnage est <a href="Glossaire.xhtml#etourdi">étourdi</a> pendant 1 round, il reprendra ses esprits exactement 1 round après avoir subi cet effet.</p>
 
             <h3 id="deroulement_combat" onclick="hideContent(this)">Déroulement d'un combat</h3>
@@ -1945,8 +1941,8 @@
             <h3 id="style_combat" onclick="hideContent(this)">Style de combat</h3>
             <div>
                 <p>Les compétences de combat sont rassemblées dans les styles de combat qui représente la façon de combattre de chaque combattant, ses armes de prédilection, ses tactiques et son expérience du combat. Les styles de combat peuvent être associés à une culture, une carrière ou même une école.</p>
-                <p>Les style de combat sont représentés par la compétence : <a href="Rules.xhtml#style_combat_competence">Style de Combat [type]</a>, où le type est le nom du style de combat. Cette compétence est utilisée avec la caractéristique de Force ou de Dextérité pour effectuer des attaques ou se défendre en mêlée mais doit être utilisée avec la caractéristique de Dextérité pour effectuer des attaques à distance.</p>
-                <p>Chaque style de combat est associé à un certain nombre d'armes et de types d'armure avec lesquels le personnage est entraîné et apte à utiliser. Au niveau d'initié, un art du combat ne peut contenir que quatre types d'équipement différents, chaque palier d'expérience permet d'en ajouter un jusqu'à un maximum de 9 au rang de Maître.</p>
+                <p>Les style de combat sont représentés par la compétence : <a href="Rules.xhtml#style_combat_competence">Style de Combat [type]</a>, où le type est le nom du style de combat. Cette compétence est utilisée avec la caractéristique de Force ou de Dextérité pour attaquer ou se défendre en mêlée ainsi que pour les lancer d'arme de jet mais doit être utilisée avec la caractéristique de Dextérité pour effectuer des attaques à distance.</p>
+                <p>Chaque style de combat est associé à un certain nombre d'armes et de types d'armure avec lesquels le personnage est entraîné et apte à utiliser. Un novice maîtrise 4 types d'équipement, chaque palier d'expérience permet d'en ajouter un gratuitement jusqu'à un maximum de 8 au rang de Maître. Il est également possible d'ajouter un en dépensant 5 points d'XP.</p>
                 <p>Le combat à mains nues peut rentrer dans un style de combat sous le terme "Bagarre". Les armures sont divisées en quatre catégorie : légère, intermédiaire, lourde et super-lourde. Les armes sont divisés en de multiples catégories Cf <a href="Rules.xhtml#table_armes_cac">Armes</a>. Les boucliers ne forment qu'une seule et même catégorie malgré les différences de taille.</p>
                 <p>Utiliser de l'équipement avec lequel on manque d'entraînement ne permet pas de bénéficier de sa maîtrise de Style de Combat. Se battre dans une situation inhabituelle peut être une tâche Ardue(-10) voire Difficile(-20) : Un soldat habitué à se battre sur son cheval sera mal-à-l'aise s'il doit défendre sa vie face à un assassin dans sa propre maison; un noble combattant se retrouvant malgré dans une baston de bar aura du mal à trouver ses repère malgré son habileté à l'épée.</p>
                 <p>Voici quelques exemple de Style de combat :</p>
@@ -1978,8 +1974,8 @@
                 <h4>Étape 1 : Attaquer</h4>
                 <p>L'assaillant choisi sa cible, son style de combat et son arme avant de faire son jet d'attaque. Si l'arme choisie ne fait pas partie du style de combat choisi, le jet se base sur la Caractéristique de Force ou de Dextérité pure.</p>
                 <ul>
-                    <li><b>Attaque de mêlée :</b> L'assaillant fait un test de Style de combat en utilisant la Force ou la Dextérité contre une cible à la portée de son arme.</li>
-                    <li><b>Attaque à distance :</b> L'assaillant fait un test de Style de combat en utilisant la Dextérité contre une cible à la portée de son arme.</li>
+                    <li><b>Arme de mêlée et Arme de jet:</b> L'assaillant fait un test de Style de combat en utilisant la Force ou la Dextérité contre une cible à la portée de son arme.</li>
+                    <li><b>Arme à distance :</b> L'assaillant fait un test de Style de combat en utilisant la Dextérité contre une cible à la portée de son arme.</li>
                 </ul>
                 <h4>Étape 2 : Se défendre</h4>
                 <p>Le défenseur choisit la façon dont il va se défendre et le style de combat utilisé avant de faire son jet. Un personnage doit être conscient qu'il va subir une attaque et être en mesure d'agir pour pouvoir se défendre via une réaction. Il doit annoncer qu'il va se défendre avant que l'attaquant ne jette son dé.</p>
@@ -2140,7 +2136,7 @@
                         </tbody>
                     </table>
                     <p><b>Lutte :</b> Au lieu de faire une attaque classique, un personnage possédant la bagarre dans son style de combat peut lutter avec son adversaire pur essayer de le maîtrisé. Cela demande au personnage de passer un test de Style de Combat (mains nues) opposée au jet de son adversaire qui peut être un jet de Style de Combat (mains nues), d'Athlétisme, d'Acrobaties ou d'Esquive. S'il réussit, sa cible obtient l'état <a href="Glossaire.xhtml#maitrise">maîtrisé</a>. L'entité maîtrisé peut entreprendre l'action <a href="Types_actions.xhtml#resister">résister</a> pour se libérer.</p>
-                    <p>Lutter avec un adversaire plus grand que soi est une tâche Très Difficile(-30) et il est impossible de lutter avec une entité de deux tailles supérieures à la nôtre. tant que l'adversaire est maîtrisé, le personnage ne peut pas se déplacer mais peut intenter les actions suivantes (ce sont des actions principales coûtant chacune 1 PA) :</p>
+                    <p>Lutter avec un adversaire plus grand que soi est une tâche Très Difficile(-30) et il est impossible de lutter avec une entité de deux tailles supérieures à la nôtre. tant que l'adversaire est maîtrisé, le personnage ne peut pas se déplacer mais peut intenter les actions suivantes :</p>
                     <ul>
                         <li><strong>Plaquer au sol :</strong> Le personnage et sa cible tombent <a href="Glossaire.xhtml#a_terre">à terre</a>. Il ne subit pas les malus bien qu'il soit à terre pour frapper sa cible.</li>
                         <li><strong>Déplacement :</strong>Le personnage force sa cible à se déplacer sur une distance équivalente à : (BdFor Perso +2)- BdFor Cible mètres.</li>
@@ -2788,16 +2784,16 @@
                         <p><span class="big_underline">Duel :</span>Cette armes est faite pour le duel. Si vous remporter un test opposé de défense, vous infligez des dégâts à votre assaillant.</p>
                         <p><span class="big_underline">Empalement :</span>Cette arme interrompt le déplacement de quiconque perd de la vitalité suite à une attaque d'opportunité.</p>
                         <p><span class="big_underline">Excellence :</span>Cette arme est d'excellente facture. Le jet de dégâts se fait avec avantage. </p>
-                        <p><span class="big_underline">Fléau :</span>Cette arme frappe de façon imprévisible. Elle ne peut pas être utilisé pour se défendre mais il est impossible de s'en protéger sauf en bloquant avec un bouclier ou en parant.</p>
+                        <p><span class="big_underline">Fléau :</span>Cette arme frappe de façon imprévisible. Il est impossible de s'en protéger sauf en bloquant avec un bouclier. Si le résultat du porteur est un double (11,22,33,...), il se frappe lui-même et s'inflige des dégâts.</p>
                         <p><span class="big_underline">Lancer(Y/Z) :</span>Cette arme est suffisamment équilibrée pour être lancée. Y représente la portée effective et Z la portée maximale. Un lancer d'arme est traité comme uen attaque à distance normale (mais la force peut être utilisée pour le test de Style de Combat). Le dé de dégâts de l'arme augmente d'un <a href="Rules.xhtml#cran_des">cran</a> si elle est lancée</p>
                         <p><span class="big_underline">Lourde :</span>Cette arme possède un fort pouvoir d'arrêt et peut envoyer valser ses cibles. Si vous réussissez un coup à la tête, votre cible doit passer une épreuve de Résistance opposée à votre Force ou être repoussé de DRC mètres.</p>
                         <p><span class="big_underline">Magique :</span>Cette arme est capable de blesser toutes créatures normalement résistantes ou immunisées aux dégâts normaux. Une arme en Virgonium inflige des dégâts doublés aux entités éthérées.</p>
                         <p><span class="big_underline">Montée :</span>Cette arme n'est utilisable que depuis une monture pour des raisons de poids et de maniabilité. L'attaque se fait lors d'une charge.</p>
                         <p><span class="big_underline">Perce-Armure(X) :</span>Cette arme est d'une telle puissance qu'elle ignore X PR de la cible qu'importe les conditions. </p>
-                        <p><span class="big_underline">Petite :</span>Cette arme est relativement petite. Elle ne peut être utilisée pour parer les coups des armes maniées à deux mains, mais la dégainer ne coûte pas de PA. L'utilisateur peut passer un test de Roublardise pour dissimuler l'arme.</p>
-                        <p><span class="big_underline">Peu maniable :</span>Cette arme n'est pas facile à manier, il est Difficile(-20) de se défendre avec. </p>
+                        <p><span class="big_underline">Petite :</span>Cette arme est relativement petite. Elle ne peut être utilisée pour parer les coups des armes maniées à deux mains. L'utilisateur peut passer un test de Roublardise pour dissimuler l'arme.</p>
+                        <p><span class="big_underline">Peu maniable :</span>Cette arme n'est pas facile à manier, il est Difficile(-20) de se défendre quand on manie une tel arme.</p>
                         <p><span class="big_underline">Primitive :</span>Cette arme est d'une qualité pitoyable. Le jet de dégâts se fait avec désavantage.</p>
-                        <p><span class="big_underline">Rechargement(X)</span>Cette arme doit être rechargée avant d'être utilisée, le nombre de points d'actions nécessaire pour recharger l'arme est indiqué entre parenthèse.</p>
+                        <p><span class="big_underline">Rechargement(X)</span>Cette arme doit être rechargée avant d'être utilisée, le nombre d'actions nécessaires pour recharger l'arme est indiqué entre parenthèse. Le porteur peut dépenser son déplacement pour recharger son arme. Pour les armes à feu disposant de plusieurs canons, ce trait indique le temps de rechargement pour un canon.</p>
                     </div>
 
                     <h3 id="attributs_arme" onclick="hideContent(this)">Attributs des armes</h3>
@@ -2860,7 +2856,7 @@
                             <th>Portée</th>
                             <th>Propriétés</th>
                             <th>ENC</th>
-                            <th>Prix</th>
+                            <th>Prix (pa)</th>
                         </tr>
                         <tr><th colspan="8">Lames</th></tr>
                         <tr>
@@ -3239,7 +3235,7 @@
                             <th>Portée</th>
                             <th>Propriétés</th>
                             <th>ENC</th>
-                            <th>Prix</th>
+                            <th>Prix (pa)</th>
                         </tr>
                         <tr>
                             <td>Fronde</td>
@@ -3273,7 +3269,7 @@
                             <td>1d8</td>
                             <td>2M</td>
                             <td>150/300m</td>
-                            <td>Peu maniable</td>
+                            <td>Rechargement(1), Peu maniable</td>
                             <td>2</td>
                             <td>100</td>
                         </tr>
@@ -3282,7 +3278,7 @@
                             <td>1d10</td>
                             <td>2M</td>
                             <td>150/250m</td>
-                            <td>Rechargement(2), Peu maniable, Perce-armure(2)</td>
+                            <td>Rechargement(2 min 1), Peu maniable, Perce-armure(2)</td>
                             <td>2</td>
                             <td>120</td>
                         </tr>
@@ -3291,7 +3287,7 @@
                             <td>1d12</td>
                             <td>2M</td>
                             <td>200/300m</td>
-                            <td>Rechargement(4), Peu maniable, Perce-armure(4)</td>
+                            <td>Rechargement(3 min 1), Peu maniable, Perce-armure(4)</td>
                             <td>4</td>
                             <td>220</td>
                         </tr>
@@ -3300,7 +3296,7 @@
                             <td>1d6</td>
                             <td>1M</td>
                             <td>50/100m</td>
-                            <td>Rechargement(1), Pistolet</td>
+                            <td>Rechargement(1 min 1)</td>
                             <td>1</td>
                             <td>150</td>
                         </tr>
@@ -3533,7 +3529,7 @@
                             <th>Chargeur</th>
                             <th>Propriétés</th>
                             <th>ENC</th>
-                            <th>Prix</th>
+                            <th>Prix (pa)</th>
                         </tr>
                         <tr>
                             <th colspan="8">Armes de poing</th>
@@ -3580,12 +3576,12 @@
                         </tr>
                         <tr>
                             <td>Poivrière</td>
-                            <td>1d8</td>
+                            <td>1d6</td>
                             <td>1M</td>
                             <td>100/200m</td>
                             <td>6</td>
                             <td>Rechargement(2 min 1), Peu maniable, Perce-armure(2)</td>
-                            <td>4</td>
+                            <td>3</td>
                             <td>225</td>
                         </tr>
                         <tr>
@@ -3621,7 +3617,7 @@
                             <td>4</td>
                             <td>250</td>
                         </tr>
-                        <tr><td colspan="8">Toutes les armes à feu nécessitent de la poudre pour fonctionner (une dose par tir). Elles peuvent tirer des billes d'acier, d'argent ou de virgonium vendues par lot de 10 pour respectivement 15, 20 et 30 pa.</td></tr>
+                        <tr><td colspan="8">Toutes les armes à feu nécessitent de la poudre pour fonctionner (une dose par tir pour les armes de poing, deux pour les armes d'épaule). Elles peuvent tirer des billes d'acier, d'argent ou de virgonium vendues par lot de 10 pour respectivement 15, 20 et 30 pa.</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -3641,13 +3637,13 @@
                             <tr>
                                 <td>Lame dentelée</td>
                                 <td>En ajoutant un motif de vagues courant sur toute la lame, les blessures infligées peuvent être dévastatrices si le coup est bien placé.</td>
-                                <td>Si une attaque infligeant des dégâts tranchants inflige son maximum de dégâts, l'attaque inflige 1d4 de dégâts supplémentaire perce-armure.</td>
+                                <td>Sur un double (11,22,...), l'arme inflige 1d4 de dégâts supplémentaire.</td>
                                 <td>10 % du prix de l'arme</td>
                             </tr>
                             <tr>
                                 <td>Tranchant éternel</td>
                                 <td>Le travail acharné d'un forgeron peut rendre le tranchant d'une lame incroyablement fin et solide.</td>
-                                <td>L'arme fait un coup critique entre 1 et 8, si l'arme vient à être endommagé, ses dégâts ne sont pas réduits.</td>
+                                <td>Si l'arme vient à être endommagé, ses dégâts ne sont pas réduits.</td>
                                 <td>25 % du prix de l'arme</td>
                             </tr>
                             <tr>
@@ -3666,13 +3662,13 @@
                             <tr>
                                 <td>Destructrice</td>
                                 <td>Si l'on modifie la façon dont l'arme frappe sa cible, il devient possible de détruire plus facilement les armures de ses adversaires.</td>
-                                <td>Si l'attaque inflige des dégâts maximum, la protection de la pièce d'armure touché diminue de 1. L'effet est cumulable.</td>
+                                <td>Si l'attaque inflige des dégâts maximum, la protection de la pièce d'armure touché diminue de 1.</td>
                                 <td>15 % du prix de l'arme</td>
                             </tr>
                             <tr>
                                 <td>Brise-os</td>
                                 <td>Quelques pointes judicieusement placées augmentent les chance de briser les os de ses cibles.</td>
-                                <td>Sur un coup critique, la cible est <a href="Glossaire.xhtml#etourdi">étourdie</a> pendant 1 round par la douleur causée par le coup.</td>
+                                <td>Sur un double, la cible est <a href="Glossaire.xhtml#etourdi">étourdie</a> pendant 1 round par la douleur causée par le coup.</td>
                                 <td>20 % du prix de l'arme</td>
                             </tr>
                             <tr><th colspan="4">Amélioration de la poignée</th></tr>
@@ -3692,26 +3688,26 @@
                             <tr>
                                 <td>Baïonnette</td>
                                 <td>L'installation d'une lame en dessous du canon permet de se servir de son arme à feu comme d'une arme d'estoc.</td>
-                                <td>Possibilité d'effectuer une attaque de mêlée avec son arme à feu. (Atq 55 Prd 30 Dgt 1d6 à une main 1d8 à deux mains).</td>
+                                <td>Possibilité d'effectuer une attaque de mêlée avec son arme à feu.(Dgt 1d4 à une main 1d6 à deux mains).</td>
                                 <td>35 pa</td>
                             </tr>
                             <tr>
                                 <td>Gros calibre</td>
                                 <td>En installant un canon plus gros, il est possible d'utiliser des munitions plus grosses.</td>
-                                <td>Le dé de dégâts augmente d'un cran, augmente les risques d'échec critique de 5, si l'arme s'enraye suite à un échec critique de tir, l'arme doit passer un test de rupture, si elle échoue, l'arme explose.</td>
+                                <td>Le dé de dégâts augmente d'un <a href="Rules.xhtml#cran_des">cran</a>, sur un double l'arme s'enraye et doit passer un test de rupture, si elle échoue, l'arme explose. L'utilisateur doit dépenser le double d'actions nécessaires au rechargement pour pouvoir tirer à nouveau. L'arme nécessite une dose de poudre de plus par tir.</td>
                                 <td>10 % du prix de l'arme</td>
                             </tr>
                             <tr>
                                 <td>Petit calibre</td>
-                                <td>En installant un canon plus petit, on diminue le risque que l'arme s'enraye.</td>
-                                <td>Le dé de dégâts diminue d'un cran, les risques d'échec critique diminuent de 5, si l'arme s'enraye, il suffit de la recharger pour pouvoir tirer à nouveau.</td>
+                                <td>En installant un canon plus petit, on diminue la quantité de poudre nécessaire pour faire feu.</td>
+                                <td>Le dé de dégâts diminue d'un <a href="Rules.xhtml#cran_des">cran</a>, si l'arme vient à s'enrayer, il suffit de la recharger pour pouvoir tirer à nouveau. Dans le cas d'une arme d'épaule, l'arme consomme une dose de poudre de moins.</td>
                                 <td>10 % du prix de l'arme</td>
                             </tr>
                             <tr><th colspan="4">Amélioration globales</th></tr>
                             <tr>
                                 <td>Enchantement</td>
                                 <td>Il est possible de rendre une arme magique en l'infusant de Karnyx. L'arme devient alors capable de toucher des cibles immunisées aux armes classiques. Il est possible de faire d'une arme un catalyseur, permettant d'avoir recours à un ou plusieurs sorts sans en avoir forcément les capacités psychiques.</td>
-                                <td>L'arme obtient la propriété "Magique". L'utilisateur peut utiliser un ou plusieurs sorts contenus dans l'arme. Les sorts utilisés de cette manière requiert de la psyché.</td>
+                                <td>L'arme obtient la propriété "Magique". L'utilisateur peut utiliser un ou plusieurs sorts contenus dans l'arme. Les sorts utilisés de cette manière nécessitent de la psyché.</td>
                                 <td>150 po</td>
                             </tr>
                             <tr>
@@ -3742,17 +3738,17 @@
             <div>
                 <p>Les armures sont un élément très important dans l'équipement d'un personnage, surtout si c'est un combattant de mêlée. L'armure permet de réduire les dégâts subis, mais impose parfois des pénalités.</p>
                 <p>La plupart des armures possèdent une catégorie de poids représentant à quel point l'armure est lourde et gênante pour son porteur. Si un personnage porte plusieurs types d'armure, il subit les pénalités relatives à la pièce de plus lourde catégorie qu'il porte.</p>
-                <p><span class="big_underline">Légère :</span>l'armure légère ne gêne que très peu la mobilité du personnage, il subit un malus de -10 à ses tests d'Acrobaties.</p>
-                <p><span class="big_underline">Intermédiaire :</span>L'armure intermédiaire impose une pénalité moyenne sur la mobilité du personnage, il subit un malus de -10 sur ses tests d'Agilité et sa vitesse diminue de 1m.</p>
-                <p><span class="big_underline">Lourde :</span>L'armure lourde impose une grande pénalité sur la mobilité du personnage, il subit un malus de -20 sur ses tests d'Agilité et sa vitesse diminue de 2m.  </p>
-                <p><span class="big_underline">Super-lourde :</span>L'armure super-lourde impose une pénalité énorme sur la mobilité du personnage, il subit un malus de -30 sur ses tests d'Agilité et sa vitesse diminue de 3m.  </p>
+                <p><span class="big_underline">Légère :</span>l'armure légère ne gêne que très peu la mobilité du personnage, chaque pièce Légère inflige un malus de -1 aux tests d'Agilité.</p>
+                <p><span class="big_underline">Intermédiaire :</span>L'armure intermédiaire impose une pénalité moyenne sur la mobilité du personnage, chaque pièce Intermédiaire inflige un malus de -2 aux tests d'Agilité.</p>
+                <p><span class="big_underline">Lourde :</span>L'armure lourde impose une grande pénalité sur la mobilité du personnage, chaque pièce Lourde inflige un malus de -3 aux tests d'Agilité.</p>
+                <p><span class="big_underline">Super-lourde :</span>L'armure super-lourde impose une pénalité énorme sur la mobilité du personnage, chaque pièce Super-Lourde inflige un malus de -4 aux tests d'Agilité.</p>
                 <p>Les pièces d'armure couvrent le torse ou un membre (tête, bras G, bras D, jambes D, jambes G). Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation, d'un point de vue réaliste, on est sensé porté une cotte de maille sous une armure de plate, et un gambison rembourré sous cette cotte de maille, mais pour simplifier tout ça on part du principe que c'est inclus dans la protection offerte par l'armure de plate.</p>
                 <p>Chaque pièce d'armure possède une certaine valeur de protection (PR) qui réduit tout dégâts subit sur la zone qu'elle protège. Certaines armures possèdent une PR magique face à un type de dégâts (PR froid par exemple).</p>
                 <p>Il existe trois types d'armure :</p>
                 <ul>
                     <li><span class="big_underline">Tuniques renforcées :</span>Les protections de ce type sont plus proches des vêtements que des armures, ce sont de simples vêtements en tissu possédants ça et là des parties renforcées, elles offrent une protection minime mais ne gêne pas le porteur.</li>
                     <li><span class="big_underline">Armure partielle :</span>Les armures de ce type ne couvrent pas totalement la zone qu'elle protège, elle possède une protection moindre mais sont moins encombrante que leur version complète et souvent plus légères.</li>
-                    <li><span class="big_underline">Armure intégrale :</span>Les armures de ce type offre une meilleure protection mais sont plus lourde et encombrante. </li>
+                    <li><span class="big_underline">Armure intégrale :</span>Les armures de ce type offre une meilleure protection mais sont plus lourde et encombrante. Un casque intégral impose un malus de 10 aux tests de Perception.</li>
                 </ul>
                 <p>Un armure possède les attribut suivants :</p>
                 <ul>
@@ -4234,13 +4230,13 @@
                         <tr>
                             <td>Armure polie</td>
                             <td>Un traitement spécial à base d'aluminium permet de donner un aspect très brillant à l'armure.</td>
-                            <td>Dans un environnement très lumineux, le porteur de l'armure peut tenter d'éblouir ses adversaires (la cible doit réussir un jet de PER ou être <a href="Glossaire.xhtml#aveugle">aveuglée</a> pendant un round. En revanche, la lumière réfléchie par l'armure empêche de passer inaperçu.</td>
+                            <td>Dans un environnement très lumineux, le porteur de l'armure peut tenter d'éblouir ses adversaires (la cible doit rater un jet de PER ou être <a href="Glossaire.xhtml#aveugle">aveuglée</a> pendant un round. En revanche, la lumière réfléchie par l'armure empêche de passer inaperçu.</td>
                             <td>50 pa</td>
                         </tr>
                         <tr>
-                            <td>Armure assombrie</td>
-                            <td>Un traitement à base d'hématite (pour les armures de métal) ou de teinture (pour celles en cuir/tissu) permet d'assombrir l'armure pour être plus discret dans les zones peu éclairés. L'armure peut attirer l'attention des forces de l'ordre.</td>
-                            <td>Dans un environnement sombre, le porteur bénéficie d'un bonus à ses jets de furtivité (+2 pour le plastron, +1 pour le reste).</td>
+                            <td>Furtivité</td>
+                            <td>Un traitement à base d'hématite (pour les armures de métal) ou de teinture (pour celles en cuir/tissu) permet d'assombrir l'armure pour être plus discret dans les zones peu éclairés. L'armure peut attirer l'attention des forces de l'ordre. Quelques parties sont ajustées pour limiter le bruit de l'armure.</td>
+                            <td>Dans un environnement sombre, le porteur bénéficie d'un bonus de +2 à ses jets de furtivité.</td>
                             <td>35 pa</td>
                         </tr>
                         <tr>
@@ -4250,15 +4246,27 @@
                             <td>50 pa</td>
                         </tr>
                         <tr>
-                            <td>Armure confortable</td>
-                            <td>L'intérieur du plastron est légèrement rembourré pour permettre à son porteur de dormir dormir avec sans être trop dérangé.</td>
-                            <td>Pas de malus lorsque le porteur dort sans enlever son plastron. +5 pour résister au effets du climat liés aux températures basses.</td>
+                            <td>Rembourrage</td>
+                            <td>L'intérieur de l'armure est doublée d'une couche de tissu supplémentaire, rendant l'armure plus chaude et plus agréable à porter.</td>
+                            <td>Le porteur peut dormir confortablement dans son armure. Bonus de +5 pour résister au effets du climat liés aux températures basses.</td>
                             <td>20 pa</td>
                         </tr>
                         <tr>
-                            <td>Protection vitale</td>
-                            <td>L'armure protège une zone légèrement plus étendue que la normale pour éviter que son porteur ne se blesse gravement s'il subit une attaque bien placée</td>
-                            <td>Avantage au jet de rupture si l'effet du critique cible cette pièce d'armure.</td>
+                            <td>Poches</td>
+                            <td>Une multitude de poches et de bandoulières sont ajoutées sur la pièce armure, permettant au porteur d'accéder rapidement à certains objets.</td>
+                            <td>La capacité de port augmente de 1, le porteur peut utiliser les objets stockés dans ses poches en une seule action.</td>
+                            <td>10 pa</td>
+                        </tr>
+                        <tr>
+                            <td>Sangle</td>
+                            <td>Une sangle est ajoutée sur la pièce d'armure pour y servir de fourreau à une arme.</td>
+                            <td>Le porteur peut dégainer et attaquer dans la même action avec une arme sanglée à son armure.</td>
+                            <td>10 pa</td>
+                        </tr>
+                        <tr>
+                            <td>Renforcement</td>
+                            <td>L'armure est renforcée pour mieux résister aux chocs.</td>
+                            <td>Augmente la rupture de l'armure d'un montant équivalent au talent de l'artisan (max : +20)</td>
                             <td>10% du prix de l'armure</td>
                         </tr>
                         <tr>
