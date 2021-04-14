@@ -163,7 +163,7 @@
             <ul>
                 <li>subit X points de dégâts de feu sur la partie de son corps en train de brûler. Cette quantité de dégâts augmente de 1 par round. Si le personnage subit deux source de brûlure en même temps, les deux X se cumulent.</li>
                 <li>doit passer un test de Volonté avec un malus de 20 pour entreprendre une action autre que tente d'éteindre le feu.</li>
-                <li>peut tenter d'éteindre les flammes en se roulant au sol. Cette action coûte 1 PA et nécessite de passer un test d'Agilité avec un bonus de 20 et un malus de -10 par X au delà de 1. L'entité passe <a href="Glossaire.xhtml#a_terre">à terre</a> et perds l'état brûlure si le test est une réussite.</li>
+                <li>peut tenter d'éteindre les flammes en se roulant au sol. Cela consomme votre action pour ce tour et nécessite de passer un test d'Agilité avec un bonus de 20 et un malus de -10 par X au delà de 1. L'entité passe <a href="Glossaire.xhtml#a_terre">à terre</a> et perds l'état brûlure si le test est une réussite.</li>
             </ul>
         </div>
 
@@ -175,7 +175,13 @@
 
         <h3 id="confus" onclick="hideContent(this)">Confus</h3>
         <div>
-            <p>Le personnage récupère un PA de moins au début de son tour.</p>
+            <p>Le personnage ne peut faire qu'une action ou un déplacement lors de de son tour.</p>
+        </div>
+
+        <h3 id="empoisonnement" onclick="hideContent(this)">Empoisonnement(X)</h3>
+        <div>
+            <p>La créature est affecté par une toxine nocive et subit X points de dégâts non-réductibles au début de chacun de ses tour. Les dégâts du poison diminuent de 1 à la fin du tour de l'entité.</p>
+            <p>Il est possible d’arrêter l'Empoisonnement plus tôt en passant un test de Medicine (malus en fonction de la nocivité de la toxine) ou en utilisant un sort curatif. Lorsque deux sources infligent un empoisonnement, appliquez seulement celui infligeant le plus de dégâts.</p>
         </div>
 
         <h3 id="etourdi" onclick="hideContent(this)">Étourdi</h3>
@@ -185,7 +191,7 @@
 
         <h3 id="fascine" onclick="hideContent(this)">Fasciné</h3>
         <div>
-            <p>Une créature est fascinée par un sort ou un effet surnaturel. Tant que l’effet persiste, une créature fascinée reste assise ou debout, dans l’incapacité d’effectuer d’autre action que se concentrer sur l’effet en question. Elle reçoit un malus de -20 sur tout les jets. L’arrivée d’une menace potentielle (comme une créature hostile) donne droit à un nouveau jet pour contrer l’effet de fascination. Toute menace évidente, comme dégainer une arme, lancer un sort ou tirer sur la créature, rompt immédiatement l’effet de fascination. Pour 1 PA, il est possible de secouer une créature fascinée pour lui faire reprendre ses esprits.</p>
+            <p>Une créature est fascinée par un sort ou un effet surnaturel. Tant que l’effet persiste, une créature fascinée reste assise ou debout, dans l’incapacité d’effectuer d’autre action que se concentrer sur l’effet en question. Elle reçoit un malus de -20 sur tout les jets. L’arrivée d’une menace potentielle (comme une créature hostile) donne droit à un nouveau jet pour contrer l’effet de fascination. Toute menace évidente, comme dégainer une arme, lancer un sort ou tirer sur la créature, rompt immédiatement l’effet de fascination. En dépensant son action, il est possible de secouer une créature fascinée pour lui faire reprendre ses esprits.</p>
         </div>
 
         <h3 id="fatigue" onclick="hideContent(this)">Fatigué</h3>
