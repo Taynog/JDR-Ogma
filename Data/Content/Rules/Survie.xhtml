@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Survie</title>
+    <meta http-equiv="Content-Script-Type" content="application/javascript"/>
+    <script type="application/javascript" src="../../Javascript/fonctions_accueil_plan.js"> </script>
+    <link rel="stylesheet" type="text/css" title="style_plan" href="../../Styles/common_rules.css"/>
+    <link rel="icon" type="image/ico" href="../../../favicon.ico"/>
+</head>
+<body>
+<div id="mySidenav" class="sidenav" style="display: block">
+    <ul class="sidenav ">
+        <li><span class="index"><a href="../../../index.xhtml">Accueil</a></span></li>
+        <li><span class="partie" onclick="hideContent(this)">Lore</span>
+            <ul>
+                <li><span class="medium"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier" onclick="hideContent(this)">Origines</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Azuma.xhtml">Azuma</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sever.xhtml">Sever</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tuskizi.xhtml">Tuskizi</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Magiques</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Sakha.xhtml">Sakha</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sihir.xhtml">Sihir</a></span></li>
+                                <li><span class="little"><a href="../Factions/Steinn.xhtml">Steinn</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Bestiales</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Chono.xhtml">Chono</a></span></li>
+                                <li><span class="little"><a href="../Factions/Kanta.xhtml">Kanta</a></span></li>
+                                <li><span class="little"><a href="../Factions/Mushuk.xhtml">Mushuk</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sarpa.xhtml">Sarpa</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tori.xhtml">Tori</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
+            <ul>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#Attributs">Attributs</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#Competences">Compétences</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#traits_perso">Traits de personnage</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#faveur_tychi">Faveurs de Tychi</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#richesse_depart">Richesse de départ</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#progression_perso">Progression</a></span></li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Magie.xhtml">Magie</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Magie.xhtml#table_forme_sort">Forme des sorts</a> </span> </li>
+                        <li><span class="little"><a href="Magie.xhtml#table_alteration">École d'Altération</a> </span></li>
+                        <li><span class="little"><a href="Magie.xhtml#table_conjuration">École de Conjuration</a> </span></li>
+                        <li><span class="little"><a href="Magie.xhtml#table_domination">École de Domination</a> </span></li>
+                        <li><span class="little"><a href="Magie.xhtml#table_mysticisme">École du Mysticisme</a> </span></li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Combat.xhtml">Combat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Combat.xhtml#deroulement_combat">Déroulement d'un combat</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#tour_de_jeu">Tour de Jeu</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#reactions">Réactions</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#style_combat">Style de Combat</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#engagement">Engagement en mêlée</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#passe_armes">Passe d'Armes</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#combat_cac">Combat en mêlée</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#combat_distance">Combat à distance</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#blessures_mort">Blessures et mort</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Survie.xhtml">Survie</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Survie.xhtml#besoins_journaliers">Besoins journaliers</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Armes.xhtml">Armes</a></span></li>
+                        <li><span class="little"><a href="../Rules/Armures.xhtml">Armures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Armures.xhtml#boucliers">Boucliers</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
+                            </ul></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#traits">Traits</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Objets.xhtml#monnaie">Monnaie et conversions</a></span></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Objets</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#contenants">Contenants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#materiel_aventurier">Matériel</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Services</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#taverne">Taverne</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#transports">Transports</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#montures">Montures</a></span></li>
+                            </ul></li>
+                    </ul></li>
+            </ul>
+        </li>
+        <li><span class="nav_ajout"><a href="../Rules/Systeme.xhtml#form_ajout">Une proposition ?</a></span></li>
+    </ul>
+</div>
+<div id="main" class="main" style="margin-left: 200px">
+    <h1 id="Survie" onclick="hideContent(this)">Survie</h1>
+    <div>
+        <p>Partir à l'aventure n'est pas chose aisée, on risque gros si l'on néglige les nombreux risques des terres sauvages éloignées de toute civilisation. Un groupe d'aventuriers mal préparé s'expose aux climats difficiles, à la famine et à la soif, aux bêtes et monstres affamés.</p>
+        <h2 id="besoins_journaliers" onclick="hideContent(this)">Besoins journaliers</h2>
+        <div>
+            <h3 id="manger">Manger</h3>
+            <p>Un personnage a besoin de 500 g de nourriture par jour et peut faire durer sa réserve de nourriture plus longtemps en ne mangeant que des demi-rations. Manger 250 g de nourriture par jour compte comme un demi-jour sans nourriture.</p>
+            <p>Un personnage peut survivre sans nourriture pendant 3 jour. À la fin de chaque jour au-delà de cette limite, un personnage souffre automatiquement d'un niveau d'épuisement. Un jour passé en ayant mangé normalement remet le compteur de jours sans nourriture à zéro.</p>
+
+            <h3 id="boire">Boire</h3>
+            <p>Un personnage a besoin de 1,5 litres d'eau par jour par température normale, de 3 litres s'il fait chaud ou de 5 si il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de Vigueur ou gagner un niveau de <a href="Glossaire.xhtml#fatigue">fatigue</a>. Un personnage qui boit encore moins d'eau que cela gagne automatiquement un niveau de <a href="Glossaire.xhtml#fatigue">fatigue</a>.</p>
+
+            <h3 id="dormir">Dormir</h3>
+            <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent se reposer au milieu d'une journée d'aventure et établir un camp pour dormir en fin de journée.</p>
+            <h4 id="repos_court">Repos court</h4>
+            <p>Un repos court est une période de temps mort qui dure au moins 1 heure, et durant laquelle un personnage ne fait rien de plus demandant que manger, boire, lire ou panser ses plaies. Au terme d'un repos court, un personnage récupère naturellement BdVol+BdInt points de psy et peut choisir de récupérer un point d'endurance ou de supprimer un niveau de fatigue. Ces quantités peuvent varier selon les conditions du repos, si l'on utilise des sorts ou si l'on consomme certains aliments ou potions.</p>
+            <h4 id="repos_long">Repos long</h4>
+            <p> Un repos long est un période d'au moins 8 heures se déroulant dans un environnement calme et relativement sécurisé comme un campement. Au terme d'un repos long, un personnage récupère l'intégralité de sa psy et de son endurance ainsi que BdVig points de vitalité. La quantité de vitalité récupérée peut varier selon les conditions du repos, si l'on utilise des sorts ou si l'on consomme certains aliments ou potions.</p>
+            <h4 id="interlude_aventures">Interlude entre aventures</h4>
+            <p>Entre deux aventures, il est normal que des aventuriers souhaitent se reposer pendant plusieurs jours pour évacuer le stress et la pression accumulés lors de leurs péripéties. Un interlude se déroule la plupart du temps dans un lieu civilisé mais peut tout à fait prendre place ailleurs, sa durée varie en fonction des besoins narratifs du MJ et des envies des joueurs. C'est pendant cette période que les personnages peuvent s'entraîner pour acquérir de nouvelles compétences ou améliorer leur caractéristiques. On considère qu'au terme d'un interlude, un personnage récupère l'intégralité de son endurance, psy et vitalité.</p>
+
+
+            <h3 id="alcool">Alcool</h3>
+            <p>La consommation d'alcool est quelque chose à surveiller, si un peu de boisson peu faciliter les relations sociales, à de trop fortes doses, il peut nuire au consommateur abusif. Un aventurier tolère l'alcool comme tout un chacun, au delà d'une certaine limite, ses capacités cognitives commencent à faiblir jusqu'au point où le corps lui même s'effondre. Les doses d'alcool sont perdues au rythme d'une par heure.</p>
+            <div style="display: flex">
+                <table class="table_horizontal" style="flex: 1; padding: 3px; margin: 10px; max-width: 60%;" width="60%">
+                    <tbody>
+                    <tr>
+                        <th width="30%">Doses d'alcool ingérées</th>
+                        <th>Effet sur le personnage (cumulatifs)</th>
+                    </tr>
+                    <tr>
+                        <td>Échauffé : 1 à 2</td>
+                        <td>ELO +1</td>
+                    </tr>
+                    <tr>
+                        <td>Enivré : 3 à 5</td>
+                        <td>ELO +2 INT/Atq/Prd -1 </td>
+                    </tr>
+                    <tr>
+                        <td>Ivre : 6 à 8</td>
+                        <td>INT/Atq/Prd -2 VOL/AGI/PER/DEX -1</td>
+                    </tr>
+                    <tr>
+                        <td>Ivre mort : au delà de 8</td>
+                        <td>INT/Atq/Prd -3 VOL/AGI/PER/DEX -2</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table_horizontal" style="flex: 1; padding: 3px; margin: 10px; max-width: 40%;" width="40%">
+                    <tbody>
+                    <tr>
+                        <th>Type de boisson</th>
+                        <th>Dose d'alcool</th>
+                    </tr>
+                    <tr>
+                        <td>Verre de bière</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Verre de vin, de poiré ou de cidre/Chope de bière</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Verre à liqueur d'alcool fort, d'eau de vie</td>
+                        <td>3</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h2 id="voyage" onclick="hideContent(this)">Voyage</h2>
+        <div>
+            <p>Un aventurier est capable de marcher 8 heures par jour sans risquer la fatigue. Le déplacement normal à pied permet de couvrir 30 km/jour, soit 3,75 km par heure de marche.</p>
+            <p>Il est possible de parcourir plus de distance en marchant plus de 8 heures par jour ou en utilisant <a href="Objets.xhtml#transports">une monture ou un autre moyen de transport</a>.</p>
+            <p>Le terrain peut modifier cette distance : -25% dans les forêts et collines, -50% dans les montagnes et marécages</p>
+        </div>
+
+        <h2 id="eclairage" onclick="hideContent(this)">Éclairage</h2>
+        <div>
+            <p>Pour contrecarrer les ténèbres, il est possible de s'armer de différentes sources de lumière allant de la simple bougie à l'incantation de Safi. Toute les sources lumineuses n'éclairent pas de la même façon : la lumière vive permet de voir distinctement, au delà du rayon de lumière vive et jusqu'à celui de lumière faible, on ne peut distinguer que les structures et les objets les plus volumineux.</p>
+            <table class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th rowspan="2">Source de lumière</th>
+                    <th rowspan="2">Zone d'éclairage</th>
+                    <th colspan="2">Portée (en mètres)</th>
+                    <th rowspan="2">Durée de vie/Consommation</th>
+                </tr>
+                <tr>
+                    <th>Lumière vive</th>
+                    <th>Lumière faible</th>
+                </tr>
+                <tr>
+                    <td>Allumette</td>
+                    <td>Circulaire</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>20 s / 3 rounds</td>
+                </tr>
+                <tr>
+                    <td>Bougie</td>
+                    <td>Circulaire</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>2 heures</td>
+                </tr>
+                <tr>
+                    <td>Lampe</td>
+                    <td>Circulaire</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>3 cL d'huile/heure</td>
+                </tr>
+                <tr>
+                    <td>Torche</td>
+                    <td>Circulaire</td>
+                    <td>10</td>
+                    <td>25</td>
+                    <td>1 heure</td>
+                </tr>
+                <tr>
+                    <td>Lanterne</td>
+                    <td>Circulaire</td>
+                    <td>15</td>
+                    <td>35</td>
+                    <td>10 cL d'huile/heure</td>
+                </tr>
+                <tr>
+                    <td>Lanterne sourde</td>
+                    <td>Conique (90°)</td>
+                    <td>25</td>
+                    <td>60</td>
+                    <td>10 cL d'huile/heure</td>
+                </tr>
+                <tr>
+                    <td>Lumière de Safi</td>
+                    <td>Circulaire</td>
+                    <td>20</td>
+                    <td>50</td>
+                    <td>5 psy/heure</td>
+                </tr>
+                <tr>
+                    <td>Lumière éclatante de Safi</td>
+                    <td>Circulaire</td>
+                    <td>30</td>
+                    <td>70</td>
+                    <td>10 psy/heure</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="environnement" onclick="hideContent(this)">Environnement</h2>
+        <div>
+            <h3 id="biomes" onclick="hideContent(this)">Biomes</h3>
+            <div>
+                <p>Le monde d'Ogma est parsemé de biomes différents, certains sont cléments d'autres beaucoup moins. Il est possible de trouver de la nourriture et de l'eau potable dans la plupart de ceux-ci, mais la tâche est plus ardue dans une montagne gelée balayée par des blizzards plutôt que dans une plaine paisible.</p>
+                <h4>Steppes</h4>
+                <div>
+                    <p>Ce biome est assez répandu dans Ogma, souvent situé entre d'autres biomes plus particulier tels que des forêts ou des montagnes. C'est dans ces endroit que la majorité de la civilisation s'est developpée, l'accès à l'eau douce y est simple pour peu que l'on s'installe à proximité d'un cours d'eau ou d'un lac. Il est possible d'y faire de l'élevage ou de l'agriculture sans trop de difficultés. Le climat est doux au printemps, chaud en été et assez froid en hiver, avec suffisamment de précipitations pour assurer de la verdure sur la majorité du biome. Le Royaume Sever s'étend sur de grandes steppes, ne s'installant qu'au bord des fleuves et rivières, le nord du Sultanat est organisé de la même manière. La Vallée sauvage est plus sèche et infestée de Chonos, la vallée fabuleuse plus humide que cette dernière mais habité par les Sakhas.</p>
+                    <p>La survie dans ce genre d'environnement n'est pas bien difficile, on y trouve quantité d'animaux paisible à chasser, des plantes comestibles et médicinales, de l'eau sans trop avoir à chercher. La civilisation n'est jamais bien loin, les créatures dangereuses y sont donc assez rares.</p>
+                </div>
+
+                <h4>Marécages</h4>
+                <div>
+                    <p>Les Marécages d'Urdus sont un phénomène très intéressant, cette partie de Nashira est en dessous du niveau de la mer et est donc constamment inondé par les précipitations. Le sol est constamment gorgé d'eau les créatures y vivants se sont adaptés en devants amphibiennes ou ne se developpe que dans les endroits les plus secs. La vie est difficile est difficile dans de tels conditions, c'est pourquoi on ne retrouve que peu de créatures véritablement paisibles, la plupart étant capables de se défendre contre les menaces des marais.</p>
+                    <p>La plus grande menace des marécages réside dans l'instabilité des sols, il faut constamment prêter attention aux endroits traîtres des marais sous peine de s'embourber dans une tourbière ou pire, la tanière d'un monstre. La nourriture est rare et l'eau souvent insalubre, rendant ces lieux inhospitalier pour les aventuriers inexpérimentés.</p>
+                </div>
+
+
+                <h4>Forêts tempérés</h4>
+                <div>
+                    <p>La forêt de Marmur et le bois de l'Ombre en sont de très bons représentants. Ces régions boisés et les terres environnantes possèdent un climat assez agréable ni trop chaud en été, ni trop froid en hiver.</p>
+                    <p>Il est difficile de se déplacer dans une forêt si l'on sort des sentiers battus, on risque aussi de tomber nez à nez avec des créatures dangereuses vivants au plus profonds de la forêt telles que les Sakhas. Si l'on connaît quelques méthodes de chasses, on peut rapidement trouver du gibier comestible et délicieux, les points d'eau sont plus difficiles à trouver, il faut se contenter de minuscules ruisseaux d'eau claire.</p>
+                </div>
+
+                <h4>Toundra</h4>
+                <div>
+                    <p>Ces terres gelées ne se situent qu'au zones les plus au nord de Nashira et îles environnantes. Les températures extrêmement basses font régner en ces lieux un permafrost gelant les sols sur les premiers centimètres ce qui limite grandement la pousse des plantes. Les toundras reçoivent peu de précipitations mais le manque d'évaporation rend les terres légèrement marécageuses.</p>
+                    <p>Ces lieux sont inhospitalier, le manque de nourriture et d'eau liquide limite grandement la biodiversité. Les seuls animaux vivants dans ces régions s'y sont adaptés et sont donc fondamentalement différents des autres origines d'Ogma.</p>
+                </div>
+
+                <h4>Forêts boréales</h4>
+                <div>
+                    <p>Ces forêts remplies de conifères doivent supporter la neige plutôt que la pluie. La Forêt Blanche tire son nom de l'épais manteau blanc la recouvrant une grande partie de l'année, le Bois de cristal n'est enneigé que lors des hivers les plus rudes. Le climat est assez froid, il n'y pleut qu'en été, limitant la végétation à de grands arbres capables de résister aux basses températures et de puiser l'eau en profondeur.</p>
+                    <p>La progression est plus aisée dans une forêt boréale que dans les autres types de forêt, le manque de buisson et d'arbustes dans les sous bois accorde une meilleure visibilité bien que la cime des arbres bloquent souvent une bonne partie de la lumière des astres. La faune se fait plus rare dans ces forêts, s'abritant la plupart du temps sous terre ou cachée dans les plus hautes branches. Les bêtes y rôdant possèdent souvent une épaisse couche de graisse et de fourrure ce qui les rend difficile à abattre. L'eau est présente majoritairement sous sa forme solide, dans de petits étangs gelés par le froid</p>
+                </div>
+
+                <h4>Hautes Montagnes</h4>
+                <div>
+                    <p>Lorsque le relief devient trop important et l'altitude trop élevée, la faune et la flore se font plus rares jusqu'à devenir inexistantes sur les plus hauts pics. Qu'elles soient enneigés comme la Chaîne d'Hortak ou brûlantes comme les Monts Ardents, ces montagnes sont le territoire des Steinns et bien rares sont les autres factions à s'y être installés</p>
+                    <p>Le terrain étant souvent accidenté et dénué de routes convenables, les montagnes ralentissent considérablement le voyage d'un groupe aussi restreint soit-il. Les nombreuses grottes et cavernes forment parfois un réseau souterrain permettant de raccourcir les trajets à condition de bien les connaître. L'eau liquide est presque introuvable en ces lieux mais il est possible de faire fondre de la neige ou de la glace pour en obtenir. Le gibier ne simplifie pas la tâche des chasseurs de par leur pelage souvent de la couleur des sols.</p>
+                </div>
+
+                <h4>Déserts</h4>
+                <div>
+                    <p>Qu'ils soient de sable comme les Terres Écarlates de glace, comme l'Archipel Givré ou bien de pierre comme les Étendues mortelles, les déserts ne sont pas des endroit favorable pour la vie. Les températures extrêmes et le manque d'eau ont créés des espèces bien particulières capables de survivre dans de telles conditions. La majorité des créatures qui errent dans ces lieux sont solitaires et quelque peu aggressive, ne pouvant laisser une source de nourriture s'échapper.</p>
+                    <p>La navigation est ardue dans les désert de par l'absence de repères visuels, tout n'est qu'un même paysage uniforme à perte de vue, la rareté des lieux marquants et le manque de précision des cartes font des désert un lieu parfait pour se perdre ou bien se cacher. Il est très difficile de subvenir à ses besoins dans cet environnement, la nourriture est difficile à obtenir les animaux étant trop petit ou trop dangereux, l'eau est rarissime et même y dormir n'est pas simple à cause des températures glaciales la nuit.</p>
+                </div>
+
+                <h4>Savane</h4>
+                <div>
+                    <p>Ces plaines chaudes caractéristiques du climat du Sultanat, la savane forme une bande d'Ishta jusqu'à Ereso. Deux saisons s'y enchaîne inlassablement, sèche du début jusqu'à la mi-année, humide le rest du temps. La saison des pluie permet le développement d'arbres épars apportant un peu d'ombre aux nombreux mammifères peuplant ces terres. La plupart des animaux peuplant ces lieux vivent en groupe, qu'ils soient prédateurs ou proies.</p>
+                    <p>Ce genre de terrain est facile à parcourir puisque en dehors des quelques arbres et buissons, le sol est recouvert d'herbe rase. Les plantes possèdent des racines profondes pour puiser l'eau lors de la saison sèche, il est assez facile de reconnaitre les racines comestibles si l'on s'y connait un peu. L'eau en revanche peut être un problème, les point d'eau sont rares mais il est possible de toujours en avoir sur son chemin grâce à un voyage bien préparé.</p>
+                </div>
+
+                <h4>Forêts tropicales</h4>
+                <div>
+                    <p>Les vent soufflants sur la côtes Est d'Antoraï apportent avec eux l'humidité de l'océan, permettant ainsi à la Forêt Éternelle de s'entendre toujours plus. Les Jardins d'Ébène et le Refuge Bleu sont recouvert d'importantes forêts luxuriantes débordantes de vie animale et florale.</p>
+                    <p>Ces forêts sont denses, il est difficile de les parcourir. La faune et la flore y sont très diversifié, souvent méconnues et parfois dangereuses. De par l'humidité abondante en ces lieux, il n'est pas difficile d'y trouver de l'eau potable, la nourriture est plus ardue à trouver car il faut éviter les plantes toxiques et les animaux les plus fréquents sont des insectes rarement comestibles.</p>
+                </div>
+
+                <h4>Océans</h4>
+                <div>
+                    <p>Les grandes étendues d'eau d'Ogma sont calmes la plupart du temps et il est simple de les traverser par bateau. Quand Nero et Aïgida s'allient pour faire surgir d'immenses vagues lors de terribles tempêtes, les traverser est une autre affaire.</p>
+                    <p>La pêche représente l'activité principale des origines civilisées sur ces territoires. Les poissons y pullulent près des côtes comme en haute mer, mais il faut prendre garde à ne pas éveiller les créatures tapis dans les abysses noires de l'océan.</p>
+                </div>
+            </div>
+
+            <h3 id="climat_vent" onclick="hideContent(this)">Climats et vents</h3>
+            <div>
+                <p>Il arrive que le temps joue un rôle important dans une aventure. La table ci-dessous tient lieu des aléas du temps. Le sens des termes employés dans ce tableau est expliqué plus bas.</p>
+                <p id="table_climat" class="caption" onclick="hideContent(this)">Climats</p>
+                <div class="hidden">
+                    <table class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>d100</th>
+                            <th>Temps</th>
+                            <th>Région froide</th>
+                            <th>Région tempérée*</th>
+                            <th>Désert</th>
+                        </tr>
+                        <tr>
+                            <td>01–70</td>
+                            <td>Normal</td>
+                            <td>Froid, temps calme</td>
+                            <td>Normal pour la saison**</td>
+                            <td>Très chaud, temps calme</td>
+                        </tr>
+                        <tr>
+                            <td>71-80</td>
+                            <td>Mauvais</td>
+                            <td>Neige</td>
+                            <td>Précipitations</td>
+                            <td>Très chaud, venteux</td>
+                        </tr>
+                        <tr>
+                            <td>81-90</td>
+                            <td>Tempête</td>
+                            <td>Tempête de neige</td>
+                            <td>Orage, tempête de neige(hiver)</td>
+                            <td>Tempête de sable</td>
+                        </tr>
+                        <tr>
+                            <td>91-100</td>
+                            <td>Violente tempête</td>
+                            <td>Blizzard</td>
+                            <td>Tornade, Ouragan(Été), Blizzard(hiver)</td>
+                            <td>Trombes d'eau</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">* Les régions tempérées comprennent les forêts, collines, marécages, montagnes, plaines et mers chaudes.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">** Froid pendant l’hiver, chaud pendant l'été, tempéré pendant l'automne et le printemps. En hiver, les régions marécageuses sont toujours légèrement plus chaudes que les autres.</td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                    <h4>Températures</h4>
+                    <p> <span class="underline">Froid :</span> de -15° C à 5° C le jour, 5° C à 10° C de moins la nuit.<br/><span class="underline">Tempéré :</span> de 5° C à 15° C pendant le jour, 5° C à 10° C de moins pendant la nuit.<br/><span class="underline">Chaud :</span> de 15° C à 30° C le jour, 5° C à 10° C de moins la nuit.<br/><span class="underline">Très chaud :</span> de 30° C à 45° C le jour, 5° C à 10° C de moins la nuit.</p>
+
+                    <h4>Temps</h4>
+                    <p><span class="underline">Précipitations :</span> jetez 1d100 afin de savoir si les précipitations prennent la forme de brouillard (01–30), de pluie ou de neige (31–90), ou de neige fondue ou de grêle (91–00). La neige ne peut se former qu’en cas de température inférieure à 0° C. La plupart des types de précipitations tombent durant 2d4 heures, à l’exception de la grêle (1d20 minutes seulement, mais elle s’accompagne généralement de 1d4 heures de pluie).</p>
+                    <p><span class="underline">Tempête (de sable, de neige, orage) :</span> les vents sont violents (50 à 80 km/h) et la visibilité diminuée de 75 %. Une tempête sévit pendant 2d4-1 heures.</p>
+                    <p><span class="underline">Temps calme :</span> Très faible vent (de 0 à 15 km/h).</p>
+                    <p><span class="underline">Trombes d’eau :</span> semblables à la pluie (voir « Précipitations », ci-dessus), mais leur violence est telle qu’elles limitent le champ de vision comme le brouillard. Elles peuvent provoquer des inondations. Les trombes d’eau durent pendant 2d4 heures.</p>
+                    <p><span class="underline">Venteux :</span> Vent moyen (15 à 30 km/h) ou important (30 à 50 km/h).<br/><span class="underline">Violente tempête (blizzard, tornade) :</span> la vitesse des vents s’élève au dessus de 80 km/h. De plus, il se joint aux blizzards d’importantes chutes de neige (1d3 x 30 cm) et aux ouragans des trombes d’eau (voir ci-dessus). Un blizzard persiste 1d3 jours. Un ouragan peut parfois durer jusqu’à une semaine, mais il aura principalement de l’impact sur les personnages de vingt-quatre à quarante-huit heures, le temps que sa partie centrale traverse la région où se trouve le groupe. Quand à la tornade, elle possède une durée de vie extrêmement réduite (1d6 x 10 minutes). Généralement, elle se forme dans le cadre d’un orage.</p>
+
+                    <h4>Tempêtes</h4>
+                    <p>L’effet combiné du vent et des précipitations (ou du sable soulevé) diminue la visibilité de trois quarts, ce qui se traduit par un malus de -40 aux tests de Perception. Les attaques à distance sont impossibles, excepté à l’aide de machines de guerre (et encore se font-elles à -20). Les flammes à l’air libre sont instantanément éteintes, et celles qui sont protégées (lanternes, etc.) ont 50 % de chances d’être soufflées. Les tempêtes sont réparties en trois familles : tempêtes de sable, tempêtes de neige et orages.</p>
+                    <p><span class="underline">Tempête de sable :</span> Cette sorte de tempête est semblable aux autres à la différence qu’elle ne s’accompagne pas de précipitations. Au lieu de cela, le vent soulève le sable du désert, et c’est ce dernier qui réduit le champ de vision, étouffe les flammes à l’air libre et a 50 % de chances d’éteindre celles qui sont protégées. La plupart des tempêtes de sable sont accompagnées de vents violents et laissent derrière elles une couche de sable plus ou moins épaisse (1d6 x 2,5 cm). Chaque tempête de sable a toutefois 10 % de risques d’être d’une intensité bien supérieure à la normale, auquel cas elle s’accompagne de vents de tempête. Quiconque se trouve à découvert lorsqu’elle se déclenche subit 1d3 points de dégâts par round et risque d’étouffer (voir noyade, si ce n’est qu’un personnage se protégeant la bouche et le nez, par exemple avec une écharpe, ne commence à étouffer qu’après un nombre de rounds égal à deux fois sa valeur de Vigueur). Une tempête de sable aussi virulente laisse plusieurs dizaines de centimètres de sable sur son passage (jetez 2d3-1 et multipliez le résultat par 30 cm pour savoir l’épaisseur exacte).</p>
+                    <p><span class="underline">Tempête de neige</span> En plus des vents et des précipitations, cette tempête dépose plusieurs centimètres de neige sur son passage (1d6 x 2,5 cm).</p>
+                    <p><span class="underline">Orage :</span> En plus des vents et des précipitations (qui prennent le plus souvent la forme de pluie, même si les orages de grêle sont possibles), les orages s’accompagnant d’éclairs représentent un danger potentiel pour les personnages se trouvant à découvert quand les éléments se déchaînent (surtout pour ceux qui portent une armure métallique). Pour simplifier, considérez que la foudre frappe une fois par minute près du centre de l’orage, et ce pendant une heure. Chaque éclair inflige un nombre de points de dégâts d’électricité compris entre 4d8 et 10d8. Un orage sur dix se change en tornade.</p>
+
+                    <h4>Tempêtes violentes</h4>
+                    <p>Les vents extrêmement violents et la pluie battante (ou la neige cinglante) qui caractérisent ce type de condition climatique diminue la visibilité jusqu’à zéro, ce qui rend impossible les attaques à distance et les tests de Perception. Les flammes non protégées sont systématiquement éteintes, et même les autres ont 75 % de risques de l’être. Les créatures surprises à découvert doivent réussir un jet de vigueur(avec un malus de 25) pour ne pas être affectées par l’effet des vents.</p>
+                    <p><span class="underline">Tornade :</span> En plus de la violence terrible de leurs vents, les tornades peuvent gravement blesser, voir tuer quiconque se retrouve pris dans les bourrasques.</p>
+                    <p><span class="underline">Ouragan :</span> En plus de la violence terrible de leurs vents et de leurs précipitations, les ouragans s’accompagnent souvent de crues éclair (voir inondations). Les individus pris à découvert ne peuvent pas faire grand-chose d’autre que d’essayer de trouver un abri au plus vite.</p>
+                    <p><span class="underline">Blizzard :</span> Le mélange de vents très violents, d’importantes chutes de neige (généralement 1d3 x 30 cm, voir Pluie, neige, neige fondue et grêle) et de froid font que les blizzards constituent une terrible menace pour quiconque se laisse surprendre.</p>
+                </div>
+
+                <p id="table_vents" class="caption" onclick="hideContent(this)">Effets du vent</p>
+                <div  class="hidden">
+                    <table class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Force du Vent</th>
+                            <th>Vitesse du Vent (km/h)</th>
+                            <th>Attaque à distance/machines de guerre</th>
+                            <th>Taille des créatures affectées*</th>
+                            <th>Taille des créatures emportées**</th>
+                            <th>Malus de vol</th>
+                        </tr>
+                        <tr>
+                            <td>Léger</td>
+                            <td>0-15</td>
+                            <td>-/-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Modéré</td>
+                            <td>16-30</td>
+                            <td>-/-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Important</td>
+                            <td>31-45</td>
+                            <td>-10/-</td>
+                            <td>TP</td>
+                            <td>-</td>
+                            <td>-10</td>
+                        </tr>
+                        <tr>
+                            <td>Violent</td>
+                            <td>46-75</td>
+                            <td>-20/-</td>
+                            <td>P</td>
+                            <td>TP</td>
+                            <td>-20</td>
+                        </tr>
+                        <tr>
+                            <td>Tempête</td>
+                            <td>76-120</td>
+                            <td>Impossible/-20</td>
+                            <td>M</td>
+                            <td>P</td>
+                            <td>-40</td>
+                        </tr>
+                        <tr>
+                            <td>Ouragan</td>
+                            <td>121-280</td>
+                            <td>Impossible/Impossible</td>
+                            <td>G</td>
+                            <td>M</td>
+                            <td>-60</td>
+                        </tr>
+                        <tr>
+                            <td>Tornade</td>
+                            <td>281-500</td>
+                            <td>Impossible/Impossible</td>
+                            <td>TG</td>
+                            <td>G</td>
+                            <td>-80</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">* Les créatures de cette taille et les créatures de taille inférieure sont incapables d’avancer contre le vent à moins de réussir un test de Force sans malus si elles se trouvent au sol ou malus de 30 si elles volent.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">** Les créatures terrestres sont renversées et roulent sur 1d4 x 3 mètres, ce qui leur inflige 1d4 points de dégâts par tranche de 3 mètres à moins de réussir un test de Force avec un malus de 25. Les créatures volantes sont repoussées sur 2d6 x 3 mètres, tandis que les vents violents leur infligent 2d6 points de dégâts à moins de réussir un test de Vol avec un malus de 60.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <span class="big_underline">Vent léger :</span> légère brise sans effets en termes de jeu.<br/>
+                    <span class="big_underline">Vent modéré :</span> vent soutenu ayant 50 % de chances de souffler les petites flammes non protégées, comme celles des bougies.<br/>
+                    <span class="big_underline">Vent important :</span> vent soutenu accompagné de rafales plus violentes, éteignant systématiquement les flammes non protégées (bougies, torches, etc.). Donne un malus de -10 aux attaques à distance et aux tests de Perception.<br/>
+                    <span class="big_underline">Vent violent (grand vent) :</span> éteint systématiquement toutes les flammes non protégées et fait danser follement celles qui sont protégées (lanternes, etc.), en ayant 50 % de chances de les souffler. Les jets d’attaque à distance et les tests de Perception reçoivent un malus de -20.<br/>
+                    <span class="big_underline">Vent de tempête :</span> suffisamment violent pour faire tomber les branches, voire les arbres malades ; souffle systématiquement les flammes non protégées et a 75 % de chance d’éteindre celles qui le sont. Il est impossible d’attaquer à distance, les machines de guerre recevant pour leur part un malus de -20. Les hurlements du vent donnent un malus de -40 aux tests de Perception basés sur l’ouïe.<br/>
+                    <span class="big_underline">Ouragan :</span> toutes les flammes sont systématiquement soufflées et il est impossible d’attaquer à distance (sauf pour les machines de guerre, et encore le font-elles à -40). Les tests de Perception basés sur l’ouïe échouent forcément; on n’entend rien d’autre que le hurlement du vent, devant lequel même les arbres en bonne santé risquent de se coucher.<br/>
+                    <span class="big_underline">Tornade :</span> toutes les flammes sont instantanément soufflées et il est impossible d’attaquer à distance, même pour les machines de guerre. Les tests de Perception basés sur l’ouïe échouent automatiquement. Au lieu d’être emportés au loin, les personnages se situant trop près de la tornade sont au contraire aspirés. Ceux qui entrent en contact avec l’œil de la tornade, c’est-à-dire le tourbillon autour duquel celle-ci s’enroule, sont projetés dans les airs et secoués en tous sens pendant 1d10 rounds, ce qui leur inflige 4d6 points de dégâts par round, après quoi ils sont violemment expulsés (subissant du même coup des dégâts proportionnels à la hauteur de chute). La vitesse de rotation de la tornade peut atteindre les 500 km/h, mais l’œil est bien plus lent (50 km/h environ, soit dans les 75 m par round). Une tornade déracine les arbres, ravage les bâtiments et cause d’autres dégâts similaires.<br/>
+                </div>
+            </div>
+
+            <h3 id="dangers_naturels" onclick="hideContent(this)">Dangers naturels</h3>
+            <div>
+                <h4>L'acide</h4>
+                <p>L’acide inflige 1d6 points de dégâts par round d’exposition, excepté dans le cas d’une immersion totale (qui peut par exemple se produire si un aventurier tombe dans une grande vasque), laquelle occasionne 5d6 points de dégâts par round. Une attaque acide (salive de monstre, flasque lancée à la main, etc.) représente un round d’exposition.</p>
+                <p>Les émanations libérées par la plupart des acides ont l’effet d’un poison fonctionnant par inhalation. Quiconque s’approche trop d’une vaste étendue d’acide doit réussir à chaque round un jet de vigueur sous peine de subir un affaiblissement temporaire de 5 point de Vigueur par round. Ce poison n’a pas de fréquence, et n’agit plus dès qu’on s’en éloigne.</p>
+                <p>Les créatures immunisées contre l’acide risquent tout de même s’y noyer si elles sont totalement immergées.</p>
+
+                <h4>L'asphyxie</h4>
+                <p>Un personnage n’ayant plus d’air à respirer peut retenir son souffle 1 round par 3 point de Vigueur. S'il entreprend une action simple ou une action complexe, le temps pendant lequel il peut retenir sa respiration est réduit d'un round.</p>
+                <p>Au-delà, il doit tenter un test de Vigueur chaque round pour continuer à retenir son souffle. Le premier test n'a pas de malus, puis le malus augmente de 5 à chaque round. Dès que le personnage manque un de ces tests, il commence à suffoquer. Au premier round, il perd connaissance et tombe à 0 pv. Le deuxième round, il glisse à -1 pv et est considéré comme <a href="Glossaire.xhtml#mourant">mourant</a>. Enfin, le troisième round, il meurt asphyxié.</p>
+                <p><span class="underline">Asphyxie lente :</span> Dans une pièce hermétiquement close de 3 m de côté, un personnage de taille M dispose de suffisamment d’air pour respirer durant six heures. Après, l’air vicié lui inflige 1d6 points de dégâts toutes les quinze minutes. Chaque créature de Taille M supplémentaire (ou chaque source de feu importante, comme par exemple une torche) diminue proportionnellement la durée de survie. Une fois inconsciente, elle subira des dégâts au même rythme, jusqu’à ce qu’elle meure.</p>
+
+                <h4>La chaleur</h4>
+                <p>Pour peu qu’elle soit suffisamment forte, la chaleur inflige des dégâts qui ne peuvent être soignés tant que le personnage n’a pas eu l’occasion de se rafraîchir (par exemple en se plongeant dans l’eau, en se mettant à l’ombre, en survivant jusqu’à la nuit, etc...).</p>
+                <p>En cas de chaleur accablante (35° C ou plus), le personnage doit réussir un jet de Vigueur par heure (malus de 0, 5 par jet effectué au préalable) sous peine de subir 1d4 points de dégâts à chaque fois. S’il porte une armure ou des vêtements épais, un malus de -20 s'applique à ce jet.</p>
+                <p>Si la chaleur est torride (45° C ou plus), la règle reste inchangée, mais les jets de Vigueur sont espacés de dix minutes seulement.</p>
+                <p>Tout individu subissant des points de dégâts à cause de la chaleur est victime d’une insolation et se retrouve <a href="Glossaire.xhtml#fatigue">fatigué</a>. Les malus que lui impose cet état durent jusqu’à la disparition des points de dégâts sûs à la chaleur.</p>
+                <p>Une chaleur épouvantable (température supérieure à 60° C, feu, eau bouillante, lave) administre des dégâts importants. Si le personnage est obligé de respirer dans une telle fournaise, l’air surchauffé lui rôtit les poumons (1d6 points de dégâts par minute). Si le personnage porte une armure métallique (ou s’il touche un objet métallique), il subit 1d6 de dégâts de feu.</p>
+                <p>L’eau bouillante administre 1d6 points de dégâts si on plonge la main dedans ou si on en est aspergé. Si un individu est immergé dans un liquide en ébullition, il perd 1d6 points de vitalité par round.</p>
+
+                <h4 id="chutes">Les chutes</h4>
+                <p>Une chute inflige 1d6 points de dégâts par tranche de trois mètres, jusqu’à un maximum de 20d6. Les créatures subissant des dégâts à cause d’une chute sont <a href="Glossaire.xhtml#a_terre">à terre</a>.</p>
+                <p>Si, au lieu de tomber ou de glisser, un aventurier saute délibérément, les 1d6 premiers points de dégâts reçus sont divisés par 2. Si le test d'Acrobaties est un succès, les dégâts infligés par les trois premiers mètres de chute sont annulés et ceux dus aux trois mètres suivants divisés par 2. Ainsi, un personnage tombant d’une corniche haute de neuf mètres de haut subit 3d6 points de dégâts. S’il avait volontairement sauté, il aurait seulement reçu 2d6 points de dégâts et 1d6 divisés par deux. Enfin, s’il avait volontairement sauté en réussissant son test de Saut, les dégâts reçus auraient été plus réduits encore : 1d6 points de dégâts et 1d6 divisés par deux.</p>
+                <p>Si l’aventurier atterrit sur une surface meuble (sable, boue, etc.), les 1d6 premiers points de dégâts sont, là encore, transformés en points de dégâts non-létaux. Cette réduction s’ajoute aux précédentes, le cas échéant.</p>
+                <p><span class="underline">Chute dans l'eau :</span> Les dégâts donnés par les chutes s’achevant dans l’eau sont déterminés différemment. Du moment que l’eau fait au moins trois mètres de profondeur, les six premiers mètres de chute n’administrent pas le moindre dégât. Pour les six mètres suivants, les dégâts sont équivalent à 1d3 points tous les trois mètres. Passée cette limite, ils passent à 1d6 points tous les trois mètres supplémentaires.</p>
+                <p>Un personnage plongeant volontairement ne subit pas le moindre dégât du moment qu’il réussit un test d’Acrobaties ou d'Athlétisme et que la profondeur de l’eau est au moins égale au tiers de la hauteur de chute (trois mètres ou plus s’il plonge d’une hauteur de neuf mètres, etc.). Le malus du test d’Acrobaties ou de Natation augmente de 1 tous les 2 mètres de hauteur de chute.</p>
+
+                <h4>Les chutes d'objets</h4>
+                <table style="float: right" class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>Taille de l’objet</th>
+                        <th>Dégâts</th>
+                    </tr>
+                    <tr>
+                        <td>Très petit et moins</td>
+                        <td>1d6</td>
+                    </tr>
+                    <tr>
+                        <td>Petit</td>
+                        <td>2d6</td>
+                    </tr>
+                    <tr>
+                        <td>Moyen</td>
+                        <td>3d6</td>
+                    </tr>
+                    <tr>
+                        <td>Grand</td>
+                        <td>4d6</td>
+                    </tr>
+                    <tr>
+                        <td>Très grand</td>
+                        <td>6d6</td>
+                    </tr>
+                    <tr>
+                        <td>Gigantesque</td>
+                        <td>8d6</td>
+                    </tr>
+                    <tr>
+                        <td>Colossal</td>
+                        <td>10d6</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>De la même façon que les personnages se blessent s’ils tombent de plus de trois mètres, ils doivent faire attention aux chutes d’objets.</p>
+                <p>La chute d’un objet n’inflige des dégâts que s’il tombe d’une hauteur suffisamment importante et qu’il est fait d’une matière dense et lourde, comme la pierre. La table ci-contre détermine les dégâts infligés par un objet selon la taille de celui-ci. À la discrétion du MJ, des objets plus légers n’infligeront qu’une partie des dégâts. Par exemple, un personnage heurté par rocher de taille TG encaissera 6d6 points de dommages, alors qu’un chariot de bois de la même taille pourra n’en causer que la moitié. Si un objet tombe d’une hauteur supérieure à cinquante mètres, il inflige le double des dégâts. Bien entendu, un objet qui chute subira autant de dommages qu’il en a infligés.</p>
+                <p>Si l’objet tombe sur une créature, celle-ci doit réussir un jet d'Esquive pour éviter les dégâts. Les objets qui font partie d’un piège utilisent les règles qui sont applicables à ce piège.</p>
+
+
+                <h4>L'eau</h4>
+                <p>Un personnage ayant pied peut traverser une eau assez calme sans le moindre jet de dé. Pareillement, nager dans une eau calme nécessite juste un test de Natation (souvenez-vous toutefois qu’une armure ou une charge importante constitue une gêne importante)</p>
+                <p>L’eau devient plus dangereuse en cas de courant important. Le personnage doit faire un test de Natation avec un malus de 25 pour ne pas couler. En cas d’échec, il subit 1d3 points de dégâts par round (1d6 points de dégâts létaux s’il est jeté contre des rochers ou s’il tombe du haut d’une cascade).</p>
+                <p>En profondeur, l’eau est généralement sombre, ce qui pose des problèmes d’orientation. Dans le même temps, la pression administre 1d6 points de dégâts par tranche de trente mètres de profondeur et par minute que le personnage passe sous la surface. En cas de jet de vigueur réussi (malus de 10, -5 par jet effectué au préalable), l’aventurier ne perd pas de points de vie durant la minute en cours. L’eau très froide provoque l’hypothermie, ce qui représente 1d6 points de dégâts par minute.</p>
+
+                <h4>La fumée</h4>
+                <p>Un aventurier respirant une épaisse fumée doit réussir un jet de vigueur à chaque round (malus de 0, -5 par jet effectué au préalable). En cas d’échec, il passe le round à fortement tousser. Si cela se répète sur un deuxième round, il subit 1d6 points de dégâts. La fumée diminue la visibilité (-25 en Perception pour vue et odorat).</p>
+
+                <h4>Le froid</h4>
+                <p>Le froid administre des dégâts, qui ne peuvent pas disparaître tant que le personnage ne s’est pas réchauffé.</p>
+                <p>Par temps froid (température inférieure à 5° C), un individu non protégé doit réussir un jet de Vigueur par heure (malus de 0, -5 par jet effectué au préalable) pour ne pas subir 1d6 points de dégâts.</p>
+                <p>Si le froid est important (-15° C et en dessous), le jet de Vigueur est identique, mais il est joué toutes les dix minutes.</p>
+                <p>Tout personnage recevant des dégâts dûs au froid souffre de gelures ou d’hypothermie et est considéré comme <a href="Glossaire.xhtml#fatigue">fatigué</a>. Les malus dus à cet état des dissipent quand il a réussi à se réchauffer.</p>
+                <p>Un froid extrême (-30° C et en dessous) administre 1d6 points de dégâts toutes les minutes. Les créatures en contact avec des objets métalliques extrêmement froids subissent 1d6 de dégâts de givre</p>
+
+                <h4>La glace</h4>
+                <p>La vitesse de déplacement sur la glace est divisée par deux. Les tests d’Acrobaties obtienne un malus de 25. Les créatures demeurant trop longtemps au contact de la glace risquent d’être affectées par un froid important.</p>
+
+                <h4>La lave</h4>
+                <p>La lave et le magma infligent 2d6 points de dégâts de feu par round d’exposition, excepté dans le cas d’une immersion totale (par exemple quand un personnage tombe dans le cratère d’un volcan en activité), laquelle occasionne 5d6 points de dégâts de feu à la vitalité par round.</p>
+                <p>Les dégâts de feu se prolongent pendant 1d3 rounds après la fin de l’exposition, mais ils sont divisés par deux. Une immunité ou une résistance au feu protège aussi contre la lave ou le magma. Notez cependant qu’une créature immunisée ou résistante au feu peut parfaitement se noyer dans un bassin de lave.</p>
+
+                <h4>La noyade</h4>
+                <p>Tout personnage peut retenir son souffle pendant 1 round par 3 point de Vigueur. S’il effectue une action autre que se déplacer, la durée au cours de laquelle le personnage peut retenir son souffle est réduite de 1 round. Après cela, il doit réussir un test de Vigueur par round pour continuer à retenir son souffle. Le malus augmente de 5 à chaque round.</p>
+                <p>Dès que le personnage manque un test de Vigueur, il se noie. Durant le premier round, il tombe à 0 pv et perd connaissance. Le round d’après, il passe à -1 pv et est considéré comme mourant. Au troisième round, il décède.</p>
+                <p>Les personnages inconscients doivent faire des tests de Vigueur dès qu’ils commencent à couler (ou dès qu’ils tombent inconscient s’ils étaient déjà en train de couler). Dès qu’il en rate un, il passe immédiatement à -1 pv et est considéré comme mourant. Le round suivant, il meurt.</p>
+                <p>On peut se noyer dans d’autres substances que l’eau, comme par exemple le sable, les sables mouvants, ou encore un silo à céréales.</p>
+
+                <h4>L'obscurité</h4>
+                <p>La vision dans le noir permet à de nombreux personnages et monstres de voir parfaitement bien dans l’obscurité la plus totale, mais les autres individus sont alors comme aveuglés (et ce même s’ils possèdent la vision nocturne). Des bourrasques de vents souterrains peuvent éteindre les torches et les lanternes, les sources d’illumination magique peuvent être dissipées et les pièges magiques peuvent créer des aires de ténèbres magiques impénétrables.</p>
+                <p>Pour la majorité des rencontres dans l’obscurité, seule une partie des belligérants sera handicapée par l’absence de lumière, tandis que les autres seront considérés comme étant <a href="Glossaire.xhtml#aveugle">aveuglés</a>.</p>
+
+                <h4>Prendre feu</h4>
+                <p>Un personnage exposé à des flammes durables (huile enflammée, brasier, sort tel que mur de feu, etc.) risque de voir ses habits, ses cheveux ou son équipement s’enflammer. Au contraire, des sorts du premier cercle sont trop instantanés pour avoir un tel effet.</p>
+                <p>Tout individu risquant de prendre feu peut l’éviter en réussissant un jet de Dextérité. Si ses habits ou ses cheveux s’enflamment, il reçoit aussitôt 1d6 points de dégâts de feu. Après, il a droit à un nouveau jet de Dextérité par round. En cas d’échec, il reçoit 1d6 points de dégâts de feu supplémentaires. Dès qu’il réussit un jet de Dextérité, les flammes s’éteignent et le personnage ne risque plus rien.</p>
+                <p>Si le personnage peut sauter dans l’eau, les flammes sont automatiquement éteintes. S’il n’y a pas d’eau à proximité, le fait de se rouler par terre ou de se faire aider par un compagnon tentant d’étouffer les flammes avec une couverture ou une cape offre un bonus de +4 au jet de Réflexes.</p>
+                <p>Dans le cas où les vêtements ou l’équipement du personnage s’enflamment, celui-ci doit tenter un jet de Dextérité pour chaque objet menacé. Les objets inflammables pour lesquels le jet à été raté doivent faire un jet de rupture sous peine de partir en cendres.</p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+</body>
+</html>

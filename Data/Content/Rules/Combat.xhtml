@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Combat</title>
+    <meta http-equiv="Content-Script-Type" content="application/javascript"/>
+    <script type="application/javascript" src="../../Javascript/fonctions_accueil_plan.js"> </script>
+    <link rel="stylesheet" type="text/css" title="style_plan" href="../../Styles/common_rules.css"/>
+    <link rel="icon" type="image/ico" href="../../../favicon.ico"/>
+</head>
+<body>
+<div id="mySidenav" class="sidenav" style="display: block">
+    <ul class="sidenav ">
+        <li><span class="index"><a href="../../../index.xhtml">Accueil</a></span></li>
+        <li><span class="partie" onclick="hideContent(this)">Lore</span>
+            <ul>
+                <li><span class="medium"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier" onclick="hideContent(this)">Origines</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Azuma.xhtml">Azuma</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sever.xhtml">Sever</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tuskizi.xhtml">Tuskizi</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Magiques</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Sakha.xhtml">Sakha</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sihir.xhtml">Sihir</a></span></li>
+                                <li><span class="little"><a href="../Factions/Steinn.xhtml">Steinn</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Bestiales</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Chono.xhtml">Chono</a></span></li>
+                                <li><span class="little"><a href="../Factions/Kanta.xhtml">Kanta</a></span></li>
+                                <li><span class="little"><a href="../Factions/Mushuk.xhtml">Mushuk</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sarpa.xhtml">Sarpa</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tori.xhtml">Tori</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
+            <ul>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#Attributs">Attributs</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#Competences">Compétences</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#traits_perso">Traits de personnage</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#faveur_tychi">Faveurs de Tychi</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#richesse_depart">Richesse de départ</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#progression_perso">Progression</a></span></li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Magie.xhtml">Magie</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Magie.xhtml#table_forme_sort">Forme des sorts</a> </span> </li>
+                        <li><span class="little"><a href="Magie.xhtml#table_alteration">École d'Altération</a> </span></li>
+                        <li><span class="little"><a href="Magie.xhtml#table_conjuration">École de Conjuration</a> </span></li>
+                        <li><span class="little"><a href="Magie.xhtml#table_domination">École de Domination</a> </span></li>
+                        <li><span class="little"><a href="Magie.xhtml#table_mysticisme">École du Mysticisme</a> </span></li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Combat.xhtml">Combat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Combat.xhtml#deroulement_combat">Déroulement d'un combat</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#tour_de_jeu">Tour de Jeu</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#reactions">Réactions</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#style_combat">Style de Combat</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#engagement">Engagement en mêlée</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#passe_armes">Passe d'Armes</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#combat_cac">Combat en mêlée</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#combat_distance">Combat à distance</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#blessures_mort">Blessures et mort</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Survie.xhtml">Survie</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Survie.xhtml#besoins_journaliers">Besoins journaliers</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Armes.xhtml">Armes</a></span></li>
+                        <li><span class="little"><a href="../Rules/Armures.xhtml">Armures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Armures.xhtml#boucliers">Boucliers</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
+                            </ul></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#traits">Traits</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Objets.xhtml#monnaie">Monnaie et conversions</a></span></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Objets</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#contenants">Contenants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#materiel_aventurier">Matériel</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Services</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#taverne">Taverne</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#transports">Transports</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#montures">Montures</a></span></li>
+                            </ul></li>
+                    </ul></li>
+            </ul>
+        </li>
+        <li><span class="nav_ajout"><a href="../Rules/Systeme.xhtml#form_ajout">Une proposition ?</a></span></li>
+    </ul>
+</div>
+<div id="main" class="main" style="margin-left: 200px">
+    <h1 id="Combat" onclick="hideContent(this)">Combat</h1>
+    <div>
+        <p>Le Jeu de Rôle nécessite de séparer le temps en deux catégories :</p>
+        <ul>
+            <li><span class="big_underline">Temps narratif :</span>Cette échelle de temps est utilisée la plupart du temps, elle permet de se libérer des contraintes temporelle, le groupe peut librement faire accélérer le temps pour éviter des passages ennuyeux du jeu ou le ralentir pour savourer un moment précis. Il peut être utilisé pour décrire le voyage par bateau du groupe ou la nuit qu'ils passent à la belle étoile tout comme il peut être utilisé lorsque l'on décrit une longue conversation entre différents personnage.</li>
+            <li><span class="big_underline">Temps structuré :</span>Cette échelle de temps est utilisée lorsque chaque seconde compte, en combat par exemple. Il est bien sûr possible d'effectuer un combat en temps narratif mais si c'est un moment important pour le groupe, le mieux est de le faire en temps structuré. La durée des effets de la magie est donnée en temps structurés, mais il est possible de passer en temps narratif pour allonger la durée de ces sorts.</li>
+        </ul>
+        <p>Les combats se déroulent selon des rounds d'une durée de 6 secondes. Les actions effectuées par les participants du combat se déroulent au même moment, mais il faut les résoudre chacune à la fois c'est pour cela que chacun agit lors de son tour de jeu.</p>
+        <p>La durée des effets en combat est donnée en round. Si un personnage est <a href="Glossaire.xhtml#etourdi">étourdi</a> pendant 1 round, il reprendra ses esprits exactement 1 round après avoir subi cet effet.</p>
+
+        <h3 id="deroulement_combat" onclick="hideContent(this)">Déroulement d'un combat</h3>
+        <div>
+            <h4>Étape 1 : Déterminer la surprise</h4>
+            <p>Si une ou plusieurs entités se retrouvent en combat sans s'y être préparés, ils sont pris par surprise et ne peuvent agir que si leur bonus à l'initiative dépassent le score d'initiative des assaillants. Ils ne peuvent pas entreprendre de <a href="Combat.xhtml#reactions">réactions</a> tant qu'il n'ont pas passé leur premier tour de jeu.</p>
+            <h4>Étape 2 : Déterminer l'initiative</h4>
+            <p>Pour déterminer dans quel ordre les combattants vont pouvoir agir, il est nécessaire d'établir l'ordre d'initiative. Pour cela chaque combattant lance un d6 et y ajoute son BdIni. Le score le plus haut commence à agir en premier suivi du second et ainsi de suite. Si jamais il y a égalité sur un score d'initiative, les personnages incarnés par un joueur sont prioritaires, si le conflit est entre deux joueurs ils règlent cela ensemble et le MJ décidera s'ils n'arrivent pas à se mettre d'accord. </p>
+            <p>Pour éviter de perdre du temps et d'interrompre l'action juste avant un combat avec de pénibles calculs d'initiative et d'écriture pour déterminer l'ordre de jeu, on peut déterminer l'initiative au début de la session et à la fin de chaque combat pour fluidifier l'entrée en mode tour par tour. Les groupes d'entités similaires peuvent posséder le même score d'initiative et agir en même temps.</p>
+            <p><i>Note aux MJs : L'initiative n'est pas une composante obligatoire du combat, elle peut être utile pour être sûr que tout le monde joue sans omettre personne mais si le combat est sans importance ou que vous préférez faire sans, vous pouvez simplement ignorer l'ordre d'initiative et jouer de façon plus narrative.</i></p>
+            <h4>Étape 3 : Début du round</h4>
+            <p>Chaque combattant va maintenant entreprendre son tour de jeu. Le personnage actif décide de quand son tour se termine, s'il ne peut plus rien faire son tour se termine automatiqement.</p>
+            <h4>Étape 4 : Fin du round</h4>
+            <p>Lorsque tout les combattant ont joué leur tour, le round se termine et un autre commence.</p>
+            <h4>Étape 5 : Fin du combat</h4>
+            <p>Les étapes 3 et 4 se répètent jusqu'à ce que le combat se termine ou que l'évènement qui a causé le passage au temps structuré prend fin.</p>
+        </div>
+
+        <h3 id="tour_de_jeu" onclick="hideContent(this)">Votre tour de jeu</h3>
+        <div>
+            <p>Quand c'est à votre tour de jouer, vous avez droit à un mouvement et une action. Vous pouvez aussi effectuer des actions libres dans la limite du raisonnable</p>
+            <ul>
+                <li><strong>Mouvement :</strong>Chaque entité possède une <a href="Personnage.xhtml#vitesse">vitesse de déplacement</a> qui lui est propre. Cette vitesse diffère principalement selon la caractéristique d'Agilité, le type d'armure portée et le poids du matériel transporté. Pour traverser un terrain difficile votre personnage doit aussi utiliser son Action de ce tour en passant une épreuve approprié au type de terrain à traverser.<br/><i>Si vous utilisez une carte tactique pour vos combat, la vitesse détermine le nombre de cases que peut parcourir votre personnage, sinon, la vitesse n'est qu'une indication générale des capacités de mouvement de votre personnage.</i></li>
+                <li><strong>Action :</strong>Que ce soit pour attaquer votre adversaire, avoir recours à la magie ou escalader une paroi rocheuse, l'action de votre personnage requiert la plupart du temps d'effectuer un jet de dé. Les possibilités d'actions ne sont limitées que par votre imagination et le bon-vouloir de votre MJ.</li>
+                <li><strong>Actions libres:</strong>Certaines actions s'effectuent rapidement ou sans effort, ce sont les actions libres. Vous pouvez crier quelque chose à vos alliés, boire une potion ou dégainez votre arme par exemple.</li>
+            </ul>
+        </div>
+
+        <h3 id="reactions" onclick="hideContent(this)">Réactions</h3>
+        <div>
+            <p>Au cours d'un combat, votre personnage peut agir même lorsqu'il n'est pas le personnage actif, ces actions réalisés hors de votre tour de jeu sont appelées réactions. Vous ne pouvez effectuer qu'une réaction par round.</p>
+            <ul>
+                <li><b>Attaque d'opportunité :</b>Si un adversaire passe à portée de votre arme et que vous n'êtes pas déjà engagé en mêlée, vous pouvez l'attaquer. Si vous remportez la passe d'arme, vous et votre cible êtes désormais engagés.</li>
+                <li><b>Tir de réaction :</b>Si vous tenez une arme à distance prête à tirer, vous pouvez tirer sur une cible qui se déplace dans votre champ de vision et dans votre portée. La cible est stoppée si les dégâts subis sont supérieurs à son BdVig.</li>
+                <li><b>Sort d'urgence :</b>Certains sorts possèdent la propriété "Réaction" et peuvent être lancé en dehors de votre tour.</li>
+            </ul>
+        </div>
+
+        <h3 onclick="hideContent(this)" id="postures_combat" class="hidden">Postures de combat</h3>
+        <div class="hidden">
+            <p>La posture de combat détermine l'attitude du personnage au milieu de la bataille, on ne peut changer de posture qu'au début de son tour. Les différentes postures sont :</p>
+            <ul>
+                <li><strong>Posture agressive :</strong>le personnage inflige au moins la moitié de son/ses dé(s) de dégâts lors de ses attaques. (Fonctionne aussi bien avec les armes qu'avec la magie. Un personnage attaquant avec une arme infligeant 1d8+1 dégâts infligera au minimum 5 points de dégâts).</li>
+                <li><strong>Posture défensive :</strong>+10 aux actions défensives.</li>
+                <li><strong>Posture vigilante :</strong>le personnage a droit à un jet d'Observation(Perception) pour éviter la surprise en début de combat et effectue son jet d'initiative avec avantage.</li>
+            </ul>
+            <p>Une posture peut justifier un bonus lors de certaines actions. Si un personnage passe en posture vigilante et précise qu'il recherche des opposants cachés, le MJ peut lui accorder un avantage pour son épreuve de perception.</p>
+            <p>Les ennemis n'utilisent pas les postures à moins d'être des personnages importants dans le récit.</p>
+        </div>
+
+        <h3 id="style_combat" onclick="hideContent(this)">Style de combat</h3>
+        <div>
+            <p>Les compétences de combat sont rassemblées dans les styles de combat qui représente la façon de combattre de chaque combattant, ses armes de prédilection, ses tactiques et son expérience du combat. Les styles de combat peuvent être associés à une culture, une carrière ou même une école.</p>
+            <p>Les style de combat sont représentés par la compétence : <a href="Personnage.xhtml#style_combat_competence">Style de Combat [type]</a>, où le type est le nom du style de combat. Cette compétence est utilisée avec la caractéristique de Force ou de Dextérité pour attaquer ou se défendre en mêlée ainsi que pour les lancer d'arme de jet mais doit être utilisée avec la caractéristique de Dextérité pour effectuer des attaques à distance.</p>
+            <p>Chaque style de combat est associé à un certain nombre d'armes et de types d'armure avec lesquels le personnage est entraîné et apte à utiliser. Un novice maîtrise 4 types d'équipement, chaque palier d'expérience permet d'en ajouter un gratuitement jusqu'à un maximum de 8 au rang de Maître. Il est également possible d'ajouter un en dépensant 5 points d'XP.</p>
+            <p>Le combat à mains nues peut rentrer dans un style de combat sous le terme "Bagarre". Les armures sont divisées en quatre catégorie : légère, intermédiaire, lourde et super-lourde. Les armes sont divisés en de multiples catégories Cf <a href="Armes.xhtml#table_armes_cac">Armes</a>. Les boucliers ne forment qu'une seule et même catégorie malgré les différences de taille.</p>
+            <p>Utiliser de l'équipement avec lequel on manque d'entraînement ne permet pas de bénéficier de sa maîtrise de Style de Combat. Se battre dans une situation inhabituelle peut être une tâche Ardue(-10) voire Difficile(-20) : Un soldat habitué à se battre sur son cheval sera mal-à-l'aise s'il doit défendre sa vie face à un assassin dans sa propre maison; un noble combattant se retrouvant malgré dans une baston de bar aura du mal à trouver ses repère malgré son habileté à l'épée.</p>
+            <p>Voici quelques exemple de Style de combat :</p>
+            <ul>
+                <li><span class="big_underline">Style de Combat [Lame de l'ombre]</span><i>Les lames courtes sont les meilleurs outils d'un assassin</i> Équipement utilisé : Dague, Épée courte, Couteau de lancer, Bagarre, Armure légère</li>
+                <li><span class="big_underline">Style de Combat [Barbare d'Urdus]</span><i>La vie dans les marais n'est pas de tout repos, il faut savoir se battre pour survivre</i> Équipement utilisé : Grande Hache, Hache, Hache de jet, Bagarre, Armure intermédiaire</li>
+                <li><span class="big_underline">Style de Combat [Soldat impérial]</span><i>Les soldats des sections impériales se battent en formation pour protéger l'empire</i> Équipement utilisé : Bouclier, Lance, Épée longue, Masse, Armure lourde</li>
+            </ul>
+        </div>
+
+        <h3 id="engagement" onclick="hideContent(this)">Engagement en mêlée</h3>
+        <div>
+            <p>Quand deux opposants ou plus se battent en mêlée, on dit qu'ils sont <b>engagés</b>. Un personnage n'est plus engagé en mêlée si il ne fait aucune passe d'armes avec les opposants avec lesquels il est engagé ou s'il se désengage.</p>
+            <p>Un combattant qui souhaite se désengager sans heurt doit d'abord remporter une passe d'armes. Si il gagne, il peut se déplacer comme il le souhaite; si il échoue, son adversaire l'empêche le personnage de fuir.</p>
+            <p>Si un personnage engagé en mêlée se désengage sans remporter une passe d'armes, son adversaire peut tenter une attaque d'opportunité gratuite Facile(+20) avant qu'il ne quitte sa portée.</p>
+        </div>
+
+
+        <h3 id="passe_armes" onclick="hideContent(this)">Attaquer et se défendre : les Passes d'Armes</h3>
+        <div>
+            <p>Le combat est un échange de coups entre l'assaillant et le défenseur, l'assaillant étant bien souvent le personnage actif du round et le défenseur sa victime.</p>
+            <h4>Étape 1 : Attaquer</h4>
+            <p>L'assaillant choisi sa cible, son style de combat et son arme avant de faire son jet d'attaque. Si l'arme choisie ne fait pas partie du style de combat choisi, le jet se base sur la Caractéristique de Force ou de Dextérité pure.</p>
+            <ul>
+                <li><b>Arme de mêlée et Arme de jet:</b> L'assaillant fait un test de Style de combat en utilisant la Force ou la Dextérité contre une cible à la portée de son arme.</li>
+                <li><b>Arme à distance :</b> L'assaillant fait un test de Style de combat en utilisant la Dextérité contre une cible à la portée de son arme.</li>
+            </ul>
+
+            <h4>Étape 2 : Se défendre</h4>
+            <p>La défense est automatique et ne coûte pas l'action du défenseur, mais un malus de -10 est appliqué par défense déjà effectuée. Si le défenseur est plus grand que votre assaillant, vous pouvez vous défendre une fois de plus sans malus pour chaque catégorie de taille au dessus de votre assaillant.</p>
+            <p>Un personnage doit être conscient qu'il va subir une attaque et être en mesure d'agir pour pouvoir se défendre via une réaction.<br/>Si la cible de l'attaque est incapable de se défendre le DR de l'assaillant équivaut à son BdCarac, le DR du défenseur vaut 0, l'assaillant peut également choisir la localisation de l'attaque.</p>
+            <p>Le défenseur choisit la façon dont il va se défendre et le style de combat utilisé avant de faire son jet : </p>
+            <ul>
+                <li><b>Esquive :</b> Le défenseur passe une épreuve d'Esquive(Agilité).</li>
+                <li><b>Parade :</b> Le défenseur passe une épreuve de Style de combat(Force ou Dextérité) s'il possède une arme capable de parer l'arme de l'assaillant. Voir <a href="Armes.xhtml#table_armes_cac">Armes de mêlée</a> pour plus de détails sur les différentes armes.</li>
+                <li><b>Blocage :</b> Le défenseur passe une épreuve de Style de combat(Force) s'il possède un bouclier. Voir <a href="Armures.xhtml#boucliers">Boucliers</a> pour plus de détails sur les différents boucliers.</li>
+            </ul>
+            <p>Il n'est possible de se défendre des attaques à distance que via l'action de blocage ou d'esquive (si un abri est proche) et si l'on connait la direction du projectile.</p>
+
+            <h4>Étape 3 : Lancer les dés et déterminer le résultat</h4>
+            <p>L'assaillant et le défenseur passent chacun une épreuve selon la méthode qu'ils ont choisi pour la passe d'armes. On soustrait le degré de réussite(DR) du défenseur à celui de l'assaillant pour savoir qui l'emporte. Le degré de réussites comparées(DRC) = DR assaillant - DR défenseur.</p>
+            <p>Dans le cas d'une attaque à distance, si le DRC est négatif, le projectile rate sa cible et le défenseur n'inflige pas de dégâts à l'assaillant s'il n'est pas en mesure de le toucher avec son arme par manque de portée.</p>
+            <p>Plusieurs cas sont possibles suivants les résultats des dés :</p>
+            <ul>
+                <li><b>Le DRC est positif :</b> L'assaillant remporte la passe d'arme, il inflige les dégâts de son arme + le DRC au défenseur, passez à l'étape 4.</li>
+                <li><b>Le DRC est négatif :</b> Le défenseur remporte la passe d'arme, il inflige les dégâts de son arme - le DRC à l'assaillant, passez à l'étape 4.</li>
+                <li><b>Le DRC est nul :</b> On calcule la marge de réussites comparées(MRC) et on vérifie à nouveau qui l'emporte. Si la MRC est aussi nulle, rien ne se passe, la passe d'armes est une égalité parfaite.</li>
+            </ul>
+
+            <h4>Étape 4 : Résoudre l'attaque</h4>
+            <p>Si l'attaque porte, il faut désormais la résoudre. La table ci-dessous est optionnelle dans la résolution de l'attaque, elle indique la localisation du coup en fonction du chiffre des unités du jet de l'attaque.</p>
+            <table id="table_localisation_coups" class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th>Résultat</th>
+                    <th>Localisation du coup</th>
+                </tr>
+                <tr>
+                    <td>1-5</td>
+                    <td>Torse</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Jambe droite</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Jambe gauche</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Bras droit</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Bras gauche</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Tête</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>Les dégâts subis sont réduit par la PR protégeant la zone touchée si la cible en possède. Si les dégâts infligés sont inférieurs ou égaux à 0 après la réduction des dommages par la PR, la cible perd tout de même un point de vitalité car elle est touchée, sinon elle perd autant de vitalité qu'elle subis de dégâts.</p>
+
+            <p>Exemple : Géradin (Style de Combat 52, Dégâts 7) se bat contre deux brigands (Style de Combat 44, Dégâts 6) :
+                <br/>Le premier brigand tente une attaque, il obtient un 36 (réussi sur un 44 ou moins donc DR de 1), le jet de défense de Géradin est un 23 (réussi sur un 52 ou moins donc DR de 3). Le DRC vaut donc 1-3=-2, Géradin se défend avec succès et frappe son adversaire pour un total de 7-(-2)=9 dégâts.
+                <br/>L'autre brigand lance à son tour une attaque, il fait un 14 (réussi sur un 44 ou moins donc DR de 3), Géradin se défend un peu maladroitement avec un jet de 61 (réussi sur 42 ou moins car c'est la deuxième fois que Géradin se défend dans ce round donc DR de -2), le DRC est donc de 3-(-2)=5, l'attaque est donc réussie. L'arme du brigand inflige 6 point de dégâts, on y ajoute le DRC, Géradin subit donc 6+5=11 poins de dégâts mais Géradin porte une armure intégrale procurant 4 PR sur son torse, les dégâts qu'ils subis sont de 11-4=7 Géradin grimace de douleur et perds 7 point de vitalité.
+                <br/>Viens enfin le tour de Géradin, il va pouvoir contre-attaquer. Il décide frapper celui qui l'a touché, il obtient un 23 pour son attaque et donc un DR de 3, son adversaire fait un 47 donc un DR de 0. Le DRC est donc de 3-0=3, l'attaque porte. L'arme de Géradin inflige 7 points de dégâts, il ajoute le DRC et le brigand subit donc 10 points de dégâts, son armure partielle ne procure que 2 de PR, il perd donc 8 points de vitalité. Le round est terminé.</p>
+        </div>
+
+        <h3 id="combat_cac" onclick="hideContent(this)">Combat en mêlée</h3>
+        <div>
+            <h4 id="modificateur_combat_cac">Modificateurs situationnels du combat en mêlée</h4>
+            <p>Comme toutes les autres épreuves, le combat en mêlée doit se faire en fonction de l'environnement et des circonstances entourant le combat. Ces modificateurs sont déterminés par le MJ et ne devrait pas être pire que Très Difficile(-30) sauf dans des cas très particuliers. Le tableau ci-dessous montre quel genre d'évènements peut affecter le combat et à quel point.</p>
+            <table id="table_modificateur_combat_cac" class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th>Modificateur</th>
+                    <th>Exemples</th>
+                    <th>Modificateur</th>
+                    <th>Exemples</th>
+                </tr>
+                <tr>
+                    <td>Simple(+10)</td>
+                    <td>Attaquer un adversaire plus grand que soi d'une catégorie</td>
+                    <td>Ardue(-10)</td>
+                    <td>Combattre alors que la visibilité est faible ou sur un sol boueux</td>
+                </tr>
+                <tr>
+                    <td>Facile(+20)</td>
+                    <td>Attaquer un adversaire à 1 contre 3</td>
+                    <td>Difficile(-20)</td>
+                    <td>Combattre en étant allongé sur le sol ou depuis une position plus basse que son opposant</td>
+                </tr>
+                <tr>
+                    <td>Très Facile(+30)</td>
+                    <td>Attaquer un adversaire de dos</td>
+                    <td>Très Difficile(-30)</td>
+                    <td>Combattre en étant aveugle</td>
+                </tr>
+                </tbody>
+            </table>
+            <h4 id="combat_monte">Combat monté</h4>
+            <p>Le combat depuis une monture fonctionne comme le combat normal à quelques exceptions près :</p>
+            <ul>
+                <li>Les personnages sur monture ne peuvent pas esquiver les attaques à distance sauf s'ils sont en mouvement. Il ne peuvent pas esquiver les attaques en mêlée (sauf celles d'autres personnages montés) mais leur monture le peut.</li>
+                <li>Les personnages sur monture peuvent faire une parade ou un blocage pour protéger leur monture si elle est la cible d'une attaque de mêlée.</li>
+                <li>Les personnages sur monture utilisent la vitesse de leur monture et non la leur.</li>
+            </ul>
+            <h4 id="combat_deux_armes">Combat à deux armes</h4>
+            <p>Un personnage peut se battre avec une arme dans chaque main à condition que ces armes ne nécessitent qu'une seule main pour être maniées et qu'elle font partie du style de combat du personnage. Un personnage se battant ainsi possède une arme principale et une arme secondaire (l'arme principale est tenue dans la main dominante).
+                <br/>Si un personnage attaque en tenant deux armes de mêlée, la résolution de l'attaque est identique à une attaque classique jusqu'au calcul des dégâts. L'arme principale bénéficie du BdCarac, l'arme secondaire ne bénéficie que de la moitié du BdCarac(arrondi au supérieur). La PR de la cible est prise en compte pour chacune des armes de l'assaillant.</p>
+            <p>Si le personnage manie une arme à distance et une arme de mêlée ou deux armes à distances, il ne peut attaquer qu'avec une seule de ses armes lors de son action.</p>
+            <h4 id="combat_mains_nues">Combat à mains nues</h4>
+            <div>
+                <p>Le combat à mains nues peut se faire avec les armes naturelles du personnage (poings, griffes,...) mais aussi avec certains équipements comme des cestes. Tout les personnages peuvent avoir recours au combat à mains nues même si il ne fait partie de leur style de combat.</p>
+                <p>C'est le BdFor ou le BdDex qui détermine la quantité de dégâts infligés par les armes naturelles d'un personnage. Les Origines possédants des griffes peuvent infliger des dégât tranchants, celles possédants des serres ou un bec peuvent infliger des dégâts perforants, tout les autres coups portés avec des armes naturelles sont contondants.</p>
+                <p id="lutte"><b>Lutte :</b> Au lieu de faire une attaque classique, un personnage possédant la bagarre dans son style de combat peut lutter avec son adversaire pour tenter de le maîtriser. Pour y parvenir, il doit remporter une épreuve de Lutte (opposition entre le Style de Combat (bagarre) du personnage et le Style de Combat (bagarre), l'Athlétisme, l'Acrobaties ou l'Esquive de sa cible). S'il réussit, sa cible obtient l'état <a href="Glossaire.xhtml#maitrise">maîtrisé</a>. L'entité maîtrisée se libère si elle remporte une épreuve de Lutte.</p>
+                <p>Lutter avec un adversaire plus grand que soi est une tâche Très Difficile(-30) et il est impossible de lutter avec une entité de deux tailles supérieures à la nôtre. Tant que l'adversaire est maîtrisé l'initiateur de la Lutte a avantage sur toutes les épreuves de Lutte et ne peut pas se déplacer librement mais il peut intenter les actions suivantes :</p>
+                <ul>
+                    <li><strong>Plaquer au sol :</strong> Le personnage et sa cible tombent <a href="Glossaire.xhtml#a_terre">à terre</a>. Il ne subit pas les malus bien qu'il soit à terre pour frapper sa cible.</li>
+                    <li><strong>Déplacement :</strong> Le personnage force sa cible à se déplacer sur une distance en mètre équivalente au DRC d'une épreuve de Lutte.</li>
+                    <li><strong>Attaquer :</strong> Le personnage frappe la cible qu'il maîtrise. L'attaque est résolue comme une épreuve de Lutte. Si la cible est à la fois <a href="Glossaire.xhtml#a_terre">à terre</a> et <a href="Glossaire.xhtml#maitrise">maîtrisée</a>, la cible se défend avec désavantage. S'il le souhaite, il peut infliger des dégâts à l'Endurance de sa cible plutôt qu'à sa vitalité.</li>
+                </ul>
+            </div>
+
+            <h4 id="conditions_particulieres_combat">Conditions particulières de combat</h4>
+            <p>Il arrive parfois qu'un combat ait lieu dans des circonstances peu habituelles, auquel cas, des règles spécifiques s'appliquent.</p>
+            <ul>
+                <li><span class="big_underline">Escalade :</span>Un personnage en train de grimper est limité dans ses jets de Style de Combat par sa compétence en Athlétisme (dans le cas où son Style de Combat est d'un plus haut rang que celui d'Athlétisme). Le personnage ne peut utiliser qu'un seul membre pour se battre, à moins d'en avoir plus. </li>
+                <li><span class="big_underline">Surfaces glissantes :</span>Un personnage se battant sur une surface glissante ou peu pratique pour un combat est limité dans ses jets de Style de Combat par sa compétence en Acrobaties (dans le cas où son Style de Combat est d'un plus haut rang que celui d'Acrobaties). Si le personnage se déplace plus rapidement que la moitié de sa vitesse de déplacement, il doit passer un test d'Acrobaties ou tomber <a href="Glossaire.xhtml#a_terre">à terre</a>.</li>
+                <li><span class="big_underline">Combat aquatique</span>Un personnage se battant dans l'eau est limité dans ses jets de Style de Combat par sa compétence en Athlétisme (dans le cas où son Style de Combat est d'un plus haut rang que celui d'Athlétisme). Ses attaques infligent la moitié des dégâts seulement.</li>
+                <li><span class="big_underline">Zone instable :</span>Un personnage se battant en équilibre sur une poutre ou en sautant de toits en toits est limité dans ses jets de Style de Combat par sa compétence en Acrobaties (dans le cas où son Style de Combat est d'un plus haut rang que celui d'Acrobaties).Si le personnage se déplace plus rapidement que la moitié de sa vitesse de déplacement ou s'il rate un jet de combat avec un DR de -4 ou pire dans ces conditions, il doit passer un test d'Acrobaties ou tomber <a href="Glossaire.xhtml#a_terre">à terre</a> et subir des dégâts de chute appropriés.</li>
+            </ul>
+        </div>
+        <h3 id="combat_distance">Combat à distance</h3>
+        <div>
+            <p>Les attaques à distance sont résolues de la même façon que les attaques en mêlée à ceci près qu'elle ne peuvent être que bloquées grâce à un bouclier ou esquivées si un abri est proche.</p>
+            <p>Les armes à distance possède plusieurs propriétés les différenciant des armes de mêlée :</p>
+            <ul>
+                <li><span class="big_underline">Portée :</span>Définie par deux nombres indiquant respectivement la portée effective et la portée maximale. Atteindre une cible située dans la portée effective d'un arme se fait sans pénalités mais une cible située entre la portée effective et la portée maximale est Difficile(-20). Le BdDex de l'utilisateur augmente de BdDex*10% la portée des armes</li>
+                <li><span class="big_underline">Rechargement :</span>Représente le nombre de DR à obtenir lors du test étendu de rechargement pour pouvoir tirer à nouveau avec cette arme.</li>
+            </ul>
+            <p>Comme toutes les autres épreuves, le combat à distance doit se faire en fonction de l'environnement et des circonstances entourant le combat. Ces modificateurs sont déterminés par le MJ et ne devrait pas être pire que Très Difficile(-30) sauf dans des cas très particuliers. Le tableau ci-dessous montre quel genre d'évènements peut affecter le combat et à quel point.</p>
+            <table id="table_modificateur_combat_distance" class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th>Modificateur</th>
+                    <th>Exemples</th>
+                    <th>Modificateur</th>
+                    <th>Exemples</th>
+                </tr>
+                <tr>
+                    <td>Simple(+10)</td>
+                    <td>Tirer dans un petit groupe (5 ou moins)</td>
+                    <td>Ardue(-10)</td>
+                    <td>Tirer avec un vent léger, par temps de pluie</td>
+                </tr>
+                <tr>
+                    <td>Facile(+20)</td>
+                    <td>Tirer sur une cible de très grande taille ou un grand groupe (10 ou moins)</td>
+                    <td>Difficile(-20)</td>
+                    <td>Tirer sur une cible allongée sur le sol</td>
+                </tr>
+                <tr>
+                    <td>Très Facile(+30)</td>
+                    <td>Tirer à bout portant ou dans une foule(+ de 10)</td>
+                    <td>Très Difficile(-30)</td>
+                    <td>Tirer avec un vent fort, par temps de brouillard</td>
+                </tr>
+                </tbody>
+            </table>
+            <h4 id="tirer_depuis_monture">Tirer depuis une monture</h4>
+            <p>Un personnage peut tirer depuis sa monture, il est cependant limité par la compétence d'Équitation de la personne dirigeant la monture (dans le cas où son Style de Combat est d'un rang plus élevé que celui d'Équitation du pilote).</p>
+            <h4 id="attaque_zone">Attaque de Zone</h4>
+            <p>Certaines attaques à distance, majoritairement les sorts, infligent des dégâts sur une certaine zone. On ne peut se défendre contre ce type d'attaque qu'en bloquant avec un bouclier ou en esquivant seulement si on est conscient de l'attaque de zone.</p>
+            <p>Sur un blocage réussi la RB du bouclier est prise en compte, sur une esquive réussie on ne subit aucun dégâts si on parvient à sortir de la zone d'effet ou à s'en prémunir complètement(en se mettant à couvert par exemple), sinon on subit seulement la moitié des dégâts(arrondis au supérieur). Les attaques de zone comptent comme touchant au torse.</p>
+            <h4 id="abri">Abri</h4>
+            <p>Un personnage peut se mettre à couvert pour éviter de se faire toucher par un adversaire, que ce soit en mêlée ou à distance.</p>
+            <p>Si un personnage est incapable de toucher une cible qu'il n'est pas capable de voir, mais si il sait où elle se trouve et qu'il possède une arme capable de transpercer ce derrière quoi se cache sa cible, il peut tenter une attaque. Le MJ décide de la difficulté de la tâche en fonction de la situation.</p>
+        </div>
+
+        <h3 id="blessures_mort" onclick="hideContent(this)">Blessures et mort</h3>
+        <div>
+            <p>La vitalité d'une entité diminue lorsqu'elle subit des dégâts, que ce soit dû à un coup, un piège ou une chute. Ces dégâts n'ont pas d'impact autre que mener progressivement vers une perte de connaissance, on peut les traiter comme des blessures insignifiantes qui guériront en quelques jours.</p>
+            <p>Lorsque la vitalité d'une entité atteint 0 ou une valeur négative, elle doit réussir un jet de Vigueur avec un malus éventuel équivalent à son total de points de vitalité négatifs, si elle réussit son jet, elle reste consciente et est <a href="Glossaire.xhtml#portes_mort">aux portes de la mort</a>. Si elle échoue, elle devient <a href="Glossaire.xhtml#mourant">mourante</a>.</p>
+            <p>Une entité devenue inconsciente à cause d'un nombre de PV inférieur ou égal à 0 ne meurt pas avant que l'équivalent en heures de son BdVig ne se soit écoulé. Chaque point de vitalité négatif diminue ce temps de 15 minutes.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Types d'actions</title>
+    <title>Système de jeu</title>
     <meta http-equiv="Content-Script-Type" content="application/javascript"/>
     <script type="application/javascript" src="../../Javascript/fonctions_accueil_plan.js"> </script>
     <link rel="stylesheet" type="text/css" title="style_plan" href="../../Styles/common_rules.css"/>
@@ -147,80 +147,174 @@
     </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
-    <h1 id="actions_principales" onclick="hideContent(this)">Actions principales</h1>
-    <div>
-        <p>Les actions principales ne peuvent être effectuées que lors de son propre tour.  Toutes les actions principales coûtent 1 PA sauf précisé autrement.</p>
-        <h2 id="attaquer" onclick="hideContent(this)">Attaquer</h2>
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
+
+    <div id="rules">
+        <p>Bienvenue sur la page des règles du jeu de rôle Ogma. Ce projet est encore en cours de construction et de nombreuses choses peuvent encore subir des modifications ou tout simplement disparaître.</p>
+        <p>Les règles présentées ci-dessous ne sont pas la loi absolue, si il vous prend l'envie de les modifier pour qu'elle vous corresponde mieux à vous et votre table, faites donc. Si vous avez des propositions ou des retours à faire, n'hésitez pas à <a href="../../../index.xhtml#contact">me contacter</a>.</p>
+        <p>Certaines règles sont volontairement indiquées comme optionnelles et sont représentées ainsi : <span class="boxed">Règle optionnelle</span> </p>
+        <h1 id="resolution_action" onclick="hideContent(this)">Résolution des actions</h1>
         <div>
-            <p>Le personnage peut effectuer une attaque avec une arme de mêlée ou à distance. Un personnage ne peut pas attaquer plus de 2 fois dans un seul round. Il est possible de choisir une de ces variations lorsque l'on effectue une attaque, le joueur doit annoncer qu'il souhaite utiliser une de ces variations avant d'effectuer son jet.</p>
-            <ul>
-                <li id="enchainement"><span class="big_underline">Enchainement (mêlée uniquement) :</span>l'attaquant enchaîne les coups pour submerger son adversaire. L'attaque est effectuée avec avantage mais elle coûte un PA supplémentaire.</li>
-                <li id="coup_de_grace"><span class="big_underline">Coup de Grâce :</span>l'attaquant tente d'achever un adversaire sans défense. Une cible sans défense est une entité qui est soit <a href="Glossaire.xhtml#inconscient">inconsciente</a>, soit <a href="Glossaire.xhtml#maitrise">maîtrisé</a> et <a href="Glossaire.xhtml#a_terre">à terre</a> ou incapable de se défendre par elle même. Le MJ peut déclarer qu'un personnage ne peut pas mourir de tel façon. Si l'attaque porte, la cible meurt automatiquement. Cette acton coûte un PA supplémentaire</li>
-                <li id="frappe_de_precision"><span class="big_underline">Frappe de précision :</span>l'attaquant vise une zone précise de son adversaire. L'attaque se fait avec un malus de -20 mais si elle porte, l'attaquant peut choisir la zone touchée.</li>
-            </ul>
+            <h3 id="des_utilises" onclick="hideContent(this)">Dés utilisés</h3>
+            <div>
+                <p>Dans le Jeu de Rôle Ogma, on utilise un d100 pour la plupart des actions. L'objectif est d'obtenir un score inférieur (ou égal) à une certaine valeur définie par le Maître du Jeu (MJ) au moment de l'épreuve. Pour lancer un d100, on peut utiliser un simulateur ou lancer deux d10 de couleurs différentes, l'un représentant les dizaines, l'autre les unités.</p>
+                <p>Divers dés sont utilisés pour les dégâts des armes (d4,d6,d8, d10 et d12)</p>
+            </div>
+
+            <h3 id="avantage" onclick="hideContent(this)">Avantage et désavantage</h3>
+            <div>
+                <p>Parfois une épreuve se déroule dans des conditions particulières pouvant entraîner un avantage ou un désavantage. Un avantage reflète des circonstances favorables à une action, le désavantage implique le contraire. L’un comme l’autre nécessite de lancer deux fois le dé. Sur un avantage le meilleur des deux jets sera conservé, sur un désavantage ce sera le moins bon. Par exemple vous obtenez 17 et 5, un désavantage conclura sur 17, un avantage sur 5.</p>
+                <p onclick="hideContent(this)">Exemples d'avantages :</p>
+                <ul>
+                    <li>Effectuer une action pour laquelle on possède une spécialisation dans une compétence</li>
+                    <li>Frapper un ennemi au sol, immobilisé, inconscient du danger, aveuglé, dans le dos, étourdi</li>
+                    <li>Posséder un objet facilitant une action (examiner avec une loupe, ouvrir une porte avec un pied-de-biche/bélier portatif</li>
+                </ul>
+                <p onclick="hideContent(this)">Exemples de désavantages :</p>
+                <ul>
+                    <li>Effectuer une action délicate sous pression</li>
+                    <li>Nager, escalader ou se faire discret avec une armure lourde</li>
+                    <li>Porter une charge trop importante, tenter quelque chose en dehors de son champ d'expertise</li>
+                </ul>
+            </div>
+
+            <h3 id="type_epreuves" onclick="hideContent(this)">Types d'épreuves</h3>
+            <div>
+                <p>Les épreuves, parfois appelées tests, jets ou lancers de dés ne sont qu'une seule et même chose et fonctionnent sur le même principe : On fixe une valeur déterminant la difficulté (souvent une caractéristique+une compétence), on y ajoute ou soustrait un ou plusieurs modificateurs (positifs ou négatifs selon les conditions de l'épreuve), on lance un dé en essayant d'obtenir un score inférieur à la valeur fixée au départ modifiés par les modificateurs.</p>
+                <p>Les épreuves étendues sont un type d'épreuves nécessitants un certain nombre de degrés de réussite pour être menées à bien. À chaque fois que le personnage qui passe l'épreuve réussit, il ajoute son ou ses degré(s) de réussite à un total, si ce total excède celui fixé par le MJ pour la réussite de l'épreuve alors le test étendu est réussi. Ces tests se font dans une situation où le temps est compté ou qu'il y a un enjeu à réussir rapidement. Exemple d'épreuve étendue : trouver la combinaison d'un coffre à l'ouïe alors que le propriétaire rôde non loin, négocier un prix avec un marchand pour un objet très prisé, défoncer une porte dans un bâtiment en flammes.</p>
+                <p>Les épreuves opposées sont un type d'épreuve mettant en scène plusieurs participants tentant d'accomplir un but similaire ou une action contraire. Exemple d'épreuve opposée : un personnage en attaque un autre avec une arme de mêlée, trois personnes tentent d'attraper le même objet au vol, un défi au bras de fer.</p>
+            </div>
+
+            <h3 id="degre_marge_reussite" onclick="hideContent(this)">Marge et degré de réussite</h3>
+            <div>
+                <p>Lors d'un jet, on évalue le résultat d'un dé par rapport à une certaine valeur fixée avant ce jet. Le degré de réussite représente la différence entre le chiffre des dizaines du résultat du dé et celui des dizaines de la valeur fixée au départ. Si le degré de réussite est égal à 0, on se fie alors à la marge de réussite qui est sensiblement la même chose mais avec le chiffre des unités.</p>
+                <p>Le degré de réussite (DR) et la marge de réussite (MR) sont utilisées pour déterminer les réussites et échecs critiques, pour déterminer ce que produit le résultat d'un dé et lors des tests opposés pour savoir qui réussit le mieux son épreuve.</p>
+                <p>Exemple : Sur un test réussi à 63 ou moins, on obtient 45, le degré de réussite est égal à 6-4=2. Sur un autre test réussi à 57 ou moins, on obtient 53, le degré de réussite vaut 0, on calcule donc la marge de réussite 7-3=4.</p>
+                
+                <table id="table_DR" class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>DR</th>
+                        <th>Effet</th>
+                    </tr>
+                    <tr>
+                        <td>+6 ou plus</td>
+                        <td>Réussite parfaite, un maître n'aurait pas fait mieux, vous avez réussi un exploit.</td>
+                    </tr>
+                    <tr>
+                        <td>+4 ou +5</td>
+                        <td>Réussite exemplaire, vous atteignez votre objectif de façon spectaculaire.</td>
+                    </tr>
+                    <tr>
+                        <td>+2 ou +3</td>
+                        <td>Réussite incontestable, vous avez réussi ce que vous avez entreprit et personne ne se se plaindra.</td>
+                    </tr>
+                    <tr>
+                        <td>+0 ou +1</td>
+                        <td>Réussite de justesse, vous êtes parvenu à votre objectif mais non sans encombre, ça s'est joué à peu de choses.</td>
+                    </tr>
+                    <tr>
+                        <td>-0 ou -1</td>
+                        <td>Échec de justesse, vous n'avez pas réussi aussi bien que vous le souhaiteriez, mais vous avez tout de même fait un pas en avant vers votre objectif.</td>
+                    </tr>
+                    <tr>
+                        <td>-2 ou -3</td>
+                        <td>Échec, vous n'avez pas progressez d'un pouce lors de votre tentative, vous vous y prenez mal.</td>
+                    </tr>
+                    <tr>
+                        <td>-4 ou -5</td>
+                        <td>Échec cuisant, non seulement vous avez raté votre coup, mais en plus vous empirez la situation.</td>
+                    </tr>
+                    <tr>
+                        <td>-6 ou moins</td>
+                        <td>Échec retentissant, personne n'aurait pu faire pire, c'est à croire que vous vouliez saboter votre plan. La situation s'envenime gravement et aura certainement des conséquences imprévues.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="cran_des" onclick="hideContent(this)">Cran des dés</h3>
+            <div>
+                <p>Parfois, les conditions sont si bonnes que le MJ peut vous permettre d'augmenter votre dé d'un cran ou parfois si mauvaises qu'il diminue d'un cran. Cela concerne seulement les jets de dégâts ou d'initiative.</p>
+                <p>Les crans de dés sont ainsi représenté : 1d2 &#8594; 1d4 &#8594; 1d6 &#8594; 1d8 &#8594; 1d10 &#8594; 1d12 &#8594; 1d12+1d2 &#8594; 1d12+1d4 &#8594; 1d12+1d6 &#8594; 1d12+1d8 &#8594; 1d12+1d10 &#8594; 2d12 &#8594; 2d12+1d2 et ainsi de suite</p>
+            </div>
+
+            <h3 id="modificateur_jets" onclick="hideContent(this)">Modificateurs de difficultés</h3>
+            <div>
+                <p>Toutes les épreuves nécessitant un jet de dés ne représente pas toujours le même challenge, passer par dessus une barrière est facile mais escalader une falaise est beaucoup plus ardu. Le tableau ci dessous indique les différents modificateurs pouvant s'appliquer aux jets de dés, il est possible d'incrémenter ces modificateurs selon les circonstances.</p>
+                <table class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>Difficulté de l'épreuve</th>
+                        <th>Modificateur</th>
+                    </tr>
+                    <tr>
+                        <td>Insurmontable</td>
+                        <td>-40</td>
+                    </tr>
+                    <tr>
+                        <td>Très difficile</td>
+                        <td>-30</td>
+                    </tr>
+                    <tr>
+                        <td>Difficile</td>
+                        <td>-20</td>
+                    </tr>
+                    <tr>
+                        <td>Complexe</td>
+                        <td>-10</td>
+                    </tr>
+                    <tr>
+                        <td>Normale</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Simple</td>
+                        <td>+10</td>
+                    </tr>
+                    <tr>
+                        <td>Facile</td>
+                        <td>+20</td>
+                    </tr>
+                    <tr>
+                        <td>Très facile</td>
+                        <td>+30</td>
+                    </tr>
+                    <tr>
+                        <td>Routinier</td>
+                        <td>+40</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <h2 id="lancer_sort" onclick="hideContent(this)">Lancer un sort</h2>
-        <p>Le personnage peut se concentrer et lancer un sort. Il est possible d'utiliser cette action pour lancer un sort d'attaque mais un personnage ne peut pas attaquer plus de 2 fois par round.</p>
-        <h2 id="repousser" onclick="hideContent(this)">Repousser</h2>
-        <p>Le personnage fait un jet d'Athlétisme ou de Style ce Combat (Bagarre) opposé à celui d'Athlétisme, d'Esquive ou de Style de Combat (Bagarre) de son adversaire. S'il réussit sa cible recule d'un mètre (+1m par 2 de différence entre le BdFor du personnage et celui de la cible), perd un PA et doit passer un test d'Acrobaties ou tomber <a href="Glossaire.xhtml#a_terre">à terre</a>. La cible ne peut pas être de taille supérieure au personnage et doit être située à 2 mètres ou moins. </p>
-        <h2 id="desarmer" onclick="hideContent(this)">Désarmer</h2>
-        <p>Le personnage fait un jet d'Athlétisme ou de Style de Combat (Bagarre) opposé à celui d'Athlétisme ou Style de Combat de l'adversaire. Si la cible perd le duel son arme tombe à 1d4 mètres dans une direction aléatoire. La cible ne peut pas être plus d'une taille supérieure au personnage et située à 2 mètres ou moins. Si le personnage possède une main libre, il peut dérober l'arme de son adversaire.</p>
-        <h2 id="deplacement_force" onclick="hideContent(this)">Déplacement forcé</h2>
-        <p>Le personnage fait un jet de Style de Combat opposé au Style de Combat de l'adversaire. Si le personnage gagne le duel, il peut déplacer sa cible avec lui sur un maximum de trois mètres dans n'importe quelle direction (à condition de posséder encore 6 mètres ou plus de mouvement pour ce tour). La cible ne peut pas être plus d'une taille supérieure au personnage et située à portée de l'arme de mêlée du personnage.</p>
-        <h2 id="desengager" onclick="hideContent(this)">Désengager</h2>
-        <p>Le personnage peut battre en retraite et de sortir de la zone de contrôle de son adversaire si il parvient à se défendre de l'attaque d'opportunité de l'adversaire.</p>
-        <h2 id="attendre" onclick="hideContent(this)">Attendre</h2>
-        <p>Le personnage peut choisir d'attendre et décider de jouer son tour après un certain moment. Cette action doit être la première action entreprise par le personnage au début de son tour (il peut tout de même se déplacer avant d'attendre).</p>
     </div>
 
-    <h1 id="actions_secondaires" onclick="hideContent(this)">Actions secondaires</h1>
+    <h1 id="form_ajout" onclick="hideContent(this)">Proposition d'ajouts</h1>
     <div>
-        <p>Les actions suivantes peuvent être effectués pendants son tour ou celui de quelqu'un d'autre en tant que réaction. Toutes les actions secondaires coûtent 1 PA sauf précisé autrement.</p>
-        <h2 id="course" onclick="hideContent(this)">Course</h2>
-        <p>Cette action permet au personnage de se déplacer sur une distance équivalente à sa vitesse. Si l'action est utilisée pendant son tour, elle permet d'ajouter ce déplacement à sa vitesse pour le tour. Utilisée en tant que réaction, elle permet de se déplacer pendant le tour d'un autre. Cette action peut être utilisée pour se déplacer sur une plus grande distance que le permettrait sa vitesse de base.</p>
-        <h2 id="lancer_sort_non_offensif" onclick="hideContent(this)">Lancer un sort non offensif</h2>
-        <p>Le personnage peut se concentrer et lancer un sort. Il est impossible d'utiliser cette action pour lancer un sort d'attaque.</p>
-        <h2 id="viser" onclick="hideContent(this)">Viser</h2>
-        <p>Le personnage peut dépenser un point d'action pour obtenir un bonus de +10 pour la prochaine attaque à distance. Cette action peut se cumuler avec elle même un maximum de trois fois (pour un bonus de +30). Le bonus reste actif entre les rounds et n'est perdu que si le personnage fait une action autre que viser ou attaquer la même cible.</p>
-        <h2 id="se_cacher" onclick="hideContent(this)">Se cacher</h2>
-        <p>Le personnage peut tenter de se dissimuler dans l'environnement. Si il peut être détecter par quelqu'un en effectuant cette action, il doit passer un test de Furtivité opposé à un test d'Observation. Si il réussit ce test, il gagne l'état <a href="Glossaire.xhtml#cache">caché</a>.</p>
-        <h2 id="aveugler" onclick="hideContent(this)">Aveugler</h2>
-        <p>Le personnage fait un test de Style de Combat opposé à celui d'Esquive ou de style de Combat (Bouclier) de son adversaire. Si la cible perds le duel, elle est <a href="Glossaire.xhtml#aveugle">aveuglée</a> pendant 1 round. Le personnage doit avoir accès à quelques chose pouvant aveugler son adversaire (du sable ou de la terre par exemple). </p>
-        <h2 id="resister" onclick="hideContent(this)">Résister</h2>
-        <p>Le personnage passe une épreuve d'Athlétisme ou de Style de Combat (Bagarre) opposée à celui d'Athlétisme ou de Style de Combat (Bagarre) de son adversaire. Si le personnage réussit, il se libère de l'emprise de son adversaire et n'a plus l'état <a href="Glossaire.xhtml#maitrise">maitrisé</a>.</p>
-        <h2 id="rouler" onclick="hideContent(this)">Rouler</h2>
-        <p>Le personnage passe un test d'Acrobaties, s'il réussit il effectue une roulade pour se relever rapidement sans provoquer d'attaque d'opportunité. S'il se relève ainsi, il consomme tout de même la moitié de son mouvement.</p>
-        <h2 id="preparer_objet_arme" onclick="hideContent(this)">Préparer un objet/une arme</h2>
-        <p>Le personnage peut dégainer, rengainer, ranger ou recharger une arme. Le personnage peut aussi utiliser cette action pour sortir un objet de son sac et le consommer. Dans le cas d'un objet, il faut d'abord le sortir du sac (sauf s'il accessible facilement) ce qui coûte 1 PA, puis l'utiliser ce qui coûte 1 PA également. Dans le cas d'une potion, sa consommation coûte 2 PA.</p>
+        <form action="https://formspree.io/mdowgeba" method="post">
+            <p>Que souhaitez vous proposer ?</p>
+            <input type="checkbox" id="ajout_arme" name="arme"/>
+            <label for="ajout_arme">Arme(s)</label><br/>
+            <input type="checkbox" id="ajout_armure" name="armure"/>
+            <label for="ajout_armure">Armure(s)</label><br/>
+            <input type="checkbox" id="ajout_competence" name="competence"/>
+            <label for="ajout_competence">Compétence(s)</label><br/>
+            <input type="checkbox" id="ajout_autre" name="autre"/>
+            <label for="ajout_autre" style="padding-right: 3px">Autre</label>
+            <input name="precision" value="Précisez" onfocus="if(this.value===this.defaultValue)this.value=''" onblur="if(this.value==='')this.value=this.defaultValue"/>
+            <br/><br/>
+            <label for="proposition">Veuillez décrire le plus possible votre (vos) proposition(s) :</label><br/>
+            <textarea cols="100" rows="15" id="proposition" name="proposition(s)"/><br/><br/>
+            <label for="mail">Email (optionnel)</label>
+            <input name="mail" id="mail"/><br/><br/>
+            <input type="submit" value="Envoyer"/>
+        </form>
     </div>
 
-    <h1 id="reactions" onclick="hideContent(this)">Réactions</h1>
-    <div>
-        <p>Les réactions peuvent être utilisés à n'importe quel moment au cours du round en réponse à une menace ou suite à un certain évènement si on possède les PA pour agir. Toutes les réactions coûtent 1 PA sauf précisé autrement.</p>
-        <h2 id="attaque_opportunite" onclick="hideContent(this)">Attaque d'opportunité</h2>
-        <div>
-            <p>Cette réaction permet au personnage de prendre avantage d'une faille dans la garde de son adversaire pour l'attaquer. Les attaques d'opportunités compte dans le maximum de 2 attaques par tour et sont résolues avant l'action qui les a déclenchées. Il est possible d'effectuer une attaque d'opportunité avec une arme à distance sur une cible que l'on <a href="Types_actions.xhtml#viser">vise</a>. Une attaque d'opportunité peut être déclenchés par les évènements suivants :</p>
-            <ul>
-                <li><span class="big_underline">Retraite :</span>Quand un adversaire bat en retraite et tente de sortir de votre zone de contrôle.</li>
-                <li><span class="big_underline">Approche :</span>Quand un adversaire s'approche de vous tout en étant dans votre zone de contrôle ou quand il rentre dans votre zone de contrôle.</li>
-                <li><span class="big_underline">Invocation :</span>Quand un adversaire tente de lancer un sort en étant dans votre zone de contrôle (sauf si le sort compte comme une attaque de mêlée).</li>
-                <li><span class="big_underline">Se relever :</span>Quand un adversaire <a href="Glossaire.xhtml#a_terre">à terre</a> se relève en étant dans votre zone de contrôle.</li>
-                <li><span class="big_underline">Attaque à distance :</span>Quand un adversaire fait une attaque à distance dans votre zone de contrôle (sauf s'il lance une arme de jet).</li>
-                <li><span class="big_underline">Préparation :</span>Quand un adversaire dégaine ou rengaine une arme ou quand il sort, range ou utilise un objet de son sac. (Si le personnage fait une de ces actions comme une action libre alors il n'est pas possible de l'attaquer ainsi).</li>
-            </ul>
-        </div>
-        <h2 id="bloquer" onclick="hideContent(this)">Bloquer</h2>
-        <p>Le personnage utilise son bouclier pour bloquer une attaque de mêlée ou à distance. Cette action coûte 2 PE.</p>
-        <h2 id="parer" onclick="hideContent(this)">Parer</h2>
-        <p>Le personnage dévie une attaque de mêlée avec son arme ou son bouclier. Cette action coûte 2 PE.</p>
-        <h2 id="contre_attaquer" onclick="hideContent(this)">Contre-Attaquer</h2>
-        <p>Le personnage effectue une parade suivi d'un contre avec son arme. Cette action coûte 2 PA et entre dans la limite des 2 attaques maximum par tour. Cette action coûte 2 PE.</p>
-        <h2 id="esquiver" onclick="hideContent(this)">Esquiver</h2>
-        <p>Le personnage esquive une attaque de mêlée ou à distance. Cette action coûte 2 PE.</p>
-    </div>
 
-    <h1 id="actions_libres" onclick="hideContent(this)">Actions libres</h1>
-    <p>Les actions libres peuvent être effectuées n'importe quand lors d'un combat. Ce sont des actions du type : parler, lâcher un objet, observer ses alentours, etc...</p>
+
+
 </div>
 </body>
 </html>

@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Personnage</title>
+    <meta http-equiv="Content-Script-Type" content="application/javascript"/>
+    <script type="application/javascript" src="../../Javascript/fonctions_accueil_plan.js"> </script>
+    <link rel="stylesheet" type="text/css" title="style_plan" href="../../Styles/common_rules.css"/>
+    <link rel="icon" type="image/ico" href="../../../favicon.ico"/>
+</head>
+<body>
+<div id="mySidenav" class="sidenav" style="display: block">
+    <ul class="sidenav ">
+        <li><span class="index"><a href="../../../index.xhtml">Accueil</a></span></li>
+        <li><span class="partie" onclick="hideContent(this)">Lore</span>
+            <ul>
+                <li><span class="medium"><a href="../World/Histoire_Ogma.xhtml">Histoire du monde</a></span></li>
+                <li><span class="medium"><a href="../World/Carte_Ogma.xhtml">Carte du monde</a></span></li>
+                <li><span class="medium"><a href="../World/Bestiaire.xhtml">Bestiaire</a></span></li>
+                <li><span class="dossier" onclick="hideContent(this)">Origines</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Azuma.xhtml">Azuma</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sever.xhtml">Sever</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tuskizi.xhtml">Tuskizi</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Magiques</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Sakha.xhtml">Sakha</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sihir.xhtml">Sihir</a></span></li>
+                                <li><span class="little"><a href="../Factions/Steinn.xhtml">Steinn</a></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Bestiales</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Factions/Chono.xhtml">Chono</a></span></li>
+                                <li><span class="little"><a href="../Factions/Kanta.xhtml">Kanta</a></span></li>
+                                <li><span class="little"><a href="../Factions/Mushuk.xhtml">Mushuk</a></span></li>
+                                <li><span class="little"><a href="../Factions/Sarpa.xhtml">Sarpa</a></span></li>
+                                <li><span class="little"><a href="../Factions/Tori.xhtml">Tori</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
+            <ul>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#Caracteristiques">Caractéristiques</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#Attributs">Attributs</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#Competences">Compétences</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#traits_perso">Traits de personnage</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#faveur_tychi">Faveurs de Tychi</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#richesse_depart">Richesse de départ</a></span></li>
+                        <li><span class="little"><a href="../Rules/Personnage.xhtml#progression_perso">Progression</a></span></li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Magie.xhtml">Magie</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Magie.xhtml#table_forme_sort">Forme des sorts</a> </span> </li>
+                        <li><span class="little"><a href="Magie.xhtml#table_alteration">École d'Altération</a> </span></li>
+                        <li><span class="little"><a href="Magie.xhtml#table_conjuration">École de Conjuration</a> </span></li>
+                        <li><span class="little"><a href="Magie.xhtml#table_domination">École de Domination</a> </span></li>
+                        <li><span class="little"><a href="Magie.xhtml#table_mysticisme">École du Mysticisme</a> </span></li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Combat.xhtml">Combat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Combat.xhtml#deroulement_combat">Déroulement d'un combat</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#tour_de_jeu">Tour de Jeu</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#reactions">Réactions</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#style_combat">Style de Combat</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#engagement">Engagement en mêlée</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#passe_armes">Passe d'Armes</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#combat_cac">Combat en mêlée</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#combat_distance">Combat à distance</a> </span> </li>
+                        <li><span class="little"><a href="Combat.xhtml#blessures_mort">Blessures et mort</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Survie.xhtml">Survie</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Survie.xhtml#besoins_journaliers">Besoins journaliers</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
+                        <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Armes.xhtml">Armes</a></span></li>
+                        <li><span class="little"><a href="../Rules/Armures.xhtml">Armures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Armures.xhtml#boucliers">Boucliers</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
+                    <ul class="hidden">
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
+                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
+                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
+                            </ul></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#etats_prejudiciables">États préjudiciables</a></span></li>
+                        <li><span class="little"><a href="../Rules/Glossaire.xhtml#traits">Traits</a></span></li>
+                    </ul></li>
+                <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="../Rules/Objets.xhtml#monnaie">Monnaie et conversions</a></span></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Objets</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#contenants">Contenants</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#materiel_aventurier">Matériel</a></span></li>
+                            </ul></li>
+                        <li><span class="sous-dossier" onclick="hideContent(this)">Services</span>
+                            <ul class="hidden">
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#taverne">Taverne</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#transports">Transports</a></span></li>
+                                <li><span class="little"><a href="../Rules/Objets.xhtml#montures">Montures</a></span></li>
+                            </ul></li>
+                    </ul></li>
+            </ul>
+        </li>
+        <li><span class="nav_ajout"><a href="../Rules/Systeme.xhtml#form_ajout">Une proposition ?</a></span></li>
+    </ul>
+</div>
+<div id="main" class="main" style="margin-left: 200px">
+    <h1 id="creation_perso" onclick="hideContent(this)">Création de Personnage</h1>
+    <div>
+        <p>La création d'un avatar est la première étape à franchir avant de se lancer dans une aventure, et peut être la plus importante. À moins que l'aventure que vous vous apprêtez à vivre n'impose des personnages pré-tirés, il est fortement conseillé de personnaliser au mieux son avatar en suivant ce guide afin de l'incarner au mieux.</p>
+        <h2 id="table_origine" onclick="hideContent(this)">Origine</h2>
+        <div>
+            <p>Première étape de la création de son personnage : Choisir son origine. Il existe de nombreuses origines possibles dans le monde d'Ogma, si vous ne les connaissez pas encore retournez à l'<a href="../../../index.xhtml">accueil</a> pour les découvrir.</p>
+            <table class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th colspan="2">Origine</th>
+                    <th>Traits d'origine</th>
+                </tr>
+                <tr>
+                    <th colspan="2">Azuma</th>
+                    <td><strong>Honneur du Guerrier :</strong>Si la vitalité descend en dessous de 50% -> bonus de +10 pour toucher et lancer des sorts pendant 2 tours </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Chono</th>
+                    <td><strong>Rage Primordiale :</strong> Jet de sauvegarde (VOL) si touché par un effet magique en l'absence du pendentif de Virgonium<br/><strong>Chasseur hors-pair :</strong> Vision nocturne, peut relancer un jet raté de PER une fois par jour</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Kanta</th>
+                    <td><strong>Fourrure épaisse :</strong> Robustesse(2), Résistance(Froid, 3)<br/><strong>Imposante stature :</strong> Taille G</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Mushuk</th>
+                    <td><strong>Héritage félin :</strong> Vision nocturne, Dégâts de chute divisé par 2</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Sakha</th>
+                    <td><strong>Peuple sylvestre :</strong> Immunité(Poison), Estomac Solide</td>
+                </tr>
+                <tr>
+                    <th rowspan="3">Sarpa</th>
+                    <th>Lézards</th>
+                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur<br/><strong>Peau écailleuse :</strong> Robustesse(1)<br/><strong>Régénération :</strong> Régénération naturelle doublée, régénère les membres perdus</td>
+                </tr>
+                <tr>
+                    <th>Serpents</th>
+                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur<br/><strong>Peau écailleuse :</strong> Robustesse(1)<br/><strong>Héritage serpentin :</strong> Vision thermique, Rampant</td>
+                </tr>
+                <tr>
+                    <th>Crocodiles</th>
+                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur<br/><strong>Forteresse d'écailles :</strong> Robustesse(3) et Taille G<br/><strong>Prédateur Aquatique :</strong> Amphibien</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Sever</th>
+                    <td><strong>Rage du Combat :</strong>Si la vitalité descend en dessous de 50% -> bonus de +2 aux dégâts et Robustesse(1) pendant 2 tours </td>
+                </tr>
+                <tr>
+                    <th colspan="2">Sihir</th>
+                    <td><strong>Fait de magie :</strong> Puit de Psy(20)<br/><strong>Sensibilité magique :</strong> Vulnérabilité(Magie, 3) et Absorption Magique(3)</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Steinn</th>
+                    <th>Rakaj</th>
+                    <td><strong>Solide comme le Roc :</strong> Robustesse(2)<br/><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Froideur d'Hortak :</strong> Résistance(Froid, 2)</td>
+                </tr>
+                <tr>
+                    <th>Khazun</th>
+                    <td><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Chaleur des Monts Ardents :</strong> Résistance(Feu, 2)</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Tori</th>
+                    <td><strong>Héritage Aviaire :</strong> Volant(Vitesse*2)<br/><strong>Beau parleur :</strong> Peut relancer un jet raté d'ELO une fois par jour</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Tuskizi</th>
+                    <td><strong>Poussée d'Adrénaline :</strong>Si la vitalité descend en dessous de 50% -> bonus de +10 pour esquiver et vitesse +2 pendant 2 tours </td>
+                </tr>
+                </tbody>
+            </table>
+            <p>Toutes les origines Bestiales possèdent le trait Estomac Solide.</p>
+            <p>Toutes les origines Magiques possèdent le trait Psy Inhibée et ne régénère pas de la psy de la même façon, les Sihir l'absorbent des êtres vivants, les Steinns grâce à Ourgal(absorption de métal/pierres) et les Sakhas grâce à Kormo(absorption des végétaux).</p>
+        </div>
+
+        <h2 id="Caracteristiques" onclick="hideContent(this)">Caractéristiques</h2>
+        <div>
+            <p>Après avoir choisi une origine pour votre personnage, il est temps de définir définir ses caractéristiques de départ. Pour ce faire, suivez la colonne correspondante à votre origine et ajoutez les dés équivalent au niveau d'expérience de votre personnage. Si jamais les dés ne vous sont pas favorables, vous avez la possibilité de votre résultat par la valeur moyenne du lancer de dés. Votre MJ peut vous accordez cette action une ou plusieurs fois si vous êtes vraiment maudits par Tychi. Vous devez lancer 8 fois les dés indiqués dans votre niveau d'expérience et vous ajoutez chacun des résultats dans la caractéristique de votre choix.</p>
+            <p>Voici une description des différentes caractéristiques, vous permettant de mieux appréhendez le tableau ci dessous :</p>
+            <ol type="I" >
+                <li>Physiques
+                    <ul class="space_list">
+                        <li><span class="big_underline">Force (FOR) :</span>Détermine la puissance musculaire du personnage..</li>
+                        <li><span class="big_underline">Dextérité (DEX) :</span>Détermine l'habilité du personnage avec ses mains.</li>
+                        <li><span class="big_underline">Agilité (AGI) :</span>Mesure le contrôle qu'a le personnage sur son corps, son équilibre et sa souplesse.</li>
+                        <li><span class="big_underline">Vigueur (VIG) :</span>Représente la robustesse physique et la résistance à la fatigue.</li>
+                    </ul>
+                </li>
+                <li>Mentales
+                    <ul class="space_list">
+                        <li><span class="big_underline">Intelligence (INT) :</span>Détermine l'étendue du savoir, la sagacité et la compréhension de la magie du personnage</li>
+                        <li><span class="big_underline">Volonté (VOL) :</span>Représente la solidité de l'esprit du personnage, son courage, sa capacité à résister aux effets mentaux et à manier la magie.</li>
+                        <li><span class="big_underline">Perception (PER) :</span>Rassemble les capacités des cinq sens et determine également l'instinct du personnage.</li>
+                        <li><span class="big_underline">Éloquence (ELO) :</span>Mesure l'habileté à prendre la parole et à communiquer du personnage ainsi que sa sociabilité.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>La valeur moyenne d'une caractéristique varie entre 35 et 45. Plus la valeur est grande, plus la caractéristique est développée.</p>
+            <p>Les Origines humaines ne possèdes pas de bonus aux caractéristiques, en effet leur population est très variée et ils représentent en quelque sorte la norme de ce monde. Les Azumas, Severs et Tuskizis reçoivent 15 points de caractéristiques à investir par tranche de 5. Ces bonus représentent le development du personnage lors de son passé.</p>
+            <table id="table_carac_origine" class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th rowspan="3"/>
+                    <th colspan="3">Origines Humaines</th>
+                    <th colspan="3">Origines Magiques</th>
+                    <th colspan="7">Origines Bestiales</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Azuma</th>
+                    <th rowspan="2">Sever</th>
+                    <th rowspan="2">Tuskizi</th>
+                    <th rowspan="2">Sakha</th>
+                    <th rowspan="2">Sihir</th>
+                    <th rowspan="2">Steinn</th>
+                    <th rowspan="2">Chono</th>
+                    <th rowspan="2">Kanta</th>
+                    <th rowspan="2">Mushuk</th>
+                    <th colspan="3">Sarpa</th>
+                    <th rowspan="2">Tori</th>
+                </tr>
+                <tr>
+                    <th>Crocodile</th>
+                    <th>Lézard</th>
+                    <th>Serpent</th>
+                </tr>
+                <tr>
+                    <th>Force</th>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="malus">15</td>
+                    <td class="bonus">35</td>
+                    <td class="bonus">30</td>
+                    <td class="bonus">40</td>
+                    <td>25</td>
+                    <td class="bonus">40</td>
+                    <td>25</td>
+                    <td class="malus">15</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <th>Dextérité</th>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="bonus">40</td>
+                    <td>25</td>
+                    <td class="bonus">30</td>
+                    <td>25</td>
+                    <td class="malus">15</td>
+                    <td>25</td>
+                    <td class="malus">20</td>
+                    <td class="bonus">30</td>
+                    <td>25</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <th>Agilité</th>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="bonus">35</td>
+                    <td>25</td>
+                    <td class="malus">15</td>
+                    <td class="bonus">30</td>
+                    <td class="malus">15</td>
+                    <td class="bonus">35</td>
+                    <td class="malus">20</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="bonus">30</td>
+                </tr>
+                <tr>
+                    <th>Vigueur</th>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="malus">15</td>
+                    <td class="bonus">35</td>
+                    <td class="bonus">30</td>
+                    <td class="bonus">40</td>
+                    <td>25</td>
+                    <td class="bonus">35</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <th>Intelligence</th>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="bonus">40</td>
+                    <td>25</td>
+                    <td class="malus">15</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="bonus">30</td>
+                    <td class="bonus">35</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <th>Volonté</th>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="bonus">40</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="malus">20</td>
+                    <td class="bonus">30</td>
+                    <td class="bonus">30</td>
+                    <td class="bonus">40</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <th>Perception</th>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="bonus">35</td>
+                    <td>25</td>
+                    <td class="bonus">30</td>
+                    <td class="malus">20</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <th>Éloquence</th>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="malus">15</td>
+                    <td class="bonus">30</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="bonus">30</td>
+                    <td class="bonus">30</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td class="bonus">35</td>
+                </tr>
+                </tbody>
+            </table>
+            <table id="table_carac_dice" class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th>Expérience du personnage</th>
+                    <th>Débutant</th>
+                    <th>Aventurier</th>
+                    <th>Vétéran</th>
+                    <th>Héros</th>
+                </tr>
+                <tr>
+                    <th>Dés de caractéristique de départ</th>
+                    <th>2d8</th>
+                    <th>2d10</th>
+                    <th>3d8</th>
+                    <th>3d10</th>
+                </tr>
+                <tr>
+                    <th>Résultat moyen</th>
+                    <th>9</th>
+                    <th>11</th>
+                    <th>13</th>
+                    <th>16</th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="Attributs" onclick="hideContent(this)">Attributs</h2>
+        <div>
+            <p>Une fois les caractéristiques déterminées, il faut se pencher sur les attribut qui en sont dérivés :</p>
+            <h3 id="bonus_carac" onclick="hideContent(this)">Bonus de caractéristique</h3>
+            <div>
+                <p>Le bonus de caractéristique (BdCarac) est utilisé dans certaines situations où le score total de la caractéristique est trop grand. Il équivaut au chiffre des dizaines de la caractéristique. On y fait référence ainsi : un "B" majuscule suivi d'un "d" minuscule suivi du diminutif de la caractéristique . BdFor pour la Force, BdDex pour la Dextérité, BdAgi pour l'Agilité, BdVig pour la Vigueur, BdInt pour l'Intelligence, BdVol pour la Volonté, BdPer pour la Perception et BdElo pour l'éloquence.</p>
+                <p>La liste ci-dessous n'est pas exhaustive mais donne des exemples des utilisations des bonus de caractéristiques.</p>
+                <ul>
+                    <li><span class="big_underline">Effets du BdFor :</span>Détermine la capacité de port et la résistance à la douleur.</li>
+                    <li><span class="big_underline">Effets du BdDex :</span>Augmente la portée des armes à distance de (BdDex*10)%.</li>
+                    <li><span class="big_underline">Effets du BdAgi :</span>Détermine le bonus à l'initiative.</li>
+                    <li><span class="big_underline">Effets du BdVig :</span>Détermine l'endurance max et la capacité de port.</li>
+                    <li><span class="big_underline">Effets du BdInt :</span>Détermine la réduction du coût des sorts.</li>
+                    <li><span class="big_underline">Effets du BdVol :</span>Détermine le cercle maximal atteignable (SCMax).</li>
+                    <li><span class="big_underline">Effets du BdPer :</span>Détermine le bonus à l'initiative.</li>
+                    <li><span class="big_underline">Effets du BdElo :</span>Réduit le prix des objets à hauteur de (BdElo*5)%.</li>
+                </ul>
+            </div>
+            <h3 id="endurance" onclick="hideContent(this)">Endurance (PE)</h3>
+            <div>
+                <p>L'endurance indique la capacité d'un personnage à pousser son corps jusqu'à ses limites. Elle est déterminé par le bonus de Vigueur : Endurance = BdVig</p>
+                <p>La jauge d'endurance permet au personnage d'entreprendre certaines actions :</p>
+                <ul>
+                    <li><span class="big_underline">Exploit physique (1 PE dépensé avant le test) :</span>Avantage pour la prochaine épreuve physique (sauf Style de Combat).</li>
+                    <li><span class="big_underline">Sprint (1 PE dépensé avant le mouvement) :</span>Double la vitesse de déplacement du personnage pour ce tour.</li>
+                    <li><span class="big_underline">Rechargement rapide (1 PE) :</span>Diminue de 1 le nombre d'action nécessaire au rechargement de l'arme, le coût peut être réduit à 0 si l'arme le permet.</li>
+                    <li><span class="big_underline">Blocage total (1 PE dépensé après un blocage incomplet) :</span>Permet d'annuler les dégâts d'un coup dépassant la RB de son bouclier.</li>
+                </ul>
+                <p>L'endurance se régénère complètement après un repos long. Si le personnage effectue un repos court, il récupère 1 PE ou supprime un niveau de fatigue.</p>
+                <p>Un personnage peut dépenser ou perdre des PE même si il ne lui en reste aucun, à chaque fois que cela arrive il subit un niveau de fatigue. Le personnage peut encaisser plusieurs niveaux de fatigue avec différents effets avant de perdre connaissance.</p>
+                <table class="table_horizontal" id="table_fatigue">
+                    <tbody>
+                    <tr>
+                        <th>Niveau de fatigue</th>
+                        <th>Effets</th>
+                    </tr>
+                    <tr>
+                        <td>Fatigué (1)</td>
+                        <td>-5 à tout les tests, vitesse -1m</td>
+                    </tr>
+                    <tr>
+                        <td>Épuisé (2)</td>
+                        <td>-10 à tout les tests, vitesse -2m</td>
+                    </tr>
+                    <tr>
+                        <td>Exténué (3)</td>
+                        <td>désavantage à tout les tests, vitesse/2</td>
+                    </tr>
+                    <tr>
+                        <td>Inconscient (4)</td>
+                        <td>Le personnage pert connaissance</td>
+                    </tr>
+                    <tr>
+                        <td>Mort (5+)</td>
+                        <td>Le personnage meurt</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Les effets de la fatigue sont cumulatifs, un personnage épuisé subit les malus de la fatigue en plus de ceux de l'épuisement.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="vitalite" onclick="hideContent(this)">Vitalité (PV)</h3>
+            <div>
+                <p>La vitalité représente l'intégrité physique du personnage. C'est la caractéristique de Vigueur qui détermine la vitalité d'un personnage : Vitalité = Vig/2 (arrondi au supérieur)</p>
+                <p>La jauge de vitalité se vide quand le personnage subit des dégâts, que ce soit suite à un coup contre lequel il n'a pas sû se défendre, une chute, un piège, un sort, etc...</p>
+                <p>Si la vitalité d'une créature atteint 0, elle sombre dans l'inconscience. Pour de plus amples détails, se référer à la section <a href="Combat.xhtml#blessures_mort">Blessures et mort</a> sur la page <a href="Combat.xhtml">Combat</a>.</p>
+                <p>La vitalité se régénère avec du repos, une entité récupère son BdVig en vitalité par jour mais cela peut varier selon les conditions dans lesquelles on se repose, si l'on est sous la surveillance d'un médecin, etc...</p>
+                <p>Il est possible de soigner ses blessures plus rapidement grâce à des sorts ou des potions de soin.</p>
+            </div>
+
+            <h3 id="psy" onclick="hideContent(this)">Psy</h3>
+            <div>
+                <p>La psy est une ressource mentale utilisée pour lancer des sorts, ce sont la caractéristique d'Intelligence qui déterminent la psy maximale d'un personnage : Psy = Int</p>
+                <p>On récupère de la psy naturellement lors des périodes de calme, une quantité équivalente à BdInt+BdVol par heure qui passe. Cette quantité peut varier selon l'environnement du personnage, si il médite ou prie par exemple.</p>
+            </div>
+
+            <h3 id="capacite_port" onclick="hideContent(this)">Capacité de port</h3>
+            <div>
+                <p>Un personnage peut porter une charge équivalente à : BdFor*4+BdVig*2. Cette charge détermine la quantité maximale d'équipement et de matériel qu'il peut transporter sans effort, il est possible d'excéder cette limite mais des pénalités s'appliqueront. Toute pénalité réduisant l'endurance en dessous de 0 inflige un niveau de fatigue par PE négatif.</p>
+                <table class="table_horizontal" id="table_capacite_port">
+                    <tbody>
+                    <tr>
+                        <th>Niveau de charge</th>
+                        <th>Charge portée</th>
+                        <th>Pénalité appliquées à tout les jets</th>
+                        <th>Pénalités de vitesse</th>
+                        <th>Pénalité d'endurance</th>
+                    </tr>
+                    <tr>
+                        <td>Légère</td>
+                        <td>&le;Capacité de port</td>
+                        <td>Aucune pénalité</td>
+                        <td>Aucune pénalité</td>
+                        <td>Aucune pénalité</td>
+                    </tr>
+                    <tr>
+                        <td>Moyenne</td>
+                        <td>&gt;Capacité de port</td>
+                        <td>-10</td>
+                        <td>-1 mètre</td>
+                        <td>-1</td>
+                    </tr>
+                    <tr>
+                        <td>Lourde</td>
+                        <td>&gt;2*Capacité de port</td>
+                        <td>-20</td>
+                        <td>Vitesse divisée par 2</td>
+                        <td>-3</td>
+                    </tr>
+                    <tr>
+                        <td>Écrasante</td>
+                        <td>&gt;3*Capacité de port</td>
+                        <td>-40</td>
+                        <td>Immobilisé</td>
+                        <td>-5</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="vitesse" onclick="hideContent(this)">Vitesse</h3>
+            <div>
+                <p>La vitesse de déplacement d'un personnage détermine la distance maximale qu'il peut parcourir pendant un round de combat. La vitesse de déplacement d'un personnage équivaut à : BdFor+Agi/5 en mètres.</p>
+                <p>Cette vitesse peut être réduite par de nombreux effets comme la <a href="Personnage.xhtml#table_fatigue">fatigue</a> ou le port d'une <a href="Personnage.xhtml#table_capacite_port">charge trop lourde</a>.</p>
+            </div>
+
+            <h3 id="bonus_initiative" onclick="hideContent(this)">Bonus à l'initiative (BdIni)</h3>
+            <div>
+                <p>Le Bonus à l'Initiative est utilisé lors du jet d'initiative au début d'un combat, il est équivalent à : BdIni = BdAgi+BdInt+BdPer.</p>
+            </div>
+
+            <h3 id="taille" onclick="hideContent(this)">Taille</h3>
+            <div>
+                <p>La catégorie de taille de votre personnage dépend de son origine :</p>
+                <ul>
+                    <li><span class="big_underline">Origine de taille Petite(P) :</span>Sakha, Steinn </li>
+                    <li><span class="big_underline">Origine de taille Moyenne(M) :</span>Azuma, Chono, Mushuk, Sarpa Lézard, Sarpa Serpent, Sihir, Sever, Tori, Tuskizi</li>
+                    <li><span class="big_underline">Origine de taille Grande(G) :</span>Kanta, Sarpa Crocodile </li>
+                </ul>
+                <p>Pour plus de détails sur l'influence qu'à la taille sur votre personnage Cf <a href="Tableaux.xhtml#taille_creatures">Taille des créatures</a>.</p>
+            </div>
+
+            <h3 id="langages" onclick="hideContent(this)">Langages</h3>
+            <div>
+                <p>Votre personnage sait parler sa langue d'origine et l'attribut Langages détermine le nombre de langue qu'il peut maîtriser. Cet attribut équivaut à son BdInt et la langue d'origine ne compte pas dans ce total. Votre personnage ne commencent pas forcément la partie avec le nombre maximal de langages qu'il peut maîtriser, cela dépend de son origine et des lieux où il a vécu.</p>
+                <p>Certains langages possèdent des racines communes, permettant à ses pratiquants de communiquer même s'il n'ont aucune langues en commun. D'autres peu communes sont considérés comme exotiques, parmi elle le Kugarite, le Karnarak et le Sihiräll. Les langues exotiques comptent comme deux langages connus. Cf <a href="../World/Histoire_Ogma.xhtml#langages">Langages</a></p>
+            </div>
+        </div>
+
+        <h2 id="Competences" onclick="hideContent(this)">Compétences</h2>
+        <div>
+            <p>Maintenant qu'on connaît les aptitudes physiques et mentales de votre personnage, attaquons nous à ce qu'il sait faire, c'est à dire quelles sont ses compétences ? Un personnage commence un certain nombre de compétences selon son niveau d'expérience, mais votre MJ peut très bien décider d'en attribuer plus ou moins si son scénario l'exige.</p>
+            <table class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th rowspan="2">Expérience du personnage</th>
+                    <th colspan="6">Paliers de compétence de départ</th>
+                </tr>
+                <tr>
+                    <th>Novice</th>
+                    <th>Apprenti</th>
+                    <th>Adepte</th>
+                    <th>Expert</th>
+                    <th>Maître</th>
+                </tr>
+                <tr>
+                    <th>Débutant</th>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>Aventurier</th>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>Vétéran</th>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th>Héros</th>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>La caractéristique indiquée sur la compétence est celle utilisée pour les tests liés à cette compétence. Si plusieurs caractéristiques sont indiqués, vous êtes libres de choisir laquelle utiliser pour maximiser vos chances de réussite. Il est toutefois possible que le MJ vous impose la caractéristique à utiliser si les conditions du test s'y prêtent.</p>
+            <p>Les compétences possèdent plusieurs paliers de maîtrise, chaque palier représentant l'expérience que possède votre personnage dans cette compétence. Un personnage ne possédant d'expérience dans une compétence peut tenter d'effectuer des actions relatives à la compétences mais il peut subir des malus selon la compétence concernée.</p>
+            <p>Un personnage peut se spécialiser dans un domaine particulier d'une compétence et ainsi inverser le résultat de son jet de dé si cela lui permet de réussir. Un personnage ne peut bénéficier de plus d'une spécialisation à la fois lors d'une épreuve mais peut posséder plusieurs spécialisation dans une même compétence. Un spécialisation coûte 200 points d'expérience et nécessite d'avoir atteint le palier d'Apprenti. Des exemples de spécialisations sont donnés dans la liste ci-dessous mais les joueurs peuvent tout à fait choisir leur propre spécialisation et en discuter avec le MJ.</p>
+            <p>Les paliers sont :</p>
+            <ul>
+                <li><span class="big_underline">Novice :</span>Le personnage commence à saisir l'ampleur des choses qu'il lui reste à apprendre dans ce domaine, mais à déjà les bases. (+10)</li>
+                <li><span class="big_underline">Apprenti :</span>L’entraînement rigoureux a porté ses fruits, la maîtrise du personnage commence à le distinguer du reste du monde. (+20)</li>
+                <li><span class="big_underline">Adepte :</span>Les capacités du personnages se sont encore renforcées, si bien qu'il est désormais capable de donner des leçons aux débutants. (+30)</li>
+                <li><span class="big_underline">Expert :</span>L'aptitude du personnage surpasse la grande majorité du commun des mortels.(+40)</li>
+                <li><span class="big_underline">Maître :</span>Le personnage est devenu un maître de son art, il est perçu comme une légende parmi ses pairs. (+50)</li>
+            </ul>
+            <p><span class="big_underline">Exemple :</span>Asraë veut ouvrir un coffre verrouillé mais elle ne possède pas la clé, elle peut utiliser la compétence Sabotage(For, Dex) pour s'emparer de ce qu'il y a à l'intérieur. Asraë est une Adepte en Sabotage, elle possède donc un bonus de +30 à son jet, elle choisi de crocheter la serrure plutôt que la défoncer et utilise donc sa caractéristique de Dextérité plutôt que celle de Force. Asraë possède un score de Dextérité de 42, elle y ajoute son +30 provenant de la compétence Sabotage, elle réussit à ouvrir le coffre si son jet est inférieur à 72, elle fait un 35 et obtient donc une marge de réussite de 3. Le MJ décide suite à cette brillante réussite que le crochetage ne fait aucun bruit et que le propriétaire du coffre qui dormait juste a côté ne se réveille pas.</p>
+            <table id="table_competence" class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th>Compétence</th>
+                    <th>Régie par</th>
+                    <th>Exemple de Spécialisations</th>
+                    <th>Description</th>
+                    <th width="25%">Exemple d'épreuves</th>
+                </tr>
+                <tr id="acrobaties">
+                    <th>Acrobaties</th>
+                    <td>Agilité</td>
+                    <td>Contorsionnisme<br/>Saut<br/>Équilibre</td>
+                    <td>Cette compétence gouverne les actions reposant sur l'explosivité des muscles, la souplesse et l'équilibre</td>
+                    <td>Sauter de toit en toits<br/>Se faufiler dans un espace étroit<br/>Tenir en équilibre sur une corde/poutre</td>
+                </tr>
+                <tr id="alchimie">
+                    <th>Alchimie</th>
+                    <td>Intelligence</td>
+                    <td>Fortifiants<br/>Poisons<br/>Bombes</td>
+                    <td>L'alchimie est l'art de concocter des potions et des poisons en combinant des ingrédients possédants des propriétés chimiques ou magiques.</td>
+                    <td>Créer une potion ou un poison<br/>Identifier un ingrédient ou une potion inconnue<br/>Fabriquer des explosifs</td>
+                </tr>
+                <tr id="alteration">
+                    <th>Altération</th>
+                    <td>Volonté</td>
+                    <td><a href="../World/Histoire_Ogma.xhtml#inkarnai">Domaines de Karnaï</a></td>
+                    <td>Cette école de magie permet de modeler la réalité comme on l'entend en transformant ou réparant des éléments existants.</td>
+                    <td>Augmenter ses capacités physiques<br/>Soigner un allié<br/>Infliger une vulnérabilité</td>
+                </tr>
+                <tr id="arcanes">
+                    <th>Arcanes</th>
+                    <td>Intelligence<br/>Perception</td>
+                    <td>Détection magique<br/>Désactivation des pièges<br/>Analyse de la magie</td>
+                    <td>Les arcanes sont les études relatives à la magie, elles permettent d'identifier la présence de psyché dans le plan matériel.</td>
+                    <td>Identifier un sort/objet enchanté<br/>Détecter/Désarmer un piège magique</td>
+                </tr>
+                <tr id="athletisme">
+                    <th>Athlétisme</th>
+                    <td>Vigueur<br/>Force</td>
+                    <td>Course<br/>Escalade<br/>Natation</td>
+                    <td>Cette compétence représente la capacité d'un personnage à effectuer des actions physiques sur une période relativement longue</td>
+                    <td>Escalader une paroi<br/>Courir sur de longues distances sans pause<br/>Nager à travers des rapides</td>
+                </tr>
+                <tr id="bluff">
+                    <th>Bluff</th>
+                    <td>Éloquence</td>
+                    <td>Imitation<br/>Baratin</td>
+                    <td>La compétence bluff mesure l'habilité et la crédibilité du personnage lors d'un mensonge.</td>
+                    <td>Se faire passer pour quelqu'un d'autre<br/>Mentir à quelqu'un</td>
+                </tr>
+                <tr id="calme">
+                    <th>Calme</th>
+                    <td>Volonté</td>
+                    <td>Intrépide<br/>Force Mentale</td>
+                    <td>La compétence calme permet de conserver ses capacités dans des situations stressantes</td>
+                    <td>Ne pas fuir de terreur<br/>Contrecarrer un attaque mentale</td>
+                </tr>
+                <tr id="conjuration">
+                    <th>Conjuration</th>
+                    <td>Volonté</td>
+                    <td><a href="../World/Histoire_Ogma.xhtml#inkarnai">Domaines de Karnaï</a></td>
+                    <td>Cette école de magie se concentre sur le déplacement d'éléments physiques ou magiques entre le plan matériel et le plan psychique, que ce soit des éléments, des objets ou même des êtres vivants.</td>
+                    <td>Lancer une boule de feu<br/>Invoquer une arme ou une armure<br/>Se téléporter</td>
+                </tr>
+                <tr id="domination">
+                    <th>Domination</th>
+                    <td>Volonté</td>
+                    <td><a href="../World/Histoire_Ogma.xhtml#inkarnai">Domaines de Karnaï</a></td>
+                    <td>Cette école de magie permet de contrôler les vivants comme les morts et de jouer sur la perception de la réalité de ses cibles.</td>
+                    <td>Réanimer un cadavre<br/>Calmer une entité<br/>Créer un mirage</td>
+                </tr>
+                <tr id="dressage">
+                    <th>Dressage</th>
+                    <td>Perception<br/>Éloquence</td>
+                    <td>Compréhension animale<br/>Domptage<br/>Soins animalier</td>
+                    <td>Cette compétence détermine l'aisance qu'à le personnage à se faire obéir des animaux, sa capacité à les comprendre et à s'en occuper.</td>
+                    <td>Communiquer avec un animal<br/>Apprendre un tour à un compagnon animal</td>
+                </tr>
+                <tr id="equitation">
+                    <th>Équitation</th>
+                    <td>Agilité<br/>Dextérité</td>
+                    <td>Combat monté<br/>Course<br/>Saut d'obstacles</td>
+                    <td>L'équitation mesure les capacités de monte du personnage, le contrôle qu'il a sur sa monture.</td>
+                    <td>Fare courir sa monture plus vite<br/>Faire sauter sa monture<br/>Chevaucher une monture inconnue</td>
+                </tr>
+                <tr id="esquive">
+                    <th>Esquive</th>
+                    <td>Agilité</td>
+                    <td>Aucune spécialisation possible dans cette compétence</td>
+                    <td>Cette compétence mesure l'habileté du personnage à s'extraire de situation difficiles.</td>
+                    <td>Éviter un coup d'épée<br/>Se dérober dace à une chute de pierres<br/>Se jeter au sol pour éviter une boule de feu</td>
+                </tr>
+                <tr id="furtivite">
+                    <th>Furtivité</th>
+                    <td>Agilité</td>
+                    <td>Camouflage<br/>Filature<br/>Infiltration</td>
+                    <td>La furtivité mesure la capacité du personnage à rester discret au sein de son environnement, à se déplacer sans bruit et sans être vu.</td>
+                    <td>Prendre quelqu'un en filature<br/>Se faufiler dans un fort ennemi<br/>Se camoufler dans l'environnement</td>
+                </tr>
+                <tr id="ingenierie">
+                    <th>Ingénierie</th>
+                    <td>Dextérité<br/>Intelligence</td>
+                    <td>Analyse<br/>Fabrication<br/>Siège</td>
+                    <td>La compétence d'ingénierie mesure l'aptitude du personnage à utiliser, créer et modifier divers machines et mécanismes.</td>
+                    <td>Utiliser un engin de siège<br/>Construire une machine<br/>Étudier le fonctionnement d'un mécanisme</td>
+                </tr>
+                <tr id="investigation">
+                    <th>Investigation</th>
+                    <td>Intelligence<br/>Perception</td>
+                    <td>Empreintes<br/>Recherche<br/>Fouille</td>
+                    <td>Cette compétence mesure les capacités de fouille d'un personnage, son habileté à trouver des détails cachés lors d'une enquête.</td>
+                    <td>Fouiller une pièce<br/>Trouver des informations dans des archives<br/>Localiser une cible dans une ville</td>
+                </tr>
+                <tr id="linguistique">
+                    <th>Linguistique</th>
+                    <td>Intelligence</td>
+                    <td>Langage crypté<br/><a href="../World/Histoire_Ogma.xhtml#langages">Langages</a><br/>Dialecte</td>
+                    <td>La linguistique est la science des écrits et des langues, elle permet de comprendre les manuscrits complexes et les langues inconnues</td>
+                    <td>Déchiffrer/Créer un parchemin<br/>Comprendre un dialecte</td>
+                </tr>
+                <tr id="logique">
+                    <th>Logique</th>
+                    <td>Intelligence<br/>Perception</td>
+                    <td>Mathématiques<br/>Jeu<br/>Énigme</td>
+                    <td>La logique détermine la capacité qu'à un personnage à résoudre des problèmes, analyser rapidement des données de façon rationnelle.</td>
+                    <td>Faire des calculs mathématiques<br/>Trouver la solution d'une énigme<br/>Améliorer ses chances au jeu</td>
+                </tr>
+                <tr id="medecine">
+                    <th>Médecine</th>
+                    <td>Intelligence</td>
+                    <td>Premiers soins<br/>Chirurgie<br/>Soins magiques</td>
+                    <td>La médecine est l'art de guérir le corps, que ce soit des plaies ou des maladies, par magie ou des remèdes naturels</td>
+                    <td>Soigner une blessure<br/>Identifier une maladie<br/>Préparer une remède</td>
+                </tr>
+                <tr id="marchandage">
+                    <th>Marchandage</th>
+                    <td>Éloquence</td>
+                    <td>Négociation<br/>Gestion<br/>Estimation</td>
+                    <td>Le marchandage couvre tout ce qui fait lien avec l'économie ce qui permet de commercer équitablement avec d'autres marchands.</td>
+                    <td>Négocier un meilleur prix<br/>Faire tourner un commerce<br/>Estimer la valeur d'un objet</td>
+                </tr>
+                <tr id="mysticisme">
+                    <th>Mysticisme</th>
+                    <td>Volonté</td>
+                    <td><a href="../World/Histoire_Ogma.xhtml#inkarnai">Domaines de Karnaï</a></td>
+                    <td>Cette école de magie rassemble les sorts non étudiés par les trois autres écoles, ses effets sont divers : révéler l'inconnu et le futur, jouer avec le destin.</td>
+                    <td>Détecter des entités<br/>Communiquer à distance<br/>Voir le futur</td>
+                </tr>
+                <tr id="observation">
+                    <th>Observation</th>
+                    <td>Perception</td>
+                    <td>Vision<br/>Ouïe<br/>Odorat</td>
+                    <td>Cette compétence détermine l'attention que porte le personnage à son environnement et ses facultés à repérer quelque chose qui échapperait à d'autres.</td>
+                    <td>Détecter uen embuscade<br/>Identifier un comportement étrange<br/>Repérer une créature étrange au loin</td>
+                </tr>
+                <tr id="persuasion">
+                    <th>Persuasion</th>
+                    <td>Éloquence</td>
+                    <td>Charme<br/>Propagande<br/>Vantardise</td>
+                    <td>La persuasion permet d'influencer les autres grâces à de belles paroles et des mots biens placés. Les épreuves de persuasion sont souvent opposés à la Volonté des cibles souhaitant y résister.</td>
+                    <td>Séduire une personne<br/>Convaincre quelqu'un de se mettre d'accord avec vous<br/>Impressionner la foule en racontant ses exploits</td>
+                </tr>
+                <tr id="presence">
+                    <th>Présence</th>
+                    <td>Éloquence<br/>Force</td>
+                    <td>Intimidation<br/>Commandement<br/>Inspiration</td>
+                    <td>La présence détermine à quel point vous pouvez être impressionnant si vous le souhaitez.</td>
+                    <td>Rallier une foule pendant un discours<br/>Faire tenir une ligne de front en beuglant<br/>Intimider quelqu'un</td>
+                </tr>
+                <tr id="resistance">
+                    <th>Résistance</th>
+                    <td>Vigueur</td>
+                    <td>Anticorps<br/>Anti-poison</td>
+                    <td>La résistance détermine à quel point vous est endurant face aux assauts que subissent votre corps.</td>
+                    <td>Résister au poison<br/>Rester conscient après un coup dur</td>
+                </tr>
+                <tr id="roublardise">
+                    <th>Roublardise</th>
+                    <td>Dextérité</td>
+                    <td>Vol à la tire<br/>Prestidigitation<br/>Dissimulation</td>
+                    <td>La compétence de roublardise mesure l'habileté d'un personnage lorsqu'il souhaitent faire un action discrètement.</td>
+                    <td>Voler une bourse<br/>Cacher un objet<br/>Faire un tour de passe-passe</td>
+                </tr>
+                <tr id="sabotage">
+                    <th>Sabotage</th>
+                    <td>Dextérité<br/>Force</td>
+                    <td>Serrures<br/>Pièges<br/>Machines</td>
+                    <td>La compétence de sabotage permet de désarmer des mécanismes, que ce soit des serrures ou des engins de siège</td>
+                    <td>Crocheter une serrure<br/>Détruire une machine</td>
+                </tr>
+                <tr id="savoir">
+                    <th>Savoir</th>
+                    <td>Intelligence</td>
+                    <td>Histoire<br/>Religion<br/>Traditions</td>
+                    <td>Cette compétence détermine le niveau de connaissances global d'un personnage.</td>
+                    <td>Se souvenir des détails d'une légende<br/>Identifier une créature préalablement étudiée<br/>Connaître les us et coutumes d'une contrée</td>
+                </tr>
+                <tr id="survie">
+                    <th>Survie</th>
+                    <td>Intelligence<br/>Perception</td>
+                    <td><a href="Survie.xhtml#biomes">Biomes</a><br/>Pistage<br/>Cueillette</td>
+                    <td>Cette compétence mesure les capacité du personnage à survivre en milieu naturel. De nombreux modificateurs peuvent s'appliquer selon l'environnement de l'épreuve.</td>
+                    <td>Trouver de l'eau et de la nourriture<br/>Traquer une piste<br/>Identifier une plante dangereuse</td>
+                </tr>
+                <tr id="style_combat_competence">
+                    <th>Style de combat [type]</th>
+                    <td>Force<br/>Dextérité</td>
+                    <td>Duel<br/>Combat monté<br/>Combat en formation</td>
+                    <td>Cette compétence détermine le niveau d'expérience du personnage avec le combat et la façon dont il se bat. Pour plus d'information Cf <a href="Combat.xhtml#style_combat">Style de combat</a>.</td>
+                    <td>Attaquer un adversaire<br/>Se défendre d'une attaque</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="traits_perso" onclick="hideContent(this)">Traits</h2>
+        <div>
+            <p>Votre personnage est presque abouti, mais peut-être qu'il lui manque encore un petit quelque chose qui le rendrait vraiment unique et différents des autres Ogmarim, c'est là qu'entre en jeu les traits de personnage :</p>
+            <p>Les joueurs peuvent demander au MJ de créer des traits particulier pour leur personnage pour coller au maximum avec leurs attentes. Ces traits reflètent une partie de la personnalité, du passé ou des objectifs du personnage.</p>
+            <p>Les traits de personnages sont un genre de sous-compétence permettant d'affiner la personalisation et le style de jeu du personnage selon les désirs du joueurs</p>
+            <p>Pour éviter que les traits ne soient trop puissants, il faut, comparativement à une compétence, soit que son champ d'application soit plus restraint c'est à dire qu'il est utilisé moins souvent qu'une compétence; soit que sa puissance soit moindre ou compensée par un malus.</p>
+            <p>Les traits de personnages peuvent apporter un bonus et/ou un malus lors de certaines situations, par exemple, un personnage mal-à-l'aise avec des humains de part sa nature bestiale, peut avoir un malus de 2 en éloquence lors d'interactions sociales avec des Severs, Azumas ou Tuskizis mais un bonus de 2 avec les origines bestiales.</p>
+            <p>Un personnage commence en général la partie avec 3 traits au maximum mais pourra en obtenir d'autres en cours de campagne si une action particulièrement épique ou notable est accompli par un personnage. Une héroïne survivant une aventure se déroulant dans une grotte infestée de scaratrok sans jamais se faire empoisonnée peut gagner le trait "Anticorps efficace" accordant une résistance mineure au dégâts de poison.</p>
+        </div>
+
+        <h2 id="faveur_tychi" onclick="hideContent(this)">Faveurs de Tychi</h2>
+        <div>
+            <p>Les faveurs de Tychi relatent à quel point votre personnage est chanceux et possède un destin particulier. Elles permettent de jouer avec le destin, d'éviter les blessures graves et de danser avec la mort.</p>
+            <p>Un personnage commence avec 1d4 faveurs de Tychi et ne peut en obtenir d'autres que s'il prouve qu'il est vraiment destiné à de grands projets en accomplissant des gestes épiques.</p>
+            <p>Ces faveurs peuvent être utilisées de 2 façons différentes :</p>
+            <ul>
+                <li>Éviter des conséquences dramatiques : si le personnage se retrouve dans une situation catastrophique dans laquelle il a de grandes chances de mourir, il peut dépenser une faveur pour s'en sortir d'une façon ou d'une autre.</li>
+                <li>Choisir le résultat d'un lancer de dé : à n'importe quel moment, un joueur peut décider que ce jet de dé est d'une importance capitale pour son personnage, auquel cas il peut dépenser une faveur pour choisir le résultat de son jet.</li>
+            </ul>
+            <p>Comme annoncé plus tôt, les faveurs de Tychi permettent d'éviter la mort prématurée d'un personnage dans une certaine mesure. Si un personnage vient à se faire couper un membre suite à un jet de rupture raté ou autre, il peut utiliser une faveur pour ne pas perdre cette partie chérie de leur corps. Si un personnage atteint un nombre de points de vie négatif équivalent à sa valeur de vigueur, il peut se réveiller plusieurs jours plus tard, secouru par des autochtones l'ayant trouvé mourant au bord de la route s'il lui reste une faveur.</p>
+            <p>Ces faveurs ont leur limites et il revient au MJ de décider du sort des personnages y ayant recours, que ce soit sous la forme d'un sauvetage in extremis par un groupe tiers, par un réveil douloureux dans un petit village. Chaque situation peut faire varier le résultat de l'utilisation d'une faveur.</p>
+        </div>
+
+        <h2 id="richesse_depart" onclick="hideContent(this)">Richesse de départ</h2>
+        <div>
+            <p>Le patrimoine monétaire d'un personnage au début de l'aventure est également tiré au dés selon son origine sociale.</p>
+            <p> Cet argent n'est pas utilisé pour acheter l'équipement de départ d'un personnage déjà expérimenté, on considère qu'un aventurier possède déjà un certain équipement d'un qualité équivalente à son niveau social.</p>
+            <p>Un personnage noble décidant le jour de ses 20 à l'aventure pourra s'offrir une bel arme et une armure, un paysan partira avec un couteau de cuisine ou un bâton.</p>
+            <table class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th rowspan="2">Origine sociale</th>
+                    <th colspan="3">Nombre de dé(s)</th>
+                </tr>
+                <tr>
+                    <th>Pièces d'or</th>
+                    <th>Pièces d'argent</th>
+                    <th>Pièces de cuivre</th>
+                </tr>
+                <tr>
+                    <td>Noble</td>
+                    <td>5d8</td>
+                    <td>3d10</td>
+                    <td>1d10</td>
+                </tr>
+                <tr>
+                    <td>Marchand</td>
+                    <td>4d6</td>
+                    <td>3d10</td>
+                    <td>1d10</td>
+                </tr>
+                <tr>
+                    <td>Artisan</td>
+                    <td>3d6</td>
+                    <td>3d10</td>
+                    <td>1d10</td>
+                </tr>
+                <tr>
+                    <td>Tenancier</td>
+                    <td>2d6</td>
+                    <td>3d10</td>
+                    <td>1d10</td>
+                </tr>
+                <tr>
+                    <td>Ouvrier</td>
+                    <td>1d6</td>
+                    <td>3d10</td>
+                    <td>1d10</td>
+                </tr>
+                <tr>
+                    <td>Paysan/Mineur</td>
+                    <td/>
+                    <td>3d10</td>
+                    <td>1d10</td>
+                </tr>
+                <tr>
+                    <td>Mendiant</td>
+                    <td/>
+                    <td/>
+                    <td>1d10</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="progression_perso" onclick="hideContent(this)">Progression du personnage</h2>
+        <div>
+            <p>Votre personnage pourra progresser au fil de ses aventures si vous jouez sur une longue période avec lui. Votre MJ vous récompensera avec des points d'expérience(XP) pour les actions que vous avez menées. Vous pourrez dépenser ces points lors des pauses entres vos aventures pour améliorer vos caractéristiques et vos compétences.</p>
+            <table class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th>Progression</th>
+                    <th>Coût en points d'XP</th>
+                </tr>
+                <tr>
+                    <td>Augmentation d'un point de Caractéristique</td>
+                    <td>Bonus de Caractéristique</td>
+                </tr>
+                <tr>
+                    <td>Rang Novice</td>
+                    <td>10 XP</td>
+                </tr>
+                <tr>
+                    <td>Rang Apprenti</td>
+                    <td>20 XP</td>
+                </tr>
+                <tr>
+                    <td>Rang Adepte</td>
+                    <td>30 XP</td>
+                </tr>
+                <tr>
+                    <td>Rang Expert</td>
+                    <td>40 XP</td>
+                </tr>
+                <tr>
+                    <td>Rang Maître</td>
+                    <td>50 XP</td>
+                </tr>
+                <tr>
+                    <td>Spécialisation de compétence</td>
+                    <td>15 XP</td>
+                </tr>
+                <tr>
+                    <td>Nouvel équipement pour Style de Combat</td>
+                    <td>5 XP</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>La façon dont vous dépensez ces points d'XP dépend de votre façon de faire dans votre table, vous pouvez vous restreindre à les dépenser entre chaque aventure ou choisir de les dépenser dès que vous en avez la possibilité. Il est également possible d'intégrer cette progression dans la narration en expliquant à votre table comment et grâce à quoi(ou qui) vous avez pu progresser de la sorte.</p>
+            <i>Note aux MJs : C'est à vous que revient la lourde de tâche de récompenser vos joueurs, vous pouvez distribuer les points d'XP de façon globale à tout le groupe à la fin de vos arcs narratifs ou de chaque session de jeu, de façon individuelle en fonction des exploits de vos joueurs voire un mélange de tout ça.<br/>En guise d'aide, comptez environ 10 points d'XP pour une session de 4 heures de jeu si vous aimez récompenser individuellement vos joueurs pour leur RP exemplaire par exemple. Cette quantité varie selon le contenu de la session bien entendu.</i>
+        </div>
+
+        <h2 id="rendre_vivant" onclick="hideContent(this)">Rendre votre personnage vivant</h2>
+        <div>
+            <p>Votre alter ego est prêt d'un point de vu mécaniques de gameplay, mais est-il prêt d'un point de vu jeu de rôle ? Cette section va se concentrer sur l'histoire de votre personnage et ses objectifs, il vous est bien sûr possible de developper votre personnage en cours de jeu si c'est ce que vous souhaitez.</p>
+            <h3 id="histoire_perso" onclick="hideContent(this)">Histoire du personnage</h3>
+            <div class="hidden">
+                <h4>Quel est votre nom ?</h4>
+                <p>Le nom est le plus important, impossible de partir à l'aventure sans en possédez un à moins d'être anonyme. Chaque origine possède un style de nom différent que vous pouvez voir sur leur pages respectives.</p>
+                <h4>Avez vous de la famille ?</h4>
+                <p>Que ce soit des parents, des frères, des sœurs ou bien même un conjoint ou encore des enfants avoir des relations familiales permet d'avoir une attache plus solide dans le monde pour votre alter ego et quelque chose à chérir et à protéger.</p>
+                <h4>D'où venez vous ?</h4>
+                <p>Que ce soit l'origine géographique ou sociale, cela peut avoir un impact sur la façon dont vous incarnez votre personnage. La vie n'est pas la même pour un enfant des rues du Sultanat et une princesse d'une grande maison Azuma.</p>
+                <h4>Quels sont vos amis, alliés et ennemis</h4>
+                <p>Avoir des camarades et des compagnons sur qui compter peut rendre la vie plus agréable. Avoir des ennemis peut à l'inverse la rendre dangereuse. Vous pourriez être poursuivi par un groupe de mercenaires après un cambriolage chez une personne influente ou être un explorateur commissionné par une faction puissante.</p>
+                <h4>Que faisiez-vous avant de devenir un(e) aventurier(ère) et pourquoi avoir choisi cette voie ?</h4>
+                <p>Cette question est peut être la plus importante de toutes, les raisons peuvent être multiples et peuvent varier de la simple soif d'aventures à un désir de vengeance insatiable envers toute une catégorie de la population d'Ogma.</p>
+            </div>
+            <h3 id="apparence_perso" onclick="hideContent(this)">Apparence du personnage</h3>
+            <div class="hidden">
+                <ul>
+                    <li>Taille</li>
+                    <li>Poids</li>
+                    <li>Couleur de peau</li>
+                    <li>Cheveux</li>
+                    <li>Couleur des yeux</li>
+                    <li>Forme du visage</li>
+                    <li>Cicatrices, tatouages ou autres signes particuliers</li>
+                </ul>
+                <p>Toutes ces précisions sont optionnelles dans la description de votre personnage, mais peuvent renforcer l'implication que vous avez vis-à-vis de lui. Il vous faudra tout de même rester cohérent avec l'origine que vous avez choisi, un Steinn mesurant 1m80 ou un Sakha de 120kg ont assez peu de chance d'exister.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

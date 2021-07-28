@@ -172,6 +172,11 @@ a:hover {
     color: rebeccapurple; !important;
 }
 
+.sidenav_expand{
+    padding-left: 0px;
+    font-weight: bolder;
+}
+
 span.index a{
     text-decoration: none;
     font-size: 28px;
@@ -197,8 +202,12 @@ span.dossier {
 span.sous-dossier {
     text-decoration: none;
     font-size: 17px;
-    display: block;
 }
+
+span.sous-dossier a{
+    color: black;
+}
+
 
 span.little a{
     text-decoration: none;
