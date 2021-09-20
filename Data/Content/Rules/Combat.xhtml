@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -147,6 +152,7 @@
     </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1 id="Combat" onclick="hideContent(this)">Combat</h1>
     <div>
         <p>Le Jeu de Rôle nécessite de séparer le temps en deux catégories :</p>
@@ -162,7 +168,7 @@
             <h4>Étape 1 : Déterminer la surprise</h4>
             <p>Si une ou plusieurs entités se retrouvent en combat sans s'y être préparés, ils sont pris par surprise et ne peuvent agir que si leur bonus à l'initiative dépassent le score d'initiative des assaillants. Ils ne peuvent pas entreprendre de <a href="Combat.xhtml#reactions">réactions</a> tant qu'il n'ont pas passé leur premier tour de jeu.</p>
             <h4>Étape 2 : Déterminer l'initiative</h4>
-            <p>Pour déterminer dans quel ordre les combattants vont pouvoir agir, il est nécessaire d'établir l'ordre d'initiative. Pour cela chaque combattant lance un d6 et y ajoute son BdIni. Le score le plus haut commence à agir en premier suivi du second et ainsi de suite. Si jamais il y a égalité sur un score d'initiative, les personnages incarnés par un joueur sont prioritaires, si le conflit est entre deux joueurs ils règlent cela ensemble et le MJ décidera s'ils n'arrivent pas à se mettre d'accord. </p>
+            <p>Pour déterminer dans quel ordre les combattants vont pouvoir agir, il est nécessaire d'établir l'ordre d'initiative. Pour cela chaque combattant lance un d10 et y ajoute son BdIni. Le score le plus haut commence à agir en premier suivi du second et ainsi de suite. Si jamais il y a égalité sur un score d'initiative, les personnages incarnés par un joueur sont prioritaires, si le conflit est entre deux joueurs ils règlent cela ensemble et le MJ décidera s'ils n'arrivent pas à se mettre d'accord. </p>
             <p>Pour éviter de perdre du temps et d'interrompre l'action juste avant un combat avec de pénibles calculs d'initiative et d'écriture pour déterminer l'ordre de jeu, on peut déterminer l'initiative au début de la session et à la fin de chaque combat pour fluidifier l'entrée en mode tour par tour. Les groupes d'entités similaires peuvent posséder le même score d'initiative et agir en même temps.</p>
             <p><i>Note aux MJs : L'initiative n'est pas une composante obligatoire du combat, elle peut être utile pour être sûr que tout le monde joue sans omettre personne mais si le combat est sans importance ou que vous préférez faire sans, vous pouvez simplement ignorer l'ordre d'initiative et jouer de façon plus narrative.</i></p>
             <h4>Étape 3 : Début du round</h4>
@@ -209,7 +215,7 @@
         <div>
             <p>Les compétences de combat sont rassemblées dans les styles de combat qui représente la façon de combattre de chaque combattant, ses armes de prédilection, ses tactiques et son expérience du combat. Les styles de combat peuvent être associés à une culture, une carrière ou même une école.</p>
             <p>Les style de combat sont représentés par la compétence : <a href="Personnage.xhtml#style_combat_competence">Style de Combat [type]</a>, où le type est le nom du style de combat. Cette compétence est utilisée avec la caractéristique de Force ou de Dextérité pour attaquer ou se défendre en mêlée ainsi que pour les lancer d'arme de jet mais doit être utilisée avec la caractéristique de Dextérité pour effectuer des attaques à distance.</p>
-            <p>Chaque style de combat est associé à un certain nombre d'armes et de types d'armure avec lesquels le personnage est entraîné et apte à utiliser. Un novice maîtrise 4 types d'équipement, chaque palier d'expérience permet d'en ajouter un gratuitement jusqu'à un maximum de 8 au rang de Maître. Il est également possible d'ajouter un en dépensant 5 points d'XP.</p>
+            <p>Chaque style de combat est associé à un certain nombre d'armes et de types d'armure avec lesquels le personnage est entraîné et apte à utiliser. Un personnage maîtrise par défaut un nombre d'équipement équivalent à son BDFor ou BdAgi auquel s'ajoute le palier de maîtrise de ce Style de Combat. Il est également possible d'ajouter un en dépensant 5 points d'XP.</p>
             <p>Le combat à mains nues peut rentrer dans un style de combat sous le terme "Bagarre". Les armures sont divisées en quatre catégorie : légère, intermédiaire, lourde et super-lourde. Les armes sont divisés en de multiples catégories Cf <a href="Armes.xhtml#table_armes_cac">Armes</a>. Les boucliers ne forment qu'une seule et même catégorie malgré les différences de taille.</p>
             <p>Utiliser de l'équipement avec lequel on manque d'entraînement ne permet pas de bénéficier de sa maîtrise de Style de Combat. Se battre dans une situation inhabituelle peut être une tâche Ardue(-10) voire Difficile(-20) : Un soldat habitué à se battre sur son cheval sera mal-à-l'aise s'il doit défendre sa vie face à un assassin dans sa propre maison; un noble combattant se retrouvant malgré dans une baston de bar aura du mal à trouver ses repère malgré son habileté à l'épée.</p>
             <p>Voici quelques exemple de Style de combat :</p>
@@ -339,6 +345,7 @@
                 <li>Les personnages sur monture ne peuvent pas esquiver les attaques à distance sauf s'ils sont en mouvement. Il ne peuvent pas esquiver les attaques en mêlée (sauf celles d'autres personnages montés) mais leur monture le peut.</li>
                 <li>Les personnages sur monture peuvent faire une parade ou un blocage pour protéger leur monture si elle est la cible d'une attaque de mêlée.</li>
                 <li>Les personnages sur monture utilisent la vitesse de leur monture et non la leur.</li>
+                <li>La compétence de Style de combat d'un personnage monté est limitée par sa compétence en Dressage (dans le cas où son Style de Combat est d'un plus haut rang que celui de Dressage).</li>
             </ul>
             <h4 id="combat_deux_armes">Combat à deux armes</h4>
             <p>Un personnage peut se battre avec une arme dans chaque main à condition que ces armes ne nécessitent qu'une seule main pour être maniées et qu'elle font partie du style de combat du personnage. Un personnage se battant ainsi possède une arme principale et une arme secondaire (l'arme principale est tenue dans la main dominante).

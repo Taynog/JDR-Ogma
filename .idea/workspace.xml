@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures">
-      <change afterPath="$PROJECT_DIR$/Data/Content/Rules/Systeme.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" afterDir="false" />
@@ -15,15 +13,20 @@
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Armes.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Armes.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Armures.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Armures.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Combat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Combat.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Magie.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Magie.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Rules.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Personnage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Personnage.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Survie.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Survie.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Systeme.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Systeme.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -235,6 +238,17 @@
       <workItem from="1622891873309" duration="11000" />
       <workItem from="1623682110041" duration="1044000" />
       <workItem from="1627461438905" duration="23783000" />
+      <workItem from="1630250501326" duration="19612000" />
+      <workItem from="1630316402401" duration="6493000" />
+      <workItem from="1630329065837" duration="6399000" />
+      <workItem from="1630412049090" duration="3229000" />
+      <workItem from="1631452440993" duration="5153000" />
+      <workItem from="1631545265111" duration="972000" />
+      <workItem from="1631553257234" duration="2283000" />
+      <workItem from="1631597279478" duration="4318000" />
+      <workItem from="1631968306629" duration="9980000" />
+      <workItem from="1632115255629" duration="4165000" />
+      <workItem from="1632139953014" duration="6154000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
@@ -254,13 +268,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="maj armures" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1051" y="3" width="706" height="682" key="find.popup" timestamp="1627469529945">
+    <state x="1051" y="3" width="706" height="772" key="find.popup" timestamp="1632148274816">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
+    <state x="1051" y="3" width="706" height="772" key="find.popup/-1280.336.1218.1024/1920.0.900.1440/0.0.1858.1080@0.0.1858.1080" timestamp="1632148274816" />
     <state x="1051" y="3" width="706" height="682" key="find.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1627469529945" />
-    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1627485459647">
+    <state x="1051" y="3" width="706" height="740" key="find.popup/1920.0.838.1440/0.0.1858.1080/-1280.336.1280.1024@0.0.1858.1080" timestamp="1630268465277" />
+    <state x="570" y="266" width="700" height="530" key="recent.locations.popup" timestamp="1630338934482">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="570" y="266" width="700" height="530" key="recent.locations.popup/-1280.336.1218.1024/1920.0.900.1440/0.0.1858.1080@0.0.1858.1080" timestamp="1630338934482" />
+    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1630271073851">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="592" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1627485459647" />
+    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup/1920.0.838.1440/0.0.1858.1080/-1280.336.1280.1024@0.0.1858.1080" timestamp="1630271073851" />
   </component>
 </project>

@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -978,8 +983,10 @@
         </table>
     </div>
 
+
     <h1 id="stress" onclick="hideContent(this)">Stress</h1>
     <div>
+        <div class="boxed">
         <p>Si un personnage est confronté à un évènement difficile à supporter ou à quelque chose de terrifiant il doit passer un test de stress. Il y a deux type de test de stress : les tests de Peur et les test de Terreur.</p>
         <p>Les tests de stress sont des épreuves de Volonté qui utilise la notation Peur(+/-X) ou Terreur(+/-X), où X est le modificateur appliqué au test. Si le personnage rate ce test, il succombe aux effets du stress.</p>
         <p>Le MJ peut vous demander de passer un test de Peur si vous êtes confronté à des évènement choquant comme la découverte d'un pendu ou d'un cadavre sanguinolent. Les tests de Terreur sont réservés aux évènements les plus horrifiques que l'on puisse imaginer.</p>
@@ -1014,7 +1021,7 @@
                 </tr>
                 <tr>
                     <th>96-100</th>
-                    <td><span class="big_underline">Panique totale</span>Le personnage perd tout contrôle de son corps et s'enfuit aussi vite qu'il le peut en hurlant aussi fort que possible. Il jette au sol tout ce qui pourrait le ralentir dans sa fuite. Un fois hors de portée de la source des ses maux, il peut se ressaisir et reprendre le contrôle.</td>
+                    <td><span class="big_underline">Panique totale</span>Le personnage perd tout contrôle de son corps et s'enfuit aussi vite qu'il le peut en hurlant aussi fort que possible. Il jette au sol tout ce qui pourrait le ralentir dans sa fuite. Un fois hors de portée de la source de ses maux, il peut se ressaisir et reprendre le contrôle.</td>
                 </tr>
                 </tbody>
             </table>
@@ -1037,11 +1044,11 @@
                 </tr>
                 <tr>
                     <th>61-80</th>
-                    <td><span class="big_underline">Crise de panique</span>L'horreur vécue fait perdre l'esprit au personnage, il se met à rire de façon incontrôlable et attaque l'entité la plus proche de lui avec quoi que ce soit qui passe à sa portée. Le personnage doit se ressaisir ou être étourdi pour regagner le contrôle de son corps. Il perds 2d2-1 points d'endurance après coup et subit un malus de -10 à tous les tests jusqu'à la fin du combat.</td>
+                    <td><span class="big_underline">Crise de panique</span>L'horreur vécue fait perdre l'esprit au personnage, il se met à rire de façon incontrôlable et attaque l'entité la plus proche de lui avec quoi que ce soit qui passe à sa portée. Le personnage doit se ressaisir ou être étourdi pour regagner le contrôle de son corps. Il perds 2 points d'endurance et subit un malus de -10 à tous les tests jusqu'à la fin du combat.</td>
                 </tr>
                 <tr>
                     <th>81-90</th>
-                    <td><span class="big_underline">Désespoir</span>Le personnage perd tout espoir de survivre à ce qu'il vient de rencontrer, il tombe à genoux et hurle son désespoir et sa terreur pendant 1 round puis se roule en boule pour se murmurer des paroles rassurantes pendant 1d4 rounds. Lorsqu'il sort de sa crise le personnage perds 1d4 d'endurance et subit un malus de -10 à tous les tests jusqu'à la fin du combat.</td>
+                    <td><span class="big_underline">Désespoir</span>Le personnage perd tout espoir de survivre à ce qu'il vient de rencontrer, il tombe à genoux et hurle son désespoir et sa terreur pendant 1 round puis se roule en boule pour se murmurer des paroles rassurantes pendant 1d4 rounds. Lorsqu'il sort de sa crise le personnage perds 2 d'endurance et subit un malus de -10 à tous les tests jusqu'à la fin du combat.</td>
                 </tr>
                 <tr>
                     <th>91-95</th>
@@ -1059,7 +1066,7 @@
             </table>
         </div>
     </div>
-
+    </div>
     <h1 id="taille_creatures" onclick="hideContent(this)">Taille des créatures</h1>
     <div>
         <p>Le monde d'Ogma contient de nombreuses créatures de tailles et formes très diverses. Il y a 9 catégorie de tailles possibles :</p>
@@ -1079,52 +1086,42 @@
             <tr>
                 <th>Taille de la créature</th>
                 <th>Surface occupée</th>
-                <th>Allonge  des armes naturelles</th>
             </tr>
             <tr>
                 <td>Infime (I)</td>
                 <td>10 cm</td>
-                <td>0</td>
             </tr>
             <tr>
                 <td>Minuscule (Min)</td>
                 <td>25 cm</td>
-                <td>0</td>
             </tr>
             <tr>
                 <td>Très petite (TP)</td>
                 <td>50 cm</td>
-                <td>0</td>
             </tr>
             <tr>
                 <td>Petite (P)</td>
                 <td>75 cm</td>
-                <td>1 m</td>
             </tr>
             <tr>
                 <td>Moyenne (M)</td>
-                <td>1 m</td>
                 <td>1 m</td>
             </tr>
             <tr>
                 <td>Grande (G)</td>
                 <td>1,5 m</td>
-                <td>1,5 m</td>
             </tr>
             <tr>
                 <td>Très grande (TG)</td>
-                <td>3 m</td>
                 <td>3 m</td>
             </tr>
             <tr>
                 <td>Gigantesque (Gig)</td>
                 <td>6 m</td>
-                <td>4 m</td>
             </tr>
             <tr>
                 <td>Colossale (C)</td>
                 <td>9 m</td>
-                <td>5 m</td>
             </tr>
             </tbody>
         </table>
@@ -1135,8 +1132,54 @@
             <li>Tenter de toucher une petite cible avec une attaque à distance se fait avec un malus (P -> -10; TP ->-20; Min -> -30 I -> -40). Une cible massive est plus facile à toucher (G -> +10; TG -> +20; Gig -> +30; C -> +40).</li>
             <li>Une créature peut se faufiler dans un espace d'une taille inférieure à la sienne voire deux si la créature est exceptionnellement souple.</li>
             <li>Les armes sont fabriquées pour une catégorie de taille, manier une arme faite pour une créature d'une catégorie différente de la sienne se fait avec désavantage et il est impossible d'utiliser des armes faites pour des créatures ayant 2 catégories ou plus d'écart.</li>
-            <li>Les armes des grandes créatures infligent plus de dégâts, les armes des petites créatures en infligent moins : 1 <a href="Systeme.xhtml#cran_des">cran de dé</a> en plus/en moins par catégorie supérieure/inférieure à la taille Moyenne.</li>
+            <li>La formule pour calculer la vitalité des entités diffèrent selon leur taille. Voir tableau ci dessous.</li>
         </ul>
+
+        <table id="table_vitalite_taille" class="table_horizontal">
+            <tbody>
+            <tr>
+                <th>Taille de la créature</th>
+                <th>Formule de la Vitalité</th>
+            </tr>
+            <tr>
+                <td>Infime (I)</td>
+                <td>BdVig</td>
+            </tr>
+            <tr>
+                <td>Minuscule (Min)</td>
+                <td>BdVig + BdVol</td>
+            </tr>
+            <tr>
+                <td>Très petite (TP)</td>
+                <td>BdFor + BdVig + BdVol</td>
+            </tr>
+            <tr>
+                <td>Petite (P)</td>
+                <td>BdFor + BdVig*1,5 + BdVol</td>
+            </tr>
+            <tr>
+                <td>Moyenne (M)</td>
+                <td>BdFor + BdVig*2 + BdVol</td>
+            </tr>
+            <tr>
+                <td>Grande (G)</td>
+                <td>(BdFor + BdVig*2 + BdVol)*1,5</td>
+            </tr>
+            <tr>
+                <td>Très grande (TG)</td>
+                <td>(BdFor + BdVig*2 + BdVol)*2</td>
+            </tr>
+            <tr>
+                <td>Gigantesque (Gig)</td>
+                <td>(BdFor + BdVig*2 + BdVol)*2,5</td>
+            </tr>
+            <tr>
+                <td>Colossale (C)</td>
+                <td>(BdFor + BdVig*2 + BdVol)*3</td>
+            </tr>
+            </tbody>
+        </table>
+
     </div>
 
 

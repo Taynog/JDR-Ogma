@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -147,6 +152,7 @@
     </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1 id="actions_principales" onclick="hideContent(this)">Actions principales</h1>
     <div>
         <p>Les actions principales ne peuvent être effectuées que lors de son propre tour.  Toutes les actions principales coûtent 1 PA sauf précisé autrement.</p>

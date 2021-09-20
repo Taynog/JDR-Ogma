@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -208,6 +213,7 @@
         <h3 id="empoisonnement" onclick="hideContent(this)">Empoisonnement(X)</h3>
         <div>
             <p>La créature est affecté par une toxine nocive et subit X points de dégâts de poison au début de chacun de ses tour. Les dégâts du poison diminuent de 1 à la fin du tour de l'entité.</p>
+            <p>Une créature sous l'effet du poison voit tous ses tests devenir Complexes(-10) si l'amplitude du poison est entre 1 et 3, Difficile(-20) si l'amplitude est entre 4 et 6, Très Difficile(-30) entre 7 et 9, Insurmontable(-40) au delà.</p>
             <p>Il est possible d’arrêter l'Empoisonnement plus tôt en passant un test de Medicine (malus en fonction de la nocivité de la toxine) ou en utilisant un sort curatif. Lorsque deux sources infligent un empoisonnement, appliquez seulement celui infligeant le plus de dégâts.</p>
         </div>
 

@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -147,30 +152,31 @@
     </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1 id="Survie" onclick="hideContent(this)">Survie</h1>
     <div>
         <p>Partir à l'aventure n'est pas chose aisée, on risque gros si l'on néglige les nombreux risques des terres sauvages éloignées de toute civilisation. Un groupe d'aventuriers mal préparé s'expose aux climats difficiles, à la famine et à la soif, aux bêtes et monstres affamés.</p>
         <h2 id="besoins_journaliers" onclick="hideContent(this)">Besoins journaliers</h2>
         <div>
-            <h3 id="manger">Manger</h3>
-            <p>Un personnage a besoin de 500 g de nourriture par jour et peut faire durer sa réserve de nourriture plus longtemps en ne mangeant que des demi-rations. Manger 250 g de nourriture par jour compte comme un demi-jour sans nourriture.</p>
+            <h3 id="manger">Manger et boire</h3>
+            <p>Un personnage a besoin d'au moins 500 g de nourriture par jour et peut faire durer sa réserve de nourriture plus longtemps en ne mangeant que des demi-rations. Manger 250 g de nourriture par jour compte comme un demi-jour sans nourriture.</p>
             <p>Un personnage peut survivre sans nourriture pendant 3 jour. À la fin de chaque jour au-delà de cette limite, un personnage souffre automatiquement d'un niveau d'épuisement. Un jour passé en ayant mangé normalement remet le compteur de jours sans nourriture à zéro.</p>
-
-            <h3 id="boire">Boire</h3>
             <p>Un personnage a besoin de 1,5 litres d'eau par jour par température normale, de 3 litres s'il fait chaud ou de 5 si il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de Vigueur ou gagner un niveau de <a href="Glossaire.xhtml#fatigue">fatigue</a>. Un personnage qui boit encore moins d'eau que cela gagne automatiquement un niveau de <a href="Glossaire.xhtml#fatigue">fatigue</a>.</p>
+            <p>Les quantités donnés ici le sont pour des personnages de taille Moyenne, un personnage de taille inférieure aura besoin de 25% moins par catégorie de taille en dessous de Moyenne, un personnage de taille supérieure aura besoin de 100% plus par catégorie de taille au dessus de Moyen.</p>
 
             <h3 id="dormir">Dormir</h3>
-            <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit, et reprendre du tonus pour les prochaines aventures. Les aventuriers, comme toutes autres créatures, peuvent se reposer au milieu d'une journée d'aventure et établir un camp pour dormir en fin de journée.</p>
+            <p>Aussi héroïques qu'ils puissent être, les aventuriers ne peuvent passer les 24 heures d'une journée dans le feu de l'action de l'exploration, des interactions sociales ou des combats. Ils doivent se reposer, c'est-à-dire prendre du temps pour dormir et manger, panser leurs plaies, se reposer l'esprit. Les aventuriers, comme toutes autres créatures, peuvent se reposer au milieu d'une journée d'aventure et établir un camp pour dormir en fin de journée.</p>
+
             <h4 id="repos_court">Repos court</h4>
             <p>Un repos court est une période de temps mort qui dure au moins 1 heure, et durant laquelle un personnage ne fait rien de plus demandant que manger, boire, lire ou panser ses plaies. Au terme d'un repos court, un personnage récupère naturellement BdVol+BdInt points de psy et peut choisir de récupérer un point d'endurance ou de supprimer un niveau de fatigue. Ces quantités peuvent varier selon les conditions du repos, si l'on utilise des sorts ou si l'on consomme certains aliments ou potions.</p>
+
             <h4 id="repos_long">Repos long</h4>
             <p> Un repos long est un période d'au moins 8 heures se déroulant dans un environnement calme et relativement sécurisé comme un campement. Au terme d'un repos long, un personnage récupère l'intégralité de sa psy et de son endurance ainsi que BdVig points de vitalité. La quantité de vitalité récupérée peut varier selon les conditions du repos, si l'on utilise des sorts ou si l'on consomme certains aliments ou potions.</p>
             <h4 id="interlude_aventures">Interlude entre aventures</h4>
             <p>Entre deux aventures, il est normal que des aventuriers souhaitent se reposer pendant plusieurs jours pour évacuer le stress et la pression accumulés lors de leurs péripéties. Un interlude se déroule la plupart du temps dans un lieu civilisé mais peut tout à fait prendre place ailleurs, sa durée varie en fonction des besoins narratifs du MJ et des envies des joueurs. C'est pendant cette période que les personnages peuvent s'entraîner pour acquérir de nouvelles compétences ou améliorer leur caractéristiques. On considère qu'au terme d'un interlude, un personnage récupère l'intégralité de son endurance, psy et vitalité.</p>
 
-
             <h3 id="alcool">Alcool</h3>
-            <p>La consommation d'alcool est quelque chose à surveiller, si un peu de boisson peu faciliter les relations sociales, à de trop fortes doses, il peut nuire au consommateur abusif. Un aventurier tolère l'alcool comme tout un chacun, au delà d'une certaine limite, ses capacités cognitives commencent à faiblir jusqu'au point où le corps lui même s'effondre. Les doses d'alcool sont perdues au rythme d'une par heure.</p>
+            <p>La consommation d'alcool est quelque chose à surveiller, si un peu de boisson peu faciliter les relations sociales, à de trop fortes doses, il peut nuire au consommateur abusif. Un aventurier tolère l'alcool comme tout un chacun, au delà d'une certaine limite, ses capacités cognitives commencent à faiblir jusqu'au point où le corps lui même s'effondre. Les doses d'alcool sont perdues au rythme du BdVig-3 avec un minimum de une par heure.</p>
             <div style="display: flex">
                 <table class="table_horizontal" style="flex: 1; padding: 3px; margin: 10px; max-width: 60%;" width="60%">
                     <tbody>
@@ -179,20 +185,20 @@
                         <th>Effet sur le personnage (cumulatifs)</th>
                     </tr>
                     <tr>
-                        <td>Échauffé : 1 à 2</td>
-                        <td>ELO +1</td>
+                        <td>Échauffé : 1 à 3</td>
+                        <td>ELO +5</td>
                     </tr>
                     <tr>
-                        <td>Enivré : 3 à 5</td>
-                        <td>ELO +2 INT/Atq/Prd -1 </td>
+                        <td>Enivré : 4 à 6</td>
+                        <td>ELO +10 INT/Style de Combat -5 </td>
                     </tr>
                     <tr>
-                        <td>Ivre : 6 à 8</td>
-                        <td>INT/Atq/Prd -2 VOL/AGI/PER/DEX -1</td>
+                        <td>Ivre : 7 à 9</td>
+                        <td>INT/Style de Combat -10 VOL/AGI/PER/DEX -5</td>
                     </tr>
                     <tr>
-                        <td>Ivre mort : au delà de 8</td>
-                        <td>INT/Atq/Prd -3 VOL/AGI/PER/DEX -2</td>
+                        <td>Ivre mort : au delà de 10</td>
+                        <td>INT/Style de Combat -15 VOL/AGI/PER/DEX -10</td>
                     </tr>
                     </tbody>
                 </table>
@@ -308,7 +314,7 @@
                 <p>Le monde d'Ogma est parsemé de biomes différents, certains sont cléments d'autres beaucoup moins. Il est possible de trouver de la nourriture et de l'eau potable dans la plupart de ceux-ci, mais la tâche est plus ardue dans une montagne gelée balayée par des blizzards plutôt que dans une plaine paisible.</p>
                 <h4>Steppes</h4>
                 <div>
-                    <p>Ce biome est assez répandu dans Ogma, souvent situé entre d'autres biomes plus particulier tels que des forêts ou des montagnes. C'est dans ces endroit que la majorité de la civilisation s'est developpée, l'accès à l'eau douce y est simple pour peu que l'on s'installe à proximité d'un cours d'eau ou d'un lac. Il est possible d'y faire de l'élevage ou de l'agriculture sans trop de difficultés. Le climat est doux au printemps, chaud en été et assez froid en hiver, avec suffisamment de précipitations pour assurer de la verdure sur la majorité du biome. Le Royaume Sever s'étend sur de grandes steppes, ne s'installant qu'au bord des fleuves et rivières, le nord du Sultanat est organisé de la même manière. La Vallée sauvage est plus sèche et infestée de Chonos, la vallée fabuleuse plus humide que cette dernière mais habité par les Sakhas.</p>
+                    <p>Ce biome est assez répandu dans Ogma, souvent situé entre d'autres biomes plus particulier tels que des forêts ou des montagnes. C'est dans ces endroit que la majorité de la civilisation s'est développée, l'accès à l'eau douce y est simple pour peu que l'on s'installe à proximité d'un cours d'eau ou d'un lac. Il est possible d'y faire de l'élevage ou de l'agriculture sans trop de difficultés. Le climat est doux au printemps, chaud en été et assez froid en hiver, avec suffisamment de précipitations pour assurer de la verdure sur la majorité du biome. Le Royaume Sever s'étend sur de grandes steppes, ne s'installant qu'au bord des fleuves et rivières, le nord du Sultanat est organisé de la même manière. La Vallée sauvage est plus sèche et infestée de Chonos, la vallée fabuleuse plus humide que cette dernière mais habité par les Sakhas.</p>
                     <p>La survie dans ce genre d'environnement n'est pas bien difficile, on y trouve quantité d'animaux paisible à chasser, des plantes comestibles et médicinales, de l'eau sans trop avoir à chercher. La civilisation n'est jamais bien loin, les créatures dangereuses y sont donc assez rares.</p>
                 </div>
 
@@ -532,109 +538,67 @@
             <h3 id="dangers_naturels" onclick="hideContent(this)">Dangers naturels</h3>
             <div>
                 <h4>L'acide</h4>
-                <p>L’acide inflige 1d6 points de dégâts par round d’exposition, excepté dans le cas d’une immersion totale (qui peut par exemple se produire si un aventurier tombe dans une grande vasque), laquelle occasionne 5d6 points de dégâts par round. Une attaque acide (salive de monstre, flasque lancée à la main, etc.) représente un round d’exposition.</p>
-                <p>Les émanations libérées par la plupart des acides ont l’effet d’un poison fonctionnant par inhalation. Quiconque s’approche trop d’une vaste étendue d’acide doit réussir à chaque round un jet de vigueur sous peine de subir un affaiblissement temporaire de 5 point de Vigueur par round. Ce poison n’a pas de fréquence, et n’agit plus dès qu’on s’en éloigne.</p>
+                <p>L’acide inflige des dégâts chaque round que l'on passe à son contact, les dégâts dépendent de la violence de l'acide. Dans le cas d’une immersion totale dans l'acide, ses dégâts sont multiplié par 5.</p>
+                <p>Les émanations libérées par la plupart des acides ont tout de même un effet caustique sur le corps. Quiconque s’approche trop d’une vaste étendue d’acide doit réussir à chaque round un jet de Vigueur sous peine de subir un affaiblissement temporaire de 5 point de Vigueur à chaque échec. Les émanations n’ont plus d'effet dès qu’on s’en éloigne.</p>
                 <p>Les créatures immunisées contre l’acide risquent tout de même s’y noyer si elles sont totalement immergées.</p>
 
                 <h4>L'asphyxie</h4>
-                <p>Un personnage n’ayant plus d’air à respirer peut retenir son souffle 1 round par 3 point de Vigueur. S'il entreprend une action simple ou une action complexe, le temps pendant lequel il peut retenir sa respiration est réduit d'un round.</p>
+                <p>Un personnage n’ayant plus d’air à respirer peut retenir son souffle un nombre de round équivalent à son BdVig. S'il agit de façon à préserver son oxygène, ce temps est doublé.</p>
                 <p>Au-delà, il doit tenter un test de Vigueur chaque round pour continuer à retenir son souffle. Le premier test n'a pas de malus, puis le malus augmente de 5 à chaque round. Dès que le personnage manque un de ces tests, il commence à suffoquer. Au premier round, il perd connaissance et tombe à 0 pv. Le deuxième round, il glisse à -1 pv et est considéré comme <a href="Glossaire.xhtml#mourant">mourant</a>. Enfin, le troisième round, il meurt asphyxié.</p>
-                <p><span class="underline">Asphyxie lente :</span> Dans une pièce hermétiquement close de 3 m de côté, un personnage de taille M dispose de suffisamment d’air pour respirer durant six heures. Après, l’air vicié lui inflige 1d6 points de dégâts toutes les quinze minutes. Chaque créature de Taille M supplémentaire (ou chaque source de feu importante, comme par exemple une torche) diminue proportionnellement la durée de survie. Une fois inconsciente, elle subira des dégâts au même rythme, jusqu’à ce qu’elle meure.</p>
 
                 <h4>La chaleur</h4>
                 <p>Pour peu qu’elle soit suffisamment forte, la chaleur inflige des dégâts qui ne peuvent être soignés tant que le personnage n’a pas eu l’occasion de se rafraîchir (par exemple en se plongeant dans l’eau, en se mettant à l’ombre, en survivant jusqu’à la nuit, etc...).</p>
-                <p>En cas de chaleur accablante (35° C ou plus), le personnage doit réussir un jet de Vigueur par heure (malus de 0, 5 par jet effectué au préalable) sous peine de subir 1d4 points de dégâts à chaque fois. S’il porte une armure ou des vêtements épais, un malus de -20 s'applique à ce jet.</p>
-                <p>Si la chaleur est torride (45° C ou plus), la règle reste inchangée, mais les jets de Vigueur sont espacés de dix minutes seulement.</p>
-                <p>Tout individu subissant des points de dégâts à cause de la chaleur est victime d’une insolation et se retrouve <a href="Glossaire.xhtml#fatigue">fatigué</a>. Les malus que lui impose cet état durent jusqu’à la disparition des points de dégâts sûs à la chaleur.</p>
-                <p>Une chaleur épouvantable (température supérieure à 60° C, feu, eau bouillante, lave) administre des dégâts importants. Si le personnage est obligé de respirer dans une telle fournaise, l’air surchauffé lui rôtit les poumons (1d6 points de dégâts par minute). Si le personnage porte une armure métallique (ou s’il touche un objet métallique), il subit 1d6 de dégâts de feu.</p>
-                <p>L’eau bouillante administre 1d6 points de dégâts si on plonge la main dedans ou si on en est aspergé. Si un individu est immergé dans un liquide en ébullition, il perd 1d6 points de vitalité par round.</p>
+                <p>En cas de chaleur accablante (35° C ou plus), le personnage doit réussir un jet de Vigueur par heure (malus de 0, 5 par jet effectué au préalable) sous peine de subir 1 points de dégâts à chaque fois. S’il porte une armure ou des vêtements épais, un malus de -20 s'applique à ce jet.</p>
+                <p>Si la chaleur est torride (45° C ou plus), la règle reste inchangée, mais les jets de Vigueur sont espacés de quinze minutes seulement.</p>
+                <p>Tout individu subissant des points de dégâts à cause de la chaleur est victime d’une insolation et gagne un niveau de <a href="Glossaire.xhtml#fatigue">fatigue</a>. Les malus que lui impose cet état durent jusqu’à la disparition des points de dégâts dûs à la chaleur.</p>
+                <p>Une chaleur épouvantable (température supérieure à 60° C, feu, eau bouillante, lave) administre des dégâts importants. Si le personnage est obligé de respirer dans une telle fournaise, l’air surchauffé lui rôtit les poumons (1 points de dégâts par minute). Si le personnage porte une armure métallique (ou s’il touche un objet métallique), il subit 1 points de dégâts de feu supplémentaire par minute.</p>
+                <p>L’eau bouillante administre 3 points de dégâts si on plonge la main dedans ou si on en est aspergé. Si un individu est immergé dans un liquide en ébullition, il perd 4 points de vitalité par round.</p>
 
                 <h4 id="chutes">Les chutes</h4>
-                <p>Une chute inflige 1d6 points de dégâts par tranche de trois mètres, jusqu’à un maximum de 20d6. Les créatures subissant des dégâts à cause d’une chute sont <a href="Glossaire.xhtml#a_terre">à terre</a>.</p>
-                <p>Si, au lieu de tomber ou de glisser, un aventurier saute délibérément, les 1d6 premiers points de dégâts reçus sont divisés par 2. Si le test d'Acrobaties est un succès, les dégâts infligés par les trois premiers mètres de chute sont annulés et ceux dus aux trois mètres suivants divisés par 2. Ainsi, un personnage tombant d’une corniche haute de neuf mètres de haut subit 3d6 points de dégâts. S’il avait volontairement sauté, il aurait seulement reçu 2d6 points de dégâts et 1d6 divisés par deux. Enfin, s’il avait volontairement sauté en réussissant son test de Saut, les dégâts reçus auraient été plus réduits encore : 1d6 points de dégâts et 1d6 divisés par deux.</p>
-                <p>Si l’aventurier atterrit sur une surface meuble (sable, boue, etc.), les 1d6 premiers points de dégâts sont, là encore, transformés en points de dégâts non-létaux. Cette réduction s’ajoute aux précédentes, le cas échéant.</p>
-                <p><span class="underline">Chute dans l'eau :</span> Les dégâts donnés par les chutes s’achevant dans l’eau sont déterminés différemment. Du moment que l’eau fait au moins trois mètres de profondeur, les six premiers mètres de chute n’administrent pas le moindre dégât. Pour les six mètres suivants, les dégâts sont équivalent à 1d3 points tous les trois mètres. Passée cette limite, ils passent à 1d6 points tous les trois mètres supplémentaires.</p>
-                <p>Un personnage plongeant volontairement ne subit pas le moindre dégât du moment qu’il réussit un test d’Acrobaties ou d'Athlétisme et que la profondeur de l’eau est au moins égale au tiers de la hauteur de chute (trois mètres ou plus s’il plonge d’une hauteur de neuf mètres, etc.). Le malus du test d’Acrobaties ou de Natation augmente de 1 tous les 2 mètres de hauteur de chute.</p>
+                <p>Une entité non préparée à une chute subira des dégâts équivalent à la hauteur de la chute en mètres.</p>
+                <p>Si au lieu de tomber ou de glisser, une entité saute délibérément, les dégâts de sa chutes sont équivalent à la hauteur de la chute en mètres divisée par 2.</p>
+                <p>Si il est possible d'amortir sa chute, l'entité peut décider de passer un test d'Acrobaties(Agi) pour ignorer BdAgi+SC mètres de sa chute.</p>
+                <p>Si l’aventurier atterrit sur une surface meuble (sable, boue, etc.), les dégâts sont divisés par 2. Cela s'applique en plus de toute les autres réductions.</p>
+                <p>Les entités subissant des dégâts de chute supérieurs à leur BdAgi se retrouvent <a href="Glossaire.xhtml#a_terre">à terre</a>.</p>
+
+                <span class="underline" id="chutes_eau">Les chutes dans l'eau</span>
+                <p>Une entité non préparée à une chute dans l'eau subira des dégâts équivalent à la hauteur de la chute en mètres divisé par 2.</p>
+                <p>Si au lieu de tomber ou de glisser, une entité saute délibérément, les dégâts de sa chutes sont équivalent à la hauteur de la chute en mètres divisée par 5.</p>
+                <p>L'entité peut décider de passer un test d'Acrobaties(Agi) ou d'Athlétisme(Agi) pour ignorer (BdAgi+SC)*5 mètres de sa chute en effectuant un plongeon.</p>
+
+                <p>La catégorie de taille a un impact sur les dégâts de chute d'une entité : Les créatures Infimes et Très Petites divisent les dégâts par 3 et les créatures Petites par 2. Les créatures Moyenne subissent des dégâts normaux. Les créatures Grandes multiplient les dégâts par 2, les créatures Très Grandes par 3, les créatures Gigantesque par 4 et les créatures Colossales par 5.</p>
+                <p>Ainsi, une entité de taille M possédant un score d'Agilité de 42 et la compétences Acrobaties au rang Adepte tombant d’une corniche haute de 10 mètres de haut subit 10 points de dégâts. Si elle avait volontairement sauté, elle aurait seulement reçu 5 points de dégâts. Enfin, si elle avait volontairement sauté et réussie son test d'Acrobaties avec un 38 sur 64, la hauteur de chute serait désormais de 10-(4+3)=3 mètres, les dégâts serait alors seulement de 2 puisqu'on arrondi au supérieur.</p>
 
                 <h4>Les chutes d'objets</h4>
-                <table style="float: right" class="table_horizontal">
-                    <tbody>
-                    <tr>
-                        <th>Taille de l’objet</th>
-                        <th>Dégâts</th>
-                    </tr>
-                    <tr>
-                        <td>Très petit et moins</td>
-                        <td>1d6</td>
-                    </tr>
-                    <tr>
-                        <td>Petit</td>
-                        <td>2d6</td>
-                    </tr>
-                    <tr>
-                        <td>Moyen</td>
-                        <td>3d6</td>
-                    </tr>
-                    <tr>
-                        <td>Grand</td>
-                        <td>4d6</td>
-                    </tr>
-                    <tr>
-                        <td>Très grand</td>
-                        <td>6d6</td>
-                    </tr>
-                    <tr>
-                        <td>Gigantesque</td>
-                        <td>8d6</td>
-                    </tr>
-                    <tr>
-                        <td>Colossal</td>
-                        <td>10d6</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <p>De la même façon que les personnages se blessent s’ils tombent de plus de trois mètres, ils doivent faire attention aux chutes d’objets.</p>
-                <p>La chute d’un objet n’inflige des dégâts que s’il tombe d’une hauteur suffisamment importante et qu’il est fait d’une matière dense et lourde, comme la pierre. La table ci-contre détermine les dégâts infligés par un objet selon la taille de celui-ci. À la discrétion du MJ, des objets plus légers n’infligeront qu’une partie des dégâts. Par exemple, un personnage heurté par rocher de taille TG encaissera 6d6 points de dommages, alors qu’un chariot de bois de la même taille pourra n’en causer que la moitié. Si un objet tombe d’une hauteur supérieure à cinquante mètres, il inflige le double des dégâts. Bien entendu, un objet qui chute subira autant de dommages qu’il en a infligés.</p>
-                <p>Si l’objet tombe sur une créature, celle-ci doit réussir un jet d'Esquive pour éviter les dégâts. Les objets qui font partie d’un piège utilisent les règles qui sont applicables à ce piège.</p>
-
+                <p>Un objet qui tombe suit les mêmes règles que les êtres vivants (voir ci-dessus). Le MJ décide de la catégorie de taille de l'objet et effectue les calculs en conséquences. L'entité reçoit autant de dégâts que l'objet. Si l'objet subit des dégâts trop important, il se brise à l'impact.</p>
+                <p>Si l’objet tombe sur une créature, celle-ci doit réussir un jet d'Esquive(Agi) pour éviter les dégâts. Une créature n'est considéré comme un espace meuble que sur ses surfaces molles (l'abdomen et le postérieur pour les humanoïdes) et si l'objet plus petit d'au mons deux catégories.</p>
 
                 <h4>L'eau</h4>
-                <p>Un personnage ayant pied peut traverser une eau assez calme sans le moindre jet de dé. Pareillement, nager dans une eau calme nécessite juste un test de Natation (souvenez-vous toutefois qu’une armure ou une charge importante constitue une gêne importante)</p>
-                <p>L’eau devient plus dangereuse en cas de courant important. Le personnage doit faire un test de Natation avec un malus de 25 pour ne pas couler. En cas d’échec, il subit 1d3 points de dégâts par round (1d6 points de dégâts létaux s’il est jeté contre des rochers ou s’il tombe du haut d’une cascade).</p>
-                <p>En profondeur, l’eau est généralement sombre, ce qui pose des problèmes d’orientation. Dans le même temps, la pression administre 1d6 points de dégâts par tranche de trente mètres de profondeur et par minute que le personnage passe sous la surface. En cas de jet de vigueur réussi (malus de 10, -5 par jet effectué au préalable), l’aventurier ne perd pas de points de vie durant la minute en cours. L’eau très froide provoque l’hypothermie, ce qui représente 1d6 points de dégâts par minute.</p>
+                <p>Un personnage ayant pied peut traverser une eau assez calme sans le moindre jet de dé. Pareillement, nager dans une eau calme nécessite juste un test d'Athlétisme(Agi)</p>
+                <p>L’eau devient plus dangereuse en cas de courant important. Le personnage doit faire un test d'Athlétisme(Agi) Difficile(-20) pour ne pas couler. En cas d’échec, il subit 1 points de dégâts par round (2 points de dégâts s’il est jeté contre des rochers ou autres).</p>
 
                 <h4>La fumée</h4>
-                <p>Un aventurier respirant une épaisse fumée doit réussir un jet de vigueur à chaque round (malus de 0, -5 par jet effectué au préalable). En cas d’échec, il passe le round à fortement tousser. Si cela se répète sur un deuxième round, il subit 1d6 points de dégâts. La fumée diminue la visibilité (-25 en Perception pour vue et odorat).</p>
+                <p>Un aventurier respirant une épaisse fumée doit réussir un jet de vigueur à chaque round (malus de 0, -5 par jet effectué au préalable). En cas d’échec, il passe le round à fortement tousser. Si cela se répète sur un deuxième round, il subit 1 points de dégâts. La fumée diminue la visibilité (-20 en Perception pour vue et odorat).</p>
 
                 <h4>Le froid</h4>
                 <p>Le froid administre des dégâts, qui ne peuvent pas disparaître tant que le personnage ne s’est pas réchauffé.</p>
-                <p>Par temps froid (température inférieure à 5° C), un individu non protégé doit réussir un jet de Vigueur par heure (malus de 0, -5 par jet effectué au préalable) pour ne pas subir 1d6 points de dégâts.</p>
-                <p>Si le froid est important (-15° C et en dessous), le jet de Vigueur est identique, mais il est joué toutes les dix minutes.</p>
-                <p>Tout personnage recevant des dégâts dûs au froid souffre de gelures ou d’hypothermie et est considéré comme <a href="Glossaire.xhtml#fatigue">fatigué</a>. Les malus dus à cet état des dissipent quand il a réussi à se réchauffer.</p>
-                <p>Un froid extrême (-30° C et en dessous) administre 1d6 points de dégâts toutes les minutes. Les créatures en contact avec des objets métalliques extrêmement froids subissent 1d6 de dégâts de givre</p>
+                <p>Par temps froid (température inférieure à 5° C), un individu non protégé doit réussir un jet de Vigueur par heure (malus de 0, -5 par jet effectué au préalable) pour ne pas subir 1 points de dégâts.</p>
+                <p>Si le froid est important (-15° C et en dessous), le jet de Vigueur est identique, mais il est effectué toutes les quinze minutes.</p>
+                <p>Tout personnage recevant des dégâts dûs au froid souffre de gelures ou d’hypothermie et gagne un niveau de <a href="Glossaire.xhtml#fatigue">fatigue</a>. Les malus dus à cet état des dissipent quand il a réussi à se réchauffer.</p>
+                <p>Un froid extrême (-30° C et en dessous) inflige 1 points de dégâts toutes les minutes. Les créatures en contact avec des objets métalliques extrêmement froids subissent 1 de dégâts de givre supplémentaire par round.</p>
 
                 <h4>La glace</h4>
-                <p>La vitesse de déplacement sur la glace est divisée par deux. Les tests d’Acrobaties obtienne un malus de 25. Les créatures demeurant trop longtemps au contact de la glace risquent d’être affectées par un froid important.</p>
+                <p>La vitesse de déplacement sur la glace est divisée par deux. Les tests d’Acrobaties sont Difficile(-20). Les créatures demeurant trop longtemps au contact de la glace risquent d’être affectées par un froid important.</p>
 
                 <h4>La lave</h4>
-                <p>La lave et le magma infligent 2d6 points de dégâts de feu par round d’exposition, excepté dans le cas d’une immersion totale (par exemple quand un personnage tombe dans le cratère d’un volcan en activité), laquelle occasionne 5d6 points de dégâts de feu à la vitalité par round.</p>
-                <p>Les dégâts de feu se prolongent pendant 1d3 rounds après la fin de l’exposition, mais ils sont divisés par deux. Une immunité ou une résistance au feu protège aussi contre la lave ou le magma. Notez cependant qu’une créature immunisée ou résistante au feu peut parfaitement se noyer dans un bassin de lave.</p>
-
-                <h4>La noyade</h4>
-                <p>Tout personnage peut retenir son souffle pendant 1 round par 3 point de Vigueur. S’il effectue une action autre que se déplacer, la durée au cours de laquelle le personnage peut retenir son souffle est réduite de 1 round. Après cela, il doit réussir un test de Vigueur par round pour continuer à retenir son souffle. Le malus augmente de 5 à chaque round.</p>
-                <p>Dès que le personnage manque un test de Vigueur, il se noie. Durant le premier round, il tombe à 0 pv et perd connaissance. Le round d’après, il passe à -1 pv et est considéré comme mourant. Au troisième round, il décède.</p>
-                <p>Les personnages inconscients doivent faire des tests de Vigueur dès qu’ils commencent à couler (ou dès qu’ils tombent inconscient s’ils étaient déjà en train de couler). Dès qu’il en rate un, il passe immédiatement à -1 pv et est considéré comme mourant. Le round suivant, il meurt.</p>
-                <p>On peut se noyer dans d’autres substances que l’eau, comme par exemple le sable, les sables mouvants, ou encore un silo à céréales.</p>
+                <p>La lave et le magma infligent 6 points de dégâts de feu par round d’exposition, excepté dans le cas d’une immersion totale (par exemple quand un personnage tombe dans le cratère d’un volcan en activité), laquelle occasionne 25 points de dégâts de feu à la vitalité par round.</p>
+                <p>Les dégâts de lave infligent un état <a href="Glossaire.xhtml#brulure">brûlure</a> d'une amplitude équivalente à la moitié des dégâts subis. Une immunité ou une résistance au feu protège aussi contre la lave ou le magma. Notez cependant qu’une créature immunisée au feu peut parfaitement se noyer dans un bassin de lave.</p>
 
                 <h4>L'obscurité</h4>
-                <p>La vision dans le noir permet à de nombreux personnages et monstres de voir parfaitement bien dans l’obscurité la plus totale, mais les autres individus sont alors comme aveuglés (et ce même s’ils possèdent la vision nocturne). Des bourrasques de vents souterrains peuvent éteindre les torches et les lanternes, les sources d’illumination magique peuvent être dissipées et les pièges magiques peuvent créer des aires de ténèbres magiques impénétrables.</p>
-                <p>Pour la majorité des rencontres dans l’obscurité, seule une partie des belligérants sera handicapée par l’absence de lumière, tandis que les autres seront considérés comme étant <a href="Glossaire.xhtml#aveugle">aveuglés</a>.</p>
+                <p>La vision dans le noir permet à certaines entités de voir parfaitement bien dans l’obscurité la plus totale, mais les autres individus sont alors comme <a href="Glossaire.xhtml#aveugle">aveuglés</a>. (et ce même s’ils possèdent la vision nocturne). Des bourrasques de vents souterrains peuvent éteindre les torches et les lanternes, les sources d’illumination magique peuvent être dissipées et les pièges magiques peuvent créer des aires de ténèbres magiques impénétrables.</p>
 
                 <h4>Prendre feu</h4>
-                <p>Un personnage exposé à des flammes durables (huile enflammée, brasier, sort tel que mur de feu, etc.) risque de voir ses habits, ses cheveux ou son équipement s’enflammer. Au contraire, des sorts du premier cercle sont trop instantanés pour avoir un tel effet.</p>
-                <p>Tout individu risquant de prendre feu peut l’éviter en réussissant un jet de Dextérité. Si ses habits ou ses cheveux s’enflamment, il reçoit aussitôt 1d6 points de dégâts de feu. Après, il a droit à un nouveau jet de Dextérité par round. En cas d’échec, il reçoit 1d6 points de dégâts de feu supplémentaires. Dès qu’il réussit un jet de Dextérité, les flammes s’éteignent et le personnage ne risque plus rien.</p>
-                <p>Si le personnage peut sauter dans l’eau, les flammes sont automatiquement éteintes. S’il n’y a pas d’eau à proximité, le fait de se rouler par terre ou de se faire aider par un compagnon tentant d’étouffer les flammes avec une couverture ou une cape offre un bonus de +4 au jet de Réflexes.</p>
-                <p>Dans le cas où les vêtements ou l’équipement du personnage s’enflamment, celui-ci doit tenter un jet de Dextérité pour chaque objet menacé. Les objets inflammables pour lesquels le jet à été raté doivent faire un jet de rupture sous peine de partir en cendres.</p>
+                <p>Un personnage exposé à des flammes durables (huile enflammée, brasier, etc) risque de s’enflammer et de recevoir un état <a href="Glossaire.xhtml#brulure">Brûlure</a> d'une amplitude équivalente à la moitié des dégâts de feu subis par la source des flammes. Au contraire, des sorts d'assaut élémentaire sont trop instantanés pour avoir un tel effet.</p>
             </div>
         </div>
 

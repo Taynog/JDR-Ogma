@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="Data/Content/Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="Data/Content/Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Data/Content/Rules/Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="Data/Content/Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Data/Content/Rules/Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Data/Content/Rules/Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Data/Content/Rules/Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Data/Content/Rules/Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Data/Content/Rules/Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -174,15 +179,27 @@
     <div align="center">
         <h3>Version actuelle du site : 2.3 28/07/2021</h3>
         <ul style="list-style: none">
-            <li>Réorganisation du site.</li>
-            <li>La Rupture, règle optionnelle trop peu utile et utilisée, disparaît du système de jeu.</li>
-            <li>Refonte des <a href="Data/Content/Rules/Personnage.xhtml#table_carac_origine">bonus d'origines</a>.</li>
-            <li>Combat Rapide : Mise à jour du système de combat pour le rendre plus mortel, limiter la perte de temps à chaque tour de jeu et le nombre de round.</li>
-            <li>Légères modifications d'équilibrage des sorts, clarification des formes de sorts</li>
+            <li><a href="Data/Downloads/Fiche%20Perso%20Ogma.xlsx">Nouvelle fiche de personnage</a></li>
+            <li>Ajout de l'<a href="Data/Content/Rules/Artisanat.xhtml#alchimie">Alchimie</a></li>
+            <li>Nouvelles formules pour le calcul de la Vitalité des entités. La catégorie de taille est désormais prise en compte, les entités sont désormais plus frêles, à l'exception des entités Grandes ou plus.</li>
+            <li>Révision de la création de personnage pour intégrer l'XP dès les premiers pas du personnage, permettant ainsi à l'XP de mesurer la puissance d'un personnage.</li>
+            <li>Révision de la page Survie, certaines choses n'étaient plus au goût du jour.</li>
+            <li>Nouvelle propriété d'armes : Anti-Large : +10 pour toucher les cibles plus grandes.</li>
+            <li>Révision partielle des sorts, certains devaient voir leurs effets encadrées (Réécriture mémorielle), d'autres ont simplement reçus un coup de polish.</li>
+            <li>Réarrangement des compétences : Calme a fusionné avec Résistance, Équitation avec Dressage et Bluff avec Persuasion.</li>
+            <li>Correction de coquilles</li>
         </ul>
         <h3 onclick="hideContent(this)">Anciens changelogs</h3>
         <div class="hidden">
             <ul style="list-style: none" class="space_list">
+                <li><strong>Version 2.3 28/07/2021</strong>
+                    <ul style="list-style: none">
+                        <li>Réorganisation du site.</li>
+                        <li>La Rupture, règle optionnelle trop peu utile et utilisée, disparaît du système de jeu.</li>
+                        <li>Refonte des <a href="Data/Content/Rules/Personnage.xhtml#table_carac_origine">bonus d'origines</a>.</li>
+                        <li>Combat Rapide : Mise à jour du système de combat pour le rendre plus mortel, limiter la perte de temps à chaque tour de jeu et le nombre de round.</li>
+                        <li>Légères modifications d'équilibrage des sorts, clarification des formes de sorts</li>
+                    </ul></li>
                 <li><strong>Version 2.2.2 14/04/2021</strong>
                 <ul style="list-style: none">
                     <li>Corrections de divers coquilles, notamment dans les <a href="Data/Content/Rules/Armes.xhtml#proprietes_armes">propriétés des armes</a>.</li>

@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -151,7 +156,7 @@
 
     <div id="rules">
         <p>Bienvenue sur la page des règles du jeu de rôle Ogma. Ce projet est encore en cours de construction et de nombreuses choses peuvent encore subir des modifications ou tout simplement disparaître.</p>
-        <p>Les règles présentées ci-dessous ne sont pas la loi absolue, si il vous prend l'envie de les modifier pour qu'elle vous corresponde mieux à vous et votre table, faites donc. Si vous avez des propositions ou des retours à faire, n'hésitez pas à <a href="../../../index.xhtml#contact">me contacter</a>.</p>
+        <p>Les règles présentées ne sont pas la loi absolue, si il vous prend l'envie de les modifier pour qu'elle vous corresponde mieux à vous et votre table, faites donc. Si vous avez des propositions ou des retours à faire, n'hésitez pas à <a href="../../../index.xhtml#contact">me contacter</a>.</p>
         <p>Certaines règles sont volontairement indiquées comme optionnelles et sont représentées ainsi : <span class="boxed">Règle optionnelle</span> </p>
         <h1 id="resolution_action" onclick="hideContent(this)">Résolution des actions</h1>
         <div>
@@ -287,6 +292,11 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+
+        <h3 id="arrondi_virgule" onclick="hideContent(this)">Arrondi des nombre décimaux</h3>
+        <div>
+            <p>Si jamais au cours d'un calcul le résultat est un nombre décimal (ou à virgule), l'arrondi se fait à l'entier le plus proche. Dans le cas d'un demi-entier derrière la virgule (ex : 0,5) l'arrondi se fera à l'entier supérieur. Ainsi 2,3 devient 2; 5,66 devient 6 ete 8,5 devient 9.</p>
         </div>
     </div>
 

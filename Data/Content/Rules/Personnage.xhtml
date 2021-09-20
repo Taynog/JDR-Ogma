@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -147,9 +152,11 @@
     </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1 id="creation_perso" onclick="hideContent(this)">Création de Personnage</h1>
     <div>
         <p>La création d'un avatar est la première étape à franchir avant de se lancer dans une aventure, et peut être la plus importante. À moins que l'aventure que vous vous apprêtez à vivre n'impose des personnages pré-tirés, il est fortement conseillé de personnaliser au mieux son avatar en suivant ce guide afin de l'incarner au mieux.</p>
+        <p>La fiche de personnage est sous la forme d'un tableur excel pour le moment, un pdf éditable viendra en temps voulu : <a href="../../Downloads/Fiche%20Perso%20Ogma.xlsx">Fiche Perso Ogma</a>.</p>
         <h2 id="table_origine" onclick="hideContent(this)">Origine</h2>
         <div>
             <p>Première étape de la création de son personnage : Choisir son origine. Il existe de nombreuses origines possibles dans le monde d'Ogma, si vous ne les connaissez pas encore retournez à l'<a href="../../../index.xhtml">accueil</a> pour les découvrir.</p>
@@ -177,7 +184,7 @@
                 </tr>
                 <tr>
                     <th colspan="2">Sakha</th>
-                    <td><strong>Peuple sylvestre :</strong> Immunité(Poison), Estomac Solide</td>
+                    <td><strong>Peuple sylvestre :</strong>Taille P,  Immunité(Poison), Estomac Solide</td>
                 </tr>
                 <tr>
                     <th rowspan="3">Sarpa</th>
@@ -203,11 +210,11 @@
                 <tr>
                     <th rowspan="2">Steinn</th>
                     <th>Rakaj</th>
-                    <td><strong>Solide comme le Roc :</strong> Robustesse(2)<br/><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Froideur d'Hortak :</strong> Résistance(Froid, 2)</td>
+                    <td><strong>Taillé dans le Roc :</strong> Taille P, Robustesse(2)<br/><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Froideur d'Hortak :</strong> Résistance(Froid, 2)</td>
                 </tr>
                 <tr>
                     <th>Khazun</th>
-                    <td><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Chaleur des Monts Ardents :</strong> Résistance(Feu, 2)</td>
+                    <td><strong>Taillé dans le Roc :</strong> Taille P, Robustesse(2)<br/><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Chaleur des Monts Ardents :</strong> Résistance(Feu, 2)</td>
                 </tr>
                 <tr>
                     <th colspan="2">Tori</th>
@@ -225,7 +232,7 @@
 
         <h2 id="Caracteristiques" onclick="hideContent(this)">Caractéristiques</h2>
         <div>
-            <p>Après avoir choisi une origine pour votre personnage, il est temps de définir définir ses caractéristiques de départ. Pour ce faire, suivez la colonne correspondante à votre origine et ajoutez les dés équivalent au niveau d'expérience de votre personnage. Si jamais les dés ne vous sont pas favorables, vous avez la possibilité de votre résultat par la valeur moyenne du lancer de dés. Votre MJ peut vous accordez cette action une ou plusieurs fois si vous êtes vraiment maudits par Tychi. Vous devez lancer 8 fois les dés indiqués dans votre niveau d'expérience et vous ajoutez chacun des résultats dans la caractéristique de votre choix.</p>
+            <p>Après avoir choisi une origine pour votre personnage, il est temps de définir définir ses caractéristiques de départ. Pour ce faire, suivez la colonne correspondante à votre origine, lancer 8 fois 2d10 et ajoutez chacun des résultats dans la caractéristique de votre choix. Si jamais les dés ne vous sont pas favorables, vous avez la possibilité de remplacez un mauvais résultat par la valeur moyenne du lancer de dés c'est à dire 11. Votre MJ peut vous accordez cette action une ou plusieurs fois si vous êtes vraiment maudits par Tychi.</p>
             <p>Voici une description des différentes caractéristiques, vous permettant de mieux appréhendez le tableau ci dessous :</p>
             <ol type="I" >
                 <li>Physiques
@@ -246,7 +253,7 @@
                 </li>
             </ol>
             <p>La valeur moyenne d'une caractéristique varie entre 35 et 45. Plus la valeur est grande, plus la caractéristique est développée.</p>
-            <p>Les Origines humaines ne possèdes pas de bonus aux caractéristiques, en effet leur population est très variée et ils représentent en quelque sorte la norme de ce monde. Les Azumas, Severs et Tuskizis reçoivent 15 points de caractéristiques à investir par tranche de 5. Ces bonus représentent le development du personnage lors de son passé.</p>
+            <p>Les Origines humaines ne possèdes pas de bonus aux caractéristiques, en effet leur population est très variée et ils représentent en quelque sorte la norme de ce monde. Les Azumas, Severs et Tuskizis reçoivent 15 points de caractéristiques à investir par tranche de 5. Ces bonus représentent le développement du personnage lors de son passé.</p>
             <table id="table_carac_origine" class="table_horizontal">
                 <tbody>
                 <tr>
@@ -403,31 +410,6 @@
                 </tr>
                 </tbody>
             </table>
-            <table id="table_carac_dice" class="table_horizontal">
-                <tbody>
-                <tr>
-                    <th>Expérience du personnage</th>
-                    <th>Débutant</th>
-                    <th>Aventurier</th>
-                    <th>Vétéran</th>
-                    <th>Héros</th>
-                </tr>
-                <tr>
-                    <th>Dés de caractéristique de départ</th>
-                    <th>2d8</th>
-                    <th>2d10</th>
-                    <th>3d8</th>
-                    <th>3d10</th>
-                </tr>
-                <tr>
-                    <th>Résultat moyen</th>
-                    <th>9</th>
-                    <th>11</th>
-                    <th>13</th>
-                    <th>16</th>
-                </tr>
-                </tbody>
-            </table>
         </div>
 
         <h2 id="Attributs" onclick="hideContent(this)">Attributs</h2>
@@ -438,12 +420,12 @@
                 <p>Le bonus de caractéristique (BdCarac) est utilisé dans certaines situations où le score total de la caractéristique est trop grand. Il équivaut au chiffre des dizaines de la caractéristique. On y fait référence ainsi : un "B" majuscule suivi d'un "d" minuscule suivi du diminutif de la caractéristique . BdFor pour la Force, BdDex pour la Dextérité, BdAgi pour l'Agilité, BdVig pour la Vigueur, BdInt pour l'Intelligence, BdVol pour la Volonté, BdPer pour la Perception et BdElo pour l'éloquence.</p>
                 <p>La liste ci-dessous n'est pas exhaustive mais donne des exemples des utilisations des bonus de caractéristiques.</p>
                 <ul>
-                    <li><span class="big_underline">Effets du BdFor :</span>Détermine la capacité de port et la résistance à la douleur.</li>
-                    <li><span class="big_underline">Effets du BdDex :</span>Augmente la portée des armes à distance de (BdDex*10)%.</li>
+                    <li><span class="big_underline">Effets du BdFor :</span>Détermine la capacité de port et les dégâts avec les armes brutes.</li>
+                    <li><span class="big_underline">Effets du BdDex :</span>Augmente la portée des armes à distance de (BdDex*10)% et les dégâts des armes raffinés.</li>
                     <li><span class="big_underline">Effets du BdAgi :</span>Détermine le bonus à l'initiative.</li>
                     <li><span class="big_underline">Effets du BdVig :</span>Détermine l'endurance max et la capacité de port.</li>
-                    <li><span class="big_underline">Effets du BdInt :</span>Détermine la réduction du coût des sorts.</li>
-                    <li><span class="big_underline">Effets du BdVol :</span>Détermine le cercle maximal atteignable (SCMax).</li>
+                    <li><span class="big_underline">Effets du BdInt :</span>Détermine la quantité de langages et la récupération de Psy.</li>
+                    <li><span class="big_underline">Effets du BdVol :</span>Détermine le cercle maximal atteignable (SCMax) et la récupération de Psy.</li>
                     <li><span class="big_underline">Effets du BdPer :</span>Détermine le bonus à l'initiative.</li>
                     <li><span class="big_underline">Effets du BdElo :</span>Réduit le prix des objets à hauteur de (BdElo*5)%.</li>
                 </ul>
@@ -495,17 +477,38 @@
 
             <h3 id="vitalite" onclick="hideContent(this)">Vitalité (PV)</h3>
             <div>
-                <p>La vitalité représente l'intégrité physique du personnage. C'est la caractéristique de Vigueur qui détermine la vitalité d'un personnage : Vitalité = Vig/2 (arrondi au supérieur)</p>
+                <p>La vitalité représente l'intégrité physique du personnage. Plusieurs Caractéristiques entrent en compte en fonction de la <a href="Tableaux.xhtml#taille_creatures">taille</a> de l'entité qui détermine la vitalité d'un personnage. Voir <a href="Tableaux.xhtml#table_vitalite_taille">Vitalité en fonction de la taille</a>.</p>
+                <table id="table_vitalite" class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>Origine du personnage</th>
+                        <th>Formule de la Vitalité</th>
+                    </tr>
+                    <tr>
+                        <td>Sakha ou Steinn</td>
+                        <td>BdFor + BdVig*1,5 + BdVol</td>
+                    </tr>
+                    <tr>
+                        <td>Autres</td>
+                        <td>BdFor + BdVig*2 + BdVol</td>
+                    </tr>
+                    <tr>
+                        <td>Kanta ou Sarpas-Crocodile</td>
+                        <td>(BdFor + BdVig*2 + BdVol)*1,5</td>
+                    </tr>
+                    </tbody>
+                </table>
                 <p>La jauge de vitalité se vide quand le personnage subit des dégâts, que ce soit suite à un coup contre lequel il n'a pas sû se défendre, une chute, un piège, un sort, etc...</p>
+                <p>Il est possible de gagner des points de vitalité temporaires(PV Temp) de diverses façons(magie, alchimie,...). Les PV Temp s'ajoutent au PV normaux et sont les premiers à êtres réduits en cas de dommages subis. Si d'autres PV Temp sont gagnés par une entité qui en possède déjà, seule la plus grande quantité de PV Temp est conservée. Les PV Temp diminuent au rythme d'un par heure.</p>
                 <p>Si la vitalité d'une créature atteint 0, elle sombre dans l'inconscience. Pour de plus amples détails, se référer à la section <a href="Combat.xhtml#blessures_mort">Blessures et mort</a> sur la page <a href="Combat.xhtml">Combat</a>.</p>
                 <p>La vitalité se régénère avec du repos, une entité récupère son BdVig en vitalité par jour mais cela peut varier selon les conditions dans lesquelles on se repose, si l'on est sous la surveillance d'un médecin, etc...</p>
-                <p>Il est possible de soigner ses blessures plus rapidement grâce à des sorts ou des potions de soin.</p>
+                <p>Rester alité une journée complète double la récupération naturelle. Quiconque étant compétent en Médecine peut examiner une entité blessée un fois par jour en passant un test de Médecine(Intelligence), la cible de ce jet récupère un montant de vitalité équivalent au DR avec un minimum de 1 même en cas d'échec.</p>
             </div>
 
             <h3 id="psy" onclick="hideContent(this)">Psy</h3>
             <div>
                 <p>La psy est une ressource mentale utilisée pour lancer des sorts, ce sont la caractéristique d'Intelligence qui déterminent la psy maximale d'un personnage : Psy = Int</p>
-                <p>On récupère de la psy naturellement lors des périodes de calme, une quantité équivalente à BdInt+BdVol par heure qui passe. Cette quantité peut varier selon l'environnement du personnage, si il médite ou prie par exemple.</p>
+                <p>On récupère de la psy naturellement lors des périodes de calme, une quantité équivalente à BdInt+BdVol par heure de repos. Cette quantité peut varier selon l'environnement et les actions du personnage, si il médite ou prie par exemple.</p>
             </div>
 
             <h3 id="capacite_port" onclick="hideContent(this)">Capacité de port</h3>
@@ -530,21 +533,21 @@
                     <tr>
                         <td>Moyenne</td>
                         <td>&gt;Capacité de port</td>
-                        <td>-10</td>
+                        <td>Aucune pénalité</td>
                         <td>-1 mètre</td>
                         <td>-1</td>
                     </tr>
                     <tr>
                         <td>Lourde</td>
                         <td>&gt;2*Capacité de port</td>
-                        <td>-20</td>
+                        <td>-10</td>
                         <td>Vitesse divisée par 2</td>
                         <td>-3</td>
                     </tr>
                     <tr>
                         <td>Écrasante</td>
                         <td>&gt;3*Capacité de port</td>
-                        <td>-40</td>
+                        <td>-25</td>
                         <td>Immobilisé</td>
                         <td>-5</td>
                     </tr>
@@ -554,13 +557,13 @@
 
             <h3 id="vitesse" onclick="hideContent(this)">Vitesse</h3>
             <div>
-                <p>La vitesse de déplacement d'un personnage détermine la distance maximale qu'il peut parcourir pendant un round de combat. La vitesse de déplacement d'un personnage équivaut à : BdFor+Agi/5 en mètres.</p>
+                <p>La vitesse de déplacement d'un personnage détermine la distance maximale qu'il peut parcourir pendant un round de combat. La vitesse de déplacement d'un personnage équivaut à : BdFor+BdAgi*2 en mètres.</p>
                 <p>Cette vitesse peut être réduite par de nombreux effets comme la <a href="Personnage.xhtml#table_fatigue">fatigue</a> ou le port d'une <a href="Personnage.xhtml#table_capacite_port">charge trop lourde</a>.</p>
             </div>
 
             <h3 id="bonus_initiative" onclick="hideContent(this)">Bonus à l'initiative (BdIni)</h3>
             <div>
-                <p>Le Bonus à l'Initiative est utilisé lors du jet d'initiative au début d'un combat, il est équivalent à : BdIni = BdAgi+BdInt+BdPer.</p>
+                <p>Le Bonus à l'Initiative est utilisé lors du jet d'initiative au début d'un combat, il est équivalent à : BdIni = BdDex+BdAgi+BdInt+BdPer*2.</p>
             </div>
 
             <h3 id="taille" onclick="hideContent(this)">Taille</h3>
@@ -583,71 +586,91 @@
 
         <h2 id="Competences" onclick="hideContent(this)">Compétences</h2>
         <div>
-            <p>Maintenant qu'on connaît les aptitudes physiques et mentales de votre personnage, attaquons nous à ce qu'il sait faire, c'est à dire quelles sont ses compétences ? Un personnage commence un certain nombre de compétences selon son niveau d'expérience, mais votre MJ peut très bien décider d'en attribuer plus ou moins si son scénario l'exige.</p>
-            <table class="table_horizontal">
-                <tbody>
-                <tr>
-                    <th rowspan="2">Expérience du personnage</th>
-                    <th colspan="6">Paliers de compétence de départ</th>
-                </tr>
-                <tr>
-                    <th>Novice</th>
-                    <th>Apprenti</th>
-                    <th>Adepte</th>
-                    <th>Expert</th>
-                    <th>Maître</th>
-                </tr>
-                <tr>
-                    <th>Débutant</th>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <th>Aventurier</th>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>-</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <th>Vétéran</th>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>1</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <th>Héros</th>
-                    <td>3</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>1</td>
-                </tr>
-                </tbody>
-            </table>
-            <p>La caractéristique indiquée sur la compétence est celle utilisée pour les tests liés à cette compétence. Si plusieurs caractéristiques sont indiqués, vous êtes libres de choisir laquelle utiliser pour maximiser vos chances de réussite. Il est toutefois possible que le MJ vous impose la caractéristique à utiliser si les conditions du test s'y prêtent.</p>
-            <p>Les compétences possèdent plusieurs paliers de maîtrise, chaque palier représentant l'expérience que possède votre personnage dans cette compétence. Un personnage ne possédant d'expérience dans une compétence peut tenter d'effectuer des actions relatives à la compétences mais il peut subir des malus selon la compétence concernée.</p>
-            <p>Un personnage peut se spécialiser dans un domaine particulier d'une compétence et ainsi inverser le résultat de son jet de dé si cela lui permet de réussir. Un personnage ne peut bénéficier de plus d'une spécialisation à la fois lors d'une épreuve mais peut posséder plusieurs spécialisation dans une même compétence. Un spécialisation coûte 200 points d'expérience et nécessite d'avoir atteint le palier d'Apprenti. Des exemples de spécialisations sont donnés dans la liste ci-dessous mais les joueurs peuvent tout à fait choisir leur propre spécialisation et en discuter avec le MJ.</p>
+            <p>Maintenant qu'on connaît les aptitudes physiques et mentales de votre personnage, attaquons nous à ce qu'il sait faire, c'est à dire quelles sont ses compétences ?</p>
+            <p>La ou les caractéristique(s) indiquée(s) dans la colonne Carac(s) principale(s) est ou sont celle(s) utilisée(s) le plus fréquemment pour les tests liés à cette compétence. Si plusieurs caractéristiques sont indiqués, vous êtes libres de choisir laquelle utiliser pour maximiser vos chances de réussite. Il est toutefois possible que le MJ vous impose la caractéristique à utiliser si les conditions du test s'y prêtent.</p>
+            <p>Les compétences possèdent plusieurs paliers de maîtrise également appelés rang, chaque palier représentant l'expérience que possède votre personnage dans cette compétence. Un personnage ne possédant d'expérience dans une compétence peut tenter d'effectuer des actions relatives à la compétences mais il peut subir des malus selon la compétence concernée.</p>
+            <p>Un personnage peut se spécialiser dans un domaine particulier d'une compétence et ainsi inverser le résultat de son jet de dé si cela lui permet d'améliorer le résultat du test. Un personnage ne peut bénéficier de plus d'une spécialisation à la fois lors d'une épreuve mais peut posséder plusieurs spécialisation dans une même compétence. Un spécialisation coûte 15 points d'expérience et nécessite d'avoir atteint le palier d'Apprenti. Des exemples de spécialisations sont donnés dans la liste ci-dessous mais les joueurs peuvent tout à fait choisir leur propre spécialisation et en discuter avec le MJ.</p>
             <p>Les paliers sont :</p>
-            <ul>
+            <ul style="list-style-type: decimal">
                 <li><span class="big_underline">Novice :</span>Le personnage commence à saisir l'ampleur des choses qu'il lui reste à apprendre dans ce domaine, mais à déjà les bases. (+10)</li>
                 <li><span class="big_underline">Apprenti :</span>L’entraînement rigoureux a porté ses fruits, la maîtrise du personnage commence à le distinguer du reste du monde. (+20)</li>
                 <li><span class="big_underline">Adepte :</span>Les capacités du personnages se sont encore renforcées, si bien qu'il est désormais capable de donner des leçons aux débutants. (+30)</li>
                 <li><span class="big_underline">Expert :</span>L'aptitude du personnage surpasse la grande majorité du commun des mortels.(+40)</li>
                 <li><span class="big_underline">Maître :</span>Le personnage est devenu un maître de son art, il est perçu comme une légende parmi ses pairs. (+50)</li>
             </ul>
-            <p><span class="big_underline">Exemple :</span>Asraë veut ouvrir un coffre verrouillé mais elle ne possède pas la clé, elle peut utiliser la compétence Sabotage(For, Dex) pour s'emparer de ce qu'il y a à l'intérieur. Asraë est une Adepte en Sabotage, elle possède donc un bonus de +30 à son jet, elle choisi de crocheter la serrure plutôt que la défoncer et utilise donc sa caractéristique de Dextérité plutôt que celle de Force. Asraë possède un score de Dextérité de 42, elle y ajoute son +30 provenant de la compétence Sabotage, elle réussit à ouvrir le coffre si son jet est inférieur à 72, elle fait un 35 et obtient donc une marge de réussite de 3. Le MJ décide suite à cette brillante réussite que le crochetage ne fait aucun bruit et que le propriétaire du coffre qui dormait juste a côté ne se réveille pas.</p>
+            <p><span class="big_underline">Exemple :</span>Asraë veut ouvrir un coffre verrouillé mais elle ne possède pas la clé, elle peut utiliser la compétence Sabotage(For, Dex) pour s'emparer de ce qu'il y a à l'intérieur. Asraë est une Adepte en Sabotage, elle possède donc un bonus de +30 à son jet, elle choisi de crocheter la serrure plutôt que la défoncer et utilise donc sa caractéristique de Dextérité plutôt que celle de Force. Asraë possède un score de Dextérité de 42, elle y ajoute son +30 provenant de la compétence Sabotage, elle réussit à ouvrir le coffre si son jet est inférieur à 72, elle fait un 35 et obtient donc une marge de réussite de 4. Le MJ décide suite à cette brillante réussite que le crochetage ne fait aucun bruit et que le propriétaire du coffre qui dormait juste a côté ne se réveille pas.</p>
+
+            <h3 id="perso_anciennete" onclick="hideContent(this)">Ancienneté de votre personnage</h3>
+            <div>
+                <p>Il est possible de commencer une partie en incarnant des personnages ayant déjà accomplit des exploits au lieu de débutants complets. Les personnages de ce type partent avec une certaine quantité d'expérience qu'ils peuvent dépenser comme bon leur semble pour améliorer leur Caractéristiques ou leurs Compétences.</p>
+                <p>Un personnage débutant devra encore faire ses preuves pour être reconnu comme un véritable Aventurier, s'il survit assez longtemps et acquiert assez de renommé il deviendra un Vétéran. Arrivé à ce stade, il se verra confier des missions qui feront de lui un Héros.</p>
+                <p>Choisissez l'ancienneté de votre alter ego ou demander à votre MJ à combien s'élève vos points d'XP de départ pour les aventures qu'il a prévu pour vous et votre groupe.</p>
+                <div style="display: flex">
+                    <table id="table_carac_dice" class="table_horizontal" style="flex: 1; padding: 3px; margin: 10px; max-width: 50%;" width="50%">
+                    <tbody>
+                    <tr>
+                        <th>Expérience du personnage</th>
+                        <th>Points d'Expérience de départ</th>
+                        <th>Palier de compétence maximal</th>
+                    </tr>
+                    <tr>
+                        <th>Débutant</th>
+                        <td>50</td>
+                        <td>Apprenti</td>
+                    </tr>
+                    <tr>
+                        <th>Aventurier</th>
+                        <td>150</td>
+                        <td>Adepte</td>
+                    </tr>
+                    <tr>
+                        <th>Vétéran</th>
+                        <td>350</td>
+                        <td>Expert</td>
+                    </tr>
+                    <tr>
+                        <th>Héros</th>
+                        <td>650</td>
+                        <td>Maître</td>
+                    </tr>
+                    </tbody>
+                </table>
+                    <table id="table_cout_carac_depart" class="table_horizontal" style="flex: 1; padding: 3px; margin: 10px; max-width: 50%;" width="50%">
+                    <tbody>
+                    <tr>
+                        <th>Palier de compétence de départ</th>
+                        <th>Coût en Points d'Expérience</th>
+                    </tr>
+                    <tr>
+                        <th>Novice</th>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <th>Apprenti</th>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <th>Adepte</th>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <th>Expert</th>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <th>Maître</th>
+                        <td>150</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
             <table id="table_competence" class="table_horizontal">
                 <tbody>
                 <tr>
                     <th>Compétence</th>
-                    <th>Régie par</th>
+                    <th>Carac(s) principale(s)</th>
                     <th>Exemple de Spécialisations</th>
                     <th>Description</th>
                     <th width="25%">Exemple d'épreuves</th>
@@ -658,13 +681,6 @@
                     <td>Contorsionnisme<br/>Saut<br/>Équilibre</td>
                     <td>Cette compétence gouverne les actions reposant sur l'explosivité des muscles, la souplesse et l'équilibre</td>
                     <td>Sauter de toit en toits<br/>Se faufiler dans un espace étroit<br/>Tenir en équilibre sur une corde/poutre</td>
-                </tr>
-                <tr id="alchimie">
-                    <th>Alchimie</th>
-                    <td>Intelligence</td>
-                    <td>Fortifiants<br/>Poisons<br/>Bombes</td>
-                    <td>L'alchimie est l'art de concocter des potions et des poisons en combinant des ingrédients possédants des propriétés chimiques ou magiques.</td>
-                    <td>Créer une potion ou un poison<br/>Identifier un ingrédient ou une potion inconnue<br/>Fabriquer des explosifs</td>
                 </tr>
                 <tr id="alteration">
                     <th>Altération</th>
@@ -687,20 +703,6 @@
                     <td>Cette compétence représente la capacité d'un personnage à effectuer des actions physiques sur une période relativement longue</td>
                     <td>Escalader une paroi<br/>Courir sur de longues distances sans pause<br/>Nager à travers des rapides</td>
                 </tr>
-                <tr id="bluff">
-                    <th>Bluff</th>
-                    <td>Éloquence</td>
-                    <td>Imitation<br/>Baratin</td>
-                    <td>La compétence bluff mesure l'habilité et la crédibilité du personnage lors d'un mensonge.</td>
-                    <td>Se faire passer pour quelqu'un d'autre<br/>Mentir à quelqu'un</td>
-                </tr>
-                <tr id="calme">
-                    <th>Calme</th>
-                    <td>Volonté</td>
-                    <td>Intrépide<br/>Force Mentale</td>
-                    <td>La compétence calme permet de conserver ses capacités dans des situations stressantes</td>
-                    <td>Ne pas fuir de terreur<br/>Contrecarrer un attaque mentale</td>
-                </tr>
                 <tr id="conjuration">
                     <th>Conjuration</th>
                     <td>Volonté</td>
@@ -717,17 +719,10 @@
                 </tr>
                 <tr id="dressage">
                     <th>Dressage</th>
-                    <td>Perception<br/>Éloquence</td>
+                    <td>Agilité<br/>Perception<br/>Éloquence</td>
                     <td>Compréhension animale<br/>Domptage<br/>Soins animalier</td>
                     <td>Cette compétence détermine l'aisance qu'à le personnage à se faire obéir des animaux, sa capacité à les comprendre et à s'en occuper.</td>
-                    <td>Communiquer avec un animal<br/>Apprendre un tour à un compagnon animal</td>
-                </tr>
-                <tr id="equitation">
-                    <th>Équitation</th>
-                    <td>Agilité<br/>Dextérité</td>
-                    <td>Combat monté<br/>Course<br/>Saut d'obstacles</td>
-                    <td>L'équitation mesure les capacités de monte du personnage, le contrôle qu'il a sur sa monture.</td>
-                    <td>Fare courir sa monture plus vite<br/>Faire sauter sa monture<br/>Chevaucher une monture inconnue</td>
+                    <td>Communiquer avec un animal<br/>Apprendre un tour à un compagnon animal<br/>Combattre à dos de monture</td>
                 </tr>
                 <tr id="esquive">
                     <th>Esquive</th>
@@ -771,19 +766,26 @@
                     <td>La logique détermine la capacité qu'à un personnage à résoudre des problèmes, analyser rapidement des données de façon rationnelle.</td>
                     <td>Faire des calculs mathématiques<br/>Trouver la solution d'une énigme<br/>Améliorer ses chances au jeu</td>
                 </tr>
-                <tr id="medecine">
-                    <th>Médecine</th>
-                    <td>Intelligence</td>
-                    <td>Premiers soins<br/>Chirurgie<br/>Soins magiques</td>
-                    <td>La médecine est l'art de guérir le corps, que ce soit des plaies ou des maladies, par magie ou des remèdes naturels</td>
-                    <td>Soigner une blessure<br/>Identifier une maladie<br/>Préparer une remède</td>
-                </tr>
                 <tr id="marchandage">
                     <th>Marchandage</th>
                     <td>Éloquence</td>
                     <td>Négociation<br/>Gestion<br/>Estimation</td>
                     <td>Le marchandage couvre tout ce qui fait lien avec l'économie ce qui permet de commercer équitablement avec d'autres marchands.</td>
                     <td>Négocier un meilleur prix<br/>Faire tourner un commerce<br/>Estimer la valeur d'un objet</td>
+                </tr>
+                <tr id="medecine">
+                    <th>Médecine</th>
+                    <td>Intelligence</td>
+                    <td>Premiers soins<br/>Chirurgie<br/>Soins magiques</td>
+                    <td>La médecine est l'art de guérir le corps, que ce soit des plaies ou des maladies, par magie ou des remèdes naturels</td>
+                    <td>Soigner une blessure<br/>Identifier une maladie<br/>Préparer un remède</td>
+                </tr>
+                <tr id="metier">
+                    <th>Métier [profession]</th>
+                    <td>Selon la profession</td>
+                    <td>Alchimiste<br/>Forgeron<br/>Pêcheur</td>
+                    <td>Toute personne exerçant un métier possède des connaissances et des méthodes particulières, ce qui peut s'avérer fort utile selon les circonstances.<br/>Les spécialisations de cette compétence ne servent qu'à différencier les différents corps de métier et n'apportent aucun avantage quand aux jets de dés.</td>
+                    <td>Confectionner un objet<br/>Utiliser des outils<br/></td>
                 </tr>
                 <tr id="mysticisme">
                     <th>Mysticisme</th>
@@ -797,14 +799,14 @@
                     <td>Perception</td>
                     <td>Vision<br/>Ouïe<br/>Odorat</td>
                     <td>Cette compétence détermine l'attention que porte le personnage à son environnement et ses facultés à repérer quelque chose qui échapperait à d'autres.</td>
-                    <td>Détecter uen embuscade<br/>Identifier un comportement étrange<br/>Repérer une créature étrange au loin</td>
+                    <td>Détecter une embuscade<br/>Identifier un comportement étrange<br/>Repérer une créature au loin</td>
                 </tr>
                 <tr id="persuasion">
                     <th>Persuasion</th>
                     <td>Éloquence</td>
                     <td>Charme<br/>Propagande<br/>Vantardise</td>
                     <td>La persuasion permet d'influencer les autres grâces à de belles paroles et des mots biens placés. Les épreuves de persuasion sont souvent opposés à la Volonté des cibles souhaitant y résister.</td>
-                    <td>Séduire une personne<br/>Convaincre quelqu'un de se mettre d'accord avec vous<br/>Impressionner la foule en racontant ses exploits</td>
+                    <td>Séduire une personne<br/>Convaincre quelqu'un de se mettre d'accord avec vous<br/>Mentir</td>
                 </tr>
                 <tr id="presence">
                     <th>Présence</th>
@@ -815,10 +817,10 @@
                 </tr>
                 <tr id="resistance">
                     <th>Résistance</th>
-                    <td>Vigueur</td>
-                    <td>Anticorps<br/>Anti-poison</td>
-                    <td>La résistance détermine à quel point vous est endurant face aux assauts que subissent votre corps.</td>
-                    <td>Résister au poison<br/>Rester conscient après un coup dur</td>
+                    <td>Vigueur<br/>Volonté</td>
+                    <td>Anticorps<br/>Anti-poison<br/>Barrière mentale</td>
+                    <td>La résistance détermine à quel point vous est endurant face aux assauts que subissent votre corps et votre esprit.</td>
+                    <td>Résister au poison<br/>Rester conscient après un coup dur<br/>contrecarrer une attaque mentale</td>
                 </tr>
                 <tr id="roublardise">
                     <th>Roublardise</th>
@@ -944,52 +946,7 @@
             </table>
         </div>
 
-        <h2 id="progression_perso" onclick="hideContent(this)">Progression du personnage</h2>
-        <div>
-            <p>Votre personnage pourra progresser au fil de ses aventures si vous jouez sur une longue période avec lui. Votre MJ vous récompensera avec des points d'expérience(XP) pour les actions que vous avez menées. Vous pourrez dépenser ces points lors des pauses entres vos aventures pour améliorer vos caractéristiques et vos compétences.</p>
-            <table class="table_horizontal">
-                <tbody>
-                <tr>
-                    <th>Progression</th>
-                    <th>Coût en points d'XP</th>
-                </tr>
-                <tr>
-                    <td>Augmentation d'un point de Caractéristique</td>
-                    <td>Bonus de Caractéristique</td>
-                </tr>
-                <tr>
-                    <td>Rang Novice</td>
-                    <td>10 XP</td>
-                </tr>
-                <tr>
-                    <td>Rang Apprenti</td>
-                    <td>20 XP</td>
-                </tr>
-                <tr>
-                    <td>Rang Adepte</td>
-                    <td>30 XP</td>
-                </tr>
-                <tr>
-                    <td>Rang Expert</td>
-                    <td>40 XP</td>
-                </tr>
-                <tr>
-                    <td>Rang Maître</td>
-                    <td>50 XP</td>
-                </tr>
-                <tr>
-                    <td>Spécialisation de compétence</td>
-                    <td>15 XP</td>
-                </tr>
-                <tr>
-                    <td>Nouvel équipement pour Style de Combat</td>
-                    <td>5 XP</td>
-                </tr>
-                </tbody>
-            </table>
-            <p>La façon dont vous dépensez ces points d'XP dépend de votre façon de faire dans votre table, vous pouvez vous restreindre à les dépenser entre chaque aventure ou choisir de les dépenser dès que vous en avez la possibilité. Il est également possible d'intégrer cette progression dans la narration en expliquant à votre table comment et grâce à quoi(ou qui) vous avez pu progresser de la sorte.</p>
-            <i>Note aux MJs : C'est à vous que revient la lourde de tâche de récompenser vos joueurs, vous pouvez distribuer les points d'XP de façon globale à tout le groupe à la fin de vos arcs narratifs ou de chaque session de jeu, de façon individuelle en fonction des exploits de vos joueurs voire un mélange de tout ça.<br/>En guise d'aide, comptez environ 10 points d'XP pour une session de 4 heures de jeu si vous aimez récompenser individuellement vos joueurs pour leur RP exemplaire par exemple. Cette quantité varie selon le contenu de la session bien entendu.</i>
-        </div>
+
 
         <h2 id="rendre_vivant" onclick="hideContent(this)">Rendre votre personnage vivant</h2>
         <div>
@@ -1020,6 +977,54 @@
                 </ul>
                 <p>Toutes ces précisions sont optionnelles dans la description de votre personnage, mais peuvent renforcer l'implication que vous avez vis-à-vis de lui. Il vous faudra tout de même rester cohérent avec l'origine que vous avez choisi, un Steinn mesurant 1m80 ou un Sakha de 120kg ont assez peu de chance d'exister.</p>
             </div>
+        </div>
+
+        <h2 id="progression_perso" onclick="hideContent(this)">Progression du personnage</h2>
+        <div>
+            <p>Votre personnage pourra progresser au fil de ses aventures si vous jouez sur une longue période avec lui. Votre MJ vous récompensera avec des points d'expérience(XP) pour les actions que vous avez menées. Vous pourrez dépenser ces points lors des pauses entres vos aventures pour améliorer vos caractéristiques et vos compétences.</p>
+            <p>Pour améliorer une compétence au rang supérieur, il est nécessaire de posséder préalablement le palier inférieur, le coût indiqué représente la monté d'un seul palier. Le coût au total représente la quantité d'XP a dépenser pour acquérir ce palier en partant de zéro. </p>
+            <table class="table_horizontal">
+                <tbody>
+                <tr>
+                    <th>Progression</th>
+                    <th>Coût en points d'XP</th>
+                </tr>
+                <tr>
+                    <td>Augmentation d'un point de Caractéristique</td>
+                    <td>Bonus de Caractéristique</td>
+                </tr>
+                <tr>
+                    <td>Rang Novice</td>
+                    <td>10 XP</td>
+                </tr>
+                <tr>
+                    <td>Rang Apprenti</td>
+                    <td>20 XP (30 XP au total)</td>
+                </tr>
+                <tr>
+                    <td>Rang Adepte</td>
+                    <td>30 XP (60 XP au total)</td>
+                </tr>
+                <tr>
+                    <td>Rang Expert</td>
+                    <td>40 XP (100 XP au total)</td>
+                </tr>
+                <tr>
+                    <td>Rang Maître</td>
+                    <td>50 XP (150 XP au total)</td>
+                </tr>
+                <tr>
+                    <td>Spécialisation de compétence</td>
+                    <td>15 XP</td>
+                </tr>
+                <tr>
+                    <td>Nouvel équipement pour Style de Combat</td>
+                    <td>5 XP</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>La façon dont vous dépensez ces points d'XP dépend de votre façon de faire dans votre table, vous pouvez vous restreindre à les dépenser entre chaque aventure ou choisir de les dépenser dès que vous en avez la possibilité. Il est également possible d'intégrer cette progression dans la narration en expliquant à votre table comment et grâce à quoi(ou qui) vous avez pu progresser de la sorte.</p>
+            <i>Note aux MJs : C'est à vous que revient la lourde de tâche de récompenser vos joueurs, vous pouvez distribuer les points d'XP de façon globale à tout le groupe à la fin de vos arcs narratifs ou de chaque session de jeu, de façon individuelle en fonction des exploits de vos joueurs voire un mélange de tout ça.<br/>En guise d'aide, comptez environ 2 points d'XP pour une heure de jeu si vous aimez récompenser individuellement vos joueurs pour leur RP ou bien pour leur implication dans le jeu. Comptez plutôt 3 points d'XP par heure si vous souhaitez garder tout le monde sur un pied d'égalité. Cette quantité varie selon le contenu de la session bien entendu.</i>
         </div>
     </div>
 </div>

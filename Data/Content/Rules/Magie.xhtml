@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -147,33 +152,34 @@
     </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1 id="Magie" onclick="hideContent(this)">Magie</h1>
     <div>
         <h3>Origines de la Magie</h3>
         <p>La magie est apparu en Ogma suite au Grand Cataclysme, l'impact météoritique a créé un lien entre deux plans de l'existence, reliant ainsi le monde d'Ogma et celui de Karnaï. Le cratère d'impact, où se situe Jikaï la capitale Sihir, est la source de toute la magie d'Ogma.</p>
 
-        <h3>Usage de la Magie</h3>
-        <p>L'utilisation de la magie requiert de plonger son esprit dans la dimension de Karnaï. Cet espace fait de psy pure est difficile d'accès, il faut être déterminé pour y pénétrer et parvenir à l'exploiter. Cette dimension est organisé en anneaux concentriques appelés Cercles de Puissance. Plus on en franchit de cercles, plus on s'approche du coeur de la magie et plus elle est puissante et indomptable.</p>
+        <h3>Usage de la Magie en Ogma</h3>
+        <p>L'utilisation de la magie requiert de plonger son esprit dans la dimension de Karnaï. Cet espace fait de psy pure est difficile d'accès, il faut être déterminé pour y pénétrer et parvenir à l'exploiter. Cette dimension est organisé en anneaux concentriques appelés Cercles de Puissance. Plus on franchit de cercles, plus on s'enfonce dans la dimension de Karnaï et plus la magie est puissante et indomptable.</p>
         <p>Toute entité suffisamment intelligente pour penser peut avoir recours à la magie dans ses cercles les plus inférieurs. Les sorts des premiers cercles sont utilisables par n'importe quel individu possédant de la psyché, pour pénétrez les cercles suivants il est nécessaire d'étudier les écoles ou les domaines de magie.</p>
         <p>Utiliser la magie revient à se rendre mentalement dans le domaine d'un Inkarnaï, d'y façonner sa création puis de la ramener dans le plan d'Ogma via sa force psychique. Le type de sort dépend du domaine d'où l'on puise sa création.</p>
+        <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
+        <p>Les Sarpas par exemple utilisent constamment la magie pour produire de la chaleur si ils ne peuvent pas profiter de celle des astres. On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
+        <p>Les utilisateurs plus confirmés peuvent également transmettre des messages via la magie, ainsi la transmission de messages en Ogma est très rapide. Il est même possible de recevoir un message sans avoir aucune formation avec la magie, il suffit à l'expéditeur de connaître un tant soit peu le destinataire.</p>
+        <p>Un sort peut être travaillé pendant de longues minutes pour produire des effets plus durables et puissants, un tel sort est appelé un rituel. Plus un rituel est long, plus les effets du sorts seront marquants et plus il nécessitera de psy et de force mentale pour être mené à bien. Un rituel possède des effets et un coût non-gérés par des règles strictes, c'est le MJ qui décide de l'impact en psy et sur le monde d'un rituel selon qui le lance et la durée d'incantation.</p>
+
+        <h3>Règles concernant l'utilisation de la magie</h3>
         <p>L'usage de la magie requiert de la force mentale, représentée par des points de <a href="Personnage.xhtml#psy">Psy</a>. Quiconque a recours à la magie sans suffisamment de Psyché ou s'essaye à des créations trop imposantes pour son esprit s'expose à des risques pour son enveloppe physique.</p>
         <p>La caractéristique utilisée pour lancer des sorts est la Volonté, selon l'effet ou le domaine du sort, des bonus liés aux compétences et/ou aux spécialisations peuvent s'appliquer.</p>
-        <p>La plupart des habitant d'Ogma sont capables d'utiliser la magie pour leurs besoins quotidiens, ils peuvent allumer un feu en imaginant une petite flamme à l'intérieur ou de souffler une bougie avec une légère brise.</p>
-        <p>Les utilisateurs plus confirmés peuvent également transmettre des messages via la magie, ainsi la transmission de messages en Ogma est très rapide. Il est même possible de recevoir un message sans avoir aucune formation avec la magie, il suffit à l'expéditeur de connaître un tant soit peu le destinataire.</p>
-        <p>Les Sarpas par exemple utilisent constamment la magie pour produire de la chaleur si ils ne peuvent pas profiter de celle des astres. On raconte que les plus éminents Sihir étaient capables de se déplacer instantanément grâce à la magie, mais ce ne sont que des légendes.</p>
-        <p>Pour utiliser la magie durant un combat, il faut avoir suffisamment de temps pour se concentrer. Si le lanceur est perturbé lors de la concentration du sort, il doit réussir un jet de Volonté basé sur la difficulté du sort pour le maintenir si il échoue, il perd son sort. La psyché est perdue lors de l'incantation du sort et non lors du lancement.</p>
-        <p>Un sort peut être travaillé pendant de longues minutes pour produire des effets plus durables et puissants, un tel sort est appelé un rituel. Plus un rituel est long, plus les effets du sorts seront marquants et plus il nécessitera de psy et de force mentale pour être mené à bien. Un rituel possède des effets et un coût non-gérés par des règles strictes, c'est le MJ qui décide de l'impact en psy et sur le monde d'un rituel selon qui le lance et la durée d'incantation.</p>
-        <p>Résister ou éviter aux effets d'un sort peut nécessiter un jet de compétence ou de caractéristique (Esquive ou Résistance par exemple). Les effets d'un test réussi varient en fonction des effets du sorts : le sort peut n'infliger que la moitié des dégâts, voir sa durée divisée par deux ou même n'avoir aucun effet. Si on subit les effets d'un sort sur une certaine période, il est possible d'effectuer à nouveau le test requis pour s'en libérer en dépensant son action lors de son tour, chaque réitération du test est plus Simple(+10) que la précédente.</p>
+        <p>Éviter un sort ou résister à ses effets peut nécessiter un test. Si on subit les effets d'un sort sur une certaine période, il est possible d'effectuer à nouveau le test requis pour s'en libérer en dépensant son action ou sa réaction lors de son tour, chaque réitération du test est plus Simple(+10) que la précédente. Ce test peut être tenté chaque round lors d'un combat ou lorsque la durée d'effet est inférieure ou égale à une minute, chaque minute lorsque que la durée est inférieure ou égale à une heure, chaque heure lorsque la durée est inférieur ou égale à 24 heures, chaque jour sinon.</p>
         <h3 onclick="hideContent(this)">Règles de créations des sorts</h3>
         <div>
             <p>Un sort est défini par une forme et un effet choisis par le lanceur, c'est la forme, l'effet et la puissance qui déterminent le coût en psy du sort.</p>
             <p>Un sort peut posséder plusieurs propriétés :</p>
             <ul id="proprietes_sorts">
-                <li><span class="big_underline">Maintien :</span>Le lanceur peut dépenser à nouveau la même quantité de psy utilisée pour le sort pour maintenir son effet sans refaire de jet. Le nombre maximum de sort qu'il est possible de maintenir est équivalent au BdVol du lanceur. </li>
-                <li><span class="big_underline">Attaque de Mêlée/ à Distance (portée) :</span>Le sort appartient à cette catégorie d'attaque.</li>
                 <li><span class="big_underline">Zone :</span>Le sort possède une zone d'effet. Si la zone n'est pas suffisante, il est possible de payer plusieurs fois le coût de la forme pour agrandir la zone d'effet. (Ex : Un orbe de 6m de rayon coute 10, un rayon de 30m coute 15)</li>
-                <li><span class="big_underline">Direct :</span>Le sort matérialise instantanément sur la/les cible(s), il est impossible de s'en protéger à moins de connaitre le sort.</li>
+                <li><span class="big_underline">Direct :</span>Le sort se matérialise instantanément sur la/les cible(s).</li>
                 <li><span class="big_underline">Réaction :</span>Le sort peut être lancé en tant que <a href="Combat.xhtml#reactions">réaction</a>.</li>
+                <li><span class="big_underline">Maintien :</span>Le lanceur peut dépenser à nouveau la même quantité de psy utilisée pour le sort pour maintenir son effet sans refaire de jet. Le nombre maximum de sort qu'il est possible de maintenir est équivalent au BdVol du lanceur. </li>
                 <li><span class="big_underline">[Variation] :</span>Le sort possède plusieurs variations, chacune correspondantes à un mot-clé cité.</li>
             </ul>
             <h4 id="forme_sort" onclick="hideContent(this)">Forme des sorts</h4>
@@ -189,13 +195,13 @@
                     </tr>
                     <tr>
                         <td>Contact</td>
-                        <td>Attaque de Mêlée (1m)</td>
+                        <td>-</td>
                         <td>1</td>
                         <td>Affecte une seule cible situé à 1 mètre ou moins du lanceur</td>
                     </tr>
                     <tr>
                         <td>Flèche</td>
-                        <td>Attaque à Distance (100m)</td>
+                        <td>-</td>
                         <td>2</td>
                         <td>Affecte une seule cible situé à 100 mètres ou moins du lanceur</td>
                     </tr>
@@ -215,17 +221,17 @@
                         <td>Onde de Choc</td>
                         <td>Direct, Zone</td>
                         <td>5</td>
-                        <td>Affecte toutes les cibles situées à 5 mètres ou moins du lanceur.</td>
+                        <td>Affecte toutes les entités situées à 5 mètres ou moins de la cible. La cible doit être située à 50 mètres ou moins du lanceur. Le lanceur peut choisir d'être la cible du sort.</td>
                     </tr>
                     <tr>
                         <td>Aura</td>
                         <td>Maintien, Zone</td>
                         <td>5</td>
-                        <td>Affecte toute les cibles situées à 5 mètres ou moins du lanceur à la fin de chaque round. Le lanceur peut choisir d'être ciblé par le sort.</td>
+                        <td>Affecte toute les entités situées à 5 mètres ou moins de la cible à la fin de son round. La cible doit être située à 50 mètres ou moins du lanceur. Le lanceur peut choisir d'être la cible du sort.</td>
                     </tr>
                     <tr>
                         <td>Cône</td>
-                        <td>Attaque à Distance(10m), Zone</td>
+                        <td>Zone</td>
                         <td>8</td>
                         <td>Affecte toutes les cibles situées dans un cône de 10 mètres de long partant du lanceur, l'angle du cône est au choix du lanceur mais ne peut dépasser les 90°.</td>
                     </tr>
@@ -237,13 +243,13 @@
                     </tr>
                     <tr>
                         <td>Orbe</td>
-                        <td>Attaque à Distance (100m), Zone</td>
+                        <td>Zone</td>
                         <td>5</td>
                         <td>Affecte toutes les cibles situées dans une sphère de 3m de rayon. Le point d'impact doit être situé à 100m ou moins du lanceur.</td>
                     </tr>
                     <tr>
                         <td>Rayon</td>
-                        <td>Attaque à Distance (10m), Zone</td>
+                        <td>Zone</td>
                         <td>5</td>
                         <td>Affecte toutes les cibles situées sur une ligne d'un mètre de large et de 10 mètres de long partant du lanceur.</td>
                     </tr>
@@ -261,6 +267,9 @@
                     </tr>
                     </tbody>
                 </table>
+                <p>Toutes les formes de sorts possédant la propriété <b>Zone</b> comptent comme une attaque à distance contre laquelle il est possible d'effectuer un test d'Esquive(Agi) ou un blocage au bouclier Style de Combat(For). En cas de réussite, si l'effet nécessite un test de Résistance on gagne un bonus de +20 supplémentaire pour ce test, si l'effet inflige des dégâts on ne subit que la moitié des dégâts, si l'effet possède une durée, elle est divisée par 2.</p>
+                <p>Pour toutes les autres formes excepté la forme Cible il est possible de complètement négliger les effets du sort en passer un test d'Esquive(Agi) ou un blocage au bouclier Style de Combat(For).</p>
+                <p>Pour la forme Cible, l'entité qui subit le sort doit être consciente qu'elle est ciblée et connaitre l'effet du sort en passant un test d'Arcanes(Int) pour pouvoir s'en prémunir via une esquive ou un blocage.</p>
             </div>
 
             <h4 id="effet_sort" onclick="hideContent(this)">Effet des sorts</h4>
@@ -304,23 +313,23 @@
                         </tr>
                         <tr>
                             <td>Aisance aquatique</td>
-                            <td>-</td>
-                            <td>3*SC</td>
-                            <td>SC minutes</td>
-                            <td>La cible se déplace à sa vitesse normale dans l'eau.</td>
+                            <td>Maintien</td>
+                            <td>6*SC</td>
+                            <td>SC heures</td>
+                            <td>La cible obtient le trait <a href="Glossaire.xhtml#amphibien">Amphibien</a> pour toute la durée du sort.</td>
                             <td>Nero</td>
                         </tr>
                         <tr>
                             <td>Marche aquatique</td>
-                            <td>-</td>
+                            <td>Maintien</td>
                             <td>5*SC</td>
                             <td>SC heures</td>
-                            <td>La cible peut marcher sur l'eau comme s'il marchait sur la terre ferme.</td>
+                            <td>La cible peut marcher sur l'eau comme si elle marchait sur la terre ferme.</td>
                             <td>Nero</td>
                         </tr>
                         <tr>
                             <td>Respiration aquatique</td>
-                            <td>-</td>
+                            <td>Maintien</td>
                             <td>6*SC</td>
                             <td>SC heures</td>
                             <td>La cible peut respirer l'eau comme si c'était de l'air.</td>
@@ -331,15 +340,15 @@
                             <td>Réaction</td>
                             <td>2*SC</td>
                             <td>1 minute</td>
-                            <td>La cible ignore les 3*SC premiers mètres de sa prochaine chute lors du <a href="Survie.xhtml#chutes">calcul des dégâts</a>.</td>
+                            <td>La cible ignore les 5*SC premiers mètres de sa prochaine chute lors du <a href="Survie.xhtml#chutes">calcul des dégâts</a>.</td>
                             <td>Aïgida</td>
                         </tr>
                         <tr>
                             <td>Lévitation</td>
                             <td>Maintien, Réaction</td>
                             <td>5*SC</td>
-                            <td>SC round</td>
-                            <td>La cible obtient une vitesse de déplacement en vol équivalente au BdVol*3 du lanceur.</td>
+                            <td>1 round</td>
+                            <td>La cible obtient une vitesse de déplacement en vol équivalente au BdVol+SC*3 du lanceur.</td>
                             <td>Aïgida</td>
                         </tr>
                         <tr>
@@ -347,7 +356,7 @@
                             <td>-</td>
                             <td>2*SC</td>
                             <td>1 minute</td>
-                            <td>La cible pourra parcourir SC mètre(s) supplémentaire(s) en hauteur ou en longueur lors de son prochain saut.</td>
+                            <td>La cible pourra parcourir SC mètre(s) supplémentaire(s) en hauteur et le double en longueur lors de son prochain saut.</td>
                             <td>Aïgida</td>
                         </tr>
                         <tr>
@@ -355,44 +364,44 @@
                             <td>-</td>
                             <td>3*SC</td>
                             <td>/</td>
-                            <td>La serrure ciblé devient verrouillée. Ouvrir cette serrure nécessite un test étendu de crochetage avec un DR total de 2*SC.</td>
+                            <td>La serrure ciblé devient verrouillée. Ouvrir cette serrure nécessite un test étendu de crochetage avec un DR total de 5*SC.</td>
                             <td>Ourgal</td>
                         </tr>
                         <tr>
                             <td>Déverrouillage</td>
                             <td>-</td>
-                            <td>5</td>
+                            <td>3*SC</td>
                             <td>/</td>
-                            <td>Le sort compte comme une tentative de crochetage contre la serrure ciblée.<i>Cet effet est toujours de SC 3</i>.</td>
+                            <td>Le sort compte comme un test de Sabotage(Vol) contre la serrure ciblée avec un modificateur de SC*5.</td>
                             <td>Ourgal</td>
                         </tr>
                         <tr>
                             <td>Transmutation</td>
                             <td>Maintien</td>
                             <td>5*SC</td>
-                            <td>SC minutes</td>
-                            <td>La cible devient métallique ou minérale. Si la cible souhaite résister, elle doit passer un test de Résistance(Vig ou Vol). Une cible métamorphosée en pierre ou en métal est invulnérable aux dégâts du temps</td>
+                            <td>Permanent</td>
+                            <td>La cible elle doit passer un test de Résistance(Vig ou Vol) avec un modificateur de +20-(5*SC) puis devient métallique ou minérale. Une cible métamorphosée en pierre ou en métal est invulnérable aux dégâts du temps et son poids est multiplié par 5. L'effet dure indéfiniment tant que la cible ne brise pas le sort (une tentative par jour).</td>
                             <td>Ourgal</td>
                         </tr>
                         <tr>
                             <td>Affaiblissement [Caractéristique]</td>
-                            <td>[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
+                            <td>Maintien, [Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
                             <td>5*SC</td>
                             <td>1 minute</td>
-                            <td>La cible a un désavantage pour les épreuves de [Caractéristique]. La cible doit passer un test de Résistance(Vig) dans le cas d'une caractéristique physique ou un test de Résistance(Vol) pour les caractéristiques mentale.</td>
+                            <td>La cible doit passer un test de Résistance(Vig) dans le cas d'une caractéristique physique ou un test de Résistance(Vol) pour les caractéristiques mentale puis voir sa [Caractéristique] diminuée de (ME-DR)*5 pendant une minute.</td>
                             <td>Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)</td>
                         </tr>
                         <tr>
                             <td>Renforcement [Caractéristique]</td>
-                            <td>[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
-                            <td>10*SC</td>
+                            <td>Maintien, [Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]</td>
+                            <td>7*SC</td>
                             <td>1 minute</td>
-                            <td>La cible a un avantage pour les épreuves de [Caractéristique].</td>
+                            <td>La cible voit sa [Caractéristique] augmenter de ME*5 pendant une minute.</td>
                             <td>Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)</td>
                         </tr>
                         <tr>
                             <td>Résistance [Élément]</td>
-                            <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]</td>
+                            <td>Maintien, [Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]</td>
                             <td>3*SC</td>
                             <td>1 minute</td>
                             <td>Procure à la cible le trait <a href="Glossaire.xhtml#resistance">résistance(SC,[élément])</a>.</td>
@@ -400,10 +409,10 @@
                         </tr>
                         <tr>
                             <td>Vulnérabilité [Élément]</td>
-                            <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]</td>
+                            <td>Maintien, [Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]</td>
                             <td>3*SC</td>
                             <td>1 minute</td>
-                            <td>Inflige à la cible le trait <a href="Glossaire.xhtml#vulnerabilite">vulnérabilité(SC,[élément])</a>. Si la cible souhaite résister, elle doit passer un test de Résistance(Vig ou Vol).</td>
+                            <td>La cible doit passer un test de Résistance(Vig ou Vol) puis subir le trait <a href="Glossaire.xhtml#vulnerabilite">vulnérabilité(SC-DR,[élément])</a>.</td>
                             <td>Aïgida, Anathos, Horoï, Kuga, Nero, Safi</td>
                         </tr>
                         <tr>
@@ -411,7 +420,7 @@
                             <td>-</td>
                             <td>2*SC</td>
                             <td>/</td>
-                            <td>Restaure SC points de vitalité</td>
+                            <td>La cible obtient SC point(s) de vitalité temporaire(s)</td>
                             <td>Agapi</td>
                         </tr>
                         <tr>
@@ -424,10 +433,10 @@
                         </tr>
                         <tr>
                             <td>Invisibilité</td>
-                            <td>-</td>
-                            <td>5*SC</td>
-                            <td>SC rounds</td>
-                            <td>La cible devient invisible.</td>
+                            <td>Maintien</td>
+                            <td>5</td>
+                            <td>1 round</td>
+                            <td>La cible devient invisible. <i>Cet effet est toujours de SC5</i></td>
                             <td>Safi</td>
                         </tr>
                         </tbody>
@@ -458,17 +467,9 @@
                         <tr>
                             <td>Armure Magique</td>
                             <td>Maintien</td>
-                            <td>3*SC</td>
-                            <td>1 minute</td>
-                            <td>La cible obtient SC PR magique.</td>
-                            <td>Dikaï</td>
-                        </tr>
-                        <tr>
-                            <td>Bouclier</td>
-                            <td>-</td>
                             <td>4*SC</td>
                             <td>1 minute</td>
-                            <td>La cible obtient 2*SC PV temporaires.<br/>Si la cible possède toujours au moins 1 PV temporaire à la fin du round, le sort est relancé gratuitement sans test et les PV temporaires sont restaurés à leur valeur initiale.</td>
+                            <td>La cible obtient SC PR magique.</td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
@@ -483,32 +484,40 @@
                             <td>Entrave</td>
                             <td>Maintien</td>
                             <td>2*SC</td>
-                            <td>1 round</td>
-                            <td>La cible doit passer un test d'Athlétisme(For ou Vig) ou de Résistance(Vig ou Vol) ou être <a href="Glossaire.xhtml#immobilise">immobilisée</a>.</td>
+                            <td>/</td>
+                            <td>La cible doit passer un test d'Athlétisme(For ou Vig) ou de Résistance(Vig ou Vol) puis être <a href="Glossaire.xhtml#immobilise">immobilisée</a> pendant (SC-DR) rounds.</td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
-                            <td>Invocation de Karnarim élémentaire mineur(WIP</td>
+                            <td>Toile d'araignée</td>
+                            <td>Maintien</td>
+                            <td>2*SC</td>
+                            <td>SC rounds</td>
+                            <td>L'endroit ciblé par le lanceur divise par 2 la vitesse des entité le traversant.</td>
+                            <td>Kynigi</td>
+                        </tr>
+                        <tr>
+                            <td>Invocation de Karnarim élémentaire mineur</td>
                             <td>Maintien, [Acide, Eau, Feu, Foudre, Glace, Lumière, Métal, Nécrotique, Pierre, Poison, Sable, Terre]</td>
-                            <td>10*SC</td>
-                            <td>SC heures</td>
-                            <td>Invoque un Karnarim mineur de l'[élément]. Voir <a href="../World/Bestiaire.xhtml#elementaire_mineur">Élémentaire mineur</a> dans le Bestiaire.</td>
+                            <td>10</td>
+                            <td>1 minute</td>
+                            <td>Invoque un Karnarim mineur de l'[élément]. Voir <a href="../World/Bestiaire.xhtml#elementaire_mineur">Élémentaire mineur</a> dans le Bestiaire.<i>Cet effet est toujours de SC5.</i></td>
                             <td>Aïgida, Anathos, Horoï, Kormo, Kuga, Nero, Ourgal, Safi</td>
                         </tr>
                         <tr>
-                            <td>Invocation de Karnarim élémentaire (WIP</td>
+                            <td>Invocation de Karnarim élémentaire</td>
                             <td>Maintien, [Acide, Eau, Feu, Foudre, Glace, Lumière, Métal, Nécrotique, Pierre, Poison, Sable, Terre]</td>
-                            <td>20*SC</td>
-                            <td>SC heures</td>
-                            <td>Invoque un Karnarim de l'[élément]. Voir <a href="../World/Bestiaire.xhtml#elementaire">Élémentaire</a> dans le Bestiaire.</td>
+                            <td>25</td>
+                            <td>1 minute</td>
+                            <td>Invoque un Karnarim de l'[élément]. Voir <a href="../World/Bestiaire.xhtml#elementaire">Élémentaire</a> dans le Bestiaire.<i>Cet effet est toujours de SC8.</i></td>
                             <td>Aïgida, Anathos, Horoï, Kormo, Kuga, Nero, Ourgal, Safi</td>
                         </tr>
                         <tr>
                             <td>Invocation d'Arme</td>
                             <td>Maintien</td>
-                            <td>5*SC</td>
-                            <td>SC heures</td>
-                            <td>Invoque une arme à l'endroit ciblé.</td>
+                            <td>7*SC</td>
+                            <td>1 heure</td>
+                            <td>Invoque une arme infligeant SC dégâts magiques à l'endroit ciblé.</td>
                             <td>Agones</td>
                         </tr>
                         <tr>
@@ -524,15 +533,15 @@
                             <td>-</td>
                             <td>2*SC</td>
                             <td>/</td>
-                            <td>La cible perd 5*SC points de psy. La cible doit passer un test de Résistance(Vol) si elle souhaite résister.</td>
+                            <td>La cible doit passer un test de Résistance(Vol) puis perdre (SC-DR)*5 points de psy.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Récupération</td>
                             <td>-</td>
-                            <td>8*SC</td>
+                            <td>6*SC</td>
                             <td>/</td>
-                            <td>La cible supprime SC niveaux de fatigue</td>
+                            <td>La cible supprime SC/2 niveaux de fatigue ou récupère SC points d'endurance</td>
                             <td>Agapi</td>
                         </tr>
                         <tr>
@@ -540,31 +549,23 @@
                             <td>-</td>
                             <td>5*SC</td>
                             <td>/</td>
-                            <td>La cible doit passer un test de Résistance(Vig ou Vol) avec un modificateur de +20-(5*SC) ou subir un niveau de fatigue.</td>
+                            <td>La cible doit passer un test de Résistance(Vig ou Vol) puis perdre SC-DR points d'endurance.</td>
                             <td>Anathos</td>
-                        </tr>
-                        <tr>
-                            <td>Toile d'araignée</td>
-                            <td>-</td>
-                            <td>2*SC</td>
-                            <td>SC rounds</td>
-                            <td>L'endroit ciblé par le lanceur divise par 2 la vitesse des entité le traversant.</td>
-                            <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Projection psychique</td>
                             <td>-</td>
-                            <td>5*SC</td>
+                            <td>10*SC</td>
                             <td>1 minute</td>
-                            <td>L'esprit de cible est envoyé dans la dimension de Karnaï pendant une minute ce qui équivaut à 6 heures là-bas. Elle doit passer un test de Résistance(Vig ou Vol) si elle souhaite résister. Sans esprit pour le contrôler, le corps de la cible est inanimé pendant cette période.</td>
-                            <td>Anathos</td>
+                            <td>L'esprit de cible est envoyé dans un domaine de Karnaï pendant une minute ce qui équivaut à une heure là-bas. Elle doit passer un test de Résistance(Vig ou Vol) avec un modificateur de +20-(5*SC) si elle souhaite résister. Sans esprit pour le contrôler, le corps de la cible est inanimé pendant cette période.</td>
+                            <td>Tous</td>
                         </tr>
                         <tr>
                             <td>Bannissement</td>
                             <td>-</td>
                             <td>7*SC</td>
                             <td>/</td>
-                            <td>La cible est renvoyé dans la dimension de Karnaï. Elle doit passer un test de Résistance(Vig ou Vol) avec un modificateur de +20-(5*SC) si elle souhaite résister.</td>
+                            <td>La cible est renvoyé dans sa dimension d'Origine. Elle doit passer un test de Résistance(Vig ou Vol) avec un modificateur de +20-(5*SC) si elle souhaite résister.</td>
                             <td>Dikaï</td>
                         </tr>
                         <tr>
@@ -596,7 +597,7 @@
                             <td>[Métal, Pierre, Terre, Sable]</td>
                             <td>3*SC</td>
                             <td>/</td>
-                            <td>Inflige 2*SC de dégâts physiques</td>
+                            <td>Inflige 3*SC de dégâts physiques</td>
                             <td>Kormo, Ourgal</td>
                         </tr>
                         <tr>
@@ -628,7 +629,7 @@
                             <td>[paralysie, sommeil, poison,...]</td>
                             <td>4*SC</td>
                             <td>/</td>
-                            <td>Invoque des spores infligeant l'effet [type]. La cible doit réussir un test de Résistance(Vig ou Vol) selon le spore. (Paralysie pendant SC rounds, sommeil pendant SC minutes, Poison : <a href="Glossaire.xhtml#empoisonnement">Empoisonnement(SC)</a>,...) </td>
+                            <td>Invoque des spores infligeant l'effet [type]. La cible doit réussir un test de Résistance(Vig ou Vol) selon le spore. (Paralysie pendant SC-DR rounds, sommeil pendant SC-DR minutes, Poison : <a href="Glossaire.xhtml#empoisonnement">Empoisonnement(SC-DR)</a>,...) </td>
                             <td>Kormo</td>
                         </tr>
                         <tr>
@@ -652,7 +653,7 @@
                             <td>Maintien</td>
                             <td>4*SC</td>
                             <td>1 minute</td>
-                            <td>Façonne une création intangible de la forme souhaitée avec sons et odeurs. Un test d'Observation ou d'Investigation avec un modificateur de +20-(5*SC) est nécessaire pour se rendre compte de l'illusion sans la toucher. </td>
+                            <td>Façonne une création intangible de la forme souhaitée avec sons et odeurs. Un test d'Observation ou d'Investigation avec un modificateur de +20-(5*SC) est nécessaire pour se rendre compte de l'illusion sans la toucher. <a href="Tableaux.xhtml#taille_creatures">Taille</a> de l'illusion selon SC : I, Min, TP, P, M, G, TG, Gig, C.</td>
                             <td>Psema</td>
                         </tr>
                         </tbody>
@@ -677,47 +678,47 @@
                             <td>Maintien</td>
                             <td>4*SC</td>
                             <td>1 minute</td>
-                            <td>Réanime un cadavre pendant une minute. <a href="Tableaux.xhtml#taille_creatures">Taille</a> du cadavre selon SC : I, Min, TP, P, M, G, TG, Gig, C. La créature réanimé agit comme bon lui semble.</td>
+                            <td>Réanime un cadavre. <a href="Tableaux.xhtml#taille_creatures">Taille</a> du cadavre selon SC : I, Min, TP, P, M, G, TG, Gig, C. La créature réanimé agit comme bon lui semble.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Manipulation bestiale</td>
                             <td>Maintien</td>
                             <td>4*SC</td>
-                            <td>1 minute</td>
-                            <td>Les animaux ciblés par le sort sont contrôlables par le lanceur. Les animaux ciblés doivent passer un test de Résistance(Vol) avec un modificateur de +20-(5*SC) pour résister.</td>
+                            <td>/</td>
+                            <td>Les animaux ciblés doivent passer un test de Résistance(Vol) puis sont sous le contrôle du lanceur pendant SC-DR minutes.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
                             <td>Manipulation florale</td>
                             <td>Maintien</td>
                             <td>3*SC</td>
-                            <td>1 minute</td>
-                            <td>Les végétaux ciblés par le sort sont contrôlables par le lanceur pendant une minute. Les plantes ciblées doivent passer un test de Résistance(Vol) avec un modificateur de +20-(5*SC) pour résister.</td>
+                            <td>/</td>
+                            <td>Les végétaux ciblés doivent passer un test de Résistance(Vol) puis sont sous le contrôle du lanceur pendant SC-DR minutes.</td>
                             <td>Kormo</td>
                         </tr>
                         <tr>
                             <td>Contrôle des morts</td>
                             <td>Maintien</td>
                             <td>5*SC</td>
-                            <td>1 minute</td>
-                            <td>Permet de contrôler un cadavre réanimé pendant une minute. L'entité décédée doit passer un test de Résistance(Vol) avec un modificateur de +20-(5*SC) pour résister.</td>
+                            <td>/</td>
+                            <td>Les morts-vivants ciblés doivent passer un test de Résistance(Vol) puis sont sous le contrôle du lanceur pendant SC-DR minutes.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
                             <td>Contrôle des vivants</td>
                             <td>Maintien</td>
                             <td>5*SC</td>
-                            <td>1 minute</td>
-                            <td>Permet de contrôler un être vivant pendant une minute. La cible doit passer un test de Résistance(Vol) avec un modificateur de +20-(5*SC) pour résister.</td>
+                            <td>/</td>
+                            <td>Les êtres-vivants ciblés doivent passer un test de Résistance(Vol) puis sont sous le contrôle du lanceur pendant SC-DR minutes.</td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Fléau de la non-vie</td>
-                            <td>-</td>
+                            <td>Maintien</td>
                             <td>3*SC</td>
-                            <td>1 minute</td>
-                            <td>Les morts-vivants touchés par ce sort doivent passer un test de Résistance(Vol) avec un modificateur de +20-(5*SC) ou fuir le lanceur pendant une minute.</td>
+                            <td>/</td>
+                            <td>Les morts-vivants touchés par ce sort doivent passer un test de Résistance(Vol) puis fuir le lanceur pendant SC-DR minute.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
@@ -725,15 +726,64 @@
                             <td>-</td>
                             <td>8*SC</td>
                             <td>/</td>
-                            <td>La cible doit passer un test de Résistance(Vol) ou voir sa mémoire modifiée par le lanceur. Les modifications possibles dépendent du SC du sort, allant de l'oubli des derniers instants pour les premiers jusqu'à réécriture complète du passé de la personne pour les cercles supérieurs.</td>
+                            <td><table id="table_reecriture_memorielle" class="table_horizontal" style="float: right">
+                                <tbody>
+                                <tr>
+                                    <th>SC</th>
+                                    <th>Mémoire affectée</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>60 secondes</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>10 minutes</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>une heure</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>une journée</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>une semaine</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>un mois</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>une année</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>une décennie</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>un siècle</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>vie entière</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                                <p>La cible doit passer un test de Résistance(Vol) avec un modificateur de +20-(5*SC) ou voir sa mémoire modifiée par le lanceur. Si la modification porte sur une période minoritaire de la vie de la cible et qu'elle est incohérente ou trop contradictoire avec le comportement habituel de la cible, elle considérera les effets du sort comme une hallucination/mauvais rêve. Dans le cas d'une modification de grande ampleur (au moins la moitié de la vie de la cible), seules les pensés incohérentes sont perçues comme des mauvais rêves.</p>
+                            </td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Mot de pouvoir : Douleur</td>
-                            <td>-</td>
+                            <td>Maintien</td>
                             <td>6*SC</td>
-                            <td>SC minute</td>
-                            <td>La cible doit passer un test de Résistance(Vig ou Vol) ou vor sa vitesse réduite de 3m et effectue toute action avec désavantage.</td>
+                            <td>1 minute</td>
+                            <td>La cible doit passer un test de Résistance(Vig ou Vol) avec un modificateur de +20-(5*SC) ou voir sa vitesse divisée par 2 et effectuer toute action avec désavantage.</td>
                             <td>Psema</td>
                         </tr>
                         <tr>
@@ -761,34 +811,34 @@
                             <td>Psema</td>
                         </tr>
                         <tr>
-                            <td>Horreur</td>
+                            <td>Terreur</td>
                             <td>-</td>
                             <td>5*SC</td>
                             <td>/</td>
-                            <td>La cible doit passer un test d'Horreur(+20-(5*SC)). Cf <a href="Tableaux.xhtml#stress">Stress</a> </td>
+                            <td>La cible doit passer un test de Terreur(+20-(5*SC)). Cf <a href="Tableaux.xhtml#stress">Stress</a> </td>
                             <td>Psema</td>
                         </tr>
                         <tr>
                             <td>Calme</td>
                             <td>Maintien</td>
                             <td>3*SC</td>
-                            <td>1 minute</td>
-                            <td>La cible doit passer un test de Résistance(Vol) ou être forcée de se calmer. </td>
+                            <td>/</td>
+                            <td>La cible doit passer un test de Résistance(Vol) puis être forcée à se calmer pendant SC-DR rounds. </td>
                             <td>Agapi</td>
                         </tr>
                         <tr>
                             <td>Rage</td>
                             <td>Maintien</td>
                             <td>4*SC</td>
-                            <td>1 minute</td>
-                            <td>La cible doit passer un test de Résistance(Vol) ou considérer tout le monde comme un adversaire. </td>
+                            <td>/</td>
+                            <td>La cible doit passer un test de Résistance(Vol) puis considérer tout le monde comme un adversaire pendant SC-DR rounds. </td>
                             <td>Agones</td>
                         </tr>
                         <tr>
                             <td>Courage</td>
                             <td>Maintien</td>
                             <td>3*SC</td>
-                            <td>1 minute</td>
+                            <td>1 heure</td>
                             <td>La cible obtient un bonus de 5*SC aux tests de peur et d'horreur. </td>
                             <td>Dikaï</td>
                         </tr>
@@ -796,8 +846,8 @@
                             <td>Silence</td>
                             <td>Maintien</td>
                             <td>4*SC</td>
-                            <td>1 minute</td>
-                            <td>Tous les sons sont bloqués dans un rayon de 3*SC mètres autour du point d'impact.</td>
+                            <td>/</td>
+                            <td>La cible doit passer un Test de Résistance(For, Vol ou Élo) puis être muette pendant (SC-DR) heures.</td>
                             <td>Psema</td>
                         </tr>
                         <tr>
@@ -815,6 +865,7 @@
                 <p id="table_mysticisme" class="caption" onclick="hideContent(this)">École du Mysticisme</p>
                 <div class="hidden">
                     <p>Cette école rassemble les sorts non étudiés par les trois autres écoles, ses effets sont divers : révéler l'inconnu et le futur, jouer avec le destin.</p>
+                    <p>Cette école est la seule à ne pas posséder sa propre compétence, on prend en compte la compétence de rang le plus élevé entre les autres compétences d'écoles.</p>
                     <table class="table_horizontal">
                         <tbody>
                         <tr>
@@ -838,7 +889,7 @@
                             <td>-</td>
                             <td>3*SC</td>
                             <td>1 minute</td>
-                            <td>Le prochain test de compétence lié à l'Intelligence de la cible se fera avec un bonus de 5*SC.</td>
+                            <td>Le prochain test de compétence de la cible pouvant être facilité avec des connaissances spécifiques se fera avec un bonus de 5*SC.</td>
                             <td>Orizo</td>
                         </tr>
                         <tr>
@@ -846,7 +897,7 @@
                             <td>-</td>
                             <td>3*SC</td>
                             <td>/</td>
-                            <td>Détecte les être vivants dans un rayon de 15*SC mètres du point d'impact du sort.</td>
+                            <td>Détecte les être vivants dans un rayon de 20*SC mètres du point d'impact du sort.</td>
                             <td>Kynigi</td>
                         </tr>
                         <tr>
@@ -854,7 +905,7 @@
                             <td>-</td>
                             <td>3*SC</td>
                             <td>/</td>
-                            <td>Détecte les morts dans un rayon de 15*SC mètres du point d'impact du sort.</td>
+                            <td>Détecte les morts dans un rayon de 20*SC mètres du point d'impact du sort.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
@@ -862,7 +913,7 @@
                             <td>-</td>
                             <td>3*SC</td>
                             <td>/</td>
-                            <td>Détecte la magie dans un rayon de 15*SC mètres du point d'impact du sort.</td>
+                            <td>Détecte la magie dans un rayon de 20*SC mètres du point d'impact du sort.</td>
                             <td>Orizo</td>
                         </tr>
                         <tr>
@@ -870,7 +921,7 @@
                             <td>-</td>
                             <td>5*SC</td>
                             <td>SC minutes</td>
-                            <td>La cible voit tout, même les entités invisibles et peut voir dans le noir le plus complet et même dans une obscurité magique.</td>
+                            <td>La cible voit tout, même les entités invisibles, peut voir dans le noir le plus complet et même dans une obscurité magique.</td>
                             <td>Orizo</td>
                         </tr>
                         <tr>
@@ -886,7 +937,7 @@
                             <td>-</td>
                             <td>5</td>
                             <td>/</td>
-                            <td>La cible est avertie de son futur dans les 15 minutes. (fortune, péril, les deux ou rien).<i>Cet effet est toujours de SC3</i></td>
+                            <td>La cible est avertie de son futur dans les 15 minutes. (fortune, péril, les deux ou rien).<i>Cet effet est toujours de SC4</i></td>
                             <td>Tychi</td>
                         </tr>
                         <tr>
@@ -894,7 +945,7 @@
                             <td>-</td>
                             <td>15</td>
                             <td>/</td>
-                            <td>La cible obtient une réponse fiable sur un évènement à venir dans les 7 jours. (avoir recours à cet effet sans 7 jours d'intervalles augmente de 25% les chances de réponse aléatoires).<i>Cet effet est toujours de SC5</i></td>
+                            <td>La cible obtient une réponse fiable sur un évènement à venir dans les 7 jours. (avoir recours à cet effet sans 7 jours d'intervalles augmente de 25% les chances de réponse aléatoires).<i>Cet effet est toujours de SC6</i></td>
                             <td>Tychi</td>
                         </tr>
                         <tr>

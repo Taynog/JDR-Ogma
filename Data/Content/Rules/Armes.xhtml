@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -147,6 +152,7 @@
     </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1 id="Armes" onclick="hideContent(this)">Armes</h1>
     <div>
         <div>
@@ -165,6 +171,7 @@
 
             <h3 id="proprietes_armes" onclick="hideContent(this)">Propriété des armes</h3>
             <div>
+                <p><span class="big_underline">Anti-Large :</span>Cette arme est faite pour affronter des ennemis plus large que soi. Les jets d'attaques pour toucher les cibles d'une taille ou plus supérieur à celle de l'utilisateur se font avec un bonus de +10.</p>
                 <p><span class="big_underline">Brise-bouclier :</span>Cette arme est très efficace contre les boucliers. Les boucliers bloquant une attaque d'une arme possédant cette propriété voient leur RB divisée par 2 lors du blocage.</p>
                 <p><span class="big_underline">Contondante :</span>Cette arme est très efficace quand elle touche le crâne. Si vous réussissez un coup à la tête, votre cible doit passer une épreuve de Résistance opposée à votre Force ou être <a href="Glossaire.xhtml#etourdi">étourdie</a> pendant un round.</p>
                 <p><span class="big_underline">Dard :</span>Cette arme est capable de trouver des faille dans l'armure de sa cible. Les jets d'attaque avec un DR supérieur ou égal à 4 ignore l'armure de la cible.</p>
@@ -403,7 +410,7 @@
                     <td>3+BdCarac</td>
                     <td>1M</td>
                     <td>Très Longue</td>
-                    <td>Empalement</td>
+                    <td>Anti-Large, Empalement</td>
                     <td>2</td>
                     <td>40</td>
                 </tr>
@@ -413,7 +420,7 @@
                     <td>4+BdCarac</td>
                     <td>2M</td>
                     <td>Très Longue</td>
-                    <td>Empalement, Peu maniable</td>
+                    <td>Anti-Large, Empalement, Peu maniable</td>
                     <td>4</td>
                     <td>60</td>
                 </tr>
@@ -423,7 +430,7 @@
                     <td>5+BdCarac</td>
                     <td>2M</td>
                     <td>Très Longue</td>
-                    <td>Empalement</td>
+                    <td>Anti-Large, Empalement</td>
                     <td>3</td>
                     <td>160</td>
                 </tr>

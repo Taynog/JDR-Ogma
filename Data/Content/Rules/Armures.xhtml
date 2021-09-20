@@ -50,7 +50,7 @@
         </li>
         <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
             <ul>
-                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de dés</a></span></li>
+                <li><span class="medium"><a href="../Rules/Systeme.xhtml">Système de jeu</a></span></li>
                 <li><span class="sous-dossier"><a href="Personnage.xhtml">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
                     <ul class="hidden">
                         <li><span class="little"><a href="../Rules/Personnage.xhtml#table_origine">Origine</a></span></li>
@@ -93,6 +93,11 @@
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
+                    </ul>
+                </li>
+                <li><span class="sous-dossier"><a href="Artisanat.xhtml">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
+                    <ul class="hidden">
+                        <li><span class="little"><a href="Artisanat.xhtml#alchimie">Alchimie</a> </span> </li>
                     </ul>
                 </li>
                 <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
@@ -147,14 +152,15 @@
     </ul>
 </div>
 <div id="main" class="main" style="margin-left: 200px">
+    <button onclick="toggleNav()" class="openbtn">MENU</button>
     <h1 id="Armures" onclick="hideContent(this)">Armures</h1>
     <div>
         <p>Les armures sont un élément très important dans l'équipement d'un personnage, surtout si c'est un combattant de mêlée. L'armure permet de réduire les dégâts subis, mais impose parfois des pénalités.</p>
-        <p>La plupart des armures possèdent une catégorie de poids représentant à quel point l'armure est lourde et gênante pour son porteur. Si un personnage porte plusieurs types d'armure, il subit les pénalités relatives à la pièce de plus lourde catégorie qu'il porte.</p>
-        <p><span class="big_underline">Légère :</span>l'armure légère ne gêne que très peu la mobilité du personnage, chaque pièce Légère inflige un malus de -1 aux tests d'Agilité.</p>
-        <p><span class="big_underline">Intermédiaire :</span>L'armure intermédiaire impose une pénalité moyenne sur la mobilité du personnage, chaque pièce Intermédiaire inflige un malus de -2 aux tests d'Agilité.</p>
-        <p><span class="big_underline">Lourde :</span>L'armure lourde impose une grande pénalité sur la mobilité du personnage, chaque pièce Lourde inflige un malus de -3 aux tests d'Agilité.</p>
-        <p><span class="big_underline">Super-lourde :</span>L'armure super-lourde impose une pénalité énorme sur la mobilité du personnage, chaque pièce Super-Lourde inflige un malus de -4 aux tests d'Agilité.</p>
+        <p>La plupart des armures possèdent une catégorie de poids représentant à quel point l'armure est lourde et bruyante pour son porteur.</p>
+        <p><span class="big_underline">Légère :</span>l'armure légère ne gêne que très peu le personnage, chaque pièce Légère inflige un malus de -1 aux tests de Furtivité, de natation et d'escalade.</p>
+        <p><span class="big_underline">Moyenne :</span>L'armure moyenne impose une pénalité modérée sur le personnage, chaque pièce Moyenne inflige un malus de -3  aux tests de Furtivité, de natation et d'escalade.</p>
+        <p><span class="big_underline">Lourde :</span>L'armure lourde impose une grande pénalité sur le personnage, chaque pièce Lourde inflige un malus de -5  aux tests de Furtivité, de natation et d'escalade.</p>
+        <p><span class="big_underline">Super-lourde :</span>L'armure super-lourde impose une pénalité énorme sur le personnage, chaque pièce Super-Lourde inflige un malus de -10  aux tests de Furtivité, de natation et d'escalade.</p>
         <p>Les armures nécessitent d'être maîtrisées par le personnage (incluses dans un de ses styles de combat) pour être utilisées convenablement. Un personnage portant une armure sans y être habitué subit le double des pénalités dues au poids de l'armure.</p>
         <p>Les pièces d'armure couvrent le torse ou un membre (tête, bras G, bras D, jambes D, jambes G). Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation, d'un point de vue réaliste, on est sensé porté une cotte de maille sous une armure de plate, et un gambison rembourré sous cette cotte de maille, mais pour simplifier tout ça on part du principe que c'est inclus dans la protection offerte par l'armure de plate.</p>
         <p>Chaque pièce d'armure possède une certaine valeur de protection (PR) qui réduit tout dégâts subit sur la zone qu'elle protège. Certaines armures possèdent une PR magique face à un type de dégâts (PR froid par exemple).</p>
@@ -168,7 +174,7 @@
         <ul>
             <li><span class="big_underline">Protection (PR) :</span> La valeur de protection fournie par l'armure</li>
             <li><span class="big_underline">Catégorie :</span>La catégorie de pois de l'armure. Certaines armures et bouclier possèdent la propriétés "Magique", ce qui leur permet de protéger leur porteur des attaques provenant d'êtres éthérés.</li>
-            <li><span class="big_underline">Encombrement :</span>L'encombrement de la pièce d'armure. L'encombrement est divisé par deux lorsque l'armure est équipée.</li>
+            <li><span class="big_underline">Encombrement :</span>L'encombrement de la pièce d'armure. Cette valeur est divisé par 2 si la pièce est équipée.</li>
             <li><span class="big_underline">Prix :</span>Le prix en pièces d'argent d'une pièce d'armure. </li>
         </ul>
 
@@ -184,7 +190,7 @@
                 </tr>
                 <tr>
                     <td>Médiocre</td>
-                    <td>La catégorie de poids augmente d'un cran<br/>La rupture diminue de 10</td>
+                    <td>La catégorie de poids augmente d'un cran</td>
                     <td>-25%</td>
                 </tr>
                 <tr>
@@ -194,7 +200,7 @@
                 </tr>
                 <tr>
                     <td>Supérieure</td>
-                    <td>La catégorie de poids diminue d'un cran<br/>La rupture augmente de 10</td>
+                    <td>La catégorie de poids diminue d'un cran</td>
                     <td>+50%</td>
                 </tr>
                 </tbody>
@@ -395,7 +401,7 @@
                 <td>1(6)</td>
                 <td>150 membre/ 300 torse(1050)</td>
             </tr>
-            <tr><th rowspan="5">Intermédiaire</th></tr>
+            <tr><th rowspan="5">Moyenne</th></tr>
             <tr>
                 <td>Fer</td>
                 <td>3</td>
@@ -476,7 +482,7 @@
                 <td>2(12)</td>
                 <td>200 membre/ 400 torse(1400)</td>
             </tr>
-            <tr><th rowspan="8">Intermédiaire</th></tr>
+            <tr><th rowspan="8">Moyenne</th></tr>
             <tr>
                 <td>Peau</td>
                 <td>2</td>
@@ -599,7 +605,7 @@
                 <tr>
                     <td>Armure polie</td>
                     <td>Un traitement spécial à base d'aluminium permet de donner un aspect très brillant à l'armure.</td>
-                    <td>Dans un environnement très lumineux, le porteur de l'armure peut tenter d'éblouir ses adversaires (la cible doit rater un jet de PER ou être <a href="Glossaire.xhtml#aveugle">aveuglée</a> pendant un round. En revanche, la lumière réfléchie par l'armure empêche de passer inaperçu.</td>
+                    <td>Dans un environnement très lumineux, le porteur de l'armure peut tenter d'éblouir ses adversaires (la cible doit passer un jet de PER ou être <a href="Glossaire.xhtml#aveugle">aveuglée</a> pendant un round. En revanche, la lumière réfléchie par l'armure empêche de passer inaperçu et impose un désavantage au tests de Furtivité.</td>
                     <td>50 pa</td>
                 </tr>
                 <tr>
@@ -645,6 +651,7 @@
         <h2 id="boucliers" onclick="hideContent(this)">Boucliers</h2>
         <div>
             <p>Les boucliers sont utilisées pour se prémunir de toute sorte d'attaques. Puisqu'ils sont à mi-chemin entre les armes et les armures, ils suivent des règles spéciales.</p>
+            <p>Utilisé comme une arme, un bouclier inflige des dégâts écrasants, possède une allonge Moyenne, est maniable à une ou deux mains, possède les propriétés "Contondante" et "Empalement" et infligent 1+BdCarac points de dégâts.</p>
             <p><span class="big_underline">Résistance de Bouclier :</span>Au lieu de posséder une valeur de Protection, les boucliers possède une résistance notée RB, qui prend en compte la solidité du bouclier et la surface qu'il couvre.</p>
             <p>Si un bouclier est utilisé pour bloquer une attaque, que ce soit une attaque de mêlée, un projectile ou une explosion magique, il est nécessaire de tester sa RB face au dégâts subis par son propriétaire.
                 <br/>Si les dégâts bloqués par le bouclier dépassent sa RB deux choix pour son utilisateur :</p>
@@ -670,14 +677,14 @@
                 <tr>
                     <td>Peau</td>
                     <td>1</td>
-                    <td>Léger</td>
+                    <td>Légère</td>
                     <td>2</td>
                     <td>30</td>
                 </tr>
                 <tr>
                     <td>Bois</td>
                     <td>1</td>
-                    <td>Léger</td>
+                    <td>Légère</td>
                     <td>2</td>
                     <td>20</td>
                 </tr>
@@ -691,63 +698,63 @@
                 <tr>
                     <td>Os</td>
                     <td>1</td>
-                    <td>Léger</td>
+                    <td>Légère</td>
                     <td>2</td>
                     <td>30</td>
                 </tr>
                 <tr>
                     <td>Cuir</td>
                     <td>1</td>
-                    <td>Léger</td>
+                    <td>Légère</td>
                     <td>2</td>
                     <td>45</td>
                 </tr>
                 <tr>
                     <td>Fer</td>
                     <td>2</td>
-                    <td>Intermédiaire</td>
+                    <td>Moyenne</td>
                     <td>3</td>
                     <td>100</td>
                 </tr>
                 <tr>
                     <td>Nilaroy</td>
                     <td>2</td>
-                    <td>Léger, Magique</td>
+                    <td>Légère, Magique</td>
                     <td>1</td>
                     <td>130</td>
                 </tr>
                 <tr>
                     <td>Acier</td>
                     <td>3</td>
-                    <td>Intermédiaire</td>
+                    <td>Moyenne</td>
                     <td>3</td>
                     <td>150</td>
                 </tr>
                 <tr>
                     <td>Gnistar</td>
                     <td>3</td>
-                    <td>Léger, Magique</td>
+                    <td>Légère, Magique</td>
                     <td>1</td>
                     <td>400</td>
                 </tr>
                 <tr>
                     <td>Shoren</td>
                     <td>4</td>
-                    <td>Intermédiaire, Magique</td>
+                    <td>Moyenne, Magique</td>
                     <td>3</td>
                     <td>300</td>
                 </tr>
                 <tr>
                     <td>Orichalque</td>
                     <td>4</td>
-                    <td>Intermédiaire, Magique</td>
+                    <td>Moyenne, Magique</td>
                     <td>3</td>
                     <td>400</td>
                 </tr>
                 <tr>
                     <td>Lakma</td>
                     <td>4</td>
-                    <td>Léger, Magique</td>
+                    <td>Légère, Magique</td>
                     <td>1</td>
                     <td>500</td>
                 </tr>
