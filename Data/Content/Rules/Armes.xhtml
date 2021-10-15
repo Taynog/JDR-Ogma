@@ -91,7 +91,6 @@
                         <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
-                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
                     </ul>
                 </li>
@@ -108,23 +107,8 @@
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
                     <ul class="hidden">
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
-                            </ul></li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
-                            </ul></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#gabarit_creatures">Gabarit des créatures</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -171,20 +155,20 @@
 
             <h3 id="proprietes_armes" onclick="hideContent(this)">Propriété des armes</h3>
             <div>
-                <p><span class="big_underline">Anti-Large :</span>Cette arme est faite pour affronter des ennemis plus large que soi. Les jets d'attaques pour toucher les cibles d'une taille ou plus supérieur à celle de l'utilisateur se font avec un bonus de +10.</p>
+                <p><span class="big_underline">Anti-Large :</span>Cette arme est faite pour affronter des ennemis plus large que soi. Les jets d'attaques pour toucher les cibles d'un gabarit supérieur à celui de l'utilisateur se font avec un bonus de +10.</p>
                 <p><span class="big_underline">Brise-bouclier :</span>Cette arme est très efficace contre les boucliers. Les boucliers bloquant une attaque d'une arme possédant cette propriété voient leur RB divisée par 2 lors du blocage.</p>
                 <p><span class="big_underline">Contondante :</span>Cette arme est très efficace quand elle touche le crâne. Si vous réussissez un coup à la tête, votre cible doit passer une épreuve de Résistance opposée à votre Force ou être <a href="Glossaire.xhtml#etourdi">étourdie</a> pendant un round.</p>
-                <p><span class="big_underline">Dard :</span>Cette arme est capable de trouver des faille dans l'armure de sa cible. Les jets d'attaque avec un DR supérieur ou égal à 4 ignore l'armure de la cible.</p>
+                <p><span class="big_underline">Dard :</span>Cette arme est capable de trouver des faille dans l'armure de sa cible. Les jets d'attaque avec un DRC supérieur ou égal à 4 ignore l'armure de la cible.</p>
                 <p><span class="big_underline">Duel :</span>Cette armes est faite pour le duel. Les jet de Style de Combat se font avec un bonus de +5 en combat singulier mais un malus de -10 en infériorité numérique.</p>
                 <p><span class="big_underline">Empalement :</span>Cette arme interrompt tout déplacement pour ce round de quiconque perd de la vitalité suite à une attaque d'opportunité.</p>
                 <p><span class="big_underline">Excellence :</span>Cette arme est d'excellente facture. Les jets de Style de Combat se font avec un bonus de +5.</p>
                 <p><span class="big_underline">Lancer(Y/Z) :</span>Cette arme est suffisamment équilibrée pour être lancée. Y représente la portée effective et Z la portée maximale. Un lancer d'arme est traité comme une attaque à distance normale (mais la force peut être utilisée pour le test de Style de Combat). Le dé de dégâts de l'arme augmente d'un <a href="Systeme.xhtml#cran_des">cran</a> si elle est lancée</p>
-                <p><span class="big_underline">Lourde :</span>Cette arme possède un fort pouvoir d'arrêt et peut envoyer valser ses cibles. Si le jet d'attaque possède un DR supérieur ou égal à 4, votre cible doit passer une épreuve de Résistance(Force ou Vigueur) opposée à votre Force ou être repoussée de DRC mètres.</p>
+                <p><span class="big_underline">Lourde :</span>Cette arme possède un fort pouvoir d'arrêt et peut envoyer valser ses cibles. Si le jet d'attaque possède un DRC supérieur ou égal à 4, votre cible doit passer une épreuve de Résistance(Force ou Vigueur) opposée à votre Force ou être repoussée sur une distance en mètres équivalente à votre BdFor - le DRC de ce test.</p>
                 <p><span class="big_underline">Magique :</span>Cette arme est capable de blesser toutes créatures normalement résistantes ou immunisées aux dégâts normaux. Une arme en Virgonium inflige des dégâts doublés aux entités éthérées.</p>
                 <p><span class="big_underline">Montée :</span>Cette arme n'est utilisable que depuis une monture pour des raisons de poids et de maniabilité. L'attaque se fait lors d'une charge.</p>
                 <p><span class="big_underline">Perce-Armure(X) :</span>Cette arme est d'une telle puissance qu'elle ignore X PR de la cible qu'importe les conditions. </p>
                 <p><span class="big_underline">Petite :</span>Cette arme est relativement petite. Elle ne peut être utilisée pour parer les coups des armes maniées à deux mains. L'utilisateur peut passer un test de Roublardise pour dissimuler l'arme. Cette arme n'est pas affectée par les malus dans les espaces clos.</p>
-                <p><span class="big_underline">Peu maniable :</span>Cette arme n'est pas facile à manier, il est Difficile(-20) de se défendre avec.</p>
+                <p><span class="big_underline">Peu maniable :</span>Cette arme n'est pas facile à manier, se défendre avec se fait avec un désavantage.</p>
                 <p><span class="big_underline">Primitive :</span>Cette arme est d'une qualité pitoyable. Les jets de Style de Combat se font avec un malus de +10.</p>
                 <p><span class="big_underline">Rechargement(X)</span>Cette arme doit être rechargée avant d'être utilisée, le nombre d'actions nécessaires pour recharger l'arme est indiqué entre parenthèse. Le porteur peut dépenser son déplacement pour recharger son arme. Pour les armes à feu disposant de plusieurs canons, ce trait indique le temps de rechargement pour un canon.</p>
                 <p><span class="big_underline">Zone(X)</span>Cette arme touche jusqu'à X cible dans sa portée d'attaque.</p>
@@ -1040,14 +1024,14 @@
                     <tr>
                         <td>Lame géante</td>
                         <td>Pour certains aventuriers éprouvant le besoin de compenser quelque chose, il est possible d'augmenter la taille de la lame jusqu'à la rendre ridiculement longue.</td>
-                        <td>L'arme gagne les propriétés "Lourde", "Brise-bouclier" et "Peu maniable" si elle ne les possèdent pas déjà, le dégâts de l'arme sont doublés, l'encombrement de l'arme triple, les jets de Style de Combat fait avec cette arme se font avec désavantage.</td>
+                        <td>L'arme gagne les propriétés "Lourde", "Brise-bouclier" et "Peu maniable" si elle ne les possèdent pas déjà, les dégâts de l'arme sont doublés, l'encombrement de l'arme triple, les jets de Style de Combat fait avec cette arme se font avec deux désavantage.</td>
                         <td>150% du prix de l'arme</td>
                     </tr>
                     <tr><th colspan="4">Modification des parties contondantes</th></tr>
                     <tr>
                         <td>Alourdie</td>
                         <td>En densifiant la partie contondante d'une arme, sa force d'impact peut surprendre plus d'un adversaire.</td>
-                        <td>Sur un DR de +4, l'ennemi est projeté <a href="Glossaire.xhtml#a_terre">à terre</a>. Les ennemis <a href="Glossaire.xhtml#a_terre">à terre</a> subissent des dégâts doublés supplémentaires. L'encombrement de l'arme augmente de 1. L'arme obtient la propriété "Lourde" si elle ne la possède pas déjà.</td>
+                        <td>Sur un DR de +4, l'ennemi est projeté <a href="Glossaire.xhtml#a_terre">à terre</a>. Les ennemis <a href="Glossaire.xhtml#a_terre">à terre</a> subissent des dégâts doublés. L'encombrement de l'arme augmente de 1. L'arme obtient la propriété "Lourde" si elle ne la possède pas déjà.</td>
                         <td>25 % du prix de l'arme</td>
                     </tr>
                     <tr>

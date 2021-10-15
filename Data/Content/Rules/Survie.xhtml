@@ -91,7 +91,6 @@
                         <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
-                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
                     </ul>
                 </li>
@@ -108,23 +107,8 @@
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
                     <ul class="hidden">
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
-                            </ul></li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
-                            </ul></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#gabarit_creatures">Gabarit des créatures</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -266,7 +250,7 @@
                     <td>Circulaire</td>
                     <td>3</td>
                     <td>8</td>
-                    <td>3 cL d'huile/heure</td>
+                    <td>Un flasque d'huile toute les 8 heures</td>
                 </tr>
                 <tr>
                     <td>Torche</td>
@@ -280,14 +264,14 @@
                     <td>Circulaire</td>
                     <td>15</td>
                     <td>35</td>
-                    <td>10 cL d'huile/heure</td>
+                    <td>Un flasque d'huile toute les 4 heures</td>
                 </tr>
                 <tr>
                     <td>Lanterne sourde</td>
                     <td>Conique (90°)</td>
                     <td>25</td>
                     <td>60</td>
-                    <td>10 cL d'huile/heure</td>
+                    <td>Un flasque d'huile toute les 4 heures</td>
                 </tr>
                 <tr>
                     <td>Lumière de Safi</td>
@@ -374,167 +358,6 @@
                 </div>
             </div>
 
-            <h3 id="climat_vent" onclick="hideContent(this)">Climats et vents</h3>
-            <div>
-                <p>Il arrive que le temps joue un rôle important dans une aventure. La table ci-dessous tient lieu des aléas du temps. Le sens des termes employés dans ce tableau est expliqué plus bas.</p>
-                <p id="table_climat" class="caption" onclick="hideContent(this)">Climats</p>
-                <div class="hidden">
-                    <table class="table_horizontal">
-                        <tbody>
-                        <tr>
-                            <th>d100</th>
-                            <th>Temps</th>
-                            <th>Région froide</th>
-                            <th>Région tempérée*</th>
-                            <th>Désert</th>
-                        </tr>
-                        <tr>
-                            <td>01–70</td>
-                            <td>Normal</td>
-                            <td>Froid, temps calme</td>
-                            <td>Normal pour la saison**</td>
-                            <td>Très chaud, temps calme</td>
-                        </tr>
-                        <tr>
-                            <td>71-80</td>
-                            <td>Mauvais</td>
-                            <td>Neige</td>
-                            <td>Précipitations</td>
-                            <td>Très chaud, venteux</td>
-                        </tr>
-                        <tr>
-                            <td>81-90</td>
-                            <td>Tempête</td>
-                            <td>Tempête de neige</td>
-                            <td>Orage, tempête de neige(hiver)</td>
-                            <td>Tempête de sable</td>
-                        </tr>
-                        <tr>
-                            <td>91-100</td>
-                            <td>Violente tempête</td>
-                            <td>Blizzard</td>
-                            <td>Tornade, Ouragan(Été), Blizzard(hiver)</td>
-                            <td>Trombes d'eau</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5">* Les régions tempérées comprennent les forêts, collines, marécages, montagnes, plaines et mers chaudes.</td>
-                        </tr>
-                        <tr>
-                            <td colspan="5">** Froid pendant l’hiver, chaud pendant l'été, tempéré pendant l'automne et le printemps. En hiver, les régions marécageuses sont toujours légèrement plus chaudes que les autres.</td>
-                        </tr>
-                        </tbody>
-
-                    </table>
-                    <h4>Températures</h4>
-                    <p> <span class="underline">Froid :</span> de -15° C à 5° C le jour, 5° C à 10° C de moins la nuit.<br/><span class="underline">Tempéré :</span> de 5° C à 15° C pendant le jour, 5° C à 10° C de moins pendant la nuit.<br/><span class="underline">Chaud :</span> de 15° C à 30° C le jour, 5° C à 10° C de moins la nuit.<br/><span class="underline">Très chaud :</span> de 30° C à 45° C le jour, 5° C à 10° C de moins la nuit.</p>
-
-                    <h4>Temps</h4>
-                    <p><span class="underline">Précipitations :</span> jetez 1d100 afin de savoir si les précipitations prennent la forme de brouillard (01–30), de pluie ou de neige (31–90), ou de neige fondue ou de grêle (91–00). La neige ne peut se former qu’en cas de température inférieure à 0° C. La plupart des types de précipitations tombent durant 2d4 heures, à l’exception de la grêle (1d20 minutes seulement, mais elle s’accompagne généralement de 1d4 heures de pluie).</p>
-                    <p><span class="underline">Tempête (de sable, de neige, orage) :</span> les vents sont violents (50 à 80 km/h) et la visibilité diminuée de 75 %. Une tempête sévit pendant 2d4-1 heures.</p>
-                    <p><span class="underline">Temps calme :</span> Très faible vent (de 0 à 15 km/h).</p>
-                    <p><span class="underline">Trombes d’eau :</span> semblables à la pluie (voir « Précipitations », ci-dessus), mais leur violence est telle qu’elles limitent le champ de vision comme le brouillard. Elles peuvent provoquer des inondations. Les trombes d’eau durent pendant 2d4 heures.</p>
-                    <p><span class="underline">Venteux :</span> Vent moyen (15 à 30 km/h) ou important (30 à 50 km/h).<br/><span class="underline">Violente tempête (blizzard, tornade) :</span> la vitesse des vents s’élève au dessus de 80 km/h. De plus, il se joint aux blizzards d’importantes chutes de neige (1d3 x 30 cm) et aux ouragans des trombes d’eau (voir ci-dessus). Un blizzard persiste 1d3 jours. Un ouragan peut parfois durer jusqu’à une semaine, mais il aura principalement de l’impact sur les personnages de vingt-quatre à quarante-huit heures, le temps que sa partie centrale traverse la région où se trouve le groupe. Quand à la tornade, elle possède une durée de vie extrêmement réduite (1d6 x 10 minutes). Généralement, elle se forme dans le cadre d’un orage.</p>
-
-                    <h4>Tempêtes</h4>
-                    <p>L’effet combiné du vent et des précipitations (ou du sable soulevé) diminue la visibilité de trois quarts, ce qui se traduit par un malus de -40 aux tests de Perception. Les attaques à distance sont impossibles, excepté à l’aide de machines de guerre (et encore se font-elles à -20). Les flammes à l’air libre sont instantanément éteintes, et celles qui sont protégées (lanternes, etc.) ont 50 % de chances d’être soufflées. Les tempêtes sont réparties en trois familles : tempêtes de sable, tempêtes de neige et orages.</p>
-                    <p><span class="underline">Tempête de sable :</span> Cette sorte de tempête est semblable aux autres à la différence qu’elle ne s’accompagne pas de précipitations. Au lieu de cela, le vent soulève le sable du désert, et c’est ce dernier qui réduit le champ de vision, étouffe les flammes à l’air libre et a 50 % de chances d’éteindre celles qui sont protégées. La plupart des tempêtes de sable sont accompagnées de vents violents et laissent derrière elles une couche de sable plus ou moins épaisse (1d6 x 2,5 cm). Chaque tempête de sable a toutefois 10 % de risques d’être d’une intensité bien supérieure à la normale, auquel cas elle s’accompagne de vents de tempête. Quiconque se trouve à découvert lorsqu’elle se déclenche subit 1d3 points de dégâts par round et risque d’étouffer (voir noyade, si ce n’est qu’un personnage se protégeant la bouche et le nez, par exemple avec une écharpe, ne commence à étouffer qu’après un nombre de rounds égal à deux fois sa valeur de Vigueur). Une tempête de sable aussi virulente laisse plusieurs dizaines de centimètres de sable sur son passage (jetez 2d3-1 et multipliez le résultat par 30 cm pour savoir l’épaisseur exacte).</p>
-                    <p><span class="underline">Tempête de neige</span> En plus des vents et des précipitations, cette tempête dépose plusieurs centimètres de neige sur son passage (1d6 x 2,5 cm).</p>
-                    <p><span class="underline">Orage :</span> En plus des vents et des précipitations (qui prennent le plus souvent la forme de pluie, même si les orages de grêle sont possibles), les orages s’accompagnant d’éclairs représentent un danger potentiel pour les personnages se trouvant à découvert quand les éléments se déchaînent (surtout pour ceux qui portent une armure métallique). Pour simplifier, considérez que la foudre frappe une fois par minute près du centre de l’orage, et ce pendant une heure. Chaque éclair inflige un nombre de points de dégâts d’électricité compris entre 4d8 et 10d8. Un orage sur dix se change en tornade.</p>
-
-                    <h4>Tempêtes violentes</h4>
-                    <p>Les vents extrêmement violents et la pluie battante (ou la neige cinglante) qui caractérisent ce type de condition climatique diminue la visibilité jusqu’à zéro, ce qui rend impossible les attaques à distance et les tests de Perception. Les flammes non protégées sont systématiquement éteintes, et même les autres ont 75 % de risques de l’être. Les créatures surprises à découvert doivent réussir un jet de vigueur(avec un malus de 25) pour ne pas être affectées par l’effet des vents.</p>
-                    <p><span class="underline">Tornade :</span> En plus de la violence terrible de leurs vents, les tornades peuvent gravement blesser, voir tuer quiconque se retrouve pris dans les bourrasques.</p>
-                    <p><span class="underline">Ouragan :</span> En plus de la violence terrible de leurs vents et de leurs précipitations, les ouragans s’accompagnent souvent de crues éclair (voir inondations). Les individus pris à découvert ne peuvent pas faire grand-chose d’autre que d’essayer de trouver un abri au plus vite.</p>
-                    <p><span class="underline">Blizzard :</span> Le mélange de vents très violents, d’importantes chutes de neige (généralement 1d3 x 30 cm, voir Pluie, neige, neige fondue et grêle) et de froid font que les blizzards constituent une terrible menace pour quiconque se laisse surprendre.</p>
-                </div>
-
-                <p id="table_vents" class="caption" onclick="hideContent(this)">Effets du vent</p>
-                <div  class="hidden">
-                    <table class="table_horizontal">
-                        <tbody>
-                        <tr>
-                            <th>Force du Vent</th>
-                            <th>Vitesse du Vent (km/h)</th>
-                            <th>Attaque à distance/machines de guerre</th>
-                            <th>Taille des créatures affectées*</th>
-                            <th>Taille des créatures emportées**</th>
-                            <th>Malus de vol</th>
-                        </tr>
-                        <tr>
-                            <td>Léger</td>
-                            <td>0-15</td>
-                            <td>-/-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Modéré</td>
-                            <td>16-30</td>
-                            <td>-/-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Important</td>
-                            <td>31-45</td>
-                            <td>-10/-</td>
-                            <td>TP</td>
-                            <td>-</td>
-                            <td>-10</td>
-                        </tr>
-                        <tr>
-                            <td>Violent</td>
-                            <td>46-75</td>
-                            <td>-20/-</td>
-                            <td>P</td>
-                            <td>TP</td>
-                            <td>-20</td>
-                        </tr>
-                        <tr>
-                            <td>Tempête</td>
-                            <td>76-120</td>
-                            <td>Impossible/-20</td>
-                            <td>M</td>
-                            <td>P</td>
-                            <td>-40</td>
-                        </tr>
-                        <tr>
-                            <td>Ouragan</td>
-                            <td>121-280</td>
-                            <td>Impossible/Impossible</td>
-                            <td>G</td>
-                            <td>M</td>
-                            <td>-60</td>
-                        </tr>
-                        <tr>
-                            <td>Tornade</td>
-                            <td>281-500</td>
-                            <td>Impossible/Impossible</td>
-                            <td>TG</td>
-                            <td>G</td>
-                            <td>-80</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6">* Les créatures de cette taille et les créatures de taille inférieure sont incapables d’avancer contre le vent à moins de réussir un test de Force sans malus si elles se trouvent au sol ou malus de 30 si elles volent.</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6">** Les créatures terrestres sont renversées et roulent sur 1d4 x 3 mètres, ce qui leur inflige 1d4 points de dégâts par tranche de 3 mètres à moins de réussir un test de Force avec un malus de 25. Les créatures volantes sont repoussées sur 2d6 x 3 mètres, tandis que les vents violents leur infligent 2d6 points de dégâts à moins de réussir un test de Vol avec un malus de 60.</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <br/>
-                    <span class="big_underline">Vent léger :</span> légère brise sans effets en termes de jeu.<br/>
-                    <span class="big_underline">Vent modéré :</span> vent soutenu ayant 50 % de chances de souffler les petites flammes non protégées, comme celles des bougies.<br/>
-                    <span class="big_underline">Vent important :</span> vent soutenu accompagné de rafales plus violentes, éteignant systématiquement les flammes non protégées (bougies, torches, etc.). Donne un malus de -10 aux attaques à distance et aux tests de Perception.<br/>
-                    <span class="big_underline">Vent violent (grand vent) :</span> éteint systématiquement toutes les flammes non protégées et fait danser follement celles qui sont protégées (lanternes, etc.), en ayant 50 % de chances de les souffler. Les jets d’attaque à distance et les tests de Perception reçoivent un malus de -20.<br/>
-                    <span class="big_underline">Vent de tempête :</span> suffisamment violent pour faire tomber les branches, voire les arbres malades ; souffle systématiquement les flammes non protégées et a 75 % de chance d’éteindre celles qui le sont. Il est impossible d’attaquer à distance, les machines de guerre recevant pour leur part un malus de -20. Les hurlements du vent donnent un malus de -40 aux tests de Perception basés sur l’ouïe.<br/>
-                    <span class="big_underline">Ouragan :</span> toutes les flammes sont systématiquement soufflées et il est impossible d’attaquer à distance (sauf pour les machines de guerre, et encore le font-elles à -40). Les tests de Perception basés sur l’ouïe échouent forcément; on n’entend rien d’autre que le hurlement du vent, devant lequel même les arbres en bonne santé risquent de se coucher.<br/>
-                    <span class="big_underline">Tornade :</span> toutes les flammes sont instantanément soufflées et il est impossible d’attaquer à distance, même pour les machines de guerre. Les tests de Perception basés sur l’ouïe échouent automatiquement. Au lieu d’être emportés au loin, les personnages se situant trop près de la tornade sont au contraire aspirés. Ceux qui entrent en contact avec l’œil de la tornade, c’est-à-dire le tourbillon autour duquel celle-ci s’enroule, sont projetés dans les airs et secoués en tous sens pendant 1d10 rounds, ce qui leur inflige 4d6 points de dégâts par round, après quoi ils sont violemment expulsés (subissant du même coup des dégâts proportionnels à la hauteur de chute). La vitesse de rotation de la tornade peut atteindre les 500 km/h, mais l’œil est bien plus lent (50 km/h environ, soit dans les 75 m par round). Une tornade déracine les arbres, ravage les bâtiments et cause d’autres dégâts similaires.<br/>
-                </div>
-            </div>
-
             <h3 id="dangers_naturels" onclick="hideContent(this)">Dangers naturels</h3>
             <div>
                 <h4>L'acide</h4>
@@ -566,16 +389,16 @@
                 <p>Si au lieu de tomber ou de glisser, une entité saute délibérément, les dégâts de sa chutes sont équivalent à la hauteur de la chute en mètres divisée par 5.</p>
                 <p>L'entité peut décider de passer un test d'Acrobaties(Agi) ou d'Athlétisme(Agi) pour ignorer (BdAgi+SC)*5 mètres de sa chute en effectuant un plongeon.</p>
 
-                <p>La catégorie de taille a un impact sur les dégâts de chute d'une entité : Les créatures Infimes et Très Petites divisent les dégâts par 3 et les créatures Petites par 2. Les créatures Moyenne subissent des dégâts normaux. Les créatures Grandes multiplient les dégâts par 2, les créatures Très Grandes par 3, les créatures Gigantesque par 4 et les créatures Colossales par 5.</p>
+                <p>Le gabarit a un impact sur les dégâts de chute d'une entité : Les créatures Infimes et Très Petites divisent les dégâts par 3 et les créatures Petites par 2. Les créatures Moyenne subissent des dégâts normaux. Les créatures Grandes multiplient les dégâts par 2, les créatures Très Grandes par 3, les créatures Gigantesque par 4 et les créatures Colossales par 5.</p>
                 <p>Ainsi, une entité de taille M possédant un score d'Agilité de 42 et la compétences Acrobaties au rang Adepte tombant d’une corniche haute de 10 mètres de haut subit 10 points de dégâts. Si elle avait volontairement sauté, elle aurait seulement reçu 5 points de dégâts. Enfin, si elle avait volontairement sauté et réussie son test d'Acrobaties avec un 38 sur 64, la hauteur de chute serait désormais de 10-(4+3)=3 mètres, les dégâts serait alors seulement de 2 puisqu'on arrondi au supérieur.</p>
 
                 <h4>Les chutes d'objets</h4>
-                <p>Un objet qui tombe suit les mêmes règles que les êtres vivants (voir ci-dessus). Le MJ décide de la catégorie de taille de l'objet et effectue les calculs en conséquences. L'entité reçoit autant de dégâts que l'objet. Si l'objet subit des dégâts trop important, il se brise à l'impact.</p>
+                <p>Un objet qui tombe suit les mêmes règles que les êtres vivants (voir ci-dessus). Le MJ décide de le gabarit de l'objet et effectue les calculs en conséquences. L'entité reçoit autant de dégâts que l'objet. Si l'objet subit des dégâts trop important, il se brise à l'impact.</p>
                 <p>Si l’objet tombe sur une créature, celle-ci doit réussir un jet d'Esquive(Agi) pour éviter les dégâts. Une créature n'est considéré comme un espace meuble que sur ses surfaces molles (l'abdomen et le postérieur pour les humanoïdes) et si l'objet plus petit d'au mons deux catégories.</p>
 
                 <h4>L'eau</h4>
                 <p>Un personnage ayant pied peut traverser une eau assez calme sans le moindre jet de dé. Pareillement, nager dans une eau calme nécessite juste un test d'Athlétisme(Agi)</p>
-                <p>L’eau devient plus dangereuse en cas de courant important. Le personnage doit faire un test d'Athlétisme(Agi) Difficile(-20) pour ne pas couler. En cas d’échec, il subit 1 points de dégâts par round (2 points de dégâts s’il est jeté contre des rochers ou autres).</p>
+                <p>L’eau devient plus dangereuse en cas de courant important. Le personnage doit faire un test d'Athlétisme(Agi) avec 2 désavantages pour ne pas couler. En cas d’échec, il subit 1 points de dégâts par round (2 points de dégâts s’il est jeté contre des rochers ou autres).</p>
 
                 <h4>La fumée</h4>
                 <p>Un aventurier respirant une épaisse fumée doit réussir un jet de vigueur à chaque round (malus de 0, -5 par jet effectué au préalable). En cas d’échec, il passe le round à fortement tousser. Si cela se répète sur un deuxième round, il subit 1 points de dégâts. La fumée diminue la visibilité (-20 en Perception pour vue et odorat).</p>
@@ -588,7 +411,7 @@
                 <p>Un froid extrême (-30° C et en dessous) inflige 1 points de dégâts toutes les minutes. Les créatures en contact avec des objets métalliques extrêmement froids subissent 1 de dégâts de givre supplémentaire par round.</p>
 
                 <h4>La glace</h4>
-                <p>La vitesse de déplacement sur la glace est divisée par deux. Les tests d’Acrobaties sont Difficile(-20). Les créatures demeurant trop longtemps au contact de la glace risquent d’être affectées par un froid important.</p>
+                <p>La vitesse de déplacement sur la glace est divisée par deux. Les tests d’Acrobaties se font avec 2 désavantages. Les créatures demeurant trop longtemps au contact de la glace risquent d’être affectées par un froid important.</p>
 
                 <h4>La lave</h4>
                 <p>La lave et le magma infligent 6 points de dégâts de feu par round d’exposition, excepté dans le cas d’une immersion totale (par exemple quand un personnage tombe dans le cratère d’un volcan en activité), laquelle occasionne 25 points de dégâts de feu à la vitalité par round.</p>

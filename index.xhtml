@@ -91,7 +91,6 @@
                         <li><span class="little"><a href="Data/Content/Rules/Survie.xhtml#voyage">Voyage</a> </span> </li>
                         <li><span class="little"><a href="Data/Content/Rules/Survie.xhtml#eclairage">Éclairage</a> </span> </li>
                         <li><span class="little"><a href="Data/Content/Rules/Survie.xhtml#biomes">Biomes</a> </span> </li>
-                        <li><span class="little"><a href="Data/Content/Rules/Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Data/Content/Rules/Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
                     </ul>
                 </li>
@@ -108,23 +107,8 @@
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
                     <ul class="hidden">
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
-                                <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
-                                <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
-                                <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
-                                <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
-                            </ul></li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
-                                <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
-                                <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
-                            </ul></li>
-                        <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#stress">Stress</a></span></li>
-                        <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="little"><a href="Data/Content/Rules/Tableaux.xhtml#gabarit_creatures">Gabarit des créatures</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -177,21 +161,29 @@
     </div>
     <hr/>
     <div align="center">
-        <h3>Version actuelle du site : 2.3 28/07/2021</h3>
+        <h3>Version actuelle du site : 2.4.1 </h3>
         <ul style="list-style: none">
-            <li><a href="Data/Downloads/Fiche%20Perso%20Ogma.xlsx">Nouvelle fiche de personnage</a></li>
-            <li>Ajout de l'<a href="Data/Content/Rules/Artisanat.xhtml#alchimie">Alchimie</a></li>
-            <li>Nouvelles formules pour le calcul de la Vitalité des entités. La catégorie de taille est désormais prise en compte, les entités sont désormais plus frêles, à l'exception des entités Grandes ou plus.</li>
-            <li>Révision de la création de personnage pour intégrer l'XP dès les premiers pas du personnage, permettant ainsi à l'XP de mesurer la puissance d'un personnage.</li>
-            <li>Révision de la page Survie, certaines choses n'étaient plus au goût du jour.</li>
-            <li>Nouvelle propriété d'armes : Anti-Large : +10 pour toucher les cibles plus grandes.</li>
-            <li>Révision partielle des sorts, certains devaient voir leurs effets encadrées (Réécriture mémorielle), d'autres ont simplement reçus un coup de polish.</li>
-            <li>Réarrangement des compétences : Calme a fusionné avec Résistance, Équitation avec Dressage et Bluff avec Persuasion.</li>
-            <li>Correction de coquilles</li>
+            <li>Supression de la localisation Jambe G et Jambe D pour les fusionner.</li>
+            <li>Changements sur l'encombrement et la capacité de port.</li>
+            <li>Changements au niveau de la <a href="Data/Content/Rules/Tableaux.xhtml#gabarit_creatures">taille/gabarit</a> des créatures.</li>
+            <li>Changements au niveau de l'endurance, notamment dans la formule de calcul et ajouts d'actions consommants des PE.</li>
+            <li>Changements sur l'impact des BdCarac : le SCMax est déterminé par le BdInt, le BdVig augmente la robustesse, le BdVol augmente la sérénité.</li>
         </ul>
         <h3 onclick="hideContent(this)">Anciens changelogs</h3>
         <div class="hidden">
             <ul style="list-style: none" class="space_list">
+                <li><strong>Version 2.4 20/09/2021</strong>
+                    <ul style="list-style: none">
+                        <li><a href="Data/Downloads/Fiche%20Perso%20Ogma.xlsx">Nouvelle fiche de personnage</a></li>
+                        <li>Ajout de l'<a href="Data/Content/Rules/Artisanat.xhtml#alchimie">Alchimie</a></li>
+                        <li>Nouvelles formules pour le calcul de la Vitalité des entités. La catégorie de taille est désormais prise en compte, les entités sont désormais plus frêles, à l'exception des entités Grandes ou plus.</li>
+                        <li>Révision de la création de personnage pour intégrer l'XP dès les premiers pas du personnage, permettant ainsi à l'XP de mesurer la puissance d'un personnage.</li>
+                        <li>Révision de la page Survie, certaines choses n'étaient plus au goût du jour.</li>
+                        <li>Nouvelle propriété d'armes : Anti-Large : +10 pour toucher les cibles plus grandes.</li>
+                        <li>Révision partielle des sorts, certains devaient voir leurs effets encadrées (Réécriture mémorielle), d'autres ont simplement reçus un coup de polish.</li>
+                        <li>Réarrangement des compétences : Calme a fusionné avec Résistance, Équitation avec Dressage et Bluff avec Persuasion.</li>
+                        <li>Correction de coquilles</li>
+                    </ul></li>
                 <li><strong>Version 2.3 28/07/2021</strong>
                     <ul style="list-style: none">
                         <li>Réorganisation du site.</li>
@@ -239,13 +231,13 @@
             <tr>
                 <th>Associés</th>
                 <td>
-                    Ollierovsky, Tabernak
+                    Ollierovsky, Tabernak, Lulux
                 </td>
             </tr>
             <tr>
                 <th>Beta-testeurs</th>
                 <td>
-                    Ollierovsky, Tabernak, Okami, Tsuyuky, Crodragon, Lulux699, Pirate73, Mathias-Mathias, Battosai_99
+                    Ollierovsky, Tabernak, Okami, Tsuyuky, Crodragon, Pirate73, Mathias-Mathias, Battosai_99
                 </td>
             </tr>
         </tbody>

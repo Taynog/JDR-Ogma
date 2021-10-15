@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" afterDir="false" />
@@ -15,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Armes.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Armes.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Armures.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Armures.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Artisanat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Artisanat.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Combat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Combat.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Magie.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Magie.xhtml" afterDir="false" />
@@ -24,9 +27,11 @@
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Systeme.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Systeme.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/arts_du_combat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/arts_du_combat.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Downloads/Fiche Perso Ogma.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Downloads/Fiche Perso Ogma.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -249,6 +254,16 @@
       <workItem from="1631968306629" duration="9980000" />
       <workItem from="1632115255629" duration="4165000" />
       <workItem from="1632139953014" duration="6154000" />
+      <workItem from="1632148382886" duration="478000" />
+      <workItem from="1632588975418" duration="5264000" />
+      <workItem from="1633192229929" duration="799000" />
+      <workItem from="1633256415417" duration="9304000" />
+      <workItem from="1633584647739" duration="6481000" />
+      <workItem from="1633623521973" duration="7571000" />
+      <workItem from="1633670421906" duration="10196000" />
+      <workItem from="1633857411928" duration="6630000" />
+      <workItem from="1633893269266" duration="5346000" />
+      <workItem from="1634189792245" duration="1187000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
@@ -268,10 +283,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="maj armures" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1051" y="3" width="706" height="772" key="find.popup" timestamp="1632148274816">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1632598008983">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="1051" y="3" width="706" height="772" key="find.popup/-1280.336.1218.1024/1920.0.900.1440/0.0.1858.1080@0.0.1858.1080" timestamp="1632148274816" />
+    <state width="498" height="446" key="SwitcherDM/-1280.336.1218.1024/1920.0.900.1440/0.0.1858.1080@0.0.1858.1080" timestamp="1632598008983" />
+    <state x="1121" y="2" width="706" height="314" key="find.popup" timestamp="1633896495771">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="1121" y="2" width="706" height="314" key="find.popup/-1280.336.1218.1024/1920.0.900.1440/0.0.1858.1080@0.0.1858.1080" timestamp="1633896495771" />
     <state x="1051" y="3" width="706" height="682" key="find.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1627469529945" />
     <state x="1051" y="3" width="706" height="740" key="find.popup/1920.0.838.1440/0.0.1858.1080/-1280.336.1280.1024@0.0.1858.1080" timestamp="1630268465277" />
     <state x="570" y="266" width="700" height="530" key="recent.locations.popup" timestamp="1630338934482">

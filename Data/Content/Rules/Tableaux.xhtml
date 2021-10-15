@@ -91,7 +91,6 @@
                         <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
-                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
                     </ul>
                 </li>
@@ -108,23 +107,8 @@
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
                     <ul class="hidden">
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
-                            </ul></li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
-                            </ul></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#gabarit_creatures">Gabarit des créatures</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -154,835 +138,6 @@
 
 <div id="main" class="main" style="margin-left: 200px">
     <button onclick="toggleNav()" class="openbtn">MENU</button>
-    <h1 id="table_critiques" onclick="hideContent(this)">Tables des critiques</h1>
-    <div>
-        <h2 id="reussites_critiques" onclick="hideContent(this)">Réussites critiques</h2>
-        <div>
-            <p>Une réussite est considérée comme critique si on obtient un score entre 1 et 5 au jet. Cela peut être modifié par des armes, des compétences, etc...</p>
-            <p id="critiques_tranchant" class="caption" onclick="hideContent(this)">Attaque critique arme tranchante</p>
-            <table class="table_horizontal" width="90%">
-                <tbody>
-                <tr>
-                    <th>D20</th>
-                    <th>Effet sur la cible</th>
-                    <th>Modificateur</th>
-                </tr>
-                <tr>
-                    <th>1 ou 2</th>
-                    <td>Incision profonde</td>
-                    <td>Dégâts +1</td>
-                </tr>
-                <tr>
-                    <th>3 ou 4</th>
-                    <td>Incision vraiment profonde</td>
-                    <td>Dégâts +2</td>
-                </tr>
-                <tr>
-                    <th>5 ou 6</th>
-                    <td>Plaie impressionnant et dommages à l'armure</td>
-                    <td>Dégâts +3; pièce d'armure PR-1</td>
-                </tr>
-                <tr>
-                    <th>7 ou 8</th>
-                    <td>Coup précis et dommage à l'armure</td>
-                    <td>Dégâts +4; pièce d'armure PR-2</td>
-                </tr>
-                <tr>
-                    <th>9 ou 10</th>
-                    <td>Coup précis puissant et dommage à l'armure</td>
-                    <td>Dégâts +5; pièce d'armure PR-3</td>
-                </tr>
-                <tr>
-                    <th>11</th>
-                    <td>Une partie de l'armure est détruite</td>
-                    <td>Pièce d'armure visée PR=0</td>
-                </tr>
-                <tr>
-                    <th>12</th>
-                    <td>Oeil crevé</td>
-                    <td>Dégâts +5 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>13</th>
-                    <td>Main tranchée (au D6 1-3 droite 4-6 gauche)</td>
-                    <td>Dégâts +6 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>14</th>
-                    <td>Pied tranché (au D6 1-3 droit 4-6 gauche)</td>
-                    <td>Dégâts +6 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>15</th>
-                    <td>Bras tranché (au D6 1-3 droit 4-6 gauche)</td>
-                    <td>Dégâts +7 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>16</th>
-                    <td>Jambe tranchée (au D6 1-3 droite 4-6 gauche)</td>
-                    <td>Dégâts +8 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>17</th>
-                    <td>Organes génitaux endommagés</td>
-                    <td>Dégâts +5 et saignement</td>
-                </tr>
-                <tr>
-                    <th>18</th>
-                    <td>Organe vital endommagé</td>
-                    <td>Dégâts +9 et saignement</td>
-                </tr>
-                <tr>
-                    <th>19</th>
-                    <td>Blessure au coeur</td>
-                    <td>Perte de connaissance et saignement grave</td>
-                </tr>
-                <tr>
-                    <th>20</th>
-                    <td>Blessure grave à la tête</td>
-                    <td>Perte de connaissance et saignement grave</td>
-                </tr>
-                <tr>
-                    <td colspan="3">* voir <a href="Tableaux.xhtml#table_blessures_graves">table des blessures graves</a> </td>
-                </tr>
-                <tr>
-                    <td colspan="3">saignement : 1D6 de dégâts par round jusqu'à ce qu'on la soigne<br/> saignement grave : 2D6 de dégâts par round jusqu'à ce qu'on la soigne</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <p id="critiques_contondants" class="caption" onclick="hideContent(this)">Attaque critique arme contondante</p>
-            <table class="table_horizontal" width="90%">
-                <tbody>
-                <tr>
-                    <th>D20</th>
-                    <th>Effet sur la cible</th>
-                    <th>Modificateur</th>
-                </tr>
-                <tr>
-                    <th>1 ou 2</th>
-                    <td>Hématome impressionnant</td>
-                    <td>Dégâts +1</td>
-                </tr>
-                <tr>
-                    <th>3 ou 4</th>
-                    <td>Hématome vraiment impressionnant</td>
-                    <td>Dégâts +2</td>
-                </tr>
-                <tr>
-                    <th>5 ou 6</th>
-                    <td>Fracture de côte</td>
-                    <td>Dégâts +3</td>
-                </tr>
-                <tr>
-                    <th>7 ou 8</th>
-                    <td>Coup précis et dommage à l'armure</td>
-                    <td>Dégâts +4; pièce d'armure PR-2</td>
-                </tr>
-                <tr>
-                    <th>9 ou 10</th>
-                    <td>Coup précis puissant et dommage à l'armure</td>
-                    <td>Dégâts +5; pièce d'armure PR-4</td>
-                </tr>
-                <tr>
-                    <th>11</th>
-                    <td>Une partie de l'armure est détruite</td>
-                    <td>Pièce d'armure visée PR=0</td>
-                </tr>
-                <tr>
-                    <th>12</th>
-                    <td>Luxation du genou</td>
-                    <td>Dégâts +3 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>13</th>
-                    <td>Main cassée (au D6 1-3 droite 4-6 gauche)</td>
-                    <td>Dégâts +3 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>14</th>
-                    <td>Pied écrasé (au D6 1-3 droit 4-6 gauche)</td>
-                    <td>Dégâts +3 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>15</th>
-                    <td>Bras cassé (au D6 1-3 droit 4-6 gauche)</td>
-                    <td>Dégâts +4 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>16</th>
-                    <td>Jambe cassée (au D6 1-3 droite 4-6 gauche)</td>
-                    <td>Dégâts +5 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>17</th>
-                    <td>Organes génitaux écrasés</td>
-                    <td>Dégâts +5 et modifs</td>
-                </tr>
-                <tr>
-                    <th>18</th>
-                    <td>Assommé</td>
-                    <td>Perte de connaissance</td>
-                </tr>
-                <tr>
-                    <th>19</th>
-                    <td>Fracture ouverte du crâne</td>
-                    <td>Perte de connaissance et saignement grave</td>
-                </tr>
-                <tr>
-                    <th>20</th>
-                    <td>Écrasement violent d'un organe vital</td>
-                    <td>Perte de connaissance et saignement interne grave</td>
-                </tr>
-                <tr>
-                    <td colspan="3">* voir <a href="Tableaux.xhtml#table_blessures_graves">table des blessures graves</a> </td>
-                </tr>
-                <tr>
-                    <td colspan="3">saignement grave: 2D6 de dégâts par round jusqu'à ce qu'on la soigne<br/> saignement interne grave : 2D6 de dégâts par round jusqu'à ce qu'on la soigne (opération ou magie)</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <p id="critiques_perforants" class="caption" onclick="hideContent(this)">Attaque critique arme perforante</p>
-            <table class="table_horizontal" width="90%">
-                <tbody>
-                <tr>
-                    <th>D20</th>
-                    <th>Effet sur la cible</th>
-                    <th>Modificateur</th>
-                </tr>
-                <tr>
-                    <th>1 ou 2</th>
-                    <td>Percée profonde</td>
-                    <td>Dégâts +1</td>
-                </tr>
-                <tr>
-                    <th>3 ou 4</th>
-                    <td>Percée vraiment profonde</td>
-                    <td>Dégâts +2</td>
-                </tr>
-                <tr>
-                    <th>5 ou 6</th>
-                    <td>Plaie impressionnant et dommages à l'armure</td>
-                    <td>Dégâts +3; pièce d'armure PR-1</td>
-                </tr>
-                <tr>
-                    <th>7 ou 8</th>
-                    <td>Coup précis et dommage à l'armure</td>
-                    <td>Dégâts +4; pièce d'armure PR-2</td>
-                </tr>
-                <tr>
-                    <th>9 ou 10</th>
-                    <td>Coup précis puissant et dommage à l'armure</td>
-                    <td>Dégâts +5; pièce d'armure PR-3</td>
-                </tr>
-                <tr>
-                    <th>11</th>
-                    <td>Une partie de l'armure est détruite</td>
-                    <td>Pièce d'armure visée PR=0</td>
-                </tr>
-                <tr>
-                    <th>12</th>
-                    <td>Oeil crevé</td>
-                    <td>Dégâts +5 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>13</th>
-                    <td>Main incapacitée (au D6 1-3 droite 4-6 gauche)</td>
-                    <td>Dégâts +6 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>14</th>
-                    <td>Pied cloué (au D6 1-3 droit 4-6 gauche)</td>
-                    <td>Dégâts +6 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>15</th>
-                    <td>Bras incapacité (au D6 1-3 droit 4-6 gauche)</td>
-                    <td>Dégâts +7 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>16</th>
-                    <td>Jambe incapacitée (au D6 1-3 droite 4-6 gauche)</td>
-                    <td>Dégâts +8 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>17</th>
-                    <td>Organes génitaux percés</td>
-                    <td>Dégâts +5 et saignement</td>
-                </tr>
-                <tr>
-                    <th>18</th>
-                    <td>Organe vital endommagé</td>
-                    <td>Dégâts +9 et saignement</td>
-                </tr>
-                <tr>
-                    <th>19</th>
-                    <td>Blessure au coeur</td>
-                    <td>Perte de connaissance et saignement grave</td>
-                </tr>
-                <tr>
-                    <th>20</th>
-                    <td>Blessure grave à la tête</td>
-                    <td>Perte de connaissance et saignement grave</td>
-                </tr>
-                <tr>
-                    <td colspan="3">* voir <a href="Tableaux.xhtml#table_blessures_graves">table des blessures graves</a> </td>
-                </tr>
-                <tr>
-                    <td colspan="3">saignement : 1D6 de dégâts par round jusqu'à ce qu'on la soigne<br/> saignement grave : 2D6 de dégâts par round jusqu'à ce qu'on la soigne</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <p id="critiques_distance" class="caption" onclick="hideContent(this)">Attaque critique arme à distance</p>
-            <table class="table_horizontal" width="90%">
-                <tbody>
-                <tr>
-                    <th>D20</th>
-                    <th>Effet sur la cible</th>
-                    <th>Modificateur</th>
-                </tr>
-                <tr>
-                    <th>1 ou 2</th>
-                    <td>Projectile bien placé</td>
-                    <td>Dégâts +1</td>
-                </tr>
-                <tr>
-                    <th>3 ou 4</th>
-                    <td>Projectile magistralement bien placé</td>
-                    <td>Dégâts +2</td>
-                </tr>
-                <tr>
-                    <th>5 ou 6</th>
-                    <td>Projectile dans une articulation du bras</td>
-                    <td>Dégâts +3; jet d'attaque et parade - 2</td>
-                </tr>
-                <tr>
-                    <th>7 ou 8</th>
-                    <td>Projectile dans une articulation de la jambe</td>
-                    <td>Dégâts +4; AGI - 4</td>
-                </tr>
-                <tr>
-                    <th>9 ou 11</th>
-                    <td>Tir au poumon</td>
-                    <td>Dégâts +5; toutes caractéristiques - 2</td>
-                </tr>
-                <tr>
-                    <th>12 à 16</th>
-                    <td>Projectile de maître</td>
-                    <td>Dégâts + 8</td>
-                </tr>
-                <tr>
-                    <th>17</th>
-                    <td>Organes génitaux touchés</td>
-                    <td>Dégâts +5 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>18</th>
-                    <td>Organe vital endommagé</td>
-                    <td>Dégâts +8 et saignement</td>
-                </tr>
-                <tr>
-                    <th>19</th>
-                    <td>Blessure au coeur</td>
-                    <td>Perte de connaissance et saignement grave</td>
-                </tr>
-                <tr>
-                    <th>20</th>
-                    <td>Blessure grave à la tête</td>
-                    <td>Perte de connaissance et saignement grave</td>
-                </tr>
-                <tr>
-                    <td colspan="3">* voir <a href="Tableaux.xhtml#table_blessures_graves">table des blessures graves</a> </td>
-                </tr>
-                <tr>
-                    <td colspan="3">saignement : 1D6 de dégâts par round jusqu'à ce qu'on la soigne<br/> saignement grave : 2D6 de dégâts par round jusqu'à ce qu'on la soigne</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <p id="critiques_mains_nues" class="caption" onclick="hideContent(this)">Attaque critique mains nues</p>
-            <table class="table_horizontal" width="90%">
-                <tbody>
-                <tr>
-                    <th>D20</th>
-                    <th>Effet sur la cible</th>
-                    <th>Modificateur</th>
-                </tr>
-                <tr>
-                    <th>1 ou 2</th>
-                    <td>Hématome impressionnant</td>
-                    <td>Dégâts +1</td>
-                </tr>
-                <tr>
-                    <th>3 ou 4</th>
-                    <td>Hématome vraiment impressionnant</td>
-                    <td>Dégâts +2</td>
-                </tr>
-                <tr>
-                    <th>5 ou 6</th>
-                    <td>Fracture de côte</td>
-                    <td>Dégâts +3</td>
-                </tr>
-                <tr>
-                    <th>7 ou 8</th>
-                    <td>Fracture du nez</td>
-                    <td>Dégâts +4; saignement</td>
-                </tr>
-                <tr>
-                    <th>9 ou 10</th>
-                    <td>Coup précis dans la tempe</td>
-                    <td>Dégâts +2; cible étourdie 3 rounds</td>
-                </tr>
-                <tr>
-                    <th>11</th>
-                    <td>Coup précis au Sternum</td>
-                    <td>cible étourdie 4 rounds</td>
-                </tr>
-                <tr>
-                    <th>12</th>
-                    <td>Luxation du genou</td>
-                    <td>Dégâts +3 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>13</th>
-                    <td>Main cassée (au D6 1-3 droite 4-6 gauche)</td>
-                    <td>Dégâts +3 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>14</th>
-                    <td>Mâchoire brisée</td>
-                    <td>Dégâts +3; incapacité à parler</td>
-                </tr>
-                <tr>
-                    <th>15</th>
-                    <td>Bras cassé (au D6 1-3 droit 4-6 gauche)</td>
-                    <td>Dégâts +4 et modifs*</td>
-                </tr>
-                <tr>
-                    <th>16 ou 17</th>
-                    <td>Organes génitaux écrasés</td>
-                    <td>Dégâts +5 et modifs</td>
-                </tr>
-                <tr>
-                    <th>18 ou 19</th>
-                    <td>Assommé</td>
-                    <td>Perte de connaissance</td>
-                </tr>
-                <tr>
-                    <th>20</th>
-                    <td>Écrasement du nez dans le crâne</td>
-                    <td>Perte de connaissance et saignement grave</td>
-                </tr>
-                <tr>
-                    <td colspan="3">* voir <a href="Tableaux.xhtml#table_blessures_graves">table des blessures graves</a> </td>
-                </tr>
-                <tr>
-                    <td colspan="3">saignement : 1D6 de dégâts par round jusqu'à ce qu'on la soigne<br/>saignement grave: 2D6 de dégâts par round jusqu'à ce qu'on la soigne</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <p id="critiques_parade" class="caption" onclick="hideContent(this)">Parade critique</p>
-            <table class="table_horizontal" width="90%">
-                <tbody>
-                <tr>
-                    <th>D20</th>
-                    <th>Effet sur la cible</th>
-                    <th>Modificateur</th>
-                </tr>
-                <tr>
-                    <th>1 ou 2</th>
-                    <td>Parade normale</td>
-                    <td>/</td>
-                </tr>
-                <tr>
-                    <th>3 ou 5</th>
-                    <td>L'ennemi est repoussé</td>
-                    <td>Ennemi étourdi 1 round</td>
-                </tr>
-                <tr>
-                    <th>6 ou 7</th>
-                    <td>L'ennemi trébuche</td>
-                    <td>Attaque d'opportunité</td>
-                </tr>
-                <tr>
-                    <th>8 ou 9</th>
-                    <td>L'ennemi tombe</td>
-                    <td>Ennemi au sol, attaque d'opportunité</td>
-                </tr>
-                <tr>
-                    <th>10 à 12</th>
-                    <td>L'ennemi fait tomber son arme à 1d6 mètres</td>
-                    <td>L'ennemi est désarmé</td>
-                </tr>
-                <tr>
-                    <th>13 à 15</th>
-                    <td>L'ennemi casse son arme</td>
-                    <td>L'ennemi est désarmé</td>
-                </tr>
-                <tr>
-                    <th>16 à 18</th>
-                    <td>Contre-attaque instantanée</td>
-                    <td>L'ennemi subit une attaque avec votre arme</td>
-                </tr>
-                <tr>
-                    <th>19</th>
-                    <td>Contre-attaque critique instantanée</td>
-                    <td>L'ennemi subit une attaque critique avec votre arme</td>
-                </tr>
-                <tr>
-                    <th>20</th>
-                    <td>L'ennemi s'inflige un coup critique avec son arme</td>
-                    <td>L'ennemi subit une attaque critique avec son arme</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 id="echecs_critiques" onclick="hideContent(this)">Échecs critiques</h2>
-        <div>
-            <p>Un échec est considéré comme critique si on obtient un score entre 96 et 100 au jet. Cela peut être modifié par des armes, des compétences, etc...</p>
-            <p id="echec_critique_attaque_ou_parade" class="caption" onclick="hideContent(this)">Échec critique de parade ou d'attaque</p>
-            <table class="table_horizontal" width="90%">
-                <tbody>
-                <tr>
-                    <th>D20</th>
-                    <th>Effet sur la cible</th>
-                    <th>Modificateur</th>
-                </tr>
-                <tr>
-                    <th>1 ou 2</th>
-                    <td>Rattrape son erreur in extremis</td>
-                    <td>Échec normal</td>
-                </tr>
-                <tr>
-                    <th>3 ou 5</th>
-                    <td>Trébuche et chute maladroitement</td>
-                    <td>Étourdi 1 round</td>
-                </tr>
-                <tr>
-                    <th>6 ou 7</th>
-                    <td>Frappe un allié proche sur la gauche</td>
-                    <td>Jet de dégâts sur l'allié</td>
-                </tr>
-                <tr>
-                    <th>8 ou 9</th>
-                    <td>Frappe un allié proche sur la droite</td>
-                    <td>Jet de dégâts sur l'allié</td>
-                </tr>
-                <tr>
-                    <th>10 à 12</th>
-                    <td>Fait tomber son arme</td>
-                    <td>Désarmé</td>
-                </tr>
-                <tr>
-                    <th>13 à 15</th>
-                    <td>Casse son arme</td>
-                    <td>Désarmé</td>
-                </tr>
-                <tr>
-                    <th>16 à 18</th>
-                    <td>Se blesse tout seul</td>
-                    <td>Jet de dégâts avec sa propre arme</td>
-                </tr>
-                <tr>
-                    <th>19</th>
-                    <td>Se blesse tout seul de façon critique</td>
-                    <td>Jet de dégâts critique avec sa propre arme</td>
-                </tr>
-                <tr>
-                    <th>20</th>
-                    <td>Perd un oeil ou un doit (au D6 1-2 oeil, 3-6 doigt)</td>
-                    <td>Blessure grave*</td>
-                </tr>
-                <tr>
-                    <td colspan="3">* voir <a href="Tableaux.xhtml#table_blessures_graves">table des blessures graves</a> </td>
-                </tr>
-                </tbody>
-            </table>
-            <p id="echec_critique_sort" class="caption" onclick="hideContent(this)">Échec critique lancer de sort</p>
-            <table class="table_horizontal" width="90%">
-                <tbody>
-                <tr>
-                    <th>D20</th>
-                    <th>Effet sur la cible</th>
-                    <th>Modificateur</th>
-                </tr>
-                <tr>
-                    <th>1 ou 2</th>
-                    <td>Rattrape son erreur in extremis</td>
-                    <td>Échec normal</td>
-                </tr>
-                <tr>
-                    <th>2 ou 4</th>
-                    <td>Le sort s'évapore, une partie de la psyché du lanceur avec</td>
-                    <td>+50% de psy perdue</td>
-                </tr>
-                <tr>
-                    <th>5 ou 6</th>
-                    <td>Le sort s'évapore, une grande partie de la psyché du lanceur avec</td>
-                    <td>+100% de psy perdue</td>
-                </tr>
-                <tr>
-                    <th>7 ou 8</th>
-                    <td>Le sort frappe la personne la plus proche sur la droite</td>
-                    <td>/</td>
-                </tr>
-                <tr>
-                    <th>9 ou 10</th>
-                    <td>Le sort frappe la personne la plus proche sur la gauche</td>
-                    <td>/</td>
-                </tr>
-                <tr>
-                    <th>11 ou 12</th>
-                    <td>Le sort frappe la personne la plus proche derrière le lanceur</td>
-                    <td>/</td>
-                </tr>
-                <tr>
-                    <th>13 ou 14</th>
-                    <td>Le sort frappe la personne la plus proche devant le lanceur</td>
-                    <td>/</td>
-                </tr>
-                <tr>
-                    <th>14 à 18</th>
-                    <td>Le sort revient sur le lanceur</td>
-                    <td>/</td>
-                </tr>
-                <tr>
-                    <th>19 à 20</th>
-                    <td>La puissance de l'Inkarnaï se manifeste tout autour du lanceur, le sort frappe toutes les cibles dans un rayon de 30m autour de lui</td>
-                    <td>/</td>
-                </tr>
-                </tbody>
-            </table>
-            <p id="echec_critique_distance" class="caption" onclick="hideContent(this)">Échec critique attaque à distance</p>
-            <table class="table_horizontal" width="90%">
-                <tbody>
-                <tr>
-                    <th>D20</th>
-                    <th>Effet sur la cible</th>
-                    <th>Modificateur</th>
-                </tr>
-                <tr>
-                    <th>1 ou 2</th>
-                    <td>Rattrape son erreur in extremis</td>
-                    <td>Échec normal</td>
-                </tr>
-                <tr>
-                    <th>3 ou 5</th>
-                    <td>Lâche son arme</td>
-                    <td>Désarmé</td>
-                </tr>
-                <tr>
-                    <th>6 ou 7</th>
-                    <td>Frappe un allié proche sur la gauche</td>
-                    <td>Jet de dégâts sur l'allié</td>
-                </tr>
-                <tr>
-                    <th>8 ou 9</th>
-                    <td>Frappe un allié proche sur la droite</td>
-                    <td>Jet de dégâts sur l'allié</td>
-                </tr>
-                <tr>
-                    <th>10 à 12</th>
-                    <td>Frappe l'allié le plus éloigné</td>
-                    <td>Jet de dégâts sur l'allié</td>
-                </tr>
-                <tr>
-                    <th>13 à 15</th>
-                    <td>Casse son arme</td>
-                    <td>Désarmé</td>
-                </tr>
-                <tr>
-                    <th>16 à 18</th>
-                    <td>Se tire dans le pied</td>
-                    <td>Jet de dégâts +2 avec sa propre arme</td>
-                </tr>
-                <tr>
-                    <th>19</th>
-                    <td>Se blesse tout seul de façon critique</td>
-                    <td>Jet de dégâts critique avec sa propre arme</td>
-                </tr>
-                <tr>
-                    <th>20</th>
-                    <td>Crève l'oeil de l'allié le plus proche</td>
-                    <td>Blessure grave*</td>
-                </tr>
-                <tr>
-                    <td colspan="3">* voir <a href="Tableaux.xhtml#table_blessures_graves">table des blessures graves</a> </td>
-                </tr>
-                </tbody>
-            </table>
-            <p id="echec_critique_mains_nues" class="caption" onclick="hideContent(this)">Échec critique mains nues</p>
-            <table class="table_horizontal" width="90%">
-                <tbody>
-                <tr>
-                    <th>D20</th>
-                    <th>Effet sur la cible</th>
-                    <th>Modificateur</th>
-                </tr>
-                <tr>
-                    <th>1 ou 2</th>
-                    <td>Rattrape son erreur in extremis</td>
-                    <td>Échec normal</td>
-                </tr>
-                <tr>
-                    <th>3 ou 10</th>
-                    <td>Tombe et s'écrase le nez par terre</td>
-                    <td>Étourdi 2 round, au sol, 2 points de dégâts subis</td>
-                </tr>
-                <tr>
-                    <th>11 ou 12</th>
-                    <td>Frappe un allié proche sur la gauche</td>
-                    <td>Jet de dégâts sur l'allié</td>
-                </tr>
-                <tr>
-                    <th>13 ou 14</th>
-                    <td>Frappe un allié proche sur la droite</td>
-                    <td>Jet de dégâts sur l'allié</td>
-                </tr>
-                <tr>
-                    <th>15 à 17</th>
-                    <td>Se brise la main</td>
-                    <td>4 dégâts + blessure grave*</td>
-                </tr>
-                <tr>
-                    <th>18 ou 19</th>
-                    <td>Se casse le bras</td>
-                    <td>6 dégâts + blessure grave*</td>
-                </tr>
-                <tr>
-                    <th>20</th>
-                    <td>Tombe en arrière et s'assomme</td>
-                    <td>8 dégâts + perte de connaissance</td>
-                </tr>
-                <tr>
-                    <td colspan="3">* voir <a href="Tableaux.xhtml#table_blessures_graves">table des blessures graves</a> </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <h1 id="blessures_graves" onclick="hideContent(this)">Blessures graves</h1>
-    <div>
-        <p>Lors d'un echec critique suivi d'un jet de rupture raté, il est possible de perdre temporairement ou de façon permanente l'usage d'une partie du corps, les blessures graves sont rassemblées dans ce tableau.</p>
-        <p id="table_blessures_graves" class="caption" onclick="hideContent(this)">Conséquences des blessures graves</p>
-        <table class="table_horizontal" width="90%">
-            <tbody>
-            <tr>
-                <th>Type de blessure</th>
-                <th>Modifications des caractéristiques</th>
-                <th>Durée</th>
-            </tr>
-            <tr>
-                <td>1 oeil crevé</td>
-                <td>ELO -15* | PER -10 | attaque -5 | parade -10 | PRÉ -15</td>
-                <td>Permanent</td>
-            </tr>
-            <tr>
-                <td>Tous les yeux crevés</td>
-                <td>ELO -20* | PER -35 | attaque -25 | parade -40 | PRÉ -60</td>
-                <td>Permanent</td>
-            </tr>
-            <tr>
-                <td>Genou luxé</td>
-                <td>AGI -10 | Vitesse/2  | attaque -5 | parade -5</td>
-                <td>1 semaine</td>
-            </tr>
-            <tr>
-                <td>Coude ou épaule (coté main directrice) luxé</td>
-                <td>DEX -10 | FOR -15 | attaque -15 | parade -15</td>
-                <td>1 semaine</td>
-            </tr>
-            <tr>
-                <td>Coude ou épaule luxé</td>
-                <td>DEX -8 |FOR -10 | attaque -10 | parade - 10</td>
-                <td>1 semaine</td>
-            </tr>
-            <tr>
-                <td>Pied écrasé</td>
-                <td>AGI -15 | Vitesse/2 | attaque -5 | parade -5</td>
-                <td>2 semaines</td>
-            </tr>
-            <tr>
-                <td>1 jambe cassée</td>
-                <td>AGI -25 | Vitesse/2 | FOR -10 | attaque -10 | parade -10</td>
-                <td>3 semaines</td>
-            </tr>
-            <tr>
-                <td>2 jambes cassées</td>
-                <td>AGI -50 | Vitesse/4 | FOR -25 | attaque -20 | parade -20</td>
-                <td>3 semaines</td>
-            </tr>
-            <tr>
-                <td>1 jambe tranchée</td>
-                <td>AGI -25 | Vitesse/2 | FOR -10 | attaque -10 | parade -10</td>
-                <td>Permanent</td>
-            </tr>
-            <tr>
-                <td>2 jambes tranchées</td>
-                <td>AGI -50 | Vitesse/4 | FOR -25 | attaque -20 | parade -20</td>
-                <td>Permanent</td>
-            </tr>
-            <tr>
-                <td>Bras directeur cassé</td>
-                <td>DEX -20 | FOR -20 | attaque -25 | parade -30</td>
-                <td>3 semaines</td>
-            </tr>
-            <tr>
-                <td>Bras directeur tranché</td>
-                <td>DEX -20 | FOR -20 | attaque -25 | parade -30</td>
-                <td>Permanent</td>
-            </tr>
-            <tr>
-                <td>Main directrice cassée</td>
-                <td>DEX -20 | FOR -15 | attaque -20 | parade -25</td>
-                <td>3 semaines</td>
-            </tr>
-            <tr>
-                <td>Main directrice tranchée</td>
-                <td>DEX -20 | FOR -15 | attaque -20 | parade -25</td>
-                <td>Permanent</td>
-            </tr>
-            <tr>
-                <td>Bras cassé</td>
-                <td>DEX -15 | FOR -15 | attaque -15 | parade -20</td>
-                <td>3 semaines</td>
-            </tr>
-            <tr>
-                <td>Bras tranché</td>
-                <td>DEX -15 | FOR -15 | attaque -15 | parade -20</td>
-                <td>Permanent</td>
-            </tr>
-            <tr>
-                <td>Main cassée</td>
-                <td>DEX -15 | FOR -10 | attaque -15 | parade -20</td>
-                <td>3 semaines</td>
-            </tr>
-            <tr>
-                <td>Main tranchée</td>
-                <td>DEX -15 | FOR -10 | attaque -15 | parade -20</td>
-                <td>Permanent</td>
-            </tr>
-            <tr>
-                <td>Organes génitaux endommagés</td>
-                <td>AGI -15 | Vitesse/2</td>
-                <td>Permanent (2 semaine si soigné)</td>
-            </tr>
-            <tr>
-                <td>Perte d'un doigt</td>
-                <td>DEX -6 (-3 par doigt supplémentaire)</td>
-                <td>1 mois (habitude)</td>
-            </tr>
-            <tr>
-                <td colspan="3">*Uniquement si visible</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
 
     <h1 id="stress" onclick="hideContent(this)">Stress</h1>
     <div>
@@ -1067,24 +222,24 @@
         </div>
     </div>
     </div>
-    <h1 id="taille_creatures" onclick="hideContent(this)">Taille des créatures</h1>
+    <h1 id="gabarit_creatures" onclick="hideContent(this)">Gabarit des créatures</h1>
     <div>
-        <p>Le monde d'Ogma contient de nombreuses créatures de tailles et formes très diverses. Il y a 9 catégorie de tailles possibles :</p>
+        <p>Le monde d'Ogma contient de nombreuses créatures de tailles et formes très diverses. Il y a 9 gabarits possibles :</p>
         <ul>
             <li><span class="big_underline">Infime :</span>Les créatures infimes sont parfois si petites qu'il est difficile de les apercevoir, parmi elles les araignées, les vers et les papillons.</li>
             <li><span class="big_underline">Minuscule :</span>Cette catégorie inclus les animaux les plus petits comme les rats, les grenouilles ou les moineaux.</li>
             <li><span class="big_underline">Très petite :</span>Les créatures très petites inclus les chats, les petites races de chiens, les renards.</li>
             <li><span class="big_underline">Petite : </span>Cette catégorie inclus la plupart des quadrupèdes et les bipèdes les plus petits comme les Rodraki, les Steinns et les Sakhas.</li>
-            <li><span class="big_underline">Moyenne :</span>Les créatures de tailles moyennes sont d'une carrure équivalente à celles des humains.</li>
+            <li><span class="big_underline">Moyenne :</span>Les créatures de gabarit moyen sont d'une carrure équivalente à celles des humains.</li>
             <li><span class="big_underline">Grande :</span>Cette catégorie inclus les créatures plus imposantes que les humains, parmi elles les Kanta, les Sarpas Crocodiles et les chevaux. </li>
             <li><span class="big_underline">Très Grande :</span>Les créatures très grande sont particulièrement imposantes, parmi elles les éléphants, les griffons et les géants les plus petits.</li>
             <li><span class="big_underline">Gigantesque :</span>Cette catégorie rassemble la plupart des géants, les baleines et bien d'autres.</li>
             <li><span class="big_underline">Colossale :</span>Les créatures colossales sont de véritables calamités annonciatrices de désastres sans précédents : léviathans et dragons sont les plus dangereux.</li>
         </ul>
-        <table id="table_taille_creatures" class="table_horizontal">
+        <table id="table_gabarit_creatures" class="table_horizontal">
             <tbody>
             <tr>
-                <th>Taille de la créature</th>
+                <th>Gabarit de la créature</th>
                 <th>Surface occupée</th>
             </tr>
             <tr>
@@ -1096,23 +251,23 @@
                 <td>25 cm</td>
             </tr>
             <tr>
-                <td>Très petite (TP)</td>
+                <td>Très petit (TP)</td>
                 <td>50 cm</td>
             </tr>
             <tr>
-                <td>Petite (P)</td>
+                <td>Petit (P)</td>
                 <td>75 cm</td>
             </tr>
             <tr>
-                <td>Moyenne (M)</td>
+                <td>Moyen (M)</td>
                 <td>1 m</td>
             </tr>
             <tr>
-                <td>Grande (G)</td>
+                <td>Grand (G)</td>
                 <td>1,5 m</td>
             </tr>
             <tr>
-                <td>Très grande (TG)</td>
+                <td>Très grand (TG)</td>
                 <td>3 m</td>
             </tr>
             <tr>
@@ -1120,65 +275,122 @@
                 <td>6 m</td>
             </tr>
             <tr>
-                <td>Colossale (C)</td>
+                <td>Colossal (C)</td>
                 <td>9 m</td>
             </tr>
             </tbody>
         </table>
 
-        <p>La taille d'une entité peut avoir un impact dans beaucoup de situation :</p>
-        <ul>
-            <li>Attaquer une entité d'une taille inférieure à la vôtre en mêlée impose un malus de 10 par catégorie d'écart. Si l'entité est plus grande que vous, cela devient un bonus de 10 par catégorie d'écart.</li>
-            <li>Tenter de toucher une petite cible avec une attaque à distance se fait avec un malus (P -> -10; TP ->-20; Min -> -30 I -> -40). Une cible massive est plus facile à toucher (G -> +10; TG -> +20; Gig -> +30; C -> +40).</li>
-            <li>Une créature peut se faufiler dans un espace d'une taille inférieure à la sienne voire deux si la créature est exceptionnellement souple.</li>
-            <li>Les armes sont fabriquées pour une catégorie de taille, manier une arme faite pour une créature d'une catégorie différente de la sienne se fait avec désavantage et il est impossible d'utiliser des armes faites pour des créatures ayant 2 catégories ou plus d'écart.</li>
-            <li>La formule pour calculer la vitalité des entités diffèrent selon leur taille. Voir tableau ci dessous.</li>
+        <h2>Impact du gabarit</h2>
+        <ul style="list-style-type: none">
+            <li><h3>Personnage</h3>
+                <p>La formule pour calculer la vitalité et la capacité de port des entités diffèrent selon leur gabarit. Voir les tableau ci dessous :</p>
+                <div class="side_by_side">
+                <table id="table_vitalite_taille" class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>Gabarit de la créature</th>
+                        <th>Formule de la Vitalité</th>
+                    </tr>
+                    <tr>
+                        <td>Infime (I)</td>
+                        <td>BdVig</td>
+                    </tr>
+                    <tr>
+                        <td>Minuscule (Min)</td>
+                        <td>BdVig + BdVol</td>
+                    </tr>
+                    <tr>
+                        <td>Très petite (TP)</td>
+                        <td>BdFor + BdVig + BdVol</td>
+                    </tr>
+                    <tr>
+                        <td>Petit (P)</td>
+                        <td>BdFor + BdVig*1,5 + BdVol</td>
+                    </tr>
+                    <tr>
+                        <td>Moyen (M)</td>
+                        <td>BdFor + BdVig*2 + BdVol</td>
+                    </tr>
+                    <tr>
+                        <td>Grand (G)</td>
+                        <td>(BdFor + BdVig*2 + BdVol)*1,5</td>
+                    </tr>
+                    <tr>
+                        <td>Très grand (TG)</td>
+                        <td>(BdFor + BdVig*2 + BdVol)*2</td>
+                    </tr>
+                    <tr>
+                        <td>Gigantesque (Gig)</td>
+                        <td>(BdFor + BdVig*2 + BdVol)*2,5</td>
+                    </tr>
+                    <tr>
+                        <td>Colossale (C)</td>
+                        <td>(BdFor + BdVig*2 + BdVol)*3</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table id="table_capacite_port_gabarit" class="table_horizontal">
+                    <tbody>
+                    <tr>
+                        <th>Gabarit de la créature</th>
+                        <th>Formule de la Capacité de port</th>
+                    </tr>
+                    <tr>
+                        <td>Infime (I)</td>
+                        <td>BdFor + BdVig</td>
+                    </tr>
+                    <tr>
+                        <td>Minuscule (Min)</td>
+                        <td>BdFor*2 + BdVig</td>
+                    </tr>
+                    <tr>
+                        <td>Très petite (TP)</td>
+                        <td>BdFor*2 + BdVig*2</td>
+                    </tr>
+                    <tr>
+                        <td>Petit (P)</td>
+                        <td>BdFor*3 + BdVig*2</td>
+                    </tr>
+                    <tr>
+                        <td>Moyen (M)</td>
+                        <td>BdFor*4 + BdVig*2</td>
+                    </tr>
+                    <tr>
+                        <td>Grand (G)</td>
+                        <td>BdFor*5 + BdVig*2</td>
+                    </tr>
+                    <tr>
+                        <td>Très grand (TG)</td>
+                        <td>BdFor*6 + BdVig*2</td>
+                    </tr>
+                    <tr>
+                        <td>Gigantesque (Gig)</td>
+                        <td>BdFor*7 + BdVig*2</td>
+                    </tr>
+                    <tr>
+                        <td>Colossale (C)</td>
+                        <td>BdFor*8 + BdVig*2</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </li>
+            <li><h3>Combat</h3>
+                <p>Tirer sur une petite cible avec une attaque à distance se fait avec un malus (P -> -10; TP ->-20; Min -> -30 I -> -40). Une cible massive est plus facile à toucher (G -> +10; TG -> +20; Gig -> +30; C -> +40).</p>
+                <p>Une créature plus petite que son adversaire obtient un bonus de +5 à ses tests de combat en mêlée (style de combat et esquive) par catégorie d'écart.</p>
+            </li>
+            <li><h3>Équipement</h3>
+                <p>L'équipement est fait pour un certain gabarit, celle par défaut étant la Moyenne. Un objet fait pour une entité plus petite voit son prix divisé par deux par gabarit inférieur à Moyen et inversement le prix double pour catégorie au dessus.</p>
+                <p>Manier une arme faite pour une créature d'un gabarit différent du sien se fait avec un désavantage et il est impossible d'utiliser des armes faites pour des créatures ayant 2 gabarit ou plus d'écart.</p>
+                <p>Les armes faites pour les Grandes créatures ou plus infligent 1 point de dégâts supplémentaire par catégorie au-dessus de Moyenne.</p>
+            </li>
+            <li><h3>Exploration et Survie</h3>
+                <p>Une créature peut se faufiler dans un espace d'un gabarit inférieur au sien voire deux si la créature est exceptionnellement souple.</p>
+            </li>
         </ul>
 
-        <table id="table_vitalite_taille" class="table_horizontal">
-            <tbody>
-            <tr>
-                <th>Taille de la créature</th>
-                <th>Formule de la Vitalité</th>
-            </tr>
-            <tr>
-                <td>Infime (I)</td>
-                <td>BdVig</td>
-            </tr>
-            <tr>
-                <td>Minuscule (Min)</td>
-                <td>BdVig + BdVol</td>
-            </tr>
-            <tr>
-                <td>Très petite (TP)</td>
-                <td>BdFor + BdVig + BdVol</td>
-            </tr>
-            <tr>
-                <td>Petite (P)</td>
-                <td>BdFor + BdVig*1,5 + BdVol</td>
-            </tr>
-            <tr>
-                <td>Moyenne (M)</td>
-                <td>BdFor + BdVig*2 + BdVol</td>
-            </tr>
-            <tr>
-                <td>Grande (G)</td>
-                <td>(BdFor + BdVig*2 + BdVol)*1,5</td>
-            </tr>
-            <tr>
-                <td>Très grande (TG)</td>
-                <td>(BdFor + BdVig*2 + BdVol)*2</td>
-            </tr>
-            <tr>
-                <td>Gigantesque (Gig)</td>
-                <td>(BdFor + BdVig*2 + BdVol)*2,5</td>
-            </tr>
-            <tr>
-                <td>Colossale (C)</td>
-                <td>(BdFor + BdVig*2 + BdVol)*3</td>
-            </tr>
-            </tbody>
-        </table>
+
 
     </div>
 

@@ -91,7 +91,6 @@
                         <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
-                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
                     </ul>
                 </li>
@@ -108,23 +107,8 @@
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
                     <ul class="hidden">
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
-                            </ul></li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
-                            </ul></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#gabarit_creatures">Gabarit des créatures</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -170,7 +154,7 @@
         <h3>Règles concernant l'utilisation de la magie</h3>
         <p>L'usage de la magie requiert de la force mentale, représentée par des points de <a href="Personnage.xhtml#psy">Psy</a>. Quiconque a recours à la magie sans suffisamment de Psyché ou s'essaye à des créations trop imposantes pour son esprit s'expose à des risques pour son enveloppe physique.</p>
         <p>La caractéristique utilisée pour lancer des sorts est la Volonté, selon l'effet ou le domaine du sort, des bonus liés aux compétences et/ou aux spécialisations peuvent s'appliquer.</p>
-        <p>Éviter un sort ou résister à ses effets peut nécessiter un test. Si on subit les effets d'un sort sur une certaine période, il est possible d'effectuer à nouveau le test requis pour s'en libérer en dépensant son action ou sa réaction lors de son tour, chaque réitération du test est plus Simple(+10) que la précédente. Ce test peut être tenté chaque round lors d'un combat ou lorsque la durée d'effet est inférieure ou égale à une minute, chaque minute lorsque que la durée est inférieure ou égale à une heure, chaque heure lorsque la durée est inférieur ou égale à 24 heures, chaque jour sinon.</p>
+        <p>Éviter un sort ou résister à ses effets peut nécessiter un test. Si on subit les effets d'un sort sur une certaine période, il est possible d'effectuer à nouveau le test requis pour s'en libérer en dépensant son action ou sa réaction lors de son tour, chaque réitération du test est plus se fait avec un avantage de plus que la précédente. Ce test peut être tenté chaque round lors d'un combat ou lorsque la durée d'effet est inférieure ou égale à une minute, chaque minute lorsque que la durée est inférieure ou égale à une heure, chaque heure lorsque la durée est inférieur ou égale à 24 heures, chaque jour sinon.</p>
         <h3 onclick="hideContent(this)">Règles de créations des sorts</h3>
         <div>
             <p>Un sort est défini par une forme et un effet choisis par le lanceur, c'est la forme, l'effet et la puissance qui déterminent le coût en psy du sort.</p>
@@ -263,7 +247,7 @@
                         <td>Rune</td>
                         <td>Zone</td>
                         <td>5</td>
-                        <td>Le sort se place sur une surface située à moins de 10 mètres du lanceur. Après un round la rune devient Difficile(-20) à voir. Le lanceur choisi les conditions d'activation de la rune (proximité, temps, contrôle manuel). La rune persiste indéfiniment jusqu'à son déclenchement ou sa désactivation. Lorsque la rune explose, elle affecte toutes les cibles situées dans une sphère de 3 mètres de rayon. Maintenir une rune sur une longue durée coûte SC psy à son lanceur par jour.</td>
+                        <td>Le sort se place sur une surface située à moins de 10 mètres du lanceur. Après un round, détecter la rune se fait avec 2 désavantages. Le lanceur choisi les conditions d'activation de la rune (proximité, temps, contrôle manuel). La rune persiste indéfiniment jusqu'à son déclenchement ou sa désactivation. Lorsque la rune explose, elle affecte toutes les cibles situées dans une sphère de 3 mètres de rayon. Maintenir une rune sur une longue durée coûte SC psy à son lanceur par jour.</td>
                     </tr>
                     </tbody>
                 </table>
@@ -277,7 +261,7 @@
                 <p>L'effet d'un sort détermine le contenu d'un sort, quel va être son impact dans le monde, un effet de feu brûlera ses cibles tandis qu'un effet de soin guérira les blessures.</p>
                 <p>Un sort possède une magnitude équivalente au nombre de cercles franchis pour sa création, on parle alors d'un sort de cercle X (SCX) où X est le dernier cercle franchi. Plus on franchi de cercle, plus le sort est puissant et couteux en psy.</p>
 
-                <p><span id="SCMax" class="big_underline">Détermination du Cercle Maximal (SCMax) :</span>Le nombre de cercle franchissables sans risques pour un mage dépend de sa volonté et de son expérience dans une école de magie. Le SC maximal atteignable équivaut au BdVol du lanceur, si l'effet du sort fait partie d'une école dans laquelle le lanceur possède des paliers d'expériences, son SC maximal augmente de 1 par palier (Novice +1, Apprenti +2,...,Maître +5).</p>
+                <p><span id="SCMax" class="big_underline">Détermination du Cercle Maximal (SCMax) :</span>Le nombre de cercle franchissables sans risques pour un mage dépend de sa volonté et de son expérience dans une école de magie. Le SC maximal atteignable équivaut au BdInt du lanceur, si l'effet du sort fait partie d'une école dans laquelle le lanceur possède des paliers d'expériences, son SC maximal augmente de 1 par palier (Novice +1, Apprenti +2,...,Maître +5).</p>
 
                 <p>La liste ci-dessous n'est pas exhaustive des pouvoirs conférés par les <a href="../World/Histoire_Ogma.xhtml#inkarnai">Inkarnaïs</a>.</p>
                 <p>Les tableau ci-dessous fonctionnent de la façon suivantes :</p>
@@ -432,6 +416,22 @@
                             <td>Agapi</td>
                         </tr>
                         <tr>
+                            <td>Récupération</td>
+                            <td>-</td>
+                            <td>3*SC</td>
+                            <td>/</td>
+                            <td>La cible récupère 2*SC SC points d'endurance</td>
+                            <td>Agapi</td>
+                        </tr>
+                        <tr>
+                            <td>Fatigue</td>
+                            <td>-</td>
+                            <td>5*SC</td>
+                            <td>/</td>
+                            <td>La cible doit passer un test de Résistance(Vig ou Vol) puis perdre (SC-DR)*3 points d'endurance.</td>
+                            <td>Anathos</td>
+                        </tr>
+                        <tr>
                             <td>Invisibilité</td>
                             <td>Maintien</td>
                             <td>5</td>
@@ -517,7 +517,7 @@
                             <td>Maintien</td>
                             <td>7*SC</td>
                             <td>1 heure</td>
-                            <td>Invoque une arme infligeant SC dégâts magiques à l'endroit ciblé.</td>
+                            <td>Invoque une arme infligeant SC dégâts magiques à l'endroit ciblé, cette arme peut utiliser la caractéristique de Volonté du lanceur pour les jets de Style de Combat.</td>
                             <td>Agones</td>
                         </tr>
                         <tr>
@@ -534,22 +534,6 @@
                             <td>2*SC</td>
                             <td>/</td>
                             <td>La cible doit passer un test de Résistance(Vol) puis perdre (SC-DR)*5 points de psy.</td>
-                            <td>Anathos</td>
-                        </tr>
-                        <tr>
-                            <td>Récupération</td>
-                            <td>-</td>
-                            <td>6*SC</td>
-                            <td>/</td>
-                            <td>La cible supprime SC/2 niveaux de fatigue ou récupère SC points d'endurance</td>
-                            <td>Agapi</td>
-                        </tr>
-                        <tr>
-                            <td>Fatigue</td>
-                            <td>-</td>
-                            <td>5*SC</td>
-                            <td>/</td>
-                            <td>La cible doit passer un test de Résistance(Vig ou Vol) puis perdre SC-DR points d'endurance.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
@@ -597,7 +581,7 @@
                             <td>[Métal, Pierre, Terre, Sable]</td>
                             <td>3*SC</td>
                             <td>/</td>
-                            <td>Inflige 3*SC de dégâts physiques</td>
+                            <td>La cible passe un test d'Esquive(Agilité) ou de Résistance(Volonté) puis subit (SC-DR)*4 de dégâts physiques</td>
                             <td>Kormo, Ourgal</td>
                         </tr>
                         <tr>
@@ -605,7 +589,7 @@
                             <td>[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]</td>
                             <td>3*SC</td>
                             <td>/</td>
-                            <td>Inflige 2*SC de dégâts d'[Élément]</td>
+                            <td>La cible passe un test d'Esquive(Agilité) ou de Résistance(Volonté) puis subit (SC-DR)*3 de dégâts d'[Élément]</td>
                             <td>Aïgida, Anathos, Horoï, Kuga, Nero, Safi</td>
                         </tr>
                         <tr>
@@ -621,7 +605,7 @@
                             <td>Maintien</td>
                             <td>2*SC</td>
                             <td>1 round</td>
-                            <td>Invoque du vent se déplaçant à (30*SC)km/h. Cf <a href="Survie.xhtml#table_vents">Effets du vent</a> </td>
+                            <td>Invoque du vent se déplaçant à (25*SC)km/h.</td>
                             <td>Aïgida</td>
                         </tr>
                         <tr>
@@ -653,7 +637,7 @@
                             <td>Maintien</td>
                             <td>4*SC</td>
                             <td>1 minute</td>
-                            <td>Façonne une création intangible de la forme souhaitée avec sons et odeurs. Un test d'Observation ou d'Investigation avec un modificateur de +20-(5*SC) est nécessaire pour se rendre compte de l'illusion sans la toucher. <a href="Tableaux.xhtml#taille_creatures">Taille</a> de l'illusion selon SC : I, Min, TP, P, M, G, TG, Gig, C.</td>
+                            <td>Façonne une création intangible de la forme souhaitée avec sons et odeurs. Un test d'Observation ou d'Investigation avec un modificateur de +20-(5*SC) est nécessaire pour se rendre compte de l'illusion sans la toucher. <a href="Tableaux.xhtml#gabarit_creatures">Taille</a> de l'illusion selon SC : I, Min, TP, P, M, G, TG, Gig, C.</td>
                             <td>Psema</td>
                         </tr>
                         </tbody>
@@ -678,7 +662,7 @@
                             <td>Maintien</td>
                             <td>4*SC</td>
                             <td>1 minute</td>
-                            <td>Réanime un cadavre. <a href="Tableaux.xhtml#taille_creatures">Taille</a> du cadavre selon SC : I, Min, TP, P, M, G, TG, Gig, C. La créature réanimé agit comme bon lui semble.</td>
+                            <td>Réanime un cadavre. <a href="Tableaux.xhtml#gabarit_creatures">Taille</a> du cadavre selon SC : I, Min, TP, P, M, G, TG, Gig, C. La créature réanimé agit comme bon lui semble.</td>
                             <td>Anathos</td>
                         </tr>
                         <tr>
@@ -782,8 +766,8 @@
                             <td>Mot de pouvoir : Douleur</td>
                             <td>Maintien</td>
                             <td>6*SC</td>
-                            <td>1 minute</td>
-                            <td>La cible doit passer un test de Résistance(Vig ou Vol) avec un modificateur de +20-(5*SC) ou voir sa vitesse divisée par 2 et effectuer toute action avec désavantage.</td>
+                            <td>/</td>
+                            <td>La cible doit passer un test de Résistance(Vig ou Vol) avec un modificateur de +20-(5*SC) puis voir sa vitesse divisée par 2 et effectuer toute action avec deux désavantage pendant (SC-DR) rounds.</td>
                             <td>Psema</td>
                         </tr>
                         <tr>

@@ -91,7 +91,6 @@
                         <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
-                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
                     </ul>
                 </li>
@@ -108,23 +107,8 @@
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
                     <ul class="hidden">
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
-                            </ul></li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
-                            </ul></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#gabarit_creatures">Gabarit des créatures</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -162,19 +146,19 @@
         <p><span class="big_underline">Lourde :</span>L'armure lourde impose une grande pénalité sur le personnage, chaque pièce Lourde inflige un malus de -5  aux tests de Furtivité, de natation et d'escalade.</p>
         <p><span class="big_underline">Super-lourde :</span>L'armure super-lourde impose une pénalité énorme sur le personnage, chaque pièce Super-Lourde inflige un malus de -10  aux tests de Furtivité, de natation et d'escalade.</p>
         <p>Les armures nécessitent d'être maîtrisées par le personnage (incluses dans un de ses styles de combat) pour être utilisées convenablement. Un personnage portant une armure sans y être habitué subit le double des pénalités dues au poids de l'armure.</p>
-        <p>Les pièces d'armure couvrent le torse ou un membre (tête, bras G, bras D, jambes D, jambes G). Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation, d'un point de vue réaliste, on est sensé porté une cotte de maille sous une armure de plate, et un gambison rembourré sous cette cotte de maille, mais pour simplifier tout ça on part du principe que c'est inclus dans la protection offerte par l'armure de plate.</p>
+        <p>Les pièces d'armure couvrent une localisation(tête, torse, bras G, bras D, jambes). Il est bien sûr impossible d'empiler des pièces d'armures sur la même localisation.</p>
         <p>Chaque pièce d'armure possède une certaine valeur de protection (PR) qui réduit tout dégâts subit sur la zone qu'elle protège. Certaines armures possèdent une PR magique face à un type de dégâts (PR froid par exemple).</p>
         <p>Il existe trois types d'armure :</p>
         <ul>
             <li><span class="big_underline">Tuniques renforcées :</span>Les protections de ce type sont plus proches des vêtements que des armures, ce sont de simples vêtements en tissu possédants ça et là des parties renforcées, elles offrent une protection minime mais ne gêne pas le porteur.</li>
             <li><span class="big_underline">Armure partielle :</span>Les armures de ce type ne couvrent pas totalement la zone qu'elle protège, elle possède une protection moindre mais sont moins encombrante que leur version complète et souvent plus légères.</li>
-            <li><span class="big_underline">Armure intégrale :</span>Les armures de ce type offre une meilleure protection mais sont plus lourde et encombrante. Un casque intégral impose un malus de 10 aux tests de Perception.</li>
+            <li><span class="big_underline">Armure intégrale :</span>Les armures de ce type offre une meilleure protection mais sont plus lourde et encombrante. Un casque intégral impose un malus de 10 aux tests reposants dur la vue ou l'ouïe.</li>
         </ul>
         <p>Un armure possède les attribut suivants :</p>
         <ul>
             <li><span class="big_underline">Protection (PR) :</span> La valeur de protection fournie par l'armure</li>
             <li><span class="big_underline">Catégorie :</span>La catégorie de pois de l'armure. Certaines armures et bouclier possèdent la propriétés "Magique", ce qui leur permet de protéger leur porteur des attaques provenant d'êtres éthérés.</li>
-            <li><span class="big_underline">Encombrement :</span>L'encombrement de la pièce d'armure. Cette valeur est divisé par 2 si la pièce est équipée.</li>
+            <li><span class="big_underline">Encombrement :</span>L'encombrement de la pièce d'armure. Cette valeur diminue de 1 si la pièce est équipée.</li>
             <li><span class="big_underline">Prix :</span>Le prix en pièces d'argent d'une pièce d'armure. </li>
         </ul>
 
@@ -190,7 +174,7 @@
                 </tr>
                 <tr>
                     <td>Médiocre</td>
-                    <td>La catégorie de poids augmente d'un cran</td>
+                    <td>La catégorie de poids augmente d'un cran et l'ENC augmente de 1</td>
                     <td>-25%</td>
                 </tr>
                 <tr>
@@ -200,7 +184,7 @@
                 </tr>
                 <tr>
                     <td>Supérieure</td>
-                    <td>La catégorie de poids diminue d'un cran</td>
+                    <td>La catégorie de poids diminue d'un cran et l'ENC diminue de 1</td>
                     <td>+50%</td>
                 </tr>
                 </tbody>
@@ -222,7 +206,7 @@
                 <td>0</td>
                 <td>1 glace</td>
                 <td>-</td>
-                <td>1(6)</td>
+                <td>1(5)</td>
                 <td>20 membre/40 torse (140)</td>
             </tr>
             <tr>
@@ -230,7 +214,7 @@
                 <td>0</td>
                 <td>1 feu</td>
                 <td>-</td>
-                <td>1(6)</td>
+                <td>1(5)</td>
                 <td>25 membre/50 torse (175)</td>
             </tr>
             <tr>
@@ -238,7 +222,7 @@
                 <td>0</td>
                 <td>1 foudre</td>
                 <td>-</td>
-                <td>1(6)</td>
+                <td>1(5)</td>
                 <td>30 membre/60 torse (210)</td>
             </tr>
             <tr>
@@ -246,7 +230,7 @@
                 <td>1</td>
                 <td>-</td>
                 <td>-</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>65 membre/130 torse (455)</td>
             </tr>
             <tr>
@@ -254,7 +238,7 @@
                 <td>1</td>
                 <td>1</td>
                 <td>Magique</td>
-                <td>1(6)</td>
+                <td>1(5)</td>
                 <td>90 membre/180 torse (630)</td>
             </tr>
             <tr>
@@ -262,7 +246,7 @@
                 <td>2</td>
                 <td>1</td>
                 <td>Magique</td>
-                <td>1(6)</td>
+                <td>1(5)</td>
                 <td>120 membre/240 torse (840)</td>
             </tr>
             <tr>
@@ -270,7 +254,7 @@
                 <td>2</td>
                 <td>6</td>
                 <td>Magique</td>
-                <td>1(6)</td>
+                <td>1(5)</td>
                 <td>150 membre/ 300 torse(1050)</td>
             </tr>
             <tr>
@@ -278,7 +262,7 @@
                 <td>2</td>
                 <td>5 froid</td>
                 <td>Magique</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>120 membre/240 torse (840)</td>
             </tr>
             <tr>
@@ -286,7 +270,7 @@
                 <td>2</td>
                 <td>2</td>
                 <td>Magique</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>120 membre/240 torse (840)</td>
             </tr>
             <tr>
@@ -294,7 +278,7 @@
                 <td>3</td>
                 <td>5 foudre</td>
                 <td>Magique</td>
-                <td>1(6)</td>
+                <td>1(5)</td>
                 <td>150 membre/ 300 torse(1050)</td>
             </tr>
             <tr>
@@ -302,7 +286,7 @@
                 <td>3</td>
                 <td>6</td>
                 <td>Magique</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>200 membre/ 400 torse(1400)</td>
             </tr>
             <tr>
@@ -310,7 +294,7 @@
                 <td>3</td>
                 <td>7 feu</td>
                 <td>Magique</td>
-                <td>3(12)</td>
+                <td>2(10)</td>
                 <td>175 membre/ 350 torse(1225)</td>
             </tr>
             </tbody>
@@ -333,7 +317,7 @@
                 <td>1</td>
                 <td>1 foudre</td>
                 <td>-</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>30 membre/60 torse (210)</td>
             </tr>
             <tr>
@@ -341,7 +325,7 @@
                 <td>4</td>
                 <td>6</td>
                 <td>Magique</td>
-                <td>1(6)</td>
+                <td>1(5)</td>
                 <td>150 membre/ 300 torse(1050)</td>
             </tr>
             <tr><th rowspan="8">Légère</th></tr>
@@ -350,7 +334,7 @@
                 <td>1</td>
                 <td>1 glace</td>
                 <td>-</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>20 membre/40 torse (140)</td>
             </tr>
             <tr>
@@ -358,7 +342,7 @@
                 <td>1</td>
                 <td>-</td>
                 <td>-</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>15 membre/30 torse (105)</td>
             </tr>
             <tr>
@@ -366,7 +350,7 @@
                 <td>1</td>
                 <td>1 feu</td>
                 <td>-</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>25 membre/50 torse (175)</td>
             </tr>
             <tr>
@@ -374,7 +358,7 @@
                 <td>2</td>
                 <td>-</td>
                 <td>-</td>
-                <td>3(18)</td>
+                <td>3(15)</td>
                 <td>30 membre/60 torse (210)</td>
             </tr>
             <tr>
@@ -382,7 +366,7 @@
                 <td>3</td>
                 <td>1</td>
                 <td>Magique</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>90 membre/180 torse (630)</td>
             </tr>
             <tr>
@@ -390,7 +374,7 @@
                 <td>4</td>
                 <td>1</td>
                 <td>Magique</td>
-                <td>1(6)</td>
+                <td>1(5)</td>
                 <td>120 membre/240 torse (840)</td>
             </tr>
             <tr>
@@ -398,7 +382,7 @@
                 <td>5</td>
                 <td>5 foudre</td>
                 <td>Magique</td>
-                <td>1(6)</td>
+                <td>1(5)</td>
                 <td>150 membre/ 300 torse(1050)</td>
             </tr>
             <tr><th rowspan="5">Moyenne</th></tr>
@@ -407,7 +391,7 @@
                 <td>3</td>
                 <td>-</td>
                 <td>-</td>
-                <td>3(18)</td>
+                <td>3(15)</td>
                 <td>50 membre/100 torse (350)</td>
             </tr>
             <tr>
@@ -415,7 +399,7 @@
                 <td>4</td>
                 <td>-</td>
                 <td>-</td>
-                <td>3(18)</td>
+                <td>3(15)</td>
                 <td>65 membre/130 torse (455)</td>
             </tr>
             <tr>
@@ -423,7 +407,7 @@
                 <td>5</td>
                 <td>5 froid</td>
                 <td>Magique</td>
-                <td>3(18)</td>
+                <td>3(15)</td>
                 <td>120 membre/240 torse (840)</td>
             </tr>
             <tr>
@@ -431,7 +415,7 @@
                 <td>5</td>
                 <td>2</td>
                 <td>Magique</td>
-                <td>3(18)</td>
+                <td>3(15)</td>
                 <td>120 membre/240 torse (840)</td>
             </tr>
             <tr><th rowspan="3">Lourde</th></tr>
@@ -440,7 +424,7 @@
                 <td>6</td>
                 <td>6</td>
                 <td>Magique</td>
-                <td>4(24)</td>
+                <td>4(20)</td>
                 <td>200 membre/ 400 torse(1400)</td>
             </tr>
             <tr>
@@ -448,7 +432,7 @@
                 <td>7</td>
                 <td>7 feu</td>
                 <td>Magique</td>
-                <td>4(24)</td>
+                <td>4(20)</td>
                 <td>175 membre/ 350 torse(1225)</td>
             </tr>
             </tbody>
@@ -471,7 +455,7 @@
                 <td>3</td>
                 <td>1 foudre</td>
                 <td>-</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>40 membre/80 torse (280)</td>
             </tr>
             <tr>
@@ -479,7 +463,7 @@
                 <td>5</td>
                 <td>8</td>
                 <td>Magique</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>200 membre/ 400 torse(1400)</td>
             </tr>
             <tr><th rowspan="8">Moyenne</th></tr>
@@ -488,7 +472,7 @@
                 <td>2</td>
                 <td>2 glace</td>
                 <td>-</td>
-                <td>3(18)</td>
+                <td>3(15)</td>
                 <td>30 membre/60 torse (210)</td>
             </tr>
             <tr>
@@ -496,7 +480,7 @@
                 <td>3</td>
                 <td>-</td>
                 <td>-</td>
-                <td>4(24)</td>
+                <td>4(20)</td>
                 <td>20 membre/40 torse (140)</td>
             </tr>
             <tr>
@@ -504,7 +488,7 @@
                 <td>3</td>
                 <td>1 feu</td>
                 <td>-</td>
-                <td>3(18)</td>
+                <td>3(15)</td>
                 <td>35 membre/70 torse (245)</td>
             </tr>
             <tr>
@@ -512,7 +496,7 @@
                 <td>4</td>
                 <td>-</td>
                 <td>-</td>
-                <td>4(24)</td>
+                <td>4(20)</td>
                 <td>40 membre/80 torse (350)</td>
             </tr>
             <tr>
@@ -520,7 +504,7 @@
                 <td>5</td>
                 <td>2</td>
                 <td>Magique</td>
-                <td>3(18)</td>
+                <td>3(15)</td>
                 <td>110 membre/220 torse (770)</td>
             </tr>
             <tr>
@@ -528,7 +512,7 @@
                 <td>6</td>
                 <td>2</td>
                 <td>Magique</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>150 membre/300 torse (1050)</td>
             </tr>
             <tr>
@@ -536,7 +520,7 @@
                 <td>7</td>
                 <td>7 foudre</td>
                 <td>Magique</td>
-                <td>2(12)</td>
+                <td>2(10)</td>
                 <td>200 membre/ 400 torse(1400)</td>
             </tr>
             <tr><th rowspan="5">Lourde</th></tr>
@@ -545,7 +529,7 @@
                 <td>5</td>
                 <td>-</td>
                 <td>-</td>
-                <td>4(24)</td>
+                <td>4(20)</td>
                 <td>65 membre/130 torse (455)</td>
             </tr>
             <tr>
@@ -553,7 +537,7 @@
                 <td>6</td>
                 <td>-</td>
                 <td>-</td>
-                <td>4(24)</td>
+                <td>4(20)</td>
                 <td>80 membre/160 torse (560)</td>
             </tr>
             <tr>
@@ -561,7 +545,7 @@
                 <td>7</td>
                 <td>7 froid</td>
                 <td>Magique</td>
-                <td>4(24)</td>
+                <td>4(20)</td>
                 <td>150 membre/300 torse (1050)</td>
             </tr>
             <tr>
@@ -569,7 +553,7 @@
                 <td>7</td>
                 <td>3</td>
                 <td>Magique</td>
-                <td>4(24)</td>
+                <td>4(20)</td>
                 <td>150 membre/300 torse (1050)</td>
             </tr>
             <tr><th rowspan="3">Super-Lourde</th></tr>
@@ -578,7 +562,7 @@
                 <td>8</td>
                 <td>8</td>
                 <td>Magique</td>
-                <td>5(30)</td>
+                <td>5(25)</td>
                 <td>250 membre/ 500 torse(1750)</td>
             </tr>
             <tr>
@@ -586,13 +570,13 @@
                 <td>9</td>
                 <td>9 feu</td>
                 <td>Magique</td>
-                <td>5(30)</td>
+                <td>5(25)</td>
                 <td>225 membre/ 450 torse(1575)</td>
             </tr>
             </tbody>
         </table>
         <h3 onclick="hideContent(this)" id="mod_armures_boucliers">Personalisation des armures et des boucliers</h3>
-        <div>
+        <div class="hidden">
             <p>Il est possible de modifier une armure pour qu'elle s'adapte au mieux possible à son utilisateur. Ces modifications peuvent être faite à la main si l'on s'y connaît un peu, mais le résultat risque d'être de piètre qualité, il vaut mieux se referer à un véritable artisan pour ce genre de travaux.</p>
             <table class="table_horizontal">
                 <tbody>
@@ -661,8 +645,8 @@
             </ul>
             <p>Les bouclier ci-dessous possèdent deux variantes :</p>
             <ul>
-                <li><b>Grand Bouclier :</b> Faire un blocage avec un grand bouclier devient une tâche Simple(+10). Un tel bouclier possède une RB supérieure d'un point, est d'une catégorie de poids supérieure, possède un encombrement d'un point supérieur et coûte 25% plus cher.</li>
-                <li><b>Petit Bouclier :</b> Un petit bouclier permet de se défendre via une parade avec un bonus de +10 mais ne permet pas de bloquer les projectiles. Un tel bouclier possède une RB inférieure d'un point, est d'une catégorie de poids inférieure et possède un encombrement d'un point inférieur.</li>
+                <li><b>Grand Bouclier :</b> Faire un blocage avec un grand bouclier se fait avec un avantage . Un tel bouclier possède une RB supérieure d'un point, possède un encombrement d'un point supérieur et coûte 25% plus cher.</li>
+                <li><b>Petit Bouclier :</b> Un petit bouclier permet de se défendre via une parade avec un bonus de +10 mais ne permet pas de bloquer les projectiles. Un tel bouclier possède une RB inférieure d'un point et possède un encombrement d'un point inférieur.</li>
             </ul>
             <p class="caption" id="table_bouclier">Bouclier</p>
             <table class="table_horizontal">
@@ -670,21 +654,21 @@
                 <tr>
                     <th>Matériau</th>
                     <th>RB</th>
-                    <th>Catégorie</th>
+                    <th>Propriétés</th>
                     <th>ENC</th>
                     <th>Prix</th>
                 </tr>
                 <tr>
                     <td>Peau</td>
                     <td>1</td>
-                    <td>Légère</td>
+                    <td>-</td>
                     <td>2</td>
                     <td>30</td>
                 </tr>
                 <tr>
                     <td>Bois</td>
                     <td>1</td>
-                    <td>Légère</td>
+                    <td>-</td>
                     <td>2</td>
                     <td>20</td>
                 </tr>
@@ -698,77 +682,77 @@
                 <tr>
                     <td>Os</td>
                     <td>1</td>
-                    <td>Légère</td>
+                    <td>-</td>
                     <td>2</td>
                     <td>30</td>
                 </tr>
                 <tr>
                     <td>Cuir</td>
                     <td>1</td>
-                    <td>Légère</td>
+                    <td>-</td>
                     <td>2</td>
                     <td>45</td>
                 </tr>
                 <tr>
                     <td>Fer</td>
                     <td>2</td>
-                    <td>Moyenne</td>
+                    <td>-</td>
                     <td>3</td>
                     <td>100</td>
                 </tr>
                 <tr>
                     <td>Nilaroy</td>
                     <td>2</td>
-                    <td>Légère, Magique</td>
+                    <td>Magique</td>
                     <td>1</td>
                     <td>130</td>
                 </tr>
                 <tr>
                     <td>Acier</td>
                     <td>3</td>
-                    <td>Moyenne</td>
+                    <td>-</td>
                     <td>3</td>
                     <td>150</td>
                 </tr>
                 <tr>
                     <td>Gnistar</td>
                     <td>3</td>
-                    <td>Légère, Magique</td>
+                    <td>Magique</td>
                     <td>1</td>
                     <td>400</td>
                 </tr>
                 <tr>
                     <td>Shoren</td>
                     <td>4</td>
-                    <td>Moyenne, Magique</td>
+                    <td>Magique</td>
                     <td>3</td>
                     <td>300</td>
                 </tr>
                 <tr>
                     <td>Orichalque</td>
                     <td>4</td>
-                    <td>Moyenne, Magique</td>
+                    <td>Magique</td>
                     <td>3</td>
                     <td>400</td>
                 </tr>
                 <tr>
                     <td>Lakma</td>
                     <td>4</td>
-                    <td>Légère, Magique</td>
+                    <td>Magique</td>
                     <td>1</td>
                     <td>500</td>
                 </tr>
                 <tr>
                     <td>Virgonium</td>
                     <td>6</td>
-                    <td>Lourde, Magique</td>
+                    <td>Magique</td>
                     <td>4</td>
                     <td>650</td>
                 </tr>
                 <tr>
                     <td>Skymma</td>
                     <td>7</td>
-                    <td>Lourde, Magique</td>
+                    <td>Magique</td>
                     <td>4</td>
                     <td>600</td>
                 </tr>

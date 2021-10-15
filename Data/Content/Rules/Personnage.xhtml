@@ -91,7 +91,6 @@
                         <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
-                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
                     </ul>
                 </li>
@@ -108,23 +107,8 @@
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
                     <ul class="hidden">
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
-                            </ul></li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
-                            </ul></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#gabarit_creatures">Gabarit des créatures</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -172,15 +156,15 @@
                 </tr>
                 <tr>
                     <th colspan="2">Chono</th>
-                    <td><strong>Rage Primordiale :</strong> Jet de sauvegarde (VOL) si touché par un effet magique en l'absence du pendentif de Virgonium<br/><strong>Chasseur hors-pair :</strong> Vision nocturne, peut relancer un jet raté de PER une fois par jour</td>
+                    <td><strong>Rage Primordiale :</strong> Jet de Résistance(Vol) si touché par un effet magique en l'absence du pendentif de Virgonium<br/><strong>Chasseur hors-pair :</strong> Vision nocturne, peut relancer un jet raté de PER une fois par jour, Arme Naturelle(Griffes/Crocs, 1)</td>
                 </tr>
                 <tr>
                     <th colspan="2">Kanta</th>
-                    <td><strong>Fourrure épaisse :</strong> Robustesse(2), Résistance(Froid, 3)<br/><strong>Imposante stature :</strong> Taille G</td>
+                    <td><strong>Fourrure épaisse :</strong> Robuste(1), Résistance(Froid, 3), Arme Naturelle(Griffes/Crocs, 1)<br/><strong>Imposante stature :</strong> Taille G</td>
                 </tr>
                 <tr>
                     <th colspan="2">Mushuk</th>
-                    <td><strong>Héritage félin :</strong> Vision nocturne, Dégâts de chute divisé par 2</td>
+                    <td><strong>Héritage félin :</strong> Vision nocturne, Dégâts de chute divisé par 2, Arme Naturelle(Griffes/Crocs, 1)</td>
                 </tr>
                 <tr>
                     <th colspan="2">Sakha</th>
@@ -189,15 +173,15 @@
                 <tr>
                     <th rowspan="3">Sarpa</th>
                     <th>Lézards</th>
-                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur<br/><strong>Peau écailleuse :</strong> Robustesse(1)<br/><strong>Régénération :</strong> Régénération naturelle doublée, régénère les membres perdus</td>
+                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur, Arme Naturelle(Griffes/Crocs, 1)<br/><strong>Peau écailleuse :</strong> Robuste(1)<br/><strong>Régénération :</strong> Régénération naturelle doublée, régénère les membres perdus</td>
                 </tr>
                 <tr>
                     <th>Serpents</th>
-                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur<br/><strong>Peau écailleuse :</strong> Robustesse(1)<br/><strong>Héritage serpentin :</strong> Vision thermique, Rampant</td>
+                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur, Arme Naturelle(Crochets, 1), Débilitant(5)<br/><strong>Peau écailleuse :</strong> Robuste(1)<br/><strong>Héritage serpentin :</strong> Vision thermique, Rampant</td>
                 </tr>
                 <tr>
                     <th>Crocodiles</th>
-                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur<br/><strong>Forteresse d'écailles :</strong> Robustesse(3) et Taille G<br/><strong>Prédateur Aquatique :</strong> Amphibien</td>
+                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), besoin quotidien de chaleur, Arme Naturelle(Griffes/Crocs, 1)<br/><strong>Forteresse d'écailles :</strong> Robuste(2) et Taille G<br/><strong>Prédateur Aquatique :</strong> Amphibien</td>
                 </tr>
                 <tr>
                     <th colspan="2">Sever</th>
@@ -210,15 +194,15 @@
                 <tr>
                     <th rowspan="2">Steinn</th>
                     <th>Rakaj</th>
-                    <td><strong>Taillé dans le Roc :</strong> Taille P, Robustesse(2)<br/><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Froideur d'Hortak :</strong> Résistance(Froid, 2)</td>
+                    <td><strong>Taillé dans le Roc :</strong> Taille P, Robuste(1)<br/><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Froideur d'Hortak :</strong> Résistance(Froid, 2)</td>
                 </tr>
                 <tr>
                     <th>Khazun</th>
-                    <td><strong>Taillé dans le Roc :</strong> Taille P, Robustesse(2)<br/><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Chaleur des Monts Ardents :</strong> Résistance(Feu, 2)</td>
+                    <td><strong>Taillé dans le Roc :</strong> Taille P, Robuste(1)<br/><strong>Vision souterraine :</strong> Vision nocturne<br/><strong>Chaleur des Monts Ardents :</strong> Résistance(Feu, 2)</td>
                 </tr>
                 <tr>
                     <th colspan="2">Tori</th>
-                    <td><strong>Héritage Aviaire :</strong> Volant(Vitesse*2)<br/><strong>Beau parleur :</strong> Peut relancer un jet raté d'ELO une fois par jour</td>
+                    <td><strong>Héritage Aviaire :</strong> Volant(Vitesse*2), Arme Naturelle(Serres/Bec, 1)<br/><strong>Beau parleur :</strong> Peut relancer un jet raté d'ELO une fois par jour</td>
                 </tr>
                 <tr>
                     <th colspan="2">Tuskizi</th>
@@ -226,8 +210,8 @@
                 </tr>
                 </tbody>
             </table>
-            <p>Toutes les origines Bestiales possèdent le trait Estomac Solide.</p>
-            <p>Toutes les origines Magiques possèdent le trait Psy Inhibée et ne régénère pas de la psy de la même façon, les Sihir l'absorbent des êtres vivants, les Steinns grâce à Ourgal(absorption de métal/pierres) et les Sakhas grâce à Kormo(absorption des végétaux).</p>
+            <p>Toutes les origines Bestiales possèdent le trait <a href="Glossaire.xhtml#estomac_solide">Estomac Solide</a>.</p>
+            <p>Toutes les origines Magiques possèdent le trait <a href="Glossaire.xhtml#psy_inhibee">Psy Inhibée</a> et ne régénère pas de la psy de la même façon, les Sihirs l'absorbent des êtres vivants, les Steinns grâce à Ourgal(absorption de métal/pierres) et les Sakhas grâce à Kormo(absorption des végétaux).</p>
         </div>
 
         <h2 id="Caracteristiques" onclick="hideContent(this)">Caractéristiques</h2>
@@ -422,26 +406,30 @@
                 <ul>
                     <li><span class="big_underline">Effets du BdFor :</span>Détermine la capacité de port et les dégâts avec les armes brutes.</li>
                     <li><span class="big_underline">Effets du BdDex :</span>Augmente la portée des armes à distance de (BdDex*10)% et les dégâts des armes raffinés.</li>
-                    <li><span class="big_underline">Effets du BdAgi :</span>Détermine le bonus à l'initiative.</li>
-                    <li><span class="big_underline">Effets du BdVig :</span>Détermine l'endurance max et la capacité de port.</li>
-                    <li><span class="big_underline">Effets du BdInt :</span>Détermine la quantité de langages et la récupération de Psy.</li>
-                    <li><span class="big_underline">Effets du BdVol :</span>Détermine le cercle maximal atteignable (SCMax) et la récupération de Psy.</li>
+                    <li><span class="big_underline">Effets du BdAgi :</span>Détermine la vitesse de déplacement et le bonus à l'initiative.</li>
+                    <li><span class="big_underline">Effets du BdVig :</span>Détermine la <a href="Personnage.xhtml#robustesse">robustesse</a>, la vitalité et la capacité de port.</li>
+                    <li><span class="big_underline">Effets du BdInt :</span>Détermine le cercle maximal atteignable (SCMax) et la récupération de Psy.</li>
+                    <li><span class="big_underline">Effets du BdVol :</span>Détermine la <a href="Personnage.xhtml#serenite">sérénité</a> et la récupération de Psy.</li>
                     <li><span class="big_underline">Effets du BdPer :</span>Détermine le bonus à l'initiative.</li>
                     <li><span class="big_underline">Effets du BdElo :</span>Réduit le prix des objets à hauteur de (BdElo*5)%.</li>
                 </ul>
             </div>
             <h3 id="endurance" onclick="hideContent(this)">Endurance (PE)</h3>
             <div>
-                <p>L'endurance indique la capacité d'un personnage à pousser son corps jusqu'à ses limites. Elle est déterminé par le bonus de Vigueur : Endurance = BdVig</p>
+                <p>L'endurance indique la capacité d'un personnage à pousser son corps jusqu'à ses limites. Elle est déterminé par toutes les caractéristiques physiques : Endurance = BdFor+BdDex+BdAgi+BdVig</p>
                 <p>La jauge d'endurance permet au personnage d'entreprendre certaines actions :</p>
                 <ul>
-                    <li><span class="big_underline">Exploit physique (1 PE dépensé avant le test) :</span>Avantage pour la prochaine épreuve physique (sauf Style de Combat).</li>
-                    <li><span class="big_underline">Sprint (1 PE dépensé avant le mouvement) :</span>Double la vitesse de déplacement du personnage pour ce tour.</li>
+                    <li><span class="big_underline">Exploit physique (2 PE dépensé avant le test) :</span>Un avantage pour la prochaine épreuve physique (sauf Style de Combat).</li>
+                    <li><span class="big_underline">Sprint (2 PE dépensé avant le mouvement) :</span>Double la vitesse de déplacement du personnage pour ce tour.</li>
                     <li><span class="big_underline">Rechargement rapide (1 PE) :</span>Diminue de 1 le nombre d'action nécessaire au rechargement de l'arme, le coût peut être réduit à 0 si l'arme le permet.</li>
-                    <li><span class="big_underline">Blocage total (1 PE dépensé après un blocage incomplet) :</span>Permet d'annuler les dégâts d'un coup dépassant la RB de son bouclier.</li>
+                    <li><span class="big_underline">Blocage total (1 PE par dégât non bloqué) :</span>Permet d'annuler les dégâts d'un coup dépassant la RB de son bouclier.</li>
+                    <li><span class="big_underline">Balayage (3 PE dépensé avant l'attaque) :</span>Attaque qui touche tous les ennemis en face à portée de son allonge, un seul jet d'attaque pour toutes les cibles mais un malus de-10 est appliqué au jet pour chaque cible après la première.</li>
+                    <li><span class="big_underline">Réflexes météoritiques (4 PE) :</span>Permet d'effectuer une deuxième réaction pour ce tour.</li>
+                    <li><span class="big_underline">Frappe ciblée (1 PE dépensé avant l'attaque) :</span>La prochaine attaque touche la localisation choisie mais se fera avec un malus de -10.</li>
+                    <li><span class="big_underline">Attaque destructrice (2 PE dépensé avant l'attaque) :</span>La prochaine attaque réduit la PR de la localisation touchée de 1 mais n'inflige que la moitié des dégâts.</li>
                 </ul>
-                <p>L'endurance se régénère complètement après un repos long. Si le personnage effectue un repos court, il récupère 1 PE ou supprime un niveau de fatigue.</p>
-                <p>Un personnage peut dépenser ou perdre des PE même si il ne lui en reste aucun, à chaque fois que cela arrive il subit un niveau de fatigue. Le personnage peut encaisser plusieurs niveaux de fatigue avec différents effets avant de perdre connaissance.</p>
+                <p>L'endurance se régénère complètement après un repos long. Si le personnage effectue un repos court, il récupère un montant de PE equivalent à son BdCarac le plus élevé.</p>
+                <p>Un personnage peut dépenser ou perdre des PE même si il ne lui en reste aucun, il passe alors par différents niveau de fatigue avant de perdre connaissance voire de mourir.</p>
                 <table class="table_horizontal" id="table_fatigue">
                     <tbody>
                     <tr>
@@ -449,23 +437,23 @@
                         <th>Effets</th>
                     </tr>
                     <tr>
-                        <td>Fatigué (1)</td>
-                        <td>-5 à tout les tests, vitesse -1m</td>
+                        <td>Fatigué (PE&lt;0)</td>
+                        <td>1 désavantage à tout les tests, vitesse -1m</td>
                     </tr>
                     <tr>
-                        <td>Épuisé (2)</td>
-                        <td>-10 à tout les tests, vitesse -2m</td>
+                        <td>Épuisé (PE&lt;-5)</td>
+                        <td>2 désavantages à tout les tests, vitesse -2m</td>
                     </tr>
                     <tr>
-                        <td>Exténué (3)</td>
-                        <td>désavantage à tout les tests, vitesse/2</td>
+                        <td>Exténué (PE&lt;-10)</td>
+                        <td>3 désavantages à tout les tests, vitesse/2</td>
                     </tr>
                     <tr>
-                        <td>Inconscient (4)</td>
+                        <td>Inconscient (PE&lt;-15)</td>
                         <td>Le personnage pert connaissance</td>
                     </tr>
                     <tr>
-                        <td>Mort (5+)</td>
+                        <td>Mort (PE&lt;-20)</td>
                         <td>Le personnage meurt</td>
                     </tr>
                     <tr>
@@ -477,7 +465,7 @@
 
             <h3 id="vitalite" onclick="hideContent(this)">Vitalité (PV)</h3>
             <div>
-                <p>La vitalité représente l'intégrité physique du personnage. Plusieurs Caractéristiques entrent en compte en fonction de la <a href="Tableaux.xhtml#taille_creatures">taille</a> de l'entité qui détermine la vitalité d'un personnage. Voir <a href="Tableaux.xhtml#table_vitalite_taille">Vitalité en fonction de la taille</a>.</p>
+                <p>La vitalité représente l'intégrité physique du personnage. Plusieurs Caractéristiques entrent en compte en fonction de la <a href="Tableaux.xhtml#gabarit_creatures">gabarit</a> de l'entité qui détermine la vitalité d'un personnage. Voir <a href="Tableaux.xhtml#table_vitalite_taille">Vitalité en fonction de la taille</a>.</p>
                 <table id="table_vitalite" class="table_horizontal">
                     <tbody>
                     <tr>
@@ -511,9 +499,42 @@
                 <p>On récupère de la psy naturellement lors des périodes de calme, une quantité équivalente à BdInt+BdVol par heure de repos. Cette quantité peut varier selon l'environnement et les actions du personnage, si il médite ou prie par exemple.</p>
             </div>
 
+            <h3 id="robustesse" onclick="hideContent(this)">Robustesse</h3>
+            <div>
+                <p>La robustesse représente la résistance physique naturelle de votre personnage, elle s'ajoute à la protection d'armure(PR) s'il en porte une pour réduire tout les dégâts physiques.</p>
+                <p>Certaines origines comme les Kanta, les Sarpas-Crocodiles et les Steinns possèdent le trait <a href="Glossaire.xhtml#robuste">Robuste</a> qui augmente leur robustesse, pour les autres origines, la robustesse est simplement équivalente au BdVig.</p>
+            </div>
+
+            <h3 id="serenite" onclick="hideContent(this)">Sérénité</h3>
+            <div>
+                <p>La sérénité représente à quel point votre personnage est capable de négliger les attaques magique, elle s'ajoute à la PR magique s'il en possède déjà pour réduire tout les dégâts magiques.</p>
+                <p>Pour tout les personnages ne possédants pas le trait <a href="Glossaire.xhtml#serein">Serein</a> la sérénité est équivalente au BdVol.</p>
+            </div>
+
             <h3 id="capacite_port" onclick="hideContent(this)">Capacité de port</h3>
             <div>
-                <p>Un personnage peut porter une charge équivalente à : BdFor*4+BdVig*2. Cette charge détermine la quantité maximale d'équipement et de matériel qu'il peut transporter sans effort, il est possible d'excéder cette limite mais des pénalités s'appliqueront. Toute pénalité réduisant l'endurance en dessous de 0 inflige un niveau de fatigue par PE négatif.</p>
+                <p>Un personnage peut porter une certaine charge selon son gabarit. Cette charge détermine la quantité maximale d'équipement et de matériel qu'il peut transporter sans effort, il est possible d'excéder cette limite mais des pénalités s'appliqueront. Voir <a href="Tableaux.xhtml#table_capacite_port_gabarit">Capacité de port en fonction de la taille</a>.</p>
+                <div class="side_by_side">
+                    <table id="table_capacite_port_gabarit" class="table_horizontal">
+                        <tbody>
+                        <tr>
+                            <th>Origine du personnage</th>
+                            <th>Formule de la Capacité de port</th>
+                        </tr>
+                        <tr>
+                            <td>Sakha ou Steinn</td>
+                            <td>BdFor*3 + BdVig*2</td>
+                        </tr>
+                        <tr>
+                            <td>Autres</td>
+                            <td>BdFor*4 + BdVig*2</td>
+                        </tr>
+                        <tr>
+                            <td>Kanta ou Sarpas-Crocodile</td>
+                            <td>BdFor*5 + BdVig*2</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 <table class="table_horizontal" id="table_capacite_port">
                     <tbody>
                     <tr>
@@ -535,24 +556,26 @@
                         <td>&gt;Capacité de port</td>
                         <td>Aucune pénalité</td>
                         <td>-1 mètre</td>
-                        <td>-1</td>
+                        <td>-5</td>
                     </tr>
                     <tr>
                         <td>Lourde</td>
-                        <td>&gt;2*Capacité de port</td>
+                        <td>&gt;Capacité de port+BdFor</td>
                         <td>-10</td>
                         <td>Vitesse divisée par 2</td>
-                        <td>-3</td>
+                        <td>-10</td>
                     </tr>
                     <tr>
                         <td>Écrasante</td>
-                        <td>&gt;3*Capacité de port</td>
+                        <td>&gt;Capacité de port+BdFor*2</td>
                         <td>-25</td>
                         <td>Immobilisé</td>
-                        <td>-5</td>
+                        <td>-10</td>
                     </tr>
+                    <tr><td colspan="5">Ces pénalités sont cumulatives, un personnage portant un charge Lourde subit à la fois les malus de la Charge Lourde et celle de la charge Moyenne</td></tr>
                     </tbody>
                 </table>
+                </div>
             </div>
 
             <h3 id="vitesse" onclick="hideContent(this)">Vitesse</h3>
@@ -561,26 +584,26 @@
                 <p>Cette vitesse peut être réduite par de nombreux effets comme la <a href="Personnage.xhtml#table_fatigue">fatigue</a> ou le port d'une <a href="Personnage.xhtml#table_capacite_port">charge trop lourde</a>.</p>
             </div>
 
-            <h3 id="bonus_initiative" onclick="hideContent(this)">Bonus à l'initiative (BdIni)</h3>
+            <h3 id="bonus_initiative" onclick="hideContent(this)">Initiative (Ini)</h3>
             <div>
-                <p>Le Bonus à l'Initiative est utilisé lors du jet d'initiative au début d'un combat, il est équivalent à : BdIni = BdDex+BdAgi+BdInt+BdPer*2.</p>
+                <p>L'Initiative est utilisée pour déterminer l'ordre de jeu quand le jeu passe en temps structuré comme lors d'un combat par exemple, il est équivalent à : Ini = BdDex+BdAgi+BdInt+BdPer*2.</p>
             </div>
 
-            <h3 id="taille" onclick="hideContent(this)">Taille</h3>
+            <h3 id="gabarit" onclick="hideContent(this)">Gabarit</h3>
             <div>
-                <p>La catégorie de taille de votre personnage dépend de son origine :</p>
+                <p>Le gabarit de votre personnage dépend de son origine :</p>
                 <ul>
-                    <li><span class="big_underline">Origine de taille Petite(P) :</span>Sakha, Steinn </li>
-                    <li><span class="big_underline">Origine de taille Moyenne(M) :</span>Azuma, Chono, Mushuk, Sarpa Lézard, Sarpa Serpent, Sihir, Sever, Tori, Tuskizi</li>
-                    <li><span class="big_underline">Origine de taille Grande(G) :</span>Kanta, Sarpa Crocodile </li>
+                    <li><span class="big_underline">Origine Petite(P) :</span>Sakha, Steinn </li>
+                    <li><span class="big_underline">Origine Moyenne(M) :</span>Azuma, Chono, Mushuk, Sarpa Lézard, Sarpa Serpent, Sihir, Sever, Tori, Tuskizi</li>
+                    <li><span class="big_underline">Origine Grande(G) :</span>Kanta, Sarpa Crocodile </li>
                 </ul>
-                <p>Pour plus de détails sur l'influence qu'à la taille sur votre personnage Cf <a href="Tableaux.xhtml#taille_creatures">Taille des créatures</a>.</p>
+                <p>Pour plus de détails sur l'influence qu'à le gabarit sur votre personnage Cf <a href="Tableaux.xhtml#gabarit_creatures">Gabarit des créatures</a>.</p>
             </div>
 
             <h3 id="langages" onclick="hideContent(this)">Langages</h3>
             <div>
-                <p>Votre personnage sait parler sa langue d'origine et l'attribut Langages détermine le nombre de langue qu'il peut maîtriser. Cet attribut équivaut à son BdInt et la langue d'origine ne compte pas dans ce total. Votre personnage ne commencent pas forcément la partie avec le nombre maximal de langages qu'il peut maîtriser, cela dépend de son origine et des lieux où il a vécu.</p>
-                <p>Certains langages possèdent des racines communes, permettant à ses pratiquants de communiquer même s'il n'ont aucune langues en commun. D'autres peu communes sont considérés comme exotiques, parmi elle le Kugarite, le Karnarak et le Sihiräll. Les langues exotiques comptent comme deux langages connus. Cf <a href="../World/Histoire_Ogma.xhtml#langages">Langages</a></p>
+                <p>Votre personnage sait parler sa langue d'origine et éventuellement d'autres langues selon son histoire.</p>
+                <p>Certains langages comme ceux des humains possèdent des racines communes, permettant à ses pratiquants de communiquer même s'il n'ont aucune langues en commun. D'autres peu communes sont considérés comme exotiques, parmi elle le Kugarite, le Karnarak et le Sihiräll. Cf <a href="../World/Histoire_Ogma.xhtml#langages">Langages</a></p>
             </div>
         </div>
 

@@ -91,7 +91,6 @@
                         <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
-                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
                     </ul>
                 </li>
@@ -108,23 +107,8 @@
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
                     <ul class="hidden">
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
-                            </ul></li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
-                            </ul></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#gabarit_creatures">Gabarit des créatures</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -168,7 +152,10 @@
 
             <h3 id="avantage" onclick="hideContent(this)">Avantage et désavantage</h3>
             <div>
-                <p>Parfois une épreuve se déroule dans des conditions particulières pouvant entraîner un avantage ou un désavantage. Un avantage reflète des circonstances favorables à une action, le désavantage implique le contraire. L’un comme l’autre nécessite de lancer deux fois le dé. Sur un avantage le meilleur des deux jets sera conservé, sur un désavantage ce sera le moins bon. Par exemple vous obtenez 17 et 5, un désavantage conclura sur 17, un avantage sur 5.</p>
+                <p>Selon la situation dans laquelle se fait le jet, il est possible de recevoir un ou plusieurs modificateurs nommés avantage(s) et désavantage(s). Un avantage reflète des circonstances favorables à une action, le désavantage implique le contraire.</p>
+                <p>Si le jet se fait avec avantage(s), on lance un dé et on ajoute le résultat de ce dé au DR, avec désavantage(s), on enlève le résultat de ce dé au DR. Si le jet se fait avec avantage(s) et désavantage(s), ils s'annulent mutuellement, par exemple si on possède 2 avantage et 1 désavantage, on effectue le test avec un seul avantage.</p>
+                <p>La taille du dé lancé augmente avec le nombre d'avantages/désavantages(A/D) avec lesquels on effectue le jet : 1 A/D -> D2, 2 A/D -> D4, 3 A/D ->D6, 4 A/D -> D8, 5 A/D -> D10.</p>
+                <p>Par exemple : Bardin, un Steinn, souhaite défoncer une porte avec un bélier portatif ce qui lui procure 2 avantages, mais il pleut et le sol boueux le fait glisser ce qui lui inflige 1 désavantage. Il passe donc cette épreuve avec un avantage, il lance son D100 et obtient un DR de +1, il lance son D2 d'avantage et obtient 1, son DR passe à +2. La porte se brise sous les coups répétés de Bardin en quelques secondes malgré le sol glissant.</p>
                 <p onclick="hideContent(this)">Exemples d'avantages :</p>
                 <ul>
                     <li>Effectuer une action pour laquelle on possède une spécialisation dans une compétence</li>
@@ -186,7 +173,7 @@
             <h3 id="type_epreuves" onclick="hideContent(this)">Types d'épreuves</h3>
             <div>
                 <p>Les épreuves, parfois appelées tests, jets ou lancers de dés ne sont qu'une seule et même chose et fonctionnent sur le même principe : On fixe une valeur déterminant la difficulté (souvent une caractéristique+une compétence), on y ajoute ou soustrait un ou plusieurs modificateurs (positifs ou négatifs selon les conditions de l'épreuve), on lance un dé en essayant d'obtenir un score inférieur à la valeur fixée au départ modifiés par les modificateurs.</p>
-                <p>Les épreuves étendues sont un type d'épreuves nécessitants un certain nombre de degrés de réussite pour être menées à bien. À chaque fois que le personnage qui passe l'épreuve réussit, il ajoute son ou ses degré(s) de réussite à un total, si ce total excède celui fixé par le MJ pour la réussite de l'épreuve alors le test étendu est réussi. Ces tests se font dans une situation où le temps est compté ou qu'il y a un enjeu à réussir rapidement. Exemple d'épreuve étendue : trouver la combinaison d'un coffre à l'ouïe alors que le propriétaire rôde non loin, négocier un prix avec un marchand pour un objet très prisé, défoncer une porte dans un bâtiment en flammes.</p>
+                <p>Les épreuves étendues sont un type d'épreuves nécessitants un certain nombre de degrés de réussite pour être menées à bien. À chaque fois que le personnage qui passe l'épreuve réussit, il ajoute son ou ses degré(s) de réussite à un total, si ce total excède celui fixé par le MJ pour la réussite de l'épreuve alors le test étendu est réussi. Ces tests se font dans une situation où le temps est compté, qu'il y a un enjeu à réussir rapidement ou que l'épreuve prend beaucoup de temps à effectuer. Exemple d'épreuve étendue : trouver la combinaison d'un coffre à l'ouïe alors que le propriétaire rôde non loin, négocier un prix avec un marchand pour un objet très prisé, défoncer une porte dans un bâtiment en flammes.</p>
                 <p>Les épreuves opposées sont un type d'épreuve mettant en scène plusieurs participants tentant d'accomplir un but similaire ou une action contraire. Exemple d'épreuve opposée : un personnage en attaque un autre avec une arme de mêlée, trois personnes tentent d'attraper le même objet au vol, un défi au bras de fer.</p>
             </div>
 
@@ -242,55 +229,6 @@
             <div>
                 <p>Parfois, les conditions sont si bonnes que le MJ peut vous permettre d'augmenter votre dé d'un cran ou parfois si mauvaises qu'il diminue d'un cran. Cela concerne seulement les jets de dégâts ou d'initiative.</p>
                 <p>Les crans de dés sont ainsi représenté : 1d2 &#8594; 1d4 &#8594; 1d6 &#8594; 1d8 &#8594; 1d10 &#8594; 1d12 &#8594; 1d12+1d2 &#8594; 1d12+1d4 &#8594; 1d12+1d6 &#8594; 1d12+1d8 &#8594; 1d12+1d10 &#8594; 2d12 &#8594; 2d12+1d2 et ainsi de suite</p>
-            </div>
-
-            <h3 id="modificateur_jets" onclick="hideContent(this)">Modificateurs de difficultés</h3>
-            <div>
-                <p>Toutes les épreuves nécessitant un jet de dés ne représente pas toujours le même challenge, passer par dessus une barrière est facile mais escalader une falaise est beaucoup plus ardu. Le tableau ci dessous indique les différents modificateurs pouvant s'appliquer aux jets de dés, il est possible d'incrémenter ces modificateurs selon les circonstances.</p>
-                <table class="table_horizontal">
-                    <tbody>
-                    <tr>
-                        <th>Difficulté de l'épreuve</th>
-                        <th>Modificateur</th>
-                    </tr>
-                    <tr>
-                        <td>Insurmontable</td>
-                        <td>-40</td>
-                    </tr>
-                    <tr>
-                        <td>Très difficile</td>
-                        <td>-30</td>
-                    </tr>
-                    <tr>
-                        <td>Difficile</td>
-                        <td>-20</td>
-                    </tr>
-                    <tr>
-                        <td>Complexe</td>
-                        <td>-10</td>
-                    </tr>
-                    <tr>
-                        <td>Normale</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>Simple</td>
-                        <td>+10</td>
-                    </tr>
-                    <tr>
-                        <td>Facile</td>
-                        <td>+20</td>
-                    </tr>
-                    <tr>
-                        <td>Très facile</td>
-                        <td>+30</td>
-                    </tr>
-                    <tr>
-                        <td>Routinier</td>
-                        <td>+40</td>
-                    </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
 

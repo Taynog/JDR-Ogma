@@ -91,7 +91,6 @@
                         <li><span class="little"><a href="Survie.xhtml#voyage">Voyage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#eclairage">Éclairage</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#biomes">Biomes</a> </span> </li>
-                        <li><span class="little"><a href="Survie.xhtml#climat_vent">Climat et Vent</a> </span> </li>
                         <li><span class="little"><a href="Survie.xhtml#dangers_naturels">Dangers naturels</a> </span> </li>
                     </ul>
                 </li>
@@ -108,23 +107,8 @@
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Tableaux</span>
                     <ul class="hidden">
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Réussites critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_tranchant">Dégâts tranchants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_contondants">Dégâts contondants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_perforants">Dégâts perforants</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_mains_nues">Attaque à mains nues</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#critiques_parade">Parade</a></span></li>
-                            </ul></li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Échecs critiques</span>
-                            <ul class="hidden"><li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_attaque_ou_parade">Attaque ou Parade</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_sort">Sort</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_distance">Attaque à distance</a></span></li>
-                                <li><span class="little"><a href="../Rules/Tableaux.xhtml#echec_critique_mains_nues">Attaque à mains nues</a></span></li>
-                            </ul></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#blessures_graves">Blessures graves</a></span></li>
                         <li><span class="little"><a href="../Rules/Tableaux.xhtml#stress">Stress</a></span></li>
-                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#table_taille_creatures">Taille des créatures</a></span></li>
+                        <li><span class="little"><a href="../Rules/Tableaux.xhtml#gabarit_creatures">Gabarit des créatures</a></span></li>
                     </ul></li>
                 <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
                     <ul class="hidden">
@@ -196,98 +180,64 @@
 
     <h1 id="contenants"  onclick="hideContent(this)">Contenants</h1>
     <div>
-        <table class="table_horizontal">
+        <p>Certains contenants sont fait pour contenir certains types d'objets, d'autres peuvent contenir n'importe quoi dans les deux cas ils augmentent la capacité de port de leur utilisateur en réduisant l'encombrement (ENC) des objets contenus à l'intérieur.</p>
+        <table class="table_horizontal" id="tables_contenants">
             <tbody>
             <tr>
                 <th>Contenant</th>
-                <th>ENC (vide)</th>
-                <th>Capacité (ENC)</th>
-                <th>Contenant</th>
-                <th>ENC (vide)</th>
-                <th>Capacité (ENC)</th>
+                <th>Description</th>
+                <th>Effet(s)</th>
+                <th>ENC</th>
             </tr>
+            <tr><th colspan="4">Contenants généraux</th></tr>
             <tr>
-                <td>Bouteille</td>
-                <td>0</td>
-                <td>1</td>
-                <td>Carquois</td>
-                <td>1</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>Coffre</td>
-                <td>5</td>
-                <td>20</td>
-                <td>Coffret</td>
-                <td>1</td>
+                <td>Bandoulière / Ceinture</td>
+                <td>Une bande de cuir possédant diverses attaches. Il est possible de porter deux bandoulières et une ceinture.</td>
+                <td>Réduit à 0 l'ENC de 3 objets d'ENC 1, ces objets sont à portée de main et nécessitent seulement un action libre pour être équipés</td>
                 <td>2</td>
-            </tr>
-            <tr>
-                <td>Cruche ou pichet</td>
-                <td>0</td>
-                <td>2</td>
-                <td>Étui à parchemin</td>
-                <td>0</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>Fiole</td>
-                <td>0</td>
-                <td>1</td>
-                <td>Flasque ou chope</td>
-                <td>0</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>Gourde</td>
-                <td>0</td>
-                <td>2</td>
-                <td>Panier</td>
-                <td>1</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Pot en fer</td>
-                <td>1</td>
-                <td>2</td>
-                <td>Poire à poudre</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>Sac</td>
-                <td>1</td>
-                <td>5</td>
-                <td>Sac à dos *</td>
-                <td>1</td>
-                <td>10</td>
             </tr>
             <tr>
                 <td>Sacoche</td>
-                <td>0</td>
+                <td>Un petit sac porté sur une épaule. Il est possible d'en porter deux à la fois</td>
+                <td>Réduit à 0 l'ENC de 5 objets d'ENC 1</td>
                 <td>3</td>
-                <td>Seau</td>
+            </tr>
+            <tr>
+                <td>Sac à dos</td>
+                <td>Un grand sac porté sur le dos possédant de nombreuses attaches extérieures permettant d'attacher des objets trop grands pour le sac. Il est impossible d'en porter plus d'un seul.</td>
+                <td>Réduit à 0 l'ENC de 10 objets d'ENC 1 et réduit de 1 l'ENC de 3 objets pouvant être raisonnablement attaché sur l'extérieur</td>
+                <td>5</td>
+            </tr>
+            <tr><th colspan="4">Contenants spécialisés</th> </tr>
+            <tr>
+                <td>Étui à parchemins</td>
+                <td>Un arrangement de petits étuis fait sur mesure pour contenir du papier enroulé et le protéger des intempéries. À attacher sur un sac ou une ceinture par exemple.</td>
+                <td>Réduit à 0 l'ENC de 5 parchemins, cartes ou autre morceaux de papier</td>
                 <td>1</td>
-                <td>3</td>
             </tr>
             <tr>
-                <td>Tonneau</td>
-                <td>4</td>
-                <td>10</td>
-                <td>Tonnelet</td>
+                <td>Carquois</td>
+                <td>Un étui conçu spécifiquement pour les flèches/carreaux. Il est possible d'en porter deux à la fois, un sur la hanche, l'autre sur le dos.</td>
+                <td>Réduit à 0 l'ENC de 30 flèches/carreaux, attraper un flèche nécessite un action simple</td>
                 <td>1</td>
+            </tr>
+            <tr>
+                <td>Étui alchimique</td>
+                <td>Plusieurs étuis fait pour contenir des créations alchimiques tout en préservant leur intégrité. À attacher sur un sac ou une ceinture par exemple.</td>
+                <td>Réduit à 0 l'ENC de 3 créations alchimiques</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Sacoche à ingrédient</td>
+                <td>Un sac comportant une multitude compartiments, ce qui permet d'isoler convenablement différents ingrédients alchimiques. Se porte sur l'épaule comme une sacoche classique.</td>
+                <td>Réduit à 0 l'ENC de 10 ingrédients alchimiques</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>Verre/Tasse</td>
-                <td>0</td>
-                <td>0</td>
-                <td>Verre/ à liqueur</td>
-                <td>0</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td colspan="6">* Vous pouvez également attacher des objets, comme un sac de couchage, une corde ou une sacoche, à l'extérieur du sac à dos.</td>
+                <td>Poire à poudre</td>
+                <td>Petite poche métallique ou en cuir muni d'un bec permettant de recharger les armes à poudre noire. À attacher sur un sac ou une ceinture par exemple.</td>
+                <td>Stocke 10 unités de poudre à portée de main</td>
+                <td>1</td>
             </tr>
             </tbody>
         </table>
@@ -298,334 +248,338 @@
         <table class="table_horizontal">
             <tbody>
             <tr>
-                <th>Catégorie</th>
                 <th>Objet</th>
+                <th>Description</th>
                 <th>Prix</th>
                 <th>ENC</th>
                 <th>Objet</th>
+                <th>Description</th>
                 <th>Prix</th>
                 <th>ENC</th>
             </tr>
             <tr>
-                <th rowspan="4">Campement</th>
+                <th colspan="8">Campement</th>
             </tr>
             <tr>
                 <td>Boite d'allume-feu</td>
+                <td>Silex, amorces et amadou, tout ce qu'il faut pour allumer un feu</td>
                 <td>5 pc</td>
-                <td>0</td>
+                <td>1</td>
                 <td>Gamelle</td>
+                <td>Assiette creuse accompagnée de couverts, peut également servir de casserole</td>
                 <td>2 pc</td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>Rations (1 jour)</td>
+                <td>Aliments appropriés pour un long voyage : viande séché, fruits secs, biscuit,...</td>
                 <td>5 pc</td>
                 <td>1</td>
                 <td>Tente</td>
+                <td>Légère et pliable, elle permet à deux personnes de gabarit Moyen de dormir à l'abri des intempéries</td>
                 <td>10 pa</td>
-                <td>3</td>
+                <td>4</td>
             </tr>
             <tr>
                 <td>Sac de couchage</td>
+                <td>Bien enroulé et très chaud, il s'attache facilement sur un sac à dos et permet de passer sa nuit sans grelotter</td>
                 <td>1 pa</td>
-                <td>1</td>
+                <td>2</td>
                 <td>Couverture</td>
+                <td>Peut également servir de tapis de sol, elle tient moins chaud qu'un sac de couchage mais reste indispensable pour un sommeil de qualité</td>
                 <td>5 pc</td>
                 <td>1</td>
             </tr>
             <tr>
-                <th rowspan="3">Cordes et chaînes</th>
+                <th colspan="8">Cordes et chaînes</th>
             </tr>
             <tr>
                 <td>Chaîne (3 m)</td>
+                <td>Lourde chaîne de métal possédant 20 PV</td>
                 <td>35 pa</td>
                 <td>2</td>
-                <td>Corde en chanvre (15 m)</td>
+                <td>Corde (15 m)</td>
+                <td>Longue corde en chanvre possédant 5 PV.</td>
                 <td>1 pa</td>
                 <td>1</td>
             </tr>
             <tr>
-                <td>Corde en soie (15 m)</td>
-                <td>10 pa</td>
-                <td>1</td>
-                <td colspan="3"/>
-            </tr>
-            <tr>
-                <th rowspan="3">Déplacement</th>
+                <th colspan="8">Déplacement</th>
             </tr>
             <tr>
                 <td>Échelle de corde (3 m)</td>
+                <td>Pliable, elle s'attache facilement sur un sac et permet de créer un passage facile sur un mur</td>
                 <td>5 pc</td>
-                <td>1</td>
+                <td>2</td>
                 <td>Équipement d’escalade</td>
+                <td>Crampons et piolets, accorde 3 avantages pour les épreuves d'escalade</td>
                 <td>25 pa</td>
                 <td>2</td>
             </tr>
             <tr>
                 <td>Grappin</td>
+                <td>Permet de sécuriser une corde sans avoir à faire de noeuds, utile lorsque l'on souhaite escaler une falaise</td>
                 <td>2 pa</td>
                 <td>1</td>
                 <td>Palan</td>
+                <td>Système de poulies permettant de monter/descendre de lourdes charges</td>
                 <td>3 pa</td>
                 <td>2</td>
             </tr>
             <tr>
-                <th rowspan="3">Éclairage</th>
+                <th colspan="8">Éclairage</th>
             </tr>
             <tr>
                 <td>Bougie</td>
+                <td>Faite de cire, cette bougie éclaire une petite zone pendant 2 heures</td>
                 <td>1 pc</td>
                 <td>0</td>
-                <td>Lanterne</td>
+                <td>Lampe</td>
+                <td>Faite de métal, cette lampe éclaire une zone modeste et consomme une flasque d'huile toute les 8 heure</td>
                 <td>5 pa</td>
                 <td>1</td>
             </tr>
             <tr>
-                <td>Lanterne sourde</td>
+                <td>Lanterne</td>
+                <td>Faite de métal, cette lanterne éclaire une grande zone, un système de miroir peut être utilisé pour créer un grand cone de lumière, elle consomme une flasque d'huile toute les 4 heure</td>
                 <td>10 pa</td>
-                <td>1</td>
+                <td>2</td>
                 <td>Torche</td>
+                <td>Morceau de bois imbibé d'huile, elle éclaire un zone moyenne pendant 1 heure</td>
                 <td>1 pc</td>
                 <td>1</td>
             </tr>
+            <tr><td colspan="8">Pour plus d'informations, voir <a href="Survie.xhtml#eclairage">Éclairage</a></td></tr>
             <tr>
-                <th rowspan="4">Écrits</th>
+                <th colspan="8">Écrits</th>
             </tr>
             <tr>
                 <td>Craie (un morceau)</td>
+                <td>Permet d'écrire sur presque tout les surfaces mais s'efface avec l'eau</td>
                 <td>1 pc</td>
                 <td>0</td>
                 <td>Grimoire</td>
+                <td>Imposant ouvrage relié de cuir</td>
                 <td>20 pa</td>
                 <td>1</td>
             </tr>
             <tr>
                 <td>Livre</td>
+                <td>Petit ouvrage relié de cuir</td>
                 <td>15 pa</td>
                 <td>1</td>
                 <td>Papier (une feuille)</td>
+                <td>Permet de noter des informations quelconques</td>
                 <td>1 pc</td>
                 <td>0</td>
             </tr>
             <tr>
                 <td>Parchemin (une feuille)</td>
+                <td>Permet de créer des cartes ou des parchemins magiques</td>
                 <td>2 pc</td>
                 <td>0</td>
                 <td>Plume d’écriture</td>
+                <td>Permet d'ecrire sur du papier ou du parchemin</td>
                 <td>2 pc</td>
                 <td>0</td>
             </tr>
             <tr>
-                <th rowspan="5">Liquides</th>
+                <th colspan="8">Liquides</th>
             </tr>
             <tr>
-                <td>Antidote</td>
-                <td>20 pa</td>
+                <td>Fiole vide</td>
+                <td>Petit récipent en verre d'un contenance de 100mL</td>
+                <td>1 pa</td>
                 <td>0</td>
+                <td>Flasque vide</td>
+                <td>Récipent en verre d'un contenance de 500mL</td>
+                <td>2 pa</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Outre vide</td>
+                <td>Récipent en peau d'un contenance de 2L</td>
+                <td>4 pa</td>
+                <td>1</td>
                 <td>Encre</td>
+                <td>À stockée dans une fiole, à combiner avec une plume d'écriture</td>
                 <td>10 pa</td>
                 <td>0</td>
             </tr>
             <tr>
                 <td>Parfum</td>
+                <td>À stocké dans une fiole, peut cacher certaines odeurs, très apprécié dans les évènements mondains</td>
                 <td>5 pa</td>
                 <td>0</td>
-                <td>Poison</td>
-                <td>10 pa</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Acide</td>
-                <td>20 pa</td>
-                <td>0</td>
-                <td>Feu grégeois</td>
-                <td>20 pa</td>
-                <td>0</td>
-            </tr>
-            <tr>
                 <td>Huile</td>
-                <td>1 pc</td>
-                <td>0</td>
-                <td>Potion de soins</td>
-                <td>20 pa</td>
-                <td>0</td>
+                <td>À stockée dans une flasque, très inflammable, sert de combustible à lanterne</td>
+                <td>5 pc</td>
+                <td>1</td>
             </tr>
             <tr>
-                <th rowspan="3">Munitions</th>
+                <th colspan="8">Munitions</th>
             </tr>
             <tr>
                 <td>Baril de poudre (100 doses)</td>
+                <td>Petit tonneau contenant de la poudre noire, la conservant à l'abri de l'humidité et des intempéries</td>
                 <td>50 pa</td>
                 <td>2</td>
-                <td>Balles (20)</td>
-                <td>2 pa</td>
-                <td>1</td>
+                <td colspan="4"/>
             </tr>
             <tr>
-                <td>Plombs (20 poignées)</td>
-                <td>5 pa</td>
-                <td>1</td>
-                <td colspan="3"/>
-            </tr>
-            <tr>
-                <th rowspan="4">Outils</th>
+                <th colspan="8">Outils</th>
             </tr>
             <tr>
                 <td>Bélier portatif</td>
+                <td>Morceau de bois renforcé de métal, permet d'enfoncer les portes avec 3 avantages</td>
                 <td>15 pa</td>
-                <td>4</td>
+                <td>3</td>
+                <td>Crochets(10)</td>
+                <td>Permet de crocheter des serrures verouillés, se casse en cas d'échec du test</td>
+                <td>1 po</td>
+                <td>1</td>
+            </tr>
+            <tr>
                 <td>Marteau</td>
+                <td>Possède un coté plat pour marteler et un arrache clou de l'autre coté, utile dans toute sorte de situation</td>
                 <td>1 pa</td>
                 <td>1</td>
-            </tr>
-            <tr>
                 <td>Pelle</td>
+                <td>Très utile dès qu'on veut creuser la terre</td>
                 <td>5 pa</td>
                 <td>2</td>
-                <td>Pied-de-biche</td>
-                <td>10 pa</td>
-                <td>1</td>
             </tr>
             <tr>
+                <td>Pied-de-biche</td>
+                <td>Permet d'ouvrir par la force les contenants scellés, accorde un bonus de +20 au épreuve de Force où il est possible de faire levier</td>
+                <td>10 pa</td>
+                <td>2</td>
                 <td>Pioche</td>
+                <td>Très utile dès qu'on veut creuser la pierre</td>
                 <td>5 pa</td>
                 <td>3</td>
-                <td colspan="3"/>
             </tr>
             <tr>
-                <th rowspan="2">Optique</th>
+                <th colspan="8">Optique</th>
             </tr>
             <tr>
                 <td>Longue-vue</td>
+                <td>Permet de voir 5 fois plus loin qu'à l'oeil nu</td>
                 <td>50 pa</td>
                 <td>1</td>
                 <td>Loupe</td>
+                <td>Permet de grossir 5 fois un objet proche ou d'allumer un feu s'il y a du soleil</td>
                 <td>20 pa</td>
                 <td>0</td>
             </tr>
             <tr>
-                <th rowspan="3">Pièges</th>
+                <th colspan="8">Pièges</th>
             </tr>
             <tr>
                 <td>Billes (sac de 1000)</td>
+                <td>Petites billes recouvrant une zone de 5m x 5m un fois déversées sur le sol, les entités traversant cette zone doivent passer un test d'Agilité ou tomber <a href="Glossaire.xhtml#a_terre">à terre</a></td>
                 <td>10 pa</td>
                 <td>1</td>
                 <td>Chausse-trappes (sac de 20)</td>
+                <td>Petits picots métalliques présentant toujours une pointe vers le haut recouvrant une zone de 2m x 2m une fois déversées sur le sol, les entités traversant cette zone perdent un PV et voient leur vitesse divisée par deux tant qu'ils n'ont pas récupéré au moins un PV.</td>
                 <td>5 pa</td>
                 <td>1</td>
             </tr>
             <tr>
                 <td>Piège à mâchoires</td>
+                <td>Anneau d'acier en dents de scie s'activant via une plaque de pression et possédant une chaîne d'un mètre, une entité activant le piège perds 5 PV et voit sa vitesse divisée par 4 tant qu'elle n'a pas récupéré ces 5 PV. Elle peut se libérer en passant un test de Force avec 2 désavantages, chaque échec fait perdre un PV supplémentaire.</td>
                 <td>25 pa</td>
                 <td>3</td>
-                <td>Pointes en fer (10)</td>
+                <td>Pointes en fer (5)</td>
+                <td>Bâtons métalliques de 20cm possédant une tête plate et une pointe, utile dans toute sorte de situations</td>
                 <td>1 pa</td>
                 <td>1</td>
             </tr>
             <tr>
-                <th rowspan="2">Outils de marchand</th>
+                <th colspan="8">Outils de marchand</th>
             </tr>
             <tr>
                 <td>Balance de marchand</td>
+                <td>Plateaux et arrangements de poids, permet de déterminer le poids exact d'objets inférieur à 1 kg</td>
                 <td>25 pa</td>
-                <td>2</td>
+                <td>1</td>
                 <td>Boulier</td>
+                <td>Cadre de bois remplis de tiges serties de boules servant à compter rapidement de grand nombres.</td>
                 <td>2 pa</td>
                 <td>1</td>
             </tr>
             <tr>
-                <th rowspan="8">Autres</th>
+                <th colspan="8">Autres</th>
             </tr>
             <tr>
                 <td>Cadenas</td>
+                <td>Solide cadenas métallique, nécessite au moins 10 DR sur un test étendu de crochetage</td>
                 <td>35 pa</td>
                 <td>0</td>
                 <td>Chevalière</td>
+                <td>Bague possédant un relief, permet d'apposer un sceau à la cire</td>
                 <td>20 pa</td>
                 <td>0</td>
             </tr>
             <tr>
                 <td>Cire à cacheter</td>
+                <td>Petit bâton de cire à faire foncre pour cacheter des documents importants</td>
                 <td>5 pc</td>
                 <td>0</td>
                 <td>Cloche</td>
+                <td>Cloche à main résonnant bruyamment quand secouée</td>
                 <td>1 pa</td>
-                <td>0</td>
+                <td>1</td>
             </tr>
             <tr>
                 <td>Matériel de pêche</td>
+                <td>Canne, lignes, hameçons et leurres, permet de pêcher n'importe où. Sur un test étendu de Survie(Dex) Très facile(+30), vous lancez un dé par heure, à la fin du test, diviser le DR total par 2, c'est le nombre de ration de poisson que vous obtenez.</td>
                 <td>1 pa</td>
-                <td>1</td>
+                <td>2</td>
                 <td>Menottes</td>
+                <td>Solides attaches métalliques possédant 10 PV, pouvant <a href="Glossaire.xhtml#entrave">entraver</a> une créature de Gabarit Moyen ou Petit.</td>
                 <td>25 pa</td>
                 <td>0</td>
             </tr>
             <tr>
                 <td>Miroir en acier</td>
+                <td>Petit mirroir fort utile pour se recoiffer ou voir sans être vu depuis un mur en angle</td>
                 <td>15 pa</td>
-                <td>0</td>
+                <td>1</td>
                 <td>Perche (3 m)</td>
+                <td>Longue perche de bois possédant de nombreuses applications</td>
                 <td>5 pc</td>
                 <td>2</td>
             </tr>
             <tr>
                 <td>Pierre à aiguiser</td>
-                <td>1 pc</td>
+                <td>Petite pierre faite pour affiner le fil d'une lame</td>
+                <td>3 pc</td>
                 <td>0</td>
-                <td>Sablier</td>
+                <td>Sablier / Clepsydre</td>
+                <td>Petit contenant en verre contenant du sable / de l'eau mettant un temps déterminé à s'écouler</td>
                 <td>25 pa</td>
                 <td>0</td>
             </tr>
             <tr>
                 <td>Savon</td>
+                <td>Petit cube de savon possédant de nombreuses applications</td>
                 <td>5 pc</td>
                 <td>0</td>
-                <td>Sifflet</td>
+                <td>Sifflet / Appeau</td>
+                <td>Petit sifflet émettant du bruit dans une zone donnée. Certains imintent le cri d'un animal.</td>
                 <td>5 pc</td>
                 <td>0</td>
             </tr>
             <tr>
                 <td>Trousse de soins</td>
+                <td>Bandages, aiguille et fil de suture, tout le nécessaire pour panser des plaies. Permet de stabiliser une créature mourante sur un test de Médecine(Int ou Dex) avec 2 avantages.</td>
                 <td>25 pa</td>
                 <td>1</td>
-                <td colspan="3"/>
+                <td colspan="4"/>
             </tr>
             </tbody>
         </table>
-        <h3 onclick="hideContent(this)">Description et règles spéciales des objets</h3>
-        <div class="hidden">
-            <p><strong>Acide</strong>. Au prix d'une action, vous pouvez verser le contenu de ce flacon sur une créature à 1 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, le brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet. En cas de succès, la cible reçoit 2d6 dégâts d'acide.</p>
-            <p><strong>Antidote</strong>. Une créature qui boit cette fiole gagne un bonus de 5 aux jets de sauvegarde contre le poison pendant 1 heure. Il ne confère aucun avantage aux morts-vivants et aux créatures artificielles.</p>
-            <p><strong>Balance de marchand</strong>. Cela comprend une petite balance, des plateaux et un assortiment de poids approprié jusqu'à 1 kg. Avec, vous pouvez mesurer le poids exact de petits objets, tels que des métaux précieux ou des biens commerciaux, pour aider à déterminer leur valeur.</p>
-            <p><strong>Bélier portatif</strong>. Vous pouvez utiliser un bélier portatif pour enfoncer des portes. Ce faisant, vous gagnez un bonus de +4 au jet de Force. Un autre personnage peut vous aider à utiliser le bélier, ce qui vous donne un avantage à ce jet.</p>
-            <p><strong>Billes</strong>. Au prix d'une action, vous pouvez sortir ces petites billes métalliques de leur poche pour recouvrir une zone de 3 m x 3 m. Une créature se déplaçant à travers la zone recouverte doit réussir un jet de sauvegarde d'Agilité ou tomber à terre. Une créature se déplaçant à travers la zone à la moitié de sa vitesse n'a pas besoin de faire le jet de sauvegarde.</p>
-            <p><strong>Boite d'allume-feu</strong>. Cette petite boite contient un silex, des amorces et de l'amadou (généralement des bouts de tissu sec trempés dans de l'huile), soit tout le nécessaire pour allumer un feu. L'utiliser pour allumer une torche, ou autre chose qui contient suffisamment d'huile, prend une action. Allumer tout autre type de feu prend 1 minute.</p>
-            <p><strong>Bougie</strong>. Une bougie génère une lumière vive dans un rayon de 1,50 mètre et une lumière faible sur 1,50 mètre supplémentaire durant 1 heure.</p>
-            <p><strong>Cadenas</strong>. Une clé est fournie avec le cadenas. Des cadenas de meilleure qualité (plus difficile à crocheter) sont disponibles à des prix plus élevés.</p>
-            <p><strong>Carquois</strong>. Un carquois peut contenir jusqu'à 20 flèches.</p>
-            <p><strong>Chaîne</strong>. Une chaîne peut être brisée en réussissant un jet de Force avec un malus de 10.</p>
-            <p><strong>Chausse-trappes</strong>. Au prix d'une action, vous pouvez étaler le contenu d'un sac de chausse-trappes pour couvrir une zone de 1,50 m x 1,50 m. Toute créature qui entre dans la zone doit réussir un jet de sauvegarde d'Agilité avec un malus de 5 ou mettre fin à son mouvement et prendre 1 point de dégâts perforants. Jusqu'à ce que la créature retrouve au moins 1 point de vie, sa vitesse de marche est réduite de moitié. Une créature se déplaçant à travers la zone à la moitié de sa vitesse n'a pas besoin de faire le jet de sauvegarde.</p>
-            <p><strong>Corde</strong>. Une corde, qu'elle soit faite de chanvre ou de soie, peut être cassée avec un jet de Force avec un malus de 5.</p>
-            <p><strong>Équipement d'escalade</strong>. Ce kit comprend des pitons spéciaux, des pointes pour les chaussures, des gants et un harnais. Vous pouvez utiliser le matériel d'escalade pour vous accrocher au prix d'une action ; une fois fait, vous ne pouvez pas tomber de plus de 7,50 mètres de l'endroit où vous êtes ancré. l'équipement accorde un bonus de 4 aux tentatives d'escalade.</p>
-            <p><strong>Feu grégeois</strong>. Ce liquide adhésif et collant s'enflamme lorsqu'il est exposé à l'air. Au prix d'une action, vous pouvez jeter cette flasque jusqu'à 6 mètres, la brisant à l'impact. Faire une attaque à distance contre une créature ou un objet. En cas de succès, la cible reçoit 1d4 dégâts de feu au début de chacun de ses tours. Une créature peut mettre fin à ces dégâts en utilisant son action pour faire un jet de Dextérité pour éteindre les flammes.</p>
-            <p><strong>Gamelle</strong>. Cette boîte en étain contient une tasse et des couverts. Faite de deux parties qui s'assemblent, un côté de la boîte peut être utilisé pour cuire des aliments et l'autre comme une assiette ou une petite cuvette.</p>
-            <p><strong>Grimoire</strong>. Essentiel pour les érudits, un grimoire est un livre relié en cuir qui contient 100 pages de vélin blanc.</p>
-            <p><strong>Huile</strong>. L'huile vient habituellement dans une flasque d'argile de 50 cl. Au prix d'une action, vous pouvez lancer le contenu de cette flasque sur une créature à 1,50 mètre ou moins de vous, ou jeter la flasque jusqu'à 6 mètres, la brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet. En cas de succès, la cible est couverte d'huile. Si la cible reçoit des dégâts de feu avant que l'huile ne sèche (après 1 minute), la cible prend 5 points de dégâts de feu supplémentaire dus à l'huile brûlante. Vous pouvez aussi verser une flasque d'huile sur le sol pour couvrir une zone de 1,50 m x 1,50 m, à condition que la surface soit plane. Une fois allumée, l'huile brûle pendant 2 rounds et inflige 5 points de dégâts de feu à toute créature qui pénètre dans la zone ou qui y termine son tour. Une créature ne peut prendre ces dégâts qu'une fois par tour.</p>
-            <p><strong>Livre</strong>. Un livre peut contenir de la poésie, des récits historiques, des informations relatives à un domaine particulier de connaissance, des diagrammes et des notes sur une invention gnome, ou n'importe quoi d'autre qui peut être représenté en utilisant du texte ou des images. Un livre contient 50 pages de vélin blanc.</p>
-            <p><strong>Longue-vue</strong>. Les objets vus à travers une longue-vue sont amplifiés de cinq fois leur taille.</p>
-            <p><strong>Loupe</strong>. Ce verre permet un examen plus minutieux des petits objets. Il est également utile comme substitut au silex pour allumer un feu. Allumer un feu avec une loupe nécessite une lumière aussi vive que celle du soleil pour faire prendre l'amadou, et environ 5 minutes pour que le feu prenne. Une loupe donne un avantage aux jets de caractéristique pour évaluer ou inspecter un objet de petite taille ou très détaillé.</p>
-            <p><strong>Matériel de pêche</strong>. Ce kit comprend une tige en bois, une ligne de soie, des flotteurs en liège, des hameçons en acier, des plombs, des leurres en velours et un petit filet.</p>
-            <p><strong>Menottes</strong>. Ces menottes métalliques servent pour une créature de taille Petite ou Moyenne. Se libérer des menottes nécessite un jet de Dextérité avec un malus de 10. Briser les menottes nécessite un jet de Force avec un malus de 10. Chaque paire de menottes est livrée avec une clé.</p>
-            <p><strong>Palan</strong>. Ensemble de poulies avec un câble et un crochet pour attacher des objets, un palan permet de hisser jusqu'à quatre fois le poids que vous pouvez normalement soulever.</p>
-            <p><strong>Pied-de-biche</strong>. Un pied de biche octroie un avantage aux jets de Force lorsque le levier du pied de biche peut être utilisé.</p>
-            <p><strong>Piège à mâchoires</strong>. Lorsque vous utilisez votre action pour l'installer, ce piège forme un anneau d'acier en dents de scie qui se referme lorsqu'une créature marche sur la plaque de pression située au centre. Le piège est fixé par une lourde chaîne à un objet immobile, comme un arbre ou un pic enfoncé dans le sol. Une créature qui marche sur la plaque doit réussir un jet de sauvegarde d'Agilité avec un malus de 5 ou prendre 1d6 points de dégâts perforants et devoir s'arrêter de bouger. Par la suite, tant que la créature ne s'échappe pas du piège, son mouvement est limité par la longueur de la chaîne (généralement un mètre de long). Une créature peut utiliser son action pour faire un jet de Force avec un malus de 5 pour se libérer ou libérer une autre créature à sa portée en cas de succès. Chaque échec inflige 1 point de dégâts perforants à la créature piégée.</p>
-            <p><strong>Poison</strong>. Vous pouvez utiliser le poison de cette fiole pour couvrir une arme tranchante ou perforante, ou jusqu'à trois munitions. Appliquer le poison prend une action. Une créature touchée par une arme ou une munition empoisonnée doit réussir un jet de sauvegarde de Constitution ou prendre 1d4 points de dégâts de poison par tour pendant 3 tours. Une fois appliqué, le poison conserve son activité 1 minute avant de sécher.</p>
-            <p><strong>Potion de soins</strong>. Un personnage qui boit le liquide alchimique rouge de ce flacon reprend 2d4 + 2 points de vie. Boire ou administrer une potion prend une action.</p>
-            <p><strong>Rations</strong>. Aliments compacts et secs appropriés pour un voyage prolongé, les rations incluent du bœuf séché, des fruits secs, des biscuits et des noix.</p>
-            <p><strong>Tente</strong>. Abri de toile simple et portable, une tente peut accueillir deux personnes.</p>
-            <p><strong>Torche</strong>. Une torche brûle pendant 1 heure, projetant une lumière vive dans un rayon de 6 mètres et une lumière faible sur 6 mètres supplémentaires. Si vous effectuez une attaque au corps à corps avec une torche enflammée et touchez (Atq 10), vous infligez 3 point de dégât de feu.</p>
-            <p><strong>Trousse de soins</strong>. Ce kit est un étui en cuir qui contient des bandages, des pommades et des attelles. Le kit permet dix utilisations. Au prix d'une action, vous pouvez dépenser une utilisation du kit pour stabiliser une créature mourante sans avoir à réaliser de jet.</p>
-        </div>
     </div>
 
     <h1 id="taverne" onclick="hideContent(this)">Taverne</h1>
