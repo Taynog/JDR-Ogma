@@ -39,6 +39,7 @@ table.table_horizontal tbody td{
     margin: 5px;
     background-color: navajowhite;
 }
+
 table.table_horizontal tbody th{
     border-style: none;
     border-bottom: 1px solid black;
@@ -65,6 +66,10 @@ table.table_bestiary tbody td{
     margin: 2px;
 }
 
+table.table_effet td[rowspan="2"]~td{
+    border-bottom: 1px dotted black;
+}
+
 #table_carac_origine td.bonus{
     background-color: #f0ec77;
 }
@@ -73,12 +78,6 @@ table.table_bestiary tbody td{
     background-color: lightsalmon;
 }
 
-th,td{/*Affecte les cases d'en-tête et celle de corps*/
-    border-style: solid;  /*Rend la bordure pleine*/
-    border-color: black;  /*Rend la bordure noire*/
-    border-width: medium;  /*Rend la bordure moyennement épaisse*/
-    padding: 5px;  /*Crée une marge de 10 pixel entre le contenu des cellules et les bordures*/
-}
 
 
 caption{/*Affecte la classe caption*/
@@ -89,6 +88,7 @@ caption{/*Affecte la classe caption*/
 
 .underline{
     text-decoration: underline;
+    padding-right: 5px;
 }
 
 .big_underline{

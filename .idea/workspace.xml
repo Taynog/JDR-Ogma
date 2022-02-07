@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Tanguy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" afterDir="false" />
@@ -31,7 +31,7 @@
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Downloads/Fiche Perso Ogma.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Downloads/Fiche Perso Ogma.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,15 +68,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content\Collection" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -264,6 +264,20 @@
       <workItem from="1633857411928" duration="6630000" />
       <workItem from="1633893269266" duration="5346000" />
       <workItem from="1634189792245" duration="1187000" />
+      <workItem from="1639999625075" duration="7559000" />
+      <workItem from="1640165282522" duration="10704000" />
+      <workItem from="1640251572601" duration="26134000" />
+      <workItem from="1640333479241" duration="16244000" />
+      <workItem from="1641192809133" duration="5565000" />
+      <workItem from="1641289583631" duration="13677000" />
+      <workItem from="1643359465215" duration="2008000" />
+      <workItem from="1643614039405" duration="10851000" />
+      <workItem from="1644140311812" duration="9281000" />
+      <workItem from="1644154238652" duration="414000" />
+      <workItem from="1644154676066" duration="1267000" />
+      <workItem from="1644155971802" duration="12070000" />
+      <workItem from="1644214550760" duration="1894000" />
+      <workItem from="1644216740951" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
@@ -283,24 +297,23 @@
     <option name="LAST_COMMIT_MESSAGE" value="maj armures" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="498" height="446" key="SwitcherDM" timestamp="1632598008983">
+    <state x="425" y="185" width="1349" height="710" key="SettingsEditor" timestamp="1644157605456">
+      <screen x="0" y="0" width="1848" height="1080" />
+    </state>
+    <state x="425" y="185" width="1349" height="710" key="SettingsEditor/0.0.1848.1080/-1440.180.1440.900@0.0.1848.1080" timestamp="1644157605456" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1641306865001">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/-1280.336.1218.1024/1920.0.900.1440/0.0.1858.1080@0.0.1858.1080" timestamp="1632598008983" />
-    <state x="1121" y="2" width="706" height="314" key="find.popup" timestamp="1633896495771">
+    <state width="498" height="446" key="SwitcherDM/0.0.1858.1080/-1440.174.1440.900@0.0.1858.1080" timestamp="1641306865001" />
+    <state x="583" y="179" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1641195573588">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="1121" y="2" width="706" height="314" key="find.popup/-1280.336.1218.1024/1920.0.900.1440/0.0.1858.1080@0.0.1858.1080" timestamp="1633896495771" />
-    <state x="1051" y="3" width="706" height="682" key="find.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1627469529945" />
-    <state x="1051" y="3" width="706" height="740" key="find.popup/1920.0.838.1440/0.0.1858.1080/-1280.336.1280.1024@0.0.1858.1080" timestamp="1630268465277" />
-    <state x="570" y="266" width="700" height="530" key="recent.locations.popup" timestamp="1630338934482">
-      <screen x="0" y="0" width="1858" height="1080" />
+    <state x="583" y="179" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1858.1080/-1440.174.1440.900@0.0.1858.1080" timestamp="1641195573588" />
+    <state x="936" y="217" width="706" height="772" key="find.popup" timestamp="1644164267051">
+      <screen x="0" y="0" width="1855" height="1080" />
     </state>
-    <state x="570" y="266" width="700" height="530" key="recent.locations.popup/-1280.336.1218.1024/1920.0.900.1440/0.0.1858.1080@0.0.1858.1080" timestamp="1630338934482" />
-    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1630271073851">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1858.1080/-1440.180.1440.900@0.0.1858.1080" timestamp="1627485459647" />
-    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup/1920.0.838.1440/0.0.1858.1080/-1280.336.1280.1024@0.0.1858.1080" timestamp="1630271073851" />
+    <state x="1115" y="2" width="703" height="772" key="find.popup/0.0.1848.1080/-1440.180.1440.900@0.0.1848.1080" timestamp="1644159740237" />
+    <state x="936" y="217" width="706" height="772" key="find.popup/0.0.1855.1080/-1440.180.1440.900@0.0.1855.1080" timestamp="1644164267051" />
+    <state x="1121" y="2" width="706" height="650" key="find.popup/0.0.1858.1080/-1440.174.1440.900@0.0.1858.1080" timestamp="1641305778055" />
   </component>
 </project>
