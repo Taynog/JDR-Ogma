@@ -1,43 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Tanguy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sarpa.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sarpa.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sever.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sever.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sihir.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sihir.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Armes.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Armes.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Armures.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Armures.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Artisanat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Artisanat.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Combat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Combat.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Magie.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Magie.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Personnage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Personnage.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Survie.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Survie.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Systeme.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Systeme.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/arts_du_combat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/arts_du_combat.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
-    </list>
+    <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,6 +26,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="1bIrkLg5ShYynbTbyBwC3s6qnBE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -61,21 +45,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "G:/wamp64/www/ogma.sql",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\wamp64\www" />
+      <recent name="G:\wamp64\www\Data\World" />
       <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content\Collection" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\wamp64\www\Tools" />
+      <recent name="G:\wamp64\www\Data" />
+      <recent name="G:\wamp64\www" />
       <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content" />
     </key>
   </component>
@@ -278,6 +279,15 @@
       <workItem from="1644155971802" duration="12070000" />
       <workItem from="1644214550760" duration="1894000" />
       <workItem from="1644216740951" duration="95000" />
+      <workItem from="1654519547197" duration="87000" />
+      <workItem from="1654519699599" duration="870000" />
+      <workItem from="1654520714091" duration="600000" />
+      <workItem from="1654521396197" duration="10404000" />
+      <workItem from="1654587399067" duration="13900000" />
+      <workItem from="1654772502707" duration="7342000" />
+      <workItem from="1656237048044" duration="7176000" />
+      <workItem from="1695990962895" duration="979000" />
+      <workItem from="1695992604088" duration="513000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
@@ -292,28 +302,26 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.php" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="maj armures" />
     <option name="LAST_COMMIT_MESSAGE" value="maj armures" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="425" y="185" width="1349" height="710" key="SettingsEditor" timestamp="1644157605456">
-      <screen x="0" y="0" width="1848" height="1080" />
-    </state>
-    <state x="425" y="185" width="1349" height="710" key="SettingsEditor/0.0.1848.1080/-1440.180.1440.900@0.0.1848.1080" timestamp="1644157605456" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1641306865001">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1858.1080/-1440.174.1440.900@0.0.1858.1080" timestamp="1641306865001" />
-    <state x="583" y="179" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1641195573588">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="583" y="179" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1858.1080/-1440.174.1440.900@0.0.1858.1080" timestamp="1641195573588" />
-    <state x="936" y="217" width="706" height="772" key="find.popup" timestamp="1644164267051">
-      <screen x="0" y="0" width="1855" height="1080" />
-    </state>
-    <state x="1115" y="2" width="703" height="772" key="find.popup/0.0.1848.1080/-1440.180.1440.900@0.0.1848.1080" timestamp="1644159740237" />
-    <state x="936" y="217" width="706" height="772" key="find.popup/0.0.1855.1080/-1440.180.1440.900@0.0.1855.1080" timestamp="1644164267051" />
-    <state x="1121" y="2" width="706" height="650" key="find.popup/0.0.1858.1080/-1440.174.1440.900@0.0.1858.1080" timestamp="1641305778055" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
