@@ -1,0 +1,440 @@
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Armure Physique",
+    "-",
+    "3*SC",
+    "1 minute",
+    "La cible obtient SC PR sur toute les localisations.",
+    "Pravoï",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Armure Magique",
+    "-",
+    "3*SC",
+    "1 minute",
+    "La cible obtient SC PR magique.",
+    "Pravoï",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Protection",
+    "Réaction",
+    "2*SC",
+    "-",
+    "Réduis les dégâts subis par la cible de 2*SC pour une seule attaque.",
+    "Pravoï",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Entrave",
+    "Concentration",
+    "3*SC",
+    "-",
+    "La cible doit passer un test de Force, de Vigueur ou de Volonté un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort. puis être <a href='Glossaire.xhtmlmaitrise_paralysie'>maitrisée</a> tant que le lanceur se concentre sur le sort.",
+    "Aux cercles supérieurs, la cible effectue son jet avec un désavantage supplémentaire par cercle au delà du premier.",
+    "Pravoï",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Toile d'araignée",
+    "-",
+    "2*SC",
+    "1 minute",
+    "L'endroit ciblé par le lanceur diminue la vitesse des entité le traversant de 1.",
+    "Aux cercles supérieurs, la réduction de vitesse est doublée pour chaque cercle au delà du premier",
+    "Kynigi",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Invocation de Karnarim élémentaire mineur",
+    "[Acide, Eau, Feu, Foudre, Glace, Lumière, Métal, Nécrotique, Pierre, Poison, Sable, Terre]",
+    "6",
+    "1 minute",
+    "Invoque un Karnarim mineur de l'[élément]. Voir <a href='../World/Bestiaire.php#elementaire_mineur'>Élémentaire mineur</a> dans le Bestiaire.",
+    "Aïgida, Anathos, Horoï, Kormo, Kuga, Nero, Ourgal, Safi",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Invocation de Karnarim élémentaire",
+    "[Acide, Eau, Feu, Foudre, Glace, Lumière, Métal, Nécrotique, Pierre, Poison, Sable, Terre]",
+    "12",
+    "1 minute",
+    "Invoque un Karnarim de l'[élément]. Voir <a href='../World/Bestiaire.php#elementaire'>Élémentaire</a> dans le Bestiaire.",
+    "Aïgida, Anathos, Horoï, Kormo, Kuga, Nero, Ourgal, Safi",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Invocation de Karnarim élémentaire majeur",
+    "[Acide, Eau, Feu, Foudre, Glace, Lumière, Métal, Nécrotique, Pierre, Poison, Sable, Terre]",
+    "18",
+    "1 minute",
+    "Invoque un Karnarim de l'[élément]. Voir <a href='../World/Bestiaire.php#elementaire_majeur'>Élémentaire majeur</a> dans le Bestiaire.",
+    "Aïgida, Anathos, Horoï, Kormo, Kuga, Nero, Ourgal, Safi",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Invocation d'Arme",
+    "-",
+    "3*SC",
+    "1 heure",
+    "Invoque une arme infligeant 1d4 dégâts magiques à l'endroit ciblé, cette arme peut utiliser la caractéristique de Volonté du lanceur pour les jets de Style de Combat.",
+    "Aux cercles supérieurs, le dé de dégâts de l'arme invoqué augmente d'un <a href='Systeme.php#cran_des'>cran</a>.",
+    "Agones",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Projection psychique",
+    "Concentration",
+    "5*SC",
+    "-",
+    "L'esprit de cible est envoyé dans un domaine de Karnaï. Elle doit passer un test étendu de Vigueur ou Volonté un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort. si elle souhaite résister. Sans esprit pour le contrôler, le corps de la cible est inanimé pendant cette période. Une minute dans le monde matériel équivaut à une heure dans le monde de Karnaï.",
+    "Aux cercles supérieurs, la cible effectue son jet avec un désavantage supplémentaire par cercle au delà du premier.",
+    "Selon le domaine visité",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Bannissement",
+    "-",
+    "8",
+    "-",
+    "La cible est renvoyé dans sa dimension d'Origine. Elle doit passer un test de Vigueur ou Volonté avec un DC équivalent au DR du lanceur si elle souhaite résister.",
+    "Pravoï",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Pas de l'ombre",
+    "-",
+    "4*SC",
+    "-",
+    "La cible doit se tenir dans une ombre. Elle se téléporte dans une autre ombre située à moins de 10 mètres de sa position. Si elle souhaite résister, elle doit passer un test de Volonté avec un DC équivalent au résultat du lanceur.",
+    "Aux cercles supérieurs, la portée de téléportation double pour chaque cercle au delà du premier.",
+    "Eftis",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Téléportation",
+    "-",
+    "5*SC",
+    "-",
+    "La cible se téléporte sur une distance de 10 mètres ou moins dans un éclair de lumière. Si elle souhaite résister, elle doit passer un test de Volonté avec un DC équivalent au résultat du lanceur.",
+    "Aux cercles supérieurs, la portée de téléportation double pour chaque cercle au delà du premier.",
+    "Safi",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Racines du monde",
+    "-",
+    "3*SC",
+    "-",
+    "La cible se téléporte via les racines d'un arbre sur une distance de 10 mètres ou moins, elle doit être en contact avec un arbre en vie et réapparaître sur un autre arbre en vie. Si elle souhaite résister, elle doit passer un test de Volonté avec un DC équivalent au résultat du lanceur.",
+    "Aux cercles supérieurs, la portée de téléportation double pour chaque cercle au delà du premier.",
+    "Kormo",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Assaut minéral",
+    "[Métal, Pierre, Terre, Sable]",
+    "3*SC",
+    "-",
+    "La cible subit SCd4 dégâts physiques.",
+    "Kormo, Ourgal",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Assaut élémentaire",
+    "[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]",
+    "3*SC",
+    "-",
+    "La cible subit SCd4 dégâts d'[Élément].",
+    "Aïgida, Anathos, Horoï, Kuga, Nero, Safi",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Création élémentaire",
+    "Concentration, [Glace, Métal, Pierre, Sable, Terre]",
+    "2*SC",
+    "-",
+    "L'[élément] apparaît à l'endroit ciblé et reste tant que le lanceur reste concentré dessus. La création doit subir 5 dégâts avant de se briser.",
+    "Aux cercles supérieurs, la solidité de la création double pour chaque cercle au delà du premier.",
+    "Kormo, Nero, Ourgal",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Bourrasque",
+    "Concentration",
+    "2*SC",
+    "-",
+    "Invoque du vent se déplaçant à 25km/h à l'endroit ciblé, la directon du vent est au choix du lanceur.",
+    "Aux cercles supérieurs, la vitesse du vent double pour chaque cercle au delà du premier.",
+    "Aïgida",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Spores [type]",
+    "[paralysie, sommeil, poison,...]",
+    "3*SC",
+    "-",
+    "Invoque des spores infligeant l'effet [type]. La cible doit réussir un test étendu de Vigueur ou Volonté un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort.. (<a href='Glossaire.php#paralyse'>Paralysie</a> pendant SC round, sommeil pendant SC minutes, Poison : <a href='Glossaire.php#empoisonnement'>Empoisonnement(SC)</a>,...)",
+    "Kormo",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Chaleur",
+    "Concentration",
+    "2*SC",
+    "-",
+    "Augmente la température ambiante de la cible de 5 C°.",
+    "Aux cercles supérieurs, l'augmentation de chaleur double pour chaque cercle au delà du premier.",
+    "Horoï",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Fraîcheur",
+    "Concentration",
+    "2*SC",
+    "-",
+    "Diminue la température ambiante de la cible de 5 C°.",
+    "Aux cercles supérieurs, la diminution de chaleur double pour chaque cercle au delà du premier.",
+    "Nero",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Lumière",
+    "-",
+    "2*SC",
+    "1 heure",
+    "Génère de la lumière vive sur 5 mètres et de la lumière faible sur 10 mètre de façon circulaire.",
+    "Aux cercles supérieurs, la portée de la lumière double pour chaque cercle au delà du premier.",
+    "Safi",
+    "Conjuration"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Création illusoire",
+    "Concentration",
+    "3*SC",
+    "-",
+    "Façonne une création intangible de la forme souhaitée avec sons et odeurs de gabarit TP. Un test d'Observation ou d'Investigation avec un DC équivalent au résultat du lanceur est nécessaire pour se rendre compte de l'illusion sans la toucher.",
+    "Pour chaque cercle au delà du premier, le <a href='Tableaux.php#gabarit_creatures'>gabarit</a> de l'illusion augmente d'un cran jusqu'au gabarit Colossale au cercle 8.",
+    "Psema",
+    "Conjuration"
+);

@@ -1,43 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.43554798" />
+    <option name="FILTER_RESOLVED_ITEMS" value="false" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="62100311-9e11-484e-8e77-d52dbfb33c1b" name="Default Changelist" comment="maj armures">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Tanguy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Rules/Gabarit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sarpa.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sarpa.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sever.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sever.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sihir.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Sihir.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Armes.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Armes.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Armures.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Armures.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Artisanat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Artisanat.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Combat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Combat.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Magie.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Magie.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Personnage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Personnage.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Survie.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Survie.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Systeme.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Systeme.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/arts_du_combat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/Rules/arts_du_combat.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Styles/common_rules.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/.idea/SITE_nom1_nom2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Azuma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Azuma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Chono.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Chono.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Kanta.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Kanta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Mushuk.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Mushuk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sakha.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Sakha.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sarpa.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Sarpa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sever.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Sever.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Sihir.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Sihir.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Steinn.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Steinn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tori.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Tori.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Factions/Tuskizi.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Factions/Tuskizi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Armes.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Armes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Armures.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Armures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Artisanat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Artisanat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Combat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Combat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Glossaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Glossaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Magie.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Magie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Objets.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Objets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Personnage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Personnage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Survie.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Survie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Systeme.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Systeme.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Tableaux.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/Types_actions.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/Types_actions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/Rules/arts_du_combat.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Rules/arts_du_combat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/World/Bestiaire.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/World/Bestiaire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/World/Carte_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/World/Carte_Ogma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Content/World/Histoire_Ogma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/World/Histoire_Ogma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Downloads/Fiche Perso Ogma imprimable.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Downloads/Fiche Perso Ogma imprimable.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Downloads/Fiche Perso Ogma.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Downloads/Fiche Perso Ogma.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Downloads/Fiche perso Ogma numérique.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Downloads/Fiche perso Ogma numérique.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Arbre_golem.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Arbre_golem.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Bulvak.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Bulvak.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Demigriffon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Demigriffon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Elementaire.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Elementaire.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Elementaire_majeur.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Elementaire_majeur.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Elementaire_mineur.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Elementaire_mineur.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Geant_foret.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Geant_foret.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Griffon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Griffon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Kipine.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Kipine.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Koibra.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Koibra.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Leshen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Leshen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Minotaure.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Minotaure.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Rodrak_assassin.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Rodrak_assassin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Rodrak_esclave.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Rodrak_esclave.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Rodrak_geant.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Rodrak_geant.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Rodrak_guerrier.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Rodrak_guerrier.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Rodrak_ingenieur.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Rodrak_ingenieur.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Rodrak_seigneur.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Rodrak_seigneur.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Scaratrok.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Scaratrok.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Soldat_cavalier.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Soldat_cavalier.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Soldat_combattant.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Soldat_combattant.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Soldat_eclaireur.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Soldat_eclaireur.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Soldat_lancier.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Soldat_lancier.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Soldat_mage.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Soldat_mage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Soldat_officier.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Soldat_officier.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Soldat_sorcier.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Soldat_sorcier.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Spitfire.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Spitfire.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Bestiary/Zheng.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Bestiary/Zheng.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Azuma_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Azuma_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Azuma_picture2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Azuma_picture2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Azuma_ville.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Azuma_ville.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Chono_hyena.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Chono_hyena.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Chono_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Chono_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Chono_raid.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Chono_raid.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Chono_wolf.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Chono_wolf.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Kanta_guerrier.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Kanta_guerrier.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Kanta_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Kanta_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Kanta_village.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Kanta_village.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Mushuk_base.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Mushuk_base.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Mushuk_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Mushuk_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Mushuk_port.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Mushuk_port.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Mushuk_warrior.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Mushuk_warrior.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sakha_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sakha_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sakha_picture2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sakha_picture2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sakha_village.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sakha_village.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sarpa_filsecaille.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sarpa_filsecaille.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sarpa_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sarpa_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sarpa_ville.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sarpa_ville.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sever_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sever_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sever_picture2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sever_picture2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sever_village.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sever_village.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sever_ville.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sever_ville.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sihir_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sihir_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sihir_picture2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sihir_picture2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Sihir_ville.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Sihir_ville.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Steinn_Khazun_ville.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Steinn_Khazun_ville.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Steinn_Rakaj_ville.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Steinn_Rakaj_ville.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Steinn_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Steinn_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Tori_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Tori_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Tori_picture2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Tori_picture2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Tuskizi_picture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Tuskizi_picture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Factions/Tuskizi_ville.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Factions/Tuskizi_ville.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Misc/Archipel_Quan_Dao.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Misc/Archipel_Quan_Dao.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Misc/Carte_Ogma.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Misc/Carte_Ogma.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Misc/fiche_perso1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Misc/fiche_perso1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Misc/fiche_perso2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Misc/fiche_perso2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Misc/fiche_perso3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Misc/fiche_perso3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Misc/fiche_perso4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Misc/fiche_perso4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Misc/sidenav_plus.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/Misc/sidenav_plus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Javascript/fonctions_accueil_plan.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Styles/common_rules.css" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/common_rules.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,6 +137,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="1bIrkLg5ShYynbTbyBwC3s6qnBE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -61,21 +153,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/wamp64/www/ogma.sql&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\wamp64\www\Data\Rules" />
+      <recent name="G:\wamp64\www" />
+      <recent name="G:\wamp64\www\Data\World" />
       <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content\Collection" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\wamp64\www\Tools" />
+      <recent name="G:\wamp64\www\Data" />
+      <recent name="G:\wamp64\www" />
       <recent name="G:\JDR\Ogma\Site Internet\SITE_Ogma\Data\Content" />
     </key>
   </component>
@@ -278,6 +382,32 @@
       <workItem from="1644155971802" duration="12070000" />
       <workItem from="1644214550760" duration="1894000" />
       <workItem from="1644216740951" duration="95000" />
+      <workItem from="1654519547197" duration="87000" />
+      <workItem from="1654519699599" duration="870000" />
+      <workItem from="1654520714091" duration="600000" />
+      <workItem from="1654521396197" duration="10404000" />
+      <workItem from="1654587399067" duration="13900000" />
+      <workItem from="1654772502707" duration="7342000" />
+      <workItem from="1656237048044" duration="7176000" />
+      <workItem from="1657699906140" duration="6136000" />
+      <workItem from="1657729457820" duration="2337000" />
+      <workItem from="1658393124827" duration="19116000" />
+      <workItem from="1658477491629" duration="6732000" />
+      <workItem from="1658566943263" duration="7512000" />
+      <workItem from="1658651704240" duration="5087000" />
+      <workItem from="1664869129463" duration="13166000" />
+      <workItem from="1665577321589" duration="7148000" />
+      <workItem from="1666860127484" duration="217000" />
+      <workItem from="1675846729666" duration="766000" />
+      <workItem from="1675890697343" duration="307000" />
+      <workItem from="1676048426522" duration="1629000" />
+      <workItem from="1676107727808" duration="2488000" />
+      <workItem from="1676137970408" duration="2958000" />
+      <workItem from="1676195100919" duration="1682000" />
+      <workItem from="1676208967209" duration="1558000" />
+      <workItem from="1677014567612" duration="2749000" />
+      <workItem from="1677087048812" duration="8548000" />
+      <workItem from="1678619710049" duration="42000" />
     </task>
     <task id="LOCAL-00001" summary="maj armures">
       <created>1596215171617</created>
@@ -292,28 +422,26 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.php" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="maj armures" />
     <option name="LAST_COMMIT_MESSAGE" value="maj armures" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="425" y="185" width="1349" height="710" key="SettingsEditor" timestamp="1644157605456">
-      <screen x="0" y="0" width="1848" height="1080" />
-    </state>
-    <state x="425" y="185" width="1349" height="710" key="SettingsEditor/0.0.1848.1080/-1440.180.1440.900@0.0.1848.1080" timestamp="1644157605456" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1641306865001">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1858.1080/-1440.174.1440.900@0.0.1858.1080" timestamp="1641306865001" />
-    <state x="583" y="179" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1641195573588">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="583" y="179" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1858.1080/-1440.174.1440.900@0.0.1858.1080" timestamp="1641195573588" />
-    <state x="936" y="217" width="706" height="772" key="find.popup" timestamp="1644164267051">
-      <screen x="0" y="0" width="1855" height="1080" />
-    </state>
-    <state x="1115" y="2" width="703" height="772" key="find.popup/0.0.1848.1080/-1440.180.1440.900@0.0.1848.1080" timestamp="1644159740237" />
-    <state x="936" y="217" width="706" height="772" key="find.popup/0.0.1855.1080/-1440.180.1440.900@0.0.1855.1080" timestamp="1644164267051" />
-    <state x="1121" y="2" width="706" height="650" key="find.popup/0.0.1858.1080/-1440.174.1440.900@0.0.1858.1080" timestamp="1641305778055" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
