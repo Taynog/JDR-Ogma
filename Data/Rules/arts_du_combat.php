@@ -1,17 +1,16 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
 $title = "Arts du Combat";
 include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
 ?>
 
 <h1 id="manoeuvres_combat" onclick="hideContent(this)">Manoeuvres de combat</h1>
 <div>
-    <p>Ici sont répertoriés quelques règles pour les manœuvres spéciales en combat, la liste n'est pas exhaustive et les joueurs sont encouragés à chercher toujours plus d'actions en combat. Par exemple, si on a une main libre, on peut écarter le bouclier de son adversaire, lui projetter du sable dans les yeux, lui baisser son pantalon ou lui dérober un objet à sa ceinture.</p>
-    <p>La répétition et l'abus de ces manœuvres les rendent de moins en moins efficaces, les ennemis seront capables de s'y préparer et se défendront plus facilement.</p>
+    <p>Ici sont répertoriés quelques règles pour les manoeuvres spéciales en combat, la liste n'est pas exhaustive et les joueurs sont encouragés à chercher toujours plus d'actions en combat. Par exemple, si on a une main libre, on peut écarter le bouclier de son adversaire, lui projetter du sable dans les yeux, lui baisser son pantalon ou lui dérober un objet à sa ceinture.</p>
+    <p>La répétition et l'abus de ces manoeuvres les rendent de moins en moins efficaces, les ennemis seront capables de s'y préparer et se défendront plus facilement.</p>
     <p>Si rien n'est précisé en cas de réussite/échec critique, on considère que le MJ décide du résultat.</p>
     <p id="arts_du_combat_basiques" class="caption" onclick="hideContent(this)">Arts du combat basiques</p>
     <div>
-        <p>Ces manœuvres sont utilisables par quiconque maîtrise les bases du combat</p>
+        <p>Ces manoeuvres sont utilisables par quiconque maîtrise les bases du combat</p>
         <table>
             <thead>
             <tr>

@@ -1,5 +1,4 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
 $title = "Chono";
 include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
 ?>

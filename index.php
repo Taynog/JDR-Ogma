@@ -1,5 +1,4 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
 $title = "Ogma";
 include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
 ?>
@@ -75,7 +74,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
                         </li>
                         <li>Révision de la page Survie, certaines choses n'étaient plus au goût du jour.</li>
                         <li>Nouvelle propriété d'armes : Anti-Large : +10 pour toucher les cibles plus grandes.</li>
-                        <li>Révision partielle des sorts, certains devaient voir leurs effets encadrés (Réécriture mémorielle), d'autres ont simplement reçus un coup de polish.
+                        <li>Révision partielle des sorts, certains devaient voir leurs effets encadrées (Réécriture mémorielle), d'autres ont simplement reçus un coup de polish.
                         </li>
                         <li>Réarrangement des compétences : Calme a fusionné avec Résistance, Équitation avec Dressage et Bluff avec Persuasion.</li>
                         <li>Correction de coquilles</li>
@@ -92,10 +91,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
                 </li>
                 <li><strong>Version 2.2.2 14/04/2021</strong>
                     <ul>
-                        <li>Corrections de diverses coquilles, notamment dans les <a href="Data/Rules/Armes.php#proprietes_armes">propriétés des armes</a>.</li>
-                        <li>Fusion des écoles de magie : L'élémentalisme rejoint la Conjuration et l'Illusion rejoint la Domination. La création d'illusion rejoint la Conjuration et l'invisibilité rejoint l'Altération.
+                        <li>Corrections de divers coquilles, notamment dans les <a href="Data/Rules/Armes.php#proprietes_armes">propriétés des armes</a>.</li>
+                        <li>Fusion des écoles de magie : L'élémentalisme rejoint la Conjuration, et l'Illusion rejoint la Domination. La création d'illusion rejoint la Conjuration et l'invisibilité rejoint l'Altération.
                         </li>
-                        <li>L'école de Divination devient l'école du Mysticisme, école de magie générale pour tous les effets non étudiés par les autres écoles.</li>
+                        <li>L'école de Divination devient l'école du Mysticisme, école de magie générale pour tout les effets non étudiés par les autres écoles.</li>
                     </ul>
                 </li>
                 <li><strong>Version 2.2.1 11/04/2021</strong>

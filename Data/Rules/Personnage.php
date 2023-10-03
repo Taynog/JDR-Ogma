@@ -1,5 +1,4 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
 $title = "Personnage";
 include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
 ?>
@@ -271,10 +270,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
             <div>
                 <p>La résistance physique de votre personnage représente sa capacité à encaisser les coups. Elle est équivalente à la moitié de votre caractéristique de Vigueur à laquelle s'ajoute votre protection d'armure (PR) si vous portez une armure.<p/>
                 <p>Certaines origines comme les Kantas, les Sarpas-Crocodiles et les Steinns possèdent le trait <a href="Glossaire.php#robuste">Robuste</a> qui augmente leur resistance physique, cette augmentation est considérée comme de la PR naturelle.</p>
-                <p>La résistance magique quant à elle représente sa capacité à négliger les attaques magiques. Elle est équivalente à la moitié de votre caractéristique de Volonté à laquelle s'ajoute la protection d'armure magique (PR mag) si vous portez une armure.</p>
             </div>
 
+            <h3 id="resistance_magique" onclick="hideContent(this)">Resistance magique (RM)</h3>
             <div>
+                <p>La résistance magique quant à elle représente sa capacité à négliger les attaques magiques. Elle est équivalente à la moitié de votre caractéristique de Volonté à laquelle s'ajoute la protection d'armure magique (PR mag) si vous portez une armure.</p>
             </div>
 
             <h3 id="blessures" onclick="hideContent(this)">Blessures</h3>
@@ -326,7 +326,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
                     </ul>
                 <p>Il est possible de dépenser des PE et des PM pour effectuer des actions spéciales : </p>
             </div>
-               
+
             <div class="hidden">
                 <p>Les traumas représentent la fatigue physique et mentale que peut subir votre personnage, ce sont des revers moins grave que les blessures. Il existe deux catégories de traumas, les traumas physiques et les traumas mentaux.</p>
                 <p>Chaque trauma physique que subit votre personnage impose un désavantage sur ses tests de Force, Dextérité, Agilité et Vigueur ; idem pour les tramas mentaux mais les caractéristiques concernées sont l'Intelligence, la Volonté, la Perception et l'Éloquence.</p>

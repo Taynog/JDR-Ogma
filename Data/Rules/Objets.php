@@ -1,5 +1,4 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
 $title = "Objets et Services";
 include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
 function print_objets(): void

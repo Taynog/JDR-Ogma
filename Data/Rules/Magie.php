@@ -1,5 +1,4 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
 $title = "Magie";
 include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
 $time_scale = ["un round", "une minute", "une heure", "une journée", "une semaine", "un mois", "une année", "une décennie", "un siècle", "un millénaire", "permanent"];
