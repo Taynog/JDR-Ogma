@@ -1,5 +1,4 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
 $title = "Bestiaire";
 include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
 function print_bestiaire($cat): void
@@ -170,7 +169,7 @@ function print_bestiaire($cat): void
         endif;
         endforeach;
 }
-?> 
+?>
     <h3 id="empty" onclick="hideContent(this)"></h3>
     <div class="hidden">
         <div class="bestiary_entity">
@@ -245,10 +244,6 @@ function print_bestiaire($cat): void
     <h1>Bestiaire</h1>
     <p>Ici sont recensés la plupart des créatures d'Ogma selon différentes catégories.</p>
     <h2 style="color: darkred">Attention le bestiaire n'est pas mis à jour d'un point de vue mécanique mais reste disponible pour le lore d'Ogma</h2>
-
-<?php
-print_bestiaire('Bêtes');
-?>
 
     <h1 id="aquatiques" onclick="hideContent(this)">Aquatiques</h1>
     <div>

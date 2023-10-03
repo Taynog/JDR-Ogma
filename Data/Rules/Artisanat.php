@@ -1,8 +1,7 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
 $title = "Artisanat";
 include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+?>
 
     <h2 style="color: darkred">Attention cette page n'est pas mise à jour d'un point de vue mécanique pour le moment mais reste disponible pour de futures mises à jour</h2>
 
@@ -92,7 +91,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
                 </tr>
                 </tbody>
             </table>
-            <table id="table_alchimie_rarete" style="flex: 1; padding: 3px; margin: 10px; max-width: 50%;" width="50%">
+            <table id="table_alchimie_rarete" class="table_horizontal" style="flex: 1; padding: 3px; margin: 10px; max-width: 50%;" width="50%">
                 <tbody>
                 <tr>
                     <th>Magnitude de l'effet (ME)</th>

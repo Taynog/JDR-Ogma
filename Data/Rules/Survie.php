@@ -1,8 +1,7 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
 $title = "Survie";
 include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+?>
     <h1 id="Survie" onclick="hideContent(this)">Survie</h1>
     <div>
         <p>Partir à l'aventure n'est pas chose aisée, on risque gros si l'on néglige les nombreux risques des terres sauvages éloignées de toute civilisation. Un groupe d'aventuriers mal préparé s'expose aux climats difficiles, à la famine et à la soif, aux bêtes et monstres affamés.</p>

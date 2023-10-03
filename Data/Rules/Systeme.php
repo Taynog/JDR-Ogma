@@ -1,6 +1,5 @@
 <?php
-        include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
-        $title = "Système de jeu";
+                $title = "Système de jeu";
         include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
         ?>
 
