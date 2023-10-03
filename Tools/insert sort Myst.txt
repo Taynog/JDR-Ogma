@@ -1,0 +1,204 @@
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Télépathie",
+    "Concentration",
+    "2*SC",
+    "-",
+    "La cible obtient le trait <a href='Glossaire.php#telepathe'>Télépathe(SC)</a> tant que le lanceur se conectre sur le sort.",
+    "Orizo",
+    "Mysticisme"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Archives d'Orizo",
+    "-",
+    "2*SC",
+    "1 minute",
+    "Le prochain test de compétence de la cible pouvant être facilité avec des connaissances spécifiques se fera avec SC avantages.",
+    "Orizo",
+    "Mysticisme"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Détection de la vie / des morts / de la magie",
+    "-",
+    "3*SC",
+    "-",
+    "Détecte les être vivants / les morts / la magie dans un rayon de 10*SC mètres du point d'impact du sort.",
+    "Aux cercles supérieurs, la portée de détection double pour chaque cercle au dela du premier",
+    "Kynigi(vie), Anathos(morts), Orizo(magie)",
+    "Mysticisme"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Vision véritable",
+    "Concentration",
+    "10",
+    "-",
+    "La cible voit tout, même les entités invisibles, peut voir dans le noir le plus complet et même dans une obscurité magique.",
+    "Orizo",
+    "Mysticisme"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Destinée",
+    "-",
+    "4*SC",
+    "24 heures",
+    "Permet de lancer SC d100. La cible peut utiliser un des résultats obtenus pour remplacer le résultat de n'importe quel test. (Le lanceur doit annoncer l'utilisation d'un dé pré-tiré avant que le dé ne soit lancé).",
+    "Tychi",
+    "Mysticisme"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Augure",
+    "-",
+    "5",
+    "-",
+    "La cible est avertie de son futur proche. (fortune, péril, les deux ou rien).",
+    "Tychi",
+    "Mysticisme"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Prophétie",
+    "-",
+    "15",
+    "-",
+    "La cible obtient une réponse fiable sur un évènement à venir dans les 7 jours. (avoir recours à cet effet sans 7 jours d'intervalles augmente de 25% les chances de réponse aléatoires).<i>Cet effet est toujours de SC6</i>",
+    "Tychi",
+    "Mysticisme"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Communion avec la nature",
+    "-",
+    "8",
+    "-",
+    "La cible obtient trois informations sur son environnement.",
+    "Kormo et Kynigi",
+    "Mysticisme"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Localisation d'entité",
+    "Concentration",
+    "4*SC",
+    "-",
+    "La cible connait la position de l'entité de son choix dans un rayon d'un kilomètre tant que le lanceur se concentre sur le sort.",
+    "Aux cercles supérieurs, la portée de détection double pour chaque cercle supérieur au premier.",
+    "Kynigi",
+    "Mysticisme"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Langue enchantée",
+    "Concentration",
+    "6",
+    "-",
+    "La cible sait parler dans toute les langues tant que le lanceur se concentre sur le sort.",
+    "Orizo",
+    "Mysticisme"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Lien sensoriel",
+    "Concetration",
+    "5*SC",
+    "-",
+    "La cible peut voir/entendre/sentir à traver les sens d'une créature consentante dans un rayon d'un kilomètre tant que le lanceur se concentre sur le sort.",
+    "Aux cercles supérieurs, la portée de détection double pour chaque cercle supérieur au premier.",
+    "Kynigi",
+    "Mysticisme"
+);

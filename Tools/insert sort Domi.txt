@@ -1,0 +1,214 @@
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Réanimation",
+    "-",
+    "3*SC",
+    "1 heure",
+    "La cible doit être une créature inanimé de gabarit TP. La créature réanimé agit comme bon lui semble.",
+    "Pour chaque cercle au delà du premier, le <a href='Tableaux.php#gabarit_creatures'>gabarit</a> de la créature réanimé augmente d'un cran jusqu'au gabarit Colossale au cercle 8.",
+    "Anathos",
+    "Domination"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Contrôle mental",
+    "Concentration",
+    "5*SC",
+    "-",
+    "La cible doit passer un test étendu de Volonté avec un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort. La cible passe sous le contrôle du lanceur tant qu'il se concentre sur le sort.",
+    "Aux cercles supérieurs, la cible effectue son jet de volonté avec un désavatange pour chaque cercle au delà du premier.",
+    "Kynigi(Animaux), Kormo(Plantes), Psema(Humanoïdes)",
+    "Domination"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Réécriture mémorielle",
+    "-",
+    "8*SC",
+    "-",
+    "La cible doit passer un test de Résistance(Vol) avec un modificateur de +20-(5*SC) ou voir sa mémoire immédiate (60 dernières secondes) modifiée par le lanceur. Si la modification porte sur une période minoritaire de la vie de la cible et qu'elle est incohérente ou trop contradictoire avec le comportement habituel de la cible, elle considérera les effets du sort comme une hallucination/mauvais rêve. Dans le cas d'une modification de grande ampleur (au moins la moitié de la vie de la cible), seules les pensés incohérentes sont perçues comme des mauvais rêves.",
+    "Aux cercles supérieurs, la portion de vie réecrie augmente selon le cercle : SC2 -> 10 minutes, SC3 -> une heure, SC4 -> une journée, SC5 -> une semaine, SC6 -> un mois, SC7 -> une année, SC8 -> une décennie, SC9 -> un siècle, SC10 -> vie entière",
+    "Psema",
+    "Domination"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Mot de pouvoir : Douleur",
+    "Concentration",
+    "4*SC",
+    "-",
+    "La cible doit passer un test de Vigueur ou Volonté avec un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort. La cible voie sa vitesse diminuée de 1 et effectue toute action (sauf se libérer) avec un désavantage tant que le lanceur se concetre sur le sort.",
+    "Aux cercles supérieurs, la réduction de vitesse double et le nombre de désavatanges imposée pour les actions de la cible augmente de 1.",
+    "Psema",
+    "Domination"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Mot de pouvoir : Mort",
+    "-",
+    "15",
+    "-",
+    "La cible doit passer un test de Vigueur ou Volonté avec un DC équivalent au DR du lanceur de sort ou être réduite à 0 points de vitalité.",
+    "Anathos",
+    "Domination"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Télékinésie",
+    "Concentration",
+    "2*SC",
+    "-",
+    "La cible obtient le trait <a href='Glossaire.php#telekinesiste'>Télékinésiste(SC)</a> tant que le lanceur se concentre sur le sort.",
+    "Agones",
+    "Domination"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Peur",
+    "Concentration",
+    "5*SC",
+    "-",
+    "La cible doit passer un test étendu de Volonté un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort. La cible est <a href='Glossaire.php#effraye'>Effrayé(lanceur)</a> tant que le lanceur se concentre sur le sort.",
+    "Aux cercles supérieurs, la cible effectue son jet de volonté avec un désavatange pour chaque cercle au delà du premier.",
+    "Agapi(mort-vivant), Psema",
+    "Domination"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Calme",
+    "Concentration",
+    "5*SC",
+    "-",
+    "La cible doit passer un test étendu de Volonté un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort. La cible est <a href='Glossaire.php#fascine'>fasciné</a> tant que le lanceur se concentre sur le sort.",
+    "Aux cercles supérieurs, la cible effectue son jet de volonté avec un désavatange pour chaque cercle au delà du premier.",
+    "Psema",
+    "Domination"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Rage",
+    "Concentration",
+    "5*SC",
+    "-",
+    "La cible doit passer un test étendu de Volonté un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort. La cible considère tout le monde comme un adversaire tant que le lanceur se concentre sur le sort.",
+    "Aux cercles supérieurs, la cible effectue son jet de volonté avec un désavatange pour chaque cercle au delà du premier.",
+    "Agones",
+    "Domination"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+	`Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Silence",
+    "Concentration",
+    "5*SC",
+    "-",
+    "La cible doit passer un test étendu de Volonté un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort. La cible est incapable de parler tant que le lanceur se concentre sur le sort.",
+    "Aux cercles supérieurs, la cible effectue son jet de volonté avec un désavatange pour chaque cercle au delà du premier.",
+    "Psema",
+    "Domination"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Apparence trompeuse",
+    "Concentration",
+    "10",
+    "-",
+    "La cible est perçue comme quelqu'un d'autre par les personnes non-consciente du sort tant que le lanceur se concentre sur le sort. Se rendre compte du sort nécessite de passer un test d'Observation(Per) ou d'Arcanes(Int ou Per) avec un DC équivalent au DR du lanceur de sort.",
+    "Psema",
+    "Domination"
+);

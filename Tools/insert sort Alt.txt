@@ -1,0 +1,336 @@
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Aspect animal",
+    "-",
+    "2",
+    "1 heure",
+    "La cible obtient les capacités d'un animal (catégorie bête ou vermine) de gabarit Minuscule ou inférieur. Les effets dépendent de l'animal choisi.",
+    "Pour chaque cercle au delà du premier, le <a href='Tableaux.php#gabarit_creatures'>gabarit</a> de l'animal augmente d'un cran jusqu'au gabarit Colossale au cercle 8.",
+    "Kynigi",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Aisance aquatique",
+    "-",
+    "2",
+    "1 heure",
+    "La cible obtient le trait <a href='Glossaire.php#amphibien'>Amphibien</a> et peut respirer sous l'eau pour toute la durée du sort.",
+    "Aux cercles supérieurs, la durée du sort augmente double pour chaque cercle au delà du premier.",
+    "Nero",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Marche aquatique",
+    "-",
+    "1",
+    "1 heure",
+    "La cible peut marcher sur l'eau comme si elle marchait sur la terre ferme.",
+    "Aux cercles supérieurs, la durée du sort augmente double pour chaque cercle au delà du premier.",
+    "Nero",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Chute ralentie",
+    "Réaction",
+    "2",
+    "1 minute",
+    "La cible ignore les 5 premiers mètres de sa prochaine chute lors du <a href='Survie.php#chutes'>calcul des dégâts</a>.",
+    "Aux cercles supérieurs, la distance de chute double pour chaque cercle au delà du premier.",
+    "Aïgida",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Lévitation",
+    "Concentration, Réaction",
+    "3",
+    "-",
+    "La cible obtient une vitesse de déplacement en vol de 2 mètres par round.",
+    "Aux cercles supérieurs, la vitesse de déplacement obtenue double pour chaque cercle au delà du premier.",
+    "Aïgida",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Sup`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Saut",
+    "-",
+    "2",
+    "1 minute",
+    "La cible pourra parcourir un mètre supplémentaire en hauteur et le double en longueur lors de son prochain saut.",
+    "Aux cercles supérieurs, la distance de saut double pour chaque cercle au delà du premier.",
+    "Aïgida",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Verrouillage",
+    "-",
+    "3*SC",
+    "-",
+    "La serrure ciblé devient verrouillée. Ouvrir cette serrure nécessite un test étendu de crochetage avec un DR total de SC*5.",
+    "Ourgal",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Déverrouillage",
+    "-",
+    "3*SC",
+    "-",
+    "La serrure ciblé ajoute SC*5 DR au total nécessaire à la dévérouiller.",
+    "Ourgal",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Transmutation",
+    "-",
+    "4*SC",
+    "Permanent",
+    "Le lanceur lance SCd4, si le résultat total dépasse la resistance magique de la cible, elle devient métallique ou minérale. Une cible métamorphosée en pierre ou en métal est invulnérable aux dégâts du temps et son poids est multiplié par 5. l'effet dure indéfiniment tant que la cible ne brise pas le sort (une tentative par jour).",
+    "Ourgal",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Renforcement [Caractéristique]",
+    "[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]",
+    "3",
+    "1 minute",
+    "La cible voit sa [Caractéristique] augmenter de SC cran(s) pendant une minute.",
+    "Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Affaiblissement [Caractéristique]",
+    "[Force, Dextérité, Agilité, Vigueur, Intelligence, Volonté, Perception, Éloquence]",
+    "3*SC",
+    "1 minute",
+    "La cible doit passer un test de Vigueur dans le cas d'une caractéristique physique ou de Volonté pour une caractéristique mentale avec un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort. La [Caractéristique] de la cible diminue de SC cran(s) pendant une minute.",
+    "Agones(FOR, AGI, VIG), Eftis(DEX), Orizo(INT, VOL), Kynigi(PER), Psema(ÉLO)",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Résistance [Élément]",
+    "[Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]",
+    "3*SC",
+    "1 minute",
+    "Procure à la cible le trait <a href='Glossaire.php#resistance'>résistance(SC,[élément])</a>.",
+    "Aïgida, Anathos, Horoï, Kuga, Nero, Safi",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Vulnérabilité [Élément]",
+    "Concentration, [Acide, Eau, Feu, Foudre, Glace, Lumière, Nécrotique, Poison]",
+    "3*SC",
+    "1 minute",
+    "La cible doit passer un test de Vigueur ou Volonté avec un NDR équivalent au résultat du lanceur de sort et un DC équivalent au cercle du sort. La cible subit le trait <a href='Glossaire.php#vulnerabilite'>vulnérabilité(SC,[élément])</a> pendant une minute.",
+    "Aïgida, Anathos, Horoï, Kuga, Nero, Safi",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Guérison",
+    "-",
+    "8",
+    "-",
+    "La cible passe un test de Vigueur avec un DC de 3 et un bonus équivalent au DR du lanceur. Sur une réussite, la cible guérie d'une blessure. Chaque palier de 3 DR de la cible soigne une blessure supplémentaire.",
+    "Agapi",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Stabilisation",
+    "-",
+    "8",
+    "-",
+    "La cible passe un test de Vigueur avec un DC de 6 et un bonus équivalent au DR du lanceur. Sur une réussite, la cible n'est plus <a href='Glossaire.php#mourant'>mourante</a> et devient <a href='Glossaire.php#stable'>stable</a>.",
+    "Agapi",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Récupération",
+    "-",
+    "4",
+    "-",
+    "La cible passe un test de Vigueur avec un DC de 3 et un bonus équivalent au DR du lanceur. Sur une réussite, la cible guérie d'un trauma. Chaque palier de 3 DR de la cible soigne un trauma supplémentaire.",
+    "Agapi",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Purge",
+    "Concentration",
+    "8",
+    "-",
+    "La cible obtient un bonus équivalent au DR du lanceur pour résister et purger les effets négatifs(Vulnérabilité, Saignement, Poison, etc..) tant que le lanceur se concentre sur le sort.",
+    "Agapi",
+    "Altération"
+);
+INSERT INTO `sorts`(
+    `Effet`,
+    `Propriete`,
+    `Cout`,
+    `Duree`,
+    `Description`,
+    `Inkarnai`,
+    `Ecole`
+)
+VALUES(
+    "Invisibilité",
+    "Concentration",
+    "8",
+    "-",
+    "La cible devient invisible et le reste tant que le lanceur se concentre sur le sort.",
+    "Safi",
+    "Altération"
+);
