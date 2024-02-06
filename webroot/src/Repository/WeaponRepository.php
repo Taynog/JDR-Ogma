@@ -2,28 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\WebContent;
+use App\Entity\Weapon;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<WebContent>
+ * @extends ServiceEntityRepository<Weapon>
  *
- * @method WebContent|null find($id, $lockMode = null, $lockVersion = null)
- * @method WebContent|null findOneBy(array $criteria, array $orderBy = null)
- * @method WebContent[]    findAll()
- * @method WebContent[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Weapon|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Weapon|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Weapon[]    findAll()
+ * @method Weapon[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class WebContentRepository extends ServiceEntityRepository
+class WeaponRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, WebContent::class);
+        parent::__construct($registry, Weapon::class);
     }
 
 //    /**
-//     * @return WebContent[] Returns an array of WebContent objects
+//     * @return Weapon[] Returns an array of Weapon objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -37,7 +36,7 @@ class WebContentRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?WebContent
+//    public function findOneBySomeField($value): ?Weapon
 //    {
 //        return $this->createQueryBuilder('w')
 //            ->andWhere('w.exampleField = :val')

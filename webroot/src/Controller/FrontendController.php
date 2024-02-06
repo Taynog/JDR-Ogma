@@ -10,13 +10,13 @@ class FrontendController extends AbstractController
     #[Route("/", "app_index")]
     public function index(): Response
     {
-        $template = $this->getDoctrine()->getRepository(WebContent::class)->findByPage("index");
+        $template = $this->getDoctrine()->getRepository(WebContent::class)->find("index");
         return $this->render($template);
     }
     #[Route("/{page}", "app_front")]
     public function front (string $page): Response
     {
-        $template = $this->getDoctrine()->getRepository(WebContent::class)->findByPage($page);
+        $template = $this->getDoctrine()->getRepository(WebContent::class)->find($page);
         return $this->render($template);
     }
 }
