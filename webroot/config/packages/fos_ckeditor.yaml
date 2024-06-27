@@ -1,0 +1,17 @@
+# Read the documentation: https://symfony.com/doc/current/bundles/FOSCKEditorBundle/index.html
+fos_ck_editor:
+    default_config: default
+    #inline: true
+    configs:
+        default:
+            filebrowserBrowseRoute: elfinder
+            filebrowserBrowseRouteParameters: []
+            contentsCss: '/build/app.css'
+#            stylesSet: "my_styles"
+#
+#    styles:
+#        my_styles:
+#            - { name: "Mini Titre", element: "span", attributes: { class: "big_underline" } }
+twig:
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'

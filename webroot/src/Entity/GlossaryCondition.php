@@ -11,51 +11,51 @@ class GlossaryCondition
 {
     #[ORM\Id]
     #[ORM\Column(length: 255)]
-    private ?string $Condition = null;
+    private ?string $condition = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Description = null;
+    private ?string $description = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $Effect = null;
+    private ?string $effect = null;
 
     public function getId(): ?int
     {
-        return $this->id;
+        return $this->condition;
     }
 
     public function getCondition(): ?string
     {
-        return $this->Condition;
+        return $this->condition;
     }
 
-    public function setCondition(string $Condition): static
+    public function setCondition(string $condition): static
     {
-        $this->Condition = $Condition;
+        $this->condition = $condition;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(?string $Description): static
+    public function setDescription(?string $description): static
     {
-        $this->Description = $Description;
+        $this->description = $description;
 
         return $this;
     }
 
     public function getEffect(): ?string
     {
-        return $this->Effect;
+        return $this->effect;
     }
 
-    public function setEffect(string $Effect): static
+    public function setEffect(string $effect): static
     {
-        $this->Effect = $Effect;
+        $this->effect = $effect;
 
         return $this;
     }

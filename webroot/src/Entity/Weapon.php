@@ -13,141 +13,159 @@ class Weapon
 {
     #[ORM\Id]
     #[ORM\Column(length: 50)]
-    private ?string $Type = null;
+    private ?string $type = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $DamageType = null;
+    private ?string $damageType = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Damage = null;
+    private ?string $damage = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Handling = null;
+    private ?string $handling = null;
+
+    #[ORM\Column(length: 25)]
+    private ?string $reach = null;
 
     #[ORM\ManyToMany(targetEntity: WeaponProperty::class, inversedBy: 'weapons')]
-    private Collection $Properties;
+    #[ORM\JoinTable(name: "weapon_properties")]
+    #[ORM\JoinColumn(name: "weapon_type", referencedColumnName: "type")]
+    #[ORM\InverseJoinColumn(name: "weapon_property", referencedColumnName: "property")]
+    private Collection $properties;
 
     #[ORM\ManyToOne(inversedBy: 'weapons')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?WeaponCategory $Category = null;
+    #[ORM\JoinColumn(referencedColumnName: 'category', nullable: false)]
+    private ?WeaponCategory $category = null;
 
     #[ORM\Column(type: Types::SMALLINT)]
-    private ?int $ENC = null;
+    private ?int $enc = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Price = null;
+    private ?string $price = null;
 
 
     public function __construct()
     {
-        $this->Properties = new ArrayCollection();
+        $this->properties = new ArrayCollection();
     }
 
     public function getId(): ?int
     {
-        return $this->id;
+        return $this->type;
     }
 
     public function getType(): ?string
     {
-        return $this->Type;
+        return $this->type;
     }
 
-    public function setType(string $Type): static
+    public function setType(string $type): static
     {
-        $this->Type = $Type;
+        $this->type = $type;
 
         return $this;
     }
 
     public function getDamageType(): ?string
     {
-        return $this->DamageType;
+        return $this->damageType;
     }
 
-    public function setDamageType(string $DamageType): static
+    public function setDamageType(string $damageType): static
     {
-        $this->DamageType = $DamageType;
+        $this->damageType = $damageType;
 
         return $this;
     }
 
     public function getDamage(): ?string
     {
-        return $this->Damage;
+        return $this->damage;
     }
 
-    public function setDamage(string $Damage): static
+    public function setDamage(string $damage): static
     {
-        $this->Damage = $Damage;
+        $this->damage = $damage;
 
         return $this;
     }
 
     public function getHandling(): ?string
     {
-        return $this->Handling;
+        return $this->handling;
     }
 
-    public function setHandling(string $Handling): static
+    public function setHandling(string $handling): static
     {
-        $this->Handling = $Handling;
+        $this->handling = $handling;
+
+        return $this;
+    }
+
+    public function getReach(): ?string
+    {
+        return $this->reach;
+    }
+
+    public function setReach(string $reach): static
+    {
+        $this->reach = $reach;
 
         return $this;
     }
 
     public function getProperties(): ?Collection
     {
-        return $this->Properties;
+        return $this->properties;
     }
 
-    public function setProperties(Collection $Properties): static
+    public function setProperties(Collection $properties): static
     {
-        $this->Properties = $Properties;
+        $this->properties = $properties;
 
         return $this;
     }
 
     public function getCategory(): ?WeaponCategory
     {
-        return $this->Category;
+        return $this->category;
     }
 
-    public function setCategory(WeaponCategory $Category): static
+    public function setCategory(WeaponCategory $category): static
     {
-        $this->Category = $Category;
+        $this->category = $category;
 
         return $this;
     }
 
     public function getENC(): ?int
     {
-        return $this->ENC;
+        return $this->enc;
     }
 
-    public function setENC(int $ENC): static
+    public function setENC(int $enc): static
     {
-        $this->ENC = $ENC;
+        $this->enc = $enc;
 
         return $this;
     }
 
     public function getPrice(): ?string
     {
-        return $this->Price;
+        return $this->price;
     }
 
-    public function setPrice(string $Price): static
+    public function setPrice(string $price): static
     {
-        $this->Price = $Price;
+        $this->price = $price;
 
         return $this;
     }
 
     public function addProperty(WeaponProperty $property): static
     {
-        if (!$this->Properties->contains($property)) {
-            $this->Properties->add($property);
+        if (!$this->properties->contains($property)) {
+            $this->properties->add($property);
         }
 
         return $this;
@@ -155,7 +173,7 @@ class Weapon
 
     public function removeProperty(WeaponProperty $property): static
     {
-        $this->Properties->removeElement($property);
+        $this->properties->removeElement($property);
 
         return $this;
     }

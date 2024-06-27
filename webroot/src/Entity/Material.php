@@ -13,155 +13,158 @@ class Material
 {
     #[ORM\Id]
     #[ORM\Column(length: 255)]
-    private ?string $Material = null;
+    private ?string $material = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Description = null;
+    private ?string $description = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $WeaponBonusDmg = null;
+    private ?string $weaponBonusDmg = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $WeaponPassiveEffect = null;
+    private ?string $weaponPassiveEffect = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $WeaponActiveEffect = null;
+    private ?string $weaponActiveEffect = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $ArmorBonusProtection = null;
+    private ?string $armorBonusProtection = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $ArmorBonusProctectionMagical = null;
+    private ?string $armorBonusProctectionMagical = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $ArmorPassiveEffect = null;
+    private ?string $armorPassiveEffect = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $ArmorActiveEffect = null;
+    private ?string $armorActiveEffect = null;
 
-    #[ORM\ManyToMany(targetEntity: Armor::class, inversedBy: 'Materials')]
-    private Collection $ArmorCategory;
+    #[ORM\ManyToMany(targetEntity: Armor::class, inversedBy: 'materials')]
+    #[ORM\JoinTable(name: "armor_material")]
+    #[ORM\JoinColumn(name: "armor_material", referencedColumnName: "material")]
+    #[ORM\InverseJoinColumn(name: "armor_category", referencedColumnName: "category")]
+    private Collection $armorCategory;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $WeaponPriceMultiplier = null;
+    private ?string $weaponPriceMultiplier = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $ArmorPriceMultiplier = null;
+    private ?string $armorPriceMultiplier = null;
 
     public function __construct()
     {
-        $this->ArmorCategory = new ArrayCollection();
+        $this->armorCategory = new ArrayCollection();
     }
 
     public function getId(): ?int
     {
-        return $this->id;
+        return $this->material;
     }
 
     public function getMaterial(): ?string
     {
-        return $this->Material;
+        return $this->material;
     }
 
-    public function setMaterial(string $Material): static
+    public function setMaterial(string $material): static
     {
-        $this->Material = $Material;
+        $this->material = $material;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(?string $Description): static
+    public function setDescription(?string $description): static
     {
-        $this->Description = $Description;
+        $this->description = $description;
 
         return $this;
     }
 
     public function getWeaponBonusDmg(): ?string
     {
-        return $this->WeaponBonusDmg;
+        return $this->weaponBonusDmg;
     }
 
-    public function setWeaponBonusDmg(?string $WeaponBonusDmg): static
+    public function setWeaponBonusDmg(?string $weaponBonusDmg): static
     {
-        $this->WeaponBonusDmg = $WeaponBonusDmg;
+        $this->weaponBonusDmg = $weaponBonusDmg;
 
         return $this;
     }
 
     public function getWeaponPassiveEffect(): ?string
     {
-        return $this->WeaponPassiveEffect;
+        return $this->weaponPassiveEffect;
     }
 
-    public function setWeaponPassiveEffect(?string $WeaponPassiveEffect): static
+    public function setWeaponPassiveEffect(?string $weaponPassiveEffect): static
     {
-        $this->WeaponPassiveEffect = $WeaponPassiveEffect;
+        $this->weaponPassiveEffect = $weaponPassiveEffect;
 
         return $this;
     }
 
     public function getWeaponActiveEffect(): ?string
     {
-        return $this->WeaponActiveEffect;
+        return $this->weaponActiveEffect;
     }
 
-    public function setWeaponActiveEffect(?string $WeaponActiveEffect): static
+    public function setWeaponActiveEffect(?string $weaponActiveEffect): static
     {
-        $this->WeaponActiveEffect = $WeaponActiveEffect;
+        $this->weaponActiveEffect = $weaponActiveEffect;
 
         return $this;
     }
 
     public function getArmorBonusProtection(): ?string
     {
-        return $this->ArmorBonusProtection;
+        return $this->armorBonusProtection;
     }
 
-    public function setArmorBonusProtection(?string $ArmorBonusProtection): static
+    public function setArmorBonusProtection(?string $armorBonusProtection): static
     {
-        $this->ArmorBonusProtection = $ArmorBonusProtection;
+        $this->armorBonusProtection = $armorBonusProtection;
 
         return $this;
     }
 
     public function getArmorBonusProctectionMagical(): ?string
     {
-        return $this->ArmorBonusProctectionMagical;
+        return $this->armorBonusProctectionMagical;
     }
 
-    public function setArmorBonusProctectionMagical(?string $ArmorBonusProctectionMagical): static
+    public function setArmorBonusProctectionMagical(?string $armorBonusProctectionMagical): static
     {
-        $this->ArmorBonusProctectionMagical = $ArmorBonusProctectionMagical;
+        $this->armorBonusProctectionMagical = $armorBonusProctectionMagical;
 
         return $this;
     }
 
     public function getArmorPassiveEffect(): ?string
     {
-        return $this->ArmorPassiveEffect;
+        return $this->armorPassiveEffect;
     }
 
-    public function setArmorPassiveEffect(?string $ArmorPassiveEffect): static
+    public function setArmorPassiveEffect(?string $armorPassiveEffect): static
     {
-        $this->ArmorPassiveEffect = $ArmorPassiveEffect;
+        $this->armorPassiveEffect = $armorPassiveEffect;
 
         return $this;
     }
 
     public function getArmorActiveEffect(): ?string
     {
-        return $this->ArmorActiveEffect;
+        return $this->armorActiveEffect;
     }
 
-    public function setArmorActiveEffect(?string $ArmorActiveEffect): static
+    public function setArmorActiveEffect(?string $armorActiveEffect): static
     {
-        $this->ArmorActiveEffect = $ArmorActiveEffect;
+        $this->armorActiveEffect = $armorActiveEffect;
 
         return $this;
     }
@@ -171,13 +174,13 @@ class Material
      */
     public function getArmorCategory(): Collection
     {
-        return $this->ArmorCategory;
+        return $this->armorCategory;
     }
 
     public function addArmorCategory(Armor $armorCategory): static
     {
-        if (!$this->ArmorCategory->contains($armorCategory)) {
-            $this->ArmorCategory->add($armorCategory);
+        if (!$this->armorCategory->contains($armorCategory)) {
+            $this->armorCategory->add($armorCategory);
         }
 
         return $this;
@@ -185,31 +188,31 @@ class Material
 
     public function removeArmorCategory(Armor $armorCategory): static
     {
-        $this->ArmorCategory->removeElement($armorCategory);
+        $this->armorCategory->removeElement($armorCategory);
 
         return $this;
     }
 
     public function getWeaponPriceMultiplier(): ?string
     {
-        return $this->WeaponPriceMultiplier;
+        return $this->weaponPriceMultiplier;
     }
 
-    public function setWeaponPriceMultiplier(?string $WeaponPriceMultiplier): static
+    public function setWeaponPriceMultiplier(?string $weaponPriceMultiplier): static
     {
-        $this->WeaponPriceMultiplier = $WeaponPriceMultiplier;
+        $this->weaponPriceMultiplier = $weaponPriceMultiplier;
 
         return $this;
     }
 
     public function getArmorPriceMultiplier(): ?string
     {
-        return $this->ArmorPriceMultiplier;
+        return $this->armorPriceMultiplier;
     }
 
-    public function setArmorPriceMultiplier(?string $ArmorPriceMultiplier): static
+    public function setArmorPriceMultiplier(?string $armorPriceMultiplier): static
     {
-        $this->ArmorPriceMultiplier = $ArmorPriceMultiplier;
+        $this->armorPriceMultiplier = $armorPriceMultiplier;
 
         return $this;
     }

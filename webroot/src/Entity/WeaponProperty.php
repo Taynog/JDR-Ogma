@@ -13,16 +13,16 @@ class WeaponProperty
 {
     #[ORM\Id]
     #[ORM\Column(length: 255)]
-    private ?string $Property = null;
+    private ?string $property = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Description = null;
+    private ?string $description = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Effect = null;
+    private ?string $effect = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Example = null;
+    private ?string $example = null;
 
     #[ORM\ManyToMany(targetEntity: Weapon::class, mappedBy: 'Properties')]
     private Collection $weapons;
@@ -34,53 +34,53 @@ class WeaponProperty
 
     public function getId(): ?int
     {
-        return $this->id;
+        return $this->property;
     }
 
     public function getProperty(): ?string
     {
-        return $this->Property;
+        return $this->property;
     }
 
-    public function setProperty(string $Property): static
+    public function setProperty(string $property): static
     {
-        $this->Property = $Property;
+        $this->property = $property;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(?string $Description): static
+    public function setDescription(?string $description): static
     {
-        $this->Description = $Description;
+        $this->description = $description;
 
         return $this;
     }
 
     public function getEffect(): ?string
     {
-        return $this->Effect;
+        return $this->effect;
     }
 
-    public function setEffect(?string $Effect): static
+    public function setEffect(?string $effect): static
     {
-        $this->Effect = $Effect;
+        $this->effect = $effect;
 
         return $this;
     }
 
     public function getExample(): ?string
     {
-        return $this->Example;
+        return $this->example;
     }
 
-    public function setExample(?string $Example): static
+    public function setExample(?string $example): static
     {
-        $this->Example = $Example;
+        $this->example = $example;
 
         return $this;
     }

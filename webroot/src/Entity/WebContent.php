@@ -23,6 +23,11 @@ class WebContent
     #[ORM\Column(length: 255, enumType: WebContentCategory::class)]
     private WebContentCategory $category = WebContentCategory::UNCLASSIFIED;
 
+    public function __toString(): string
+    {
+        return $this->getTitle();
+    }
+
 
     public function getId(): ?int
     {

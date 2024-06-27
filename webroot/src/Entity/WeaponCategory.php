@@ -13,13 +13,13 @@ class WeaponCategory
 {
     #[ORM\Id]
     #[ORM\Column(length: 255)]
-    private ?string $Category = null;
+    private ?string $category = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Description = null;
+    private ?string $description = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Effect = null;
+    private ?string $effect = null;
 
     #[ORM\OneToMany(mappedBy: 'Category', targetEntity: Weapon::class)]
     private Collection $weapons;
@@ -31,41 +31,41 @@ class WeaponCategory
 
     public function getId(): ?int
     {
-        return $this->id;
+        return $this->category;
     }
 
     public function getCategory(): ?string
     {
-        return $this->Category;
+        return $this->category;
     }
 
-    public function setCategory(string $Category): static
+    public function setCategory(string $category): static
     {
-        $this->Category = $Category;
+        $this->category = $category;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(?string $Description): static
+    public function setDescription(?string $description): static
     {
-        $this->Description = $Description;
+        $this->description = $description;
 
         return $this;
     }
 
     public function getEffect(): ?string
     {
-        return $this->Effect;
+        return $this->effect;
     }
 
-    public function setEffect(?string $Effect): static
+    public function setEffect(?string $effect): static
     {
-        $this->Effect = $Effect;
+        $this->effect = $effect;
 
         return $this;
     }

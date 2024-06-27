@@ -11,51 +11,51 @@ class GlossaryTrait
 {
     #[ORM\Id]
     #[ORM\Column(length: 255)]
-    private ?string $Trait = null;
+    private ?string $trait = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Description = null;
+    private ?string $description = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $Effect = null;
+    private ?string $effect = null;
 
     public function getId(): ?int
     {
-        return $this->id;
+        return $this->trait;
     }
 
     public function getTrait(): ?string
     {
-        return $this->Trait;
+        return $this->trait;
     }
 
-    public function setTrait(string $Trait): static
+    public function setTrait(string $trait): static
     {
-        $this->Trait = $Trait;
+        $this->trait = $trait;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(?string $Description): static
+    public function setDescription(?string $description): static
     {
-        $this->Description = $Description;
+        $this->description = $description;
 
         return $this;
     }
 
     public function getEffect(): ?string
     {
-        return $this->Effect;
+        return $this->effect;
     }
 
-    public function setEffect(string $Effect): static
+    public function setEffect(string $effect): static
     {
-        $this->Effect = $Effect;
+        $this->effect = $effect;
 
         return $this;
     }

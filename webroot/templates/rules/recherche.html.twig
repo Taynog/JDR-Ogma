@@ -1,0 +1,131 @@
+<?php
+$title = "Résultat de recherche";
+include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+function handle_form($type): void
+{
+    switch($type) {
+        case "magie" : print_recherche_magie(); break;
+    }
+}
+
+function print_recherche_magie(): void
+{
+    global $db;
+    $nb_cercle = 8;
+
+    $query = "SELECT * FROM sorts WHERE";
+    $params = [];
+
+    if(!empty($_GET["nom"])) {
+        $nom = test_input($_GET["nom"]);
+        $query .= " Effet LIKE :effet AND";
+        $params['effet'] = '%'.$nom.'%';
+    }
+
+    if(!empty($_GET["desc"])) {
+        $desc = test_input($_GET["desc"]);
+        $query .= " Description LIKE :desc AND";
+        $params['desc'] = '%'.$desc.'%';
+    }
+
+    if(!empty($_GET["prop"])) {
+        $prop = test_input($_GET["prop"]);
+        $query .= " Propriete LIKE :prop AND";
+        $params['prop'] = '%'.$prop.'%';
+    }
+
+    $ecole = test_input($_GET["ecole"]);
+    if(!($ecole == "all")) {
+        $query .= " Ecole LIKE :ecole AND";
+        $params['ecole'] = '%'.$ecole.'%';
+    }
+
+    $inkarnai = test_input($_GET["inkarnai"]);
+    if(!($inkarnai == "all")) {
+        $query .= " Inkarnai LIKE :ink AND";
+        $params['ink'] = '%'.$inkarnai.'%';
+    }
+
+    if(str_ends_with($query,"WHERE")) {
+        $query = substr($query,0,strlen($query)-5);
+    }
+
+    if(str_ends_with($query,"AND")) {
+        $query = substr($query,0,strlen($query)-3);
+    }
+
+    $query .= " ORDER BY substring(Effet,1,4), DC";
+
+    $smt = $db->prepare("$query");
+    $smt->execute($params);
+    $rows = $smt->fetchAll();
+    ?>
+    <div id="<?= 'effets_' . $ecole ?>">
+
+        <?php foreach ($rows as $row) : ?>
+            <div class="effet_magique boxed">
+                <h3><?= $row['Effet'] ?> - <?= $row['Ecole']?></h3>
+                <p><strong><?= $row["Propriete"] ?></strong></p>
+                <table class="table_DC_mag">
+                    <tbody>
+                    <tr>
+                        <th>Cercle du sort</th>
+                        <?php
+                        for($i=0;$i<$nb_cercle;$i++) {
+                            $e = $i+1;
+                            echo "<th>" . $e . "</th>";
+                        }
+                        ?>
+                    </tr>
+                    <tr>
+                        <th>DC</th>
+                        <?php
+                        $DCs = calc_DC($row['DC'],$nb_cercle);
+                        foreach ($DCs as $DC)
+                            echo "<td>" . $DC . "</td>";
+                        ?>
+                    </tr>
+                    <tr>
+                        <th>Magnitude</th>
+                        <?php
+                        $mags = calc_mag($row['Magnitude'],$nb_cercle);
+
+                        for($y=0; $y<$nb_cercle; $y++){
+                            echo "<td>";
+                            for($i=0; $i<sizeof($mags); $i++){
+                                if($i>0){
+                                    echo "<hr/>";
+                                }
+                                echo $mags[$i][$y];
+                            }
+                            echo "</td>";
+                        }
+                        ?>
+                    </tr>
+                    </tbody>
+                </table>
+                <p><?= $row["Description"] ?></p>
+                <p><?= $row["Inkarnai"] ?></p>
+            </div>
+        <?php endforeach ?>
+    </div>
+    <?php
+}
+
+?>
+
+<h1>Résultat de recherche</h1>
+<?php
+    handle_form($_GET["type"]);
+?>
+
+
+{% endblock %}

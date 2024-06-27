@@ -13,134 +13,134 @@ class Armor
 {
     #[ORM\Id]
     #[ORM\Column(length: 255)]
-    private ?string $Category = null;
+    private ?string $category = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Description = null;
+    private ?string $description = null;
 
     #[ORM\Column(type: Types::SMALLINT)]
-    private ?int $Protection = null;
+    private ?int $protection = null;
 
     #[ORM\Column(type: Types::SMALLINT)]
-    private ?int $ProtectionMagical = null;
+    private ?int $protectionMagical = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Price = null;
+    private ?string $price = null;
 
     #[ORM\Column(type: Types::SMALLINT)]
-    private ?int $ENC = null;
+    private ?int $enc = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $SpeedPenalty = null;
+    private ?string $speedPenalty = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $MovementCheckDisadvantage = null;
+    private ?string $movementCheckDisadvantage = null;
 
-    #[ORM\ManyToMany(targetEntity: Material::class, mappedBy: 'ArmorCategory')]
-    private Collection $Materials;
+    #[ORM\ManyToMany(targetEntity: Material::class, mappedBy: 'armorCategory')]
+    private Collection $materials;
 
     public function __construct()
     {
-        $this->Materials = new ArrayCollection();
+        $this->materials = new ArrayCollection();
     }
 
     public function getId(): ?int
     {
-        return $this->id;
+        return $this->category;
     }
 
     public function getCategory(): ?string
     {
-        return $this->Category;
+        return $this->category;
     }
 
-    public function setCategory(string $Category): static
+    public function setCategory(string $category): static
     {
-        $this->Category = $Category;
+        $this->category = $category;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(?string $Description): static
+    public function setDescription(?string $description): static
     {
-        $this->Description = $Description;
+        $this->description = $description;
 
         return $this;
     }
 
     public function getProtection(): ?int
     {
-        return $this->Protection;
+        return $this->protection;
     }
 
-    public function setProtection(int $Protection): static
+    public function setProtection(int $protection): static
     {
-        $this->Protection = $Protection;
+        $this->protection = $protection;
 
         return $this;
     }
 
     public function getProtectionMagical(): ?int
     {
-        return $this->ProtectionMagical;
+        return $this->protectionMagical;
     }
 
-    public function setProtectionMagical(int $ProtectionMagical): static
+    public function setProtectionMagical(int $protectionMagical): static
     {
-        $this->ProtectionMagical = $ProtectionMagical;
+        $this->protectionMagical = $protectionMagical;
 
         return $this;
     }
 
     public function getPrice(): ?string
     {
-        return $this->Price;
+        return $this->price;
     }
 
-    public function setPrice(string $Price): static
+    public function setPrice(string $price): static
     {
-        $this->Price = $Price;
+        $this->price = $price;
 
         return $this;
     }
 
     public function getENC(): ?int
     {
-        return $this->ENC;
+        return $this->enc;
     }
 
-    public function setENC(int $ENC): static
+    public function setENC(int $enc): static
     {
-        $this->ENC = $ENC;
+        $this->enc = $enc;
 
         return $this;
     }
 
     public function getSpeedPenalty(): ?string
     {
-        return $this->SpeedPenalty;
+        return $this->speedPenalty;
     }
 
-    public function setSpeedPenalty(?string $SpeedPenalty): static
+    public function setSpeedPenalty(?string $speedPenalty): static
     {
-        $this->SpeedPenalty = $SpeedPenalty;
+        $this->speedPenalty = $speedPenalty;
 
         return $this;
     }
 
     public function getMovementCheckDisadvantage(): ?string
     {
-        return $this->MovementCheckDisadvantage;
+        return $this->movementCheckDisadvantage;
     }
 
-    public function setMovementCheckDisadvantage(?string $MovementCheckDisadvantage): static
+    public function setMovementCheckDisadvantage(?string $movementCheckDisadvantage): static
     {
-        $this->MovementCheckDisadvantage = $MovementCheckDisadvantage;
+        $this->movementCheckDisadvantage = $movementCheckDisadvantage;
 
         return $this;
     }
@@ -150,13 +150,13 @@ class Armor
      */
     public function getMaterials(): Collection
     {
-        return $this->Materials;
+        return $this->materials;
     }
 
     public function addMaterial(Material $material): static
     {
-        if (!$this->Materials->contains($material)) {
-            $this->Materials->add($material);
+        if (!$this->materials->contains($material)) {
+            $this->materials->add($material);
             $material->addArmorCategory($this);
         }
 
@@ -165,7 +165,7 @@ class Armor
 
     public function removeMaterial(Material $material): static
     {
-        if ($this->Materials->removeElement($material)) {
+        if ($this->materials->removeElement($material)) {
             $material->removeArmorCategory($this);
         }
 
