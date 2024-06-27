@@ -27,11 +27,8 @@ class Weapon
     #[ORM\Column(length: 25)]
     private ?string $reach = null;
 
-    #[ORM\ManyToMany(targetEntity: WeaponProperty::class, inversedBy: 'weapons')]
-    #[ORM\JoinTable(name: "weapon_properties")]
-    #[ORM\JoinColumn(name: "weapon_type", referencedColumnName: "type")]
-    #[ORM\InverseJoinColumn(name: "weapon_property", referencedColumnName: "property")]
-    private Collection $properties;
+    #[ORM\ManyToMany(targetEntity: WeaponProperties::class, mappedBy: 'weaponType')]
+    private Collection $weaponProperties;
 
     #[ORM\ManyToOne(inversedBy: 'weapons')]
     #[ORM\JoinColumn(referencedColumnName: 'category', nullable: false)]
@@ -46,7 +43,7 @@ class Weapon
 
     public function __construct()
     {
-        $this->properties = new ArrayCollection();
+        $this->weaponProperties = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -174,6 +171,33 @@ class Weapon
     public function removeProperty(WeaponProperty $property): static
     {
         $this->properties->removeElement($property);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, WeaponProperties>
+     */
+    public function getWeaponProperties(): Collection
+    {
+        return $this->weaponProperties;
+    }
+
+    public function addWeaponProperty(WeaponProperties $weaponProperty): static
+    {
+        if (!$this->weaponProperties->contains($weaponProperty)) {
+            $this->weaponProperties->add($weaponProperty);
+            $weaponProperty->addWeaponType($this);
+        }
+
+        return $this;
+    }
+
+    public function removeWeaponProperty(WeaponProperties $weaponProperty): static
+    {
+        if ($this->weaponProperties->removeElement($weaponProperty)) {
+            $weaponProperty->removeWeaponType($this);
+        }
 
         return $this;
     }

@@ -24,14 +24,6 @@ class WeaponProperty
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $example = null;
 
-    #[ORM\ManyToMany(targetEntity: Weapon::class, mappedBy: 'Properties')]
-    private Collection $weapons;
-
-    public function __construct()
-    {
-        $this->weapons = new ArrayCollection();
-    }
-
     public function getId(): ?int
     {
         return $this->property;
@@ -81,33 +73,6 @@ class WeaponProperty
     public function setExample(?string $example): static
     {
         $this->example = $example;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Weapon>
-     */
-    public function getWeapons(): Collection
-    {
-        return $this->weapons;
-    }
-
-    public function addWeapon(Weapon $weapon): static
-    {
-        if (!$this->weapons->contains($weapon)) {
-            $this->weapons->add($weapon);
-            $weapon->addProperty($this);
-        }
-
-        return $this;
-    }
-
-    public function removeWeapon(Weapon $weapon): static
-    {
-        if ($this->weapons->removeElement($weapon)) {
-            $weapon->removeProperty($this);
-        }
 
         return $this;
     }
