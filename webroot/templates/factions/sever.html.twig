@@ -1,9 +1,10 @@
-<?php
-$title = "Sever";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Sever
+{% endblock %}
+{% block body %}
     <h1>Les Severs</h1>
-    <img src="../../Images/Factions/Sever_picture.jpg" alt="Guerrière Sever" height="600"/>
+    <img src="{{ asset('images/Factions/Sever_picture.jpg') }}" alt="Guerrière Sever" height="600"/>
 
     <div>
         <h3>Présentation</h3>
@@ -41,10 +42,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
     <div>
         <h2>Galerie</h2>
         <h4>Guerrier Sever</h4>
-        <img src="../../Images/Factions/Sever_picture2.jpg" alt="Guerrier Sever" width="50%"/>
+        <img src="{{ asset('images/Factions/Sever_picture2.jpg') }}" alt="Guerrier Sever" width="50%"/>
         <h4>Village Sever</h4>
-        <img src="../../Images/Factions/Sever_village.jpg" alt="Village montagnard Sever" width="90%"/>
+        <img src="{{ asset('images/Factions/Sever_village.jpg') }}" alt="Village montagnard Sever" width="90%"/>
         <h4>Ville Sever</h4>
-        <img src="../../Images/Factions/Sever_ville.jpg" alt="Ville fluviale Sever"/>
+        <img src="{{ asset('images/Factions/Sever_ville.jpg') }}" alt="Ville fluviale Sever"/>
     </div>
 {% endblock %}

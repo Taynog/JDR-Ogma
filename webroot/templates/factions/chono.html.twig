@@ -2,8 +2,10 @@
 {% block title %}
     Chono
 {% endblock %}
-{% block body %}    <h1>Les Chonos</h1>
-    <img src="../../Images/Factions/Chono_picture.jpg" alt="Alpha Chono" height="600"/>
+{% block body %}
+    <h1>Les Chonos</h1>
+
+    <img src="{{ asset('images/Factions/Chono_picture.jpg') }}" alt="Alpha Chono" height="600"/>
 
     <div>
         <h3>Présentation</h3>
@@ -45,10 +47,10 @@
     <div>
         <h2>Galerie</h2>
         <h4>Chonos lors d'un raid</h4>
-        <img src="../../Images/Factions/Chono_raid.jpg" alt="Raid Chono" width="60%"/>
+        <img src="{{ asset('images/Factions/Chono_raid.jpg') }}" alt="Raid Chono" width="60%"/>
         <h4>Chono loup</h4>
-        <img src="../../Images/Factions/Chono_wolf.jpg" alt="Chono loup" width="50%"/>
+        <img src="{{ asset('images/Factions/Chono_wolf.jpg') }}" alt="Chono loup" width="50%"/>
         <h4>Chono hyène</h4>
-        <img src="../../Images/Factions/Chono_hyena.jpg" alt="Chono hyene" width="55%"/>
+        <img src="{{ asset('images/Factions/Chono_hyena.jpg') }}" alt="Chono hyene" width="55%"/>
     </div>
 {% endblock %}

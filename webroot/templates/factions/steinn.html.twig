@@ -1,9 +1,10 @@
-<?php
-$title = "Steinn";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Steinn
+{% endblock %}
+{% block body %}
     <h1>Les Steinns</h1>
-    <img src="../../Images/Factions/Steinn_picture.jpg" alt="Noble Steinn" height="600"/>
+    <img src="{{ asset('images/Factions/Steinn_picture.jpg') }}" alt="Noble Steinn" height="600"/>
     <div>
         <h3>Description Physique</h3>
         <p>Ils sont nés de la pierre, ce sont les gardiens des montagnes. Les Steinns sont des êtres de petite taille ne dépassant pas le mètre quarante mais de constitution robuste, ils aiment arborer leurs longues barbes tressées</p>
@@ -43,8 +44,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
     <div>
         <h2>Galerie</h2>
         <h4>Ville du clan Rakaj</h4>
-        <img src="../../Images/Factions/Steinn_Rakaj_ville.jpg" alt="Ville Rakaj" width="95%"/> <br/> <br/>
+        <img src="{{ asset('images/Factions/Steinn_Rakaj_ville.jpg') }}" alt="Ville Rakaj" width="95%"/> <br/> <br/>
         <h4>Ville du clan Khazun</h4>
-        <img src="../../Images/Factions/Steinn_Khazun_ville.jpg" alt="Ville Khazun" width="90%"/>
+        <img src="{{ asset('images/Factions/Steinn_Khazun_ville.jpg') }}" alt="Ville Khazun" width="90%"/>
     </div>
 {% endblock %}

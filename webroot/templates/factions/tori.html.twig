@@ -1,9 +1,10 @@
-<?php
-$title = "Tori";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Tori
+{% endblock %}
+{% block body %}
     <h1>Les Toris</h1>
-    <img src="../../Images/Factions/Tori_picture.jpg" alt="Moine Tori" height="600"/>
+    <img src="{{ asset('images/Factions/Tori_picture.jpg') }}" alt="Moine Tori" height="600"/>
     <div>
         <h3>Présentation</h3>
         <p>Ce sont des humanoïdes issus des oiseaux : Homme-aigle, Homme-ara, Homme-chouette,... Ils possèdent des ailes et sont capables de voler sur de grandes distances</p>
@@ -37,6 +38,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
     <div>
         <h2>Galerie</h2>
         <h4>Guerrier Tori</h4>
-        <img src="../../Images/Factions/Tori_picture2.jpg" alt="Guerrier Tori" width="70%"/>
+        <img src="{{ asset('images/Factions/Tori_picture2.jpg') }}" alt="Guerrier Tori" width="70%"/>
     </div>
 {% endblock %}

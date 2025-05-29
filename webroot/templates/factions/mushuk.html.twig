@@ -2,8 +2,9 @@
 {% block title %}
     Mushuk
 {% endblock %}
-{% block body %}    <h1>Les Mushuks</h1>
-    <img src="../../Images/Factions/Mushuk_picture.jpg" alt="Capitaine Mushuk" height="600"/>
+{% block body %}
+    <h1>Les Mushuks</h1>
+    <img src="{{ asset('images/Factions/Mushuk_picture.jpg') }}" alt="Capitaine Mushuk" height="600"/>
 
     <div>
         <h3>Présentation</h3>
@@ -40,10 +41,10 @@
     <div>
         <h2>Galerie</h2>
         <h4>Guerrier Mushuk</h4>
-        <img src="../../Images/Factions/Mushuk_warrior.jpeg" alt="Guerrier Mushuk"/>
+        <img src="{{ asset('images/Factions/Mushuk_warrior.jpeg') }}" alt="Guerrier Mushuk"/>
         <h4>Ville Mushuk</h4>
-        <img src="../../Images/Factions/Mushuk_port.jpg" alt="Port Mushuk" width="95%"/>
+        <img src="{{ asset('images/Factions/Mushuk_port.jpg') }}" alt="Port Mushuk" width="95%"/>
         <h4>Cache de contrebandiers Mushuks</h4>
-        <img src="../../Images/Factions/Mushuk_base.jpg" alt="Base Mushuk" width="90%"/>
+        <img src="{{ asset('images/Factions/Mushuk_base.jpg') }}" alt="Base Mushuk" width="90%"/>
     </div>
 {% endblock %}

@@ -1,9 +1,10 @@
-<?php
-$title = "Tuskizi";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Tuskizi
+{% endblock %}
+{% block body %}
     <h1>Les Tuskizis</h1>
-    <img src="../../Images/Factions/Tuskizi_picture.jpg" alt="Citoyen du Sultanat" height="600"/>
+    <img src="{{ asset('images/Factions/Tuskizi_picture.jpg') }}" alt="Citoyen du Sultanat" height="600"/>
     <div>
         <h3>Présentation</h3>
         <p>Ce sont les humains vivant sur Antoraï, ils ont la peau et les cheveux sombres. Ils occupent presque l'intégralité du sud d'Antoraï, leur territoire s'étend des Terres Écarlates jusqu'aux Bois de Cristal disputé avec le clan Khazun.</p>
@@ -39,6 +40,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
     <div>
         <h2>Galerie</h2>
         <h4>Ville Tuskizi</h4>
-        <img src="../../Images/Factions/Tuskizi_ville.jpg" alt="Ville Tuskizi" width="90%"/>
+        <img src="{{ asset('images/Factions/Tuskizi_ville.jpg') }}" alt="Ville Tuskizi" width="90%"/>
     </div>
 {% endblock %}

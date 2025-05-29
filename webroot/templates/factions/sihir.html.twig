@@ -1,9 +1,10 @@
-<?php
-$title = "Sihir";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Sihir
+{% endblock %}
+{% block body %}
     <h1>Les Sihirs</h1>
-    <img src="../../Images/Factions/Sihir_picture.jpg" alt="Mage Sihir" height="600"/>
+    <img src="{{ asset('images/Factions/Sihir_picture.jpg') }}" alt="Mage Sihir" height="600"/>
 
     <div>
         <h3>Présentation</h3>
@@ -40,8 +41,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
     <div>
         <h2>Galerie</h2>
         <h4>Mage Sihir</h4>
-        <img src="../../Images/Factions/Sihir_picture2.jpg" alt="Mage Sihir" width="60%"/>
+        <img src="{{ asset('images/Factions/Sihir_picture2.jpg') }}" alt="Mage Sihir" width="60%"/>
         <h4>Jikaï</h4>
-        <img src="../../Images/Factions/Sihir_ville.jpg" alt="Jikai" width="90%"/>
+        <img src="{{ asset('images/Factions/Sihir_ville.jpg') }}" alt="Jikai" width="90%"/>
     </div>
 {% endblock %}
