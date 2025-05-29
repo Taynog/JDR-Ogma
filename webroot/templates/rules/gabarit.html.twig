@@ -1,7 +1,8 @@
-<?php
-$title = "Gabarit";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Gabarit
+{% endblock %}
+{% block body %}
 
     <h1 id="gabarit_creatures" onclick="hideContent(this)">Gabarit des créatures</h1>
     <div>

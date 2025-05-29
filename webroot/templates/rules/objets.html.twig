@@ -1,7 +1,9 @@
-<?php
-$title = "Objets et Services";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-function print_objets(): void
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Objets
+{% endblock %}
+{% block body %}
+{#function print_objets(): void
 {
     global $db;
     $smt = $db->prepare("SELECT * FROM objets ORDER BY Cat, Objet");
@@ -36,8 +38,8 @@ function print_objets(): void
         </tbody>
     </table>
     <?php
-}
-?> 
+}#}
+
     <h1 id="monnaie" onclick="hideContent(this)">Monnaie et conversions</h1>
     <div>
         <table>

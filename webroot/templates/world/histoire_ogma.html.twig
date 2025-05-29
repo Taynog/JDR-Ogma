@@ -1,7 +1,8 @@
-<?php
-$title = "Histoire";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Histoire
+{% endblock %}
+{% block body %}
 
     <h1 id="origine_monde" onclick="hideContent(this)">Origines du Monde</h1>
     <div>

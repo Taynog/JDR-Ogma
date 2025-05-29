@@ -1,7 +1,8 @@
-<?php
-$title = "Glossaire";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Glossaire
+{% endblock %}
+{% block body %}
     <h1 id="etats" onclick="hideContent(this)">États</h1>
     <div>
         <p>Si plus d’un état affecte le personnage, appliquez-en tous les effets. Si les effets ne peuvent se combiner, appliquez les plus handicapants.</p>

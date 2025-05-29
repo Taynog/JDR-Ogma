@@ -1,7 +1,8 @@
-<?php
-$title = "Objets et Services";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Objets et Services
+{% endblock %}
+{% block body %}
     <h1 id="monnaie" onclick="hideContent(this)">Monnaie et conversions</h1>
     <div>
         <table>

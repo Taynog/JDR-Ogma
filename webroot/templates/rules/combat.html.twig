@@ -1,7 +1,8 @@
-<?php
-$title = "Combat";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Combat
+{% endblock %}
+{% block body %}
     <h1 id="Combat" onclick="hideContent(this)">Combat</h1>
     <div>
         <p>Le Jeu de Rôle nécessite de séparer le temps en deux catégories :</p>

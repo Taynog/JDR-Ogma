@@ -1,6 +1,9 @@
-<?php
-$title = "Bestiaire";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Bestiaire
+{% endblock %}
+{% block body %}
+{#
 function print_bestiaire($cat): void
 {
     global $db,$debut_url;
@@ -240,6 +243,7 @@ function print_bestiaire($cat): void
         </div>
         <hr/>
     </div>
+#}
 
     <h1>Bestiaire</h1>
     <p>Ici sont recensés la plupart des créatures d'Ogma selon différentes catégories.</p>

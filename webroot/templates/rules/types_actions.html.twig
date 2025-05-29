@@ -1,7 +1,8 @@
-<?php
-$title = "Types d'actions";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Types d'actions
+{% endblock %}
+{% block body %}
     <h1 id="actions_principales" onclick="hideContent(this)">Actions principales</h1>
     <div>
         <p>Les actions principales ne peuvent être effectuées que lors de son propre tour. Toutes les actions principales coûtent 1 PA sauf précisé autrement.</p>

@@ -1,8 +1,9 @@
-<?php
-$title = "Carte d'Ogma";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-?> 
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Carte d'Ogma
+{% endblock %}
+{% block body %}
     <div>
-        <img src="../../Images/Misc/Carte_Ogma.png" alt="Carte Ogma" id="map"/>
+        <img src="{{ asset('images/Misc/Carte_Ogma.png') }}" alt="Carte Ogma" id="map"/>
     </div>
 {% endblock %}

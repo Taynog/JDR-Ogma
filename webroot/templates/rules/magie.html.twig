@@ -1,9 +1,8 @@
-<?php
-$title = "Magie";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-$nb_cercle = 8;
-
-?>
+{% extends '@App/base.html.twig' %}
+{% block title %}
+    Magie
+{% endblock %}
+{% block body %}
     <h1 id="Magie" onclick="hideContent(this)">Magie</h1>
     <div>
         <h3>Origines de la Magie</h3>

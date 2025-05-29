@@ -17,7 +17,7 @@ class FrontendController extends AbstractController
             'changelogs' => $changelogs
         ]);
     }
-    #[Route("/{page}", "app_front", priority: -1)]
+    #[Route("/{page}", "app_front", priority: -10)]
     public function page (string $page): Response
     {
         $template = $this->getDoctrine()->getRepository(WebContent::class)->find($page);
@@ -33,6 +33,16 @@ class FrontendController extends AbstractController
     {
         try {
             return $this->render("@App/factions/$faction.html.twig");
+        }
+        catch (\Exception $exception) {
+            return $this->redirectToRoute("app_index");
+        }
+    }
+    #[Route("/univers/{page}", "app_univers", priority: -1)]
+    public function univers (string $page): Response
+    {
+        try {
+            return $this->render("@App/world/$page.html.twig");
         }
         catch (\Exception $exception) {
             return $this->redirectToRoute("app_index");
