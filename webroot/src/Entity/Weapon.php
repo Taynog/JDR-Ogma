@@ -46,7 +46,7 @@ class Weapon
         $this->weaponProperties = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->type;
     }
@@ -111,24 +111,12 @@ class Weapon
         return $this;
     }
 
-    public function getProperties(): ?Collection
-    {
-        return $this->properties;
-    }
-
-    public function setProperties(Collection $properties): static
-    {
-        $this->properties = $properties;
-
-        return $this;
-    }
-
     public function getCategory(): ?WeaponCategory
     {
         return $this->category;
     }
 
-    public function setCategory(WeaponCategory $category): static
+    public function setCategory(?WeaponCategory $category): static
     {
         $this->category = $category;
 
@@ -155,22 +143,6 @@ class Weapon
     public function setPrice(string $price): static
     {
         $this->price = $price;
-
-        return $this;
-    }
-
-    public function addProperty(WeaponProperty $property): static
-    {
-        if (!$this->properties->contains($property)) {
-            $this->properties->add($property);
-        }
-
-        return $this;
-    }
-
-    public function removeProperty(WeaponProperty $property): static
-    {
-        $this->properties->removeElement($property);
 
         return $this;
     }
