@@ -5,3 +5,24 @@ weapons:
   épée:
     plural: Épées
     singular: Épée
+  bâton:
+    plural: Bâtons
+    singular: Bâton
+  dague:
+    plural: Dagues
+    singular: Dague
+  ceste:
+    plural: Cestes
+    singular: Ceste
+  fouet:
+    plural: Fouets
+    singular: Fouet
+  masse:
+    plural: Masses
+    singular: Masse
+  hache:
+    plural: Haches
+    singular: Hache
+  lance:
+    plural: Lances
+    singular: Lance

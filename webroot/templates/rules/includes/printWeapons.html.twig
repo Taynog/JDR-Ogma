@@ -1,4 +1,5 @@
 <p id="{{ 'table_armes_cac' ~ category|lower }}" class="caption">{{ ('weapons.' ~ category|lower ~ '.plural')|trans() }}</p>
+
 <table>
     <tbody>
     <tr>
@@ -12,18 +13,18 @@
         <th>Prix</th>
     </tr>
     {% for weapon in weapons %}
-        {% if weapon.category.category == category %}
         <tr>
             <td id="{{ 'arme_' ~ weapon.type|lower }}"> {{ weapon.type }} </td>
             <td> {{ weapon.damageType }} </td>
             <td> {{ weapon.damage }} </td>
             <td> {{ weapon.handling }} </td>
             <td> {{ weapon.reach }} </td>
-            <td> {{ weapon.properties|join(', ') }} </td>
+            <td>
+                {% include '@App/rules/includes/printWeaponProperties.html.twig' with {'properties' : weapon.weaponProperties} %}
+            </td>
             <td> {{ weapon.enc }} </td>
             <td> {{ weapon.price }} pa</td>
         </tr>
-        {% endif %}
     {% endfor %}
     </tbody>
 </table>

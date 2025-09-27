@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\WeaponProperties;
+use App\Entity\WeaponPropertyDetails;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<WeaponProperties>
+ * @extends ServiceEntityRepository<WeaponPropertyDetails>
  *
- * @method WeaponProperties|null find($id, $lockMode = null, $lockVersion = null)
- * @method WeaponProperties|null findOneBy(array $criteria, array $orderBy = null)
- * @method WeaponProperties[]    findAll()
- * @method WeaponProperties[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method WeaponPropertyDetails|null find($id, $lockMode = null, $lockVersion = null)
+ * @method WeaponPropertyDetails|null findOneBy(array $criteria, array $orderBy = null)
+ * @method WeaponPropertyDetails[]    findAll()
+ * @method WeaponPropertyDetails[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class WeaponPropertiesRepository extends ServiceEntityRepository
+class WeaponPropertYDetailsRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, WeaponProperties::class);
+        parent::__construct($registry, WeaponPropertyDetails::class);
     }
 
 //    /**
-//     * @return WeaponProperties[] Returns an array of WeaponProperties objects
+//     * @return WeaponPropertyDetails[] Returns an array of WeaponPropertyDetails objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class WeaponPropertiesRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?WeaponProperties
+//    public function findOneBySomeField($value): ?WeaponPropertyDetails
 //    {
 //        return $this->createQueryBuilder('w')
 //            ->andWhere('w.exampleField = :val')

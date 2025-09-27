@@ -27,7 +27,7 @@ class Weapon
     #[ORM\Column(length: 25)]
     private ?string $reach = null;
 
-    #[ORM\ManyToMany(targetEntity: WeaponProperties::class, mappedBy: 'weaponType')]
+    #[ORM\OneToMany(targetEntity: WeaponPropertyDetails::class, mappedBy: 'weapon')]
     private Collection $weaponProperties;
 
     #[ORM\ManyToOne(inversedBy: 'weapons')]

@@ -63,10 +63,25 @@ class RulesController extends AbstractController
     #[Route("/armes", "app_rules_weapons")]
     public function armes(): Response
     {
+		$weaponsMelee = $weaponsRanged = [];
         $weapons = $this->getDoctrine()->getRepository(Weapon::class)->findAll();
-
+		foreach ($weapons as $weapon) {
+			//Si c'est une arme à distance, sa portée est indiquée en mètres 'm'
+			if(preg_match('/[0-9]+m/', $weapon->getReach())) {
+				if(!array_key_exists($weapon->getCategory()->getCategory(), $weaponsRanged)) {
+					$weaponsRanged[$weapon->getCategory()->getCategory()] = [];
+				}
+				$weaponsRanged[$weapon->getCategory()->getCategory()][] = $weapon;
+			} else {
+				if (!array_key_exists($weapon->getCategory()->getCategory(), $weaponsMelee)) {
+					$weaponsMelee[$weapon->getCategory()->getCategory()] = [];
+				}
+				$weaponsMelee[$weapon->getCategory()->getCategory()][] = $weapon;}
+		}
+dump($weaponsMelee, $weaponsRanged);
         return $this->render('@App/rules/armes.html.twig', [
-            'weapons' => $weapons
+            'weaponsMelee' => $weaponsMelee,
+            'weaponsRanged' => $weaponsRanged
         ]);
     }
 

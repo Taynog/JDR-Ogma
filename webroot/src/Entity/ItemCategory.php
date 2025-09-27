@@ -18,7 +18,7 @@ class ItemCategory
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\OneToMany(mappedBy: 'Category', targetEntity: Item::class)]
+    #[ORM\OneToMany(mappedBy: 'category', targetEntity: Item::class)]
     private Collection $items;
 
     public function __construct()

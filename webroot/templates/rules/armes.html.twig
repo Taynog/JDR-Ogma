@@ -110,10 +110,9 @@
 
         <div>
             <p class="super_caption" id="table_armes_cac">Armes de mêlée</p>
-            <?php
-            print_armes(array('Lames','Haches','Masses et marteaux',"Armes d'hast", 'Diverses'));
-            ?>
-            {% include '@App/rules/includes/printWeapons.html.twig' with {'category' : 'Épée'} %}
+            {% for category, weapons in weaponsMelee %}
+                {% include '@App/rules/includes/printWeapons.html.twig' with {'category' : category, 'weapons' : weapons} %}
+            {%  endfor %}
 
             <p class="caption" id="materiau_armes_melee">Matériau des armes de mêlée</p>
             <table>

@@ -2,28 +2,23 @@
 
 namespace App\Entity;
 
-use App\Repository\WeaponPropertiesRepository;
+use App\Repository\WeaponPropertYDetailsRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: WeaponPropertiesRepository::class)]
-class WeaponProperties
+#[ORM\Entity(repositoryClass: WeaponPropertyDetailsRepository::class)]
+class WeaponPropertyDetails
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column]
-    private ?int $id = null;
+    #[ORM\ManyToOne(targetEntity: Weapon::class, inversedBy: 'weaponProperties')]
+    #[ORM\JoinColumn(referencedColumnName: "type", nullable: false)]
+    private Weapon $weapon;
 
-    #[ORM\ManyToMany(targetEntity: Weapon::class, inversedBy: 'weaponProperties')]
-    #[ORM\JoinTable(name: "weapon_properties_join_weapons")]
-    #[ORM\JoinColumn(name: "weapon_properties_id", referencedColumnName: "id")]
-    #[ORM\InverseJoinColumn(name: "weapon_type", referencedColumnName: "type")]
-    private Collection $weaponType;
-
-    #[ORM\ManyToOne]
+	#[ORM\Id]
+    #[ORM\ManyToOne(targetEntity: WeaponProperty::class, inversedBy: 'weaponPropertyDetails')]
     #[ORM\JoinColumn(referencedColumnName: 'property', nullable: false)]
-    private ?WeaponProperty $weaponProperty = null;
+    private WeaponProperty $weaponProperty;
 
     #[ORM\Column(length: 20, nullable: true)]
     private ?string $X = null;
@@ -34,38 +29,23 @@ class WeaponProperties
     #[ORM\Column(length: 20, nullable: true)]
     private ?string $Z = null;
 
-    public function __construct()
+    public function __construct($weapon, $weaponProperty)
     {
-        $this->weaponType = new ArrayCollection();
+        $this->weapon = $weapon;
+        $this->weaponProperty = $weaponProperty;
     }
 
-    public function getId(): ?int
+    public function getId(): ?array
     {
-        return $this->id;
+        return [$this->weapon, $this->weaponProperty];
     }
 
     /**
-     * @return Collection<int, Weapon>
+     * @return Weapon
      */
-    public function getWeaponType(): Collection
+    public function getWeapon(): Weapon
     {
-        return $this->weaponType;
-    }
-
-    public function addWeaponType(Weapon $weaponType): static
-    {
-        if (!$this->weaponType->contains($weaponType)) {
-            $this->weaponType->add($weaponType);
-        }
-
-        return $this;
-    }
-
-    public function removeWeaponType(Weapon $weaponType): static
-    {
-        $this->weaponType->removeElement($weaponType);
-
-        return $this;
+        return $this->weapon;
     }
 
     public function getWeaponProperty(): ?WeaponProperty

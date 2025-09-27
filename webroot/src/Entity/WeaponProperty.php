@@ -15,6 +15,9 @@ class WeaponProperty
     #[ORM\Column(length: 255)]
     private ?string $property = null;
 
+	#[ORM\OneToMany(targetEntity: WeaponPropertyDetails::class, mappedBy: 'weaponProperty')]
+	private Collection $weaponPropertyDetails;
+
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
@@ -24,7 +27,7 @@ class WeaponProperty
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $example = null;
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->property;
     }

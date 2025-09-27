@@ -22,7 +22,7 @@ class Item
     #[ORM\Column(type: Types::SMALLINT)]
     private ?int $enc = null;
 
-    #[ORM\ManyToOne(inversedBy: 'items')]
+    #[ORM\ManyToOne(inversedBy: 'items', targetEntity: ItemCategory::class)]
     #[ORM\JoinColumn(referencedColumnName: 'category', nullable: false)]
     private ?ItemCategory $category = null;
 

@@ -21,7 +21,7 @@ class WeaponCategory
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $effect = null;
 
-    #[ORM\OneToMany(mappedBy: 'Category', targetEntity: Weapon::class)]
+    #[ORM\OneToMany(mappedBy: 'category', targetEntity: Weapon::class)]
     private Collection $weapons;
 
     public function __construct()
@@ -29,7 +29,7 @@ class WeaponCategory
         $this->weapons = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->category;
     }
