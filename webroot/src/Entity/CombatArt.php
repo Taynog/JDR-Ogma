@@ -11,8 +11,12 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: CombatArtRepository::class)]
 class CombatArt
 {
-    #[ORM\Id]
-    #[ORM\Column(length: 255)]
+	#[ORM\Id]
+	#[ORM\GeneratedValue]
+	#[ORM\Column(type: 'integer')]
+	private $id;
+
+	#[ORM\Column(length: 255)]
     private ?string $name = null;
 
     #[ORM\Column(type: Types::TEXT)]
@@ -34,8 +38,8 @@ class CombatArt
     private ?string $defenderTest = null;
 
     #[ORM\ManyToMany(targetEntity: WeaponCategory::class)]
-    #[ORM\JoinColumn(name: "combat_art", referencedColumnName: "name")]
-    #[ORM\InverseJoinColumn(name: "weapon_category", referencedColumnName: "category")]
+    #[ORM\JoinColumn(name: "combat_art", referencedColumnName: "id")]
+    #[ORM\InverseJoinColumn(name: "weapon_category", referencedColumnName: "id")]
     private Collection $weaponCategories;
 
     public function __construct()

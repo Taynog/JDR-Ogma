@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20240627104359 extends AbstractMigration
+final class Version20251209184645 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -20,12 +20,12 @@ final class Version20240627104359 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE weapon ADD reach VARCHAR(25) NOT NULL');
+        $this->addSql('ALTER TABLE weapon_category CHANGE effect effect JSON DEFAULT NULL COMMENT \'(DC2Type:json)\'');
     }
 
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE weapon DROP reach');
+        $this->addSql('ALTER TABLE weapon_category CHANGE effect effect LONGTEXT DEFAULT NULL');
     }
 }

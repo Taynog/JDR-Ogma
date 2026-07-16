@@ -11,8 +11,12 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: WeaponPropertyRepository::class)]
 class WeaponProperty
 {
-    #[ORM\Id]
-    #[ORM\Column(length: 255)]
+	#[ORM\Id]
+	#[ORM\GeneratedValue]
+	#[ORM\Column(type: 'integer')]
+	private $id;
+
+	#[ORM\Column(length: 255)]
     private ?string $property = null;
 
 	#[ORM\OneToMany(targetEntity: WeaponPropertyDetails::class, mappedBy: 'weaponProperty')]
@@ -29,7 +33,7 @@ class WeaponProperty
 
     public function getId(): ?string
     {
-        return $this->property;
+        return $this->id;
     }
 
     public function getProperty(): ?string

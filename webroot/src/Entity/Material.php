@@ -11,8 +11,12 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: MaterialRepository::class)]
 class Material
 {
-    #[ORM\Id]
-    #[ORM\Column(length: 255)]
+	#[ORM\Id]
+	#[ORM\GeneratedValue]
+	#[ORM\Column(type: 'integer')]
+	private $id;
+
+	#[ORM\Column(length: 255)]
     private ?string $material = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
@@ -41,8 +45,8 @@ class Material
 
     #[ORM\ManyToMany(targetEntity: Armor::class, inversedBy: 'materials')]
     #[ORM\JoinTable(name: "armor_material")]
-    #[ORM\JoinColumn(name: "armor_material", referencedColumnName: "material")]
-    #[ORM\InverseJoinColumn(name: "armor_category", referencedColumnName: "category")]
+    #[ORM\JoinColumn(name: "armor_material", referencedColumnName: "id")]
+    #[ORM\InverseJoinColumn(name: "armor_category", referencedColumnName: "id")]
     private Collection $armorCategory;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -58,7 +62,7 @@ class Material
 
     public function getId(): ?int
     {
-        return $this->material;
+        return $this->id;
     }
 
     public function getMaterial(): ?string

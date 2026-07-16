@@ -11,14 +11,18 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: WeaponCategoryRepository::class)]
 class WeaponCategory
 {
-    #[ORM\Id]
-    #[ORM\Column(length: 255)]
+	#[ORM\Id]
+	#[ORM\GeneratedValue]
+	#[ORM\Column(type: 'integer')]
+	private $id;
+
+	#[ORM\Column(length: 255)]
     private ?string $category = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    #[ORM\Column(type: Types::JSON, nullable: true)]
     private ?string $effect = null;
 
     #[ORM\OneToMany(mappedBy: 'category', targetEntity: Weapon::class)]
@@ -31,7 +35,7 @@ class WeaponCategory
 
     public function getId(): ?string
     {
-        return $this->category;
+        return $this->id;
     }
 
     public function getCategory(): ?string

@@ -1,20 +1,22 @@
-<p id="{{ 'table_armes_cac' ~ category|lower }}" class="caption">{{ ('weapons.' ~ category|lower ~ '.plural')|trans() }}</p>
+<p id="{{ 'table_weapon_melee_' ~ category|lower }}" class="caption">{{ ('weapon.' ~ category|lower ~ '.plural')|trans() }}</p>
+<p id="{{ 'table_weapon_melee_' ~ category|lower ~ '_description' }}">{{ ('weapon.' ~ category|lower ~ '.description')|trans() }}</p>
+<p id="{{ 'table_weapon_melee_' ~ category|lower ~ '_effect' }}">{{ ('weapon.' ~ category|lower ~ '.effect')|trans({ '%var%': category.effect }) }}</p>
 
 <table>
     <tbody>
     <tr>
-        <th>Type</th>
-        <th>Type de Dégâts</th>
-        <th>Dégâts</th>
-        <th>Maniabilité</th>
-        <th>Portée</th>
-        <th>Propriétés</th>
-        <th>ENC</th>
-        <th>Prix</th>
+        <th>('weapon.type')|trans()</th>
+        <th>('weapon.type')|trans()</th>
+        <th>('weapon.type')|trans()</th>
+        <th>('weapon.type')|trans()</th>
+        <th>('weapon.type')|trans()</th>
+        <th>('weapon.type')|trans()</th>
+        <th>('weapon.type')|trans()</th>
+        <th>('weapon.type')|trans()</th>
     </tr>
     {% for weapon in weapons %}
         <tr>
-            <td id="{{ 'arme_' ~ weapon.type|lower }}"> {{ weapon.type }} </td>
+            <td id="{{ 'weapon_' ~ weapon.type|lower }}"> {{ weapon.type }} </td>
             <td> {{ weapon.damageType }} </td>
             <td> {{ weapon.damage }} </td>
             <td> {{ weapon.handling }} </td>
@@ -23,7 +25,7 @@
                 {% include '@App/rules/includes/printWeaponProperties.html.twig' with {'properties' : weapon.weaponProperties} %}
             </td>
             <td> {{ weapon.enc }} </td>
-            <td> {{ weapon.price }} pa</td>
+            <td> {{ weapon.price }} </td>
         </tr>
     {% endfor %}
     </tbody>

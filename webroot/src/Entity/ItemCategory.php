@@ -11,8 +11,12 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: ItemCategoryRepository::class)]
 class ItemCategory
 {
-    #[ORM\Id]
-    #[ORM\Column(length: 255)]
+	#[ORM\Id]
+	#[ORM\GeneratedValue]
+	#[ORM\Column(type: 'integer')]
+	private $id;
+
+	#[ORM\Column(length: 255)]
     private ?string $category = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
@@ -26,10 +30,9 @@ class ItemCategory
         $this->items = new ArrayCollection();
     }
 
-    public function getId(): ?int
-    {
-        return $this->category;
-    }
+	public function getId(): ?int {
+		return $this->id;
+	}
 
     public function getCategory(): ?string
     {

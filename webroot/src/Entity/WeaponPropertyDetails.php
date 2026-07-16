@@ -12,12 +12,12 @@ class WeaponPropertyDetails
 {
     #[ORM\Id]
     #[ORM\ManyToOne(targetEntity: Weapon::class, inversedBy: 'weaponProperties')]
-    #[ORM\JoinColumn(referencedColumnName: "type", nullable: false)]
+    #[ORM\JoinColumn(referencedColumnName: "id", nullable: false)]
     private Weapon $weapon;
 
 	#[ORM\Id]
     #[ORM\ManyToOne(targetEntity: WeaponProperty::class, inversedBy: 'weaponPropertyDetails')]
-    #[ORM\JoinColumn(referencedColumnName: 'property', nullable: false)]
+    #[ORM\JoinColumn(referencedColumnName: 'id', nullable: false)]
     private WeaponProperty $weaponProperty;
 
     #[ORM\Column(length: 20, nullable: true)]

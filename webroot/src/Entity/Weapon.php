@@ -12,8 +12,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Weapon
 {
     #[ORM\Id]
-    #[ORM\Column(length: 50)]
-    private ?string $type = null;
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
+    private $id;
+
+	#[ORM\Column(length: 50)]
+	private ?string $type = null;
 
     #[ORM\Column(length: 255)]
     private ?string $damageType = null;
@@ -30,8 +34,8 @@ class Weapon
     #[ORM\OneToMany(targetEntity: WeaponPropertyDetails::class, mappedBy: 'weapon')]
     private Collection $weaponProperties;
 
-    #[ORM\ManyToOne(inversedBy: 'weapons')]
-    #[ORM\JoinColumn(referencedColumnName: 'category', nullable: false)]
+    #[ORM\ManyToOne(inversedBy: 'weapons', targetEntity: WeaponCategory::class)]
+    #[ORM\JoinColumn(referencedColumnName: 'id', nullable: false)]
     private ?WeaponCategory $category = null;
 
     #[ORM\Column(type: Types::SMALLINT)]
@@ -46,9 +50,13 @@ class Weapon
         $this->weaponProperties = new ArrayCollection();
     }
 
-    public function getId(): ?string
+	public function __toString(): string {
+		return (string)$this->type;
+	}
+
+	public function getId(): ?int
     {
-        return $this->type;
+        return $this->id;
     }
 
     public function getType(): ?string

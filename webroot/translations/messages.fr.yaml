@@ -1,28 +1,49 @@
-weapons:
-  arbalète:
-    plural: Arbalètes
-    singular: Arbalète
-  épée:
-    plural: Épées
-    singular: Épée
-  bâton:
-    plural: Bâtons
-    singular: Bâton
-  dague:
-    plural: Dagues
-    singular: Dague
-  ceste:
-    plural: Cestes
-    singular: Ceste
-  fouet:
-    plural: Fouets
-    singular: Fouet
-  masse:
-    plural: Masses
-    singular: Masse
-  hache:
+enc: ENC
+description: Description
+effect: Effet
+
+test: les degats sont de %var%
+
+#Weapons
+weapon:
+  plural: Armes
+  singular: Arme
+  type: Type
+  category: Catégorie
+  damage: Dégâts
+  damage_type: Type de dégâts
+  handling: Maniement
+  reach: Portée
+  price: Prix
+  axe:
     plural: Haches
     singular: Hache
-  lance:
+  caestus:
+    plural: Cestes
+    singular: Ceste
+  crossbow:
+    plural: Arbalètes
+    singular: Arbalète
+  dagger:
+    plural: Dagues
+    singular: Dague
+    description: Lames courtes capables de frapper dans les points faibles
+    effect: Ignore jusqu'a %X% PR de la cible
+  mace:
+    plural: Masses
+    singular: Masse
+  spear:
     plural: Lances
     singular: Lance
+  staff:
+    plural: Bâtons
+    singular: Bâton
+  sword:
+    plural: Épées
+    singular: Épée
+  whip:
+    plural: Fouets
+    singular: Fouet
+
+#Sonata
+Weapon_list: Listes des armes

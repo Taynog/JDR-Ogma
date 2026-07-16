@@ -9,8 +9,12 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: ItemRepository::class)]
 class Item
 {
-    #[ORM\Id]
-    #[ORM\Column(length: 255)]
+	#[ORM\Id]
+	#[ORM\GeneratedValue]
+	#[ORM\Column(type: 'integer')]
+	private $id;
+
+	#[ORM\Column(length: 255)]
     private ?string $item = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
@@ -23,12 +27,12 @@ class Item
     private ?int $enc = null;
 
     #[ORM\ManyToOne(inversedBy: 'items', targetEntity: ItemCategory::class)]
-    #[ORM\JoinColumn(referencedColumnName: 'category', nullable: false)]
+    #[ORM\JoinColumn(referencedColumnName: 'id', nullable: false)]
     private ?ItemCategory $category = null;
 
     public function getId(): ?int
     {
-        return $this->item;
+        return $this->id;
     }
 
     public function getItem(): ?string

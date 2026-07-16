@@ -9,8 +9,12 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: GlossaryConditionRepository::class)]
 class GlossaryCondition
 {
-    #[ORM\Id]
-    #[ORM\Column(length: 255)]
+	#[ORM\Id]
+	#[ORM\GeneratedValue]
+	#[ORM\Column(type: 'integer')]
+	private $id;
+
+	#[ORM\Column(length: 255)]
     private ?string $condition = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
@@ -21,7 +25,7 @@ class GlossaryCondition
 
     public function getId(): ?int
     {
-        return $this->condition;
+        return $this->id;
     }
 
     public function getCondition(): ?string

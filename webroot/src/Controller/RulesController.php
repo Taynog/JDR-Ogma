@@ -78,8 +78,8 @@ class RulesController extends AbstractController
 				}
 				$weaponsMelee[$weapon->getCategory()->getCategory()][] = $weapon;}
 		}
-dump($weaponsMelee, $weaponsRanged);
         return $this->render('@App/rules/armes.html.twig', [
+			'degats' => 15,
             'weaponsMelee' => $weaponsMelee,
             'weaponsRanged' => $weaponsRanged
         ]);

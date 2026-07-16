@@ -9,8 +9,12 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: ChangelogRepository::class)]
 class Changelog
 {
-    #[ORM\Id]
-    #[ORM\Column(length: 255)]
+	#[ORM\Id]
+	#[ORM\GeneratedValue]
+	#[ORM\Column(type: 'integer')]
+	private $id;
+
+	#[ORM\Column(length: 255)]
     private ?string $version = null;
 
     #[ORM\Column(type: Types::TEXT)]
@@ -18,7 +22,7 @@ class Changelog
 
     public function getId(): ?int
     {
-        return $this->version;
+        return $this->id;
     }
 
     public function getVersion(): ?string

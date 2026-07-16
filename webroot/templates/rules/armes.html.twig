@@ -109,6 +109,10 @@
         </div>
 
         <div>
+            <p>{{ 'test'|trans({ '%var%': degats }) }}</p>
+        </div>
+
+        <div>
             <p class="super_caption" id="table_armes_cac">Armes de mêlée</p>
             {% for category, weapons in weaponsMelee %}
                 {% include '@App/rules/includes/printWeapons.html.twig' with {'category' : category, 'weapons' : weapons} %}

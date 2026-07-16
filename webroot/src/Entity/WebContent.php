@@ -10,8 +10,12 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[ORM\Entity(repositoryClass: WebContentRepository::class)]
 class WebContent
 {
-    #[ORM\Id]
-    #[ORM\Column(length: 255)]
+	#[ORM\Id]
+	#[ORM\GeneratedValue]
+	#[ORM\Column(type: 'integer')]
+	private $id;
+
+	#[ORM\Column(length: 255)]
     private ?string $page = null;
 
     #[ORM\Column(length: 255)]
@@ -25,13 +29,13 @@ class WebContent
 
     public function __toString(): string
     {
-        return $this->getTitle();
+        return (string)$this->getTitle();
     }
 
 
     public function getId(): ?int
     {
-        return $this->page;
+        return $this->id;
     }
 
     public function getPage(): ?string

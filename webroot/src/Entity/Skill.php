@@ -9,8 +9,12 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: SkillRepository::class)]
 class Skill
 {
-    #[ORM\Id]
-    #[ORM\Column(length: 255)]
+	#[ORM\Id]
+	#[ORM\GeneratedValue]
+	#[ORM\Column(type: 'integer')]
+	private $id;
+
+	#[ORM\Column(length: 255)]
     private ?string $skill = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
@@ -27,7 +31,7 @@ class Skill
 
     public function getId(): ?int
     {
-        return $this->skill;
+        return $this->id;
     }
 
     public function getSkill(): ?string

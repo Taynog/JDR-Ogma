@@ -29,3 +29,15 @@ services:
         class: App\Admin\WebContentAdmin
         tags:
             - { name: sonata.admin, model_class: App\Entity\WebContent, controller: ~, manager_type: orm, group: admin, label: WebContent }
+
+    admin.weapon:
+        class: App\Admin\WeaponAdmin
+        calls:
+
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Weapon, controller: ~, manager_type: orm, group: admin, label: weapon.plural, label_translator_strategy: sonata.admin.label.strategy.noop}
+
+    admin.weapon_category:
+        class: App\Admin\WeaponCategoryAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\WeaponCategory, controller: ~, manager_type: orm, group: admin, label: WeaponCategory }

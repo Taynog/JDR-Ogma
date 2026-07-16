@@ -49,9 +49,6 @@ final class WebContentAdmin extends AbstractAdmin
 
     protected function configureFormFields(FormMapper $form): void
     {
-        dump(array_combine(array_column(WebContentCategory::cases(), 'name'),array_column(WebContentCategory::cases(), 'name')));
-        dump(array_flip(array_column(WebContentCategory::cases(), 'name')));
-
         $form
             ->add('page')
             ->add('title')
