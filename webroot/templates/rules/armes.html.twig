@@ -37,7 +37,7 @@
                 <p><span class="big_underline">Excellence :</span>Cette arme est d'excellente facture. Les jets de Style de Combat se font avec un avantage.</p>
                 <p><span class="big_underline">Primitive :</span>Cette arme est d'une qualité pitoyable. Les jets de Style de Combat se font avec un désavantage.</p>
                 <p><span class="big_underline">Perce-Armure(X) :</span>Cette arme est d'une telle puissance qu'elle ignore X PR de la cible qu'importe les conditions.</p>
-                <p><span class="big_underline">Lancer(X) :</span>Cette arme est suffisamment équilibrée pour être lancée. X représente la portée effective de l'arme. Un lancer d'arme est traité comme une attaque à distance normale (mais la force peut être utilisée pour le test de Style de Combat). Le dé de dégâts de l'arme augmente d'un <a href="Systeme.php#cran_des">cran</a> si elle est lancée</p>
+                <p><span class="big_underline">Lancer(X) :</span>Cette arme est suffisamment équilibrée pour être lancée. X représente la portée effective de l'arme. Un lancer d'arme est traité comme une attaque à distance normale (mais la force peut être utilisée pour le test de Style de Combat). Le dé de dégâts de l'arme augmente d'un <a href="{{ path('app_rules_index') ~ '#cran_des' }}">cran</a> si elle est lancée</p>
                 <p><span class="big_underline">Rechargement(X)</span>Cette arme doit être rechargée avant d'être utilisée, le nombre d'actions nécessaires pour recharger l'arme est indiqué entre parenthèse. Le porteur peut dépenser son déplacement pour recharger son arme. Pour les armes à feu disposant de la propriété Chargeur(X), cela indique le temps de rechargement pour un tir.</p>
                 <p><span class="big_underline">Chargeur(X) :</span>Cette arme à feu est capable de tirer X fois avant de nécessiter un rechargement.</p>
                 <p><span class="big_underline">Zone(X)</span>Cette arme touche jusqu'à X cible dans sa portée d'attaque.</p>
@@ -50,14 +50,14 @@
                     <li><span class="big_underline">Dégâts(Dgt) :</span>Les dégâts qu'inflige l'arme.</li>
                     <li><span class="big_underline">Maniabilité :</span>
                         <ul style="list-style-type: none">
-                            <li><span class="big_underline">Une main :</span>L'arme s'utilise à une main ce qui la rend utilisable pour le <a href="Combat.php#combat_deux_armes">combat à deux armes</a>.</li>
+                            <li><span class="big_underline">Une main :</span>L'arme s'utilise à une main ce qui la rend utilisable pour le <a href="{{ path('app_rules_combat') ~ '#combat_deux_armes' }}">combat à deux armes</a>.</li>
                             <li><span class="big_underline">Deux mains :</span>L'arme requiert l'usage des deux mains pour pouvoir frapper.</li>
                         </ul>
                         <p>Une arme de mêlée ne possédant pas la propriété "Petite" peut être maniée à deux mains ce qui augmente la taille du dé de dégâts d'un cran.</p>
                     </li>
                     <li><span class="big_underline">Portée :</span>La portée d'une arme. Pour les armes de mêlée, cela ne représenta pas la longueur de l'arme mais plutôt la distance où elle est menaçante. Pour les armes à distance, cela indique la portée effective et la portée maximale en mètres (les tirs entre la portée effective et maximale se font avec un malus de -20).
                         <ul style="list-style-type: none">
-                            <li><span class="big_underline">Courte :</span>Les armes courtes ont un avantage lors des <a href="Combat.php#lutte">luttes</a> et dans les espaces restreints.</li>
+                            <li><span class="big_underline">Courte :</span>Les armes courtes ont un avantage lors des <a href="{{ path('app_rules_combat') ~ '#lutte' }}">luttes</a> et dans les espaces restreints.</li>
                             <li><span class="big_underline">Moyenne :</span>Les armes moyennes ne subissent aucune pénalité qu'importe la situation.</li>
                             <li><span class="big_underline">Longue :</span>Les armes longues subissent un désavantage dans les espaces restreints.</li>
                             <li><span class="big_underline">Très Longue :</span>Les armes très longues subissent deux désavantages dans les espaces restreints.</li>
@@ -71,7 +71,7 @@
                 </ul>
                 <p>Ces attributs sont ceux d'une arme faite pour une créature de gabarit Moyen. Le gabarit de l'utilisateur peut influer sur certains attributs :</p>
                 <ul>
-                    <li>Les armes faites pour les Grandes créatures ou plus voient leur dé de dégâts augmenter d'un <a href="Systeme.php#cran_des">cran</a> par catégorie au-dessus de Moyenne.</li>
+                    <li>Les armes faites pour les Grandes créatures ou plus voient leur dé de dégâts augmenter d'un <a href="{{ path('app_rules_index') ~ '#cran_des' }}">cran</a> par catégorie au-dessus de Moyenne.</li>
                     <li>La portée d'une arme de mêlée dépend du gabarit pour lequel elle est faite. Lors d'un affrontement entre une créature Petite avec une arme Très Longue et une créature Moyenne avec une arme Longue, les deux armes ont en réalité la même portée donc aucune des deux créatures n'obtiennent d'avantages grâce à la portée de leur arme pour la première passe d'armes.</li>
                     <li>Pour manier une arme d'un gabarit différent du sien il doit exister un type d'arme similaire plus grand ou plus petit, par exemple une épée longue de gabarit M est une épée courte pour un gabarit G ou une grande épée pour un gabarit P. Manier une arme créée pour une créature d'un gabarit différent du sien se fait avec un désavantage et il est impossible d'utiliser des armes faites pour des créatures ayant 2 gabarit ou plus d'écart.</li>
                     <li>Un objet fait pour une entité plus petite voit son prix divisé par deux par gabarit inférieur à Moyen et inversement le prix double par gabarit au-dessus.</li>
@@ -161,19 +161,22 @@
             </table>
 
             <p class="super_caption" id="table_armes_distance">Armes à distance</p>
-            <?php
-            print_armes(array('Armes de jet', 'Arcs et arbalètes', 'Armes à distance diverses'));
-            ?>
-
+            {% for category, weapons in weaponsRanged %}
+                {% if category in ['Armes de jet', 'Arcs et arbalètes', 'Armes à distance diverses'] %}
+                    {% include '@App/rules/includes/printWeapons.html.twig' with {'category' : category, 'weapons' : weapons} %}
+                {% endif %}
+            {% endfor %}
 
             <p class="super_caption" id="table_arme_feu">Armes à feu</p>
-            <?php
-            print_armes(array('Armes de poing', "Armes d'épaule"));
-            ?>
+            {% for category, weapons in weaponsRanged %}
+                {% if category in ['Armes de poing', 'Armes d\'épaule'] %}
+                    {% include '@App/rules/includes/printWeapons.html.twig' with {'category' : category, 'weapons' : weapons} %}
+                {% endif %}
+            {% endfor %}
 
             <h3 id="materiau_fleches_carreaux" onclick="hideContent(this)">Matériau des munitions</h3>
             <div>
-                <p>Les armes à distance utilisent des munitions faites de différents matériaux. Les munitions sont comptées de façon abstraite avec un dé polyédrique, après avoir utilisé vos munitions après un combat, une partie de chasse ou autre, vous lancer ce dé, si vous obtenez un 1, la taille de votre dé de munition diminue d'un <a href="Systeme.php#cran_des">cran</a>. <br/>Chaque cran de votre dé de munitions représente une poignée de munitions, un carquois peut contenir jusqu'à 6 poignées de munition ce qui représente un d12 de munition. <br/>Les armes à feu nécessitent de la poudre à canon en plus des munitions. La poudre à canon fonctionne de façon identique aux munitions et est stockée dans une poire à poudre qui peut contenir 6 poignées de poudre soit un d12 de poudre. Il est possible de remplir une poire à poudre en prélevant de la poudre d'un baril de poudre.</p>
+                <p>Les armes à distance utilisent des munitions faites de différents matériaux. Les munitions sont comptées de façon abstraite avec un dé polyédrique, après avoir utilisé vos munitions après un combat, une partie de chasse ou autre, vous lancer ce dé, si vous obtenez un 1, la taille de votre dé de munition diminue d'un <a href="{{ path('app_rules_index') ~ '#cran_des' }}">cran</a>. <br/>Chaque cran de votre dé de munitions représente une poignée de munitions, un carquois peut contenir jusqu'à 6 poignées de munition ce qui représente un d12 de munition. <br/>Les armes à feu nécessitent de la poudre à canon en plus des munitions. La poudre à canon fonctionne de façon identique aux munitions et est stockée dans une poire à poudre qui peut contenir 6 poignées de poudre soit un d12 de poudre. Il est possible de remplir une poire à poudre en prélevant de la poudre d'un baril de poudre.</p>
                 <p>Les flèches et les carreaux peuvent posséder une pointe spécifique pour infliger un type de dégâts. Ces pointes spéciales coûtent deux fois plus cher qu'une pointe classique. Les pointes peuvent aussi être revêtues d'argent pour 10 pa par brassée de flèches.</p>
                 <ul>
                     <li><span class="big_underline">Pointe demi-lune :</span>Cette pointe semblable à un fer de hache emmanchée au bout d'un fût de flèche inflige des dégâts tranchants.
@@ -290,7 +293,7 @@
                 <tr>
                     <td>Lame dentelée</td>
                     <td>En ajoutant un motif de vagues courant sur toute la lame, les blessures infligées peuvent être dévastatrices si le coup est bien placé.</td>
-                    <td>Sur un DR supérieur ou égal à 4, l'arme inflige un <a href="Glossaire.php#saignement">saignement</a> à la cible, la magnitude est équivalente à la moitié des dommages infligés.</td>
+                    <td>Sur un DR supérieur ou égal à 4, l'arme inflige un <a href="{{ path('app_rules_glossary') ~ '#saignement' }}">saignement</a> à la cible, la magnitude est équivalente à la moitié des dommages infligés.</td>
                     <td>20 % du prix de l'arme</td>
                 </tr>
                 <tr>
@@ -305,19 +308,19 @@
                 <tr>
                     <td>Alourdie</td>
                     <td>En densifiant la partie écrasante d'une arme, sa force d'impact peut surprendre plus d'un adversaire.</td>
-                    <td>Sur un DR supérieur ou égal à 4, l'ennemi est projeté <a href="Glossaire.php#a_terre">à terre</a>. Les ennemis <a href="Glossaire.php#a_terre">à terre</a> subissent des dégâts doublés. L'encombrement de l'arme augmente de 1. L'arme obtient la propriété "Impact" si elle ne la possède pas déjà.</td>
+                    <td>Sur un DR supérieur ou égal à 4, l'ennemi est projeté <a href="{{ path('app_rules_glossary') ~ '#a_terre' }}">à terre</a>. Les ennemis <a href="{{ path('app_rules_glossary') ~ '#a_terre' }}">à terre</a> subissent des dégâts doublés. L'encombrement de l'arme augmente de 1. L'arme obtient la propriété "Impact" si elle ne la possède pas déjà.</td>
                     <td>50 % du prix de l'arme</td>
                 </tr>
                 <tr>
                     <td>Destructrice</td>
                     <td>Si l'on modifie la façon dont l'arme frappe sa cible, il devient possible de détruire plus facilement les armures de ses adversaires.</td>
-                    <td>Sur un DR supérieur ou égal à 4, l'armure de la cible subit de le trait <a href="Glossaire.php#endommage">Endommagé(1)</a>.</td>
+                    <td>Sur un DR supérieur ou égal à 4, l'armure de la cible subit de le trait <a href="{{ path('app_rules_glossary') ~ '#endommage' }}">Endommagé(1)</a>.</td>
                     <td>25 % du prix de l'arme</td>
                 </tr>
                 <tr>
                     <td>Brise-os</td>
                     <td>Quelques pointes judicieusement placées augmentent les chances de briser les os de ses cibles.</td>
-                    <td>Sur un DR supérieur ou égal à 4, la cible est <a href="Glossaire.php#etourdi">étourdie</a> pendant 1 round par la douleur causée par le coup.</td>
+                    <td>Sur un DR supérieur ou égal à 4, la cible est <a href="{{ path('app_rules_glossary') ~ '#etourdi' }}">étourdie</a> pendant 1 round par la douleur causée par le coup.</td>
                     <td>25 % du prix de l'arme</td>
                 </tr>
                 <tr>

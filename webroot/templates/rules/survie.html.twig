@@ -21,7 +21,7 @@
             <h3 id="manger">Manger et boire</h3>
             <p>Un personnage a besoin d'au moins 500 g de nourriture par jour et peut faire durer sa réserve de nourriture plus longtemps en ne mangeant que des demi-rations. Manger 250 g de nourriture par jour compte comme un demi-jour sans nourriture.</p>
             <p>Un personnage peut survivre sans nourriture pendant 3 jours. À la fin de chaque jour au-delà de cette limite, un personnage souffre automatiquement d'un niveau d'épuisement. Un jour passé en ayant mangé normalement remet le compteur de jours sans nourriture à zéro.</p>
-            <p>Un personnage a besoin de 1,5 litres d'eau par jour par température normale, de 3 litres s'il fait chaud ou de 5 s'il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de Vigueur ou gagner un niveau de <a href="Glossaire.php#fatigue">fatigue</a>. Un personnage qui boit encore moins d'eau que cela gagne automatiquement un niveau de <a href="Glossaire.php#fatigue">fatigue</a>.</p>
+            <p>Un personnage a besoin de 1,5 litres d'eau par jour par température normale, de 3 litres s'il fait chaud ou de 5 s'il fait très chaud. Un personnage qui boit seulement la moitié de cette quantité d'eau doit réussir un jet de Vigueur ou gagner un niveau de <a href="{{ path('app_rules_glossary') ~ '#fatigue' }}">fatigue</a>. Un personnage qui boit encore moins d'eau que cela gagne automatiquement un niveau de <a href="{{ path('app_rules_glossary') ~ '#fatigue' }}">fatigue</a>.</p>
             <p>Les quantités données ici le sont pour des personnages de taille Moyenne, un personnage de taille inférieure aura besoin de 25% moins par catégorie de taille en dessous de Moyenne, un personnage de taille supérieure aura besoin de 100% plus par catégorie de taille au-dessus de Moyen.</p>
 
             <h3 id="dormir">Dormir</h3>
@@ -89,8 +89,8 @@
 
         <h2 id="voyage" onclick="hideContent(this)">Voyage</h2>
         <div>
-            <p>Lorsqu'une entité se déplace sur de longues distances, la distance parcourue par jour dépend de sa vitesse et de son rythme de voyage. Si l'entité utilise une <a href="Objets.php#montures">monture</a> pour se déplacer alors elle utilise la vitesse de déplacement de sa monture plutôt que la sienne.</p>
-            <p>Il est possible de parcourir plus de distance en utilisant <a href="Objets.php#transports">un transport</a> tel qu'un bateau ou un carrosse.</p>
+            <p>Lorsqu'une entité se déplace sur de longues distances, la distance parcourue par jour dépend de sa vitesse et de son rythme de voyage. Si l'entité utilise une <a href="{{ path('app_rules_items') ~ '#montures' }}">monture</a> pour se déplacer alors elle utilise la vitesse de déplacement de sa monture plutôt que la sienne.</p>
+            <p>Il est possible de parcourir plus de distance en utilisant <a href="{{ path('app_rules_items') ~ '#transports' }}">un transport</a> tel qu'un bateau ou un carrosse.</p>
             <p>Le terrain peut modifier la vitesse de déplacement : -25% dans les forêts et collines, -50% dans les montagnes et marécages</p>
             <p>Si une entité se déplace plus que le temps maximum à un certain rythme, elle doit passer un test d'Athlétisme(Vigueur) DC 4 ou subir un trauma physique. Le DC de ce test augmente de 1 à chaque itération et revient à 0 après un repos long.</p>
             <p>Si le rythme de déplacement change au cours de la journée, une heure au rythme rapide équivaut à deux heures au rythme soutenu et une heure au rythme soutenu équivaut à deux heures au rythme normal.</p>
@@ -261,7 +261,7 @@
 
                 <h4>L'asphyxie</h4>
                 <p>Un personnage n’ayant plus d’air à respirer peut retenir son souffle un nombre de rounds équivalent à la moitié de son dé de vigueur. S'il agit de façon à préserver son oxygène (une action ou un mouvement par round par exemple), ce temps est doublé.</p>
-                <p>Au-delà, il doit tenter un test de Vigueur DC 4 chaque round pour continuer à retenir son souffle. Le DC augmente de 1 à chaque itération. Le personnage subit un trauma physique pour chaque échec, si le nombre de traumas physiques du personnage est supérieur ou égal à son dé de Vigueur, il devient <a href="Glossaire.php#inconscient">inconscient</a> et meurt après un nombre de rounds équivalent à son dé de Vigueur.</p>
+                <p>Au-delà, il doit tenter un test de Vigueur DC 4 chaque round pour continuer à retenir son souffle. Le DC augmente de 1 à chaque itération. Le personnage subit un trauma physique pour chaque échec, si le nombre de traumas physiques du personnage est supérieur ou égal à son dé de Vigueur, il devient <a href="{{ path('app_rules_glossary') ~ '#inconscient' }}">inconscient</a> et meurt après un nombre de rounds équivalent à son dé de Vigueur.</p>
 
                 <h4>La chaleur</h4>
                 <p>Pour peu qu’elle soit suffisamment forte, la chaleur inflige des dégâts qui ne peuvent être soignés tant que le personnage n’a pas eu l’occasion de se rafraîchir (par exemple en se plongeant dans l’eau, en se mettant à l’ombre, en survivant jusqu’à la nuit, etc...).</p>
@@ -274,7 +274,7 @@
                 <p>Si au lieu de tomber ou de glisser, une entité saute délibérément, les dégâts de sa chute sont divisés par 2.</p>
                 <p>Si il est possible d'amortir sa chute, l'entité peut décider de passer un test d'Acrobaties(Agi) pour ignorer un nombre de mètres équivalent au résultat divisé par 2.</p>
                 <p>Si l’aventurier atterrit sur une surface meuble (sable, boue, etc.), les dégâts sont divisés par 2. Cela s'applique en plus de toutes les autres réductions.</p>
-                <p>Les entités subissant une blessure suite à une chute se retrouvent <a href="Glossaire.php#a_terre">à terre</a>.</p>
+                <p>Les entités subissant une blessure suite à une chute se retrouvent <a href="{{ path('app_rules_glossary') ~ '#a_terre' }}">à terre</a>.</p>
 
                 <span class="underline" id="chutes_eau">Les chutes dans l'eau</span>
                 <p>Une entité non préparée à une chute dans l'eau subira des dégâts équivalent à la hauteur de la chute en mètres divisée par 2.</p>
@@ -305,10 +305,10 @@
 
                 <h4>La lave</h4>
                 <p>La lave et le magma infligent 3d6 points de dégâts de feu par round d’exposition, dans le cas d’une immersion totale les dégâts sont multipliés par 5.</p>
-                <p>Les dégâts de lave infligent un état <a href="Glossaire.php#brulure">brûlure</a> d'une amplitude équivalente à la moitié des dégâts subis. Une immunité ou une résistance au feu protège aussi contre la lave ou le magma. Une créature immunisée au feu peut parfaitement se noyer dans un bassin de lave. </p>
+                <p>Les dégâts de lave infligent un état <a href="{{ path('app_rules_glossary') ~ '#brulure' }}">brûlure</a> d'une amplitude équivalente à la moitié des dégâts subis. Une immunité ou une résistance au feu protège aussi contre la lave ou le magma. Une créature immunisée au feu peut parfaitement se noyer dans un bassin de lave. </p>
 
                 <h4>L'obscurité</h4>
-                <p>La vision dans le noir permet à certaines entités de voir parfaitement bien dans l’obscurité la plus totale, mais les autres individus sont alors comme <a href="Glossaire.php#aveugle">aveuglés</a> (et ce même s’ils possèdent la vision nocturne). Des bourrasques souterraines peuvent éteindre les torches et les lanternes, les sources d’illumination magique peuvent être dissipées et les pièges magiques peuvent créer des aires de ténèbres magiques impénétrables.</p>
+                <p>La vision dans le noir permet à certaines entités de voir parfaitement bien dans l’obscurité la plus totale, mais les autres individus sont alors comme <a href="{{ path('app_rules_glossary') ~ '#aveugle' }}">aveuglés</a> (et ce même s’ils possèdent la vision nocturne). Des bourrasques souterraines peuvent éteindre les torches et les lanternes, les sources d’illumination magique peuvent être dissipées et les pièges magiques peuvent créer des aires de ténèbres magiques impénétrables.</p>
             </div>
         </div>
 

@@ -4,6 +4,11 @@ effect: Effet
 
 test: les degats sont de %var%
 
+#Sorts
+sort:
+  circle: Cercle du sort
+  magnitude: Magnitude
+
 #Weapons
 weapon:
   plural: Armes
@@ -14,7 +19,9 @@ weapon:
   damage_type: Type de dégâts
   handling: Maniement
   reach: Portée
-  price: Prix
+  properties: Propriétés
+  enc: ENC
+  price: Prix (pa)
   axe:
     plural: Haches
     singular: Hache

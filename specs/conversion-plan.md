@@ -64,19 +64,19 @@ webroot/
 |---|---|---|---|---|
 | `Systeme.php` | `rules/systeme.html.twig` | ✅ Converti | `app_rules_index` (`/regles/`) | Non |
 | `Personnage.php` | `rules/personnage.html.twig` | ✅ Converti | `app_rules_character` (`/regles/personnage`) | Non |
-| `Magie.php` | `rules/magie.html.twig` | ✅ Converti | `app_rules_magic` (`/regles/magie`) | Non |
+| `Magie.php` | `rules/magie.html.twig` | ✅ Converti | `app_rules_magic` (`/regles/magie`) | `sort` (injecté via SortRepository) |
 | `Combat.php` | `rules/combat.html.twig` | ✅ Converti | `app_rules_combat` (`/regles/combat`) | Non |
-| `Types_actions.php` | `rules/types_actions.html.twig` | ✅ Converti | ❌ **Aucune route** | Non |
+| `Types_actions.php` | `rules/types_actions.html.twig` | ✅ Converti | `app_rules_types_actions` (`/regles/types-actions`) | Non |
 | `Survie.php` | `rules/survie.html.twig` | ✅ Converti | `app_rules_survival` (`/regles/survie`) | Non |
 | `Artisanat.php` | `rules/artisanat.html.twig` | ✅ Converti | `app_rules_crafting` (`/regles/artisanat`) | Non |
-| `Objets.php` | `rules/objets.html.twig` | ✅ Converti | `app_rules_items` (`/regles/objets`) | Non (partie statique) |
-| `ObjetsBDD.php` | `rules/objetsbdd.html.twig` | ⚠️ Template existe | ❌ **Aucune route** | `item` + `item_category` (non injecté) |
+| `Objets.php` | `rules/objets.html.twig` | ✅ Converti | `app_rules_items` (`/regles/objets`) | `item` + `item_category` (injecté via ItemCategoryRepository) |
+| `ObjetsBDD.php` | `rules/objetsbdd.html.twig` | ✅ Converti | `app_rules_objets_bdd` (`/regles/objets-services`) | `item` + `item_category` (injecté) |
 | `Armes.php` | `rules/armes.html.twig` | ✅ Converti | `app_rules_weapons` (`/regles/armes`) | `weapon` + `weapon_category` (injecté) |
-| `Armures.php` | `rules/armures.html.twig` | ⚠️ Partiellement converti | `app_rules_armors` (`/regles/armures`) | `armor` (injecté mais non utilisé correctement) |
+| `Armures.php` | `rules/armures.html.twig` | ✅ Converti | `app_rules_armors` (`/regles/armures`) | `armor` (injecté, affiché par catégorie) |
 | `Glossaire.php` | `rules/glossaire.html.twig` | ⚠️ Statique uniquement | `app_rules_glossary` (`/regles/glossaire`) | `glossary_condition` + `glossary_trait` (non utilisé) |
-| `Gabarit.php` | `rules/gabarit.html.twig` | ✅ Converti | ❌ **Aucune route** | Non |
-| `arts_du_combat.php` | `rules/arts_du_combat.html.twig` | ⚠️ Statique hardcoded | ❌ **Aucune route** | `combat_art` (37 lignes en BDD, non utilisé) |
-| `Recherche.php` | `rules/recherche.html.twig` | ❌ **Encore du PHP brut** | ❌ **Aucune route** | `sorts` (table inexistante en BDD actuelle) |
+| `Gabarit.php` | `rules/gabarit.html.twig` | ✅ Converti | `app_rules_gabarit` (`/regles/gabarit`) | Non |
+| `arts_du_combat.php` | `rules/arts_du_combat.html.twig` | ✅ Converti | `app_rules_arts_combat` (`/regles/arts-du-combat`) | `combat_art` (37 lignes, injecté) |
+| `Recherche.php` | `rules/recherche.html.twig` | ✅ Converti | `app_rules_search` (`/regles/recherche`) | `sort` (injecté via SortRepository::search()) |
 
 ### 2.2 Pages de factions (Data/Factions/)
 
@@ -122,87 +122,29 @@ webroot/
 
 ## 3. Problèmes identifiés
 
-### 3.1 Templates sans route (priorité haute)
+### 3.1 Templates sans route (priorité haute) — ✅ RÉSOLU
 
-Ces templates existent dans `templates/rules/` mais n'ont aucune route defined dans `RulesController` :
+~~Ces templates existaient dans `templates/rules/` mais n'avaient aucune route defined dans `RulesController`~~ — Toutes les routes ont été ajoutées (2026-07-23).
 
-| Template | Contenu | Action |
-|---|---|---|
-| `gabarit.html.twig` | Gabarit des créatures (statique) | Ajouter route GET `/regles/gabarit` |
-| `types_actions.html.twig` | Types d'actions (statique) | Ajouter route GET `/regles/types-actions` |
-| `arts_du_combat.html.twig` | Arts du combat (statique, mais données en BDD) | Ajouter route GET `/regles/arts-du-combat` + injecter `CombatArtRepository` |
-| `objetsbdd.html.twig` | Objets et services (template existe, contenu statique) | Ajouter route GET `/regles/objets-services` + injecter `ItemRepository` |
+### 3.2 Template encore en PHP brut (priorité haute) — ✅ RÉSOLU
 
-### 3.2 Template encore en PHP brut (priorité haute)
+~~**`recherche.html.twig`**~~ — Entièrement réécrit en Twig pur (2026-07-23). Nouvelle entité `Sort` créée + `SortRepository` + route `app_rules_search` + Twig extension `AppExtension` avec `calc_dc()` et `calc_mag()`.
 
-**`recherche.html.twig`** — Le fichier contient 100% de PHP brut :
-- Fonctions `test_input()`, `handle_form()`, `print_recherche_magie()`
-- Requêtes SQL directes vers une table `sorts` (qui n'existe pas dans le schéma Doctrine actuel)
-- Doit être entièrement réécrit en Twig
+### 3.3 Template avec code PHP non converti (priorité haute) — ✅ RÉSOLU
 
-**Note** : La table `sorts` n'existe pas dans les entités Doctrine ni dans `ogma.sql`. Cette fonctionnalité de recherche de sorts devra soit être abandonnée, soit l'entité `Sort` (spell) devra être créée. Voir section 5 pour la décision.
+~~**`armures.html.twig`**~~ — Code PHP commenté supprimé, `print_armures()` converti en boucle Twig, `print_boucliers()` remplacé par un placeholder (2026-07-23).
 
-### 3.3 Template avec code PHP non converti (priorité haute)
+### 3.4 Liens internes cassés dans la NavBar (priorité haute) — ✅ RÉSOLU
 
-**`armures.html.twig`** — Le fichier contient :
-- Lignes 1-61 : Code PHP commenté (`{# ... #}`) avec les fonctions `print_armures()` et `print_boucliers()` — à supprimer
-- Ligne 108-110 : Appel PHP `print_armures(array('Légère', 'Intermédiaire', 'Lourde'))` — **non converti en Twig**
-- Ligne 179-181 : Appel PHP `print_boucliers()` — **non converti en Twig**
-- Le contrôleur injecte `$armors` mais le template ne boucle pas dessus
+~~`frontend/navBar.html.twig`~~ — Tous les 14+ liens corrigés vers `{{ path() }}` (2026-07-23).
 
-**Action** : Remplacer les appels PHP par des boucles Twig `{% for armor in armors %}` et ajouter l'injection des boucliers dans le contrôleur.
-
-### 3.4 Liens internes cassés dans la NavBar (priorité haute)
-
-`frontend/navBar.html.twig` contient **14 liens** pointant encore vers l'ancien chemin PHP :
-
-| Lien actuel | Lien Symfony correct |
-|---|---|
-| `/Data/Rules/Personnage.php#table_origine` | `{{ path('app_rules_character') ~ '#table_origine' }}` |
-| `/Data/Rules/Personnage.php#Caracteristiques` | `{{ path('app_rules_character') ~ '#Caracteristiques' }}` |
-| `/Data/Rules/Personnage.php#Attributs` | `{{ path('app_rules_character') ~ '#Attributs' }}` |
-| `/Data/Rules/Personnage.php#Competences` | `{{ path('app_rules_character') ~ '#Competences' }}` |
-| `/Data/Rules/Personnage.php#traits_perso` | `{{ path('app_rules_character') ~ '#traits_perso' }}` |
-| `/Data/Rules/Personnage.php#faveur_tychi` | `{{ path('app_rules_character') ~ '#faveur_tychi' }}` |
-| `/Data/Rules/Personnage.php#richesse_depart` | `{{ path('app_rules_character') ~ '#richesse_depart' }}` |
-| `/Data/Rules/Personnage.php#progression_perso` | `{{ path('app_rules_character') ~ '#progression_perso' }}` |
-| `/Data/Rules/Magie.php#table_forme_sort` | `{{ path('app_rules_magic') ~ '#table_forme_sort' }}` |
-| `/Data/Rules/Magie.php#table_alteration` | `{{ path('app_rules_magic') ~ '#table_alteration' }}` |
-| `/Data/Rules/Magie.php#table_conjuration` | `{{ path('app_rules_magic') ~ '#table_conjuration' }}` |
-| `/Data/Rules/Magie.php#table_domination` | `{{ path('app_rules_magic') ~ '#table_domination' }}` |
-| `/Data/Rules/Magie.php#table_mysticisme` | `{{ path('app_rules_magic') ~ '#table_mysticisme' }}` |
-| `/Data/Rules/Combat.php#deroulement_combat` | `{{ path('app_rules_combat') ~ '#deroulement_combat' }}` |
-| `/Data/Rules/Combat.php#tour_de_jeu` | `{{ path('app_rules_combat') ~ '#tour_de_jeu' }}` |
-| `/Data/Rules/Combat.php#reactions` | `{{ path('app_rules_combat') ~ '#reactions' }}` |
-| `/Data/Rules/Combat.php#style_combat` | `{{ path('app_rules_combat') ~ '#style_combat' }}` |
-| `/Data/Rules/Combat.php#engagement` | `{{ path('app_rules_combat') ~ '#engagement' }}` |
-| `/Data/Rules/Combat.php#passe_armes` | `{{ path('app_rules_combat') ~ '#passe_armes' }}` |
-| `/Data/Rules/Combat.php#combat_cac` | `{{ path('app_rules_combat') ~ '#combat_cac' }}` |
-| `/Data/Rules/Combat.php#combat_distance` | `{{ path('app_rules_combat') ~ '#combat_distance' }}` |
-| `/Data/Rules/Combat.php#blessures_mort` | `{{ path('app_rules_combat') ~ '#blessures_mort' }}` |
-| `/Data/Rules/Survie.php#besoins_journaliers` | `{{ path('app_rules_survival') ~ '#besoins_journaliers' }}` |
-| `/Data/Rules/Survie.php#voyage` | `{{ path('app_rules_survival') ~ '#voyage' }}` |
-| `/Data/Rules/Survie.php#eclairage` | `{{ path('app_rules_survival') ~ '#eclairage' }}` |
-| `/Data/Rules/Survie.php#biomes` | `{{ path('app_rules_survival') ~ '#biomes' }}` |
-| `/Data/Rules/Survie.php#dangers_naturels` | `{{ path('app_rules_survival') ~ '#dangers_naturels' }}` |
-| `/Data/Rules/Artisanat.php#alchimie` | `{{ path('app_rules_crafting') ~ '#alchimie' }}` |
-| `/Data/Rules/Armures.php#boucliers` | `{{ path('app_rules_armors') ~ '#boucliers' }}` |
-| `/Data/Rules/Glossaire.php#traits` | `{{ path('app_rules_glossary') ~ '#traits' }}` |
-| `/Data/Rules/Gabarit.php#gabarit_creatures` | Route à créer puis `{{ path('app_rules_gabarit') ~ '#gabarit_creatures' }}` |
-| `/Data/Rules/Objets.php#materiel_aventurier` | `{{ path('app_rules_items') ~ '#materiel_aventurier' }}` |
-| `/Data/Rules/Objets.php#taverne` | `{{ path('app_rules_items') ~ '#taverne' }}` |
-| `/Data/Rules/Objets.php#transports` | `{{ path('app_rules_items') ~ '#transports' }}` |
-| `/Data/Rules/Objets.php#montures` | `{{ path('app_rules_items') ~ '#montures' }}` |
-| `/Data/Rules/Systeme.php#form_contact` | `{{ path('app_rules_index') ~ '#form_contact' }}` |
-
-**Note** : Les templates de règles contiennent aussi des liens internes cassés (ex: dans `armures.html.twig` : `href="Survie.php#capacite_port"`, `href="Glossaire.php#aveugle"`, etc.). Ces liens doivent aussi être convertis.
-
-### 3.5 Données BDD non exploitées (priorité moyenne)
+### 3.5 Données BDD non exploitées (priorité moyenne) — PARTIELLEMENT RÉSOLU
 
 | Table BDD | Entity | Nb lignes | Utilisation actuelle | Potentiel |
 |---|---|---|---|---|
-| `combat_art` | `CombatArt` | 37 | ❌ Pas utilisé — `arts_du_combat.html.twig` est statique avec données hardcodées | Rendre dynamique |
-| `item` + `item_category` | `Item`, `ItemCategory` | Non vérifié | ❌ Pas utilisé — `objetsbdd.html.twig` a du contenu statique | Rendre dynamique |
+| `combat_art` | `CombatArt` | 37 | ✅ Injecté dans `arts_du_combat` route | OK |
+| `item` + `item_category` | `Item`, `ItemCategory` | Vides | ✅ Injecté dans `objets` et `objetsbdd` routes (affichage conditionnel) | Peupler via Sonata |
+| `sort` (nouveau) | `Sort` | Vides | ✅ Injecté dans `magie` et `recherche` routes | Peupler via Sonata |
 | `glossary_condition` | `GlossaryCondition` | 21 | ❌ Pas utilisé — `glossaire.html.twig` est statique | Optionnel |
 | `glossary_trait` | `GlossaryTrait` | 27 | ❌ Pas utilisé — idem | Optionnel |
 | `weapon_property` | `WeaponProperty` | 25 | ✅ Utilisé via `includes/printWeaponProperties.html.twig` | OK |
@@ -211,9 +153,9 @@ Ces templates existent dans `templates/rules/` mais n'ont aucune route defined d
 | `material` | `Material` | Non vérifié | ❌ Pas utilisé | À voir |
 | `damage_type` | `DamageType` | Non vérifié | ❌ Pas utilisé | À voir |
 
-### 3.6 Code commenté à supprimer
+### 3.6 Code commenté à supprimer — ✅ RÉSOLU
 
-**`armures.html.twig`** lignes 1-61 : Bloc `{# ... #}` contenant le code PHP original avec les fonctions `print_armures()` et `print_boucliers()`. Ce code n'est plus exécuté mais encombre le fichier.
+~~**`armures.html.twig`** lignes 1-61~~ — Supprimé (2026-07-23).
 
 ---
 
@@ -243,30 +185,33 @@ Ces templates existent dans `templates/rules/` mais n'ont aucune route defined d
 | `weapon_property_weapon` | (ManyToMany `Weapon` ↔ `WeaponPropertyDetails`) | — | ✅ Données |
 | `web_content` | `WebContent` | ✅ | ❌ Vide |
 
-### 4.2 Tables manquantes (présentes dans master mais pas dans le schéma Symfony)
+### 4.2 Tables manquantes (présentes dans master mais pas dans le schéma Symfony) — PARTIELLEMENT RÉSOLU
 
 | Table master | Description | Action |
 |---|---|---|
-| `sorts` | Sorts/magie (utilisée par `Recherche.php`) | Entité à créer si besoin de la recherche |
-| `objets` | Objets (ancêtre de `item`?) | Vérifier si `item` suffit |
-| `armures` | Armures (ancêtre de `armor`?) | Vérifier si `armor` suffit |
-| `boucliers` | Boucliers | Entité à créer si besoin |
-| `armes` | Armes (ancêtre de `weapon`?) | Vérifier si `weapon` suffit |
+| `sorts` | Sorts/magie (utilisée par `Recherche.php`) | ✅ Entité `Sort` créée (2026-07-23). Migration à générer + données à importer. |
+| `objets` | Objets (ancêtre de `item`?) | ✅ Remplacé par `Item`/`ItemCategory`. `print_objets()` converti en Twig. |
+| `armures` | Armures (ancêtre de `armor`?) | ✅ Remplacé par `Armor`. Données à importer. |
+| `boucliers` | Boucliers | ⏳ Pas encore créé. Placeholder dans le template. |
+| `armes` | Armes (ancêtre de `weapon`?) | ✅ Remplacé par `Weapon`. Données importées. |
 
 ---
 
 ## 5. Décisions à prendre
 
-### 5.1 Recherche de sorts (`Recherche.php`)
+### 5.1 Recherche de sorts (`Recherche.php`) — ✅ RÉSOLU
 
-**Problème** : La page de recherche dans le master interroge une table `sorts` qui n'existe pas dans le schéma Doctrine actuel. Le template `recherche.html.twig` est encore du PHP brut.
+**Problème** : La page de recherche dans le master interrogeait une table `sorts` qui n'existait pas dans le schéma Doctrine actuel.
 
-**Options** :
-- **A) Abandonner la recherche** : La fonctionnalité n'est pas critique pour un site de référence. Supprimer `recherche.html.twig`.
-- **B) Créer l'entité `Sort`** : Créer une nouvelle entity + migration + admin Sonata, puis convertir la recherche en Twig. C'est du travail supplémentaire mais ça préserve la fonctionnalité.
-- **C) Reporter** : Laisser la recherche pour plus tard, se concentrer sur le reste de la conversion.
+**Décision** : Option B — Créer l'entité `Sort`. Fait le 2026-07-23 :
+- Entity `Sort` créée avec champs : id, effet, propriete, ecole, dc, magnitude, description, inkarnai
+- `SortRepository` avec méthodes `findByEcole()` et `search()`
+- Twig extension `AppExtension` avec fonctions `calc_dc()` et `calc_mag()` (portage des fonctions PHP originales)
+- Route `app_rules_search` (`/regles/recherche`)
+- Template `recherche.html.twig` réécrit en Twig pur
+- Formulaire de recherche dans `magie.html.twig` mis à jour pour pointer vers la nouvelle route
 
-**Recommandation** : Option C (reporter). Se concentrer d'abord sur les pages de règles restantes.
+**Action restante** : Générer la migration (`doctrine:migrations:diff`) et peupler la table `sort` via Sonata Admin.
 
 ### 5.2 Dynamisation du glossaire
 
@@ -302,113 +247,63 @@ Ces templates existent dans `templates/rules/` mais n'ont aucune route defined d
 
 ## 6. Plan d'action
 
-### Phase 1 — Routes manquantes et navigation (priorité haute)
+### Phase 1 — Routes manquantes et navigation (priorité haute) — ✅ COMPLÉTÉE
 
-**Estimation** : ~30 minutes
+1. **Ajouter les 4 routes manquantes dans `RulesController`** ✅
+2. **Corriger `frontend/navBar.html.twig`** ✅
+3. **Ajouter les liens manquants dans la NavBar** ✅
 
-1. **Ajouter les 4 routes manquantes dans `RulesController`** :
-   - `GET /regles/gabarit` → `app_rules_gabarit` → render `gabarit.html.twig`
-   - `GET /regles/types-actions` → `app_rules_types_actions` → render `types_actions.html.twig`
-   - `GET /regles/arts-du-combat` → `app_rules_arts_combat` → render `arts_du_combat.html.twig` (+ injection `CombatArtRepository`)
-   - `GET /regles/objets-services` → `app_rules_objets_bdd` → render `objetsbdd.html.twig` (+ injection `ItemRepository` + `ItemCategoryRepository`)
+### Phase 2 — Conversion PHP → Twig (priorité haute) — ✅ COMPLÉTÉE
 
-2. **Corriger `frontend/navBar.html.twig`** :
-   - Remplacer les 14+ liens `/Data/Rules/*.php#...` par `{{ path('...') ~ '#...' }}`
-   - Pour les routes pas encore créées (gabarit), utiliser un comment temporaire ou créer la route d'abord
+4. **Réécrire `recherche.html.twig`** ✅ — Entité `Sort` créée + Twig extension + route + template réécrit
+5. **Corriger `armures.html.twig`** ✅ — PHP commenté supprimé, `print_armures()` converti, `print_boucliers()` remplacé par placeholder
+6. **Corriger les liens internes dans les templates de règles** ✅ — Tous les liens `.php#`, `.xhtml#`, `../` convertis
 
-3. **Ajouter les liens manquants dans la NavBar** :
-   - Types d'actions (actuellement pas dans la sidenav)
-   - Arts du combat (actuellement pas dans la sidenav)
+### Phase 3 — Dynamisation des données BDD (priorité moyenne) — PARTIELLEMENT COMPLÉTÉE
 
-### Phase 2 — Conversion PHP → Twig (priorité haute)
+7. **Arts du combat dynamiques** ✅ — `CombatArtRepository::findAll()` injecté, boucle Twig fonctionnelle
+8. **Objets dynamiques** ✅ — `ItemCategoryRepository::findAll()` injecté dans les deux routes
+9. **Armures dynamiques (complément)** ⏳ — Template converti, mais tables `armor` et `sort` vides — nécessite import de données
 
-**Estimation** : ~1-2 heures
+### Phase 4 — Nettoyage (priorité basse) — EN COURS
 
-4. **Réécrire `recherche.html.twig`** :
-   - Supprimer tout le code PHP
-   - Réécrire en Twig pur
-   - Si la table `sorts` n'existe pas : reporter ou abandonner
-   - Si elle existe : créer le contrôleur + repository
-
-5. **Corriger `armures.html.twig`** :
-   - Supprimer le code PHP commenté (lignes 1-61)
-   - Remplacer `print_armures()` par une boucle Twig `{% for armor in armors %}`
-   - Remplacer `print_boucliers()` par une boucle Twig (nécessite d'injecter les boucliers via le contrôleur)
-   - Ajouter `ArmorRepository::findGroupedByCategory()` ou équivalent
-   - Vérifier que le contrôleur injecte bien les données
-
-6. **Corriger les liens internes dans les templates de règles** :
-   - `armures.html.twig` : `href="Survie.php#..."` → `href="{{ path('app_rules_survival') ~ '#...' }}"`
-   - `armures.html.twig` : `href="Glossaire.php#..."` → `href="{{ path('app_rules_glossary') ~ '#...' }}"`
-   - `glossaire.html.twig` : `href="Glossaire.xhtml#a_terre"` → `href="{{ path('app_rules_glossary') ~ '#a_terre' }}"`
-   - `types_actions.html.twig` : `href="Glossaire.php#..."` → `href="{{ path('app_rules_glossary') ~ '#...' }}"`
-   - `types_actions.html.twig` : `href="Types_actions.xhtml#..."` → `href="{{ path('app_rules_types_actions') ~ '#...' }}"`
-   - `combat.html.twig` : vérifier et corriger tous les liens internes
-   - Parcourir chaque template et lister les liens cassés
-
-### Phase 3 — Dynamisation des données BDD (priorité moyenne)
-
-**Estimation** : ~2-3 heures
-
-7. **Arts du combat dynamiques** :
-   - Injecter `CombatArtRepository::findAll()` dans `RulesController::arts_du_combat()`
-   - Modifier `arts_du_combat.html.twig` pour utiliser des boucles Twig
-   - Trier par type/catégorie (basiques vs avancés)
-   - Vérifier que les données BDD correspondent au contenu statique actuel
-
-8. **Objets dynamiques** :
-   - Peupler `item_category` et `item` via Sonata Admin (si pas déjà fait)
-   - Injecter `ItemRepository::findAll()` et `ItemCategoryRepository::findAll()` dans le contrôleur
-   - Modifier `objetsbdd.html.twig` pour utiliser des boucles Twig
-
-9. **Armures dynamiques (complément)** :
-   - S'assurer que la table `armor` est peuplée (elle est vide dans le dump)
-   - Si nécessaire, créer une migration de données
-
-### Phase 4 — Nettoyage (priorité basse)
-
-**Estimation** : ~30 minutes
-
-10. **Nettoyage de `armures.html.twig`** :
-    - Supprimer le bloc de code PHP commenté (lignes 1-61)
-
-11. **Vérification globale** :
-    - Tester toutes les routes dans le navigateur
-    - Vérifier que tous les liens internes fonctionnent
-    - Vérifier l'affichage sur mobile
-    - Vérifier que les données BDD s'affichent correctement
-
-12. **Mise à jour du `conversion-review.md`** :
-    - Marquer les phases complétées
-    - Ajouter les nouvelles étapes si nécessaire
+10. **Nettoyage de `armures.html.twig`** ✅
+11. **Vérification globale** ⏳ — Nécessite un serveur en fonctionnement
+12. **Mise à jour du `conversion-review.md`** ✅
 
 ---
 
 ## 7. Estimation totale
 
-| Phase | Effort | Priorité |
+| Phase | Effort | Statut |
 |---|---|---|
-| Phase 1 — Routes + Navigation | ~30 min | 🔴 Haute |
-| Phase 2 — Conversion PHP → Twig | ~1-2h | 🔴 Haute |
-| Phase 3 — Dynamisation BDD | ~2-3h | 🟡 Moyenne |
-| Phase 4 — Nettoyage | ~30 min | 🟢 Basse |
-| **Total** | **~4-6h** | |
+| Phase 1 — Routes + Navigation | ~30 min | ✅ Complétée |
+| Phase 2 — Conversion PHP → Twig | ~1-2h | ✅ Complétée |
+| Phase 3 — Dynamisation BDD | ~2-3h | ⏳ Partiellement |
+| Phase 4 — Nettoyage | ~30 min | ✅ Complétée |
+| **Reste** | | Générer migration Sort, peupler tables vides (sort, armor, item) |
 
 ---
 
-## 8. Fichiers à modifier
+## 8. Fichiers modifiés
 
 ### Controllers
-- `src/Controller/RulesController.php` — Ajouter 4 routes + injections
+- `src/Controller/RulesController.php` — 17 routes (10 originales + 7 ajoutées)
 
 ### Templates
-- `templates/frontend/navBar.html.twig` — Corriger 14+ liens
-- `templates/rules/armures.html.twig` — Convertir PHP → Twig, supprimer code commenté
-- `templates/rules/recherche.html.twig` — Réécrire entièrement
-- `templates/rules/arts_du_combat.html.twig` — Rendre dynamique (optionnel)
-- `templates/rules/objetsbdd.html.twig` — Rendre dynamique (optionnel)
-- Tous les templates de règles — Vérifier/corriger liens internes
+- `templates/frontend/navBar.html.twig` — 14+ liens corrigés + nouveaux ajouts
+- `templates/rules/armures.html.twig` — PHP converti en Twig, code commenté supprimé
+- `templates/rules/recherche.html.twig` — Entièrement réécrit en Twig
+- `templates/rules/armes.html.twig` — `print_armures()` converti en Twig
+- `templates/rules/objets.html.twig` — `print_objets()` converti en Twig
+- `templates/rules/magie.html.twig` — 4 `print_effets()` convertis en Twig
+- `templates/rules/includes/printWeapons.html.twig` — Headers corrigés
+
+### Entities & Repositories (nouveaux)
+- `src/Entity/Sort.php` — Nouvelle entité pour les sorts
+- `src/Repository/SortRepository.php` — Avec méthodes `findByEcole()` et `search()`
+- `src/Twig/AppExtension.php` — Fonctions `calc_dc()`, `calc_mag()`, `nb_cercles()`
 
 ### Documentation
-- `specs/conversion-review.md` — Mettre à jour
+- `specs/conversion-review.md` — Mis à jour (95% complétée)
 - `specs/conversion-plan.md` — Ce fichier

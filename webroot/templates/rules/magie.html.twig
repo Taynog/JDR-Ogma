@@ -1,4 +1,5 @@
 {% extends '@App/base.html.twig' %}
+{% import '@App/macros/sort.html.twig' as sortMacro %}
 {% block title %}
     Magie
 {% endblock %}
@@ -31,7 +32,7 @@
             <ul id="proprietes_sorts">
                 <li><span class="big_underline">Zone :</span>Le sort affecte toutes les cibles de la zone.</li>
                 <li><span class="big_underline">Direct :</span>Le sort n'a pas de temps de trajet et apparait directement sur la cible qui n'a donc pas le temps de réagir aux effets du sort à moins de connaitre le sort en passant un test d'Arcanes(Int) avec un DC équivalent au DR du lanceur.</li>
-                <li><span class="big_underline">Réaction :</span>Le sort peut être lancé en tant que <a href="Combat.php#reactions">réaction</a>.</li>
+                <li><span class="big_underline">Réaction :</span>Le sort peut être lancé en tant que <a href="{{ path('app_rules_combat') ~ '#reactions' }}">réaction</a>.</li>
                 <li><span class="big_underline">Concentration :</span>Le sort peut être maintenu par son lanceur. Il n'est possible de se concentrer que sur un seul sort, si le lanceur subit des dégâts, il doit passer un test de Vigueur ou de Volonté avec un DC équivalent aux dégâts subis.</li>
                 <li><span class="big_underline">[Variation] :</span>Le sort possède plusieurs variations, chacune correspondantes à un mot-clé cité.</li>
             </ul>
@@ -121,11 +122,11 @@
             <h4 id="effet_sort" onclick="hideContent(this)">Effet des sorts</h4>
             <div>
                 <p>L'effet d'un sort détermine le contenu d'un sort, quel va être son impact dans le monde, un effet de feu brûlera ses cibles tandis qu'un effet de soin guérira leurs blessures.</p>
-                <p>La liste ci-dessous n'est pas exhaustive des pouvoirs conférés par les <a href="../World/Histoire_Ogma.php#inkarnai">Inkarnaïs</a>.</p>
+                <p>La liste ci-dessous n'est pas exhaustive des pouvoirs conférés par les <a href="{{ path('app_univers', {page: 'histoire_ogma'}) ~ '#inkarnai' }}">Inkarnaïs</a>.</p>
                 <p>Les tableaux ci-dessous fonctionnent de la façon suivante :</p>
                 <div class="effet_magique boxed">
                     <p><strong>Effet :</strong> Le nom de l'effet du sort.</p>
-                    <p><strong>Propriété(s) :</strong> Les différentes <a href="Magie.php#proprietes_sorts">propriétés</a> de l'effet.</p>
+                    <p><strong>Propriété(s) :</strong> Les différentes <a href="{{ path('app_rules_magic') ~ '#proprietes_sorts' }}">propriétés</a> de l'effet.</p>
                     <table class="table_DC_mag">
                         <tbody>
                         <tr>
@@ -143,7 +144,7 @@
                         </tbody>
                     </table>
                     <p><strong>Description :</strong> Explication des règles relatives à cet effet.</p>
-                    <p><strong>Inkarnaï :</strong> Indique de quel domaine provient cet effet, utile pour les spécialisations dans les <a href="../World/Histoire_Ogma.php#inkarnai">domaines de Karnaï</a>. Cette donnée n'est pas forcément exhaustive, avec un peu d'imagination, d'autres inkarnaï peuvent conférer les mêmes effets</p>
+                    <p><strong>Inkarnaï :</strong> Indique de quel domaine provient cet effet, utile pour les spécialisations dans les <a href="{{ path('app_univers', {page: 'histoire_ogma'}) ~ '#inkarnai' }}">domaines de Karnaï</a>. Cette donnée n'est pas forcément exhaustive, avec un peu d'imagination, d'autres inkarnaï peuvent conférer les mêmes effets</p>
                 </div>
                 <h3 id="rituels" onclick="hideContent(this)">Rituels</h3>
                 <div>
@@ -153,7 +154,7 @@
                 </div>
                 <h3 id="recherche_sort">Recherche de sort</h3>
                 <div>
-                    <form action="Recherche.php" name="recherche_sort" method="get">
+                    <form action="{{ path('app_rules_search') }}" name="recherche_sort" method="get">
                         <input name="type" value="magie" type="hidden">
                         <table>
                             <tbody>
@@ -211,31 +212,39 @@
                 <p id="table_altration" class="caption" onclick="hideContent(this)">École d'Altération</p>
                 <div>
                     <p>Cette école permet de modeler la réalité comme on l'entend en transformant ou réparant des éléments existants.</p>
-                    <?php
-                    print_effets("Altération");
-                    ?>
+                    <div id="effets_Altération">
+                        {% for sort in sortsByEcole['Altération'] %}
+                            {{ sortMacro.printSort(sort) }}
+                        {% endfor %}
+                    </div>
                 </div>
                 <p id="table_conjuration" class="caption" onclick="hideContent(this)">École de Conjuration</p>
                 <div>
                     <p>L'école de Conjuration se concentre sur le déplacement d'éléments physiques ou magiques entre le plan matériel et le plan psychique, que ce soit des êtres vivants, des objets ou même des éléments.</p>
-                    <?php
-                    print_effets("Conjuration");
-                    ?>
+                    <div id="effets_Conjuration">
+                        {% for sort in sortsByEcole['Conjuration'] %}
+                            {{ sortMacro.printSort(sort) }}
+                        {% endfor %}
+                    </div>
                 </div>
                 <p id="table_domination" class="caption" onclick="hideContent(this)">École de Domination</p>
                 <div>
                     <p>Cette école permet de contrôler les vivants comme les morts et de jouer sur la perception de la réalité de ses cibles.</p>
-                    <?php
-                    print_effets("Domination");
-                    ?>
+                    <div id="effets_Domination">
+                        {% for sort in sortsByEcole['Domination'] %}
+                            {{ sortMacro.printSort(sort) }}
+                        {% endfor %}
+                    </div>
                 </div>
                 <p id="table_mysticisme" class="caption" onclick="hideContent(this)">École du Mysticisme</p>
                 <div>
                     <p>Cette école rassemble les sorts non étudiés par les trois autres écoles, ses effets sont divers : révéler l'inconnu et le futur, jouer avec le destin.</p>
                     <p>Cette école est la seule à ne pas posséder sa propre compétence, on prend en compte la compétence de rang le plus élevé entre les autres compétences d'écoles.</p>
-                    <?php
-                    print_effets("Mysticisme");
-                    ?>
+                    <div id="effets_Mysticisme">
+                        {% for sort in sortsByEcole['Mysticisme'] %}
+                            {{ sortMacro.printSort(sort) }}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

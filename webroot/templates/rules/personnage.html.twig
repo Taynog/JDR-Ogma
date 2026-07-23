@@ -8,7 +8,7 @@
         <p>La fiche de personnage est sous la forme d'un tableur excel pour le moment, un pdf éditable viendra en temps voulu : <a href="../../Downloads/Fiche%20Perso%20Ogma.xlsx">Fiche Perso Ogma</a>.</p>
         <h2 id="table_origine" onclick="hideContent(this)">Origine</h2>
         <div>
-            <p>Première étape de la création de son personnage : Choisir son origine. Il existe de nombreuses origines possibles dans le monde d'Ogma, si vous ne les connaissez pas encore retournez à l'<a href="../../index.php">accueil</a> pour les découvrir.</p>
+            <p>Première étape de la création de son personnage : Choisir son origine. Il existe de nombreuses origines possibles dans le monde d'Ogma, si vous ne les connaissez pas encore retournez à l'<a href="{{ path('app_index') }}">accueil</a> pour les découvrir.</p>
             <table>
                 <tbody>
                 <tr>
@@ -22,15 +22,15 @@
                 </tr>
                 <tr>
                     <th colspan="2">Chono</th>
-                    <td><strong>Rage Primordiale :</strong> Jet de Volonté DC 6 si touché par un effet magique en l'absence du pendentif de Virgonium, en cas d'échec, subit un trauma et entre en rage (voir <a href="../Factions/Chono.php#rage">Rage Chono</a> <br/><strong>Chasseur hors-pair :</strong> <a href="Glossaire.php#vision_nocturne">Vision nocturne</a>, peut relancer un jet raté de PER une fois par jour, Arme Naturelle(Griffes/Crocs, 1d6)</td>
+                    <td><strong>Rage Primordiale :</strong> Jet de Volonté DC 6 si touché par un effet magique en l'absence du pendentif de Virgonium, en cas d'échec, subit un trauma et entre en rage (voir <a href="{{ path('app_factions', {faction: 'chono'}) ~ '#rage' }}">Rage Chono</a> <br/><strong>Chasseur hors-pair :</strong> <a href="{{ path('app_rules_glossary') ~ '#vision_nocturne' }}">Vision nocturne</a>, peut relancer un jet raté de PER une fois par jour, Arme Naturelle(Griffes/Crocs, 1d6)</td>
                 </tr>
                 <tr>
                     <th colspan="2">Kanta</th>
-                    <td><strong>Fourrure épaisse :</strong> <a href="Glossaire.php#robuste">Robuste(1)</a>, Résistance(Froid, 3)<br/><strong>Imposante stature :</strong> Taille G, Arme Naturelle(Griffes/Crocs, 1d8)</td>
+                    <td><strong>Fourrure épaisse :</strong> <a href="{{ path('app_rules_glossary') ~ '#robuste' }}">Robuste(1)</a>, Résistance(Froid, 3)<br/><strong>Imposante stature :</strong> Taille G, Arme Naturelle(Griffes/Crocs, 1d8)</td>
                 </tr>
                 <tr>
                     <th colspan="2">Mushuk</th>
-                    <td><strong>Héritage félin :</strong> <a href="Glossaire.php#vision_nocturne">Vision nocturne</a>, Dégâts de chute divisés par 2, Arme Naturelle(Griffes/Crocs, 1d6)</td>
+                    <td><strong>Héritage félin :</strong> <a href="{{ path('app_rules_glossary') ~ '#vision_nocturne' }}">Vision nocturne</a>, Dégâts de chute divisés par 2, Arme Naturelle(Griffes/Crocs, 1d6)</td>
                 </tr>
                 <tr>
                     <th colspan="2">Sakha</th>
@@ -39,15 +39,15 @@
                 <tr>
                     <th rowspan="3">Sarpa</th>
                     <th>Lézards</th>
-                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), Arme Naturelle(Griffes/Crocs, 1d6)<br/><strong>Peau écailleuse :</strong> <a href="Glossaire.php#robuste">Robuste(1)</a><br/><strong>Héritage lézard :</strong> Régénération naturelle doublée (le test se fait avec une DC 2 et tout les paliers de 2 DR on récupère d'une blessure supplémentaire), régénère les membres perdus</td>
+                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), Arme Naturelle(Griffes/Crocs, 1d6)<br/><strong>Peau écailleuse :</strong> <a href="{{ path('app_rules_glossary') ~ '#robuste' }}">Robuste(1)</a><br/><strong>Héritage lézard :</strong> Régénération naturelle doublée (le test se fait avec une DC 2 et tout les paliers de 2 DR on récupère d'une blessure supplémentaire), régénère les membres perdus</td>
                 </tr>
                 <tr>
                     <th>Serpents</th>
-                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), Arme Naturelle(Crochets, 1d4), Débilitant(5))<br/><strong>Peau écailleuse :</strong> <a href="Glossaire.php#robuste">Robuste(1)</a><br/><strong>Héritage serpentin :</strong> <a href="Glossaire.php#vision_thermique">Vision thermique</a>, <a href="Glossaire.php#rampant">Rampant</a></td>
+                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), Arme Naturelle(Crochets, 1d4), Débilitant(5))<br/><strong>Peau écailleuse :</strong> <a href="{{ path('app_rules_glossary') ~ '#robuste' }}">Robuste(1)</a><br/><strong>Héritage serpentin :</strong> <a href="{{ path('app_rules_glossary') ~ '#vision_thermique' }}">Vision thermique</a>, <a href="{{ path('app_rules_glossary') ~ '#rampant' }}">Rampant</a></td>
                 </tr>
                 <tr>
                     <th>Crocodiles</th>
-                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), Arme Naturelle(Griffes/Crocs, 1d8)<br/><strong>Forteresse d'écailles :</strong> <a href="Glossaire.php#robuste">Robuste(2)</a> et Taille G<br/><strong>Prédateur Aquatique :</strong> <a href="Glossaire.php#amphibien">Amphibien</a></td>
+                    <td><strong>Sang-froid :</strong> Vulnérabilité(Froid, 2), Arme Naturelle(Griffes/Crocs, 1d8)<br/><strong>Forteresse d'écailles :</strong> <a href="{{ path('app_rules_glossary') ~ '#robuste' }}">Robuste(2)</a> et Taille G<br/><strong>Prédateur Aquatique :</strong> <a href="{{ path('app_rules_glossary') ~ '#amphibien' }}">Amphibien</a></td>
                 </tr>
                 <tr>
                     <th colspan="2">Sever</th>
@@ -60,11 +60,11 @@
                 <tr>
                     <th rowspan="2">Steinn</th>
                     <th>Rakaj</th>
-                    <td><strong>Taillé dans le Roc :</strong> Taille P, <a href="Glossaire.php#robuste">Robuste(1)</a><br/><strong>Vision souterraine :</strong> <a href="Glossaire.php#vision_nocturne">Vision nocturne</a><br/><strong>Froideur d'Hortak :</strong> Résistance(Froid, 3)</td>
+                    <td><strong>Taillé dans le Roc :</strong> Taille P, <a href="{{ path('app_rules_glossary') ~ '#robuste' }}">Robuste(1)</a><br/><strong>Vision souterraine :</strong> <a href="{{ path('app_rules_glossary') ~ '#vision_nocturne' }}">Vision nocturne</a><br/><strong>Froideur d'Hortak :</strong> Résistance(Froid, 3)</td>
                 </tr>
                 <tr>
                     <th>Khazun</th>
-                    <td><strong>Taillé dans le Roc :</strong> Taille P, <a href="Glossaire.php#robuste">Robuste(1)</a><br/><strong>Vision souterraine :</strong> <a href="Glossaire.php#vision_nocturne">Vision nocturne</a><br/><strong>Chaleur des Monts Ardents :</strong> Résistance(Feu, 3)</td>
+                    <td><strong>Taillé dans le Roc :</strong> Taille P, <a href="{{ path('app_rules_glossary') ~ '#robuste' }}">Robuste(1)</a><br/><strong>Vision souterraine :</strong> <a href="{{ path('app_rules_glossary') ~ '#vision_nocturne' }}">Vision nocturne</a><br/><strong>Chaleur des Monts Ardents :</strong> Résistance(Feu, 3)</td>
                 </tr>
                 <tr>
                     <th colspan="2">Tori</th>
@@ -76,7 +76,7 @@
                 </tr>
                 </tbody>
             </table>
-            <p>Toutes les origines Bestiales possèdent le trait <a href="Glossaire.php#estomac_solide">Estomac Solide</a>.</p>
+            <p>Toutes les origines Bestiales possèdent le trait <a href="{{ path('app_rules_glossary') ~ '#estomac_solide' }}">Estomac Solide</a>.</p>
         </div>
 
         <h2 id="Caracteristiques" onclick="hideContent(this)">Caractéristiques</h2>
@@ -269,7 +269,7 @@
             <h3 id="resistances" onclick="hideContent(this)">Résistance physique (RP) et Résistance magique (RM)</h3>
             <div>
                 <p>La résistance physique de votre personnage représente sa capacité à encaisser les coups. Elle est équivalente à la moitié de votre caractéristique de Vigueur à laquelle s'ajoute votre protection d'armure (PR) si vous portez une armure.<p/>
-                <p>Certaines origines comme les Kantas, les Sarpas-Crocodiles et les Steinns possèdent le trait <a href="Glossaire.php#robuste">Robuste</a> qui augmente leur resistance physique, cette augmentation est considérée comme de la PR naturelle.</p>
+                <p>Certaines origines comme les Kantas, les Sarpas-Crocodiles et les Steinns possèdent le trait <a href="{{ path('app_rules_glossary') ~ '#robuste' }}">Robuste</a> qui augmente leur resistance physique, cette augmentation est considérée comme de la PR naturelle.</p>
             </div>
 
             <h3 id="resistance_magique" onclick="hideContent(this)">Resistance magique (RM)</h3>
@@ -348,7 +348,7 @@
                         </ul>
                     </li>
                 </ul>
-                <p>Pour guérir d'un trauma, il est nécessaire d'effectuer un <a href="Survie.php#repos_court">repos court</a>, au terme de celui-ci, vous récupérez d'un trauma physique et d'un trauma mental. Si vous effectuez un <a href="Survie.php#repos_long">repos long</a>, alors vous récupérez de tous vos traumas.</p>
+                <p>Pour guérir d'un trauma, il est nécessaire d'effectuer un <a href="{{ path('app_rules_survival') ~ '#repos_court' }}">repos court</a>, au terme de celui-ci, vous récupérez d'un trauma physique et d'un trauma mental. Si vous effectuez un <a href="{{ path('app_rules_survival') ~ '#repos_long' }}">repos long</a>, alors vous récupérez de tous vos traumas.</p>
             </div>
 
             <h3 id="vitesse" onclick="hideContent(this)">Vitesse</h3>
@@ -365,14 +365,13 @@
                     <li><span class="big_underline">Origine Moyenne(M) :</span>Azuma, Chono, Mushuk, Sarpa Lézard, Sarpa Serpent, Sihir, Sever, Tori, Tuskizi</li>
                     <li><span class="big_underline">Origine Grande(G) :</span>Kanta, Sarpa Crocodile</li>
                 </ul>
-                <p>Pour plus de détails sur l'influence du gabarit sur votre personnage Cf <a href="Gabarit.php#gabarit_creatures">Gabarit des créatures</a>.</p>
+                <p>Pour plus de détails sur l'influence du gabarit sur votre personnage Cf <a href="{{ path('app_rules_gabarit') ~ '#gabarit_creatures' }}">Gabarit des créatures</a>.</p>
             </div>
 
             <h3 id="langages" onclick="hideContent(this)">Langages</h3>
             <div>
                 <p>Votre personnage sait parler sa langue d'origine et éventuellement d'autres langues selon son histoire.</p>
-                <p>Certains langages comme ceux des humains possèdent des racines communes, permettant à ses pratiquants de communiquer même s'ils n'ont aucunes langues en commun. D'autres peu communes sont considérés comme exotiques, parmi elle le Kugarite, le Karnarak et le Sihiräll. Cf <a href="../World/Histoire_Ogma.php#langages">Langages</a>
-                </p>
+                <p>Certains langages comme ceux des humains possèdent des racines communes, permettant à ses pratiquants de communiquer même s'ils n'ont aucunes langues en commun. D'autres peu communes sont considérés comme exotiques, parmi elle le Kugarite, le Karnarak et le Sihiräll. Cf <a href="{{ path('app_univers', {page: 'histoire_ogma'}) ~ '#langages' }}">Langages</a></p>
             </div>
 
 
@@ -413,7 +412,7 @@
                 <tr id="alteration">
                     <th>Altération</th>
                     <td>Volonté</td>
-                    <td><a href="../World/Histoire_Ogma.php#inkarnai">Domaines de Karnaï</a></td>
+                    <td><a href="{{ path('app_univers', {page: 'histoire_ogma'}) ~ '#inkarnai' }}">Domaines de Karnaï</a></td>
                     <td>Cette école de magie permet de modeler la réalité comme on l'entend en transformant ou réparant des éléments existants.</td>
                     <td>Augmenter ses capacités physiques<br/>Soigner un allié<br/>Infliger une vulnérabilité</td>
                 </tr>
@@ -434,14 +433,14 @@
                 <tr id="conjuration">
                     <th>Conjuration</th>
                     <td>Volonté</td>
-                    <td><a href="../World/Histoire_Ogma.php#inkarnai">Domaines de Karnaï</a></td>
+                    <td><a href="{{ path('app_univers', {page: 'histoire_ogma'}) ~ '#inkarnai' }}">Domaines de Karnaï</a></td>
                     <td>Cette école de magie se concentre sur le déplacement d'éléments physiques ou magiques entre le plan matériel et le plan psychique, que ce soit des éléments, des objets ou même des êtres vivants.</td>
                     <td>Lancer une boule de feu<br/>Invoquer une arme ou une armure<br/>Se téléporter</td>
                 </tr>
                 <tr id="domination">
                     <th>Domination</th>
                     <td>Volonté</td>
-                    <td><a href="../World/Histoire_Ogma.php#inkarnai">Domaines de Karnaï</a></td>
+                    <td><a href="{{ path('app_univers', {page: 'histoire_ogma'}) ~ '#inkarnai' }}">Domaines de Karnaï</a></td>
                     <td>Cette école de magie permet de contrôler les vivants comme les morts et de jouer sur la perception de la réalité de ses cibles.</td>
                     <td>Réanimer un cadavre<br/>Calmer une entité<br/>Créer un mirage</td>
                 </tr>
@@ -462,7 +461,7 @@
                 <tr id="mysticisme">
                     <th>Mysticisme</th>
                     <td>Volonté</td>
-                    <td><a href="../World/Histoire_Ogma.php#inkarnai">Domaines de Karnaï</a></td>
+                    <td><a href="{{ path('app_univers', {page: 'histoire_ogma'}) ~ '#inkarnai' }}">Domaines de Karnaï</a></td>
                     <td>Cette école de magie rassemble les sorts non étudiés par les trois autres écoles, ses effets sont divers : révéler l'inconnu et le futur, jouer avec le destin.</td>
                     <td>Détecter des entités<br/>Communiquer à distance<br/>Voir le futur</td>
                 </tr>
@@ -497,14 +496,14 @@
                 <tr id="savoir">
                     <th>Savoir</th>
                     <td>Intelligence</td>
-                    <td>Histoire<br/><a href="../World/Histoire_Ogma.php#langages">Langages</a><br/>Traditions</td>
+                    <td>Histoire<br/><a href="{{ path('app_univers', {page: 'histoire_ogma'}) ~ '#langages' }}">Langages</a><br/>Traditions</td>
                     <td>Cette compétence détermine le niveau de connaissances global d'un personnage.</td>
                     <td>Déchiffrer un parchemin<br/>Identifier une créature préalablement étudiée<br/>Connaître les us et coutumes d'une contrée</td>
                 </tr>
                 <tr id="survie">
                     <th>Survie</th>
                     <td>Intelligence<br/>Perception</td>
-                    <td><a href="Survie.php#biomes">Biomes</a><br/>Pistage<br/>Cueillette</td>
+                    <td><a href="{{ path('app_rules_survival') ~ '#biomes' }}">Biomes</a><br/>Pistage<br/>Cueillette</td>
                     <td>Cette compétence mesure les capacités du personnage à survivre en milieu naturel. De nombreux modificateurs peuvent s'appliquer selon l'environnement de l'épreuve.</td>
                     <td>Trouver de l'eau et de la nourriture<br/>Traquer une piste<br/>Identifier une plante dangereuse</td>
                 </tr>
@@ -512,7 +511,7 @@
                     <th>Style de combat [type]</th>
                     <td>Force<br/>Dextérité</td>
                     <td>Duel<br/>Combat monté<br/>Combat en formation</td>
-                    <td>Cette compétence détermine le niveau d'expérience du personnage avec le combat et la façon dont il se bat. Pour plus d'information Cf <a href="Combat.php#style_combat">Style de combat</a>.</td>
+                    <td>Cette compétence détermine le niveau d'expérience du personnage avec le combat et la façon dont il se bat. Pour plus d'information Cf <a href="{{ path('app_rules_combat') ~ '#style_combat' }}">Style de combat</a>.</td>
                     <td>Attaquer un adversaire<br/>Se défendre d'une attaque</td>
                 </tr>
                 </tbody>

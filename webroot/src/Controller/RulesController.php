@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Repository\ArmorRepository;
 use App\Repository\CombatArtRepository;
 use App\Repository\ItemCategoryRepository;
+use App\Repository\SortRepository;
 use App\Repository\WeaponRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,9 +27,18 @@ class RulesController extends AbstractController
     }
 
     #[Route("/magie", "app_rules_magic")]
-    public function magie(): Response
+    public function magie(SortRepository $sortRepository): Response
     {
-        return $this->render('@App/rules/magie.html.twig');
+        $sortsByEcole = [
+            'Altération' => $sortRepository->findByEcole('Altération'),
+            'Conjuration' => $sortRepository->findByEcole('Conjuration'),
+            'Domination' => $sortRepository->findByEcole('Domination'),
+            'Mysticisme' => $sortRepository->findByEcole('Mysticisme'),
+        ];
+
+        return $this->render('@App/rules/magie.html.twig', [
+            'sortsByEcole' => $sortsByEcole,
+        ]);
     }
 
     #[Route("/survie", "app_rules_survival")]
@@ -44,9 +54,13 @@ class RulesController extends AbstractController
     }
 
     #[Route("/objets", "app_rules_items")]
-    public function items(): Response
+    public function items(ItemCategoryRepository $itemCategoryRepository): Response
     {
-        return $this->render('@App/rules/objets.html.twig');
+        $categories = $itemCategoryRepository->findAll();
+
+        return $this->render('@App/rules/objets.html.twig', [
+            'itemCategories' => $categories,
+        ]);
     }
 
     #[Route("/glossaire", "app_rules_glossary")]
@@ -112,6 +126,22 @@ class RulesController extends AbstractController
 
         return $this->render('@App/rules/objetsbdd.html.twig', [
             'categories' => $categories,
+        ]);
+    }
+
+    #[Route("/recherche", "app_rules_search")]
+    public function recherche(SortRepository $sortRepository, \Symfony\Component\HttpFoundation\Request $request): Response
+    {
+        $results = $sortRepository->search([
+            'nom' => $request->query->get('nom', ''),
+            'desc' => $request->query->get('desc', ''),
+            'prop' => $request->query->get('prop', ''),
+            'ecole' => $request->query->get('ecole', 'all'),
+            'inkarnai' => $request->query->get('inkarnai', 'all'),
+        ]);
+
+        return $this->render('@App/rules/recherche.html.twig', [
+            'results' => $results,
         ]);
     }
 }

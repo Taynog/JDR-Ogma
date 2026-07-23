@@ -40,7 +40,7 @@
             <ul>
                 <li>subit X points de dégâts de feu sur la partie de son corps en train de brûler. Cette quantité de dégâts augmente de 1 par round. Si le personnage subit deux sources de brûlure en même temps, les deux X se cumulent. </li>
                 <li>doit passer un test de Volonté DCX pour entreprendre une action autre que tenter d'éteindre le feu.</li>
-                <li>peut tenter d'éteindre les flammes en se roulant au sol. Cela consomme votre mouvement pour ce tour et nécessite de passer un test d'Agilité DCX. L'entité passe <a href="Glossaire.xhtml#a_terre">à terre</a> et perds l'état brûlure si le test est une réussite.</li>
+                <li>peut tenter d'éteindre les flammes en se roulant au sol. Cela consomme votre mouvement pour ce tour et nécessite de passer un test d'Agilité DCX. L'entité passe <a href="{{ path('app_rules_glossary') ~ '#a_terre' }}">à terre</a> et perds l'état brûlure si le test est une réussite.</li>
             </ul>
         </div>
 
@@ -132,7 +132,7 @@
 
         <h3 id="surpris" onclick="hideContent(this)">Surpris</h3>
         <div>
-            <p>Prise de court, cette entité ne peut effectuer qu'un mouvement ou une action et ne peut pas entreprendre de <a href="Combat.php#reactions">réactions</a>.</p>
+            <p>Prise de court, cette entité ne peut effectuer qu'un mouvement ou une action et ne peut pas entreprendre de <a href="{{ path('app_rules_combat') ~ '#reactions' }}">réactions</a>.</p>
         </div>
     </div>
 
@@ -161,7 +161,7 @@
 
         <h3 id="debilitant" onclick="hideContent(this)">Débilitant(X)</h3>
         <div>
-            <p>Cette entité peut empoisonnée sa cible si elle inflige une perte de vitalité avec ses armes naturelles. L'entité touchée doit passer un test de Résistance(Vig) DCX, si elle échoue, elle contracte un <a href="Glossaire.xhtml#empoisonnement">Empoisonnement</a> d'une amplitude équivalente à son DR négatif.</p>
+            <p>Cette entité peut empoisonnée sa cible si elle inflige une perte de vitalité avec ses armes naturelles. L'entité touchée doit passer un test de Résistance(Vig) DCX, si elle échoue, elle contracte un <a href="{{ path('app_rules_glossary') ~ '#empoisonnement' }}">Empoisonnement</a> d'une amplitude équivalente à son DR négatif.</p>
         </div>
 
         <h3 id="endommage" onclick="hideContent(this)">Endommagé(X)</h3>
@@ -247,7 +247,7 @@
         <h3 id="telekinesiste" onclick="hideContent(this)">Télékinésiste(X)</h3>
         <div>
             <p>Cette entité peut manipuler des objets situés à moins de 50 mètres par la pensée. Le gabarit des objets déplaçables de cette manière dépendent de la magnitude X : 1 pour des objets Minuscules et ainsi de suite jusqu'à 8 pour des objets Colossaux</p>
-            <p>Cette entité peut utiliser des objets pour attaquer ses adversaires. Cette action compte comme une attaque à distance utilisant la compétence Domination(Volonté) pour le test d'attaque. Les objets utilisés de cette manière comptent comme des <a href="Armes.php#armes_improvisees">armes improvisées</a>.</p>
+            <p>Cette entité peut utiliser des objets pour attaquer ses adversaires. Cette action compte comme une attaque à distance utilisant la compétence Domination(Volonté) pour le test d'attaque. Les objets utilisés de cette manière comptent comme des <a href="{{ path('app_rules_weapons') ~ '#armes_improvisees' }}">armes improvisées</a>.</p>
             <p>Il est possible de déplacer des créatures sentientes via la télékinésie. Si la cible souhaite résister, elle doit passer un test de Force ou de Volonté avec un DC équivalent à la magnitude X.</p>
         </div>
 
@@ -269,7 +269,7 @@
         <div>
             <p>Les personnages dotés de vision nocturne ont une rétine tellement sensible que leur acuité visuelle exacerbée leur permet de voir plus distinctement que la normale dans des conditions de faible éclairage (clarté de la lune ou des étoiles, torche, etc.).</p>
             <p>La vision nocturne permet de voir en couleur.</p>
-            <p>Une lumière vive et soudaine <a href="Glossaire.xhtml#aveugle">aveugle</a> les créatures ayant recours à la vision nocturne pendant 2 rounds. </p>
+            <p>Une lumière vive et soudaine <a href="{{ path('app_rules_glossary') ~ '#aveugle' }}">aveugle</a> les créatures ayant recours à la vision nocturne pendant 2 rounds. </p>
             <p>En extérieur, les personnages pourvus de vision nocturne voient aussi bien à la clarté de la lune qu’en plein jour.</p>
         </div>
 

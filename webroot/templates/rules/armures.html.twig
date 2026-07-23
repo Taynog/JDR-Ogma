@@ -1,64 +1,3 @@
-{#<?php
-include($_SERVER['DOCUMENT_ROOT'] . "/params.php");
-$title = "Armures";
-include($_SERVER['DOCUMENT_ROOT'] . "/header.php");
-function print_armures($categories): void
-{
-    global $db;
-    foreach ($categories as $cat) :
-    $smt = $db->prepare("SELECT * FROM armures WHERE Categorie = :c ORDER BY PR");
-    $smt->execute(['c' => $cat]);
-    $rows = $smt->fetchAll();
-    ?>
-    <p id="<?= 'table_armures_' . $cat ?>" class="caption"><?php echo 'Armures ' . $cat . 's'?></p>
-    <table>
-        <tbody>
-        <tr>
-            <th>Matériau</th>
-            <th>PR</th>
-            <th>PR Magique</th>
-            <th>Prix</th>
-        </tr>
-        <?php foreach ($rows as $row) : ?>
-            <tr>
-                <td id="<?= 'Armure_' .$row['Id'] ?>"><?= $row['Materiau'] ?></td>
-                <td><?= $row['PR'] ?></td>
-                <td><?= $row['PR_mag'] ?></td>
-                <td><?= $row['Prix'] ?> pa</td>
-            </tr>
-        <?php endforeach ?>
-        </tbody>
-    </table>
-<?php
-endforeach;
-}
-function print_boucliers(): void
-{
-    global $db;
-    $smt = $db->prepare("SELECT * FROM boucliers ORDER BY RB");
-    $smt->execute();
-    $rows = $smt->fetchAll();
-    ?>
-        <p id="<?= 'table_boucliers' ?>" class="caption">Boucliers</p>
-        <table>
-            <tbody>
-            <tr>
-                <th>Matériau</th>
-                <th>RB</th>
-                <th>Prix</th>
-            </tr>
-            <?php foreach ($rows as $row) : ?>
-                <tr>
-                    <td id="<?= 'Bouclier' . $row['Id'] ?>"><?= $row['Materiau'] ?></td>
-                    <td><?= $row['RB'] ?></td>
-                    <td><?= $row['Prix'] ?> pa</td>
-                </tr>
-            <?php endforeach ?>
-            </tbody>
-        </table>
-    <?php
-}
-?> #}
 {% extends '@App/base.html.twig' %}
 {% block title %}
     Armures
@@ -69,10 +8,10 @@ function print_boucliers(): void
         <p>Les armures sont un élément très important dans l'équipement d'un personnage, surtout si c'est un combattant de mêlée. L'armure permet de réduire les dégâts subis, mais impose parfois des pénalités.</p>
         <p>Les armures sont reparties en catégories de poids représentant la gêne pour le porteur.</p>
         <p><span class="big_underline">Tunique renforcée :</span>la tunique renforcée n'impose aucune pénalité sur les tests du personnage.</p>
-        <p><span class="big_underline">Légère :</span>l'armure légère n'impose aucune pénalité sur les tests du personnage. Le personnage dispose de 5 <a href="Survie.php#capacite_port">emplacements d'inventaire</a>.</p>
-        <p><span class="big_underline">Intermédiaire :</span>L'armure intermédiaire impose un désavantage aux tests d'Acrobatie, d'Athlétisme et de Furtivité. Le personnage dispose de 4 <a href="Survie.php#capacite_port">emplacements d'inventaire</a>. La vitesse du personnage diminue de 1.</p>
-        <p><span class="big_underline">Lourde :</span>L'armure lourde impose deux désavantages aux tests d'Acrobatie, d'Athlétisme et de Furtivité. Le personnage dispose de 3 <a href="Survie.php#capacite_port">emplacements d'inventaire</a>. La vitesse du personnage diminue de 2.</p>
-        <p><span class="big_underline">Super-lourde :</span>L'armure super-lourde impose trois désavantages aux tests d'Acrobatie, d'Athlétisme et de Furtivité. Le personnage dispose de 2 <a href="Survie.php#capacite_port">emplacements d'inventaire</a>. La vitesse du personnage diminue de 3.</p>
+        <p><span class="big_underline">Légère :</span>l'armure légère n'impose aucune pénalité sur les tests du personnage. Le personnage dispose de 5 <a href="{{ path('app_rules_survival') ~ '#capacite_port' }}">emplacements d'inventaire</a>.</p>
+        <p><span class="big_underline">Intermédiaire :</span>L'armure intermédiaire impose un désavantage aux tests d'Acrobatie, d'Athlétisme et de Furtivité. Le personnage dispose de 4 <a href="{{ path('app_rules_survival') ~ '#capacite_port' }}">emplacements d'inventaire</a>. La vitesse du personnage diminue de 1.</p>
+        <p><span class="big_underline">Lourde :</span>L'armure lourde impose deux désavantages aux tests d'Acrobatie, d'Athlétisme et de Furtivité. Le personnage dispose de 3 <a href="{{ path('app_rules_survival') ~ '#capacite_port' }}">emplacements d'inventaire</a>. La vitesse du personnage diminue de 2.</p>
+        <p><span class="big_underline">Super-lourde :</span>L'armure super-lourde impose trois désavantages aux tests d'Acrobatie, d'Athlétisme et de Furtivité. Le personnage dispose de 2 <a href="{{ path('app_rules_survival') ~ '#capacite_port' }}">emplacements d'inventaire</a>. La vitesse du personnage diminue de 3.</p>
         <p>Les armures nécessitent d'être maîtrisées par le personnage (incluses dans un de ses styles de combat) pour être utilisées convenablement. Un personnage portant une armure sans y être habitué subit le double des pénalités dues au poids de l'armure.</p>
         <p>L'armure protège le corps tout entier même si la description d'une armure peut varier selon les personnages. Chaque armure possède une certaine valeur de protection (PR) qui réduit tous dégâts subit sur la zone qu'elle protège. Certaines armures possèdent une PR magique permettant de réduire les dégâts magiques.</p>
 
@@ -105,9 +44,43 @@ function print_boucliers(): void
                 </tbody>
             </table>
         </div>
-        <?php
-        print_armures(array('Légère', 'Intermédiaire', 'Lourde'));
-        ?>
+        {% if armors|length > 0 %}
+            {% set categories = [] %}
+            {% for armor in armors %}
+                {% if armor.category not in categories %}
+                    {% set categories = categories|merge([armor.category]) %}
+                {% endif %}
+            {% endfor %}
+            {% for cat in categories %}
+                <p id="table_armures_{{ cat|lower }}" class="caption">Armures {{ cat }}s</p>
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>Matériau</th>
+                        <th>PR</th>
+                        <th>PR Magique</th>
+                        <th>Prix</th>
+                    </tr>
+                    {% for armor in armors %}
+                        {% if armor.category == cat %}
+                            <tr>
+                                <td id="Armure_{{ armor.id }}">
+                                    {% for material in armor.materials %}
+                                        {{ material }}{% if not loop.last %}, {% endif %}
+                                    {% endfor %}
+                                </td>
+                                <td>{{ armor.protection }}</td>
+                                <td>{{ armor.protectionMagical }}</td>
+                                <td>{{ armor.price }} pa</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% endfor %}
+        {% else %}
+            <p><em>Aucune armure disponible pour le moment.</em></p>
+        {% endif %}
         <h3 onclick="hideContent(this)" id="mod_armures_boucliers">Personalisation des armures et des boucliers</h3>
         <div>
             <p>Il est possible de modifier une armure pour qu'elle s'adapte au mieux possible à son utilisateur. Ces modifications peuvent être faites à la main si l'on s'y connaît un peu, mais le résultat risque d'être de piètre qualité, il vaut mieux se referer à un véritable artisan pour ce genre de travaux.</p>
@@ -134,7 +107,7 @@ function print_boucliers(): void
                 <tr>
                     <td>Armure polie</td>
                     <td>Un traitement spécial à base d'aluminium permet de donner un aspect très brillant à l'armure.</td>
-                    <td>Dans un environnement très lumineux, le porteur de l'armure peut tenter d'éblouir ses adversaires (la cible lance son dé de perception, si le résultat est supérieur ou égal à 5 alors elle est <a href="Glossaire.php#aveugle">aveuglée</a> pendant un round). En revanche, la lumière réfléchie par l'armure empêche de passer inaperçu et impose deux désavantages aux tests de Furtivité.</td>
+                    <td>Dans un environnement très lumineux, le porteur de l'armure peut tenter d'éblouir ses adversaires (la cible lance son dé de perception, si le résultat est supérieur ou égal à 5 alors elle est <a href="{{ path('app_rules_glossary') ~ '#aveugle' }}">aveuglée</a> pendant un round). En revanche, la lumière réfléchie par l'armure empêche de passer inaperçu et impose deux désavantages aux tests de Furtivité.</td>
                     <td>50 pa</td>
                 </tr>
                 <tr>
@@ -170,15 +143,14 @@ function print_boucliers(): void
             <p>Les boucliers sont utilisées pour se prémunir de toute sorte d'attaques. Puisqu'ils sont à mi-chemin entre les armes et les armures, ils suivent des règles spéciales.</p>
             <p>Utilisé comme une arme, un bouclier a une allonge Moyenne, est maniable à une ou deux mains, possède les propriétés "Impact" et "Sentinelle" et inflige 1d4 dégâts écrasants. Un bouclier possède un encombrement de 2.</p>
             <p><span class="big_underline">Résistance de Bouclier (RB) :</span>Au lieu de posséder une valeur de Protection, les boucliers possède une résistance notée RB, qui prend en compte la solidité du bouclier et la surface qu'il couvre.</p>
-            <p>Si un bouclier est utilisé pour bloquer une attaque, que ce soit une attaque de mêlée, un projectile ou une explosion, le personnage passe un test de Style de Combat(Force ou Dextérité) auquel il ajoute la RB de son bouclier. Voir les <a href="Combat.php#passe_armes">passes d'armes</a> pour plus de détails sur la défense en combat.</p>
+            <p>Si un bouclier est utilisé pour bloquer une attaque, que ce soit une attaque de mêlée, un projectile ou une explosion, le personnage passe un test de Style de Combat(Force ou Dextérité) auquel il ajoute la RB de son bouclier. Voir les <a href="{{ path('app_rules_combat') ~ '#passe_armes' }}">passes d'armes</a> pour plus de détails sur la défense en combat.</p>
             <p>Les boucliers ci-dessous possèdent deux variantes :</p>
             <ul>
                 <li><b>Grand Bouclier :</b> Un énorme bouclier couvrant presque intégralement son porteur. Il est possible d'utiliser une réaction pour imposer deux désavantages aux attaques à distance ciblant le porteur et les entités qui lui sont adjacentes. Un tel bouclier possède une RB supérieure d'un point, possède un encombrement de 3 et coûte 25% plus cher.</li>
                 <li><b>Petit Bouclier :</b> Un bouclier de diamètre réduit plus léger et maniable qu'un bouclier classique. Ce type de bouclier est incapable de bloquer les attaques de zone et perd la propriété "Sentinelle" mais obtient la propriété "Duel". Un tel bouclier possède une RB inférieure d'un point et un encombrement de 1.</li>
             </ul>
-            <?php
-            print_boucliers();
-            ?>
+            {# TODO: Ajouter l'entité Shield et injecter les données ici #}
+            <p><em>Liste des boucliers à venir.</em></p>
         </div>
     </div>
 {% endblock %}

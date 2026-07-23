@@ -1,0 +1,36 @@
+{% macro printSort(sort, showEcole = false) %}
+    <div class="effet_magique boxed">
+        <h3 id="Effet_{{ sort.id }}">{{ sort.effet }}{% if showEcole %} - {{ sort.ecole }}{% endif %}</h3>
+        <p><strong>{{ sort.propriete }}</strong></p>
+        <table class="table_DC_mag">
+            <tbody>
+            <tr>
+                <th>{{ 'sort.circle'|trans }}</th>
+                {% for i in 1..nb_cercles() %}
+                    <th>{{ i }}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                <th>DC</th>
+                {% for val in calc_dc(sort.dc) %}
+                    <td>{{ val }}</td>
+                {% endfor %}
+            </tr>
+            <tr>
+                <th>{{ 'sort.magnitude'|trans }}</th>
+                {% set mags = calc_mag(sort.magnitude) %}
+                {% for i in 0..nb_cercles()-1 %}
+                    <td>
+                        {% for magRow in mags %}
+                            {% if not loop.first %}<hr/>{% endif %}
+                            {{ magRow[i] }}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+            </tbody>
+        </table>
+        <p>{{ sort.description|raw }}</p>
+        <p>{{ sort.inkarnai }}</p>
+    </div>
+{% endmacro %}

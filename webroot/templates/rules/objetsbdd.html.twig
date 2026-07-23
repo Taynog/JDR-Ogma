@@ -658,7 +658,7 @@ VALUES(
 )
 VALUES(
     "Billes (D)",
-    "Petites billes recouvrant une zone de 5m x 5m une fois déversées sur le sol, les entités traversant cette zone doivent passer un test d'Agilité ou tomber <a href="Glossaire.php#a_terre">à terre</a>",
+    "Petites billes recouvrant une zone de 5m x 5m une fois déversées sur le sol, les entités traversant cette zone doivent passer un test d'Agilité ou tomber <a href="{{ path('app_rules_glossary') ~ '#a_terre' }}">à terre</a>",
     "10 pa",
     "1",
     "Pièges"
@@ -784,7 +784,7 @@ VALUES(
 )
 VALUES(
     "Menottes",
-    "Solides attaches métalliques devant subir 10 dégâts avant de se briser, pouvant <a href='Glossaire.php#entrave'>entraver</a> une créature de Gabarit Moyen ou Petit.",
+    "Solides attaches métalliques devant subir 10 dégâts avant de se briser, pouvant <a href="{{ path('app_rules_glossary') ~ '#entrave' }}">entraver</a> une créature de Gabarit Moyen ou Petit.",
     "25 pa",
     "1",
     "Autres"
@@ -882,7 +882,7 @@ VALUES(
 )
 VALUES(
     "Trousse de soins (D)",
-    "Bandages, aiguille et fil de suture, tout le nécessaire pour panser des plaies. Permet de stabiliser une créature mourante sur un test de Médecine(Int ou Dex) DC 4. La créature mourante passe un test de Vigueur avec un DC équivalent au triple de ses blessures et un bonus équivalent au DR de l'utilisateur de la trousse médicale. Sur une réussite, la créature n'est plus <a href='Glossaire.php#mourant'>mourante</a> et devient <a href='Glossaire.php#stable'>stable</a>.",
+    "Bandages, aiguille et fil de suture, tout le nécessaire pour panser des plaies. Permet de stabiliser une créature mourante sur un test de Médecine(Int ou Dex) DC 4. La créature mourante passe un test de Vigueur avec un DC équivalent au triple de ses blessures et un bonus équivalent au DR de l'utilisateur de la trousse médicale. Sur une réussite, la créature n'est plus <a href="{{ path('app_rules_glossary') ~ '#mourant' }}">mourante</a> et devient <a href="{{ path('app_rules_glossary') ~ '#stable' }}">stable</a>.",
     "25 pa",
     "1",
     "Autres"
@@ -1105,7 +1105,7 @@ VALUES(
 
     <h1 id="transports" onclick="hideContent(this)">Transports</h1>
     <div>
-        <p>Les transports terrestres suivent les règles indiqués dans la partie <a href="Survie.php#voyage">Survie : Voyage</a> puisque ce sont des êtres vivants qui permettent le déplacement et qu'ils ont besoin de repos.</p>
+        <p>Les transports terrestres suivent les règles indiqués dans la partie <a href="{{ path('app_rules_survival') ~ '#voyage' }}">Survie : Voyage</a> puisque ce sont des êtres vivants qui permettent le déplacement et qu'ils ont besoin de repos.</p>
         <p>Les transports fluviaux et maritimes en revanche se déplacent grâce aux courants et/ou au vent, ce qui permet de se déplacer constamment sans pause, la vitesse de déplacement peut cependant varier selon les conditions météorologiques.</p>
         <p>Les vitesses de déplacement indiquées ci-dessous correspondent à un rythme normal pour les transports terrestres et à des conditions météorologiques classiques.</p>
         <table>

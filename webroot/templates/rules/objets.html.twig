@@ -3,42 +3,6 @@
     Objets
 {% endblock %}
 {% block body %}
-{#function print_objets(): void
-{
-    global $db;
-    $smt = $db->prepare("SELECT * FROM objets ORDER BY Cat, Objet");
-    $smt->execute();
-    $rows = $smt->fetchAll();
-    $cur_cat = $rows[0]['Cat'];
-    ?>
-    <table id="<?= 'table_objets' ?>">
-        <tbody>
-        <tr>
-            <th style="width: 25%">Objet</th>
-            <th style="width: 60%">Description</th>
-            <th style="width: 12%">Prix</th>
-            <th style="width: 3%">ENC</th>
-        </tr>
-        <tr>
-            <th colspan="5"><?=$cur_cat?></th>
-        </tr>
-        <?php foreach ($rows as $row) : ?>
-            <?php
-                if($row['Cat'] != $cur_cat) :?>
-                    <?php $cur_cat = $row['Cat']; ?>
-                    <th colspan='5'><?=$cur_cat?></th>
-                <?php endif;?>
-            <tr>
-                <td id="<?= 'Objet_' .$row['Id'] ?>"><?= $row['Objet'] ?></td>
-                <td><?= $row['Description'] ?></td>
-                <td><?= $row['Prix'] ?></td>
-                <td><?= $row['ENC'] ?></td>
-            </tr>
-        <?php endforeach ?>
-        </tbody>
-    </table>
-    <?php
-}#}
 
     <h1 id="monnaie" onclick="hideContent(this)">Monnaie et conversions</h1>
     <div>
@@ -223,7 +187,7 @@
                 <td>1</td>
             </tr>
             <tr>
-                <td colspan="8">Pour plus d'informations, voir <a href="Survie.php#eclairage">Éclairage</a></td>
+                <td colspan="8">Pour plus d'informations, voir <a href="{{ path('app_rules_survival') ~ '#eclairage' }}">Éclairage</a></td>
             </tr>
             <tr>
                 <th colspan="8">Écrits</th>
@@ -355,7 +319,7 @@
             </tr>
             <tr>
                 <td>Billes (D)</td>
-                <td>Petites billes recouvrant une zone de 5m x 5m une fois déversées sur le sol, les entités traversant cette zone doivent passer un test d'Agilité ou tomber <a href="Glossaire.php#a_terre">à terre</a></td>
+                <td>Petites billes recouvrant une zone de 5m x 5m une fois déversées sur le sol, les entités traversant cette zone doivent passer un test d'Agilité ou tomber <a href="{{ path('app_rules_glossary') ~ '#a_terre' }}">à terre</a></td>
                 <td>10 pa</td>
                 <td>1</td>
                 <td>Chausse-trappes (D)</td>
@@ -402,7 +366,7 @@
                 <td>1 pa</td>
                 <td>2</td>
                 <td>Menottes</td>
-                <td>Solides attaches métalliques devant subir 10 dégâts avant de se briser, pouvant <a href="Glossaire.php#entrave">entraver</a> une créature de Gabarit Moyen ou Petit.</td>
+                <td>Solides attaches métalliques devant subir 10 dégâts avant de se briser, pouvant <a href="{{ path('app_rules_glossary') ~ '#entrave' }}">entraver</a> une créature de Gabarit Moyen ou Petit.</td>
                 <td>25 pa</td>
                 <td>1</td>
             </tr>
@@ -438,7 +402,7 @@
             </tr>
             <tr>
                 <td>Trousse de soins (D)</td>
-                <td>Bandages, aiguille et fil de suture, tout le nécessaire pour panser des plaies. Permet de stabiliser une créature mourante sur un test de Médecine(Int ou Dex) DC 4. La créature mourante passe un test de Vigueur avec un DC équivalent au triple de ses blessures et un bonus équivalent au DR de l'utilisateur de la trousse médicale. Sur une réussite, la créature n'est plus <a href='Glossaire.php#mourant'>mourante</a> et devient <a href='Glossaire.php#stable'>stable</a>.</td>
+                <td>Bandages, aiguille et fil de suture, tout le nécessaire pour panser des plaies. Permet de stabiliser une créature mourante sur un test de Médecine(Int ou Dex) DC 4. La créature mourante passe un test de Vigueur avec un DC équivalent au triple de ses blessures et un bonus équivalent au DR de l'utilisateur de la trousse médicale. Sur une réussite, la créature n'est plus <a href="{{ path('app_rules_glossary') ~ '#mourant' }}">mourante</a> et devient <a href="{{ path('app_rules_glossary') ~ '#stable' }}">stable</a>.</td>
                 <td>25 pa</td>
                 <td>1</td>
                 <td colspan="4"/>
@@ -447,9 +411,31 @@
         </table>
     </div>
     <div>
-        <?php
-        print_objets();
-        ?>
+        {% if itemCategories|length > 0 %}
+            <table id="table_objets">
+                <tbody>
+                <tr>
+                    <th style="width: 25%">Objet</th>
+                    <th style="width: 60%">Description</th>
+                    <th style="width: 12%">Prix</th>
+                    <th style="width: 3%">ENC</th>
+                </tr>
+                {% for cat in itemCategories %}
+                    <tr>
+                        <th colspan="5">{{ cat.category }}</th>
+                    </tr>
+                    {% for item in cat.items %}
+                        <tr>
+                            <td id="Objet_{{ item.id }}">{{ item.item }}</td>
+                            <td>{{ item.description }}</td>
+                            <td>{{ item.price }}</td>
+                            <td>{{ item.enc }}</td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
     </div>
 
     <h1 id="taverne" onclick="hideContent(this)">Taverne</h1>
@@ -664,7 +650,7 @@
 
     <h1 id="transports" onclick="hideContent(this)">Transports</h1>
     <div>
-        <p>Les transports terrestres suivent les règles indiqués dans la partie <a href="Survie.php#voyage">Survie : Voyage</a> puisque ce sont des êtres vivants qui permettent le déplacement et qu'ils ont besoin de repos.</p>
+        <p>Les transports terrestres suivent les règles indiqués dans la partie <a href="{{ path('app_rules_survival') ~ '#voyage' }}">Survie : Voyage</a> puisque ce sont des êtres vivants qui permettent le déplacement et qu'ils ont besoin de repos.</p>
         <p>Les transports fluviaux et maritimes en revanche se déplacent grâce aux courants et/ou au vent, ce qui permet de se déplacer constamment sans pause, la vitesse de déplacement peut cependant varier selon les conditions météorologiques.</p>
         <p>Les vitesses de déplacement indiquées ci-dessous correspondent à un rythme normal pour les transports terrestres et à des conditions météorologiques classiques.</p>
         <table>
