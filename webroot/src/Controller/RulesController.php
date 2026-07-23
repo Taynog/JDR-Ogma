@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Repository\ArmorRepository;
+use App\Repository\CombatArtRepository;
+use App\Repository\ItemCategoryRepository;
 use App\Repository\WeaponRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -78,6 +80,38 @@ class RulesController extends AbstractController
 
         return $this->render('@App/rules/armures.html.twig', [
             'armors' => $armors
+        ]);
+    }
+
+    #[Route("/gabarit", "app_rules_gabarit")]
+    public function gabarit(): Response
+    {
+        return $this->render('@App/rules/gabarit.html.twig');
+    }
+
+    #[Route("/types-actions", "app_rules_types_actions")]
+    public function typesActions(): Response
+    {
+        return $this->render('@App/rules/types_actions.html.twig');
+    }
+
+    #[Route("/arts-du-combat", "app_rules_arts_combat")]
+    public function artsDuCombat(CombatArtRepository $combatArtRepository): Response
+    {
+        $combatArts = $combatArtRepository->findAll();
+
+        return $this->render('@App/rules/arts_du_combat.html.twig', [
+            'combatArts' => $combatArts,
+        ]);
+    }
+
+    #[Route("/objets-services", "app_rules_objets_bdd")]
+    public function objetsBdd(ItemCategoryRepository $itemCategoryRepository): Response
+    {
+        $categories = $itemCategoryRepository->findAll();
+
+        return $this->render('@App/rules/objetsbdd.html.twig', [
+            'categories' => $categories,
         ]);
     }
 }
