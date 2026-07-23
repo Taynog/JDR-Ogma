@@ -14,7 +14,7 @@ class Item
 	#[ORM\Column(type: 'integer')]
 	private $id;
 
-	#[ORM\Column(length: 255)]
+	#[ORM\Column(length: 255, unique: true)]
     private ?string $item = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
@@ -27,7 +27,7 @@ class Item
     private ?int $enc = null;
 
     #[ORM\ManyToOne(inversedBy: 'items', targetEntity: ItemCategory::class)]
-    #[ORM\JoinColumn(referencedColumnName: 'id', nullable: false)]
+    #[ORM\JoinColumn(name: 'category_id', referencedColumnName: 'id', nullable: false)]
     private ?ItemCategory $category = null;
 
     public function getId(): ?int

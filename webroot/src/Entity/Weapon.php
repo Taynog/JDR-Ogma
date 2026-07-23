@@ -16,7 +16,7 @@ class Weapon
     #[ORM\Column(type: 'integer')]
     private $id;
 
-	#[ORM\Column(length: 50)]
+	#[ORM\Column(length: 50, unique: true)]
 	private ?string $type = null;
 
     #[ORM\Column(length: 255)]
@@ -31,11 +31,14 @@ class Weapon
     #[ORM\Column(length: 25)]
     private ?string $reach = null;
 
-    #[ORM\OneToMany(targetEntity: WeaponPropertyDetails::class, mappedBy: 'weapon')]
+    #[ORM\ManyToMany(targetEntity: WeaponPropertyDetails::class)]
+    #[ORM\JoinTable(name: 'weapon_property_weapon')]
+    #[ORM\JoinColumn(name: 'weapon_id', referencedColumnName: 'id')]
+    #[ORM\InverseJoinColumn(name: 'weapon_property_details_id', referencedColumnName: 'id')]
     private Collection $weaponProperties;
 
     #[ORM\ManyToOne(inversedBy: 'weapons', targetEntity: WeaponCategory::class)]
-    #[ORM\JoinColumn(referencedColumnName: 'id', nullable: false)]
+    #[ORM\JoinColumn(name: 'category_id', referencedColumnName: 'id', nullable: false)]
     private ?WeaponCategory $category = null;
 
     #[ORM\Column(type: Types::SMALLINT)]
@@ -156,28 +159,25 @@ class Weapon
     }
 
     /**
-     * @return Collection<int, WeaponProperties>
+     * @return Collection<int, WeaponPropertyDetails>
      */
     public function getWeaponProperties(): Collection
     {
         return $this->weaponProperties;
     }
 
-    public function addWeaponProperty(WeaponProperties $weaponProperty): static
+    public function addWeaponProperty(WeaponPropertyDetails $weaponProperty): static
     {
         if (!$this->weaponProperties->contains($weaponProperty)) {
             $this->weaponProperties->add($weaponProperty);
-            $weaponProperty->addWeaponType($this);
         }
 
         return $this;
     }
 
-    public function removeWeaponProperty(WeaponProperties $weaponProperty): static
+    public function removeWeaponProperty(WeaponPropertyDetails $weaponProperty): static
     {
-        if ($this->weaponProperties->removeElement($weaponProperty)) {
-            $weaponProperty->removeWeaponType($this);
-        }
+        $this->weaponProperties->removeElement($weaponProperty);
 
         return $this;
     }

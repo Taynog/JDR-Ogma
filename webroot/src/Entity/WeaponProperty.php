@@ -16,7 +16,7 @@ class WeaponProperty
 	#[ORM\Column(type: 'integer')]
 	private $id;
 
-	#[ORM\Column(length: 255)]
+	#[ORM\Column(length: 255, unique: true)]
     private ?string $property = null;
 
 	#[ORM\OneToMany(targetEntity: WeaponPropertyDetails::class, mappedBy: 'weaponProperty')]
@@ -31,7 +31,7 @@ class WeaponProperty
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $example = null;
 
-    public function getId(): ?string
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -80,6 +80,35 @@ class WeaponProperty
     public function setExample(?string $example): static
     {
         $this->example = $example;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, WeaponPropertyDetails>
+     */
+    public function getWeaponPropertyDetails(): Collection
+    {
+        return $this->weaponPropertyDetails;
+    }
+
+    public function addWeaponPropertyDetail(WeaponPropertyDetails $weaponPropertyDetail): static
+    {
+        if (!$this->weaponPropertyDetails->contains($weaponPropertyDetail)) {
+            $this->weaponPropertyDetails->add($weaponPropertyDetail);
+            $weaponPropertyDetail->setWeaponProperty($this);
+        }
+
+        return $this;
+    }
+
+    public function removeWeaponPropertyDetail(WeaponPropertyDetails $weaponPropertyDetail): static
+    {
+        if ($this->weaponPropertyDetails->removeElement($weaponPropertyDetail)) {
+            if ($weaponPropertyDetail->getWeaponProperty() === $this) {
+                $weaponPropertyDetail->setWeaponProperty(null);
+            }
+        }
 
         return $this;
     }

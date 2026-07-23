@@ -41,3 +41,68 @@ services:
         class: App\Admin\WeaponCategoryAdmin
         tags:
             - { name: sonata.admin, model_class: App\Entity\WeaponCategory, controller: ~, manager_type: orm, group: admin, label: WeaponCategory }
+
+    admin.armor:
+        class: App\Admin\ArmorAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Armor, controller: ~, manager_type: orm, group: admin, label: Armor }
+
+    admin.item:
+        class: App\Admin\ItemAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Item, controller: ~, manager_type: orm, group: admin, label: Item }
+
+    admin.item_category:
+        class: App\Admin\ItemCategoryAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\ItemCategory, controller: ~, manager_type: orm, group: admin, label: ItemCategory }
+
+    admin.material:
+        class: App\Admin\MaterialAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Material, controller: ~, manager_type: orm, group: admin, label: Material }
+
+    admin.skill:
+        class: App\Admin\SkillAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Skill, controller: ~, manager_type: orm, group: admin, label: Skill }
+
+    admin.stance:
+        class: App\Admin\StanceAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Stance, controller: ~, manager_type: orm, group: admin, label: Stance }
+
+    admin.combat_art:
+        class: App\Admin\CombatArtAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\CombatArt, controller: ~, manager_type: orm, group: admin, label: CombatArt }
+
+    admin.damage_type:
+        class: App\Admin\DamageTypeAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\DamageType, controller: ~, manager_type: orm, group: admin, label: DamageType }
+
+    admin.glossary_trait:
+        class: App\Admin\GlossaryTraitAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\GlossaryTrait, controller: ~, manager_type: orm, group: admin, label: GlossaryTrait }
+
+    admin.glossary_condition:
+        class: App\Admin\GlossaryConditionAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\GlossaryCondition, controller: ~, manager_type: orm, group: admin, label: GlossaryCondition }
+
+    admin.changelog:
+        class: App\Admin\ChangelogAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Changelog, controller: ~, manager_type: orm, group: admin, label: Changelog }
+
+    admin.weapon_property:
+        class: App\Admin\WeaponPropertyAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\WeaponProperty, controller: ~, manager_type: orm, group: admin, label: WeaponProperty }
+
+    admin.weapon_property_details:
+        class: App\Admin\WeaponPropertyDetailsAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\WeaponPropertyDetails, controller: ~, manager_type: orm, group: admin, label: WeaponPropertyDetails }

@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `armor` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(255) NOT NULL,
   `description` longtext DEFAULT NULL,
   `protection` smallint(6) NOT NULL,
@@ -35,7 +36,9 @@ CREATE TABLE `armor` (
   `price` varchar(255) NOT NULL,
   `enc` smallint(6) NOT NULL,
   `speed_penalty` varchar(255) DEFAULT NULL,
-  `movement_check_disadvantage` varchar(255) DEFAULT NULL
+  `movement_check_disadvantage` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_5DE1B12564C15B1` (`category`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -45,8 +48,11 @@ CREATE TABLE `armor` (
 --
 
 CREATE TABLE `armor_material` (
-  `armor_material` varchar(255) NOT NULL,
-  `armor_category` varchar(255) NOT NULL
+  `armor_material` int(11) NOT NULL,
+  `armor_category` int(11) NOT NULL,
+  PRIMARY KEY (`armor_material`,`armor_category`),
+  KEY `IDX_29DBA0B129DBA0B1` (`armor_material`),
+  KEY `IDX_29DBA0B15329CCE5` (`armor_category`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -56,8 +62,11 @@ CREATE TABLE `armor_material` (
 --
 
 CREATE TABLE `changelog` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `version` varchar(255) NOT NULL,
-  `content` longtext NOT NULL
+  `content` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_D17AC211AA115D5` (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -67,13 +76,16 @@ CREATE TABLE `changelog` (
 --
 
 CREATE TABLE `combat_art` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `description` longtext NOT NULL,
   `conditions` longtext DEFAULT NULL,
   `effect` longtext NOT NULL,
   `cost` varchar(255) DEFAULT NULL,
   `assaillant_test` longtext NOT NULL,
-  `defender_test` longtext NOT NULL
+  `defender_test` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_4DF6F1595E237E06` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -125,8 +137,11 @@ INSERT INTO `combat_art` (`name`, `description`, `conditions`, `effect`, `cost`,
 --
 
 CREATE TABLE `combat_art_weapon_category` (
-  `combat_art` varchar(255) NOT NULL,
-  `weapon_category` varchar(255) NOT NULL
+  `combat_art_id` int(11) NOT NULL,
+  `weapon_category_id` int(11) NOT NULL,
+  PRIMARY KEY (`combat_art_id`,`weapon_category_id`),
+  KEY `IDX_B04BE02052A7FB94` (`combat_art_id`),
+  KEY `IDX_B04BE0207758AB08` (`weapon_category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -136,9 +151,12 @@ CREATE TABLE `combat_art_weapon_category` (
 --
 
 CREATE TABLE `damage_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) NOT NULL,
   `description` longtext DEFAULT NULL,
-  `effect` longtext DEFAULT NULL
+  `effect` longtext DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_6CE4B5E68C8E3ACE` (`type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -150,20 +168,9 @@ CREATE TABLE `damage_type` (
 CREATE TABLE `doctrine_migration_versions` (
   `version` varchar(191) NOT NULL,
   `executed_at` datetime DEFAULT NULL,
-  `execution_time` int(11) DEFAULT NULL
+  `execution_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Déchargement des données de la table `doctrine_migration_versions`
---
-
-INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
-('DoctrineMigrations\\Version20240404082133', '2024-04-04 10:25:07', 640),
-('DoctrineMigrations\\Version20240426091036', '2024-04-26 11:10:59', 21),
-('DoctrineMigrations\\Version20240627104359', '2024-06-27 12:44:10', 18),
-('DoctrineMigrations\\Version20240627130323', '2024-06-27 15:03:57', 371),
-('DoctrineMigrations\\Version20240627133740', '2024-06-27 15:38:46', 502),
-('DoctrineMigrations\\Version20240627134126', '2024-06-27 15:41:44', 974);
 
 -- --------------------------------------------------------
 
@@ -172,9 +179,12 @@ INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_
 --
 
 CREATE TABLE `glossary_condition` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `condition` varchar(255) NOT NULL,
   `description` longtext DEFAULT NULL,
-  `effect` longtext NOT NULL
+  `effect` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_A0BC61B44B1A2F2F` (`condition`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -182,7 +192,7 @@ CREATE TABLE `glossary_condition` (
 --
 
 INSERT INTO `glossary_condition` (`condition`, `description`, `effect`) VALUES
-('À Terre', '<p>Le personnage se trouve étendu sur le sol. Sa vitesse est divisée par 2. Certaines actions comme tirer à l\'arc sont impossibles ou se font avec une grande difficulté lorsque l\'on est allongé sur le sol.</p>\r\n<p>Se coucher au sol ne coûte rien mais se relever coûte la moitié de la vitesse du personnage et provoque une attaque d’opportunité.</p>\r\n<p>Cibler une créature à terre se fait avec 2 désavantages.</p>\r\n', ''),
+('À Terre', '<p>Le personnage se trouve étendu sur le sol. Sa vitesse est divisée par 2. Certaines actions comme tirer à l\'arc sont impossibles ou se font avec une grande difficulté lorsque l\'on est allongé sur le sol.</p>\r\n<p>Se coucher au sol ne coûte rien mais se relever coûte la moitié de la vitesse du personnage et provoque une attaque d''opportunité.</p>\r\n<p>Cibler une créature à terre se fait avec 2 désavantages.</p>\r\n', ''),
 ('Assourdi', '<p>L\'entité perd l\'usage de l\'ouïe et subit les malus suivants :</p>\r\n<ul>\r\n<li>L\'entité n\'entend plus rien</li>\r\n<li>3 désavantages aux épreuves bénéficiant de l\'ouïe</li>\r\n<li>Rate automatiquement toutes les épreuves se basant uniquement sur l\'ouïe</li>\r\n</ul>\r\n', ''),
 ('Aveuglé', '<p>L\'entité perd l\'usage de la vision et subit les malus suivants :</p>\r\n<ul>\r\n<li>L\'entité ne voit plus rien</li>\r\n<li>3 désavantages aux épreuves bénéficiant de la vision</li>\r\n<li>Rate automatiquement toutes les épreuves se basant uniquement sur la vision</li>\r\n</ul>\r\n', ''),
 ('Brûlure(X)', '<p>L\'entité est en feu, l\'intensité des flammes est déterminé par un nombre X. Une entité souffrant de l\'état brûlure :</p>\r\n<ul>\r\n<li>subit X points de dégâts de feu sur la partie de son corps en train de brûler. Cette quantité de dégâts augmente de 1 par round. Si le personnage subit deux sources de brûlure en même temps, les deux X se cumulent. </li>\r\n<li>doit passer un test de Volonté DCX pour entreprendre une action autre que tenter d\'éteindre le feu.</li>\r\n<li>peut tenter d\'éteindre les flammes en se roulant au sol. Cela consomme votre mouvement pour ce tour et nécessite de passer un test d\'Agilité DCX. L\'entité passe <a href=\'Glossaire.xhtml#a_terre\'>à terre</a> et perds l\'état brûlure si le test est une réussite.</li>\r\n</ul>\r\n', ''),
@@ -191,8 +201,8 @@ INSERT INTO `glossary_condition` (`condition`, `description`, `effect`) VALUES
 ('Effrayé(Source)', '<p>Une créature effrayée fait tout pour s\'éloigner de la source de sa peur. Si la créature voit la source de sa peur et que son action n\'est pas de s\'en éloigner, elle effectue cette action avec 3 désavantages.</p>\r\n', ''),
 ('Empoisonnement(X)', '<p>La créature est affectée par une toxine nocive et doit passer un test de Vigueur DC X au début de chacun de ses tours, si elle échoue, elle subit une blessure. La magnitude de l\'Empoisonnement diminue de 1 à la fin du tour de l\'entité.</p>\r\n<p>Une créature empoisonnée effectue tous ses tests avec un nombre de désavantages équivalent à la moitié de l\'amplitude de l\'empoisonnement.</p>\r\n<p>Il est possible de réduire la magnitude de l\'Empoisonnement en passant un test de Medicine DC X, en cas de réussite, la magnitude de l\'Empoisonnement est réduite du DR de ce jet. Lorsque deux sources infligent un empoisonnement, appliquez seulement celui ayant la plus grande magnitude.</p>\r\n', ''),
 ('Entravé', '<p>Une entité entravée est limitée dans ses mouvements par des liens. Elle se déplace à la moitié de sa vitesse et effectue toute épreuve physique avec deux désavantages.</p>\r\n', ''),
-('Étourdi', '<p>Un personnage étourdi laisse tomber ce qu’il avait en main, ne peut intenter aucune action et se défend avec 2 désavantages durant toute cette période.</p>\r\n', ''),
-('Fasciné', '<p>Une créature est fascinée par un sort ou un effet surnaturel. Tant que l’effet persiste, une créature fascinée reste assise ou debout, dans l’incapacité d’effectuer d’autre action que se concentrer sur l’effet en question. Elle subit 2 désavantages sur tous les jets. L’arrivée d’une menace potentielle (comme une créature hostile) donne droit à un nouveau jet pour contrer l’effet de fascination. Toute menace évidente, comme dégainer une arme, lancer un sort ou tirer sur la créature, rompt immédiatement l’effet de fascination. En dépensant sa réaction, il est possible de secouer une créature fascinée pour lui faire reprendre ses esprits.</p>\r\n', ''),
+('Étourdi', '<p>Un personnage étourdi laisse tomber ce qu''il avait en main, ne peut intenter aucune action et se défend avec 2 désavantages durant toute cette période.</p>\r\n', ''),
+('Fasciné', '<p>Une créature est fascinée par un sort ou un effet surnaturel. Tant que l''effet persiste, une créature fascinée reste assise ou debout, dans l''incapacité d''effectuer d''autre action que se concentrer sur l''effet en question. Elle subit 2 désavantages sur tous les jets. L''arrivée d''une menace potentielle (comme une créature hostile) donne droit à un nouveau jet pour contrer l''effet de fascination. Toute menace évidente, comme dégainer une arme, lancer un sort ou tirer sur la créature, rompt immédiatement l''effet de fascination. En dépensant sa réaction, il est possible de secouer une créature fascinée pour lui faire reprendre ses esprits.</p>\r\n', ''),
 ('Immobilisé', '<p>Une créature immobilisée ne peut plus se déplacer. Elle peut effectuer toute action n\'incluant pas de déplacement.</p>\r\n', ''),
 ('Inconscient', '<p>Un personnage inconscient est incapable de faire quoi que ce soit et s\'effondre à terre sauf s\'il est maintenu dans une autre position.</p>\r\n', ''),
 ('Invisible', '<p>Les créatures invisibles ne peuvent être vues. Les personnages ratent automatiquement les jets pour les détecter basés sur la vision. Attaquer une entité invisible se fait avec 3 désavantages, et ce, même si on sait à peu près ou elle se trouve.</p>\r\n', ''),
@@ -201,7 +211,7 @@ INSERT INTO `glossary_condition` (`condition`, `description`, `effect`) VALUES
 ('Mourant', '<p>Le personnage est inconscient et en train de mourir. Une entité mourante ne peut pas entreprendre la moindre action et doit passer un test de Vigueur DC 1 par minute ou à chaque fois qu\'elle subit des dégâts, après 3 échecs l\'entité meurt. Après 3 réussites l\'intervalle entre chaque jet passe à une heure, après 3 autres réussites, l\'entité devient stable et n\'est plus mourante.</p>\r\n<p>Un personnage mourant peut être stabilisé par l\'intervention d\'une personne extérieure.</p>\r\n', ''),
 ('Ralenti', '<p>Une créature ralentie se déplace à la moitié de sa vitesse.</p>\r\n', ''),
 ('Saignement(X)', '<p>La créature saigne abondamment et doit passer un test de Vigueur DC X au début de chacun de ses tours, si elle échoue, elle subit une blessure. La magnitude du Saignement diminue de 1 à la fin du tour de l\'entité.</p>\r\n<p>Une créature qui saigne effectue tous ses tests avec un nombre de désavantages équivalent à la moitié de l\'amplitude du saignement.</p>\r\n<p>Il est possible de réduire la magnitude du Saignement en passant un test de Medicine DC X, en cas de réussite, la magnitude du Saignement est réduite du DR de ce jet. Lorsque deux sources infligent un saignement, appliquez seulement celui ayant la plus grande magnitude.</p>\r\n', ''),
-('Stable', '<p>Le personnage a été stabilisé, il n’est plus mourant mais reste inconscient. Un personnage stable redevient conscient après 2d6 - la moitié du dé de Vigueur/Volonté du personnage.</p>\r\n', ''),
+('Stable', '<p>Le personnage a été stabilisé, il n''est plus mourant mais reste inconscient. Un personnage stable redevient conscient après 2d6 - la moitié du dé de Vigueur/Volonté du personnage.</p>\r\n', ''),
 ('Surpris', '<p>Prise de court, cette entité ne peut effectuer qu\'un mouvement ou une action et ne peut pas entreprendre de <a href=\'Combat.php#reactions\'>réactions</a>.</p>\r\n', '');
 
 -- --------------------------------------------------------
@@ -211,9 +221,12 @@ INSERT INTO `glossary_condition` (`condition`, `description`, `effect`) VALUES
 --
 
 CREATE TABLE `glossary_trait` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `trait` varchar(255) NOT NULL,
   `description` longtext DEFAULT NULL,
-  `effect` longtext NOT NULL
+  `effect` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_3E55C83F7E2F15F4` (`trait`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -221,14 +234,14 @@ CREATE TABLE `glossary_trait` (
 --
 
 INSERT INTO `glossary_trait` (`trait`, `description`, `effect`) VALUES
-('Absorption magique(X)', '<p>Cette entité peut absorber la psy d\'un sort dont elle est la cible. Si cette entité vient à être touchée par un sort lancez un d10, si le résultat est inférieur ou égale à X le sort n\'a aucun effet sur la créature et elle récupère d\'un trauma.</p>\r\n', ''),
+('Absorption magique(X)', '<p>Cette entité peut absorber la psy d\'un sort dont elle est la cible. Si cette entité vient à être touchée par un sort lancez un d10, si le résultat est inférieur ou égale à X le sort n\'aucun effet sur la créature et elle récupère d\'un trauma.</p>\r\n', ''),
 ('Amphibien', '<p>Cette entité se déplace à vitesse normale dans l\'eau, n\'est pas limité par sa compétence d\'Athlétisme et inflige des dégâts normaux lorsqu\'elle se bat dans l\'eau.</p>\r\n', ''),
 ('Arme naturelle(Z, X)', '<p>Une partie du corps Z de cette entité peut être utilisé comme une arme infligeant X dégâts. L\'entité ne perd l\'usage de cette arme que si elle perd cette partie de son corps.</p>\r\n', ''),
 ('Artificiel', '<p>Cette entité n\'est pas vivante mais animé par d\'autres moyens. Elle n\'a besoin ni de respirer, ni d\'organes fonctionnels. Elle est immunisée aux effets tels que les maladies, les poisons, les blessures, le vieillissement, le sommeil et la fatigue.</p>\r\n', ''),
 ('Débilitant(X)', '<p>Cette entité peut empoisonnée sa cible si elle inflige une perte de vitalité avec ses armes naturelles. L\'entité touchée doit passer un test de Résistance(Vig) DCX, si elle échoue, elle contracte un <a href=\'Glossaire.xhtml#empoisonnement\'>Empoisonnement</a> d\'une amplitude équivalente à son DR négatif.</p>\r\n', ''),
 ('Endommagé(X)', '<p>Cet objet est abîmé et tous les tests dans lesquels il est utilisé se font avec un malus de X désavantages. Si cet objet est une arme, elle inflige 1 point de dégâts en moins, si c\'est une armure, sa PR diminue de 1.</p>\r\n<p>Un objet endommagé peut être réparé pour un coût équivalent à X*10% du prix de base de l\'objet. Si la magnitude de l\'endommagement dépasse 3, cet objet est détruit.</p>\r\n', ''),
 ('Estomac solide', '<p>Cette entité possède un estomac particulièrement tolérant vis-à-vis des aliments ingérés. Cette entité peut consommer de la viande crue et de l\'eau non purifiée sans craindre les maladies.</p>\r\n', ''),
-('Éthérée', '<p>Cette entité est immatérielle, capable de passer au travers des objets et d\'apparence translucide. Elle obtient le trait Volant(Vitesse) et peuvent se déplacer librement dans l\'espace même à travers des objets solides. Elles peuvent être ciblées par des attaques mais ne subissent des dommages que de la part d’armes en virgonium, de sorts, de pouvoirs magiques et d’effets surnaturels.</p>\r\n<p>Les entités éthérées ne peuvent normalement pas interagir avec le monde matériel mais peuvent utiliser la magie et des attaques capables d\'infliger des dégâts aux êtres vivants. Ces attaques ignorent la PR des armures ne possédant pas un revêtement en virgonium et ne peuvent être bloqués ou parés par des boucliers et des armes sans ce même revêtement.</p>\r\n', ''),
+('Éthérée', '<p>Cette entité est immatérielle, capable de passer au travers des objets et d\'apparence translucide. Elle obtient le trait Volant(Vitesse) et peuvent se déplacer librement dans l\'espace même à travers des objets solides. Elles peuvent être ciblées par des attaques mais ne subissent des dommages que de la part d\'armes en virgonium, de sorts, de pouvoirs magiques et d\'effets surnaturels.</p>\r\n<p>Les entités éthérées ne peuvent normalement pas interagir avec le monde matériel mais peuvent utiliser la magie et des attaques capables d\'infliger des dégâts aux êtres vivants. Ces attaques ignorent la PR des armures ne possédant pas un revêtement en virgonium et ne peuvent être bloqués ou parés par des boucliers et des armes sans ce même revêtement.</p>\r\n', ''),
 ('Extraplanaire(Z)', '<p>Cette entité provient d\'un autre plan d\'existence noté Z. Si elle meurt, est détruite ou bannie, elle retourne dans son plan d\'origine.</p>\r\n', ''),
 ('Grimpeur(X)', '<p>Cette entité peut escalader n\'importe quel paroi qu\'importe son inclinaison à une vitesse de X mètres par tour.</p>\r\n', ''),
 ('Immortel', '<p>Cette entité ne subit pas les effets du vieillissement et peut vivre éternellement en bonne santé.</p>\r\n', ''),
@@ -242,10 +255,10 @@ INSERT INTO `glossary_trait` (`trait`, `description`, `effect`) VALUES
 ('Robuste(X)', '<p>Cette entité est naturellement résistante aux coups, sa résistance physique augmente de X.</p>\r\n', ''),
 ('Télékinésiste(X)', '<p>Cette entité peut manipuler des objets situés à moins de 50 mètres par la pensée. Le gabarit des objets déplaçables de cette manière dépendent de la magnitude X : 1 pour des objets Minuscules et ainsi de suite jusqu\'à 8 pour des objets Colossaux</p>\r\n<p>Cette entité peut utiliser des objets pour attaquer ses adversaires. Cette action compte comme une attaque à distance utilisant la compétence Domination(Volonté) pour le test d\'attaque. Les objets utilisés de cette manière comptent comme des <a href=\'Armes.php#armes_improvisees\'>armes improvisées</a>.</p>\r\n<p>Il est possible de déplacer des créatures sentientes via la télékinésie. Si la cible souhaite résister, elle doit passer un test de Force ou de Volonté avec un DC équivalent à la magnitude X.</p>\r\n', ''),
 ('Télépathe', '<p>Cette entité peut communiquer des mots, des images ou même des sentiments par la pensée. Les entités recevant un message télépathique peuvent passer un test de Perception opposé à un test d\'Intelligence pour localiser le télépathe à l\'origine du message.</p>\r\n', ''),
-('Vision dans le noir', '<p>La vision dans le noir permet de voir en l’absence de source de lumière. Certaines créatures possèdent cette vision à cause de leurs sens développés spécialement pour une vie sans lumière, d\'autre la possède par magie.</p>\r\n<p>La vision dans le noir se fait uniquement en noir et blanc (elle ne permet pas de distinguer les couleurs)</p>\r\n<p>La présence de lumière n’entrave pas la vision dans le noir.</p>\r\n', ''),
-('Vision nocturne', '<p>Les personnages dotés de vision nocturne ont une rétine tellement sensible que leur acuité visuelle exacerbée leur permet de voir plus distinctement que la normale dans des conditions de faible éclairage (clarté de la lune ou des étoiles, torche, etc.).</p>\r\n<p>La vision nocturne permet de voir en couleur.</p>\r\n<p>Une lumière vive et soudaine <a href=\'Glossaire.xhtml#aveugle\'>aveugle</a> les créatures ayant recours à la vision nocturne pendant 2 rounds. </p>\r\n<p>En extérieur, les personnages pourvus de vision nocturne voient aussi bien à la clarté de la lune qu’en plein jour.</p>\r\n', ''),
+('Vision dans le noir', '<p>La vision dans le noir permet de voir en l''absence de source de lumière. Certaines créatures possèdent cette vision à cause de leurs sens développés spécialement pour une vie sans lumière, d\'autre la possède par magie.</p>\r\n<p>La vision dans le noir se fait uniquement en noir et blanc (elle ne permet pas de distinguer les couleurs)</p>\r\n<p>La présence de lumière n''entrave pas la vision dans le noir.</p>\r\n', ''),
+('Vision nocturne', '<p>Les personnages dotés de vision nocturne ont une rétine tellement sensible que leur acuité visuelle exacerbée leur permet de voir plus distinctement que la normale dans des conditions de faible éclairage (clarté de la lune ou des étoiles, torche, etc.).</p>\r\n<p>La vision nocturne permet de voir en couleur.</p>\r\n<p>Une lumière vive et soudaine <a href=\'Glossaire.xhtml#aveugle\'>aveugle</a> les créatures ayant recours à la vision nocturne pendant 2 rounds. </p>\r\n<p>En extérieur, les personnages pourvus de vision nocturne voient aussi bien à la clarté de la lune qu''en plein jour.</p>\r\n', ''),
 ('Vision thermique', '<p>La vision thermique permet de voir la chaleur qui émane des êtres vivants et des corps chauds. De ce fait, il est possible de voir dans le noir le plus complet les entités dégageant de la chaleur.</p>\r\n<p>La vision thermique fait apparaître les zones chaudes en rouge vif, déclinant en orange, jaune, vert puis bleu à mesure que la température diminue. L\'absence de chaleur ne produit aucune couleur.</p>\r\n', ''),
-('Vision véritable', '<p>La vision véritable permet de voir des choses invisibles à l\'œil nu. Ce type de vision n\'est accessible que par magie et permet de voir la psy émaner des entités d\'Ogma.</p>\r\n<p>La vision véritable fait percevoir le monde dans une teinte bleutée voire violacée et permet de voir dans le noir.</p>\r\n', ''),
+('Vision véritable', '<p>La vision véritable permet de voir des choses invisibles à l''œil nu. Ce type de vision n''est accessible que par magie et permet de voir la psy émaner des entités d\'Ogma.</p>\r\n<p>La vision véritable fait percevoir le monde dans une teinte bleutée voire violacée et permet de voir dans le noir.</p>\r\n', ''),
 ('Volant(X)', '<p>Cette entité peut se déplacer en volant. Elle possède une vitesse en vol de X mètres.</p>\r\n', ''),
 ('Vulnérabilité(Z, X)', '<p>Cette entité est vulnérable à un type de dégâts, ce qui signifie qu\'elle subira des dommages accrus face à ce genre de dégâts. On note ainsi la vulnérabilité d\'une créature : Vulnérabilité(Z, X) où Z est l\'élément infligeant X points de dégâts supplémentaires si la créature est touché par cet élément.</p>\r\n<p>Ce trait inflige Z désavantages aux tests réalisés pour résister à un effet de l\'élément X.</p>\r\n<p>Le trait Vulnérabilité s\'applique après toutes les autres sources de réduction de dégâts.</p>\r\n', '');
 
@@ -256,11 +269,15 @@ INSERT INTO `glossary_trait` (`trait`, `description`, `effect`) VALUES
 --
 
 CREATE TABLE `item` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `item` varchar(255) NOT NULL,
-  `category_id` varchar(255) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `description` longtext DEFAULT NULL,
   `price` varchar(255) NOT NULL,
-  `enc` smallint(6) NOT NULL
+  `enc` smallint(6) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_1F1B251E82C1D479` (`item`),
+  KEY `IDX_1F1B251E12469DE2` (`category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -268,65 +285,65 @@ CREATE TABLE `item` (
 --
 
 INSERT INTO `item` (`item`, `category_id`, `description`, `price`, `enc`) VALUES
-('Balance de marchand', '', 'Plateaux et arrangements de poids, permet de déterminer le poids exact d\'objets inférieur à 1 kg', '25 pa', 1),
-('Baril (D)', '', 'Petit tonneau pouvant stocker tout et n\'importe quoi.', '3 pa', 2),
-('Bélier portatif', '', 'Morceau de bois renforcé de métal, permet d\'enfoncer les portes avec 5 avantages', '15 pa', 2),
-('Billes (D)', '', 'Petites billes recouvrant une zone de 5m x 5m une fois déversées sur le sol, les entités traversant cette zone doivent passer un test d\'Agilité ou tomber <a href=\'Glossaire.php#a_terre\'>à terre</a>', '10 pa', 1),
-('Boite d\'allume-feu (D)', '', 'Silex, amorces et amadou, tout ce qu\'il faut pour allumer un feu', '5 pc', 1),
-('Bougie (D)', '', 'Faite de cire, cette bougie éclaire une petite zone pendant 2 heures', '1 pc', 1),
-('Boulier', '', 'Cadre de bois remplis de tiges serties de boules servant à compter rapidement de grand nombre.', '2 pa', 1),
-('Cadenas', '', 'Solide cadenas métallique, nécessite au moins 10 DR sur un test étendu de crochetage', '35 pa', 0),
-('Carquois (D)', '', 'Étui en cuir protégeant les munitions à l\'intérieur', '3 pa', 1),
-('Chaîne (3 m)', '', 'Lourde chaîne de métal devant subir 25 dégâts avant de se briser', '35 pa', 2),
-('Chausse-trappes (D)', '', 'Petits picots métalliques présentant toujours une pointe vers le haut recouvrant une zone de 2m x 2m une fois déversées sur le sol, les entités traversant cette zone doivent passer un test d\'Agilité DC 8 (DC 5 si on se déplace à la moitié de sa vitesse), sur un échec on subit une blessure. Tant qu\'elles n\'ont pas récupéré de cette blessure elles conservent cette pénalité de vitesse.', '5 pa', 1),
-('Chevalière', '', 'Bague possédant un relief, permet d\'apposer un sceau à la cire', '20 pa', 0),
-('Cire à cacheter (D)', '', 'Petit bâton de cire à faire fondre pour cacheter des documents importants', '5 pc', 0),
-('Cloche', '', 'Cloche à main résonnant bruyamment quand secouée', '1 pa', 1),
-('Corde (15 m)', '', 'Longue corde en chanvre devant subir 5 dégâts avant de se briser', '1 pa', 1),
-('Couverture', '', 'Peut également servir de tapis de sol, elle tient moins chaud qu\'un sac de couchage mais reste indispensable pour un sommeil de qualité', '5 pc', 1),
-('Craie (D)', '', 'Permet d\'écrire sur presque toutes les surfaces mais s\'efface avec l\'eau', '1 pc', 0),
-('Crochets (D)', '', 'Permet de crocheter des serrures verrouillées, se casse en cas d\'échec du test', '1 po', 0),
-('Échelle de corde (5 m)', '', 'Pliable, elle s\'attache facilement sur un sac et permet de créer un passage facile sur un mur', '5 pc', 2),
-('Encre', '', 'À stockée dans une fiole, à combiner avec une plume d\'écriture', '10 pa', 0),
-('Équipement d’escalade', '', 'Crampons et piolets, accorde 3 avantages pour les épreuves d\'escalade', '25 pa', 2),
-('Fiole vide (D)', '', 'Petit récipient en verre d\'une contenance de 100mL', '1 pa', 0),
-('Flasque vide (D)', '', 'Récipient en verre d\'une contenance d\'un litre', '2 pa', 1),
-('Gamelle', '', 'Assiette creuse accompagnée de couverts, peut également servir de casserole', '2 pc', 1),
-('Grappin', '', 'Permet de sécuriser une corde sans avoir à faire de noeuds, utile lorsque l\'on souhaite escalader une falaise', '5 pa', 1),
-('Grimoire', '', 'Imposant ouvrage relié de cuir', '20 pa', 1),
-('Huile', '', 'Stockée dans une flasque, très inflammable, sert de combustible à lanterne', '5 pc', 0),
-('Lampe', '', 'Faite de métal, cette lampe éclaire une zone modeste et consomme une flasque d\'huile toute les 8 heure', '5 pa', 1),
-('Lanterne', '', 'Faite de métal, cette lanterne éclaire une grande zone, un système de miroir peut être utilisé pour créer un grand cone de lumière, elle consomme une flasque d\'huile toute les 4 heure', '10 pa', 1),
-('Livre', '', 'Petit ouvrage relié de cuir', '15 pa', 1),
-('Longue-vue', '', 'Permet de voir 5 fois plus loin qu\'à l\'oeil nu', '5 po', 1),
-('Loupe', '', 'Permet de grossir 5 fois un objet proche ou d\'allumer un feu s\'il y a du soleil', '2 po', 0),
-('Marteau', '', 'Possède un côté plat pour marteler et un arrache-clou de l\'autre côté, utile dans toute sorte de situation', '2 pa', 1),
-('Matériel de pêche', '', 'Canne, lignes, hameçons et leurres, permet de pêcher n\'importe où. Sur un test étendu de Survie(Dex) DC 5, vous lancez un dé par heure, à la fin du test, diviser le DR total par 2, c\'est le nombre de rations de poisson que vous obtenez.', '1 pa', 2),
-('Menottes', '', 'Solides attaches métalliques devant subir 10 dégâts avant de se briser, pouvant <a href=\'Glossaire.php#entrave\'>entraver</a> une créature de Gabarit Moyen ou Petit.', '25 pa', 1),
-('Miroir en acier', '', 'Petit miroir fort utile pour se recoiffer ou voir sans être vu depuis un mur en angle', '15 pa', 1),
-('Palan', '', 'Système de poulies permettant de monter/descendre de lourdes charges', '3 pa', 1),
-('Papier (D)', '', 'Permet de noter des informations quelconques', '1 pc', 0),
-('Parchemin (D)', '', 'Permet de créer des cartes ou des parchemins magiques', '2 pc', 0),
-('Parfum', '', 'Stocké dans une fiole, peut cacher certaines odeurs, très apprécié dans les évènements mondains', '5 pa', 0),
-('Pelle', '', 'Très utile dès qu\'on veut creuser la terre', '5 pa', 2),
-('Perche (3 m)', '', 'Longue perche de bois possédant de nombreuses applications', '5 pc', 2),
-('Pied-de-biche', '', 'Permet d\'ouvrir par la force les contenants scellés, accorde 2 avantages aux épreuves de Force où il est possible de faire levier', '10 pa', 2),
-('Piège à mâchoires', '', 'Anneau d\'acier en dents de scie s\'activant via une plaque de pression et possédant une chaîne d\'un mètre, une entité activant le piège subit 2d8 dégâts perforants et écrasants et voit sa vitesse divisée par 4 si elle subit une blessure. Tant qu\'elle n\'a pas récupéré de cette blessure elle conserve cette pénalité de vitesse. Elle peut se libérer en passant un test d\'Athlétisme(Force) DC10 avec 2 désavantages.', '25 pa', 2),
-('Pierre à aiguiser', '', 'Petite pierre faite pour affiner le fil d\'une lame', '3 pc', 0),
-('Pioche', '', 'Très utile dès qu\'on veut creuser la pierre', '5 pa', 3),
-('Plume d’écriture', '', 'Permet d\'écrire sur du papier ou du parchemin', '2 pc', 0),
-('Pointes en fer (D)', '', 'Bâtons métalliques de 20cm possédant une tête plate et une pointe, utile dans toute sorte de situations', '1 pa', 1),
-('Poire à poudre (D)', '', 'Conteneur métallique préservant la poudre à canon de l\'humidité', '5 pa', 1),
-('Poudre à canon (baril)', '', 'Stocké dans un baril, cette poudre est parfois utilisée pour creuser rapidement des galeries', '10 pa', 0),
-('Poudre à canon (poire)', '', 'Stockée dans une poire, permet de recharger une arme à feu', '3 pa', 0),
-('Rations (D)', '', 'Aliments appropriés pour un long voyage : viande séchée, fruits secs, biscuit,...', '5 pc', 1),
-('Sablier / Clepsydre', '', 'Petit contenant en verre contenant du sable / de l\'eau mettant un temps déterminé à s\'écouler', '25 pa', 0),
-('Sac de couchage', '', 'Bien enroulé et très chaud, il s\'attache facilement sur un sac à dos et permet de passer sa nuit sans grelotter', '1 pa', 1),
-('Savon (D)', '', 'Petit cube de savon possédant de nombreuses applications', '5 pc', 0),
-('Sifflet / Appeau', '', 'Petit sifflet émettant du bruit dans une zone donnée. Certains imitent le cri d\'un animal.', '5 pc', 0),
-('Tente', '', 'Légère et pliable, elle permet à deux personnes de gabarit Moyen de dormir à l\'abri des intempéries', '10 pa', 2),
-('Torche (D)', '', 'Morceau de bois imbibé d\'huile, elle éclaire une zone moyenne pendant 1 heure', '1 pc', 1),
-('Trousse de soins (D)', '', 'Bandages, aiguille et fil de suture, tout le nécessaire pour panser des plaies. Permet de stabiliser une créature mourante sur un test de Médecine(Int ou Dex) DC 4. La créature mourante passe un test de Vigueur avec un DC équivalent au triple de ses blessures et un bonus équivalent au DR de l\'utilisateur de la trousse médicale. Sur une réussite, la créature n\'est plus <a href=\'Glossaire.php#mourant\'>mourante</a> et devient <a href=\'Glossaire.php#stable\'>stable</a>.', '25 pa', 1);
+('Balance de marchand', 1, 'Plateaux et arrangements de poids, permet de déterminer le poids exact d\'objets inférieur à 1 kg', '25 pa', 1),
+('Baril (D)', 1, 'Petit tonneau pouvant stocker tout et n\'importe quoi.', '3 pa', 2),
+('Bélier portatif', 1, 'Morceau de bois renforcé de métal, permet d\'enfoncer les portes avec 5 avantages', '15 pa', 2),
+('Billes (D)', 1, 'Petites billes recouvrant une zone de 5m x 5m une fois déversées sur le sol, les entités traversant cette zone doivent passer un test d\'Agilité ou tomber <a href=\'Glossaire.php#a_terre\'>à terre</a>', '10 pa', 1),
+('Boite d\'allume-feu (D)', 1, 'Silex, amorces et amadou, tout ce qu\'il faut pour allumer un feu', '5 pc', 1),
+('Bougie (D)', 1, 'Faite de cire, cette bougie éclaire une petite zone pendant 2 heures', '1 pc', 1),
+('Boulier', 1, 'Cadre de bois remplis de tiges serties de boules servant à compter rapidement de grand nombre.', '2 pa', 1),
+('Cadenas', 1, 'Solide cadenas métallique, nécessite au moins 10 DR sur un test étendu de crochetage', '35 pa', 0),
+('Carquois (D)', 1, 'Étui en cuir protégeant les munitions à l\'intérieur', '3 pa', 1),
+('Chaîne (3 m)', 1, 'Lourde chaîne de métal devant subir 25 dégâts avant de se briser', '35 pa', 2),
+('Chausse-trappes (D)', 1, 'Petits picots métalliques présentant toujours une pointe vers le haut recouvrant une zone de 2m x 2m une fois déversées sur le sol, les entités traversant cette zone doivent passer un test d\'Agilité DC 8 (DC 5 si on se déplace à la moitié de sa vitesse), sur un échec on subit une blessure. Tant qu\'elles n\'ont pas récupéré de cette blessure elles conservent cette pénalité de vitesse.', '5 pa', 1),
+('Chevalière', 1, 'Bague possédant un relief, permet d\'apposer un sceau à la cire', '20 pa', 0),
+('Cire à cacheter (D)', 1, 'Petit bâton de cire à faire fondre pour cacheter des documents importants', '5 pc', 0),
+('Cloche', 1, 'Cloche à main résonnant bruyamment quand secouée', '1 pa', 1),
+('Corde (15 m)', 1, 'Longue corde en chanvre devant subir 5 dégâts avant de se briser', '1 pa', 1),
+('Couverture', 1, 'Peut également servir de tapis de sol, elle tient moins chaud qu\'un sac de couchage mais reste indispensable pour un sommeil de qualité', '5 pc', 1),
+('Craie (D)', 1, 'Permet d\'écrire sur presque toutes les surfaces mais s\'efface avec l\'eau', '1 pc', 0),
+('Crochets (D)', 1, 'Permet de crocheter des serrures verrouillées, se casse en cas d\'échec du test', '1 po', 0),
+('Échelle de corde (5 m)', 1, 'Pliable, elle s\'attache facilement sur un sac et permet de créer un passage facile sur un mur', '5 pc', 2),
+('Encre', 1, 'À stockée dans une fiole, à combiner avec une plume d\'écriture', '10 pa', 0),
+('Équipement d''escalade', 1, 'Crampons et piolets, accorde 3 avantages pour les épreuves d\'escalade', '25 pa', 2),
+('Fiole vide (D)', 1, 'Petit récipient en verre d\'une contenance de 100mL', '1 pa', 0),
+('Flasque vide (D)', 1, 'Récipient en verre d\'une contenance d\'un litre', '2 pa', 1),
+('Gamelle', 1, 'Assiette creuse accompagnée de couverts, peut également servir de casserole', '2 pc', 1),
+('Grappin', 1, 'Permet de sécuriser une corde sans avoir à faire de noeuds, utile lorsque l\'on souhaite escalader une falaise', '5 pa', 1),
+('Grimoire', 1, 'Imposant ouvrage relié de cuir', '20 pa', 1),
+('Huile', 1, 'Stockée dans une flasque, très inflammable, sert de combustible à lanterne', '5 pc', 0),
+('Lampe', 1, 'Faite de métal, cette lampe éclaire une zone modeste et consomme une flasque d\'huile toute les 8 heure', '5 pa', 1),
+('Lanterne', 1, 'Faite de métal, cette lanterne éclaire une grande zone, un système de miroir peut être utilisé pour créer un grand cone de lumière, elle consomme une flasque d\'huile toute les 4 heure', '10 pa', 1),
+('Livre', 1, 'Petit ouvrage relié de cuir', '15 pa', 1),
+('Longue-vue', 1, 'Permet de voir 5 fois plus loin qu\'à l\'oeil nu', '5 po', 1),
+('Loupe', 1, 'Permet de grossir 5 fois un objet proche ou d\'allumer un feu s\'il y a du soleil', '2 po', 0),
+('Marteau', 1, 'Possède un côté plat pour marteler et un arrache-clou de l\'autre côté, utile dans toute sorte de situation', '2 pa', 1),
+('Matériel de pêche', 1, 'Canne, lignes, hameçons et leurres, permet de pêcher n\'importe où. Sur un test étendu de Survie(Dex) DC 5, vous lancez un dé par heure, à la fin du test, diviser le DR total par 2, c\'est le nombre de rations de poisson que vous obtenez.', '1 pa', 2),
+('Menottes', 1, 'Solides attaches métalliques devant subir 10 dégâts avant de se briser, pouvant <a href=\'Glossaire.php#entrave\'>entraver</a> une créature de Gabarit Moyen ou Petit.', '25 pa', 1),
+('Miroir en acier', 1, 'Petit miroir fort utile pour se recoiffer ou voir sans être vu depuis un mur en angle', '15 pa', 1),
+('Palan', 1, 'Système de poulies permettant de monter/descendre de lourdes charges', '3 pa', 1),
+('Papier (D)', 1, 'Permet de noter des informations quelconques', '1 pc', 0),
+('Parchemin (D)', 1, 'Permet de créer des cartes ou des parchemins magiques', '2 pc', 0),
+('Parfum', 1, 'Stocké dans une fiole, peut cacher certaines odeurs, très apprécié dans les évènements mondains', '5 pa', 0),
+('Pelle', 1, 'Très utile dès qu\'on veut creuser la terre', '5 pa', 2),
+('Perche (3 m)', 1, 'Longue perche de bois possédant de nombreuses applications', '5 pc', 2),
+('Pied-de-biche', 1, 'Permet d\'ouvrir par la force les contenants scellés, accorde 2 avantages aux épreuves de Force où il est possible de faire levier', '10 pa', 2),
+('Piège à mâchoires', 1, 'Anneau d\'acier en dents de scie s\'activant via une plaque de pression et possédant une chaîne d\'un mètre, une entité activant le piège subit 2d8 dégâts perforants et écrasants et voit sa vitesse divisée par 4 si elle subit une blessure. Tant qu\'elle n\'a pas récupéré de cette blessure elle conserve cette pénalité de vitesse. Elle peut se libérer en passant un test d\'Athlétisme(Force) DC10 avec 2 désavantages.', '25 pa', 2),
+('Pierre à aiguiser', 1, 'Petite pierre faite pour affiner le fil d\'une lame', '3 pc', 0),
+('Pioche', 1, 'Très utile dès qu\'on veut creuser la pierre', '5 pa', 3),
+('Plume d''écriture', 1, 'Permet d\'écrire sur du papier ou du parchemin', '2 pc', 0),
+('Pointes en fer (D)', 1, 'Bâtons métalliques de 20cm possédant une tête plate et une pointe, utile dans toute sorte de situations', '1 pa', 1),
+('Poire à poudre (D)', 1, 'Conteneur métallique préservant la poudre à canon de l\'humidité', '5 pa', 1),
+('Poudre à canon (baril)', 1, 'Stocké dans un baril, cette poudre est parfois utilisée pour creuser rapidement des galeries', '10 pa', 0),
+('Poudre à canon (poire)', 1, 'Stockée dans une poire, permet de recharger une arme à feu', '3 pa', 0),
+('Rations (D)', 1, 'Aliments appropriés pour un long voyage : viande séchée, fruits secs, biscuit,...', '5 pc', 1),
+('Sablier / Clepsydre', 1, 'Petit contenant en verre contenant du sable / de l\'eau mettant un temps déterminé à s\'écouler', '25 pa', 0),
+('Sac de couchage', 1, 'Bien enroulé et très chaud, il s\'attache facilement sur un sac à dos et permet de passer sa nuit sans grelotter', '1 pa', 1),
+('Savon (D)', 1, 'Petit cube de savon possédant de nombreuses applications', '5 pc', 0),
+('Sifflet / Appeau', 1, 'Petit sifflet émettant du bruit dans une zone donnée. Certains imitent le cri d\'un animal.', '5 pc', 0),
+('Tente', 1, 'Légère et pliable, elle permet à deux personnes de gabarit Moyen de dormir à l\'abri des intempéries', '10 pa', 2),
+('Torche (D)', 1, 'Morceau de bois imbibé d\'huile, elle éclaire une zone moyenne pendant 1 heure', '1 pc', 1),
+('Trousse de soins (D)', 1, 'Bandages, aiguille et fil de suture, tout le nécessaire pour panser des plaies. Permet de stabiliser une créature mourante sur un test de Médecine(Int ou Dex) DC 4. La créature mourante passe un test de Vigueur avec un DC équivalent au triple de ses blessures et un bonus équivalent au DR de l\'utilisateur de la trousse médicale. Sur une réussite, la créature n\'est plus <a href=\'Glossaire.php#mourant\'>mourante</a> et devient <a href=\'Glossaire.php#stable\'>stable</a>.', '25 pa', 1);
 
 -- --------------------------------------------------------
 
@@ -335,8 +352,11 @@ INSERT INTO `item` (`item`, `category_id`, `description`, `price`, `enc`) VALUES
 --
 
 CREATE TABLE `item_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(255) NOT NULL,
-  `description` longtext DEFAULT NULL
+  `description` longtext DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_50A6F08864C15B1` (`category`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -346,6 +366,7 @@ CREATE TABLE `item_category` (
 --
 
 CREATE TABLE `material` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `material` varchar(255) NOT NULL,
   `description` longtext DEFAULT NULL,
   `weapon_bonus_dmg` varchar(255) DEFAULT NULL,
@@ -356,7 +377,9 @@ CREATE TABLE `material` (
   `armor_passive_effect` longtext DEFAULT NULL,
   `armor_active_effect` longtext DEFAULT NULL,
   `weapon_price_multiplier` varchar(255) DEFAULT NULL,
-  `armor_price_multiplier` varchar(255) DEFAULT NULL
+  `armor_price_multiplier` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_545A22F5F1D1E281` (`material`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -366,11 +389,14 @@ CREATE TABLE `material` (
 --
 
 CREATE TABLE `skill` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `skill` varchar(255) NOT NULL,
   `description` longtext DEFAULT NULL,
   `main_carac` varchar(255) DEFAULT NULL,
   `specialisation_example` longtext DEFAULT NULL,
-  `test_example` longtext DEFAULT NULL
+  `test_example` longtext DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_4B605775E70B7050` (`skill`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -380,9 +406,12 @@ CREATE TABLE `skill` (
 --
 
 CREATE TABLE `stance` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `stance` varchar(255) NOT NULL,
   `description` longtext DEFAULT NULL,
-  `effect` longtext NOT NULL
+  `effect` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_A835F95663C2B574` (`stance`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -392,12 +421,14 @@ CREATE TABLE `stance` (
 --
 
 CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(180) NOT NULL,
   `roles` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT '(DC2Type:json)' CHECK (json_valid(`roles`)),
   `password` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `is_verified` tinyint(1) NOT NULL
+  `is_verified` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -407,14 +438,18 @@ CREATE TABLE `user` (
 --
 
 CREATE TABLE `weapon` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(50) NOT NULL,
-  `category_id` varchar(255) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `damage_type` varchar(255) NOT NULL,
   `damage` varchar(255) NOT NULL,
   `handling` varchar(255) NOT NULL,
   `reach` varchar(25) NOT NULL,
   `enc` smallint(6) NOT NULL,
-  `price` varchar(255) NOT NULL
+  `price` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_6933A7E68C8E3ACE` (`type`),
+  KEY `IDX_6933A7E612469DE2` (`category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -422,44 +457,44 @@ CREATE TABLE `weapon` (
 --
 
 INSERT INTO `weapon` (`type`, `category_id`, `damage_type`, `damage`, `handling`, `reach`, `enc`, `price`) VALUES
-('Arbalète', 'Arbalète', 'Perforants', '1d10', '2M', '150m', 3, '50'),
-('Arbalète à main', 'Arbalète', 'Perforants', '1d6', '1M', '50m', 1, '75'),
-('Arbalète lourde', 'Arbalète', 'Perforants', '1d12', '2M', '200m', 3, '100'),
-('Arc Court', 'Arc', 'Perforants', '1d6', '2M', '100m', 2, '50'),
-('Arc Long', 'Arc', 'Perforants', '1d8', '2M', '150m', 2, '75'),
-('Bâton', 'Bâton', 'Écrasants', '1d4', '1M', 'Longue', 2, '1'),
-('Ceste', 'Ceste', 'Écrasants', '1d4', '1M', 'Courte', 1, '5'),
-('Dague', 'Dague', 'Perforants ou Tranchants', '1d4', '1M', 'Courte', 1, '20'),
-('Dague de parade', 'Dague', 'Perforants', '1d4', '1M', 'Courte', 1, '25'),
-('Épée Courbe', 'Épée', 'Tranchants', '1d6', '1M', 'Moyenne', 1, '50'),
-('Épée Courte', 'Épée', 'Tranchants ou Perforants', '1d6', '1M', 'Moyenne', 1, '50'),
-('Épée Longue', 'Épée', 'Tranchants ou Perforants', '1d8', '1M', 'Moyenne', 2, '75'),
-('Étoiles de lancer', '', 'Tranchants', '1d4', '1M', '15m', 0, '5'),
-('Fléchettes de lancer', '', 'Perforants', '1d4', '1M', '15m', 0, '5'),
-('Fouet', 'Fouet', 'Tranchants', '1d4', '1M', 'Très Longue', 1, '10'),
-('Fronde', 'Fronde', 'Écrasants', '1d4', '1M', '100m', 1, '5'),
-('Grand marteau', 'Masse', 'Écrasants', '1d12', '2M', 'Longue', 3, '75'),
-('Grande épée', 'Épée', 'Tranchants ou Perforants', '1d12', '2M', 'Longue', 3, '100'),
-('Grande hache', 'Hache', 'Tranchant', '1d12', '2M', 'Longue', 3, '75'),
-('Hache de guerre', 'Hache', 'Tranchant', '1d8', '1M', 'Moyenne', 2, '60'),
-('Hachette', 'Hache', 'Tranchant', '1d4', '1M', 'Courte', 1, '15'),
-('Hallebarde', '', 'Tranchants ou Perforants', '1d10', '2M', 'Très Longue', 3, '100'),
-('Javelot', '', 'Perforants', '1d4', '1M', 'Longue', 2, '20'),
-('Lance', 'Lance', 'Perforants', '1d6', '1M', 'Très Longue', 2, '25'),
-('Lance d\'arçon', 'Lance', '-', '1d10', '1M', 'Extrême', 3, '50'),
-('Maillet', 'Masse', 'Écrasants', '1d4', '1M', 'Courte', 1, '15'),
-('Masse', 'Masse', 'Écrasants', '1d8', '1M', 'Moyenne', 1, '50'),
-('Mousquet', '', 'Perforants et écrasants', '1d12', '2M', '200m', 3, '150'),
-('Mousquet à double canon', '', 'Perforants et écrasants', '1d12', '2M', '200m', 3, '175'),
-('Pétoire', '', 'Perforants et écrasants', '1d6', '1M', '15m', 1, '100'),
-('Pique', 'Lance', 'Perforants', '1d10', '2M', 'Extrême', 3, '25'),
-('Pistolet à double canon', '', 'Perforants et écrasants', '1d8', '1M', '100m', 1, '150'),
-('Pistolet à silex', '', 'Perforants et écrasants', '1d8', '1M', '100m', 1, '100'),
-('Pistolet de poche', '', 'Perforants et écrasants', '1d6', '1M', '50m', 1, '100'),
-('Poivrière', '', 'Perforants et écrasants', '1d8', '1M', '100m', 1, '300'),
-('Rapière', '', 'Perforants', '1d6', '1M', 'Moyenne', 1, '50'),
-('Sarbacane', '', 'Perforants', '1d4', '1M', '30m', 1, '1'),
-('Tromblon', '', 'Perforants et écrasants', '1d8', '2M', '15m', 3, '150');
+('Arbalète', 1, 'Perforants', '1d10', '2M', '150m', 3, '50'),
+('Arbalète à main', 1, 'Perforants', '1d6', '1M', '50m', 1, '75'),
+('Arbalète lourde', 1, 'Perforants', '1d12', '2M', '200m', 3, '100'),
+('Arc Court', 2, 'Perforants', '1d6', '2M', '100m', 2, '50'),
+('Arc Long', 2, 'Perforants', '1d8', '2M', '150m', 2, '75'),
+('Bâton', 3, 'Écrasants', '1d4', '1M', 'Longue', 2, '1'),
+('Ceste', 4, 'Écrasants', '1d4', '1M', 'Courte', 1, '5'),
+('Dague', 5, 'Perforants ou Tranchants', '1d4', '1M', 'Courte', 1, '20'),
+('Dague de parade', 5, 'Perforants', '1d4', '1M', 'Courte', 1, '25'),
+('Épée Courbe', 6, 'Tranchants', '1d6', '1M', 'Moyenne', 1, '50'),
+('Épée Courte', 6, 'Tranchants ou Perforants', '1d6', '1M', 'Moyenne', 1, '50'),
+('Épée Longue', 6, 'Tranchants ou Perforants', '1d8', '1M', 'Moyenne', 2, '75'),
+('Étoiles de lancer', 13, 'Tranchants', '1d4', '1M', '15m', 0, '5'),
+('Fléchettes de lancer', 13, 'Perforants', '1d4', '1M', '15m', 0, '5'),
+('Fouet', 9, 'Tranchants', '1d4', '1M', 'Très Longue', 1, '10'),
+('Fronde', 10, 'Écrasants', '1d4', '1M', '100m', 1, '5'),
+('Grand marteau', 12, 'Écrasants', '1d12', '2M', 'Longue', 3, '75'),
+('Grande épée', 6, 'Tranchants ou Perforants', '1d12', '2M', 'Longue', 3, '100'),
+('Grande hache', 10, 'Tranchant', '1d12', '2M', 'Longue', 3, '75'),
+('Hache de guerre', 10, 'Tranchant', '1d8', '1M', 'Moyenne', 2, '60'),
+('Hachette', 10, 'Tranchant', '1d4', '1M', 'Courte', 1, '15'),
+('Hallebarde', 13, 'Tranchants ou Perforants', '1d10', '2M', 'Très Longue', 3, '100'),
+('Javelot', 13, 'Perforants', '1d4', '1M', 'Longue', 2, '20'),
+('Lance', 11, 'Perforants', '1d6', '1M', 'Très Longue', 2, '25'),
+('Lance d\'arçon', 11, '-', '1d10', '1M', 'Extrême', 3, '50'),
+('Maillet', 12, 'Écrasants', '1d4', '1M', 'Courte', 1, '15'),
+('Masse', 12, 'Écrasants', '1d8', '1M', 'Moyenne', 1, '50'),
+('Mousquet', 13, 'Perforants et écrasants', '1d12', '2M', '200m', 3, '150'),
+('Mousquet à double canon', 13, 'Perforants et écrasants', '1d12', '2M', '200m', 3, '175'),
+('Pétoire', 13, 'Perforants et écrasants', '1d6', '1M', '15m', 1, '100'),
+('Pique', 11, 'Perforants', '1d10', '2M', 'Extrême', 3, '25'),
+('Pistolet à double canon', 13, 'Perforants et écrasants', '1d8', '1M', '100m', 1, '150'),
+('Pistolet à silex', 13, 'Perforants et écrasants', '1d8', '1M', '100m', 1, '100'),
+('Pistolet de poche', 13, 'Perforants et écrasants', '1d6', '1M', '50m', 1, '100'),
+('Poivrière', 13, 'Perforants et écrasants', '1d8', '1M', '100m', 1, '300'),
+('Rapière', 13, 'Perforants', '1d6', '1M', 'Moyenne', 1, '50'),
+('Sarbacane', 13, 'Perforants', '1d4', '1M', '30m', 1, '1'),
+('Tromblon', 13, 'Perforants et écrasants', '1d8', '2M', '15m', 3, '150');
 
 -- --------------------------------------------------------
 
@@ -468,9 +503,12 @@ INSERT INTO `weapon` (`type`, `category_id`, `damage_type`, `damage`, `handling`
 --
 
 CREATE TABLE `weapon_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(255) NOT NULL,
   `description` longtext DEFAULT NULL,
-  `effect` longtext DEFAULT NULL
+  `effect` longtext DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_1981899964C15B1` (`category`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -498,11 +536,13 @@ INSERT INTO `weapon_category` (`category`, `description`, `effect`) VALUES
 --
 
 CREATE TABLE `weapon_properties` (
-  `id` int(11) NOT NULL,
-  `weapon_property_id` varchar(255) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `weapon_property_id` int(11) NOT NULL,
   `x` varchar(20) DEFAULT NULL,
   `y` varchar(20) DEFAULT NULL,
-  `z` varchar(20) DEFAULT NULL
+  `z` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_B894FE746C5A615` (`weapon_property_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -510,26 +550,29 @@ CREATE TABLE `weapon_properties` (
 --
 
 INSERT INTO `weapon_properties` (`id`, `weapon_property_id`, `x`, `y`, `z`) VALUES
-(1, 'Petite', NULL, NULL, NULL),
-(2, 'Rechargement(X)', '2', NULL, NULL);
+(1, 19, NULL, NULL, NULL),
+(2, 22, '2', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `weapon_properties_join_weapons`
+-- Structure de la table `weapon_property_weapon`
 --
 
-CREATE TABLE `weapon_properties_join_weapons` (
-  `weapon_type` varchar(50) NOT NULL,
-  `weapon_properties_id` int(11) NOT NULL
+CREATE TABLE `weapon_property_weapon` (
+  `weapon_id` int(11) NOT NULL,
+  `weapon_property_details_id` int(11) NOT NULL,
+  PRIMARY KEY (`weapon_id`,`weapon_property_details_id`),
+  KEY `IDX_D3E0E4CF92D4808` (`weapon_id`),
+  KEY `IDX_D3E0E4CF5811790` (`weapon_property_details_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `weapon_properties_join_weapons`
+-- Déchargement des données de la table `weapon_property_weapon`
 --
 
-INSERT INTO `weapon_properties_join_weapons` (`weapon_type`, `weapon_properties_id`) VALUES
-('Arbalète', 2);
+INSERT INTO `weapon_property_weapon` (`weapon_id`, `weapon_property_details_id`) VALUES
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -538,10 +581,13 @@ INSERT INTO `weapon_properties_join_weapons` (`weapon_type`, `weapon_properties_
 --
 
 CREATE TABLE `weapon_property` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `property` varchar(255) NOT NULL,
   `description` longtext DEFAULT NULL,
   `effect` longtext DEFAULT NULL,
-  `example` longtext DEFAULT NULL
+  `example` longtext DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_3E7CAD45426B0C57` (`property`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -581,10 +627,13 @@ INSERT INTO `weapon_property` (`property`, `description`, `effect`, `example`) V
 --
 
 CREATE TABLE `web_content` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `page` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` longtext DEFAULT NULL,
-  `category` varchar(255) NOT NULL
+  `category` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_96187B2B84800E54` (`page`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -592,156 +641,59 @@ CREATE TABLE `web_content` (
 --
 
 --
--- Index pour la table `armor`
---
-ALTER TABLE `armor`
-  ADD PRIMARY KEY (`category`);
-
---
--- Index pour la table `armor_material`
---
-ALTER TABLE `armor_material`
-  ADD PRIMARY KEY (`armor_material`,`armor_category`),
-  ADD KEY `IDX_29DBA0B129DBA0B1` (`armor_material`),
-  ADD KEY `IDX_29DBA0B15329CCE5` (`armor_category`);
-
---
--- Index pour la table `changelog`
---
-ALTER TABLE `changelog`
-  ADD PRIMARY KEY (`version`);
-
---
--- Index pour la table `combat_art`
---
-ALTER TABLE `combat_art`
-  ADD PRIMARY KEY (`name`);
-
---
--- Index pour la table `combat_art_weapon_category`
---
-ALTER TABLE `combat_art_weapon_category`
-  ADD PRIMARY KEY (`combat_art`,`weapon_category`),
-  ADD KEY `IDX_B04BE02052A7FB94` (`combat_art`),
-  ADD KEY `IDX_B04BE0207758AB08` (`weapon_category`);
-
---
--- Index pour la table `damage_type`
---
-ALTER TABLE `damage_type`
-  ADD PRIMARY KEY (`type`);
-
---
--- Index pour la table `doctrine_migration_versions`
---
-ALTER TABLE `doctrine_migration_versions`
-  ADD PRIMARY KEY (`version`);
-
---
--- Index pour la table `glossary_condition`
---
-ALTER TABLE `glossary_condition`
-  ADD PRIMARY KEY (`condition`);
-
---
--- Index pour la table `glossary_trait`
---
-ALTER TABLE `glossary_trait`
-  ADD PRIMARY KEY (`trait`);
-
---
--- Index pour la table `item`
---
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`item`),
-  ADD KEY `IDX_1F1B251E12469DE2` (`category_id`);
-
---
--- Index pour la table `item_category`
---
-ALTER TABLE `item_category`
-  ADD PRIMARY KEY (`category`);
-
---
--- Index pour la table `material`
---
-ALTER TABLE `material`
-  ADD PRIMARY KEY (`material`);
-
---
--- Index pour la table `skill`
---
-ALTER TABLE `skill`
-  ADD PRIMARY KEY (`skill`);
-
---
--- Index pour la table `stance`
---
-ALTER TABLE `stance`
-  ADD PRIMARY KEY (`stance`);
-
---
--- Index pour la table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`);
-
---
--- Index pour la table `weapon`
---
-ALTER TABLE `weapon`
-  ADD PRIMARY KEY (`type`),
-  ADD KEY `IDX_6933A7E612469DE2` (`category_id`);
-
---
--- Index pour la table `weapon_category`
---
-ALTER TABLE `weapon_category`
-  ADD PRIMARY KEY (`category`);
-
---
--- Index pour la table `weapon_properties`
---
-ALTER TABLE `weapon_properties`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `IDX_B894FE746C5A615` (`weapon_property_id`);
-
---
--- Index pour la table `weapon_properties_join_weapons`
---
-ALTER TABLE `weapon_properties_join_weapons`
-  ADD PRIMARY KEY (`weapon_properties_id`,`weapon_type`),
-  ADD KEY `IDX_F9EED02B34C1BFD6` (`weapon_type`),
-  ADD KEY `IDX_F9EED02B48E49E6A` (`weapon_properties_id`);
-
---
--- Index pour la table `weapon_property`
---
-ALTER TABLE `weapon_property`
-  ADD PRIMARY KEY (`property`);
-
---
--- Index pour la table `web_content`
---
-ALTER TABLE `web_content`
-  ADD PRIMARY KEY (`page`);
-
---
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
---
--- AUTO_INCREMENT pour la table `user`
---
+ALTER TABLE `armor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `changelog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `combat_art`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `damage_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `glossary_condition`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `glossary_trait`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `item`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `item_category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `material`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `skill`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `stance`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT pour la table `weapon_properties`
---
+ALTER TABLE `weapon`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `weapon_category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `weapon_properties`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+ALTER TABLE `weapon_property`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `web_content`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Contraintes pour les tables déchargées
@@ -751,40 +703,41 @@ ALTER TABLE `weapon_properties`
 -- Contraintes pour la table `armor_material`
 --
 ALTER TABLE `armor_material`
-  ADD CONSTRAINT `FK_29DBA0B129DBA0B1` FOREIGN KEY (`armor_material`) REFERENCES `material` (`material`),
-  ADD CONSTRAINT `FK_29DBA0B15329CCE5` FOREIGN KEY (`armor_category`) REFERENCES `armor` (`category`);
+  ADD CONSTRAINT `FK_29DBA0B129DBA0B1` FOREIGN KEY (`armor_material`) REFERENCES `material` (`id`),
+  ADD CONSTRAINT `FK_29DBA0B15329CCE5` FOREIGN KEY (`armor_category`) REFERENCES `armor` (`id`);
 
 --
 -- Contraintes pour la table `combat_art_weapon_category`
 --
 ALTER TABLE `combat_art_weapon_category`
-  ADD CONSTRAINT `FK_B04BE02052A7FB94` FOREIGN KEY (`combat_art`) REFERENCES `combat_art` (`name`),
-  ADD CONSTRAINT `FK_B04BE0207758AB08` FOREIGN KEY (`weapon_category`) REFERENCES `weapon_category` (`category`);
+  ADD CONSTRAINT `FK_B04BE02052A7FB94` FOREIGN KEY (`combat_art_id`) REFERENCES `combat_art` (`id`),
+  ADD CONSTRAINT `FK_B04BE0207758AB08` FOREIGN KEY (`weapon_category_id`) REFERENCES `weapon_category` (`id`);
 
 --
 -- Contraintes pour la table `item`
 --
 ALTER TABLE `item`
-  ADD CONSTRAINT `FK_1F1B251E12469DE2` FOREIGN KEY (`category_id`) REFERENCES `item_category` (`category`);
+  ADD CONSTRAINT `FK_1F1B251E12469DE2` FOREIGN KEY (`category_id`) REFERENCES `item_category` (`id`);
 
 --
 -- Contraintes pour la table `weapon`
 --
 ALTER TABLE `weapon`
-  ADD CONSTRAINT `FK_6933A7E612469DE2` FOREIGN KEY (`category_id`) REFERENCES `weapon_category` (`category`);
+  ADD CONSTRAINT `FK_6933A7E612469DE2` FOREIGN KEY (`category_id`) REFERENCES `weapon_category` (`id`);
 
 --
 -- Contraintes pour la table `weapon_properties`
 --
 ALTER TABLE `weapon_properties`
-  ADD CONSTRAINT `FK_B894FE746C5A615` FOREIGN KEY (`weapon_property_id`) REFERENCES `weapon_property` (`property`);
+  ADD CONSTRAINT `FK_B894FE746C5A615` FOREIGN KEY (`weapon_property_id`) REFERENCES `weapon_property` (`id`);
 
 --
--- Contraintes pour la table `weapon_properties_join_weapons`
+-- Contraintes pour la table `weapon_property_weapon`
 --
-ALTER TABLE `weapon_properties_join_weapons`
-  ADD CONSTRAINT `FK_F9EED02B34C1BFD6` FOREIGN KEY (`weapon_type`) REFERENCES `weapon` (`type`),
-  ADD CONSTRAINT `FK_F9EED02B48E49E6A` FOREIGN KEY (`weapon_properties_id`) REFERENCES `weapon_properties` (`id`);
+ALTER TABLE `weapon_property_weapon`
+  ADD CONSTRAINT `FK_D3E0E4CF92D4808` FOREIGN KEY (`weapon_id`) REFERENCES `weapon` (`id`),
+  ADD CONSTRAINT `FK_D3E0E4CF5811790` FOREIGN KEY (`weapon_property_details_id`) REFERENCES `weapon_properties` (`id`);
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

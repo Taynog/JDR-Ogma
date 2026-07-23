@@ -2,23 +2,20 @@
 
 namespace App\Entity;
 
-use App\Repository\WeaponPropertYDetailsRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Repository\WeaponPropertyDetailsRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: WeaponPropertyDetailsRepository::class)]
 class WeaponPropertyDetails
 {
     #[ORM\Id]
-    #[ORM\ManyToOne(targetEntity: Weapon::class, inversedBy: 'weaponProperties')]
-    #[ORM\JoinColumn(referencedColumnName: "id", nullable: false)]
-    private Weapon $weapon;
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
+    private ?int $id = null;
 
-	#[ORM\Id]
     #[ORM\ManyToOne(targetEntity: WeaponProperty::class, inversedBy: 'weaponPropertyDetails')]
-    #[ORM\JoinColumn(referencedColumnName: 'id', nullable: false)]
-    private WeaponProperty $weaponProperty;
+    #[ORM\JoinColumn(nullable: false)]
+    private ?WeaponProperty $weaponProperty = null;
 
     #[ORM\Column(length: 20, nullable: true)]
     private ?string $X = null;
@@ -29,23 +26,9 @@ class WeaponPropertyDetails
     #[ORM\Column(length: 20, nullable: true)]
     private ?string $Z = null;
 
-    public function __construct($weapon, $weaponProperty)
+    public function getId(): ?int
     {
-        $this->weapon = $weapon;
-        $this->weaponProperty = $weaponProperty;
-    }
-
-    public function getId(): ?array
-    {
-        return [$this->weapon, $this->weaponProperty];
-    }
-
-    /**
-     * @return Weapon
-     */
-    public function getWeapon(): Weapon
-    {
-        return $this->weapon;
+        return $this->id;
     }
 
     public function getWeaponProperty(): ?WeaponProperty

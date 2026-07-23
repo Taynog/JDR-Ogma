@@ -16,13 +16,13 @@ class WeaponCategory
 	#[ORM\Column(type: 'integer')]
 	private $id;
 
-	#[ORM\Column(length: 255)]
+	#[ORM\Column(length: 255, unique: true)]
     private ?string $category = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\Column(type: Types::JSON, nullable: true)]
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $effect = null;
 
     #[ORM\OneToMany(mappedBy: 'category', targetEntity: Weapon::class)]
@@ -33,7 +33,7 @@ class WeaponCategory
         $this->weapons = new ArrayCollection();
     }
 
-    public function getId(): ?string
+    public function getId(): ?int
     {
         return $this->id;
     }

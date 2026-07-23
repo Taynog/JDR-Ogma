@@ -16,7 +16,7 @@ class CombatArt
 	#[ORM\Column(type: 'integer')]
 	private $id;
 
-	#[ORM\Column(length: 255)]
+	#[ORM\Column(length: 255, unique: true)]
     private ?string $name = null;
 
     #[ORM\Column(type: Types::TEXT)]
@@ -38,8 +38,9 @@ class CombatArt
     private ?string $defenderTest = null;
 
     #[ORM\ManyToMany(targetEntity: WeaponCategory::class)]
-    #[ORM\JoinColumn(name: "combat_art", referencedColumnName: "id")]
-    #[ORM\InverseJoinColumn(name: "weapon_category", referencedColumnName: "id")]
+    #[ORM\JoinTable(name: 'combat_art_weapon_category')]
+    #[ORM\JoinColumn(name: 'combat_art_id', referencedColumnName: 'id')]
+    #[ORM\InverseJoinColumn(name: 'weapon_category_id', referencedColumnName: 'id')]
     private Collection $weaponCategories;
 
     public function __construct()

@@ -16,7 +16,7 @@ class Material
 	#[ORM\Column(type: 'integer')]
 	private $id;
 
-	#[ORM\Column(length: 255)]
+	#[ORM\Column(length: 255, unique: true)]
     private ?string $material = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
@@ -44,9 +44,9 @@ class Material
     private ?string $armorActiveEffect = null;
 
     #[ORM\ManyToMany(targetEntity: Armor::class, inversedBy: 'materials')]
-    #[ORM\JoinTable(name: "armor_material")]
-    #[ORM\JoinColumn(name: "armor_material", referencedColumnName: "id")]
-    #[ORM\InverseJoinColumn(name: "armor_category", referencedColumnName: "id")]
+    #[ORM\JoinTable(name: 'armor_material')]
+    #[ORM\JoinColumn(name: 'armor_material', referencedColumnName: 'id')]
+    #[ORM\InverseJoinColumn(name: 'armor_category', referencedColumnName: 'id')]
     private Collection $armorCategory;
 
     #[ORM\Column(length: 255, nullable: true)]

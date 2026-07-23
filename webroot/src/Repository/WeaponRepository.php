@@ -21,28 +21,26 @@ class WeaponRepository extends ServiceEntityRepository
         parent::__construct($registry, Weapon::class);
     }
 
-//    /**
-//     * @return Weapon[] Returns an array of Weapon objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('w')
-//            ->andWhere('w.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('w.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    public function findGroupedByType(): array
+    {
+        $weapons = $this->createQueryBuilder('w')
+            ->innerJoin('w.category', 'c')
+            ->addSelect('c')
+            ->getQuery()
+            ->getResult();
 
-//    public function findOneBySomeField($value): ?Weapon
-//    {
-//        return $this->createQueryBuilder('w')
-//            ->andWhere('w.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+        $melee = [];
+        $ranged = [];
+
+        foreach ($weapons as $weapon) {
+            $categoryName = $weapon->getCategory()->getCategory();
+            if (preg_match('/[0-9]+m/', $weapon->getReach())) {
+                $ranged[$categoryName][] = $weapon;
+            } else {
+                $melee[$categoryName][] = $weapon;
+            }
+        }
+
+        return ['melee' => $melee, 'ranged' => $ranged];
+    }
 }

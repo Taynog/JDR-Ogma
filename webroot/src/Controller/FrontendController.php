@@ -2,25 +2,26 @@
 
 namespace App\Controller;
 
-use App\Entity\Changelog;
-use App\Entity\WebContent;
+use App\Repository\ChangelogRepository;
+use App\Repository\WebContentRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 class FrontendController extends AbstractController
 {
     #[Route("/", "app_index")]
-    public function index(): Response
+    public function index(ChangelogRepository $changelogRepository): Response
     {
-        $changelogs = $this->getDoctrine()->getRepository(Changelog::class)->findAll();
+        $changelogs = $changelogRepository->findAll();
         return $this->render('@App/pages/accueil.html.twig', [
             'changelogs' => $changelogs
         ]);
     }
     #[Route("/{page}", "app_front", priority: -10)]
-    public function page (string $page): Response
+    public function page (string $page, WebContentRepository $webContentRepository): Response
     {
-        $template = $this->getDoctrine()->getRepository(WebContent::class)->find($page);
+        $template = $webContentRepository->find($page);
         if(is_null($template)) {
             return $this->redirectToRoute("app_index");
         }

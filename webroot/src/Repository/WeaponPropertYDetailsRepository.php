@@ -14,7 +14,7 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method WeaponPropertyDetails[]    findAll()
  * @method WeaponPropertyDetails[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class WeaponPropertYDetailsRepository extends ServiceEntityRepository
+class WeaponPropertyDetailsRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {

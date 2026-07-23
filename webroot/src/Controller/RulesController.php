@@ -2,10 +2,9 @@
 
 namespace App\Controller;
 
-use App\Entity\Armor;
-use App\Entity\Changelog;
-use App\Entity\Weapon;
-use App\Entity\WebContent;
+use App\Repository\ArmorRepository;
+use App\Repository\WeaponRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
@@ -61,34 +60,21 @@ class RulesController extends AbstractController
     }
 
     #[Route("/armes", "app_rules_weapons")]
-    public function armes(): Response
+    public function armes(WeaponRepository $weaponRepository): Response
     {
-		$weaponsMelee = $weaponsRanged = [];
-        $weapons = $this->getDoctrine()->getRepository(Weapon::class)->findAll();
-		foreach ($weapons as $weapon) {
-			//Si c'est une arme à distance, sa portée est indiquée en mètres 'm'
-			if(preg_match('/[0-9]+m/', $weapon->getReach())) {
-				if(!array_key_exists($weapon->getCategory()->getCategory(), $weaponsRanged)) {
-					$weaponsRanged[$weapon->getCategory()->getCategory()] = [];
-				}
-				$weaponsRanged[$weapon->getCategory()->getCategory()][] = $weapon;
-			} else {
-				if (!array_key_exists($weapon->getCategory()->getCategory(), $weaponsMelee)) {
-					$weaponsMelee[$weapon->getCategory()->getCategory()] = [];
-				}
-				$weaponsMelee[$weapon->getCategory()->getCategory()][] = $weapon;}
-		}
+        $grouped = $weaponRepository->findGroupedByType();
+
         return $this->render('@App/rules/armes.html.twig', [
-			'degats' => 15,
-            'weaponsMelee' => $weaponsMelee,
-            'weaponsRanged' => $weaponsRanged
+            'degats' => 15,
+            'weaponsMelee' => $grouped['melee'],
+            'weaponsRanged' => $grouped['ranged'],
         ]);
     }
 
     #[Route("/armures", "app_rules_armors")]
-    public function armures(): Response
+    public function armures(ArmorRepository $armorRepository): Response
     {
-        $armors = $this->getDoctrine()->getRepository(Armor::class)->findAll();
+        $armors = $armorRepository->findAll();
 
         return $this->render('@App/rules/armures.html.twig', [
             'armors' => $armors
