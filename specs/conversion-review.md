@@ -7,7 +7,7 @@ Dernière mise à jour : 2026-07-23
 
 ## Bilan global
 
-La conversion est avancée d'environ **95%**. La structure de fondation est solide et bien organisée.
+La conversion est avancée d'environ **98%**. La structure de fondation est solide et bien organisée. La Phase 3 (dynamisation BDD) est complète côté code — il ne reste que le peuplement des tables vides.
 
 ---
 
@@ -16,7 +16,8 @@ La conversion est avancée d'environ **95%**. La structure de fondation est soli
 ### Entités Doctrine (19 fichiers)
 
 - Toutes les entités sont correctement définies avec des attributs PHP 8.
-- Nouvelle entité `Sort` ajoutée (2026-07-23) pour la recherche de sorts.
+- Entité `Sort` ajoutée (2026-07-23) pour la recherche de sorts.
+- Entité `CombatArt` enrichie (2026-07-23) : `category`, `tier`, `orderIndex`, `section`, `critique` ajoutés pour supporter le template dynamique.
 - Les relations sont bien modélisées : `ManyToOne`, `OneToMany`, `ManyToMany`, et le composite key sur `WeaponPropertyDetails`.
 - Les enums backed (`WebContentCategory`) sont bien utilisés.
 - Les `__toString()` sont présents (utile pour Sonata et les formulaires).
@@ -33,7 +34,17 @@ La conversion est avancée d'environ **95%**. La structure de fondation est soli
 - Base layout fonctionnelle avec navbar et importmap.
 - Les pages de règles, factions, monde sont toutes converties.
 - **Plus aucun PHP brut dans les templates de règles** (2026-07-23).
-- Twig extension `AppExtension` avec fonctions `calc_dc()` et `calc_mag()` pour les sorts.
+- Twig extension `AppExtension` avec fonctions `calc_dc()`, `calc_mag()` et filtre `slug()`.
+- Macro `printSort()` dans `templates/macros/sort.html.twig` pour réutilisation.
+- Toutes les textes utilisent `{{ 'key'|trans }}` pour l'internationalisation.
+
+### Dynamisation BDD
+
+- **Glossaire** : `glossaire.html.twig` dynamisé avec `GlossaryCondition` (21 lignes) + `GlossaryTrait` (27 lignes), ancres `slug` pour navigation.
+- **Arts du combat** : `arts_du_combat.html.twig` réécrit (145 lignes, ↓ de 688) — 3 sections dynamiques avec rowspans Twig. 51 entrées en BDD (37 originales + 15 ajoutées). 2 migrations Doctrine créées.
+- **Sorts** : `magie.html.twig` et `recherche.html.twig` dynamisés avec `Sort` entity + macro Twig.
+- **Objets** : `objets.html.twig` dynamisé avec `ItemCategory` injection.
+- **Armes** : `armes.html.twig` dynamisé avec `WeaponRepository::findGroupedByType()`.
 
 ### Authentification
 
@@ -49,35 +60,24 @@ La conversion est avancée d'environ **95%**. La structure de fondation est soli
 
 Tous les problèmes critiques ont été corrigés le 2026-07-20.
 
-| Problème | Fichier(s) | Correction |
-|---|---|---|
-| ~~`getDoctrine()` déprécié~~ | ~~`RulesController.php`, `FrontendController.php`~~ | Injection de repositories via injection de dépendances method. `AbstractController` custom supprimé. |
-| ~~Import Route Annotation vs Attribute~~ | ~~`SecurityController.php`, `RegistrationController.php`~~ | Harmonisé sur `Symfony\Component\Routing\Attribute\Route`. |
-| ~~`access_control` absent~~ | ~~`config/packages/security.yaml`~~ | Règle `{ path: ^/admin, roles: ROLE_ADMIN }` ajoutée. |
-| ~~`.env` pointe PostgreSQL~~ | ~~`.env`~~ | Basculé sur MariaDB (`mysql://www:...@localhost:3306/ogma`). |
-
 ### Importante
 
 Tous les problèmes de cette section ont été corrigés ou infirmés le 2026-07-20.
-
-| Problème | Résolution |
-|---|---|
-| ~~**Incohérence des PKs**~~ | Corrigé : `PRIMARY KEY` ajouté aux 16 tables qui en manquaient dans `ogma.sql`. |
-| ~~`WeaponCategory::getId()` retourne `?string`~~ | **Faux positif**. |
-| ~~`WeaponPropertyDetails` — faute de frappe~~ | **Faux positif**. |
-| ~~`weapon_properties.weapon_property_id` est `varchar(255)`~~ | Corrigé : colonne changée en `int(11)`. |
 
 ### Modérée
 
 Tous les problèmes de cette section ont été corrigés le 2026-07-20.
 
-| Problème | Résolution |
-|---|---|
-| ~~**3 admins Sonata** sur 17 entités~~ | 16 admins créés. |
-| ~~**Aucune couche Service**~~ | Logique de tri melee/distance extraite vers `WeaponRepository::findGroupedByType()`. |
-| ~~**VichUploader** installé mais pas configuré~~ | **Non applicable** : aucune colonne image/fichier dans le schéma. |
-| ~~**Migration vide**~~ | La migration initiale couvre le schéma complet. |
-| ~~Logique de tri dans controller~~ | Extraite vers `WeaponRepository::findGroupedByType()`. |
+### Reste à faire
+
+| Priorité | Tâche | Fichier(s) |
+|---|---|---|
+| Haute | Générer les migrations Doctrine (`doctrine:migrations:diff`) | `migrations/` |
+| Haute | Peupler la table `sort` via Sonata Admin | BDD |
+| Haute | Peupler les tables `item`/`item_category` via Sonata Admin | BDD |
+| Haute | Peupler la table `armor` via Sonata Admin | BDD |
+| Moyenne | Créer l'entité `Bouclier` (shields) | `src/Entity/` |
+| Basse | Vérification globale avec serveur en fonctionnement | — |
 
 ---
 
@@ -91,7 +91,8 @@ Tous les problèmes de cette section ont été corrigés le 2026-07-20.
 6. ~~**Configurer la migration**~~ — Fait.
 7. ~~**Supprimer PHP brut des templates**~~ — Fait (2026-07-23). Tous les templates de règles sont désormais en Twig pur.
 8. ~~**Créer l'entité Sort**~~ — Fait (2026-07-23). Entity + Repository + Twig extension + recherche fonctionnelle.
-9. **Générer la migration pour `Sort`** — À faire : `doctrine:migrations:diff` puis `doctrine:migrations:migrate`.
-10. **Peupler la table `sort`** — Les données de l'ancienne table `sorts` du master PHP doivent être importées via Sonata Admin.
-11. **Peupler les tables `item`/`item_category`** — Les tables existent mais sont vides.
-12. **Peupler la table `armor`** — La table existe mais est vide.
+9. ~~**Dynamiser le glossaire**~~ — Fait (2026-07-23). Boucles Twig + ancres slug.
+10. ~~**Dynamiser les arts du combat**~~ — Fait (2026-07-23). Entity enrichie, 51 entrées, 3 sections dynamiques.
+11. **Générer les migrations Doctrine** — À faire : `doctrine:migrations:diff` puis `doctrine:migrations:migrate`.
+12. **Peupler les tables vides** — `sort`, `item`/`item_category`, `armor` à remplir via Sonata Admin.
+13. **Créer l'entité Bouclier** — Placeholder existant dans `armures.html.twig`.

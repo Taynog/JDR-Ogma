@@ -36,7 +36,7 @@ Date : 2026-07-23
 webroot/
 ├── src/
 │   ├── Controller/        → 4 contrôleurs (Rules, Frontend, Security, Registration)
-│   ├── Entity/            → 18 entités Doctrine
+│   ├── Entity/            → 19 entités Doctrine
 │   ├── Repository/        → 17 repositories
 │   ├── Admin/             → 16 admins Sonata
 │   └── Form/
@@ -73,9 +73,9 @@ webroot/
 | `ObjetsBDD.php` | `rules/objetsbdd.html.twig` | ✅ Converti | `app_rules_objets_bdd` (`/regles/objets-services`) | `item` + `item_category` (injecté) |
 | `Armes.php` | `rules/armes.html.twig` | ✅ Converti | `app_rules_weapons` (`/regles/armes`) | `weapon` + `weapon_category` (injecté) |
 | `Armures.php` | `rules/armures.html.twig` | ✅ Converti | `app_rules_armors` (`/regles/armures`) | `armor` (injecté, affiché par catégorie) |
-| `Glossaire.php` | `rules/glossaire.html.twig` | ⚠️ Statique uniquement | `app_rules_glossary` (`/regles/glossaire`) | `glossary_condition` + `glossary_trait` (non utilisé) |
+| `Glossaire.php` | `rules/glossaire.html.twig` | ✅ Dynamisé | `app_rules_glossary` (`/regles/glossaire`) | `glossary_condition` (21 lignes) + `glossary_trait` (27 lignes) injectés |
 | `Gabarit.php` | `rules/gabarit.html.twig` | ✅ Converti | `app_rules_gabarit` (`/regles/gabarit`) | Non |
-| `arts_du_combat.php` | `rules/arts_du_combat.html.twig` | ✅ Converti | `app_rules_arts_combat` (`/regles/arts-du-combat`) | `combat_art` (37 lignes, injecté) |
+| `arts_du_combat.php` | `rules/arts_du_combat.html.twig` | ✅ Dynamisé | `app_rules_arts_combat` (`/regles/arts-du-combat`) | `combat_art` (51 lignes, 3 sections avec rowspan dynamique) |
 | `Recherche.php` | `rules/recherche.html.twig` | ✅ Converti | `app_rules_search` (`/regles/recherche`) | `sort` (injecté via SortRepository::search()) |
 
 ### 2.2 Pages de factions (Data/Factions/)
@@ -138,15 +138,15 @@ webroot/
 
 ~~`frontend/navBar.html.twig`~~ — Tous les 14+ liens corrigés vers `{{ path() }}` (2026-07-23).
 
-### 3.5 Données BDD non exploitées (priorité moyenne) — PARTIELLEMENT RÉSOLU
+### 3.5 Données BDD non exploitées (priorité moyenne) — ✅ RÉSOLU (code)
 
 | Table BDD | Entity | Nb lignes | Utilisation actuelle | Potentiel |
 |---|---|---|---|---|
-| `combat_art` | `CombatArt` | 37 | ✅ Injecté dans `arts_du_combat` route | OK |
-| `item` + `item_category` | `Item`, `ItemCategory` | Vides | ✅ Injecté dans `objets` et `objetsbdd` routes (affichage conditionnel) | Peupler via Sonata |
-| `sort` (nouveau) | `Sort` | Vides | ✅ Injecté dans `magie` et `recherche` routes | Peupler via Sonata |
-| `glossary_condition` | `GlossaryCondition` | 21 | ❌ Pas utilisé — `glossaire.html.twig` est statique | Optionnel |
-| `glossary_trait` | `GlossaryTrait` | 27 | ❌ Pas utilisé — idem | Optionnel |
+| `combat_art` | `CombatArt` | 51 (37+14) | ✅ Dynamisé — 3 sections (basics/specialist/arts) avec rowspan Twig | OK |
+| `item` + `item_category` | `Item`, `ItemCategory` | Vides | ✅ Injecté dans `objets` et `objetsbdd` routes | Peupler via Sonata |
+| `sort` | `Sort` | Vides | ✅ Injecté dans `magie` et `recherche` routes | Peupler via Sonata |
+| `glossary_condition` | `GlossaryCondition` | 21 | ✅ Dynamisé — boucle Twig dans `glossaire.html.twig` | OK |
+| `glossary_trait` | `GlossaryTrait` | 27 | ✅ Dynamisé — boucle Twig dans `glossaire.html.twig` | OK |
 | `weapon_property` | `WeaponProperty` | 25 | ✅ Utilisé via `includes/printWeaponProperties.html.twig` | OK |
 | `stance` | `Stance` | Non vérifié | ❌ Pas utilisé | À voir |
 | `skill` | `Skill` | Non vérifié | ❌ Pas utilisé | À voir |
@@ -168,7 +168,7 @@ webroot/
 | `armor` | `Armor` | ✅ | ❌ Vide |
 | `armor_material` | (ManyToMany `Armor` ↔ `Material`) | — | ❌ Vide |
 | `changelog` | `Changelog` | ✅ | ❌ Vide |
-| `combat_art` | `CombatArt` | ✅ | ✅ 37 lignes |
+| `combat_art` | `CombatArt` | ✅ | ✅ 51 lignes (37 originales + 14 ajoutées) |
 | `damage_type` | `DamageType` | ✅ | ❌ Vide |
 | `glossary_condition` | `GlossaryCondition` | ✅ | ✅ 21 lignes |
 | `glossary_trait` | `GlossaryTrait` | ✅ | ✅ 27 lignes |
@@ -213,25 +213,28 @@ webroot/
 
 **Action restante** : Générer la migration (`doctrine:migrations:diff`) et peupler la table `sort` via Sonata Admin.
 
-### 5.2 Dynamisation du glossaire
+### 5.2 Dynamisation du glossaire — ✅ RÉSOLU
 
 **Problème** : Les tables `glossary_condition` (21 lignes) et `glossary_trait` (27 lignes) sont peuplées mais le template `glossaire.html.twig` affiche du contenu statique (copié-collé du PHP original).
 
-**Options** :
-- **A) Rendre dynamique** : Injecter les données via `GlossaryConditionRepository` et `GlossaryTraitRepository`, utiliser des boucles Twig. Permet de modifier les données via Sonata Admin.
-- **B) Rester statique** : Le contenu est le même, pas de maintenance BDD nécessaire. Plus simple.
+**Décision** : Option A — Rendre dynamique. Fait le 2026-07-23 :
+- Injection via `GlossaryConditionRepository` et `GlossaryTraitRepository` dans le contrôleur
+- Boucles Twig avec filtrage alphabétique
+- Filtre `slug` ajouté à `AppExtension` pour les ancres
+- Toutes les textes utilisent `{{ 'key'|trans }}`
 
-**Recommandation** : Option B pour l'instant. Le contenu du glossaire est stable et rarement modifié. Réévaluer si besoin.
-
-### 5.3 Dynamisation des arts du combat
+### 5.3 Dynamisation des arts du combat — ✅ RÉSOLU
 
 **Problème** : `arts_du_combat.html.twig` contient des données hardcodées en HTML (37 manoeuvres). La table `combat_art` en BDD contient les mêmes données (37 lignes).
 
-**Options** :
-- **A) Rendre dynamique** : Injecter `CombatArtRepository::findAll()`, trier par catégorie (basique/avancé), afficher via boucle Twig. Permet la modification via Sonata.
-- **B) Rester statique** : Le contenu est cohérent avec la BDD, pas de désynchronisation actuelle.
-
-**Recommandation** : Option A. Les arts du combat sont susceptibles d'évoluer. Le rendre dynamique facilite la maintenance via Sonata Admin.
+**Décision** : Option A — Rendre dynamique. Fait le 2026-07-23 :
+- Entité `CombatArt` enrichie : `category`, `tier`, `orderIndex`, `section`, `critique` ajoutés
+- Contrainte `unique` sur `name` supprimée (même nom pour différentes armes)
+- 15 entrées manquantes ajoutées (Tir précis ×6 armes, Tir déstabilisant ×5, etc.) → 51 total
+- 2 migrations Doctrine créées (schema + données)
+- Repository avec méthodes `findBySection()`, `findGroupedByCategoryAndTier()`
+- Template réécrit : 145 lignes (↓ de 688) avec boucles Twig + rowspans dynamiques
+- Toutes les textes utilisent `{{ 'key'|trans }}` (20 clés dans `messages.fr.yaml`)
 
 ### 5.4 Dynamisation des objets BDD
 
@@ -259,11 +262,14 @@ webroot/
 5. **Corriger `armures.html.twig`** ✅ — PHP commenté supprimé, `print_armures()` converti, `print_boucliers()` remplacé par placeholder
 6. **Corriger les liens internes dans les templates de règles** ✅ — Tous les liens `.php#`, `.xhtml#`, `../` convertis
 
-### Phase 3 — Dynamisation des données BDD (priorité moyenne) — PARTIELLEMENT COMPLÉTÉE
+### Phase 3 — Dynamisation des données BDD (priorité moyenne) — ✅ COMPLÉTÉE (code)
 
-7. **Arts du combat dynamiques** ✅ — `CombatArtRepository::findAll()` injecté, boucle Twig fonctionnelle
-8. **Objets dynamiques** ✅ — `ItemCategoryRepository::findAll()` injecté dans les deux routes
-9. **Armures dynamiques (complément)** ⏳ — Template converti, mais tables `armor` et `sort` vides — nécessite import de données
+7. **Glossaire dynamisé** ✅ — `GlossaryConditionRepository` + `GlossaryTraitRepository` injectés, boucles Twig avec ancres `slug`
+8. **Arts du combat dynamisés** ✅ — `CombatArt` enrichi (5 fields), 51 entrées, 3 sections avec rowspan Twig, 2 migrations
+9. **Objets dynamiques** ✅ — `ItemCategoryRepository::findAll()` injecté dans les deux routes
+10. **Sorts dynamisés** ✅ — `Sort` entity + `SortRepository` + Twig extension + macro `printSort()`
+11. **Armures** ⏳ — Template converti, table `armor` vide — nécessite import de données
+12. **Tables vides** ⏳ — `sort`, `item`/`item_category`, `armor` vides — peuplement via Sonata Admin après `doctrine:migrations:migrate`
 
 ### Phase 4 — Nettoyage (priorité basse) — EN COURS
 
@@ -279,16 +285,16 @@ webroot/
 |---|---|---|
 | Phase 1 — Routes + Navigation | ~30 min | ✅ Complétée |
 | Phase 2 — Conversion PHP → Twig | ~1-2h | ✅ Complétée |
-| Phase 3 — Dynamisation BDD | ~2-3h | ⏳ Partiellement |
+| Phase 3 — Dynamisation BDD | ~2-3h | ✅ Complétée (code) |
 | Phase 4 — Nettoyage | ~30 min | ✅ Complétée |
-| **Reste** | | Générer migration Sort, peupler tables vides (sort, armor, item) |
+| **Reste** | | Peupler tables vides (sort, armor, item) + migrations Doctrine |
 
 ---
 
 ## 8. Fichiers modifiés
 
 ### Controllers
-- `src/Controller/RulesController.php` — 17 routes (10 originales + 7 ajoutées)
+- `src/Controller/RulesController.php` — 17 routes (10 originales + 7 ajoutées), injection de données pour glossaire, arts du combat, magie, recherche, armes, armures, objets
 
 ### Templates
 - `templates/frontend/navBar.html.twig` — 14+ liens corrigés + nouveaux ajouts
@@ -296,14 +302,26 @@ webroot/
 - `templates/rules/recherche.html.twig` — Entièrement réécrit en Twig
 - `templates/rules/armes.html.twig` — `print_armures()` converti en Twig
 - `templates/rules/objets.html.twig` — `print_objets()` converti en Twig
-- `templates/rules/magie.html.twig` — 4 `print_effets()` convertis en Twig
-- `templates/rules/includes/printWeapons.html.twig` — Headers corrigés
+- `templates/rules/magie.html.twig` — 4 `print_effets()` convertis en Twig, utilisation macro `printSort()`
+- `templates/rules/glossaire.html.twig` — Dynamisé avec `GlossaryCondition` + `GlossaryTrait`
+- `templates/rules/arts_du_combat.html.twig` — Réécrit : 145 lignes (↓ de 688), 3 sections dynamiques
+- `templates/rules/includes/printWeapons.html.twig` — Headers corrigés + traductions
+- `templates/macros/sort.html.twig` — Macro `printSort()` pour les sorts
 
-### Entities & Repositories (nouveaux)
+### Entities & Repositories (nouveaux/modifiés)
 - `src/Entity/Sort.php` — Nouvelle entité pour les sorts
+- `src/Entity/CombatArt.php` — Enrichi : `category`, `tier`, `orderIndex`, `section`, `critique` ajoutés
 - `src/Repository/SortRepository.php` — Avec méthodes `findByEcole()` et `search()`
-- `src/Twig/AppExtension.php` — Fonctions `calc_dc()`, `calc_mag()`, `nb_cercles()`
+- `src/Repository/CombatArtRepository.php` — Avec méthodes `findBySection()`, `findGroupedByCategoryAndTier()`
+- `src/Twig/AppExtension.php` — Fonctions `calc_dc()`, `calc_mag()`, `nb_cercles()`, filtre `slug()`
+
+### Migrations
+- `migrations/Version20260723120000.php` — Ajoute colonnes `category`, `tier`, `critique`, `order_index`, `section` à `combat_art`
+- `migrations/Version20260723120100.php` — Peuple les données (51 entrées avec section/category/tier/critique)
+
+### Traductions
+- `translations/messages.fr.yaml` — 20 clés ajoutées sous `combat_art.*` (titres, colonnes, descriptions)
 
 ### Documentation
-- `specs/conversion-review.md` — Mis à jour (95% complétée)
+- `specs/conversion-review.md` — Mis à jour
 - `specs/conversion-plan.md` — Ce fichier

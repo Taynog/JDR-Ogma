@@ -54,3 +54,31 @@ weapon:
 
 #Sonata
 Weapon_list: Listes des armes
+
+#Combat Arts
+combat_art:
+  title: Arts du Combat
+  maneuvers:
+    title: Manoeuvres de combat
+    intro1: "Ici sont répertoriés quelques règles pour les manoeuvres spéciales en combat, la liste n'est pas exhaustive et les joueurs sont encouragés à chercher toujours plus d'actions en combat. Par exemple, si on a une main libre, on peut écarter le bouclier de son adversaire, lui projetter du sable dans les yeux, lui baisser son pantalon ou lui dérober un objet à sa ceinture."
+    intro2: "La répétition et l'abus de ces manoeuvres les rendent de moins en moins efficaces, les ennemis seront capables de s'y préparer et se défendront plus facilement."
+    intro3: "Si rien n'est précisé en cas de réussite/échec critique, on considère que le MJ décide du résultat."
+  basics:
+    title: Arts du combat basiques
+    description: "Ces manoeuvres sont utilisables par quiconque maîtrise les bases du combat"
+  specialist:
+    title: Arts du combat de spécialiste
+    description: "Les arts du combat de spécialiste ne sont utilisables que pour les personnages possédant des maîtrises d'armes."
+  arts:
+    title: Arts du combat
+    description: "Ces arts du combat ne sont utilisables que pour les personnages possédant des compétences de combat."
+  column:
+    name: Nom
+    description: Description
+    conditions: "Condition(s)"
+    player_test: "Épreuve (pour le joueur)"
+    enemy_test: "Épreuve (pour l'adversaire)"
+    effect: Effets si réussite
+    critique: Critique
+    skill: Compétence
+    tier: Palier

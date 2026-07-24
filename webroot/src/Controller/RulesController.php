@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Repository\ArmorRepository;
 use App\Repository\CombatArtRepository;
 use App\Repository\ItemCategoryRepository;
+use App\Repository\GlossaryConditionRepository;
+use App\Repository\GlossaryTraitRepository;
 use App\Repository\SortRepository;
 use App\Repository\WeaponRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -64,9 +66,12 @@ class RulesController extends AbstractController
     }
 
     #[Route("/glossaire", "app_rules_glossary")]
-    public function glossary(): Response
+    public function glossary(GlossaryConditionRepository $conditionRepository, GlossaryTraitRepository $traitRepository): Response
     {
-        return $this->render('@App/rules/glossaire.html.twig');
+        return $this->render('@App/rules/glossaire.html.twig', [
+            'conditions' => $conditionRepository->findAll(),
+            'traits' => $traitRepository->findAll(),
+        ]);
     }
 
     #[Route("/combat", "app_rules_combat")]
@@ -112,10 +117,14 @@ class RulesController extends AbstractController
     #[Route("/arts-du-combat", "app_rules_arts_combat")]
     public function artsDuCombat(CombatArtRepository $combatArtRepository): Response
     {
-        $combatArts = $combatArtRepository->findAll();
+        $basics = $combatArtRepository->findBySection(1);
+        $specialist = $combatArtRepository->findGroupedByCategoryAndTier(2);
+        $arts = $combatArtRepository->findGroupedByCategoryAndTier(3);
 
         return $this->render('@App/rules/arts_du_combat.html.twig', [
-            'combatArts' => $combatArts,
+            'basics' => $basics,
+            'specialist' => $specialist,
+            'arts' => $arts,
         ]);
     }
 
@@ -124,7 +133,7 @@ class RulesController extends AbstractController
     {
         $categories = $itemCategoryRepository->findAll();
 
-        return $this->render('@App/rules/objetsbdd.html.twig', [
+        return $this->render('@App/rules/objets.html.twig', [
             'categories' => $categories,
         ]);
     }

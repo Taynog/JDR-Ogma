@@ -16,7 +16,7 @@ class CombatArt
 	#[ORM\Column(type: 'integer')]
 	private $id;
 
-	#[ORM\Column(length: 255, unique: true)]
+	#[ORM\Column(length: 255)]
     private ?string $name = null;
 
     #[ORM\Column(type: Types::TEXT)]
@@ -31,11 +31,26 @@ class CombatArt
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $cost = null;
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $critique = null;
+
     #[ORM\Column(type: Types::TEXT)]
     private ?string $assaillantTest = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $defenderTest = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $category = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $tier = null;
+
+    #[ORM\Column(type: 'integer')]
+    private int $orderIndex = 0;
+
+    #[ORM\Column(type: 'integer')]
+    private int $section = 1;
 
     #[ORM\ManyToMany(targetEntity: WeaponCategory::class)]
     #[ORM\JoinTable(name: 'combat_art_weapon_category')]
@@ -114,6 +129,18 @@ class CombatArt
         return $this;
     }
 
+    public function getCritique(): ?string
+    {
+        return $this->critique;
+    }
+
+    public function setCritique(?string $critique): static
+    {
+        $this->critique = $critique;
+
+        return $this;
+    }
+
     public function getAssaillantTest(): ?string
     {
         return $this->assaillantTest;
@@ -158,6 +185,54 @@ class CombatArt
     public function removeWeaponCategory(WeaponCategory $weaponCategory): static
     {
         $this->weaponCategories->removeElement($weaponCategory);
+
+        return $this;
+    }
+
+    public function getCategory(): ?string
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?string $category): static
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    public function getTier(): ?string
+    {
+        return $this->tier;
+    }
+
+    public function setTier(?string $tier): static
+    {
+        $this->tier = $tier;
+
+        return $this;
+    }
+
+    public function getOrderIndex(): int
+    {
+        return $this->orderIndex;
+    }
+
+    public function setOrderIndex(int $orderIndex): static
+    {
+        $this->orderIndex = $orderIndex;
+
+        return $this;
+    }
+
+    public function getSection(): int
+    {
+        return $this->section;
+    }
+
+    public function setSection(int $section): static
+    {
+        $this->section = $section;
 
         return $this;
     }

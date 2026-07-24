@@ -3,6 +3,7 @@
 namespace App\Twig;
 
 use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 use Twig\TwigFunction;
 
 class AppExtension extends AbstractExtension
@@ -13,6 +14,13 @@ class AppExtension extends AbstractExtension
     private const DIST_SCALE = ['10 mètres', '100 mètres', '1 km', '10 km', '100 km', '1 000 km', '10 000 km', '100 000 km', '1 000 000 km'];
     private const DICE_SCALE = ['d2', 'd4', 'd6', 'd8', 'd10', 'd12', 'd12+1', 'd12+2', 'd12+3', 'd12+4', 'd12+5'];
     private const GABARIT_SCALE = ['I', 'Min', 'TP', 'P', 'M', 'G', 'TG', 'Gig', 'Col'];
+
+    public function getFilters(): array
+    {
+        return [
+            new TwigFilter('slug', [$this, 'slugify']),
+        ];
+    }
 
     public function getFunctions(): array
     {
@@ -145,5 +153,16 @@ class AppExtension extends AbstractExtension
         }
 
         return $res;
+    }
+
+    public function slugify(string $text): string
+    {
+        $text = preg_replace('/\(.+\)/', '', $text);
+        $text = preg_replace('/[^\p{L}\p{N}]+/u', '_', $text);
+        $text = trim($text, '_');
+        $text = mb_strtolower($text, 'UTF-8');
+        $text = preg_replace('/_+/', '', $text);
+
+        return $text;
     }
 }

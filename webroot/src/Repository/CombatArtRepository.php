@@ -21,28 +21,53 @@ class CombatArtRepository extends ServiceEntityRepository
         parent::__construct($registry, CombatArt::class);
     }
 
-//    /**
-//     * @return CombatArt[] Returns an array of CombatArt objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('c')
-//            ->andWhere('c.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('c.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    /**
+     * @return CombatArt[]
+     */
+    public function findBySection(int $section): array
+    {
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.section = :section')
+            ->setParameter('section', $section)
+            ->orderBy('c.orderIndex', 'ASC')
+            ->getQuery()
+            ->getResult();
+    }
 
-//    public function findOneBySomeField($value): ?CombatArt
-//    {
-//        return $this->createQueryBuilder('c')
-//            ->andWhere('c.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+    /**
+     * Arts grouped by category, then by tier.
+     *
+     * @return array<string, array<string, CombatArt[]>>
+     */
+    public function findGroupedByCategoryAndTier(int $section): array
+    {
+        $arts = $this->findBySection($section);
+        $grouped = [];
+
+        foreach ($arts as $art) {
+            $category = $art->getCategory() ?? '';
+            $tier = $art->getTier() ?? '';
+            $grouped[$category][$tier][] = $art;
+        }
+
+        return $grouped;
+    }
+
+    /**
+     * Arts grouped by category for the "Arts du combat" section.
+     *
+     * @return array<string, CombatArt[]>
+     */
+    public function findGroupedByCategory(int $section): array
+    {
+        $arts = $this->findBySection($section);
+        $grouped = [];
+
+        foreach ($arts as $art) {
+            $category = $art->getCategory() ?? '';
+            $grouped[$category][] = $art;
+        }
+
+        return $grouped;
+    }
 }
