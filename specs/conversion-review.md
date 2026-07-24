@@ -1,7 +1,7 @@
 # Compte rendu — Conversion PHP brut → Symfony 6.4
 
 Date : 2025-07-16
-Dernière mise à jour : 2026-07-23
+Dernière mise à jour : 2026-07-24
 
 ---
 
@@ -96,3 +96,6 @@ Tous les problèmes de cette section ont été corrigés le 2026-07-20.
 11. **Générer les migrations Doctrine** — À faire : `doctrine:migrations:diff` puis `doctrine:migrations:migrate`.
 12. **Peupler les tables vides** — `sort`, `item`/`item_category`, `armor` à remplir via Sonata Admin.
 13. **Créer l'entité Bouclier** — Placeholder existant dans `armures.html.twig`.
+14. ~~**Nettoyage des repositories**~~ — Boilerplate commentée supprimée dans 15 repositories (2026-07-23).
+15. ~~**Nettoyage du code mort**~~ — `User.php`, `login.html.twig`, `RegistrationController` nettoyés (2026-07-23).
+16. ~~**Correction i18n RegistrationController**~~ — Flash message + email subject traduits en français (2026-07-23).

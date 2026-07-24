@@ -1,6 +1,6 @@
 # Plan de conversion — PHP brut → Symfony 6.4
 
-Date : 2026-07-23
+Date : 2026-07-24
 
 ---
 
@@ -271,11 +271,13 @@ webroot/
 11. **Armures** ⏳ — Template converti, table `armor` vide — nécessite import de données
 12. **Tables vides** ⏳ — `sort`, `item`/`item_category`, `armor` vides — peuplement via Sonata Admin après `doctrine:migrations:migrate`
 
-### Phase 4 — Nettoyage (priorité basse) — EN COURS
+### Phase 4 — Nettoyage (priorité basse) — ✅ COMPLÉTÉE
 
 10. **Nettoyage de `armures.html.twig`** ✅
-11. **Vérification globale** ⏳ — Nécessite un serveur en fonctionnement
-12. **Mise à jour du `conversion-review.md`** ✅
+11. **Nettoyage des repositories** ✅ — Boilerplate commentée supprimée dans 15 repositories
+12. **Nettoyage du code mort** ✅ — `User.php`, `login.html.twig`, `RegistrationController`
+13. **Correction i18n RegistrationController** ✅ — Flash message traduit en français + email subject traduit
+14. **Mise à jour du `conversion-review.md`** ✅
 
 ---
 
@@ -319,8 +321,34 @@ webroot/
 - `migrations/Version20260723120000.php` — Ajoute colonnes `category`, `tier`, `critique`, `order_index`, `section` à `combat_art`
 - `migrations/Version20260723120100.php` — Peuple les données (51 entrées avec section/category/tier/critique)
 
+### Repositories (nettoyés)
+- `src/Repository/ArmorRepository.php` — Boilerplate supprimée
+- `src/Repository/ChangelogRepository.php` — Boilerplate supprimée
+- `src/Repository/DamageTypeRepository.php` — Boilerplate supprimée
+- `src/Repository/GlossaryConditionRepository.php` — Boilerplate supprimée
+- `src/Repository/GlossaryTraitRepository.php` — Boilerplate supprimée
+- `src/Repository/ItemCategoryRepository.php` — Boilerplate supprimée
+- `src/Repository/ItemRepository.php` — Boilerplate supprimée
+- `src/Repository/MaterialRepository.php` — Boilerplate supprimée
+- `src/Repository/SkillRepository.php` — Boilerplate supprimée
+- `src/Repository/StanceRepository.php` — Boilerplate supprimée
+- `src/Repository/UserRepository.php` — Boilerplate supprimée
+- `src/Repository/WebContentRepository.php` — Boilerplate supprimée
+- `src/Repository/WeaponCategoryRepository.php` — Boilerplate supprimée
+- `src/Repository/WeaponPropertyDetailsRepository.php` — Boilerplate supprimée
+- `src/Repository/WeaponPropertyRepository.php` — Boilerplate supprimée
+
+### Controllers (nettoyés)
+- `src/Controller/RegistrationController.php` — Flash message + email subject traduits en français, commentaires scaffold supprimés
+
+### Entities (nettoyées)
+- `src/Entity/User.php` — Code mort supprimé dans `eraseCredentials()`
+
+### Templates (nettoyés)
+- `templates/security/login.html.twig` — Bloc remember-me commenté supprimé
+
 ### Traductions
-- `translations/messages.fr.yaml` — 20 clés ajoutées sous `combat_art.*` (titres, colonnes, descriptions)
+- `translations/messages.fr.yaml` — Clé `registration.email_verified` ajoutée
 
 ### Documentation
 - `specs/conversion-review.md` — Mis à jour

@@ -82,3 +82,7 @@ combat_art:
     critique: Critique
     skill: Compétence
     tier: Palier
+
+#Registration
+registration:
+  email_verified: "Votre adresse e-mail a été vérifiée."
