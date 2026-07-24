@@ -289,7 +289,7 @@ webroot/
 | Phase 2 — Conversion PHP → Twig | ~1-2h | ✅ Complétée |
 | Phase 3 — Dynamisation BDD | ~2-3h | ✅ Complétée (code) |
 | Phase 4 — Nettoyage | ~30 min | ✅ Complétée |
-| **Reste** | | Peupler tables vides (sort, armor, item) + migrations Doctrine |
+| **Reste** | | Peupler tables vides (sort, armor, item) via Sonata Admin |
 
 ---
 
@@ -317,9 +317,10 @@ webroot/
 - `src/Repository/CombatArtRepository.php` — Avec méthodes `findBySection()`, `findGroupedByCategoryAndTier()`
 - `src/Twig/AppExtension.php` — Fonctions `calc_dc()`, `calc_mag()`, `nb_cercles()`, filtre `slug()`
 
-### Migrations
-- `migrations/Version20260723120000.php` — Ajoute colonnes `category`, `tier`, `critique`, `order_index`, `section` à `combat_art`
-- `migrations/Version20260723120100.php` — Peuple les données (51 entrées avec section/category/tier/critique)
+### Migrations (corrigées pour PostgreSQL)
+- `migrations/Version20260723120000.php` — Ajoute colonnes `category`, `tier`, `critique`, `order_index`, `section` à `combat_art` + séquence ID
+- `migrations/Version20260723120100.php` — Insère 14 nouvelles entrées (doublons d'armes pour weapon skills)
+- `migrations/Version20260724000000.php` — Insère les 37 entrées originales du dump MySQL avec section/category/tier/critique
 
 ### Repositories (nettoyés)
 - `src/Repository/ArmorRepository.php` — Boilerplate supprimée

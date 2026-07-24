@@ -72,8 +72,7 @@ Tous les problèmes de cette section ont été corrigés le 2026-07-20.
 
 | Priorité | Tâche | Fichier(s) |
 |---|---|---|
-| Haute | Générer les migrations Doctrine (`doctrine:migrations:diff`) | `migrations/` |
-| Haute | Peupler la table `sort` via Sonata Admin | BDD |
+| Haute | Peupler les tables `sort` via Sonata Admin | BDD |
 | Haute | Peupler les tables `item`/`item_category` via Sonata Admin | BDD |
 | Haute | Peupler la table `armor` via Sonata Admin | BDD |
 | Moyenne | Créer l'entité `Bouclier` (shields) | `src/Entity/` |
@@ -93,7 +92,7 @@ Tous les problèmes de cette section ont été corrigés le 2026-07-20.
 8. ~~**Créer l'entité Sort**~~ — Fait (2026-07-23). Entity + Repository + Twig extension + recherche fonctionnelle.
 9. ~~**Dynamiser le glossaire**~~ — Fait (2026-07-23). Boucles Twig + ancres slug.
 10. ~~**Dynamiser les arts du combat**~~ — Fait (2026-07-23). Entity enrichie, 51 entrées, 3 sections dynamiques.
-11. **Générer les migrations Doctrine** — À faire : `doctrine:migrations:diff` puis `doctrine:migrations:migrate`.
+11. ~~**Générer les migrations Doctrine**~~ — Fait (2026-07-24). 3 migrations appliquées sur PostgreSQL, corrigées pour syntaxe PG (LONGTEXT→TEXT, DROP INDEX→DROP INDEX IF EXISTS, séquence ID).
 12. **Peupler les tables vides** — `sort`, `item`/`item_category`, `armor` à remplir via Sonata Admin.
 13. **Créer l'entité Bouclier** — Placeholder existant dans `armures.html.twig`.
 14. ~~**Nettoyage des repositories**~~ — Boilerplate commentée supprimée dans 15 repositories (2026-07-23).
