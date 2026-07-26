@@ -134,7 +134,7 @@ class RulesController extends AbstractController
         $categories = $itemCategoryRepository->findAll();
 
         return $this->render('@App/rules/objets.html.twig', [
-            'categories' => $categories,
+            'itemCategories' => $categories,
         ]);
     }
 

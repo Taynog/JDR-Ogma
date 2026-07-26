@@ -72,9 +72,6 @@ Tous les problèmes de cette section ont été corrigés le 2026-07-20.
 
 | Priorité | Tâche | Fichier(s) |
 |---|---|---|
-| Haute | Peupler les tables `sort` via Sonata Admin | BDD |
-| Haute | Peupler les tables `item`/`item_category` via Sonata Admin | BDD |
-| Haute | Peupler la table `armor` via Sonata Admin | BDD |
 | Moyenne | Créer l'entité `Bouclier` (shields) | `src/Entity/` |
 | Basse | Vérification globale avec serveur en fonctionnement | — |
 
@@ -93,7 +90,7 @@ Tous les problèmes de cette section ont été corrigés le 2026-07-20.
 9. ~~**Dynamiser le glossaire**~~ — Fait (2026-07-23). Boucles Twig + ancres slug.
 10. ~~**Dynamiser les arts du combat**~~ — Fait (2026-07-23). Entity enrichie, 51 entrées, 3 sections dynamiques.
 11. ~~**Générer les migrations Doctrine**~~ — Fait (2026-07-24). 3 migrations appliquées sur PostgreSQL, corrigées pour syntaxe PG (LONGTEXT→TEXT, DROP INDEX→DROP INDEX IF EXISTS, séquence ID).
-12. **Peupler les tables vides** — `sort`, `item`/`item_category`, `armor` à remplir via Sonata Admin.
+12. ~~**Peupler les tables vides**~~ — `item`/`item_category` (59 objets, 13 catégories), `armor` (15 armures) et `sort` (59 sorts) peuplés via migrations (2026-07-24).
 13. **Créer l'entité Bouclier** — Placeholder existant dans `armures.html.twig`.
 14. ~~**Nettoyage des repositories**~~ — Boilerplate commentée supprimée dans 15 repositories (2026-07-23).
 15. ~~**Nettoyage du code mort**~~ — `User.php`, `login.html.twig`, `RegistrationController` nettoyés (2026-07-23).

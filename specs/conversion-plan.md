@@ -143,8 +143,8 @@ webroot/
 | Table BDD | Entity | Nb lignes | Utilisation actuelle | Potentiel |
 |---|---|---|---|---|
 | `combat_art` | `CombatArt` | 51 (37+14) | ✅ Dynamisé — 3 sections (basics/specialist/arts) avec rowspan Twig | OK |
-| `item` + `item_category` | `Item`, `ItemCategory` | Vides | ✅ Injecté dans `objets` et `objetsbdd` routes | Peupler via Sonata |
-| `sort` | `Sort` | Vides | ✅ Injecté dans `magie` et `recherche` routes | Peupler via Sonata |
+| `item` + `item_category` | `Item`, `ItemCategory` | ✅ 59 items, 13 catégories | ✅ Injecté dans `objets` et `objetsbdd` routes | OK |
+| `sort` | `Sort` | ✅ 59 sorts | ✅ Injecté dans `magie` et `recherche` routes | OK |
 | `glossary_condition` | `GlossaryCondition` | 21 | ✅ Dynamisé — boucle Twig dans `glossaire.html.twig` | OK |
 | `glossary_trait` | `GlossaryTrait` | 27 | ✅ Dynamisé — boucle Twig dans `glossaire.html.twig` | OK |
 | `weapon_property` | `WeaponProperty` | 25 | ✅ Utilisé via `includes/printWeaponProperties.html.twig` | OK |
@@ -165,16 +165,16 @@ webroot/
 
 | Table | Entity Doctrine | Admin Sonata | Données |
 |---|---|---|---|
-| `armor` | `Armor` | ✅ | ❌ Vide |
-| `armor_material` | (ManyToMany `Armor` ↔ `Material`) | — | ❌ Vide |
+| `armor` | `Armor` | ✅ | ✅ 15 armures (5×3 catégories) |
+| `armor_material` | (ManyToMany `Armor` ↔ `Material`) | — | ✅ 15 liens (1:1 avec armor) |
 | `changelog` | `Changelog` | ✅ | ❌ Vide |
 | `combat_art` | `CombatArt` | ✅ | ✅ 51 lignes (37 originales + 14 ajoutées) |
 | `damage_type` | `DamageType` | ✅ | ❌ Vide |
 | `glossary_condition` | `GlossaryCondition` | ✅ | ✅ 21 lignes |
 | `glossary_trait` | `GlossaryTrait` | ✅ | ✅ 27 lignes |
-| `item` | `Item` | ✅ | ❌ Vide |
-| `item_category` | `ItemCategory` | ✅ | ❌ Vide |
-| `material` | `Material` | ✅ | ❌ Vide |
+| `item` | `Item` | ✅ | ✅ 59 lignes |
+| `item_category` | `ItemCategory` | ✅ | ✅ 13 lignes |
+| `material` | `Material` | ✅ | ✅ 15 lignes |
 | `skill` | `Skill` | ✅ | ❌ Vide |
 | `stance` | `Stance` | ✅ | ❌ Vide |
 | `user` | `User` | ❌ (auth) | À vérifier |
@@ -236,18 +236,6 @@ webroot/
 - Template réécrit : 145 lignes (↓ de 688) avec boucles Twig + rowspans dynamiques
 - Toutes les textes utilisent `{{ 'key'|trans }}` (20 clés dans `messages.fr.yaml`)
 
-### 5.4 Dynamisation des objets BDD
-
-**Problème** : `objetsbdd.html.twig` contient des données statiques (listes d'objets par catégorie). Les tables `item` et `item_category` existent en BDD mais sont vides.
-
-**Options** :
-- **A) Peupler la BDD et rendre dynamique** : Remplir `item` et `item_category` via Sonata, puis injecter les données.
-- **B) Rester statique** : Garder le contenu en dur dans le template.
-
-**Recommandation** : Option A. Les objets sont appelés à évoluer. Peupler la BDD via Sonata puis rendre dynamique.
-
----
-
 ## 6. Plan d'action
 
 ### Phase 1 — Routes manquantes et navigation (priorité haute) — ✅ COMPLÉTÉE
@@ -268,8 +256,8 @@ webroot/
 8. **Arts du combat dynamisés** ✅ — `CombatArt` enrichi (5 fields), 51 entrées, 3 sections avec rowspan Twig, 2 migrations
 9. **Objets dynamiques** ✅ — `ItemCategoryRepository::findAll()` injecté dans les deux routes
 10. **Sorts dynamisés** ✅ — `Sort` entity + `SortRepository` + Twig extension + macro `printSort()`
-11. **Armures** ⏳ — Template converti, table `armor` vide — nécessite import de données
-12. **Tables vides** ⏳ — `sort`, `item`/`item_category`, `armor` vides — peuplement via Sonata Admin après `doctrine:migrations:migrate`
+11. **Armures** ✅ — Template converti, table `armor` peuplée (15 armures), `material` peuplé (15 matériaux), `armor_material` peuplé (15 liens)
+12. **Tables peuplées** ✅ — `sort` (59), `item`/`item_category` (59/13), `armor` (15), `material` (15), `armor_material` (15) — peuplés via migrations
 
 ### Phase 4 — Nettoyage (priorité basse) — ✅ COMPLÉTÉE
 
@@ -289,7 +277,7 @@ webroot/
 | Phase 2 — Conversion PHP → Twig | ~1-2h | ✅ Complétée |
 | Phase 3 — Dynamisation BDD | ~2-3h | ✅ Complétée (code) |
 | Phase 4 — Nettoyage | ~30 min | ✅ Complétée |
-| **Reste** | | Peupler tables vides (sort, armor, item) via Sonata Admin |
+| **Reste** | | Bouclier entity, vérification serveur, matériaux (bonus/passifs)|
 
 ---
 

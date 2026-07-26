@@ -16,7 +16,7 @@ class Armor
 	#[ORM\Column(type: 'integer')]
 	private $id;
 
-	#[ORM\Column(length: 255, unique: true)]
+	#[ORM\Column(length: 255)]
     private ?string $category = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
