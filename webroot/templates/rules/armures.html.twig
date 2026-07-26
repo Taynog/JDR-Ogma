@@ -52,13 +52,18 @@
                 {% endif %}
             {% endfor %}
             {% for cat in categories %}
-                <p id="table_armures_{{ cat|lower }}" class="caption">Armures {{ cat }}s</p>
+                {% if cat ends with 'e' %}
+                    <p id="table_armures_{{ cat|lower }}" class="caption">Armures {{ cat }}s</p>
+                {% else %}
+                    <p id="table_armures_{{ cat|lower }}" class="caption">Armures {{ cat }}</p>
+                {% endif %}
                 <table>
                     <tbody>
                     <tr>
                         <th>Matériau</th>
                         <th>PR</th>
                         <th>PR Magique</th>
+                        <th>ENC</th>
                         <th>Prix</th>
                     </tr>
                     {% for armor in armors %}
@@ -71,12 +76,28 @@
                                 </td>
                                 <td>{{ armor.protection }}</td>
                                 <td>{{ armor.protectionMagical }}</td>
-                                <td>{{ armor.price }} pa</td>
+                                <td>{{ armor.enc }}</td>
+                                <td>{{ armor.price }}</td>
                             </tr>
                         {% endif %}
                     {% endfor %}
                     </tbody>
                 </table>
+                {% for armor in armors %}
+                    {% if armor.category == cat and (armor.speedPenalty or armor.movementCheckDisadvantage) %}
+                        <p>
+                            {% for material in armor.materials %}
+                                {{ material }}{% if not loop.last %}, {% endif %}
+                            {% endfor %} :
+                            {% if armor.speedPenalty %}
+                                <em>Pénalité de vitesse :</em> {{ armor.speedPenalty }}.
+                            {% endif %}
+                            {% if armor.movementCheckDisadvantage %}
+                                <em>Désavantage de mouvement :</em> {{ armor.movementCheckDisadvantage }}.
+                            {% endif %}
+                        </p>
+                    {% endif %}
+                {% endfor %}
             {% endfor %}
         {% else %}
             <p><em>Aucune armure disponible pour le moment.</em></p>

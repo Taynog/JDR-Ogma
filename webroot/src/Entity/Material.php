@@ -60,6 +60,11 @@ class Material
         $this->armorCategory = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        return $this->material ?? '';
+    }
+
     public function getId(): ?int
     {
         return $this->id;
