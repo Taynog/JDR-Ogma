@@ -1,6 +1,13 @@
-<p id="{{ 'table_weapon_melee_' ~ category|lower }}" class="caption">{{ ('weapon.' ~ category|lower ~ '.plural')|trans() }}</p>
-<p id="{{ 'table_weapon_melee_' ~ category|lower ~ '_description' }}">{{ ('weapon.' ~ category|lower ~ '.description')|trans() }}</p>
-<p id="{{ 'table_weapon_melee_' ~ category|lower ~ '_effect' }}">{{ ('weapon.' ~ category|lower ~ '.effect')|trans({ '%var%': category.effect }) }}</p>
+{% set cat = weapons|first %}
+{% if cat %}
+    <p id="{{ 'table_weapon_melee_' ~ category|lower }}" class="caption">{{ cat.category.category }}</p>
+    {% if cat.category.description %}
+        <p id="{{ 'table_weapon_melee_' ~ category|lower ~ '_description' }}">{{ cat.category.description }}</p>
+    {% endif %}
+    {% if cat.category.effect %}
+        <p id="{{ 'table_weapon_melee_' ~ category|lower ~ '_effect' }}">{{ cat.category.effect }}</p>
+    {% endif %}
+{% endif %}
 
 <table>
     <tbody>

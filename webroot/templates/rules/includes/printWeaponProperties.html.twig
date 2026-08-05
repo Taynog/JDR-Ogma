@@ -1,11 +1,11 @@
 {% for property in properties %}
-    property.property
-    {% if property.weaponPropertyDetails.x is not null %}
-        ({{ property.weaponPropertyDetails.x }}
-        {% if property.weaponPropertyDetails.y is not null %}
-            , {{ property.weaponPropertyDetails.y }}
-            {% if property.weaponPropertyDetails.z is not null %}
-                , {{ property.weaponPropertyDetails.z }}
+    {{ property.weaponProperty.property }}
+    {% if property.X is not null %}
+        ({{ property.X }}
+        {% if property.Y is not null %}
+            , {{ property.Y }}
+            {% if property.Z is not null %}
+                , {{ property.Z }}
             {% endif %}
         {% endif %}
         )
