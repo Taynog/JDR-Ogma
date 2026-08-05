@@ -48,27 +48,30 @@ class WeaponFixtures extends Fixture
 
     private function createProperties(ObjectManager $manager): void
     {
-        $propertyNames = [
-            'Dard',
-            'Lancer',
-            'Petite',
-            'Défensive',
-            'Duel',
-            'Impact',
-            'Peu maniable',
-            'Brise-bouclier',
-            'Anti-Large',
-            'Sentinelle',
-            'Montée',
-            'Perce-armure',
-            'Rechargement',
-            'Chargeur',
-            'Zone',
+        $propertiesData = [
+            ['Dard', "Cette arme est capable de trouver des failles dans l'armure de sa cible.", "Les jets d'attaque avec un DR supérieur ou égal à 4 ignore l'armure de la cible.", ''],
+            ['Lancer', 'Cette arme est suffisamment équilibrée pour être lancée.', " L'arme possède un cran de portée équivalent à X. Un lancer d'arme est traité comme une attaque à distance normale (mais la Force peut être utilisée pour le test de Style de Combat). Le dé de dégâts de l'arme augmente d'un <a href='Systeme.php#cran_des'>cran</a> si elle est lancée", ''],
+            ['Petite', 'Relativement petite, facilement dissimulable, une arme de choix pour un roublard digne de ce nom', "L'arme ne peut être utilisée pour parer les coups des armes maniées à deux mains. \nL'utilisateur peut passer un test de Roublardise opposé à l'Observation de l'adversaire pour dissimuler l'arme. \nCette arme n'est pas affectée par les malus dans les espaces clos. \nAttaquer avec une arme dissimulée procure 3 avantages lors d'une passe d'arme.", ''],
+            ['Défensive', "Étudiée pour protéger son manieur, cette arme facilite les manœuvres défensives", "Lors d'une passe d'arme défensive, l'arme procure un avantage aux jets de Style de Combat.", ''],
+            ['Duel', 'Cette arme est faite pour le duel.', ' Les jets de Style de Combat se font avec un avantage en combat singulier, mais un désavantage en infériorité numérique.', ''],
+            ['Impact', 'Les coups délivrés par cette arme peuvent envoyer valser leur cible', "La cible est déplacée d'un mètre par tranche de 3 dégâts, déplacement forcé, directions possibles : gauche droite, arrière", ''],
+            ['Peu maniable', null, null, null],
+            ['Brise-bouclier', 'Cette arme est très efficace contre les boucliers.', "Les boucliers bloquant une attaque d'une arme possédant cette propriété voient leur RB divisée par 2 lors du blocage.", ''],
+            ['Anti-Large', 'Cette arme est faite pour affronter des ennemis plus larges que soi.', "Les jets d'attaques pour toucher les cibles d'un gabarit supérieur à celui de l'utilisateur se font avec 1 avantage.", ''],
+            ['Sentinelle', "L'arme est doté d'un pouvoir d'arrêt impressionnant", "La cible d'une frappe voit sa vitese réduite d'un montant équivalent à la moitié des dégâts jusqu'au début du prochain tour de l'assaillant.", ''],
+            ['Montée', "Sur le dos d'une monture, cette arme s'avère remarquable", "Cette arme n'est utilisable que depuis une monture pour des raisons de poids et de maniabilité.\nL'attaque se fait lors d'une charge.", ''],
+            ['Perce-armure', null, null, null],
+            ['Rechargement', "Cette arme doit être rechargée avant d'être utilisée", "L'arme nécessite X action Interagir avant de pouvoir tirer à nouveau.", ''],
+            ['Chargeur', "Disposant d'un mécanisme avancé de chargement des munitions, cette arme peut tirer plusieurs fois sans être rechargée et il suffit de remplacer le chargeur pour que l'arme soit de nouveau complétement opérationnelle", "L'arme peut tirer X fois sans être rechargée.<br/>Remplacer le chargeur coute Y action(s) Interagir, il n'est pas nécessaire qu'elles soient consécutives.<br>Si l'arme possède le trait Rechargement(Z), il est nécessaire d'effectuer Z action(s) Interagir après un tir avant de pouvoir tirer à nouveau.", ''],
+            ['Zone', null, null, null],
         ];
 
-        foreach ($propertyNames as $name) {
+        foreach ($propertiesData as [$name, $description, $effect, $example]) {
             $property = new WeaponProperty();
             $property->setProperty($name);
+            $property->setDescription($description);
+            $property->setEffect($effect);
+            $property->setExample($example);
             $manager->persist($property);
             $this->properties[$name] = $property;
         }
