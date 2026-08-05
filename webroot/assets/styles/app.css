@@ -188,111 +188,252 @@ a:hover {
     list-style: circle inside;
 }
 
-/* The sidebar menu */
+/* ---------- Sidebar (navBar) ---------- */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 200px;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: burlywood;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 10px; /* Place content Xpx from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu  */
-.sidenav a:hover {
-    color: rebeccapurple !important;
-}
-
-.sidenav_expand{
-    padding-left: 0;
-    font-weight: bolder;
-}
-
-span.index a{
-    text-decoration: none;
-    font-size: 28px;
-    font-weight: bolder;
-    color: white;
-    display: block;
-}
-
-span.partie{
-    text-decoration: none;
-    font-size: 27px;
-    font-weight: bolder;
-    display: block;
-}
-
-span.dossier {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-}
-
-span.sous-dossier {
-    text-decoration: none;
-    font-size: 17px;
-}
-
-span.sous-dossier a{
-    color: black;
-}
-
-
-span.little a{
-    text-decoration: none;
-    font-size: 15px;
-    color: white;
-    display: block;
-}
-
-span.medium a{
-    text-decoration: none;
-    font-size: 17px;
-    color: white;
-    display: block;
-}
-
-span.nav_ajout a{
-    margin: 3px;
-    text-decoration: none;
-    font-size: 18px;
-    color: darkred;
-    display: block;
-}
-
-ul.sidenav{
-    list-style-type: none;
-    margin: 0;
-    padding: 0 0 0 5px;
-}
-
-ul.sidenav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 3px 0 3px 10px;
-}
-
-
-
-/* Style page content */
-.main {
-    padding: 0 5px;
-}
-
-
-.openbtn {
-    float: right;
     position: fixed;
-    top: 25px;
-    right: 25px;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    height: 100%;
+    width: 220px;
+    background: linear-gradient(180deg, #efdcbb 0%, #e6cda2 100%);
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 12px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+body.nav-open .sidenav {
+    transform: translateX(0);
+}
+
+.sidenav__list,
+.sidenav__sub {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav__sub {
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 1px dashed rgba(0, 0, 0, 0.15);
+    animation: nav-fade 0.18s ease-out;
+}
+
+.sidenav__sub.hidden {
+    display: none;
+}
+
+@keyframes nav-fade {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sidenav__link {
+    display: block;
+    padding: 6px 12px;
+    font-size: 15px;
+    color: #3d2f1f;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidenav__link:hover {
+    background: rgba(255, 255, 255, 0.45);
+    color: rebeccapurple;
+}
+
+.sidenav__link.is-active {
+    background: rebeccapurple;
+    color: #fff;
+    font-weight: 600;
+}
+
+.sidenav__link--home {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+/* Toggles (folders) */
+.sidenav__toggle,
+.sidenav__caret {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidenav__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #3d2f1f;
+    border-radius: 4px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidenav__toggle:hover {
+    background: rgba(255, 255, 255, 0.45);
+    color: rebeccapurple;
+}
+
+.sidenav__toggle::after {
+    content: '\25B8';
+    font-size: 13px;
+    line-height: 1;
+    color: #8a6d3b;
+    transition: transform 0.2s ease;
+}
+
+.sidenav__toggle[aria-expanded='true']::after {
+    transform: rotate(90deg);
+}
+
+.sidenav__toggle--root {
+    margin-top: 8px;
+}
+
+/* Split items: link + expand caret */
+.sidenav__item--split {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sidenav__item--split .sidenav__link {
+    flex: 1 1 auto;
+}
+
+.sidenav__item--split .sidenav__sub {
+    flex-basis: 100%;
+}
+
+.sidenav__caret {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    color: #8a6d3b;
+}
+
+.sidenav__caret:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: rebeccapurple;
+}
+
+.sidenav__caret::before {
+    content: '\25B8';
     font-size: 12px;
-    color: black;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.sidenav__caret[aria-expanded='true']::before {
+    transform: rotate(90deg);
+}
+
+/* Contact & Discord links */
+.sidenav__link--contact {
+    margin-top: 6px;
+    font-size: 16px;
+    color: #7d2d1b;
+}
+
+.sidenav__link--discord {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5865F2;
+    font-weight: 600;
+}
+
+.sidenav__link--discord svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.sidenav__link--discord:hover {
+    color: #4752c4;
+}
+
+/* Edge tab hinting the menu's presence */
+.nav-tab {
+    position: fixed;
+    left: 0;
+    top: 12px;
+    z-index: 5;
+    width: 14px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #e6cda2 0%, #d9b87f 100%);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.15);
+    color: #5a4626;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, opacity 0.2s ease;
+}
+
+.nav-tab::after {
+    content: '\203A';
+    font-size: 13px;
+    line-height: 1;
+}
+
+.nav-tab:hover {
+    background: rebeccapurple;
+    color: #fff;
+}
+
+body.nav-open .nav-tab {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Style page content (menu overlays the page, nothing is pushed) */
+#main {
+    padding: 0 5px 0 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .sidenav {
+        width: min(300px, 85vw);
+        box-shadow: 2px 0 16px rgba(0, 0, 0, 0.35);
+    }
+
+    body.nav-open::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 2;
+    }
 }
 
 a>img:hover{

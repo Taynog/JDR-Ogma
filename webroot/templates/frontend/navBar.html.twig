@@ -1,124 +1,317 @@
-<div id="mySidenav" style="display: float">
-    <ul class="sidenav ">
-        <li><span class="index"><a href="{{ path('app_index') }}">Accueil</a></span></li>
-        <li><span class="partie" onclick="hideContent(this)">Lore</span>
-            <ul>
-                <li><span class="medium"><a href="{{ path('app_univers', { page: 'histoire_ogma'}) }}">Histoire du monde</a></span></li>
-                <li><span class="medium"><a href="{{ path('app_univers', { page: 'carte_ogma'}) }}">Carte du monde</a></span></li>
-                <li><span class="medium"><a href="{{ path('app_univers', { page: 'bestiaire'}) }}">Bestiaire</a></span></li>
-                <li><span class="dossier" onclick="hideContent(this)">Origines</span>
-                    <ul class="hidden">
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Humaines</span>
-                            <ul class="hidden">
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'azuma'}) }}">Azuma</a></span></li>
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'sever'}) }}">Sever</a></span></li>
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'tuskizi'}) }}">Tuskizi</a></span></li>
+{% set route = app.request.attributes.get('_route') %}
+
+{% set originesActive = route in ['app_factions'] %}
+
+{% set persoActive = route == 'app_rules_character' %}
+{% set magieActive = route == 'app_rules_magic' %}
+{% set combatActive = route == 'app_rules_combat' %}
+{% set survieActive = route == 'app_rules_survival' %}
+{% set craftActive = route == 'app_rules_crafting' %}
+{% set equipActive = route in ['app_rules_weapons', 'app_rules_armors'] %}
+{% set glossActive = route in ['app_rules_glossary', 'app_rules_gabarit'] %}
+{% set objetsActive = route in ['app_rules_objets_bdd', 'app_rules_items'] %}
+{% set servicesActive = route == 'app_rules_items' %}
+
+<nav id="mySidenav" class="sidenav" aria-label="Navigation principale">
+    <ul class="sidenav__list">
+        <li class="sidenav__item">
+            <a class="sidenav__link sidenav__link--home {{ route == 'app_index' ? 'is-active' : '' }}" href="{{ path('app_index') }}">Accueil</a>
+        </li>
+
+        <li class="sidenav__item">
+            <button type="button"
+                    class="sidenav__toggle sidenav__toggle--root is-expanded"
+                    aria-expanded="true"
+                    data-nav-toggle>Lore</button>
+            <ul class="sidenav__sub">
+                <li class="sidenav__item">
+                    <a class="sidenav__link {{ route == 'app_univers' and app.request.query.get('page') == 'histoire_ogma' ? 'is-active' : '' }}"
+                       href="{{ path('app_univers', { page: 'histoire_ogma'}) }}">Histoire du monde</a>
+                </li>
+                <li class="sidenav__item">
+                    <a class="sidenav__link {{ route == 'app_univers' and app.request.query.get('page') == 'carte_ogma' ? 'is-active' : '' }}"
+                       href="{{ path('app_univers', { page: 'carte_ogma'}) }}">Carte du monde</a>
+                </li>
+                <li class="sidenav__item">
+                    <a class="sidenav__link {{ route == 'app_univers' and app.request.query.get('page') == 'bestiaire' ? 'is-active' : '' }}"
+                       href="{{ path('app_univers', { page: 'bestiaire'}) }}">Bestiaire</a>
+                </li>
+                <li class="sidenav__item">
+                    <button type="button"
+                            class="sidenav__toggle {{ originesActive ? 'is-expanded' : 'is-collapsed' }}"
+                            aria-expanded="{{ originesActive ? 'true' : 'false' }}"
+                            data-nav-toggle>Origines</button>
+                    <ul class="sidenav__sub {{ originesActive ? '' : 'hidden' }}">
+                        <li class="sidenav__item">
+                            <button type="button" class="sidenav__toggle is-collapsed" aria-expanded="false" data-nav-toggle>Humaines</button>
+                            <ul class="sidenav__sub hidden">
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'azuma' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'azuma'}) }}">Azuma</a>
+                                </li>
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'sever' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'sever'}) }}">Sever</a>
+                                </li>
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'tuskizi' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'tuskizi'}) }}">Tuskizi</a>
+                                </li>
                             </ul>
                         </li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Magiques</span>
-                            <ul class="hidden">
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'sakha'}) }}">Sakha</a></span></li>
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'sihir'}) }}">Sihir</a></span></li>
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'steinn'}) }}">Steinn</a></span></li>
+                        <li class="sidenav__item">
+                            <button type="button" class="sidenav__toggle is-collapsed" aria-expanded="false" data-nav-toggle>Magiques</button>
+                            <ul class="sidenav__sub hidden">
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'sakha' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'sakha'}) }}">Sakha</a>
+                                </li>
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'sihir' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'sihir'}) }}">Sihir</a>
+                                </li>
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'steinn' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'steinn'}) }}">Steinn</a>
+                                </li>
                             </ul>
                         </li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Bestiales</span>
-                            <ul class="hidden">
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'chono'}) }}">Chono</a></span></li>
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'kanta'}) }}">Kanta</a></span></li>
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'mushuk'}) }}">Mushuk</a></span></li>
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'sarpa'}) }}">Sarpa</a></span></li>
-                                <li><span class="little"><a href="{{ path('app_factions', {faction: 'tori'}) }}">Tori</a></span></li>
+                        <li class="sidenav__item">
+                            <button type="button" class="sidenav__toggle is-collapsed" aria-expanded="false" data-nav-toggle>Bestiales</button>
+                            <ul class="sidenav__sub hidden">
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'chono' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'chono'}) }}">Chono</a>
+                                </li>
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'kanta' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'kanta'}) }}">Kanta</a>
+                                </li>
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'mushuk' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'mushuk'}) }}">Mushuk</a>
+                                </li>
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'sarpa' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'sarpa'}) }}">Sarpa</a>
+                                </li>
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_factions' and app.request.query.get('faction') == 'tori' ? 'is-active' : '' }}"
+                                       href="{{ path('app_factions', {faction: 'tori'}) }}">Tori</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <li><span class="partie" onclick="hideContent(this)">Jeu de Rôle</span>
-            <ul>
-                <li><span class="medium"><a href="{{ path('app_rules_index') }}">Système de jeu</a></span></li>
-                <li><span class="sous-dossier"><a href="{{ path('app_rules_character') }}">Personnage</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="{{ path('app_rules_character') ~ '#table_origine' }}">Origine</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_character') ~ '#Caracteristiques' }}">Caractéristiques</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_character') ~ '#Attributs' }}">Attributs</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_character') ~ '#Competences' }}">Compétences</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_character') ~ '#traits_perso' }}">Traits de personnage</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_character') ~ '#faveur_tychi' }}">Faveurs de Tychi</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_character') ~ '#richesse_depart' }}">Richesse de départ</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_character') ~ '#progression_perso' }}">Progression</a></span></li>
+
+        <li class="sidenav__item">
+            <button type="button"
+                    class="sidenav__toggle sidenav__toggle--root is-expanded"
+                    aria-expanded="true"
+                    data-nav-toggle>Jeu de Rôle</button>
+            <ul class="sidenav__sub">
+                <li class="sidenav__item">
+                    <a class="sidenav__link {{ route == 'app_rules_index' ? 'is-active' : '' }}"
+                       href="{{ path('app_rules_index') }}">Système de jeu</a>
+                </li>
+
+                <li class="sidenav__item sidenav__item--split">
+                    <a class="sidenav__link {{ persoActive ? 'is-active' : '' }}" href="{{ path('app_rules_character') }}">Personnage</a>
+                    <button type="button"
+                            class="sidenav__caret"
+                            aria-expanded="{{ persoActive ? 'true' : 'false' }}"
+                            aria-label="Déplier le sous-menu Personnage"
+                            data-nav-toggle></button>
+                    <ul class="sidenav__sub {{ persoActive ? '' : 'hidden' }}">
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_character') ~ '#table_origine' }}">Origine</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_character') ~ '#Caracteristiques' }}">Caractéristiques</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_character') ~ '#Attributs' }}">Attributs</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_character') ~ '#Competences' }}">Compétences</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_character') ~ '#traits_perso' }}">Traits de personnage</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_character') ~ '#faveur_tychi' }}">Faveurs de Tychi</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_character') ~ '#richesse_depart' }}">Richesse de départ</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_character') ~ '#progression_perso' }}">Progression</a></li>
                     </ul>
                 </li>
-                <li><span class="sous-dossier"><a href="{{ path('app_rules_magic') }}">Magie</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="{{ path('app_rules_magic') ~ '#table_forme_sort' }}">Forme des sorts</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_magic') ~ '#table_alteration' }}">École d'Altération</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_magic') ~ '#table_conjuration' }}">École de Conjuration</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_magic') ~ '#table_domination' }}">École de Domination</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_magic') ~ '#table_mysticisme' }}">École du Mysticisme</a></span></li>
+
+                <li class="sidenav__item sidenav__item--split">
+                    <a class="sidenav__link {{ magieActive ? 'is-active' : '' }}" href="{{ path('app_rules_magic') }}">Magie</a>
+                    <button type="button"
+                            class="sidenav__caret"
+                            aria-expanded="{{ magieActive ? 'true' : 'false' }}"
+                            aria-label="Déplier le sous-menu Magie"
+                            data-nav-toggle></button>
+                    <ul class="sidenav__sub {{ magieActive ? '' : 'hidden' }}">
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_magic') ~ '#table_forme_sort' }}">Forme des sorts</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_magic') ~ '#table_alteration' }}">École d'Altération</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_magic') ~ '#table_conjuration' }}">École de Conjuration</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_magic') ~ '#table_domination' }}">École de Domination</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_magic') ~ '#table_mysticisme' }}">École du Mysticisme</a></li>
                     </ul>
                 </li>
-                <li><span class="sous-dossier"><a href="{{ path('app_rules_combat') }}">Combat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="{{ path('app_rules_combat') ~ '#deroulement_combat' }}">Déroulement d'un combat</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_combat') ~ '#tour_de_jeu' }}">Tour de Jeu</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_combat') ~ '#reactions' }}">Réactions</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_combat') ~ '#style_combat' }}">Style de Combat</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_combat') ~ '#engagement' }}">Engagement en mêlée</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_combat') ~ '#passe_armes' }}">Passe d'Armes</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_combat') ~ '#combat_cac' }}">Combat en mêlée</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_combat') ~ '#combat_distance' }}">Combat à distance</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_combat') ~ '#blessures_mort' }}">Blessures et mort</a></span></li>
+
+                <li class="sidenav__item sidenav__item--split">
+                    <a class="sidenav__link {{ combatActive ? 'is-active' : '' }}" href="{{ path('app_rules_combat') }}">Combat</a>
+                    <button type="button"
+                            class="sidenav__caret"
+                            aria-expanded="{{ combatActive ? 'true' : 'false' }}"
+                            aria-label="Déplier le sous-menu Combat"
+                            data-nav-toggle></button>
+                    <ul class="sidenav__sub {{ combatActive ? '' : 'hidden' }}">
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_combat') ~ '#deroulement_combat' }}">Déroulement d'un combat</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_combat') ~ '#tour_de_jeu' }}">Tour de Jeu</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_combat') ~ '#reactions' }}">Réactions</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_combat') ~ '#style_combat' }}">Style de Combat</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_combat') ~ '#engagement' }}">Engagement en mêlée</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_combat') ~ '#passe_armes' }}">Passe d'Armes</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_combat') ~ '#combat_cac' }}">Combat en mêlée</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_combat') ~ '#combat_distance' }}">Combat à distance</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_combat') ~ '#blessures_mort' }}">Blessures et mort</a></li>
                     </ul>
                 </li>
-                <li><span class="medium"><a href="{{ path('app_rules_types_actions') }}">Types d'actions</a></span></li>
-                <li><span class="medium"><a href="{{ path('app_rules_arts_combat') }}">Arts du combat</a></span></li>
-                <li><span class="sous-dossier"><a href="{{ path('app_rules_survival') }}">Survie</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="{{ path('app_rules_survival') ~ '#besoins_journaliers' }}">Besoins journaliers</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_survival') ~ '#voyage' }}">Voyage</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_survival') ~ '#eclairage' }}">Éclairage</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_survival') ~ '#biomes' }}">Biomes</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_survival') ~ '#dangers_naturels' }}">Dangers naturels</a></span></li>
+
+                <li class="sidenav__item">
+                    <a class="sidenav__link {{ route == 'app_rules_types_actions' ? 'is-active' : '' }}"
+                       href="{{ path('app_rules_types_actions') }}">Types d'actions</a>
+                </li>
+
+                <li class="sidenav__item">
+                    <a class="sidenav__link {{ route == 'app_rules_arts_combat' ? 'is-active' : '' }}"
+                       href="{{ path('app_rules_arts_combat') }}">Arts du combat</a>
+                </li>
+
+                <li class="sidenav__item sidenav__item--split">
+                    <a class="sidenav__link {{ survieActive ? 'is-active' : '' }}" href="{{ path('app_rules_survival') }}">Survie</a>
+                    <button type="button"
+                            class="sidenav__caret"
+                            aria-expanded="{{ survieActive ? 'true' : 'false' }}"
+                            aria-label="Déplier le sous-menu Survie"
+                            data-nav-toggle></button>
+                    <ul class="sidenav__sub {{ survieActive ? '' : 'hidden' }}">
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_survival') ~ '#besoins_journaliers' }}">Besoins journaliers</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_survival') ~ '#voyage' }}">Voyage</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_survival') ~ '#eclairage' }}">Éclairage</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_survival') ~ '#biomes' }}">Biomes</a></li>
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_survival') ~ '#dangers_naturels' }}">Dangers naturels</a></li>
                     </ul>
                 </li>
-                <li><span class="sous-dossier"><a href="{{ path('app_rules_crafting') }}">Artisanat</a></span> <span class="sidenav_expand" onclick="hideContent(this)">+</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="{{ path('app_rules_crafting') ~ '#alchimie' }}">Alchimie</a></span></li>
+
+                <li class="sidenav__item sidenav__item--split">
+                    <a class="sidenav__link {{ craftActive ? 'is-active' : '' }}" href="{{ path('app_rules_crafting') }}">Artisanat</a>
+                    <button type="button"
+                            class="sidenav__caret"
+                            aria-expanded="{{ craftActive ? 'true' : 'false' }}"
+                            aria-label="Déplier le sous-menu Artisanat"
+                            data-nav-toggle></button>
+                    <ul class="sidenav__sub {{ craftActive ? '' : 'hidden' }}">
+                        <li class="sidenav__item"><a class="sidenav__link" href="{{ path('app_rules_crafting') ~ '#alchimie' }}">Alchimie</a></li>
                     </ul>
                 </li>
-                <li><span class="sous-dossier" onclick="hideContent(this)">Équipement</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="{{ path('app_rules_weapons') }}">Armes</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_armors') }}">Armures</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_armors') ~ '#boucliers' }}">Boucliers</a></span></li>
+
+                <li class="sidenav__item">
+                    <button type="button"
+                            class="sidenav__toggle {{ equipActive ? 'is-expanded' : 'is-collapsed' }}"
+                            aria-expanded="{{ equipActive ? 'true' : 'false' }}"
+                            data-nav-toggle>Équipement</button>
+                    <ul class="sidenav__sub {{ equipActive ? '' : 'hidden' }}">
+                        <li class="sidenav__item">
+                            <a class="sidenav__link {{ route == 'app_rules_weapons' ? 'is-active' : '' }}"
+                               href="{{ path('app_rules_weapons') }}">Armes</a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a class="sidenav__link {{ route == 'app_rules_armors' ? 'is-active' : '' }}"
+                               href="{{ path('app_rules_armors') }}">Armures</a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a class="sidenav__link {{ route == 'app_rules_armors' ? 'is-active' : '' }}"
+                               href="{{ path('app_rules_armors') ~ '#boucliers' }}">Boucliers</a>
+                        </li>
                     </ul>
                 </li>
-                <li><span class="dossier" onclick="hideContent(this)">Glossaire</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="{{ path('app_rules_glossary') }}">États</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_glossary') ~ '#traits' }}">Traits</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_gabarit') }}">Gabarit des créatures</a></span></li>
+
+                <li class="sidenav__item">
+                    <button type="button"
+                            class="sidenav__toggle {{ glossActive ? 'is-expanded' : 'is-collapsed' }}"
+                            aria-expanded="{{ glossActive ? 'true' : 'false' }}"
+                            data-nav-toggle>Glossaire</button>
+                    <ul class="sidenav__sub {{ glossActive ? '' : 'hidden' }}">
+                        <li class="sidenav__item">
+                            <a class="sidenav__link {{ route == 'app_rules_glossary' ? 'is-active' : '' }}"
+                               href="{{ path('app_rules_glossary') }}">États</a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a class="sidenav__link {{ route == 'app_rules_glossary' ? 'is-active' : '' }}"
+                               href="{{ path('app_rules_glossary') ~ '#traits' }}">Traits</a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a class="sidenav__link {{ route == 'app_rules_gabarit' ? 'is-active' : '' }}"
+                               href="{{ path('app_rules_gabarit') }}">Gabarit des créatures</a>
+                        </li>
                     </ul>
                 </li>
-                <li><span class="dossier" onclick="hideContent(this)">Objets et Services</span>
-                    <ul class="hidden">
-                        <li><span class="little"><a href="{{ path('app_rules_objets_bdd') }}">Objets</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_items') }}">Monnaie et conversions</a></span></li>
-                        <li><span class="little"><a href="{{ path('app_rules_items') ~ '#materiel_aventurier' }}">Matériel</a></span></li>
-                        <li><span class="sous-dossier" onclick="hideContent(this)">Services</span>
-                            <ul class="hidden">
-                                <li><span class="little"><a href="{{ path('app_rules_items') ~ '#taverne' }}">Taverne</a></span></li>
-                                <li><span class="little"><a href="{{ path('app_rules_items') ~ '#transports' }}">Transports</a></span></li>
-                                <li><span class="little"><a href="{{ path('app_rules_items') ~ '#montures' }}">Montures</a></span></li>
+
+                <li class="sidenav__item">
+                    <button type="button"
+                            class="sidenav__toggle {{ objetsActive ? 'is-expanded' : 'is-collapsed' }}"
+                            aria-expanded="{{ objetsActive ? 'true' : 'false' }}"
+                            data-nav-toggle>Objets et Services</button>
+                    <ul class="sidenav__sub {{ objetsActive ? '' : 'hidden' }}">
+                        <li class="sidenav__item">
+                            <a class="sidenav__link {{ route == 'app_rules_objets_bdd' ? 'is-active' : '' }}"
+                               href="{{ path('app_rules_objets_bdd') }}">Objets</a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a class="sidenav__link {{ route == 'app_rules_items' ? 'is-active' : '' }}"
+                               href="{{ path('app_rules_items') }}">Monnaie et conversions</a>
+                        </li>
+                        <li class="sidenav__item">
+                            <a class="sidenav__link {{ route == 'app_rules_items' ? 'is-active' : '' }}"
+                               href="{{ path('app_rules_items') ~ '#materiel_aventurier' }}">Matériel</a>
+                        </li>
+                        <li class="sidenav__item">
+                            <button type="button"
+                                    class="sidenav__toggle {{ servicesActive ? 'is-expanded' : 'is-collapsed' }}"
+                                    aria-expanded="{{ servicesActive ? 'true' : 'false' }}"
+                                    data-nav-toggle>Services</button>
+                            <ul class="sidenav__sub {{ servicesActive ? '' : 'hidden' }}">
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_rules_items' ? 'is-active' : '' }}"
+                                       href="{{ path('app_rules_items') ~ '#taverne' }}">Taverne</a>
+                                </li>
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_rules_items' ? 'is-active' : '' }}"
+                                       href="{{ path('app_rules_items') ~ '#transports' }}">Transports</a>
+                                </li>
+                                <li class="sidenav__item">
+                                    <a class="sidenav__link {{ route == 'app_rules_items' ? 'is-active' : '' }}"
+                                       href="{{ path('app_rules_items') ~ '#montures' }}">Montures</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </li>
             </ul>
         </li>
-        <li><span class="nav_ajout"><a href="{{ path('app_rules_index') ~ '#form_contact' }}">Formulaire de contact</a></span></li>
-        <li><a href="https://discord.gg/nTauBEU6MM"><img src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png" alt="discord" width="25px"></a></li>
+
+        <li class="sidenav__item">
+            <a class="sidenav__link sidenav__link--contact {{ route == 'app_rules_index' ? 'is-active' : '' }}"
+               href="{{ path('app_rules_index') ~ '#form_contact' }}">Formulaire de contact</a>
+        </li>
+
+        <li class="sidenav__item">
+            <a class="sidenav__link sidenav__link--discord"
+               href="https://discord.gg/nTauBEU6MM"
+               target="_blank"
+               rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 0 1-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.8914.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 0 0 .0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 0 0-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+                </svg>
+                Discord
+            </a>
+        </li>
     </ul>
-</div>
+</nav>
+
+<button type="button" class="nav-tab" aria-label="Ouvrir le menu de navigation"></button>
