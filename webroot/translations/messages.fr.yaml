@@ -86,3 +86,4 @@ combat_art:
 #Registration
 registration:
   email_verified: "Votre adresse e-mail a été vérifiée."
+  account_created: "Votre compte a été créé. Un e-mail de confirmation vous a été envoyé."

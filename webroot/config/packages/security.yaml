@@ -2,6 +2,33 @@ security:
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
     password_hashers:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+
+    # https://symfony.com/doc/current/security.html#hierarchical-roles
+    role_hierarchy:
+        ROLE_SUPER_ADMIN:
+            - ROLE_ADMIN
+            - ROLE_ALLOWED_TO_SWITCH
+        # ROLE_ADMIN: accès complet aux admins de contenu (pas la gestion des utilisateurs)
+        ROLE_ADMIN:
+            - ROLE_EDITOR
+            - ROLE_ADMIN_WEAPON_ALL
+            - ROLE_ADMIN_WEAPON_CATEGORY_ALL
+            - ROLE_ADMIN_ARMOR_ALL
+            - ROLE_ADMIN_ITEM_ALL
+            - ROLE_ADMIN_ITEM_CATEGORY_ALL
+            - ROLE_ADMIN_MATERIAL_ALL
+            - ROLE_ADMIN_SKILL_ALL
+            - ROLE_ADMIN_STANCE_ALL
+            - ROLE_ADMIN_COMBAT_ART_ALL
+            - ROLE_ADMIN_DAMAGE_TYPE_ALL
+            - ROLE_ADMIN_GLOSSARY_TRAIT_ALL
+            - ROLE_ADMIN_GLOSSARY_CONDITION_ALL
+            - ROLE_ADMIN_CHANGELOG_ALL
+            - ROLE_ADMIN_WEAPON_PROPERTY_ALL
+            - ROLE_ADMIN_WEAPON_PROPERTY_DETAILS_ALL
+        # ROLE_EDITOR: édition des pages du site uniquement (WebContent)
+        ROLE_EDITOR:
+            - ROLE_ADMIN_WEB_CONTENT_ALL
     # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
     providers:
         # used to reload user from session & other features (e.g. switch_user)
@@ -35,7 +62,8 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/admin, roles: ROLE_ADMIN }
+        # ROLE_SUPER_ADMIN hérite de ROLE_ADMIN via role_hierarchy
+        - { path: ^/admin, roles: [ROLE_ADMIN, ROLE_EDITOR] }
         # - { path: ^/profile, roles: ROLE_USER }
 
 when@test:

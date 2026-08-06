@@ -30,6 +30,11 @@ services:
         tags:
             - { name: sonata.admin, model_class: App\Entity\WebContent, controller: ~, manager_type: orm, group: admin, label: WebContent }
 
+    admin.user:
+        class: App\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\User, controller: ~, manager_type: orm, group: users, label: Utilisateurs }
+
     admin.weapon:
         class: App\Admin\WeaponAdmin
         calls:

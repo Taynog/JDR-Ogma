@@ -415,6 +415,28 @@ body.nav-open .nav-tab {
     pointer-events: none;
 }
 
+/* Account zone */
+.sidenav__item--auth {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.sidenav__auth-user {
+    margin: 0 12px 6px;
+    font-size: 13px;
+    color: #8a6d3b;
+}
+
+.sidenav__link--admin {
+    font-weight: 600;
+    color: #2f5e2e;
+}
+
+.sidenav__link--logout {
+    color: #7d2d1b;
+}
+
 /* Style page content (menu overlays the page, nothing is pushed) */
 #main {
     padding: 0 5px 0 12px;
