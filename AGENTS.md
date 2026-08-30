@@ -58,3 +58,4 @@ The `specs/` directory (at repo root, same level as `webroot/`) contains markdow
 - Controller routing: PHP attributes on controller classes (`config/routes.yaml` uses `type: attribute`).
 - Sonata admin classes live in `src/Admin/`, registered as tagged services in `config/services.yaml`.
 - `.env.local` is gitignored; use it for local overrides (database credentials, etc.).
+- `/tmp` is available for temporary work outside the workspace; agents may read/write there freely.

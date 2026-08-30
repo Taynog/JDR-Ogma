@@ -1,0 +1,219 @@
+{% extends '@SonataAdmin/CRUD/base_edit.html.twig' %}
+
+{% block sonata_tab_content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Propriétés de la page</h3>
+                </div>
+                <div class="box-body">
+                    {{ form_row(form.page) }}
+                    <div class="row">
+                        <div class="col-md-6">{{ form_row(form.title) }}</div>
+                        <div class="col-md-6">{{ form_row(form.category) }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Sections</h3>
+                </div>
+                <div class="box-body" id="sections-container">
+                    {% if form.sections is defined %}
+                        {% for sectionForm in form.sections.children %}
+                            <div class="box box-solid section-card" draggable="true" data-index="{{ loop.index0 }}" style="margin-bottom: 15px;">
+                                <div class="box-header with-border" style="background: #f7f7f7;">
+                                    <h4 class="box-title" style="margin: 0;">
+                                        <i class="fa fa-arrows-alt drag-handle" style="cursor: move; margin-right: 8px; color: #999;" title="Glisser pour réordonner"></i>
+                                        <span class="section-label">
+                                            {% if sectionForm.vars.data and sectionForm.vars.data.title %}
+                                                h{{ sectionForm.vars.data.level }} — {{ sectionForm.vars.data.title }}
+                                            {% else %}
+                                                Nouvelle section
+                                            {% endif %}
+                                        </span>
+                                    </h4>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool collapse-toggle"
+                                                title="Replier/Déplier">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                        {% if sectionForm.vars.data and sectionForm.vars.data.id %}
+                                            <a href="{{ path('admin_app_webcontentsection_delete', {id: sectionForm.vars.data.id}) }}"
+                                               class="btn btn-box-tool text-red"
+                                               onclick="return confirm('Supprimer cette section ?')">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="box-body" style="padding: 15px;">
+                                    <div style="display:none">{{ form_widget(sectionForm.position) }}</div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            {{ form_row(sectionForm.title) }}
+                                        </div>
+                                        <div class="col-md-2">
+                                            {{ form_row(sectionForm.level, {'attr': {'style': 'width:100%'}}) }}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ form_row(sectionForm.anchor) }}
+                                        </div>
+                                        <div class="col-md-3">
+                                            {{ form_row(sectionForm.collapsible) }}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            {{ form_row(sectionForm.content) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    {% if form.sections.vars.allow_add %}
+                        <div class="text-center" style="margin-top: 10px;">
+                            <span id="add-section-btn"
+                                  class="btn btn-success btn-sm"
+                                  data-prototype="{{ form_widget(form.sections.vars.prototype)|escape('html_attr') }}"
+                                  onclick="addSection(this)">
+                                <i class="fa fa-plus"></i> Ajouter une section
+                            </span>
+                        </div>
+                    {% endif %}
+
+                    {{ form_rest(form.sections) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if admin.subject and admin.subject.id %}
+        {% include 'admin/webcontent_preview.html.twig' with {
+            'sections': admin.subject.sections,
+            'title': 'Aperçu de la page'
+        } %}
+    {% endif %}
+
+    <script>
+        (function() {
+            var container = document.getElementById('sections-container');
+            var dragSource = null;
+
+            // Track which element was mousedown'd on
+            container.addEventListener('mousedown', function(e) {
+                var handle = e.target.closest('.drag-handle');
+                if (handle) {
+                    dragSource = handle.closest('.section-card');
+                }
+            });
+
+            document.addEventListener('mouseup', function() {
+                dragSource = null;
+            });
+
+            // Drag start — only if initiated from a handle
+            container.addEventListener('dragstart', function(e) {
+                if (!dragSource || e.target.closest('.section-card') !== dragSource) {
+                    e.preventDefault();
+                    return;
+                }
+                dragSource.classList.add('dragging');
+                e.dataTransfer.effectAllowed = 'move';
+                e.dataTransfer.setData('text/plain', '');
+            });
+
+            // Allow drop
+            container.addEventListener('dragover', function(e) {
+                if (!dragSource) return;
+                e.preventDefault();
+                e.dataTransfer.dropEffect = 'move';
+
+                var card = e.target.closest('.section-card');
+                if (!card || card === dragSource) return;
+
+                // Remove any previous indicators
+                container.querySelectorAll('.section-card').forEach(function(c) {
+                    c.classList.remove('drag-over-top', 'drag-over-bottom');
+                });
+
+                var rect = card.getBoundingClientRect();
+                var midY = rect.top + rect.height / 2;
+                if (e.clientY < midY) {
+                    container.insertBefore(dragSource, card);
+                    card.classList.add('drag-over-top');
+                } else {
+                    container.insertBefore(dragSource, card.nextSibling);
+                    card.classList.add('drag-over-bottom');
+                }
+            });
+
+            container.addEventListener('dragend', function() {
+                if (dragSource) {
+                    dragSource.classList.remove('dragging');
+                }
+                container.querySelectorAll('.section-card').forEach(function(c) {
+                    c.classList.remove('drag-over-top', 'drag-over-bottom');
+                });
+                dragSource = null;
+                reindexSections();
+            });
+
+            function reindexSections() {
+                var cards = container.querySelectorAll('.section-card');
+                cards.forEach(function(card, i) {
+                    card.setAttribute('data-index', i);
+                    var input = card.querySelector('input[type="hidden"][name*="[position]"]');
+                    if (input) input.value = i;
+                });
+            }
+
+            // Collapse toggle
+            container.addEventListener('click', function(e) {
+                var btn = e.target.closest('.collapse-toggle');
+                if (btn) {
+                    e.stopPropagation();
+                    var card = btn.closest('.section-card');
+                    card.classList.toggle('collapsed-box');
+                    var icon = btn.querySelector('i');
+                    icon.classList.toggle('fa-minus');
+                    icon.classList.toggle('fa-plus');
+                }
+            });
+
+            // Add section
+            window.addSection = function(btn) {
+                var prototype = btn.getAttribute('data-prototype');
+                var cards = container.querySelectorAll('.section-card');
+                var index = cards.length;
+                var html = prototype.replace(/__name__/g, index);
+                var wrapper = document.createElement('div');
+                wrapper.innerHTML = html;
+                var card = wrapper.firstElementChild;
+                container.insertBefore(card, btn.closest('.text-center'));
+
+                if (typeof CKEDITOR !== 'undefined') {
+                    card.querySelectorAll('textarea').forEach(function(ta) {
+                        if (!ta.id) ta.id = 'section_content_' + index;
+                        CKEDITOR.replace(ta.id);
+                    });
+                }
+                reindexSections();
+            };
+        })();
+    </script>
+
+    <style>
+        .section-card.dragging { opacity: 0.3; }
+        .section-card.drag-over-top { border-top: 3px solid #3c8dbc; }
+        .section-card.drag-over-bottom { border-bottom: 3px solid #3c8dbc; }
+    </style>
+{% endblock %}

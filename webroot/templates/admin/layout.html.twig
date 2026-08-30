@@ -1,0 +1,40 @@
+{% extends '@SonataAdmin/standard_layout.html.twig' %}
+
+{% block sonata_top_nav_menu %}
+    <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="{{ path('app_index') }}" class="btn-back-to-site" title="Retour au site">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                    Retour au site
+                </a>
+            </li>
+            {% block sonata_top_nav_menu_add_block %}
+                {% set addBlock = include(get_global_template('add_block')) %}
+                {% if addBlock|trim is not empty %}
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fas fa-plus-square fa-fw" aria-hidden="true"></i> <i class="fas fa-caret-down" aria-hidden="true"></i>
+                        </a>
+                        {{ addBlock|raw }}
+                    </li>
+                {% endif %}
+            {% endblock %}
+            {% if app.user %}
+                {% block sonata_top_nav_menu_user_block %}
+                    {% set userBlock = include(get_global_template('user_block')) %}
+                    {% if userBlock|trim is not empty %}
+                        <li class="dropdown user-menu">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fas fa-user fa-fw" aria-hidden="true"></i> <i class="fas fa-caret-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                {{ userBlock|raw }}
+                            </ul>
+                        </li>
+                    {% endif %}
+                {% endblock %}
+            {% endif %}
+        </ul>
+    </div>
+{% endblock %}

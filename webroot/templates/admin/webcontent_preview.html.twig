@@ -1,0 +1,65 @@
+{# Usage: pass 'sections' and optionally 'highlight_id' as variables #}
+<div class="sonata-ba-view" style="margin-top: 20px;">
+    <div class="box box-primary">
+        <div class="box-header">
+            <h3 class="box-title">{{ title|default('Rendu HTML de la page') }}</h3>
+        </div>
+        <div class="box-body" style="padding: 0; background: transparent;">
+            <iframe id="webcontent-preview" style="width: 100%; border: 1px solid #ddd; border-radius: 4px; min-height: 600px;" scrolling="yes"></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var iframe = document.getElementById('webcontent-preview');
+        var doc = iframe.contentDocument || iframe.contentWindow.document;
+
+        var highlightId = {{ highlight_id|default('null')|raw }};
+        var sections = [
+            {% for section in sections|sort((a, b) => a.position <=> b.position) %}
+            {
+                id: {{ section.id }},
+                title: {{ section.title|json_encode|raw }},
+                level: {{ section.level }},
+                anchor: {{ section.anchor|json_encode|raw }},
+                collapsible: {{ section.collapsible ? 'true' : 'false' }},
+                content: {{ section.content|json_encode|raw }}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ];
+
+        var cssHref = '{{ asset("build/app.css") }}';
+        var styles = '<link rel="stylesheet" href="' + cssHref + '">';
+        var hideContentFn = '<script>function hideContent(n){var el=n.nextElementSibling;if(el)el.classList.toggle("hidden");}<\/script>';
+        var highlightFn = '<style>.section-highlight{outline: 3px solid #8e44ad; outline-offset: 4px; border-radius: 4px;}</style>';
+
+        var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">' + styles + highlightFn + hideContentFn + '</head><body>';
+        html += '<div class="main">';
+        for (var i = 0; i < sections.length; i++) {
+            var s = sections[i];
+            var highlight = (highlightId !== null && s.id === highlightId) ? ' class="section-highlight"' : '';
+            if (s.title) {
+                html += '<h' + s.level;
+                if (s.anchor) html += ' id="' + s.anchor + '"';
+                if (s.collapsible) html += ' onclick="hideContent(this)"';
+                html += '>' + s.title + '</h' + s.level + '>';
+            }
+            html += '<div' + highlight + '>' + s.content + '</div>';
+        }
+        html += '</div></body></html>';
+
+        doc.open();
+        doc.write(html);
+        doc.close();
+
+        function autoResize() {
+            try {
+                iframe.style.height = Math.max(iframe.contentDocument.body.scrollHeight + 40, 400) + 'px';
+            } catch(e) {}
+        }
+        iframe.onload = autoResize;
+        setTimeout(autoResize, 500);
+        setTimeout(autoResize, 1500);
+    });
+</script>

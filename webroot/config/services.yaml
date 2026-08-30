@@ -30,6 +30,12 @@ services:
         tags:
             - { name: sonata.admin, model_class: App\Entity\WebContent, controller: ~, manager_type: orm, group: admin, label: WebContent }
 
+    admin.web_content_section:
+        class: App\Admin\WebContentSectionAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\WebContentSection, controller: ~, manager_type: orm, group: admin, label: WebContentSection, show_in_dashboard: false }
+        public: true
+
     admin.user:
         class: App\Admin\UserAdmin
         tags:

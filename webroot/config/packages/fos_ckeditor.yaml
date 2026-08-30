@@ -7,6 +7,7 @@ fos_ck_editor:
             filebrowserBrowseRoute: elfinder
             filebrowserBrowseRouteParameters: []
             contentsCss: '/build/app.css'
+            versionCheck: false
 #            stylesSet: "my_styles"
 #
 #    styles:

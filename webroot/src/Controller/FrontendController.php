@@ -18,10 +18,11 @@ class FrontendController extends AbstractController
             'changelogs' => $changelogs
         ]);
     }
+
     #[Route("/{page}", "app_front", priority: -10)]
     public function page (string $page, WebContentRepository $webContentRepository): Response
     {
-        $template = $webContentRepository->find($page);
+        $template = $webContentRepository->findByPage($page);
         if(is_null($template)) {
             return $this->redirectToRoute("app_index");
         }
@@ -29,9 +30,16 @@ class FrontendController extends AbstractController
             'template' => $template
         ]);
     }
+
     #[Route("/factions/{faction}", "app_factions", priority: -1)]
-    public function factions (string $faction): Response
+    public function factions (string $faction, WebContentRepository $webContentRepository): Response
     {
+        $template = $webContentRepository->findByPage($faction);
+        if ($template) {
+            return $this->render('@App/frontend/webcontent.html.twig', [
+                'template' => $template
+            ]);
+        }
         try {
             return $this->render("@App/factions/$faction.html.twig");
         }
@@ -39,9 +47,16 @@ class FrontendController extends AbstractController
             return $this->redirectToRoute("app_index");
         }
     }
+
     #[Route("/univers/{page}", "app_univers", priority: -1)]
-    public function univers (string $page): Response
+    public function univers (string $page, WebContentRepository $webContentRepository): Response
     {
+        $template = $webContentRepository->findByPage($page);
+        if ($template) {
+            return $this->render('@App/frontend/webcontent.html.twig', [
+                'template' => $template
+            ]);
+        }
         try {
             return $this->render("@App/world/$page.html.twig");
         }

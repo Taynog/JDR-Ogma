@@ -1,0 +1,63 @@
+{% extends '@SonataAdmin/CRUD/base_show.html.twig' %}
+
+{% block show %}
+    {{ parent() }}
+
+    <div class="sonata-ba-view" style="margin-top: 20px;">
+        <div class="box box-primary">
+            <div class="box-header">
+                <h3 class="box-title">Sections</h3>
+            </div>
+            <div class="box-body no-padding">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px">#</th>
+                            <th>Titre</th>
+                            <th style="width: 60px">Niveau</th>
+                            <th style="width: 80px">Ancre</th>
+                            <th style="width: 80px">Repliable</th>
+                            <th style="width: 100px">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for section in admin.subject.sections|sort((a, b) => a.position <=> b.position) %}
+                            <tr>
+                                <td>{{ section.position }}</td>
+                                <td>{{ section.title|default('(sans titre)') }}</td>
+                                <td>h{{ section.level }}</td>
+                                <td>{{ section.anchor|default('-') }}</td>
+                                <td>
+                                    {% if section.collapsible %}
+                                        <span class="label label-success">Oui</span>
+                                    {% else %}
+                                        <span class="label label-default">Non</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <a href="{{ path('admin_app_webcontentsection_edit', {id: section.id}) }}" class="btn btn-xs btn-primary" title="Modifier">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <a href="{{ path('admin_app_webcontentsection_show', {id: section.id}) }}" class="btn btn-xs btn-default" title="Voir">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 10px;">
+        <a href="{{ path('admin_app_webcontentsection_create', {webContentId: admin.subject.id}) }}" class="btn btn-success">
+            <i class="fa fa-plus"></i> Ajouter une section
+        </a>
+    </div>
+
+    {% include 'admin/webcontent_preview.html.twig' with {
+        'sections': admin.subject.sections,
+        'title': 'Rendu HTML de la page'
+    } %}
+{% endblock %}

@@ -3,5 +3,26 @@
     {{ template.title }}
 {% endblock %}
 {% block body %}
-    {{ template.content|raw }}
+
+{% if is_granted('ROLE_EDITOR') or is_granted('ROLE_ADMIN') %}
+    <a class="edit-page-btn"
+       href="{{ path('admin_app_webcontent_edit', {id: template.id}) }}"
+       title="Modifier cette page">
+        ✏️ Modifier
+    </a>
+{% endif %}
+
+{% for section in template.sections %}
+    {% if section.title %}
+        <h{{ section.level }}
+            {% if section.anchor %}id="{{ section.anchor }}"{% endif %}
+            {% if section.collapsible %}onclick="hideContent(this)"{% endif %}>
+            {{ section.title }}
+        </h{{ section.level }}>
+    {% endif %}
+    <div>
+        {{ section.content|raw }}
+    </div>
+{% endfor %}
+
 {% endblock %}
