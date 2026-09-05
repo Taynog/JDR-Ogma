@@ -50,7 +50,10 @@ No lint, typecheck, or static analysis tools are configured. No CI workflows exi
 
 ## Specs
 
-The `specs/` directory (at repo root, same level as `webroot/`) contains markdown documents generated and used by agents. These include architecture decisions, conversion plans, audit reports, and any other reference material produced during the project.
+The `specs/` directory (at repo root, same level as `webroot/`) contains markdown documents generated and used by agents. It is split into two subdirectories:
+
+- `specs/techniques/` — code, infrastructure, technical architecture (conversion plans, audit reports, etc.).
+- `specs/ludiques/` — game mechanics, rules and rulesets (e.g. the dice resolution system).
 
 ## Conventions
 
