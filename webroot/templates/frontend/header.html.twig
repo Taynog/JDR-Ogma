@@ -1,0 +1,54 @@
+{% if app.user %}
+    {% set displayName = app.user.username|default(app.user.userIdentifier) %}
+    {% set displayInitial = displayName|first|upper %}
+{% else %}
+    {% set displayName = '' %}
+    {% set displayInitial = '' %}
+{% endif %}
+
+<header class="site-header">
+    <div class="site-header__auth">
+        {% if app.user %}
+            <div class="user-menu" data-user-menu>
+                <button type="button"
+                        class="user-menu__trigger"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        title="{{ displayName }}"
+                        data-user-menu-toggle>
+                    {% if app.user.avatarName %}
+                        <img class="user-menu__avatar user-menu__avatar--image"
+                             src="{{ vich_uploader_asset(app.user, 'avatarFile') }}"
+                             alt=""
+                             aria-hidden="true">
+                    {% else %}
+                        <span class="user-menu__avatar" aria-hidden="true">{{ displayInitial }}</span>
+                    {% endif %}
+                    <span class="user-menu__name">{{ displayName }}</span>
+                </button>
+                <ul class="user-menu__dropdown" data-user-menu-dropdown hidden>
+                    <li class="user-menu__heading">
+                        <span class="user-menu__heading-name">{{ displayName }}</span>
+                        <span class="user-menu__heading-email">{{ app.user.email }}</span>
+                    </li>
+                    <li>
+                        <a class="user-menu__item" href="{{ path('app_profile') }}">Mon profil</a>
+                    </li>
+                    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EDITOR') %}
+                        <li>
+                            <a class="user-menu__item" href="{{ path('sonata_admin_dashboard') }}">Administration</a>
+                        </li>
+                    {% endif %}
+                    <li>
+                        <a class="user-menu__item user-menu__item--logout" href="{{ path('app_logout') }}">Déconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        {% else %}
+            <nav class="site-header__links" aria-label="Authentification">
+                <a class="site-header__link" href="{{ path('app_login') }}">Connexion</a>
+                <a class="site-header__link site-header__link--register" href="{{ path('app_register') }}">Créer un compte</a>
+            </nav>
+        {% endif %}
+    </div>
+</header>

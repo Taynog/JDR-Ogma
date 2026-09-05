@@ -128,10 +128,133 @@ function initNavBar() {
     });
 }
 
+/* Header: user menu open/close */
+function initUserMenu() {
+    const menu = document.querySelector('[data-user-menu]');
+    if (!menu) return;
+
+    const trigger = menu.querySelector('[data-user-menu-toggle]');
+    const dropdown = menu.querySelector('[data-user-menu-dropdown]');
+    if (!trigger || !dropdown) return;
+
+    const isOpen = function () {
+        return trigger.getAttribute('aria-expanded') === 'true';
+    };
+    const setOpen = function (open) {
+        trigger.setAttribute('aria-expanded', String(open));
+        dropdown.hidden = !open;
+    };
+
+    trigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        setOpen(!isOpen());
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!menu.contains(e.target)) setOpen(false);
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isOpen()) {
+            setOpen(false);
+            trigger.focus();
+        }
+    });
+}
+
+/* Profile edit: live feedback on the avatar field */
+function initAvatarField() {
+    const field = document.querySelector('[data-avatar-field]');
+    if (!field) return;
+
+    const input = field.querySelector('[data-avatar-input]');
+    const nameEl = field.querySelector('[data-avatar-name]');
+    const statusEl = field.querySelector('[data-avatar-status]');
+    let preview = field.querySelector('[data-avatar-preview]');
+    if (!input) return;
+
+    const originalPreviewSrc = preview && preview.tagName === 'IMG' ? preview.getAttribute('src') : null;
+    const ALLOWED_TYPES = ['image/png', 'image/jpeg', 'image/webp', 'image/gif'];
+    const MAX_BYTES = 2 * 1024 * 1024;
+    let objectUrl = null;
+
+    const showError = function (msg) {
+        field.classList.remove('is-valid');
+        field.classList.add('is-invalid');
+        statusEl.textContent = msg;
+        statusEl.className = 'avatar-field__status avatar-field__status--invalid';
+    };
+
+    const setValid = function () {
+        field.classList.remove('is-invalid');
+        field.classList.add('is-valid');
+        statusEl.textContent = 'Fichier prêt à être enregistré.';
+        statusEl.className = 'avatar-field__status avatar-field__status--valid';
+    };
+
+    const resetState = function () {
+        if (objectUrl) URL.revokeObjectURL(objectUrl);
+        objectUrl = null;
+        nameEl.textContent = 'Aucun fichier sélectionné';
+        statusEl.textContent = '';
+        statusEl.className = 'avatar-field__status';
+        field.classList.remove('is-valid', 'is-invalid');
+        if (!preview) return;
+        preview.classList.remove('avatar-field__img--selected');
+        if (preview.tagName === 'IMG' && originalPreviewSrc) {
+            preview.src = originalPreviewSrc;
+            preview.alt = 'Avatar actuel';
+        }
+    };
+
+    const showPreview = function (file) {
+        if (objectUrl) URL.revokeObjectURL(objectUrl);
+        objectUrl = URL.createObjectURL(file);
+        if (preview.tagName !== 'IMG') {
+            const img = document.createElement('img');
+            img.className = 'avatar-field__img avatar-field__img--selected';
+            preview.replaceWith(img);
+            preview = img;
+        }
+        preview.alt = 'Aperçu du fichier sélectionné';
+        preview.src = objectUrl;
+        preview.classList.add('avatar-field__img--selected');
+    };
+
+    input.addEventListener('change', function () {
+        const file = input.files && input.files[0];
+
+        if (!file) {
+            resetState();
+            return;
+        }
+
+        nameEl.textContent = file.name;
+
+        if (!ALLOWED_TYPES.includes(file.type)) {
+            showError('Format non accepté (PNG, JPEG, WebP ou GIF).');
+            return;
+        }
+        if (file.size > MAX_BYTES) {
+            showError('Fichier trop lourd (2 Mo maximum).');
+            return;
+        }
+
+        setValid();
+        showPreview(file);
+    });
+}
+
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNavBar);
+    document.addEventListener('DOMContentLoaded', function () {
+        initNavBar();
+        initUserMenu();
+        initAvatarField();
+    });
 } else {
     initNavBar();
+    initUserMenu();
+    initAvatarField();
 }
 
 

@@ -1,0 +1,5 @@
+{% use 'form/auth_errors.html.twig' %}
+
+{% block vich_image_widget %}
+    {{ form_widget(form.file, { attr: attr|merge({ accept: 'image/*' }) }) }}
+{% endblock %}

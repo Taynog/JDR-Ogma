@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon profil{% endblock %}
+
+{% block body %}
+    {% set displayName = user.username|default(user.userIdentifier) %}
+    {% set displayInitial = displayName|first|upper %}
+    {% set roleLabels = {
+        'ROLE_SUPER_ADMIN': 'Super administrateur',
+        'ROLE_ADMIN': 'Administrateur',
+        'ROLE_EDITOR': 'Éditeur',
+        'ROLE_USER': 'Membre'
+    } %}
+
+    <div class="auth-card profile-card">
+        {% for flash_success in app.flashes('success') %}
+            <div class="auth-alert auth-alert--success" role="alert">{{ flash_success }}</div>
+        {% endfor %}
+
+        <div class="profile-card__header">
+            {% if user.avatarName %}
+                <img class="profile-card__avatar"
+                     src="{{ vich_uploader_asset(user, 'avatarFile') }}"
+                     alt="Avatar de {{ displayName }}">
+            {% else %}
+                <span class="profile-card__avatar profile-card__avatar--initial">{{ displayInitial }}</span>
+            {% endif %}
+            <h1 class="auth-card__title">{{ displayName }}</h1>
+            {% if user.isVerified %}
+                <span class="profile-badge profile-badge--verified">E-mail vérifié</span>
+            {% else %}
+                <span class="profile-badge profile-badge--pending">E-mail non vérifié</span>
+            {% endif %}
+        </div>
+
+        <dl class="profile-info">
+            <dt>Nom</dt>
+            <dd>{{ displayName }}</dd>
+            <dt>E-mail</dt>
+            <dd>{{ user.email }}</dd>
+            <dt>Rôles</dt>
+            <dd>
+                {% for role in user.roles %}
+                    <span class="profile-role">{{ roleLabels[role]|default(role) }}</span>
+                {% endfor %}
+            </dd>
+            <dt>Date d'inscription</dt>
+            <dd>{{ user.createdAt ? user.createdAt|date('d/m/Y') : '—' }}</dd>
+        </dl>
+
+        <p class="profile-card__actions">
+            <a class="auth-btn auth-btn--inline" href="{{ path('app_profile_edit') }}">Modifier mes informations</a>
+        </p>
+    </div>
+{% endblock %}

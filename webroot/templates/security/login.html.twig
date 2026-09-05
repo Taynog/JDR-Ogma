@@ -3,38 +3,55 @@
 {% block title %}Connexion{% endblock %}
 
 {% block body %}
-    {% for flash_success in app.flashes('success') %}
-        <div class="alert alert-success" role="alert">{{ flash_success }}</div>
-    {% endfor %}
+    <div class="auth-card">
+        <h1 class="auth-card__title">Connexion</h1>
+        <p class="auth-card__subtitle">Accédez à votre compte Ogma</p>
 
-    <form method="post">
-        {% if error %}
-            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
+        {% for flash_success in app.flashes('success') %}
+            <div class="auth-alert auth-alert--success" role="alert">{{ flash_success }}</div>
+        {% endfor %}
 
         {% if app.user %}
-            <div class="mb-3">
-                Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Déconnexion</a>.
+            <div class="auth-alert auth-alert--info">
+                Vous êtes connecté en tant que <strong>{{ app.user.userIdentifier }}</strong>.
+                <a href="{{ path('app_logout') }}">Se déconnecter</a>.
             </div>
+        {% else %}
+            <form method="post" class="auth-form">
+                {% if error %}
+                    <div class="auth-alert auth-alert--danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                <div class="auth-field">
+                    <label for="username">E-mail</label>
+                    <input type="email"
+                           value="{{ last_username }}"
+                           name="_username"
+                           id="username"
+                           placeholder="vous@exemple.fr"
+                           autocomplete="email"
+                           required autofocus>
+                </div>
+
+                <div class="auth-field">
+                    <label for="password">Mot de passe</label>
+                    <input type="password"
+                           name="_password"
+                           id="password"
+                           placeholder="••••••••"
+                           autocomplete="current-password"
+                           required>
+                </div>
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                <button class="auth-btn" type="submit">Se connecter</button>
+            </form>
+
+            <p class="auth-card__switch">
+                Pas encore de compte ?
+                <a href="{{ path('app_register') }}">Créer un compte</a>.
+            </p>
         {% endif %}
-
-        <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
-        <label for="username">E-mail</label>
-        <input type="email" value="{{ last_username }}" name="_username" id="username" class="form-control" autocomplete="email" required autofocus>
-        <label for="password">Mot de passe</label>
-        <input type="password" name="_password" id="password" class="form-control" autocomplete="current-password" required>
-
-        <input type="hidden" name="_csrf_token"
-               value="{{ csrf_token('authenticate') }}"
-        >
-
-        <button class="btn btn-lg btn-primary" type="submit">
-            Se connecter
-        </button>
-    </form>
-
-    <p>
-        Pas encore de compte ?
-        <a href="{{ path('app_register') }}">Créer un compte</a>.
-    </p>
+    </div>
 {% endblock %}

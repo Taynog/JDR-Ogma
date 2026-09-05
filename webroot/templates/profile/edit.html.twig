@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier mon profil{% endblock %}
+
+{% block body %}
+    {% form_theme profileForm 'form/profile_form.html.twig' %}
+    {% form_theme passwordForm 'form/auth_errors.html.twig' %}
+
+    {% set user = profileForm.vars.data %}
+    {% set displayName = user.username|default(user.userIdentifier) %}
+    {% set displayInitial = displayName|first|upper %}
+
+    <div class="auth-card profile-card">
+        <h1 class="auth-card__title">Modifier mon profil</h1>
+        <p class="auth-card__subtitle">
+            <a href="{{ path('app_profile') }}">&larr; Retour à ma fiche</a>
+        </p>
+
+        {{ form_start(profileForm, { attr: { class: 'auth-form' } }) }}
+            {{ form_row(profileForm.username, {
+                label: "Nom d'utilisateur",
+                row_attr: { class: 'auth-field' }
+            }) }}
+            {{ form_row(profileForm.email, {
+                label: 'Adresse e-mail',
+                row_attr: { class: 'auth-field' }
+            }) }}
+            <div class="auth-field auth-field--file avatar-field" data-avatar-field>
+                <label for="{{ profileForm.avatarFile.file.vars.id }}">Avatar</label>
+
+                <div class="avatar-field__preview">
+                    {% if user.avatarName %}
+                        <img class="avatar-field__img"
+                             src="{{ vich_uploader_asset(user, 'avatarFile') }}"
+                             alt="Avatar actuel"
+                             data-avatar-preview>
+                    {% else %}
+                        <span class="avatar-field__initial" data-avatar-preview>{{ displayInitial }}</span>
+                    {% endif %}
+                </div>
+
+                <div class="avatar-field__controls">
+                    {{ form_widget(profileForm.avatarFile, { attr: { 'data-avatar-input': '' } }) }}
+                </div>
+                <span class="avatar-field__name" data-avatar-name>Aucun fichier sélectionné</span>
+                <span class="avatar-field__status" data-avatar-status></span>
+
+                {{ form_errors(profileForm.avatarFile) }}
+                <p class="auth-field__hint">PNG, JPEG, WebP ou GIF &mdash; 2 Mo maximum.</p>
+            </div>
+
+            <button class="auth-btn" type="submit">Enregistrer les informations</button>
+        {{ form_end(profileForm) }}
+    </div>
+
+    <div class="auth-card profile-card">
+        <h2 class="auth-card__title auth-card__title--small">Sécurité</h2>
+
+        {{ form_start(passwordForm, { attr: { class: 'auth-form' } }) }}
+            {{ form_row(passwordForm.currentPassword, {
+                label: 'Mot de passe actuel',
+                row_attr: { class: 'auth-field' }
+            }) }}
+            {{ form_row(passwordForm.newPassword, {
+                label: 'Nouveau mot de passe',
+                row_attr: { class: 'auth-field' }
+            }) }}
+            {{ form_row(passwordForm.confirmPassword, {
+                label: 'Confirmation du nouveau mot de passe',
+                row_attr: { class: 'auth-field' }
+            }) }}
+
+            <button class="auth-btn" type="submit">Changer le mot de passe</button>
+        {{ form_end(passwordForm) }}
+    </div>
+{% endblock %}
