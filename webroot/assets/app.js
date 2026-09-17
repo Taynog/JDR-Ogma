@@ -26,6 +26,9 @@ global.hideContent = function hideContent(n){
     const el = n.nextElementSibling;
     if (el) {
         el.classList.toggle('hidden');
+        const collapsed = el.classList.contains('hidden');
+        n.setAttribute('aria-expanded', String(!collapsed));
+        n.classList.toggle('is-collapsed', collapsed);
     }
 }
 
@@ -39,35 +42,59 @@ global.setnormalmap = function setnormalmap(){
     img.setAttribute( "src", "../../Images/Carte_Ogma.jpg");
 }
 
-/* Sidebar: overlay, opens when the cursor nears the left edge of the screen */
+/* Sidebar: overlay, opens from a hamburger button, on cursor hover near the
+   left edge of the screen, or via the small edge tab */
 function initNavBar() {
     const navBar = document.getElementById('mySidenav');
     if (!navBar) return;
+
+    const navToggle = document.querySelector('[data-nav-toggle-btn]');
+    const navTab = document.querySelector('.nav-tab');
 
     const EDGE = 10;             // px from the left edge that opens the menu
     const CLOSE_GAP = 24;        // px beyond the nav's right edge before closing
     const CLOSE_DELAY = 250;     // ms of mouseleave before closing (avoids flicker)
 
+    let closeTimer = null;
+    let openSource = 'pointer';  // 'pointer' (hover/tab) or 'toggle' (hamburger)
+
     const isOpen = function () {
         return document.body.classList.contains('nav-open');
     };
-    const openNav = function () {
-        document.body.classList.add('nav-open');
-    };
-    const closeNav = function () {
-        document.body.classList.remove('nav-open');
+
+    const syncToggleState = function () {
+        const state = String(isOpen());
+        if (navToggle) navToggle.setAttribute('aria-expanded', state);
+        if (navTab) navTab.setAttribute('aria-expanded', state);
     };
 
-    let closeTimer = null;
+    const openNav = function (source) {
+        document.body.classList.add('nav-open');
+        openSource = source || 'pointer';
+        syncToggleState();
+    };
+
+    const closeNav = function () {
+        document.body.classList.remove('nav-open');
+        openSource = null;
+        syncToggleState();
+    };
+
     const scheduleClose = function () {
         if (closeTimer) clearTimeout(closeTimer);
         closeTimer = setTimeout(closeNav, CLOSE_DELAY);
     };
+
     const cancelClose = function () {
         if (closeTimer) {
             clearTimeout(closeTimer);
             closeTimer = null;
         }
+    };
+
+    // Auto-close only makes sense when the menu was opened by the cursor.
+    const shouldAutoClose = function () {
+        return openSource === 'pointer';
     };
 
     navBar.addEventListener('click', function (e) {
@@ -84,7 +111,6 @@ function initNavBar() {
                 ':scope > li > [data-nav-toggle][aria-expanded="true"]'
             );
             siblings.forEach(function (other) {
-                if (other.classList.contains('sidenav__toggle--root')) return;
                 other.setAttribute('aria-expanded', 'false');
                 if (other.nextElementSibling) {
                     other.nextElementSibling.classList.add('hidden');
@@ -96,35 +122,111 @@ function initNavBar() {
         sub.classList.toggle('hidden');
     });
 
+    if (navToggle) {
+        navToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (isOpen()) closeNav();
+            else openNav('toggle');
+        });
+    }
+
     document.addEventListener('mousemove', function (e) {
         if (e.clientX <= EDGE) {
             cancelClose();
-            openNav();
-        } else if (isOpen() && e.clientX > navBar.offsetWidth + CLOSE_GAP) {
+            openNav('pointer');
+        } else if (isOpen() && shouldAutoClose() && e.clientX > navBar.offsetWidth + CLOSE_GAP) {
             scheduleClose();
         }
     });
 
     navBar.addEventListener('mouseenter', cancelClose);
-    navBar.addEventListener('mouseleave', scheduleClose);
+    navBar.addEventListener('mouseleave', function () {
+        if (shouldAutoClose()) scheduleClose();
+    });
 
-    const navTab = document.querySelector('.nav-tab');
     if (navTab) {
-        navTab.addEventListener('mouseenter', openNav);
-        navTab.addEventListener('click', openNav);
+        navTab.addEventListener('mouseenter', function () { openNav('pointer'); });
+        navTab.addEventListener('click', function (e) {
+            e.stopPropagation();
+            openNav('pointer');
+        });
     }
 
     document.addEventListener('touchstart', function (e) {
         const touch = e.touches[0];
         if (touch && touch.clientX <= EDGE) {
-            openNav();
+            openNav('pointer');
         }
     }, { passive: true });
 
     document.addEventListener('click', function (e) {
         if (navBar.contains(e.target)) return;
         if (e.target.closest('.nav-tab')) return;
+        if (e.target.closest('[data-nav-toggle-btn]')) return;
         closeNav();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isOpen()) {
+            closeNav();
+            if (navToggle) navToggle.focus();
+        }
+    });
+
+    /* Un seul dossier racine ouvert à la fois : à l'ouverture du menu on ne
+       garde dépliée que la racine contenant le lien de la page active
+       (sinon la première racine, "Lore") */
+    const roots = navBar.querySelectorAll('[data-nav-toggle].sidenav__toggle--root');
+    const activeRoot = Array.prototype.find.call(roots, function (r) {
+        const sub = r.nextElementSibling;
+        return sub instanceof Element && sub.querySelector('.sidenav__link.is-active');
+    }) || roots[0];
+
+    roots.forEach(function (r) {
+        if (r === activeRoot) return;
+        r.setAttribute('aria-expanded', 'false');
+        r.classList.add('is-collapsed');
+        r.classList.remove('is-expanded');
+        const sub = r.nextElementSibling;
+        if (sub) sub.classList.add('hidden');
+    });
+}
+
+/* Accordeons de contenu (titres cliquables via onclick="hideContent(this)") :
+   état a11y initial + navigation clavier */
+function initCollapsibles() {
+    const toggles = document.querySelectorAll('#main [onclick]');
+    toggles.forEach(function (el) {
+        if (!/hideContent/.test(el.getAttribute('onclick') || '')) return;
+        const target = el.nextElementSibling;
+        if (!target) return;
+
+        el.setAttribute('role', 'button');
+        el.setAttribute('tabindex', '0');
+
+        const collapsed = target.classList.contains('hidden');
+        el.setAttribute('aria-expanded', String(!collapsed));
+        el.classList.toggle('is-collapsed', collapsed);
+
+        el.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                el.click();
+            }
+        });
+    });
+}
+
+/* Enveloppe les tableaux de #main dans un conteneur défilable pour éviter
+   de casser la mise en page sur les petits écrans */
+function initResponsiveTables() {
+    const tables = document.querySelectorAll('#main table');
+    tables.forEach(function (table) {
+        if (table.parentElement && table.parentElement.classList.contains('table-scroll')) return;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-scroll';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
     });
 }
 
@@ -245,16 +347,217 @@ function initAvatarField() {
     });
 }
 
+function initMapViewer() {
+    var mainMap = document.querySelector('#map');
+    if (!mainMap) return;
+
+    var trigger = document.querySelector('[data-map-open]');
+    if (!trigger) {
+        trigger = document.createElement('button');
+        trigger.type = 'button';
+        trigger.className = 'map-frame';
+        trigger.setAttribute('aria-label', 'Ouvrir la carte en grand');
+        var badge = document.createElement('span');
+        badge.className = 'map-frame__badge';
+        badge.setAttribute('aria-hidden', 'true');
+        badge.innerHTML = 'Agrandir &#9670;';
+        mainMap.parentNode.insertBefore(trigger, mainMap);
+        trigger.appendChild(mainMap);
+        trigger.appendChild(badge);
+    }
+
+    var imgEl = trigger.querySelector('img');
+    var viewer = document.createElement('div');
+    viewer.className = 'map-viewer';
+    viewer.innerHTML =
+        '<div class="map-viewer__bar">' +
+        '<p class="map-viewer__hint" aria-hidden="true">Molette / pincement : zoom &#183; glisser : déplacer</p>' +
+        '<button type="button" class="map-viewer__btn" data-map-zoom-in aria-label="Zoomer">+</button>' +
+        '<button type="button" class="map-viewer__btn" data-map-zoom-out aria-label="Dézoomer">&#8722;</button>' +
+        '<button type="button" class="map-viewer__btn map-viewer__close" data-map-close aria-label="Fermer">&#10005;</button>' +
+        '</div>' +
+        '<div class="map-viewer__viewport">' +
+        '<img class="map-viewer__img" alt="Carte d\'Ogma — molette pour zoomer, glisser pour déplacer" draggable="false"/>' +
+        '</div>';
+    document.body.appendChild(viewer);
+
+    var hint = viewer.querySelector('.map-viewer__hint');
+    var hintTimer = null;
+
+    var viewport = viewer.querySelector('.map-viewer__viewport');
+    var img = viewer.querySelector('.map-viewer__img');
+    img.src = imgEl.src;
+
+    var state = { x: 0, y: 0, scale: 1, fit: 1 };
+    var pointers = new Map();
+    var dragging = false;
+
+    function apply() {
+        img.style.transform = 'translate(' + state.x + 'px,' + state.y + 'px) scale(' + state.scale + ')';
+    }
+
+    function fitScale() {
+        return Math.min(viewport.clientWidth / img.naturalWidth, viewport.clientHeight / img.naturalHeight) || 1;
+    }
+
+    function enforceBounds() {
+        var vw = viewport.clientWidth;
+        var vh = viewport.clientHeight;
+        var iw = img.naturalWidth * state.scale;
+        var ih = img.naturalHeight * state.scale;
+        state.x = iw <= vw ? (vw - iw) / 2 : Math.min(0, Math.max(vw - iw, state.x));
+        state.y = ih <= vh ? (vh - ih) / 2 : Math.min(0, Math.max(vh - ih, state.y));
+        apply();
+    }
+
+    function setScale(scale) {
+        state.scale = Math.min(Math.max(scale, state.fit), state.fit * 10);
+        enforceBounds();
+    }
+
+    function zoomAt(px, py, factor) {
+        var rect = viewport.getBoundingClientRect();
+        var mx = px - rect.left;
+        var my = py - rect.top;
+        var newScale = Math.min(Math.max(state.scale * factor, state.fit), state.fit * 10);
+        var f = newScale / state.scale;
+        state.x = mx - (mx - state.x) * f;
+        state.y = my - (my - state.y) * f;
+        state.scale = newScale;
+        enforceBounds();
+    }
+
+    function resetToFit() {
+        img.style.left = '0';
+        img.style.top = '0';
+        state.scale = state.fit;
+        state.x = 0;
+        state.y = 0;
+        enforceBounds();
+    }
+
+    function open() {
+        viewer.classList.add('is-open');
+        document.body.classList.add('map-viewer-open');
+        state.fit = fitScale();
+        resetToFit();
+        hint.classList.remove('is-hidden');
+        clearTimeout(hintTimer);
+        hintTimer = setTimeout(function () {
+            hint.classList.add('is-hidden');
+        }, 4000);
+        viewer.querySelector('.map-viewer__close').focus();
+    }
+
+    function close() {
+        clearTimeout(hintTimer);
+        viewer.classList.remove('is-open');
+        document.body.classList.remove('map-viewer-open');
+        trigger.focus();
+    }
+
+    trigger.addEventListener('click', open);
+
+    viewport.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        zoomAt(e.clientX, e.clientY, e.deltaY < 0 ? 1.15 : 1 / 1.15);
+    }, { passive: false });
+
+    viewport.addEventListener('dblclick', function (e) {
+        if (state.scale > state.fit * 1.05) {
+            resetToFit();
+        } else {
+            zoomAt(e.clientX, e.clientY, 2.5);
+        }
+    });
+
+    img.addEventListener('pointerdown', function (e) {
+        pointers.set(e.pointerId, { x: e.clientX, y: e.clientY, scale: state.scale, x0: state.x, y0: state.y });
+        img.setPointerCapture(e.pointerId);
+        dragging = true;
+        img.classList.add('is-dragging');
+    });
+
+    img.addEventListener('pointermove', function (e) {
+        if (!pointers.has(e.pointerId)) return;
+        var p = pointers.get(e.pointerId);
+
+        if (pointers.size === 1) {
+            state.x = p.x0 + (e.clientX - p.x);
+            state.y = p.y0 + (e.clientY - p.y);
+            enforceBounds();
+        } else if (pointers.size === 2) {
+            var others = Array.from(pointers.entries()).filter(function (entry) {
+                return entry[0] !== e.pointerId;
+            });
+            var other = others[0][1];
+            var prevDist = Math.hypot(other.x - p.x, other.y - p.y);
+            var curDist = Math.hypot(other.x - e.clientX, other.y - e.clientY);
+            if (prevDist > 0 && curDist > 0) {
+                var rect = viewport.getBoundingClientRect();
+                var midX = (other.x + e.clientX) / 2 - rect.left;
+                var midY = (other.y + e.clientY) / 2 - rect.top;
+                var fl = curDist / prevDist;
+                var newScale = Math.min(Math.max(state.scale * fl, state.fit), state.fit * 10);
+                var f = newScale / state.scale;
+                state.x = midX - (midX - state.x) * f;
+                state.y = midY - (midY - state.y) * f;
+                state.scale = newScale;
+                enforceBounds();
+            }
+            pointers.set(e.pointerId, { x: e.clientX, y: e.clientY, scale: state.scale, x0: state.x, y0: state.y });
+        }
+    });
+
+    function releasePointer(e) {
+        if (pointers.delete(e.pointerId)) {
+            if (pointers.size === 0) {
+                dragging = false;
+                img.classList.remove('is-dragging');
+            } else if (pointers.size === 1) {
+                var remaining = Array.from(pointers.values())[0];
+                remaining.x = e.clientX;
+                remaining.y = e.clientY;
+                remaining.x0 = state.x;
+                remaining.y0 = state.y;
+            }
+        }
+    }
+
+    img.addEventListener('pointerup', releasePointer);
+    img.addEventListener('pointercancel', releasePointer);
+
+    viewer.querySelector('[data-map-zoom-in]').addEventListener('click', function () {
+        zoomAt(viewport.clientWidth / 2, viewport.clientHeight / 2, 1.3);
+    });
+    viewer.querySelector('[data-map-zoom-out]').addEventListener('click', function () {
+        zoomAt(viewport.clientWidth / 2, viewport.clientHeight / 2, 1 / 1.3);
+    });
+    viewer.querySelector('[data-map-close]').addEventListener('click', close);
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && viewer.classList.contains('is-open')) {
+            close();
+        }
+    });
+}
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
         initNavBar();
         initUserMenu();
         initAvatarField();
+        initCollapsibles();
+        initResponsiveTables();
+        initMapViewer();
     });
 } else {
     initNavBar();
     initUserMenu();
     initAvatarField();
+    initCollapsibles();
+    initResponsiveTables();
+    initMapViewer();
 }
 
 

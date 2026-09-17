@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         {% block stylesheets %}
@@ -18,6 +19,19 @@
     <body>
 
     {% include '@App/frontend/header.html.twig' %}
+
+    <button type="button"
+            class="nav-toggle"
+            data-nav-toggle-btn
+            aria-label="Menu de navigation"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="mySidenav">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     {% include '@App/frontend/navBar.html.twig' %}
 
     <div id="main" class="main">

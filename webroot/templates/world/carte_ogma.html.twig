@@ -3,7 +3,10 @@
     Carte d'Ogma
 {% endblock %}
 {% block body %}
-    <div>
-        <img src="{{ asset('images/Misc/Carte_Ogma.png') }}" alt="Carte Ogma" id="map"/>
+    <div class="map-container">
+        <button type="button" class="map-frame" data-map-open aria-label="Ouvrir la carte en grand">
+            <img src="{{ asset('images/Misc/Carte_Ogma.png') }}" alt="Carte Ogma" id="map"/>
+            <span class="map-frame__badge" aria-hidden="true">Agrandir &#9670;</span>
+        </button>
     </div>
 {% endblock %}

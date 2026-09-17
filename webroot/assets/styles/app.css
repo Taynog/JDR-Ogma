@@ -14,6 +14,30 @@ h1::first-line{
     color: rebeccapurple !important; /*Change la couleur des éléments possédant un attribut onclick, il est important car sinon il ne fonctionne pas avec le style alternatif*/
 }
 
+[onclick]{
+    cursor: pointer; /*Signale qu'un élément repliable est cliquable*/
+}
+
+/* Indicateurs de repli/dépli des sections cliquables */
+h1[onclick]::before,
+h2[onclick]::before,
+h3[onclick]::before,
+h4[onclick]::before,
+p[onclick]::before{
+    content: "\25BE "; /* ▾ section dépliée */
+    font-size: 0.72em;
+    vertical-align: middle;
+    color: #8a6d3b;
+}
+
+h1[onclick].is-collapsed::before,
+h2[onclick].is-collapsed::before,
+h3[onclick].is-collapsed::before,
+h4[onclick].is-collapsed::before,
+p[onclick].is-collapsed::before{
+    content: "\25B8 "; /* ▸ replié */
+}
+
 table{
     border-style: none;
     border-collapse: collapse;
@@ -352,7 +376,9 @@ a:hover {
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
     overflow-x: hidden;
     overflow-y: auto;
-    padding-top: 12px;
+    /* Laisse de la place pour le bouton hamburger fixe qui reste au-dessus
+       du panneau lorsque le menu est ouvert */
+    padding-top: 64px;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 }
@@ -568,7 +594,24 @@ body.nav-open .nav-tab {
 
 /* Style page content (menu overlays the page, nothing is pushed) */
 #main {
-    padding: 0 5px 0 12px;
+    padding: 0 16px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/* Carte monde Ogma (3000px) : ne doit jamais déborder de la colonne */
+#map {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Accessibilité clavier : le focus reste visible partout */
+:focus-visible {
+    outline: 2px solid rebeccapurple;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 /* Mobile */
@@ -924,6 +967,250 @@ a>img:hover{
     .profile-info dd {
         margin-bottom: 10px;
     }
+}
+
+/* ---------- Bouton hamburger (menu latéral) ---------- */
+.nav-toggle {
+    position: fixed;
+    top: 12px;
+    left: 20px;
+    z-index: 6;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: linear-gradient(180deg, #efdcbb 0%, #e6cda2 100%);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 2px;
+    background: #3d2f1f;
+    transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.15s ease;
+}
+
+.nav-toggle:hover {
+    background: rebeccapurple;
+}
+
+.nav-toggle:hover span {
+    background: #fff;
+}
+
+body.nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+body.nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+body.nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- Responsive & lisibilité ---------- */
+/* Tableaux débordants : conteneur défilable (créé en JS) */
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Champs texte/select : ne débordent plus de la fenêtre sur mobile */
+textarea,
+select {
+    max-width: 100%;
+}
+
+/* Erreurs de formulaire Symfony (thème par défaut) */
+.auth-form .form-error-message {
+    margin: 6px 0 0;
+    padding: 0;
+    list-style: none;
+    color: #7d2d1b;
+    font-size: 13px;
+}
+
+/* Case à cocher (conditions d'utilisation, ...) dans les cartes d'authentification */
+.auth-field--checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.auth-field--checkbox input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    flex: 0 0 auto;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+    .nav-toggle {
+        top: 8px;
+        left: 12px;
+    }
+
+    .site-header {
+        top: 8px;
+        right: 8px;
+    }
+
+    /* Sur mobile le hamburger remplace l'onglet discret du bord gauche */
+    .nav-tab {
+        display: none;
+    }
+
+    /* Les visuels de l'accueil ne débordent plus */
+    .center a img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Écrans tactiles : désactive le zoom image resté "en hover" après un tap */
+@media (hover: none) {
+    a>img:hover {
+        transform: none;
+    }
+}
+
+/* ---------- Agrandissement de la carte ---------- */
+.map-frame {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    background: none;
+    cursor: zoom-in;
+}
+
+.map-frame:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+
+.map-frame__badge {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 4px 10px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: #3d2f1f;
+    background: rgba(239, 220, 187, 0.9);
+    border-radius: 4px;
+    opacity: 0.85;
+}
+
+body.map-viewer-open {
+    overflow: hidden;
+}
+
+.map-viewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.88);
+}
+
+.map-viewer.is-open {
+    display: block;
+}
+
+.map-viewer__bar {
+    position: absolute;
+    z-index: 2;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.map-viewer__btn {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(239, 220, 187, 0.6);
+    border-radius: 6px;
+    background: rgba(30, 25, 20, 0.7);
+    color: #efdcbb;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.map-viewer__btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.map-viewer__viewport {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.map-viewer__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+    cursor: grab;
+    will-change: transform;
+}
+
+.map-viewer__img.is-dragging {
+    cursor: grabbing;
+}
+
+.map-viewer__hint {
+    max-width: 45vw;
+    padding: 8px 14px;
+    border: 1px solid rgba(239, 220, 187, 0.35);
+    border-radius: 6px;
+    color: #efdcbb;
+    background: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.map-viewer.is-open .map-viewer__hint {
+    opacity: 1;
+}
+
+/* L'aide s'efface d'elle-même après quelques secondes */
+.map-viewer.is-open .map-viewer__hint.is-hidden {
+    opacity: 0;
 }
 
 
